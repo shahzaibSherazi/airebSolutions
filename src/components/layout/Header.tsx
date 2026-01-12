@@ -18,7 +18,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-30 px-3">
+    <header className="px-3 z-10">
       <nav className="container mx-auto !px-2 lg:px-12">
         <div className="flex items-start justify-between h-36 pt-8">
           {/* Mobile Menu Button */}
@@ -33,34 +33,30 @@ const Header = () => {
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button> */}
           
-          <div className="relative inline-block">
-            {/* Black dot */}
-            <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50"></span>
-            {/* Button */}
-            <Button asChild className="px-6">
-              <Link
-                to="/contact"
-                className="
-                  bg-white
-                  text-black
-                  font-serif
-                  text-2xl
-                  px-12
-                  py-6
-                  rounded-sm
-                  border
-                  border-gray-200
-                  shadow-sm
-                  hover:bg-gray-100
-                  transition
-                  w-28
-                  h-14
-                  relative
-                ">
-                  <span className="absolute left-3.5 bottom-1 top-auto text-lg">MENU</span>
-                </Link>
-            </Button>
-          </div>
+          {/* Button */}
+          <Button asChild className="px-6">
+            <Link
+              to="/contact"
+              className="
+                bg-white
+                text-black
+                font-serif
+                rounded-sm
+                shadow-sm
+                hover:bg-[#0B23C8]
+                transition-all
+                pt-8
+                pl-3
+                pb-3
+                pr-11
+                relative
+                h-auto
+                group
+              ">
+                <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50 group-hover:bg-white"></span>
+                <span className="text-lg leading-3 group-hover:text-white tracking-wide">MENU</span>
+              </Link>
+          </Button>
 
           {/* Logo */}
           {/* <Link to="/" className="flex items-center gap-3">
@@ -96,11 +92,6 @@ const Header = () => {
 
           {/* CTA Button */}
           {/* <div className="hidden md:block"> */}
-          <div className="relative inline-block">
-            
-            {/* Black dot */}
-            <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50"></span>
-            
             {/* Button */}
             <Button asChild className="px-6">
               <Link
@@ -109,23 +100,22 @@ const Header = () => {
                   bg-white
                   text-black
                   font-serif
-                  text-2xl
-                  px-12
-                  py-6
                   rounded-sm
-                  border
-                  border-gray-200
                   shadow-sm
-                  hover:bg-gray-100
-                  transition
-                  w-40
-                  h-14
+                hover:bg-[#0B23C8]
+                  transition-all
+                  pt-8
+                  pl-3
+                  pb-3
+                  pr-11
                   relative
+                  h-auto
+                  group
                 ">
-                  <span className="absolute left-3.5 bottom-1 top-auto text-lg">CONTACT</span>
+                  <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50 group-hover:bg-white"></span>
+                  <span className="text-lg leading-3 group-hover:text-white tracking-wide">CONTACT</span>
                 </Link>
             </Button>
-          </div>
         </div>
 
         {/* Mobile Navigation */}
