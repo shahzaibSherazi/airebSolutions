@@ -22,7 +22,7 @@ const HeroSection = () => {
   
 
       {/* 🔹 HERO CONTENT (TRUE CENTER) */}
-      <div className="relative z-20 flex h-screen items-center justify-center mt-20 px-6">
+      <div className="relative z-20 flex items-center justify-center mt-[252px] px-6">
         <div className="max-w-[900px] text-center">
 
           {/* Subtitle */}

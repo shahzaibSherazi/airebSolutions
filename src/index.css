@@ -144,3 +144,24 @@ All colors MUST be HSL.
     @apply bg-card/50 backdrop-blur-lg border border-border/50;
   }
 }
+
+@keyframes slide {
+  0% { transform: translateX(100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+.animate-slide {
+  animation: slide 15s infinite linear;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
