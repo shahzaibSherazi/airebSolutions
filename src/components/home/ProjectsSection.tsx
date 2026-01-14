@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/motion";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/motion";
 
 const projects = [
   {
@@ -35,16 +39,23 @@ const ProjectsSection = () => {
     <section className="py-28 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
         <ScrollReveal>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
             <div>
-              <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Portfolio</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-3">Featured Projects</h2>
+              <span className="text-primary text-sm font-medium uppercase tracking-widest">
+                Our Portfolio
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-3">
+                Featured Projects
+              </h2>
             </div>
-            <Button variant="outline" asChild className="border-border hover:border-primary/50">
+            <Button
+              variant="outline"
+              asChild
+              className="border-border hover:border-primary/50">
               <Link to="/projects" className="flex items-center gap-2">
                 View All Projects
                 <ArrowUpRight size={18} />
@@ -54,25 +65,28 @@ const ProjectsSection = () => {
         </ScrollReveal>
 
         {/* Projects Grid */}
-        <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
+        <StaggerContainer
+          className="grid md:grid-cols-2 gap-8"
+          staggerDelay={0.15}>
           {projects.map((project) => (
             <StaggerItem key={project.id}>
               <Link
                 to={`/projects/${project.id}`}
-                className="group relative overflow-hidden rounded-3xl aspect-[4/3] block"
-              >
+                className="group relative overflow-hidden rounded-3xl aspect-[4/3] block">
                 {/* Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
-                
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-90" />
-                
+
                 {/* Content */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <span className="text-primary text-sm font-medium mb-2 uppercase tracking-wider">{project.category}</span>
+                  <span className="text-primary text-sm font-medium mb-2 uppercase tracking-wider">
+                    {project.category}
+                  </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
