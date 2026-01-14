@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import TeamSection from "@/components/home/TeamSection";
 import CTASection from "@/components/home/CTASection";
 import AdaptableSection from "@/components/home/AdaptableSection";
+import StrategicApproach from "@/components/home/StrategicApproach";
 import ResultSection from "@/components/home/ResultSection";
 import FeaturedSection from "@/components/home/FeaturedSection";
 
@@ -21,6 +22,7 @@ const Index = () => {
       <ProjectsSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
+      <StrategicApproach />
       <TeamSection />
       <CTASection />
     </Layout>
