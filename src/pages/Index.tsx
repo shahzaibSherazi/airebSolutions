@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import TeamSection from "@/components/home/TeamSection";
 import CTASection from "@/components/home/CTASection";
 import AdaptableSection from "@/components/home/AdaptableSection";
+import StrategicApproach from "@/components/home/StrategicApproach";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <ProjectsSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
+      <StrategicApproach />
       <TeamSection />
       <CTASection />
     </Layout>
