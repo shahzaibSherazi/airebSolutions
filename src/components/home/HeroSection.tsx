@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden text-white">
+    <section className="relative min-h-screen md:mx-auto w-full overflow-hidden text-white">
       {/* 🔹 Background Video */}
       <video
         autoPlay
@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* <div className="absolute inset-0 bg-[#050c22]/85" /> */}
 
       {/* 🔹 HERO CONTENT (TRUE CENTER) */}
-      <div className="relative z-20 flex items-center h-full mt-[200px] justify-center  px-6">
+      <div className="relative z-20 flex items-center h-full mt-[30vh] justify-center  px-6">
         <div className="max-w-[900px] text-center">
           <p
             className="font-outfit
@@ -36,22 +36,13 @@ const HeroSection = () => {
           {/* Heading */}
           <h1 className="font-serif leading-[1.05] tracking-tight">
             <div className="overflow-hidden">
-              <AnimatedText
-                text="DESIGN"
-                className="text-[clamp(48px,8vw,120px)]"
-              />
+              <AnimatedText text="DESIGN" className="text-[8vh]" />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText
-                text="FOR"
-                className="text-[clamp(40px,7vw,110px)]"
-              />
+              <AnimatedText text="FOR" className="text-[8vh]" />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText
-                text="EVERYONE"
-                className="text-[clamp(42px,8vw,120px)]"
-              />
+              <AnimatedText text="EVERYONE" className="text-[8vh]" />
             </div>
           </h1>
 
@@ -70,7 +61,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA */}
-          <div className="mt-24 mb-9 flex justify-center">
+          <div className="mt-[10vh] mb-9 flex justify-center">
             <button
               style={{ paddingLeft: 14 }}
               className="group flex items-center  gap-4 bg-[#0B23C8] px-1 py-1 text-lg tracking-wide hover:bg-blue-700 transition">
