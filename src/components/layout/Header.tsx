@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className="px-3 z-10">
-      <nav className="container mx-auto !px-2 lg:px-12">
+      <nav className="container mx-auto px-1 sm:!px-2 lg:px-12">
         <div className="flex items-start justify-between h-36 pt-8">
           {/* Mobile Menu Button */}
           {/* <button
@@ -34,27 +34,10 @@ const Header = () => {
           </button> */}
           
           {/* Button */}
-          <Button asChild className="px-6">
-            <Link
-              to="/contact"
-              className="
-                bg-white
-                text-black
-                font-serif
-                rounded-sm
-                shadow-sm
-                hover:bg-[#0B23C8]
-                transition-all
-                pt-8
-                pl-3
-                pb-3
-                pr-11
-                relative
-                h-auto
-                group
-              ">
+          <Button asChild className="max-sm:size-sm">
+            <Link to="/contact">
                 <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50 group-hover:bg-white"></span>
-                <span className="text-lg leading-3 group-hover:text-white tracking-wide">MENU</span>
+                <span className="group-hover:text-white tracking-wide">MENU</span>
               </Link>
           </Button>
 
@@ -66,7 +49,8 @@ const Header = () => {
             <span className="text-xl font-bold text-foreground tracking-tight">DesignCo</span>
           </Link> */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" className="max-sm:w-36"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -93,25 +77,8 @@ const Header = () => {
           {/* CTA Button */}
           {/* <div className="hidden md:block"> */}
             {/* Button */}
-            <Button asChild className="px-6">
-              <Link
-                to="/contact"
-                className="
-                  bg-white
-                  text-black
-                  font-serif
-                  rounded-sm
-                  shadow-sm
-                hover:bg-[#0B23C8]
-                  transition-all
-                  pt-8
-                  pl-3
-                  pb-3
-                  pr-11
-                  relative
-                  h-auto
-                  group
-                ">
+            <Button asChild className="max-sm:hidden">
+              <Link to="/contact">
                   <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50 group-hover:bg-white"></span>
                   <span className="text-lg leading-3 group-hover:text-white tracking-wide">CONTACT</span>
                 </Link>
