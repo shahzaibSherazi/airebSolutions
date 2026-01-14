@@ -173,3 +173,36 @@ All colors MUST be HSL.
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.marquee-swiper .swiper-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
+/* Hover → slow speed */
+.marquee-swiper:hover .swiper-wrapper {
+  animation-duration: 36s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* .video-marquee {
+  --speed: 8000;
+} */
+
+.video-marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Slow on hover */
+.video-marquee:hover {
+  --speed: 16000;
+}
