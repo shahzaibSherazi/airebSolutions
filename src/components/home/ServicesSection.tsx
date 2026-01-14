@@ -12,28 +12,28 @@ const services = [
   {
     image: service2,
     title: "Web Development",
-    gradient: "linear-gradient(180deg, #FF6B6B 0%, rgba(0,0,0,0) 100%)",
+    gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
   {
     image: service3,
     title: "UI/UX Design",
-    gradient: "linear-gradient(180deg, #1DD1A1 0%, rgba(0,0,0,0) 100%)",
+    gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="relative w-full py-24 bg-black px-8">
-      <div className="w-full mx-auto flex flex-col lg:flex-row items-start gap-28 px-6 lg:px-0">
+    <section className="relative w-full pt-10 md:py-24 bg-black px-8">
+      <div className="w-full flex flex-col lg:flex-row items-start px-6 lg:px-0">
         {/* <!-- Left Column: Button + Text --> */}
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col md:justify-start justify-center md:items-start items-center gap-8 lg:mb-0 md:mb-4">
           {/* <!-- Our Service Button --> */}
           <button className="w-[164px] h-[38px] bg-blue-600 text-white font-stoke font-normal text-base rounded-md shadow-md hover:bg-blue-700 transition-all duration-300">
             Our Service
           </button>
 
           {/* <!-- Description Text --> */}
-          <p className="w-full max-w-[846px] text-[42px] leading-[1.3] font-stoke text-white">
+          <p className="lg:max-w-[80vh] text-base sm:text-lg md:text-4xl font-normal font-outfit text-white">
             We deliver custom digital solutions, including web and mobile
             development, UI/UX, DevOps, e-commerce, AI, and system integrations
             helping businesses scale with efficient, high-performance
@@ -51,21 +51,24 @@ const ServicesSection = () => {
           <div
             className="
        
-      h-[574px]
+      h-screen max-h-[574px] 
       overflow-y-auto
       snap-y snap-mandatory
       scrollbar-hide
-      flex flex-col
-      gap-8
+     
     
             ">
             {services.map((service, index) => (
-              <ServiceCard
+              <div
                 key={index}
-                image={service.image}
-                title={service.title}
-                gradient={service.gradient}
-              />
+                className="h-full flex items-center justify-center snap-start my-3">
+                <ServiceCard
+                  key={index}
+                  image={service.image}
+                  title={service.title}
+                  gradient={service.gradient}
+                />
+              </div>
             ))}
           </div>
         </div>
