@@ -12,8 +12,8 @@ const ValueCard = ({ title, description, icon, className = "" }: ValueCardProps)
     className={`bg-primary text-white p-6 max-sm:pt-4 md:p-8 flex flex-col justify-between sm:min-h-[180px] group hover:bg-primary-hover transition-colors duration-300 ${className}`}
   >
     <div className="flex justify-between items-center">
-      <h3 className="text-xl md:text-[26px] font-serif">{title}</h3>
-      <div className="bg-white text-black size-11 flex justify-center items-center">
+      <h3 className="text-2xl md:text-[26px] font-serif">{title}</h3>
+      <div className="bg-white text-black size-10 sm:size-11 flex justify-center items-center">
         {icon}
       </div>
     </div>
@@ -29,31 +29,31 @@ const StrategicApproach = () => {
       title: "Clarity",
       description:
         "We identify where the real opportunities lie and where systems, brand or processes get stuck, so every next decision drives direction and impact.",
-      icon: <img src="/src/assets/icons/development_skill.png" alt="Clarity Icon"/>,
+      icon: <img src="/src/assets/icons/development_skill.png" alt="Clarity Icon" className="size-7 sm:size-8"/>,
     },
     {
       title: "Partnership",
       description:
         "We don't just build for you we build with you. Together we operate as one team that turns ambition into scalable reality.",
-      icon: <img src="/src/assets/icons/conference.png" alt="Partnership Icon"/>,
+      icon: <img src="/src/assets/icons/conference.png" alt="Partnership Icon" className="size-7 sm:size-8"/>,
     },
     {
       title: "Engineering",
       description:
         "We build technology that works seamlessly, scales intelligently and is strategically designed to push your business forward.",
-      icon: <img src="/src/assets/icons/tools.png" alt="Engineering Icon"/>,
+      icon: <img src="/src/assets/icons/tools.png" alt="Engineering Icon" className="size-7 sm:size-8"/>,
     },
     {
       title: "Evolution",
       description:
         "We create solutions that adapt to change, respond faster, work smarter and help your brand get more out of every new development.",
-      icon: <img src="/src/assets/icons/life_cycle.png" alt="Evolution Icon"/>,
+      icon: <img src="/src/assets/icons/life_cycle.png" alt="Evolution Icon" className="size-7 sm:size-8"/>,
     },
     {
       title: "Leadership",
       description:
         "We strengthen your position in the market by sharpening visibility, improving performance and building an advantage that continues to grow.",
-      icon: <img src="/src/assets/icons/business_group.png" alt="Leadership Icon"/>,
+      icon: <img src="/src/assets/icons/business_group.png" alt="Leadership Icon" className="size-7 sm:size-8"/>,
     },
   ];
 
