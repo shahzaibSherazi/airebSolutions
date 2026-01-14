@@ -17,7 +17,7 @@ const ValueCard = ({ title, description, icon, className = "" }: ValueCardProps)
         {icon}
       </div>
     </div>
-    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mt-3.5">
+    <p className="text-muted-foreground leading-[22px] mt-3.5">
       {description}
     </p>
   </div>
