@@ -2,6 +2,7 @@ import ServiceCard from "../ui/serviceCard";
 import service1 from "../../assets/service1.png";
 import service2 from "../../assets/service2.png";
 import service3 from "../../assets/service3.png";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -23,12 +24,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative w-full pt-10 md:py-24 bg-black px-8">
-      <div className="w-full flex flex-col lg:flex-row items-start px-6 lg:px-0">
+    <section className="relative w-full pt-10 md:py-24 bg-black px-0 lg:px-8">
+      <div className="w-full flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-0">
         {/* <!-- Left Column: Button + Text --> */}
-        <div className="flex-1 flex flex-col md:justify-start justify-center md:items-start items-center gap-8 lg:mb-0 md:mb-4">
+        <div className="flex-1 flex flex-col items-start gap-8 lg:mb-0 md:mb-4">
           {/* <!-- Our Service Button --> */}
-          <button className="w-[164px] h-[38px] bg-blue-600 text-white font-stoke font-normal text-base rounded-md shadow-md hover:bg-blue-700 transition-all duration-300">
+          <button className="px-7 py-1 bg-primary text-white font-outfit font-medium  text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
             Our Service
           </button>
 
@@ -39,9 +40,14 @@ const ServicesSection = () => {
             helping businesses scale with efficient, high-performance
             technology.
           </p>
-          <div className="  mt-6">
-            <button className="px-6 py-3 bg-white border border-gray-300 text-gray-800 font-stoke font-normal rounded-md shadow hover:bg-gray-100 transition-all duration-300">
+          <div className="md:block hidden  mt-6">
+            <button
+              style={{ paddingLeft: 14 }}
+              className="group flex items-center text-black font-outfit  gap-4 bg-white px-1 py-1 text-lg font-medium tracking-wide  transition">
               View All Services
+              <span className="bg-primary w-[46px] h-[43px] text-white flex items-center justify-center transition group-hover:translate-x-1">
+                <ArrowRight size={14} />
+              </span>
             </button>
           </div>
         </div>
