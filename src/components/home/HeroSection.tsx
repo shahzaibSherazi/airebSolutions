@@ -34,7 +34,7 @@ const HeroSection = () => {
           </p>
 
           {/* Heading */}
-          <h1 className="font-serif leading-[1.05] tracking-tight">
+          <h1 className="font-stoke leading-[1.05] tracking-tight">
             <div className="overflow-hidden">
               <AnimatedText text="DESIGN" className="text-[8vh]" />
             </div>

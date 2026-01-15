@@ -1,19 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
-/* @import url('https://fonts.cdnfonts.com/css/stoke'); */
-@font-face {
-  font-family: "Stoke";
-  src: url("./assets/fonts/Stoke-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Stoke";
-  src: url("./assets/fonts/Stoke-Light.ttf") format("truetype");
+.font-stoke-light {
+  font-family: "Stoke", serif;
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+}
+
+.font-stoke {
+  font-family: "Stoke", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @tailwind base;
