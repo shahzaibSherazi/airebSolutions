@@ -9,10 +9,10 @@ interface ValueCardProps {
 
 const ValueCard = ({ title, description, icon, className = "" }: ValueCardProps) => (
   <div
-    className={`bg-primary text-white p-6 max-sm:pt-4 md:p-8 flex flex-col justify-between sm:min-h-[180px] group hover:bg-primary-hover transition-colors duration-300 ${className}`}
+    className={`bg-primary text-white p-6 hover:p-5 transition-all max-sm:pt-4 md:p-8 flex flex-col justify-between sm:min-h-[180px] ${className}`}
   >
     <div className="flex justify-between items-center">
-      <h3 className="text-2xl md:text-[26px] font-serif">{title}</h3>
+      <h3 className="text-2xl md:text-[26px] font-stoke">{title}</h3>
       <div className="bg-white text-black size-10 sm:size-11 flex justify-center items-center">
         {icon}
       </div>
