@@ -10,6 +10,7 @@ import AdaptableSection from "@/components/home/AdaptableSection";
 import StrategicApproach from "@/components/home/StrategicApproach";
 import ResultSection from "@/components/home/ResultSection";
 import FeaturedSection from "@/components/home/FeaturedSection";
+import ContactForm from "@/components/home/ContactForm";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <AdaptableSection />
       <ResultSection />
       <FeaturedSection />
+      <ContactForm />
       <ProjectsSection />
       <WhyChooseUsSection />
       <TestimonialsSection />

@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,9 +19,11 @@ export default {
     },
     extend: {
       fontFamily: {
-      outfit: ["Outfit","Stoke", "sans-serif"],
-    },
+        outfit: ["Outfit", "Stoke", "sans-serif"],
+      },
       colors: {
+        neonBlue: "#1e40ff",
+        neonBlueDark: "#0b1a5e",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -60,6 +67,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      boxShadow: {
+        neon: "0 0 20px rgba(30,64,255,0.6)",
+        neonSoft: "0 0 10px rgba(30,64,255,0.45)",
       },
       borderRadius: {
         lg: "var(--radius)",

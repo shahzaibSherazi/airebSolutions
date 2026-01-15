@@ -3,7 +3,8 @@ import VideoCard from "../ui/videoCard";
 import video from "../../assets/Ai_video.mp4";
 import fintechVideo from "../../assets/fintech_video.mp4";
 import ecommerceVideo from "../../assets/ecommerce_video.mp4";
-import educationVideo from "../../assets/education_video.mp4";
+import educationVideo from "../../assets/edu_video.mp4";
+import healthCareVideo from "../../assets/health_care.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -14,16 +15,17 @@ const serviceVideos = [
   { id: 2, video: fintechVideo },
   { id: 3, video: ecommerceVideo },
   { id: 4, video: educationVideo },
+  { id: 5, video: healthCareVideo },
 ];
 
 export default function AdaptableSection() {
   // const serviceVideos = [...videos, ...videos];
 
   return (
-    <section className="bg-black px-8 py-16  mx-auto">
+    <section className="bg-black px-4 md:px-8 py-16  mx-auto">
       {/* Heading */}
       <div className="text-center mb-12">
-        <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm">
+        <span className="inline-block bg-primary text-white px-4 py-3 text-2xl font-outfit font-normal leading-4 mb-9 sm:mb-6">
           Adaptable for any sector
         </span>
       </div>
@@ -49,7 +51,7 @@ export default function AdaptableSection() {
         }}
         className="video-marquee">
         {serviceVideos.map((item) => (
-          <SwiperSlide key={item.id} className="flex justify-center">
+          <SwiperSlide key={item.id} className="flex">
             <VideoCard video={item.video} />
           </SwiperSlide>
         ))}
