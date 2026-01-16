@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen md:mx-auto w-full overflow-hidden text-white">
+    <section className="relative h-screen flex justify-center items-center w-full overflow-hidden text-white">
       {/* 🔹 Background Video */}
       <video
         autoPlay
@@ -14,12 +14,9 @@ const HeroSection = () => {
         <source src="/src/assets/hero-video.mp4" type="video/mp4" />
       </video>
 
-      {/* 🔹 Overlay */}
-      {/* <div className="absolute inset-0 bg-[#050c22]/85" /> */}
-
       {/* 🔹 HERO CONTENT (TRUE CENTER) */}
-      <div className="relative z-20 flex items-center h-full mt-[30vh] justify-center  px-6">
-        <div className="max-w-[900px] text-center">
+      <div className="relative z-20 flex items-center mt-[17vh]  sm:mt-[24vh] justify-center  px-4">
+        <div className=" text-center">
           <p
             className="font-outfit
     font-normal
@@ -30,25 +27,32 @@ const HeroSection = () => {
     max-w-[321px]
     mx-auto
     opacity-100 uppercase">
-            THOUGHTFUL DESIGN ACROSS BRANDS, PRODUCTS, AND DIGITAL EXPERIENCES
+            THOUGHTFUL DESIGN ACROSS <br /> BRANDS, PRODUCTS, AND DIGITAL
+            EXPERIENCES
           </p>
 
           {/* Heading */}
-          <h1 className="font-stoke leading-[1.05] tracking-tight">
+          <h1 className="font-stoke leading-[45px] md:leading-snug tracking-widest mt-[22px] md:mt-3 md:mb-[19px] mb-[22px]">
             <div className="overflow-hidden">
-              <AnimatedText text="DESIGN" className="text-[8vh]" />
+              <AnimatedText
+                text="DESIGN"
+                className="text-[50px] md:text-[8vh]"
+              />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText text="FOR" className="text-[8vh]" />
+              <AnimatedText text="FOR" className="text-[50px] md:text-[8vh]" />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText text="EVERYONE" className="text-[8vh]" />
+              <AnimatedText
+                text="EVERYONE"
+                className="text-[50px] md:text-[8vh]"
+              />
             </div>
           </h1>
 
           {/* Description */}
           <p
-            className="mt-6 font-outfit
+            className=" font-outfit
     font-normal
     text-[14px]
     leading-[24px]
@@ -61,7 +65,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA */}
-          <div className="mt-[10vh] mb-9 flex justify-center">
+          <div className="mt-[7.31vh] md:mt-[10.37vh] flex justify-center">
             <button
               style={{ paddingLeft: 14 }}
               className="group flex items-center  gap-4 bg-[#0B23C8] px-1 py-1 text-lg tracking-wide hover:bg-blue-700 transition">
