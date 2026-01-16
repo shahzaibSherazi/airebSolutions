@@ -3,7 +3,7 @@ const logos = [logo, logo, logo, logo];
 
 export default function LogoSlider() {
   return (
-    <div className="mt-16 flex justify-center">
+    <div className=" flex justify-center">
       {/* Limited width container */}
       <div className="relative w-full max-w-[520px] overflow-hidden">
         <div className="flex gap-4 animate-slide">
