@@ -12,6 +12,14 @@
   font-style: normal;
 }
 
+.font-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -294,4 +302,83 @@ All colors MUST be HSL.
   left: -2px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
+}
+
+.contactForm_edge {
+  position: relative;
+
+  color: white;
+}
+
+/* TOP RIGHT CORNER */
+.contactForm_edge::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  /* filter: drop-shadow(0 0 6px #1e40ff); */
+}
+.contactForm_corner {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  color: white;
+}
+/* BOTTOM LEFT */
+.contactForm_bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.phone-input-custom input {
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.phone-input-custom select {
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.PhoneInputCountryIcon {
+  filter: brightness(1.2);
+}
+.custom-country-select {
+  background-color: #0b0b0b;
+  color: white;
+  /* padding: 6px 8px; */
+  border: none;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+.custom-country-select option {
+  background-color: #0b0b0b;
+  color: white;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+.hover-zoom {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-zoom:hover {
+  transform: scale(0.95);
 }
