@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "Stoke", "sans-serif"],
+        outfit: ["Outfit", "Stoke", "sans-serif", "Plus Jakarta Sans"],
       },
       colors: {
         neonBlue: "#1e40ff",

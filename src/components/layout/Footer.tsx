@@ -1,115 +1,104 @@
-import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand */}
-          <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
-              </div>
-              <span className="text-xl font-bold text-foreground tracking-tight">DesignCo</span>
-            </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              We create exceptional digital experiences that transform businesses and delight users worldwide.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Linkedin size={18} />
+    <div
+      className="min-h-screen flex flex-col"
+      style={{
+        background: "linear-gradient(180deg, #0A20B9 0%, #000000 100%)",
+      }}>
+      {/* Main Content */}
+      <div className="flex-grow p-4 md:p-8 lg:p-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Portfolio Card  */}
+            <div className="bg-[#F5F5F0] text-black rounded-lg p-8 md:p-10 overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
+              <p className="text-sm font-medium mb-4">Portfolio</p>
+              <h2 className="text-4xl md:text-5xl font-serif mb-8">
+                Project &<br />
+                Blogs
+              </h2>
+              <a
+                href="#"
+                className="inline-flex items-center text-sm font-medium hover:underline group">
+                View Portfolio
+                <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />{" "}
               </a>
             </div>
+            {/* Navigation Menu */}
+            <div className="flex flex-col justify-center space-y-3">
+              {["Home", "Services", "Industries", "Resources", "About Us"].map(
+                (item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="flex items-center justify-between text-white border-b border-white/30 pb-3 hover:border-white transition-colors group">
+                    <span className="text-base md:text-lg">{item}</span>
+                    <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />{" "}
+                  </a>
+                ),
+              )}
+            </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-foreground font-semibold mb-6 text-lg">Quick Links</h4>
-            <ul className="space-y-4">
-              {["Home", "About", "Services", "Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center gap-1 group"
-                  >
-                    {item}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-foreground font-semibold mb-6 text-lg">Services</h4>
-            <ul className="space-y-4">
-              {["Web Design", "UI/UX Design", "Brand Identity", "Development", "Consulting"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to="/services"
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center gap-1 group"
-                  >
-                    {item}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-foreground font-semibold mb-6 text-lg">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail size={16} className="text-primary" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2 bg-[#0A20B9] rounded-lg text-white py-8 md:py-12 px-8 md:px-10 overflow-hidden transition-transform duration-300 hover-zoom cursor-pointer">
+              <p className="text-sm mb-4">Get In Touch</p>
+              <h1 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
+                Start A Project
+              </h1>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <p className="text-lg md:text-xl">
+                  Enhance Your Brand Potential
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center text-base hover:underline group w-fit">
+                  Contact Us
+                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />{" "}
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-1 bg-[#F5F5F0] text-black rounded-lg p-8 md:p-10 overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
+              <h3 className="text-2xl font-serif mb-6">Location</h3>
+              <div className="space-y-6">
+                <div>
+                  <p className="text-sm leading-relaxed">
+                    1309 Coffeen Avenue STE 1200
+                    <br /> Sheridan, Wyoming 82801
+                  </p>
                 </div>
-                hello@designco.com
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone size={16} className="text-primary" />
+                <div>
+                  <p className="text-sm leading-relaxed">
+                    55 Village Centre Place, Suite 200,
+                    <br /> Mississauga, ON L4Z1V9
+                  </p>
                 </div>
-                +1 (555) 123-4567
-              </li>
-              <li className="flex items-start gap-3 text-muted-foreground text-sm">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={16} className="text-primary" />
+                <div>
+                  <p className="text-sm leading-relaxed">
+                    8, Farooq Avenue, G Block, Johar Town,
+                    <br /> Lahore Pakistan.
+                  </p>
                 </div>
-                <span className="pt-2">123 Design Street<br />New York, NY 10001</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} DesignCo. All rights reserved.
-          </p>
-          <div className="flex gap-8">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Terms of Service
-            </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+      {/* Footer */}
+      <footer className="bg-black text-white py-6 px-4 md:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <a href="#" className="text-sm hover:underline">
+            Terms & Conditions
+          </a>
+          <p className="text-sm">© 2025 AirebSolutions</p>
+          <a href="#" className="text-sm hover:underline">
+            Privacy Policy
+          </a>
+        </div>
+      </footer>
+    </div>
   );
 };
 
