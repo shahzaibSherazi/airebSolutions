@@ -20,13 +20,14 @@ const Index = () => {
       <AdaptableSection />
       <ResultSection />
       <FeaturedSection />
-      <ContactForm />
-      <ProjectsSection />
-      <WhyChooseUsSection />
-      <TestimonialsSection />
+
+      {/* <ProjectsSection /> */}
+      {/* <WhyChooseUsSection /> */}
+      {/* <TestimonialsSection /> */}
       <StrategicApproach />
-      <TeamSection />
-      <CTASection />
+      <ContactForm />
+      {/* <TeamSection /> */}
+      {/* <CTASection /> */}
     </Layout>
   );
 };
