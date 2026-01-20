@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex justify-center items-center w-full overflow-hidden text-white">
+    <section className="relative h-screen  flex justify-center items-center w-full overflow-hidden text-white">
       {/* 🔹 Background Video */}
       <video
         autoPlay

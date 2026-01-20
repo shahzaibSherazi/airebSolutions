@@ -15,12 +15,7 @@ import {
 const router = express.Router();
 
 // Contact form routes
-router.post(
-  "/submit",
-  validateContact,
-  handleValidationErrors,
-  submitContact
-);
+router.post("/submit", validateContact, handleValidationErrors, submitContact);
 
 // Admin routes
 router.get("/", getAllContacts); // Get all contacts

@@ -116,7 +116,7 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
 
   return (
     <div
-      className="w-full max-w-[444px] h-[500px] flex flex-col overflow-hidden border border-gray-200"
+      className="w-full h-[500px] flex flex-col overflow-hidden border border-gray-200"
       style={{
         background: isBlog && gradient ? gradient : "#ffffff",
       }}>

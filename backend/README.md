@@ -49,20 +49,20 @@ Professional Node.js + MongoDB backend for handling contact form submissions wit
    ```env
    PORT=5000
    NODE_ENV=development
-   
+
    # MongoDB Atlas Connection
    MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/aireb_solutions
-   
+
    # Gmail Configuration
    GMAIL_USER=your-email@gmail.com
    GMAIL_PASSWORD=your-app-password
-   
+
    # Company Email
    COMPANY_EMAIL=company@airebsolutions.com
-   
+
    # Frontend URL
    FRONTEND_URL=http://localhost:5173
-   
+
    # Email Settings
    ADMIN_EMAIL=admin@airebsolutions.com
    SENDER_NAME=Aireb Solutions
@@ -113,6 +113,7 @@ Server will run on `http://localhost:5000`
 Submit a new contact form.
 
 **Request Body:**
+
 ```json
 {
   "fullName": "John Doe",
@@ -125,6 +126,7 @@ Submit a new contact form.
 ```
 
 **Response (Success):**
+
 ```json
 {
   "success": true,
@@ -137,6 +139,7 @@ Submit a new contact form.
 ```
 
 **Response (Error):**
+
 ```json
 {
   "success": false,
@@ -177,6 +180,7 @@ Get details of a specific contact.
 Update contact status and add notes.
 
 **Request Body:**
+
 ```json
 {
   "status": "replied",
@@ -234,6 +238,7 @@ backend/
 ### Company Email (Contact Submission)
 
 When a contact form is submitted:
+
 1. Email sent to company with all contact details
 2. Professional HTML template
 3. Reply-To set to user's email
@@ -241,6 +246,7 @@ When a contact form is submitted:
 ### User Confirmation Email
 
 When form is submitted:
+
 1. Confirmation email sent to user
 2. Sets expectations (24-48 hour response)
 3. Professional branding
@@ -268,6 +274,7 @@ curl -X POST http://localhost:5000/api/contact/submit \
 2. URL: `http://localhost:5000/api/contact/submit`
 3. Headers: `Content-Type: application/json`
 4. Body (raw JSON):
+
 ```json
 {
   "fullName": "John Doe",
@@ -282,21 +289,25 @@ curl -X POST http://localhost:5000/api/contact/submit \
 ## 🐛 Troubleshooting
 
 ### MongoDB Connection Error
+
 - Check your `MONGODB_URI` in `.env`
 - Ensure whitelist IP in MongoDB Atlas (allow 0.0.0.0)
 - Verify database user has correct password
 
 ### Email Not Sending
+
 - Check `GMAIL_USER` and `GMAIL_PASSWORD` in `.env`
 - Ensure you're using App Password (not regular password)
 - Check Less Secure App Access is enabled
 - Verify `COMPANY_EMAIL` is correct
 
 ### CORS Error
+
 - Check `FRONTEND_URL` matches your frontend domain
 - Ensure frontend is sending from correct origin
 
 ### Rate Limiting
+
 - Current limit: 5 requests per 15 minutes per IP
 - Change in `server.js` if needed
 - Clear local IP cache if testing locally
@@ -341,17 +352,17 @@ curl -X POST http://localhost:5000/api/contact/submit \
 
 ## 📝 Environment Variables Reference
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| PORT | Server port | 5000 |
-| NODE_ENV | Environment | development/production |
-| MONGODB_URI | MongoDB connection | mongodb+srv://... |
-| GMAIL_USER | Gmail address | your-email@gmail.com |
-| GMAIL_PASSWORD | Gmail app password | xxxx xxxx xxxx xxxx |
-| COMPANY_EMAIL | Company email | company@example.com |
-| FRONTEND_URL | Frontend domain | http://localhost:5173 |
-| ADMIN_EMAIL | Admin email | admin@example.com |
-| SENDER_NAME | Email sender name | Aireb Solutions |
+| Variable       | Description        | Example                |
+| -------------- | ------------------ | ---------------------- |
+| PORT           | Server port        | 5000                   |
+| NODE_ENV       | Environment        | development/production |
+| MONGODB_URI    | MongoDB connection | mongodb+srv://...      |
+| GMAIL_USER     | Gmail address      | your-email@gmail.com   |
+| GMAIL_PASSWORD | Gmail app password | xxxx xxxx xxxx xxxx    |
+| COMPANY_EMAIL  | Company email      | company@example.com    |
+| FRONTEND_URL   | Frontend domain    | http://localhost:5173  |
+| ADMIN_EMAIL    | Admin email        | admin@example.com      |
+| SENDER_NAME    | Email sender name  | Aireb Solutions        |
 
 ## 🤝 Integration with Frontend
 
@@ -360,23 +371,23 @@ Update your frontend form submission to:
 ```javascript
 const submitForm = async (formData) => {
   try {
-    const response = await fetch('http://localhost:5000/api/contact/submit', {
-      method: 'POST',
+    const response = await fetch("http://localhost:5000/api/contact/submit", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
-    
+
     const data = await response.json();
-    
+
     if (data.success) {
-      console.log('Form submitted successfully!');
+      console.log("Form submitted successfully!");
     } else {
-      console.error('Errors:', data.errors);
+      console.error("Errors:", data.errors);
     }
   } catch (error) {
-    console.error('Submission error:', error);
+    console.error("Submission error:", error);
   }
 };
 ```
@@ -384,6 +395,7 @@ const submitForm = async (formData) => {
 ## 📞 Support
 
 For issues or questions:
+
 1. Check the troubleshooting section
 2. Review error messages in server logs
 3. Verify all environment variables are set correctly

@@ -123,7 +123,7 @@ export const updateContactStatus = async (req, res, next) => {
     const contact = await Contact.findByIdAndUpdate(
       id,
       { status, notes },
-      { new: true, runValidators: true }
+      { new: true, runValidators: true },
     );
 
     if (!contact) {

@@ -26,7 +26,7 @@ app.use(
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-  })
+  }),
 );
 
 // Body parser
@@ -37,7 +37,8 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 5, // 5 requests per window
-  message: "Too many contact form submissions from this IP, please try again later.",
+  message:
+    "Too many contact form submissions from this IP, please try again later.",
   standardHeaders: true,
   legacyHeaders: false,
 });
@@ -84,10 +85,7 @@ const startServer = async () => {
       `);
     });
   } catch (error) {
-    console.error(
-      "Failed to start server:",
-      error.message
-    );
+    console.error("Failed to start server:", error.message);
     process.exit(1);
   }
 };
