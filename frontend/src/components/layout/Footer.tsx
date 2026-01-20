@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Top Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 gap-[94px] mb-[27px]">
             {/* Portfolio Card  */}
-            <div className="bg-[#FFFFFF] max-w-[459px] text-black rounded-[7px] md:px-[19px] px-[18px] md:pt-[15px] pt-3 pb-[18px] md:pb-[22px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
+            <div className="bg-[#FFFFFF] lg:max-w-[459px] max-w-none text-black rounded-[7px] md:px-[19px] px-[18px] md:pt-[15px] pt-3 pb-[18px] md:pb-[22px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
               <p className="text-[22px] leading-[56px] font-stoke font-medium mb-[10px] md:mb-6">
                 Portfolio
               </p>
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
             </div>
             {/* Navigation Menu */}
-            <div className="flex flex-col justify-center max-w-[510px]">
+            <div className="flex flex-col justify-center lg:max-w-[510px] max-w-none">
               {["Home", "Services", "Industries", "Resources", "About Us"].map(
                 (item) => (
                   <a
@@ -61,15 +61,22 @@ const Footer = () => {
                 <p className="text-[24px] md:text-[25px] font-stoke font-normal">
                   Enhance Your Brand Potential
                 </p>
-                <a
-                  href="#"
-                  className="inline-flex self-end items-center text-[22px] leading-[56px] font-medium font-stoke hover:underline group w-fit border-b border-white">
-                  Contact Us
-                  <img
-                    src={replyIcon}
-                    className="ml-[50px] w-[26px] h-[26px] opacity-100 invert group-hover:translate-x-1 transition-transform"
-                  />
-                </a>
+                <div className="flex self-end max-w-full">
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-[50px] whitespace-nowrap
+               text-[22px] leading-[56px] font-medium font-stoke
+               border-b border-white group
+               max-w-full overflow-hidden">
+                    <span className="truncate">Contact Us</span>
+                    <img
+                      src={replyIcon}
+                      alt="reply"
+                      className="w-[26px] h-[26px] shrink-0 invert
+                 group-hover:translate-x-1 transition-transform"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="lg:col-span-1 bg-[#F5F5F0] text-black rounded-[7px] p-8 md:p-10 overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">

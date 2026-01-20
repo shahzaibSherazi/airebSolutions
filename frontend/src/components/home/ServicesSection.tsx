@@ -24,57 +24,51 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative w-full py-28  bg-black px-0 lg:px-8">
-      <div className="w-full flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-0">
-        {/* <!-- Left Column: Button + Text --> */}
-        <div className="flex-1 flex flex-col items-start gap-[45px] md:gap-[33px] lg:mb-0 md:mb-4">
-          {/* <!-- Our Service Button --> */}
-          <button className="px-7 py-1 bg-primary text-white font-outfit font-medium  text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
-            Our Service
-          </button>
-
-          {/* <!-- Description Text --> */}
-          <p className="lg:max-w-[80vh] text-2xl sm:text-lg md:text-4xl leading-10 font-normal font-outfit text-white">
-            We deliver custom digital solutions, including web and mobile
-            development, UI/UX, DevOps, e-commerce, AI, and system integrations
-            helping businesses scale with efficient, high-performance
-            technology.
-          </p>
-          <div className="md:block hidden  mt-[134px]">
-            <button
-              style={{ paddingLeft: 14 }}
-              className="group flex items-center text-black font-outfit  gap-4 bg-white px-1 py-1 text-lg font-medium tracking-wide  transition">
-              View All Services
-              <span className="bg-primary w-[46px] h-[43px] text-white flex items-center justify-center transition group-hover:translate-x-1">
-                <ArrowRight size={14} />
-              </span>
+    <section className="relative w-full bg-black">
+      <div className="px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
+        <div className="w-full flex flex-col lg:flex-row items-start gap-8 sm:gap-10 md:gap-12 lg:gap-16">
+          {/* <!-- Left Column: Button + Text --> */}
+          <div className="w-full lg:flex-1 flex flex-col items-start gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+            {/* <!-- Our Service Button --> */}
+            <button className="px-5 sm:px-6 md:px-7 py-2 bg-primary text-white font-outfit font-medium text-sm sm:text-base md:text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+              Our Service
             </button>
+
+            {/* <!-- Description Text --> */}
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl leading-relaxed sm:leading-snug md:leading-snug lg:leading-snug font-normal font-outfit text-white max-w-full lg:max-w-3xl 2xl:max-w-full">
+              We deliver custom digital solutions, including web and mobile
+              development, UI/UX, DevOps, e-commerce, AI, and system
+              integrations helping businesses scale with efficient,
+              high-performance technology.
+            </p>
+
+            {/* View All Services Button - Hidden on mobile, shown on tablet+ */}
+            <div className="hidden md:block mt-6 sm:mt-8 md:mt-10 lg:mt-16">
+              <button className="group flex items-center text-black font-outfit gap-2 sm:gap-3 md:gap-4 bg-white px-3 sm:px-4 md:px-4 py-2 md:py-2 text-xs sm:text-sm md:text-base font-medium tracking-wide transition whitespace-nowrap">
+                View All Services
+                <span className="bg-primary w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 text-white flex items-center justify-center transition group-hover:translate-x-1 flex-shrink-0">
+                  <ArrowRight size={16} className="sm:w-5 sm:h-5" />
+                </span>
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* <!-- Right Column: Image Carousel --> */}
-        <div className="w-full lg:w-auto md:mt-0 mt-8">
-          <div
-            className="
-
-      h-screen max-h-[574px]
-      overflow-y-auto
-      snap-y snap-mandatory
-      scrollbar-hide
-
-            ">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="h-full flex items-center justify-center snap-start my-3">
-                <ServiceCard
+          {/* <!-- Right Column: Image Carousel --> */}
+          <div className="w-full lg:flex lg:w-auto">
+            <div className="h-[572px] sm:h-[572px] md:h-[572px] lg:h-[574px] overflow-y-auto snap-y snap-mandatory scrollbar-hide">
+              {services.map((service, index) => (
+                <div
                   key={index}
-                  image={service.image}
-                  title={service.title}
-                  gradient={service.gradient}
-                />
-              </div>
-            ))}
+                  className="h-[572px] sm:h-[572px] md:h-[572px] lg:h-[574px] flex items-center justify-center snap-start py-2 sm:py-3">
+                  <ServiceCard
+                    key={index}
+                    image={service.image}
+                    title={service.title}
+                    gradient={service.gradient}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
