@@ -99,7 +99,7 @@ const Header = () => {
                     "text-base font-medium transition-colors py-2",
                     location.pathname === item.href
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                   onClick={() => setMobileMenuOpen(false)}>
                   {item.name}
