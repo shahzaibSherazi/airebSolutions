@@ -43,7 +43,7 @@ export default function AnimatedParagraph({ text }) {
   return (
     <p
       ref={ref}
-      className="lg:max-w-[60vw] text-base sm:text-2xl md:text-xl font-outfit leading-10 md:leading-relaxed">
+      className="lg:max-w-[80vw] text-2xl md:text-4xl font-outfit leading-[48px] md:leading-relaxed">
       {text.split(" ").map((word, index) => (
         <span
           key={index}

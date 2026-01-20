@@ -24,23 +24,23 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative w-full pt-10 md:py-24 bg-black px-0 lg:px-8">
+    <section className="relative w-full py-28  bg-black px-0 lg:px-8">
       <div className="w-full flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-0">
         {/* <!-- Left Column: Button + Text --> */}
-        <div className="flex-1 flex flex-col items-start gap-8 lg:mb-0 md:mb-4">
+        <div className="flex-1 flex flex-col items-start gap-[45px] md:gap-[33px] lg:mb-0 md:mb-4">
           {/* <!-- Our Service Button --> */}
           <button className="px-7 py-1 bg-primary text-white font-outfit font-medium  text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
             Our Service
           </button>
 
           {/* <!-- Description Text --> */}
-          <p className="lg:max-w-[80vh] text-base sm:text-lg md:text-4xl font-normal font-outfit text-white">
+          <p className="lg:max-w-[80vh] text-2xl sm:text-lg md:text-4xl leading-10 font-normal font-outfit text-white">
             We deliver custom digital solutions, including web and mobile
             development, UI/UX, DevOps, e-commerce, AI, and system integrations
             helping businesses scale with efficient, high-performance
             technology.
           </p>
-          <div className="md:block hidden  mt-6">
+          <div className="md:block hidden  mt-[134px]">
             <button
               style={{ paddingLeft: 14 }}
               className="group flex items-center text-black font-outfit  gap-4 bg-white px-1 py-1 text-lg font-medium tracking-wide  transition">
@@ -53,7 +53,7 @@ const ServicesSection = () => {
         </div>
 
         {/* <!-- Right Column: Image Carousel --> */}
-        <div className="w-full lg:w-auto">
+        <div className="w-full lg:w-auto md:mt-0 mt-8">
           <div
             className="
        

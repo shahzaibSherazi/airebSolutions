@@ -6,11 +6,11 @@ import AnimatedParagraph from "../ui/AnimatedParagraph";
 
 const FeaturedSection = () => {
   return (
-    <section className="w-full bg-white px-4 md:px-6 py-16 mx-auto">
-      <div className="w-full flex flex-col lg:flex-row items-start  gap-8 lg:gap-16">
+    <section className="w-full bg-white px-4 md:px-6 py-16 flex flex-col gap-[14vh] md:gap-[10.7vh] mx-auto">
+      <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
         {/* Text Content */}
-        <div className="flex-1 flex flex-col gap-4">
-          <p className="text-2xl font-normal text-[#0B23C8]">
+        <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">
+          <p className="text-[25px] font-normal text-[#0B23C8]">
             Featured Insights
           </p>
 
@@ -27,7 +27,7 @@ const FeaturedSection = () => {
 
         {/* Button */}
         <div className="w-full lg:w-auto flex lg:justify-end items-start">
-          <button className="flex items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3 hover:bg-blue-700 transition">
+          <button className="flex items-center gap-2 bg-primary text-white text-sm font-medium px-[22px] py-[18px] hover:bg-blue-700 transition">
             Let's work together
             <img src={btnIcon} alt="icon" className="w-3 h-3" />
           </button>
@@ -35,7 +35,7 @@ const FeaturedSection = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-[10vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[9vh] md:gap-8">
         <FeaturedInsightCard
           type="case-study"
           tag="Case Study"
