@@ -5,6 +5,8 @@ import fintechVideo from "../../assets/fintech_video.mp4";
 import ecommerceVideo from "../../assets/ecommerce_video.mp4";
 import educationVideo from "../../assets/edu_video.mp4";
 import healthCareVideo from "../../assets/health_care.mp4";
+import gamingVideo from "../../assets/gaming_video.mp4";
+import contactVideo from "../../assets/contact_video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -16,6 +18,8 @@ const serviceVideos = [
   { id: 3, video: ecommerceVideo },
   { id: 4, video: educationVideo },
   { id: 5, video: healthCareVideo },
+  { id: 6, video: gamingVideo },
+  { id: 7, video: contactVideo },
 ];
 
 export default function AdaptableSection() {
@@ -24,8 +28,8 @@ export default function AdaptableSection() {
   return (
     <section className="bg-black px-4 md:px-8 py-16  mx-auto">
       {/* Heading */}
-      <div className="text-center mb-12">
-        <span className="inline-block bg-primary text-white px-4 py-3 text-2xl font-outfit font-normal leading-4 mb-9 sm:mb-6">
+      <div className="text-center md:mb-[101px] mb-[75px]">
+        <span className="inline-block bg-primary text-white px-5 py-[18px] text-2xl font-outfit font-normal leading-4 mb-9 sm:mb-6">
           Adaptable for any sector
         </span>
       </div>
@@ -58,7 +62,7 @@ export default function AdaptableSection() {
       </Swiper>
 
       {/* Bottom slider */}
-      <LogoSlider />
+      {/* <LogoSlider /> */}
     </section>
   );
 }

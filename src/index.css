@@ -202,3 +202,96 @@ All colors MUST be HSL.
 .video-marquee:hover {
   --speed: 16000;
 }
+
+.card {
+  position: relative;
+
+  /* padding: 30px; */
+
+  /* border-radius: 12px; */
+  color: white;
+}
+
+/* TOP LEFT CORNER */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 18px;
+  height: 18px;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  /* filter: drop-shadow(0 0 6px #1e40ff); */
+}
+
+/* TOP RIGHT CORNER */
+.card::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  /* filter: drop-shadow(0 0 6px #1e40ff); */
+}
+
+/* BOTTOM CORNERS */
+.corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* BOTTOM LEFT */
+.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+}
+
+/* BOTTOM RIGHT */
+.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+}
+
+/*button edges  */
+
+.btn_edge {
+  position: relative;
+
+  color: white;
+}
+
+/* TOP RIGHT CORNER */
+.btn_edge::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  /* filter: drop-shadow(0 0 6px #1e40ff); */
+}
+.btn_corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  color: white;
+}
+/* BOTTOM LEFT */
+.btn_bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
