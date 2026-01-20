@@ -84,7 +84,6 @@ const ServicesSection = () => {
 
 export default ServicesSection;
 
-// import { useEffect, useRef, useState } from "react";
 // import ServiceCard from "../ui/serviceCard";
 // import service1 from "../../assets/service1.png";
 // import service2 from "../../assets/service2.png";
@@ -110,40 +109,6 @@ export default ServicesSection;
 // ];
 
 // const ServicesSection = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const containerRef = useRef(null);
-//   const cardRefs = useRef([]);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             const index = cardRefs.current.indexOf(entry.target);
-//             if (index !== -1) {
-//               setActiveIndex(index);
-//             }
-//           }
-//         });
-//       },
-//       {
-//         root: null,
-//         rootMargin: "-50% 0px -50% 0px", // Trigger when 50% of card is visible
-//         threshold: 0,
-//       },
-//     );
-
-//     cardRefs.current.forEach((card) => {
-//       if (card) observer.observe(card);
-//     });
-
-//     return () => {
-//       cardRefs.current.forEach((card) => {
-//         if (card) observer.unobserve(card);
-//       });
-//     };
-//   }, []);
-
 //   return (
 //     <section className="relative w-full bg-black">
 //       <div className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
@@ -151,10 +116,12 @@ export default ServicesSection;
 //           {/* Left Column: Sticky Content */}
 //           <div className="lg:sticky lg:top-20 lg:self-start h-fit">
 //             <div className="flex flex-col items-start gap-8 lg:gap-10">
+//               {/* Our Service Button */}
 //               <button className="px-7 py-2 bg-primary text-white font-outfit font-medium text-base lg:text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
 //                 Our Service
 //               </button>
 
+//               {/* Description Text */}
 //               <p className="max-w-full lg:max-w-[550px] text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-relaxed lg:leading-[3rem] font-normal font-outfit text-white">
 //                 We deliver custom digital solutions, including web and mobile
 //                 development, UI/UX, DevOps, e-commerce, AI, and system
@@ -162,6 +129,7 @@ export default ServicesSection;
 //                 high-performance technology.
 //               </p>
 
+//               {/* View All Button - Desktop */}
 //               <div className="hidden lg:block mt-8">
 //                 <button
 //                   style={{ paddingLeft: 14 }}
@@ -175,23 +143,13 @@ export default ServicesSection;
 //             </div>
 //           </div>
 
-//           {/* Right Column: Cards with Intersection Observer */}
-//           <div className="relative" ref={containerRef}>
+//           {/* Right Column: Scrolling Cards */}
+//           <div className="relative">
 //             <div className="space-y-8 lg:space-y-12">
 //               {services.map((service, index) => (
 //                 <div
 //                   key={index}
-//                   ref={(el) => (cardRefs.current[index] = el)}
-//                   className={`transition-all duration-700 ${
-//                     index === activeIndex
-//                       ? "opacity-100 scale-100"
-//                       : "opacity-40 scale-95"
-//                   }`}
-//                   style={{
-//                     height: "80vh",
-//                     minHeight: "500px",
-//                     scrollSnapAlign: "start",
-//                   }}>
+//                   className="sticky top-20 transition-all duration-500">
 //                   <ServiceCard
 //                     image={service.image}
 //                     title={service.title}
@@ -203,11 +161,11 @@ export default ServicesSection;
 //           </div>
 //         </div>
 
-//         {/* Mobile Button */}
+//         {/* View All Button - Mobile */}
 //         <div className="lg:hidden mt-12 px-4">
 //           <button
 //             style={{ paddingLeft: 14 }}
-//             className="group flex items-center text-black font-outfit gap-4 bg-white px-1 py-1 text-base font-medium tracking-wide transition w-full sm:w-auto">
+//             className="group flex items-center text-black font-outfit gap-4 bg-white px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition hover:shadow-lg">
 //             View All Services
 //             <span className="bg-primary w-[46px] h-[43px] text-white flex items-center justify-center transition group-hover:translate-x-1">
 //               <ArrowRight size={18} />
