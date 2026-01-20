@@ -3,9 +3,9 @@ import btnIcon from "../../assets/icons/btn_icon.png";
 
 const ResultSection = () => {
   return (
-    <section className="w-full bg-white flex flex-col pt-[87px] px-4 md:px-6 items-center">
+    <section className="w-full bg-white flex flex-col px-4 md:px-6 items-center">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full ">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full pt-8 sm:pt-10 md:pt-12">
         {/* Left Column */}
         <div className="flex flex-col md:gap-[30px] gap-[7px] lg:w-1/3">
           <h1 className="text-xl font-normal text-[#0B23C8]">Results</h1>
@@ -25,9 +25,13 @@ const ResultSection = () => {
 
         {/* Right Column */}
         <div className="hidden md:flex lg:justify-end">
-          <button className="flex items-center gap-2 bg-primary text-white text-sm font-medium px-5 py-[18px] hover:bg-blue-700 transition">
+          <button className="inline-flex items-center gap-2 bg-primary text-white text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
             Read More About Us
-            <img src={btnIcon} alt="icon" className="w-3 h-3" />
+            <img
+              src={btnIcon}
+              alt="icon"
+              className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+            />
           </button>
         </div>
       </div>
@@ -39,7 +43,7 @@ const ResultSection = () => {
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             95%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left sm:text-center">
+          <p className="text-[#4B4B4B] text-sm text-left">
             Clients who stay because we consistently deliver results
           </p>
         </div>
@@ -49,7 +53,7 @@ const ResultSection = () => {
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             45%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left sm:text-center">
+          <p className="text-[#4B4B4B] text-sm text-left ">
             Conversion growth driven by thoughtful design and optimisation
           </p>
         </div>
@@ -59,20 +63,24 @@ const ResultSection = () => {
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             99%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left sm:text-center">
+          <p className="text-[#4B4B4B] text-sm text-left">
             Reliable, secure systems that perform with unwavering stability
           </p>
         </div>
-        <div className="md:hidden w-full flex justify-start mt-[56px]">
-          <button className="flex items-center gap-2 bg-primary text-white text-sm font-medium px-5 py-[18px] hover:bg-blue-700 transition">
+        <div className="md:hidden justify-start pt-6 sm:pt-8">
+          <button className="inline-flex items-center gap-2 bg-primary text-white text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
             Read More About Us
-            <img src={btnIcon} alt="icon" className="w-3 h-3" />
+            <img
+              src={btnIcon}
+              alt="icon"
+              className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+            />
           </button>
         </div>
       </div>
 
       {/* Footer Slider */}
-      <div className="w-full mt-[clamp(64px,8vh,111px)] pb-1">
+      <div className="w-full mt-[clamp(64px,8vh,111px)]">
         <LogoSlider />
       </div>
     </section>
