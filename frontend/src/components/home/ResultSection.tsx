@@ -3,7 +3,7 @@ import btnIcon from "../../assets/icons/btn_icon.png";
 
 const ResultSection = () => {
   return (
-    <section className="w-full bg-white flex flex-col px-4 md:px-6 items-center">
+    <section className="w-full bg-white flex flex-col px-4 md:px-6 py-8 items-center">
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full pt-8 sm:pt-10 md:pt-12">
         {/* Left Column */}
