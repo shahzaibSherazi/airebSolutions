@@ -85,6 +85,12 @@ export default function ClientReviews() {
             <div
               style={{
                 background: "linear-gradient(180deg, #0B23C8 0%, #000000 100%)",
+                boxShadow: `
+     -80px 0 150px rgba(11, 35, 200, 0.25),
+      80px 0 150px rgba(11, 35, 200, 0.25),
+      -150px 0 250px rgba(11, 35, 200, 0.15),
+      150px 0 250px rgba(11, 35, 200, 0.15)
+    `,
               }}
               className="relative border-025 border-white p-[1px] transition-all duration-500">
               <div
@@ -113,7 +119,7 @@ export default function ClientReviews() {
                     </div>
 
                     {/* Quote Text */}
-                    <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 lg:mb-6 xl:mb-8 text-gray-200">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 lg:mb-6 xl:mb-8  text-gray-200">
                       {currentTestimonial.quote}
                     </p>
 
