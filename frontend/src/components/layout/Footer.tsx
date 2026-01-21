@@ -6,7 +6,7 @@ import replyIcon from "../../assets/icons/reply.png";
 const Footer = () => {
   return (
     <div
-      className="min-h-screen flex flex-col"
+      className=" flex flex-col"
       style={{
         background: "linear-gradient(180deg, #0A20B9 0%, #000000 100%)",
       }}>
@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Top Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 gap-[94px] mb-[27px]">
             {/* Portfolio Card  */}
-            <div className="bg-[#FFFFFF] lg:max-w-[459px] max-w-none text-black rounded-[7px] md:px-[19px] px-[18px] md:pt-[15px] pt-3 pb-[18px] md:pb-[22px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
+            <div className="bg-[#FFFFFF] lg:max-w-[459px] max-w-none 2xl:max-w-full text-black rounded-[7px] md:px-[19px] px-[18px] md:pt-[15px] pt-3 pb-[18px] md:pb-[22px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
               <p className="text-[22px] leading-[56px] font-stoke font-medium mb-[10px] md:mb-6">
                 Portfolio
               </p>
@@ -35,7 +35,7 @@ const Footer = () => {
               </a>
             </div>
             {/* Navigation Menu */}
-            <div className="flex flex-col justify-center lg:max-w-[510px] max-w-none">
+            <div className="flex flex-col justify-center lg:max-w-[510px] max-w-none 2xl:max-w-full">
               {["Home", "Services", "Industries", "Resources", "About Us"].map(
                 (item) => (
                   <a

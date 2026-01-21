@@ -7,6 +7,9 @@ import educationVideo from "../../assets/edu_video.mp4";
 import healthCareVideo from "../../assets/health_care.mp4";
 import gamingVideo from "../../assets/gaming_video.mp4";
 import contactVideo from "../../assets/contact_video.mp4";
+import realEstateVideo from "../../assets/real_estate_video.mp4";
+import startUpVideo from "../../assets/startUp_video.mp4";
+import retailVideo from "../../assets/retail_video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -20,6 +23,9 @@ const serviceVideos = [
   { id: 5, video: healthCareVideo },
   { id: 6, video: gamingVideo },
   { id: 7, video: contactVideo },
+  { id: 8, video: realEstateVideo },
+  { id: 9, video: startUpVideo },
+  { id: 10, video: retailVideo },
 ];
 
 export default function AdaptableSection() {

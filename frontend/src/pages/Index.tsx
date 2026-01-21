@@ -11,6 +11,7 @@ import StrategicApproach from "@/components/home/StrategicApproach";
 import ResultSection from "@/components/home/ResultSection";
 import FeaturedSection from "@/components/home/FeaturedSection";
 import ContactForm from "@/components/home/ContactForm";
+import OurReviews from "@/components/home/OurReviews";
 
 const Index = () => {
   return (
@@ -20,7 +21,7 @@ const Index = () => {
       <AdaptableSection />
       <ResultSection />
       <FeaturedSection />
-
+      <OurReviews />
       {/* <ProjectsSection /> */}
       {/* <WhyChooseUsSection /> */}
       {/* <TestimonialsSection /> */}
