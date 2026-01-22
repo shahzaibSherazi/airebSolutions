@@ -85,6 +85,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import bgVideo from "@/assets/hero-video.mp4";
 
 // AnimatedText component
 const AnimatedText = ({ text, className }) => {
@@ -114,7 +115,7 @@ const HeroSection = () => {
         loop
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="./src/assets/hero-video.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
       </video>
 
       {/* Dark Overlay for better text readability */}
