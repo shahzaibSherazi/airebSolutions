@@ -435,3 +435,90 @@ blockquote::-webkit-scrollbar-thumb:hover {
 .border-025 {
   border-width: 0.25px !important;
 }
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-5 {
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 640px) {
+  .sm\:line-clamp-4 {
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:line-clamp-5 {
+    display: -webkit-box;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@keyframes cardSlideRotateRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) rotateY(-25deg) scale(0.8);
+  }
+  60% {
+    transform: translateX(-5%) rotateY(3deg) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes cardSlideRotateLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotateY(25deg) scale(0.8);
+  }
+  60% {
+    transform: translateX(5%) rotateY(-3deg) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

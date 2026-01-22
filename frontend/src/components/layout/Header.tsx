@@ -143,6 +143,10 @@ const leftMenu = [
       "Custom Software",
       "API Integration",
       "Consulting Services",
+      "Quality Assurance",
+      "Digital Marketing",
+      "E-commerce Solutions",
+      "Custom Software",
     ],
   },
   {
@@ -228,7 +232,7 @@ const Header = () => {
   return (
     <header className=" w-full z-50">
       {/* TOP BAR */}
-      <div className="container mx-auto px-3">
+      <div className="  px-8">
         <div className="flex items-start justify-between h-36 pt-8">
           {/* MENU BUTTON */}
           <Button
@@ -274,8 +278,8 @@ const Header = () => {
               </button>
 
               {/* DESKTOP & TABLET LAYOUT */}
-              <div className="hidden md:grid md:grid-cols-12 gap-6 lg:gap-10 text-white">
-                {/* LEFT NAV */}
+              <div className="hidden lg:grid lg:grid-cols-12 gap-6 lg:gap-10 text-white">
+                {/* LEFT NAV - Keep as is */}
                 <div className="col-span-3 flex flex-col gap-4 lg:gap-6">
                   {leftMenu.map((item) => (
                     <button
@@ -307,42 +311,66 @@ const Header = () => {
                   </button>
                 </div>
 
-                {/* CONTENT GRID */}
-                <div className="col-span-7 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 text-sm lg:text-base">
-                  {activeContent?.items.map((item, i) => (
-                    <button
-                      key={i}
-                      className="text-left cursor-pointer hover:text-blue-300 transition-colors py-2 hover:translate-x-1 duration-200">
-                      {item}
-                    </button>
-                  ))}
-                </div>
+                {/* MODIFIED CONTENT GRID - 3 columns layout */}
+                <div className="col-span-9 text-sm lg:text-base border rounded-[8px] border-white px-[34px] py-[21px]">
+                  {/* 3 COLUMNS GRID */}
+                  <div className="grid grid-cols-[1fr_1fr_1.5fr] gap-6">
+                    {/* COLUMN 1 - First 6 items */}
+                    <div className="space-y-6 ">
+                      {activeContent?.items.slice(0, 6).map((item, i) => (
+                        <button
+                          key={i}
+                          className="text-left cursor-pointer border-b border-white hover:text-blue-300 transition-colors py-2 hover:translate-x-1 duration-200 whitespace-nowrap w-full">
+                          {item}
+                        </button>
+                      ))}
+                    </div>
 
-                {/* ENGAGEMENT MODELS */}
-                <div className="col-span-2 border-l border-white/30 pl-4 lg:pl-6">
-                  <p className="font-semibold mb-4 lg:mb-6 text-base lg:text-lg">
-                    Engagement Models
-                  </p>
+                    {/* COLUMN 2 - Next 4 items */}
+                    <div className="space-y-6">
+                      {activeContent?.items.slice(6, 12).map((item, i) => (
+                        <button
+                          key={i}
+                          className="text-left border-b border-white cursor-pointer hover:text-blue-300 transition-colors py-2 hover:translate-x-1 duration-200 whitespace-nowrap w-full">
+                          {item}
+                        </button>
+                      ))}
+                    </div>
 
-                  <div className="flex flex-col gap-3 text-xs lg:text-sm">
-                    <button className="bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded-md transition-all shadow-md hover:shadow-lg text-left">
-                      Project Based Delivery
-                    </button>
-                    <button className="border border-white hover:bg-white/10 px-3 py-2 rounded-md transition-all text-left">
-                      Dedicated Team
-                    </button>
-                    <button className="border break-words border-white hover:bg-white/10 px-3 py-2 rounded-md transition-all text-left">
-                      Staff Augmentation
-                    </button>
-                    <button className="border border-white hover:bg-white/10 px-3 py-2 rounded-md transition-all text-left">
-                      Managed Services
-                    </button>
+                    {/* COLUMN 3 - Last 4 items + Engagement Models */}
+                    <div className=" flex flex-col justify-center items-center">
+                      {/* Last 4 items */}
+                      <div className="max-w-[200px] space-y-6">
+                        {activeContent?.items.slice(12, 16).map((item, i) => (
+                          <button
+                            key={i}
+                            className="text-left border-b border-white cursor-pointer hover:text-blue-300 transition-colors py-2 hover:translate-x-1 duration-200 whitespace-nowrap w-full">
+                            {item}
+                          </button>
+                        ))}
+                      </div>
+                      {/* Engagement Models section at bottom of 3rd column */}
+                      <div className="mt-6 border-025 border-white/30 rounded-md p-4 max-w-[311px]">
+                        <p className="font-normal font-stoke mb-3 text-base lg:text-lg">
+                          Engagement Models
+                        </p>
+
+                        <div className="flex flex-col md:flex-row gap-2">
+                          <button className="bg-primary px-[7px] py-1.5 rounded text-xs font-normal font-outfit transition-all shadow-sm hover:shadow">
+                            Project Based Delivery
+                          </button>
+                          <button className=" bg-primary px-[7px] py-1.5 rounded text-xs font-normal font-outfit transition-all  ">
+                            Dedicated Team
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* MOBILE LAYOUT */}
-              <div className="md:hidden text-white space-y-6">
+              <div className="lg:hidden text-white space-y-6">
                 {/* TABS */}
                 <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
                   {leftMenu.map((item) => (
@@ -381,12 +409,6 @@ const Header = () => {
                     </button>
                     <button className="border border-white px-3 py-2 rounded-md">
                       Dedicated Team
-                    </button>
-                    <button className="border border-white px-3 py-2 rounded-md">
-                      Staff Augmentation
-                    </button>
-                    <button className="border border-white px-3 py-2 rounded-md">
-                      Managed Services
                     </button>
                   </div>
                 </div>

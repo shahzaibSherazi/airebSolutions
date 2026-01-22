@@ -16,6 +16,7 @@ const FeaturedSection = () => {
 
           {/* <p className="lg:max-w-[60vw] text-base sm:text-lg md:text-xl font-normal font-outfit text-[#000000] leading-relaxed"> */}
           <AnimatedParagraph
+            className="lg:max-w-[80vw] text-2xl md:text-4xl font-outfit leading-[48px] md:leading-relaxed"
             text="Highlights our latest perspectives on design, technology, and
             digital innovation. From UI/UX best practices and modern web
             development to DevOps, automation, and emerging tech trends, we

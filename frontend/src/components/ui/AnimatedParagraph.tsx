@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function AnimatedParagraph({ text }) {
+export default function AnimatedParagraph({
+  text,
+  className,
+  textColor,
+}: {
+  text: string;
+  className?: string;
+  textColor?: string;
+}) {
   const ref = useRef(null);
   const [activeIndex, setActiveIndex] = useState(-1);
   const timeoutRefs = useRef([]);
@@ -16,7 +24,7 @@ export default function AnimatedParagraph({ text }) {
           text.split(" ").forEach((_, i) => {
             const t = setTimeout(() => {
               setActiveIndex(i);
-            }, i * 40);
+            }, i * 100);
             timeoutRefs.current.push(t);
           });
         }
@@ -29,7 +37,7 @@ export default function AnimatedParagraph({ text }) {
       },
       {
         threshold: 0.5, // 50% visible
-      }
+      },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -41,14 +49,12 @@ export default function AnimatedParagraph({ text }) {
   }, [text]);
 
   return (
-    <p
-      ref={ref}
-      className="lg:max-w-[80vw] text-2xl md:text-4xl font-outfit leading-[48px] md:leading-relaxed">
+    <p ref={ref} className={` ${className}`}>
       {text.split(" ").map((word, index) => (
         <span
           key={index}
           className={`inline-block mr-1 transition-colors duration-300 ${
-            index <= activeIndex ? "text-black" : "text-gray-400"
+            index <= activeIndex ? textColor || "text-black" : "text-gray-400"
           }`}>
           {word}
         </span>

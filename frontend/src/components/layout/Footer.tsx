@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { LuReply } from "react-icons/lu";
 import replyIcon from "../../assets/icons/reply.png";
+import AnimatedParagraph from "../ui/AnimatedParagraph";
 
 const Footer = () => {
   return (
@@ -79,26 +80,31 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-1 bg-[#F5F5F0] text-black rounded-[7px] p-8 md:p-10 overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
-              <h3 className="text-2xl font-serif mb-6">Location</h3>
+            <div className="lg:col-span-1 md:bg-[#F5F5F0] md:text-black rounded-[7px] px-[21px] md:px-[33px] py-[28px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer text-white">
+              <h3 className="text-[32px] leading-[22px] font-stoke mb-9">
+                Location
+              </h3>
               <div className="space-y-6">
-                <div>
-                  <p className="text-sm leading-relaxed">
-                    1309 Coffeen Avenue STE 1200
-                    <br /> Sheridan, Wyoming 82801
-                  </p>
+                <div className=" ">
+                  <AnimatedParagraph
+                    textColor="md:text-black text-white"
+                    className="text-[17px] font-normal  leading-7 font-stoke border-b md:border-black   pb-[15px] border-white "
+                    text={`1309 Coffeen Avenue STE 1200\nSheridan, Wyoming 82801`}
+                  />
                 </div>
                 <div>
-                  <p className="text-sm leading-relaxed">
-                    55 Village Centre Place, Suite 200,
-                    <br /> Mississauga, ON L4Z1V9
-                  </p>
+                  <AnimatedParagraph
+                    textColor="md:text-black text-white"
+                    className="text-[17px] font-normal  leading-7 font-stoke border-b-[0.25px] md:border-black   pb-[15px] border-white"
+                    text={`55 Village Centre Place, Suite 200,\n Mississauga, ON L4Z1V9`}
+                  />
                 </div>
                 <div>
-                  <p className="text-sm leading-relaxed">
-                    8, Farooq Avenue, G Block, Johar Town,
-                    <br /> Lahore Pakistan.
-                  </p>
+                  <AnimatedParagraph
+                    textColor="md:text-black text-white"
+                    className="text-[17px] font-normal  leading-7 font-stoke border-b md:border-black   pb-[15px] border-white"
+                    text={`8, Farooq Avenue, G Block, Johar Town,\n Lahore Pakistan.`}
+                  />
                 </div>
               </div>
             </div>
@@ -106,14 +112,20 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer */}
-      <footer className="bg-black text-white py-6 px-4 md:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <a href="#" className="text-sm hover:underline">
-            Terms & Conditions
-          </a>
-          <p className="text-sm">© 2025 AirebSolutions</p>
-          <a href="#" className="text-sm hover:underline">
+      <footer className=" text-white py-14 md:px-9 px-[22px]">
+        <div className=" flex flex-row flex-wrap justify-between gap-y-[38px]">
+          <a
+            href="#"
+            className="text-base hover:underline font-stoke font-normal">
             Privacy Policy
+          </a>
+          <p className="text-base hover:underline font-stoke font-normal md:border-l-0 border-l border-white pl-[14px] md:pl-0">
+            Terms & Conditions
+          </p>
+          <a
+            href="#"
+            className="text-base hover:underline font-stoke font-normal">
+            © 2025 AirebSolutions
           </a>
         </div>
       </footer>

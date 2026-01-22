@@ -2,7 +2,7 @@ import btnIcon from "../../assets/icons/servicCardbtn_icon.png";
 const ServiceCard = ({ image, title, gradient }) => {
   return (
     <div
-      className="card relative w-full max-w-xs sm:max-w-none lg:max-w-[403px] h-[480px] sm:h-[490px] md:h-[500px] lg:h-[565px] border border-[#001FEF] flex flex-col gap-2 sm:gap-4 p-2 sm:p-3 overflow-hidden snap-center mx-auto shrink-0"
+      className="card relative w-full  sm:max-w-none lg:max-w-[403px] h-[480px] sm:h-[490px] md:h-[500px] lg:h-[565px] border border-[#001FEF] flex flex-col gap-2 sm:gap-4 p-2 sm:p-3 overflow-hidden snap-center mx-auto shrink-0"
       style={{
         background:
           gradient || "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
