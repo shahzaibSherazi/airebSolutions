@@ -1,5 +1,6 @@
 import FeaturedInsightCard from "../ui/FeaturedInsightCard";
 import caseImg from "../../assets/case_study.png";
+import blogImg from "../../assets/blog.jpeg";
 import paperImg from "../../assets/white_paper.jpg";
 import btnIcon from "../../assets/icons/btn_icon.png";
 import AnimatedParagraph from "../ui/AnimatedParagraph";
@@ -52,7 +53,7 @@ opportunities, and get the inside track on eDesign news
         <FeaturedInsightCard
           type="blog"
           tag="Blogs"
-          image={caseImg}
+          image={blogImg}
           icon={btnIcon}
           title="Designing UI/UX that Converts:"
           heading="Best Practices for 2025"
