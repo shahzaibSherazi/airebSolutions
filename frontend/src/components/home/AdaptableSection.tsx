@@ -60,10 +60,14 @@ export default function AdaptableSection() {
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 8,
+            slidesPerView: 2,
+            spaceBetween: 10,
           },
           1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1550: {
             slidesPerView: 4,
             spaceBetween: 12,
           },

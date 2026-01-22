@@ -140,7 +140,7 @@ export default function ContactForm() {
       <div className="flex items-center justify-center px-4 sm:px-8 lg:px-[58px] pt-16 sm:pt-20 lg:pt-[123px] pb-12 sm:pb-16 lg:pb-[68px]">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div className="flex flex-col gap-12 sm:gap-16 lg:gap-[92px]">
-            <h1 className="font-serif font-normal text-[32px] sm:text-[40px] lg:text-[48px] leading-tight sm:leading-snug lg:leading-[64px]">
+            <h1 className="font-stoke font-normal text-[32px] sm:text-[40px] lg:text-[48px] leading-tight sm:leading-snug lg:leading-[64px]">
               Make every pixel <br /> pay for itself!
             </h1>
 

@@ -114,7 +114,7 @@ const HeroSection = () => {
         loop
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="/src/assets/hero-video.mp4" type="video/mp4" />
+        <source src="./src/assets/hero-video.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay for better text readability */}

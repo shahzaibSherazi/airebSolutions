@@ -55,11 +55,11 @@ const ServicesSection = () => {
 
           {/* <!-- Right Column: Image Carousel --> */}
           <div className="w-full lg:flex lg:w-auto">
-            <div className="h-[572px] sm:h-[572px] md:h-[572px] lg:h-[574px] overflow-y-auto snap-y snap-mandatory scrollbar-hide">
+            <div className="h-[572px]  lg:h-[574px] overflow-y-auto snap-y snap-mandatory scrollbar-hide">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="h-[572px] sm:h-[572px] md:h-[572px] lg:h-[574px] flex items-center justify-center snap-start py-2 sm:py-3">
+                  className="h-[572px] lg:h-[574px] flex items-center justify-center snap-start py-2 sm:py-3">
                   <ServiceCard
                     key={index}
                     image={service.image}
