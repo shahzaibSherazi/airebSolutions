@@ -7,7 +7,7 @@ import AnimatedParagraph from "../ui/AnimatedParagraph";
 
 const FeaturedSection = () => {
   return (
-    <section className="w-full bg-white px-4 md:px-6 py-8 sm:py-10 md:py-12 flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
+    <section className="w-full bg-white px-4 md:px-6 py-[87px] md:py-[103px] flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
       <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
         {/* Text Content */}
         <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">

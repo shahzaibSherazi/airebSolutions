@@ -229,7 +229,7 @@ export default function ClientReviews() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Our Reviews Button */}
         <div className="flex justify-center mb-[44px] sm:mb-10 lg:mb-[34px]">
-          <button className="relative bg-primary font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
+          <button className="relative bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
             Our Reviews
             <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full"></span>
           </button>
@@ -237,10 +237,10 @@ export default function ClientReviews() {
 
         {/* Heading */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-stoke leading-tight">
             Our Clients Love
           </h2>
-          <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light mt-2">
+          <p className="text-2xl sm:text-3xl lg:text-4xl  font-stoke font-light mt-2">
             to Recommend us
           </p>
         </div>
@@ -260,6 +260,7 @@ export default function ClientReviews() {
             <div
               key={currentIndex}
               style={{
+                borderWidth: 0.5,
                 background: "linear-gradient(180deg, #0B23C8 0%, #000000 100%)",
                 boxShadow: `
                   -80px 0 150px rgba(11, 35, 200, 0.25),
@@ -274,7 +275,7 @@ export default function ClientReviews() {
                       ? "cardSlideRotateLeft 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)"
                       : "cardFadeIn 0.6s ease-out",
               }}
-              className="relative border-[0.25px] border-white p-[1px]">
+              className="relative border-025 border-white p-[1px]">
               <div
                 style={{
                   background:

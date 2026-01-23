@@ -150,9 +150,9 @@ const ResultSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white flex flex-col px-4 md:px-6 py-8 items-center">
+      className="w-full bg-white flex flex-col px-4 md:px-6 py-[87px] md:py-[103px] items-center">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full pt-8 sm:pt-10 md:pt-12">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full ">
         {/* Left Column */}
         <div className="flex flex-col md:gap-[30px] gap-[7px] lg:w-1/3">
           <h1 className="text-xl font-normal text-[#0B23C8]">Results</h1>
