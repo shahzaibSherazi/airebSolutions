@@ -131,7 +131,7 @@ const HeroSection = () => {
           </p>
 
           {/* Main Heading - Responsive sizing */}
-          <h1 className="font-serif leading-tight tracking-widest mt-8 sm:mt-10 lg:mt-12 mb-8 sm:mb-10 lg:mb-12">
+          <h1 className="font-stoke leading-tight tracking-widest mt-8 sm:mt-10 lg:mt-12 mb-8 sm:mb-10 lg:mb-12">
             <div className="overflow-hidden">
               <AnimatedText
                 text="DESIGN"

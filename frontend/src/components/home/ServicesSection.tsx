@@ -3,6 +3,7 @@ import service1 from "../../assets/service1.png";
 import service2 from "../../assets/service2.png";
 import service3 from "../../assets/service3.png";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -44,12 +45,16 @@ const ServicesSection = () => {
 
             {/* View All Services Button - Hidden on mobile, shown on tablet+ */}
             <div className="hidden md:block mt-6 sm:mt-8 md:mt-10 lg:mt-16">
-              <button className="group flex items-center text-black font-outfit gap-2 sm:gap-3 md:gap-4 bg-white px-3 sm:px-4 md:px-4 py-2 md:py-2 text-xs sm:text-sm md:text-base font-medium tracking-wide transition whitespace-nowrap">
-                View All Services
-                <span className="bg-primary w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 text-white flex items-center justify-center transition group-hover:translate-x-1 flex-shrink-0">
-                  <ArrowRight size={16} className="sm:w-5 sm:h-5" />
-                </span>
-              </button>
+              <Link to="/services" className="inline-block">
+                <button
+                  type="button"
+                  className="group flex items-center text-black font-outfit gap-2 sm:gap-3 md:gap-4 bg-white px-3 sm:px-4 md:px-4 py-2 md:py-2 text-xs sm:text-sm md:text-base font-medium tracking-wide transition whitespace-nowrap">
+                  View All Services
+                  <span className="bg-primary w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 text-white flex items-center justify-center transition group-hover:translate-x-1 flex-shrink-0">
+                    <ArrowRight size={16} className="sm:w-5 sm:h-5" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
 
