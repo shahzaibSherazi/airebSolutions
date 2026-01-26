@@ -231,7 +231,7 @@ export default function ClientReviews() {
         <div className="flex justify-center mb-[44px] sm:mb-10 lg:mb-[34px]">
           <button className="relative bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
             Our Reviews
-            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full"></span>
+            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
           </button>
         </div>
 

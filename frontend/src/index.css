@@ -310,8 +310,22 @@ All colors MUST be HSL.
   color: white;
 }
 
+.contact_form::after {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  content: "";
+  /* content: "\f107";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900; */
+  width: 13px;
+  height: 13px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
 /* TOP RIGHT CORNER */
-.contactForm_edge::before {
+.contact_form::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -521,4 +535,9 @@ blockquote::-webkit-scrollbar-thumb:hover {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.hero-heading {
+  font-size: clamp(2.5rem, 8vh, 10rem);
+  line-height: 1.1;
 }

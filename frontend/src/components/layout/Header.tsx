@@ -253,7 +253,7 @@ const Header = () => {
           {/* CONTACT BUTTON */}
           <Button
             asChild
-            className="max-sm:hidden"
+            className="max-md:hidden"
             onClick={() => (window.location.href = "/contact")}>
             <div>
               <span className="absolute top-1.5 right-1.5 size-1.5 bg-black rounded-full z-50 group-hover:bg-white"></span>

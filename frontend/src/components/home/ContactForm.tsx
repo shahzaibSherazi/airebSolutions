@@ -239,8 +239,8 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       style={{
         background: "linear-gradient(180deg, #0B23C8 0%, #0B0B0B 100%)",
       }}
-      className="w-full max-w-full lg:max-w-[537px] px-[9px] py-[10px] contactForm_edge relative">
-      <span className="contactForm_corner contactForm_bottom-right" />
+      className="w-full max-w-full lg:max-w-[537px] px-[9px] py-[10px] contact_form  relative">
+      {/* <span className="contactForm_corner contactForm_bottom-right" /> */}
 
       <div className="px-4 sm:px-[18px] py-8 sm:py-[42px] space-y-5 sm:space-y-[26px] bg-black">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
