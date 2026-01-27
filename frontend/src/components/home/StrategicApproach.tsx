@@ -99,13 +99,13 @@ const StrategicApproach = () => {
       <div className="font-outfit">
         {/* Header */}
         <div className="sm:text-center mb-16 md:mb-20">
-          <span className="inline-block bg-primary text-white px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
+          <span className="inline-block bg-primary font-outfit text-white px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
             Strategic Approach
           </span>
-          <h2 className="font-serif text-black mb-6 sm:mb-3.5 text-[32px] md:text-[42px] leading-[48px] md:leading-[56px]">
+          <h2 className="font-stoke text-black mb-6 sm:mb-3.5 text-[32px] md:text-[42px] leading-[48px] md:leading-[56px]">
             The drive behind <br className="sm:hidden" /> everything we build
           </h2>
-          <p className="text-muted max-w-[833px] mx-auto text-base leading-[22px]">
+          <p className="text-muted font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter

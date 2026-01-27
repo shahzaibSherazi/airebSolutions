@@ -32,25 +32,25 @@ const HeroSection = () => {
                 text="AI Consulting, 
  
 "
-                className="text-4xl md:text-5xl lg:text-[62px]  "
+                className="text-3xl sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedText
                 text="IT & Digital"
-                className="text-4xl md:text-5xl lg:text-[62px]"
+                className="text-3xl sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedText
                 text="Services"
-                className="text-4xl md:text-5xl lg:text-[62px]"
+                className="text-3xl sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>
           </h1>
 
           {/* Bottom Description */}
-          <p className="font-outfit font-normal text-sm sm:text-base   max-w-xs sm:max-w-4xl  opacity-100 uppercase">
+          <p className="font-outfit font-normal text-xs sm:text-base   max-w-xs sm:max-w-4xl  opacity-100 uppercase">
             We create modern websites and webshops powered by efficient code,
             intelligent architecture, and seamless brand experiences built to
             deliver long-term commercial value.

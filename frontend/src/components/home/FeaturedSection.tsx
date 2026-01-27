@@ -11,25 +11,21 @@ const FeaturedSection = () => {
       <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
         {/* Text Content */}
         <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">
-          <p className="text-[25px] font-normal text-[#0B23C8]">
+          <p className="text-[25px] font-outfit font-normal text-[#0B23C8]">
             Featured Insights
           </p>
 
           {/* <p className="lg:max-w-[60vw] text-base sm:text-lg md:text-xl font-normal font-outfit text-[#000000] leading-relaxed"> */}
           <AnimatedParagraph
             className="lg:max-w-[80vw] text-2xl md:text-4xl font-outfit leading-[48px] md:leading-relaxed"
-            text="Highlights our latest perspectives on design, technology and
-            digital innovation.From UI/UX best practices and modern web
-            development to DevOps,automation and emerging tech trends,we
-            share practical insights that help businesses make smarter
-            decisions,stay competitive,and build scalable digital solutions."
+            text="Highlights our latest perspectives on design, technology and digital innovation.From UI/UX best practices and modern web development to DevOps,automation and emerging tech trends,we share practical insights that help businesses make smarter decisions,stay competitive,and build scalable digital solutions."
           />
           {/* </p> */}
         </div>
 
         {/* Button */}
         <div className="w-full lg:w-auto flex lg:justify-end items-start">
-          <button className="flex items-center gap-2 bg-primary text-white text-sm font-medium px-[22px] py-[18px] hover:bg-blue-700 transition">
+          <button className="flex items-center gap-2 bg-primary text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-blue-700 transition">
             Let's work together
             <img src={btnIcon} alt="icon" className="w-3 h-3" />
           </button>
