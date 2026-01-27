@@ -1,5 +1,6 @@
 import React from "react";
 import { Hand } from "lucide-react";
+import { PiHandPalmLight } from "react-icons/pi";
 
 const WhyChooseUs = () => {
   const features = [
@@ -66,16 +67,17 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* First Row - 2 Large Cards */}
           <div
-            className={`rounded-[5px] p-1 pb-8 ${
-              features[0].color === "dark-blue"
-                ? "bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B]"
-                : "bg-gradient-to-br from-blue-600 to-blue-700"
-            }`}>
+            className={`rounded-[5px] p-1 pb-8 group transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01]
+${
+  features[0].color === "dark-blue"
+    ? "bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B]"
+    : "bg-gradient-to-br from-blue-600 to-blue-700"
+}`}>
             <div
               className={`inline-flex px-7 py-[19px] rounded mb-6 ${
                 features[0].color === "dark-blue" ? "bg-primary" : "bg-white"
               }`}>
-              <Hand className="w-10 h-10 text-white" />
+              <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
             </div>
 
             <div className="px-5">
@@ -88,10 +90,12 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="rounded-[5px] p-1 bg-[#0B23C8] pb-8">
+          <div
+            className="rounded-[5px] p-1 bg-[#0B23C8] pb-8 group transition-all duration-300 ease-out
+hover:-translate-y-2 hover:scale-[1.01]">
             <div className="mb-6">
               <div className="inline-flex px-7 py-[19px] rounded bg-white">
-                <Hand className="w-10 h-10 text-blue-700" />
+                <PiHandPalmLight className="w-10 h-10 text-primary transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
               </div>
             </div>
             <div className="px-5">
@@ -105,14 +109,15 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Second Row - 3 Small Cards */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4 ">
             {features.slice(2).map((feature) => (
               <div
                 key={feature.id}
-                className="rounded-[5px] p-1 bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B] pb-8">
+                className="rounded-[5px] p-1 bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B] pb-8 group transition-all duration-300 ease-out
+hover:-translate-y-2 hover:scale-[1.01]">
                 <div className="mb-6">
-                  <div className="inline-flex px-7 py-[19px] rounded bg-blue-800/50">
-                    <Hand className="w-10 h-10 text-white" />
+                  <div className="inline-flex px-7 py-[19px] rounded bg-primary">
+                    <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
                   </div>
                 </div>
                 <div className="px-5">

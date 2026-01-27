@@ -125,13 +125,38 @@ const TechSolutionsSection = () => {
     },
   ];
 
-  const techItems = [
-    "Data",
-    "E-commerce/Product Management",
-    "Marketing & Customer Growth",
-  ];
+  // Info card content for each tab
+  const infoCardContent = {
+    technology: {
+      title: "Technology & Engineering",
+      description:
+        "From architecture to execution. Build scalable, secure, and high-performance solutions that power innovation and long-term growth.",
+      items: [
+        "Data",
+        "E-commerce/Product Management",
+        "Marketing & Customer Growth",
+      ],
+    },
+    design: {
+      title: "Design & Digital Experience",
+      description:
+        "From brand to interaction. Craft intuitive, engaging, and visually compelling experiences that connect users with your product.",
+      items: ["Strategy", "Product Concept", "Implementation Roadmap"],
+    },
+    business: {
+      title: "Business & Communication",
+      description:
+        "From conversations to conversions. Enable seamless communication and intelligent systems that drive efficiency, trust, and business growth.",
+      items: [
+        "Data Strategy & Analytics",
+        "AI-Driven Insights",
+        "Reporting & Dashboards",
+      ],
+    },
+  };
 
   const filteredCards = allCards.filter((card) => card.category === activeTab);
+  const currentInfo = infoCardContent[activeTab];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -167,7 +192,40 @@ const TechSolutionsSection = () => {
             we help brands grow smarter
           </p>
         </div>
-
+        {/* Center Card - Filter */}
+        <div className="sticky top-0 z-30 mb-4 flex justify-center items-center">
+          <div className=" bg-white rounded-full  px-4 py-[10px] flex item-center justify-center">
+            <div className="inline-flex gap-1 sm:gap-3">
+              <button
+                onClick={() => setActiveTab("technology")}
+                className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                  activeTab === "technology"
+                    ? "bg-blue-600 text-white "
+                    : " text-black hover:bg-gray-700 hover:text-white"
+                }`}>
+                Technology
+              </button>
+              <button
+                onClick={() => setActiveTab("design")}
+                className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                  activeTab === "design"
+                    ? "bg-blue-600 text-white"
+                    : " text-black hover:bg-gray-700 hover:text-white"
+                }`}>
+                Design
+              </button>
+              <button
+                onClick={() => setActiveTab("business")}
+                className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                  activeTab === "business"
+                    ? "bg-blue-600 text-white"
+                    : " text-black hover:bg-gray-700 hover:text-white"
+                }`}>
+                Business & Communication
+              </button>
+            </div>
+          </div>
+        </div>
         {/* Cards Container with Fixed Filter */}
         <div
           ref={containerRef}
@@ -175,45 +233,10 @@ const TechSolutionsSection = () => {
           {/* Sticky Filter Card - Centered in Top Row */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
             {/* First Card - Empty spacer for layout */}
-            <div className="hidden lg:block"></div>
-
-            {/* Center Card - Filter */}
-            <div className="sticky top-20 z-30 lg:col-start-2 flex justify-center items-center">
-              <div className=" bg-white rounded-full  px-4 py-[10px] flex item-center justify-center">
-                <div className="inline-flex  gap-3">
-                  <button
-                    onClick={() => setActiveTab("technology")}
-                    className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                      activeTab === "technology"
-                        ? "bg-blue-600 text-white "
-                        : " text-black hover:bg-gray-700 hover:text-white"
-                    }`}>
-                    Technology
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("design")}
-                    className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                      activeTab === "design"
-                        ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
-                        : " text-black hover:bg-gray-700 hover:text-white"
-                    }`}>
-                    Design
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("business")}
-                    className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                      activeTab === "business"
-                        ? "bg-blue-600 text-white shadow-lg shadow-blue-500/50"
-                        : " text-black hover:bg-gray-700 hover:text-white"
-                    }`}>
-                    Business & Communication
-                  </button>
-                </div>
-              </div>
-            </div>
+            {/* <div className="hidden lg:block"></div> */}
 
             {/* Third Card - Empty spacer for layout */}
-            <div className="hidden lg:block"></div>
+            {/* <div className="hidden lg:block"></div> */}
 
             {/* Service Cards - Start from second row */}
             {filteredCards.map((card, index) => (
@@ -258,27 +281,23 @@ const TechSolutionsSection = () => {
 
             {/* Technology & Engineering Info Card */}
             <div
-              className="relative overflow-hidden bg-primary border border-blue-500/30 opacity-0 animate-fadeInUp h-[331px] w-full "
+              key={activeTab}
+              className="relative overflow-hidden bg-primary border border-blue-500/30 opacity-0 animate-fadeInUp h-[331px]"
               style={{
                 animationDelay: `${filteredCards.length * 100}ms`,
                 animationFillMode: "forwards",
               }}>
               <div className="h-full flex flex-col p-4 sm:p-6 md:p-8 lg:px-[25px] lg:py-[10px]">
-                {/* Title - Responsive font size and line height */}
                 <h3 className="text-xl sm:text-2xl md:text-[26px] font-outfit font-bold mb-3 sm:mb-4 md:mb-[19px] leading-tight">
-                  Technology & Engineering
+                  {currentInfo.title}
                 </h3>
 
-                {/* Description - Responsive text and spacing */}
-                <p className="text-[#D9D9D9] font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed ">
-                  From architecture to execution. Build scalable, secure, and
-                  high-performance solutions that power innovation and long-term
-                  growth.
+                <p className="text-[#D9D9D9] font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed">
+                  {currentInfo.description}
                 </p>
 
-                {/* List - Responsive spacing and font */}
                 <ul className="space-y-2 sm:space-y-3">
-                  {techItems.map((item, index) => (
+                  {currentInfo.items.map((item, index) => (
                     <li key={index} className="flex items-start gap-2 sm:gap-3">
                       <span className="text-blue-400 mt-1 text-sm sm:text-base">
                         •
@@ -294,37 +313,6 @@ const TechSolutionsSection = () => {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* Custom Scrollbar */
-        .scrollbar-thin::-webkit-scrollbar {
-          width: 8px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-          background: #374151;
-          border-radius: 4px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-          background: #4B5563;
-        }
-      `}</style>
     </div>
   );
 };
