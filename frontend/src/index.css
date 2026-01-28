@@ -674,3 +674,54 @@ blockquote::-webkit-scrollbar-thumb:hover {
   align-items: center;
   justify-content: center;
 }
+
+/* Vertical timeline line */
+.timeline-dot {
+  position: relative;
+}
+
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b82f6, rgba(59, 130, 246, 0.2));
+  z-index: -1;
+}
+
+/* Remove line for last item */
+.timeline-dot.last::after {
+  display: none;
+}
+.timeline-dot::after {
+  animation: growLine 0.6s ease-out forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(100% + 48px);
+  }
+}
+.curved-line {
+  overflow: hidden;
+}
+.curved-line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-left-radius: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.group:hover .curved-line::before {
+  border-left-color: rgba(255, 255, 255, 0.3);
+  border-top-color: rgba(255, 255, 255, 0.3);
+}
