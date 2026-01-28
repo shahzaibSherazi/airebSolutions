@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import AllServices from "./pages/services";
 import ScrollToTop from "./components/ui/ScrollTop";
 import WebDevelopment from "./pages/web_development";
+import MobileAppDevelopment from "./pages/mobile_app_development";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<AllServices />} />
           <Route path="/web-development" element={<WebDevelopment />} />
+          <Route
+            path="/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

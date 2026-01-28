@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="flex md:pt-[87px] md:px-[29px] pt-[91px] px-[14px] w-full">
         <div className="w-full">
           {/* Top Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 gap-[94px] mb-[27px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-2 xl:gap-[14px] gap-[94px] mb-[27px]">
             {/* Portfolio Card  */}
             <div className="bg-[#FFFFFF] lg:max-w-[459px] max-w-none 2xl:max-w-full text-black rounded-[7px] md:px-[19px] px-[18px] md:pt-[15px] pt-3 pb-[18px] md:pb-[22px] overflow-hidden transition-transform duration-300 hover:scale-95 cursor-pointer">
               <p className="text-[22px] leading-[56px] font-stoke font-medium mb-[10px] md:mb-6">
