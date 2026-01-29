@@ -48,13 +48,22 @@ const HeroSection = () => {
           {/* Main Heading - Responsive sizing */}
           <h1 className="font-stoke leading-tight tracking-widest mt-8 lg:mt-10 mb-8 lg:mb-10">
             <div className="overflow-hidden">
-              <AnimatedText text="DESIGN" className="hero-heading" />
+              <AnimatedText
+                text="DESIGN"
+                className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
+              />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText text="FOR" className="hero-heading" />
+              <AnimatedText
+                text="FOR"
+                className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
+              />
             </div>
             <div className="overflow-hidden">
-              <AnimatedText text="EVERYONE" className="hero-heading" />
+              <AnimatedText
+                text="EVERYONE"
+                className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
+              />
             </div>
           </h1>
 

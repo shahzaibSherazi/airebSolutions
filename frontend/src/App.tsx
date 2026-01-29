@@ -9,6 +9,7 @@ import AllServices from "./pages/services";
 import ScrollToTop from "./components/ui/ScrollTop";
 import WebDevelopment from "./pages/web_development";
 import MobileAppDevelopment from "./pages/mobile_app_development";
+import CrmIntegration from "./pages/crm_integration";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             path="/mobile-app-development"
             element={<MobileAppDevelopment />}
           />
+          <Route path="/crm-integration" element={<CrmIntegration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

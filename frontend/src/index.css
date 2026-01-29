@@ -537,11 +537,6 @@ blockquote::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.hero-heading {
-  font-size: clamp(2.5rem, 8vh, 10rem);
-  line-height: 1.1;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
