@@ -456,22 +456,270 @@
 
 // export default ScrollConstellation;
 
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+// import { useEffect, useRef, useState } from "react";
+// import gsap from "gsap";
 
-const ScrollConstellation = () => {
+// const ScrollConstellation = () => {
+//   const containerRef = useRef(null);
+//   const parentRef = useRef(null);
+//   const [scrollProgress, setScrollProgress] = useState(0);
+
+//   // Orbits data
+//   const orbitsData = [
+//     { radius: 80, color: "#41528c", speed: 0.3, dash: "2,4" },
+//     { radius: 120, color: "#4d71dd", speed: 0.5, dash: "1,3" },
+//     { radius: 160, color: "#41528c", speed: 0.8, dash: "2,4" },
+//     { radius: 200, color: "#4d71dd", speed: 1.1, dash: "1,3" },
+//     { radius: 240, color: "#41528c", speed: 1.4, dash: "2,4" },
+//     { radius: 280, color: "#4d71dd", speed: 1.7, dash: "1,3" },
+//   ];
+
+//   // Labels data
+//   const labelsData = [
+//     { orbit: 0, position: 0, text: "ERP", color: "#4d71dd" },
+//     { orbit: 0, position: 120, text: "Email", color: "#4d71dd" },
+//     { orbit: 1, position: 45, text: "WMS", color: "#4d71dd" },
+//     { orbit: 1, position: 165, text: "TMS", color: "#4d71dd" },
+//     { orbit: 2, position: 30, text: "FMS", color: "#4d71dd" },
+//     { orbit: 2, position: 150, text: "3PL", color: "#d7824b" },
+//     { orbit: 3, position: 0, text: "Importer", color: "#d7824b" },
+//     { orbit: 3, position: 90, text: "Invoices", color: "#d7824b" },
+//     { orbit: 3, position: 180, text: "Packing", color: "#d7824b" },
+//     { orbit: 3, position: 270, text: "PO", color: "#d7824b" },
+//     { orbit: 4, position: 20, text: "BOL", color: "#d7824b" },
+//     { orbit: 4, position: 80, text: "Notice", color: "#d7824b" },
+//     { orbit: 4, position: 140, text: "Suppliers", color: "#4d71dd" },
+//     { orbit: 4, position: 200, text: "Carrier", color: "#4d71dd" },
+//     { orbit: 4, position: 260, text: "Broker", color: "#4d71dd" },
+//     { orbit: 4, position: 320, text: "Forwarder", color: "#4d71dd" },
+//     { orbit: 5, position: 30, text: "Maritime", color: "#4d71dd" },
+//     { orbit: 5, position: 120, text: "Port", color: "#4d71dd" },
+//     { orbit: 5, position: 210, text: "Financial", color: "#4d71dd" },
+//     { orbit: 5, position: 300, text: "Exporter", color: "#4d71dd" },
+//   ];
+
+//   // Handle scroll progress
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (!parentRef.current) return;
+
+//       const rect = parentRef.current.getBoundingClientRect();
+//       const parentHeight = parentRef.current.offsetHeight;
+//       const viewportHeight = window.innerHeight;
+
+//       // Calculate progress: 0 when section enters bottom, 1 when it exits top
+//       const start = viewportHeight;
+//       const end = -parentHeight + viewportHeight;
+//       const range = start - end;
+//       const current = rect.top;
+
+//       let progress = (start - current) / range;
+//       progress = Math.max(0, Math.min(1, progress));
+
+//       setScrollProgress(progress);
+//     };
+
+//     window.addEventListener("scroll", handleScroll, { passive: true });
+//     handleScroll();
+
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   // Animation on scroll progress change
+//   useEffect(() => {
+//     if (!containerRef.current) return;
+
+//     // Animate orbits
+//     orbitsData.forEach((orbit, index) => {
+//       const rotation = scrollProgress * 360 * orbit.speed;
+//       const orbitElements = containerRef.current.querySelectorAll(
+//         `[data-orbit="${index}"]`,
+//       );
+
+//       orbitElements.forEach((el) => {
+//         gsap.to(el, {
+//           rotation: rotation,
+//           transformOrigin: "center center",
+//           duration: 0.1,
+//           ease: "none",
+//         });
+//       });
+//     });
+
+//     // Animate labels
+//     labelsData.forEach((label, index) => {
+//       const labelElement = containerRef.current.querySelector(
+//         `[data-label="${index}"]`,
+//       );
+//       if (!labelElement) return;
+
+//       const orbit = orbitsData[label.orbit];
+//       const angle = label.position + scrollProgress * 360 * orbit.speed;
+//       const rad = (angle * Math.PI) / 180;
+//       const x = Math.cos(rad) * orbit.radius;
+//       const y = Math.sin(rad) * orbit.radius;
+
+//       gsap.to(labelElement, {
+//         x: x,
+//         y: y,
+//         scale: 1 + scrollProgress * 0.3,
+//         opacity: 0.7 + scrollProgress * 0.3,
+//         duration: 0.1,
+//         ease: "none",
+//       });
+//     });
+
+//     // Animate central logo
+//     const logoElement = containerRef.current.querySelector(".central-logo");
+//     if (logoElement) {
+//       gsap.to(logoElement, {
+//         rotation: scrollProgress * 180,
+//         scale: 1 + scrollProgress * 0.2,
+//         duration: 0.1,
+//         ease: "none",
+//       });
+//     }
+//   }, [scrollProgress]);
+
+//   return (
+//     <div
+//       ref={parentRef}
+//       className="relative w-full min-h-[400vh] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+//       {/* Sticky Constellation Container */}
+//       <div className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none z-20">
+//         <div
+//           ref={containerRef}
+//           className="relative w-full h-full flex items-center justify-center">
+//           {/* Background Glow */}
+//           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-orange-500/10 blur-3xl rounded-full" />
+
+//           {/* Orbits Container - Centered */}
+//           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+//             {/* Orbits */}
+//             {orbitsData.map((orbit, index) => (
+//               <div
+//                 key={index}
+//                 data-orbit={index}
+//                 className="absolute top-1/2 left-1/2 rounded-full border border-dashed will-change-transform"
+//                 style={{
+//                   width: `${orbit.radius * 2}px`,
+//                   height: `${orbit.radius * 2}px`,
+//                   borderColor: orbit.color,
+//                   borderWidth: "1px",
+//                   borderDasharray: orbit.dash,
+//                   transform: "translate(-50%, -50%)",
+//                 }}
+//               />
+//             ))}
+
+//             {/* Central Logo */}
+//             <div className="text-center">
+//               <div className="text-4xl font-bold text-blue-500 mb-1">
+//                 <svg viewBox="0 0 100 100" className="w-24 h-24 mx-auto">
+//                   <path
+//                     fill="#00A1E0"
+//                     d="M35 20c-8.3 0-15 6.7-15 15 0 1.5.2 3 .6 4.4C14.4 41.9 10 47.9 10 55c0 9.4 7.6 17 17 17h46c9.4 0 17-7.6 17-17 0-7.1-4.4-13.1-10.6-15.6.4-1.4.6-2.9.6-4.4 0-8.3-6.7-15-15-15-2.1 0-4.1.4-5.9 1.2C56.6 14.8 50 10 42.5 10c-5.8 0-11 2.7-14.4 6.9C36.8 20.3 35.9 20 35 20z"
+//                   />
+//                 </svg>
+//               </div>
+
+//               <div className="text-xl font-bold text-blue-500">salesforce</div>
+//             </div>
+//             {/* Labels */}
+//             {labelsData.map((label, index) => (
+//               <div
+//                 key={index}
+//                 data-label={index}
+//                 className="absolute top-1/2 left-1/2 will-change-transform pointer-events-auto cursor-pointer transition-all duration-300"
+//                 style={{
+//                   transform: "translate(-50%, -50%)",
+//                 }}>
+//                 <div
+//                   className={`
+//                   px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap
+//                   border backdrop-blur-sm transition-all duration-300
+//                   hover:scale-110 hover:shadow-lg hover:z-50
+//                   ${
+//                     label.color === "#d7824b"
+//                       ? "bg-gray-900/80 border-orange-500/40 text-white"
+//                       : "bg-gray-900/80 border-blue-500/40 text-white"
+//                   }
+//                 `}>
+//                   {label.text}
+//                 </div>
+//               </div>
+//             ))}
+
+//             {/* Connection Lines */}
+//             <svg
+//               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+//               style={{ width: "600px", height: "600px" }}>
+//               <defs>
+//                 <linearGradient
+//                   id="lineGradient"
+//                   x1="0%"
+//                   y1="0%"
+//                   x2="100%"
+//                   y2="0%">
+//                   <stop offset="0%" stopColor="#4d71dd" stopOpacity="0.3" />
+//                   <stop offset="100%" stopColor="#d7824b" stopOpacity="0.3" />
+//                 </linearGradient>
+//               </defs>
+
+//               {labelsData.map((label, index) => {
+//                 const orbit = orbitsData[label.orbit];
+//                 const angle =
+//                   label.position + scrollProgress * 360 * orbit.speed;
+//                 const rad = (angle * Math.PI) / 180;
+//                 const x = Math.cos(rad) * orbit.radius;
+//                 const y = Math.sin(rad) * orbit.radius;
+
+//                 return (
+//                   <line
+//                     key={index}
+//                     x1="300"
+//                     y1="300"
+//                     x2={300 + x}
+//                     y2={300 + y}
+//                     stroke="url(#lineGradient)"
+//                     strokeWidth="0.5"
+//                     strokeDasharray="2,2"
+//                     opacity={0.2 + scrollProgress * 0.3}
+//                   />
+//                 );
+//               })}
+//             </svg>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ScrollConstellation;
+
+import { useEffect, useRef, useState } from "react";
+import * as THREE from "three";
+
+const ScrollConstellation3D = () => {
   const containerRef = useRef(null);
   const parentRef = useRef(null);
+  const sceneRef = useRef(null);
+  const cameraRef = useRef(null);
+  const rendererRef = useRef(null);
+  const orbitGroupsRef = useRef([]);
+  const labelsRef = useRef([]);
+  const particlesRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Orbits data
+  // Orbits configuration
   const orbitsData = [
-    { radius: 80, color: "#41528c", speed: 0.3, dash: "2,4" },
-    { radius: 120, color: "#4d71dd", speed: 0.5, dash: "1,3" },
-    { radius: 160, color: "#41528c", speed: 0.8, dash: "2,4" },
-    { radius: 200, color: "#4d71dd", speed: 1.1, dash: "1,3" },
-    { radius: 240, color: "#41528c", speed: 1.4, dash: "2,4" },
-    { radius: 280, color: "#4d71dd", speed: 1.7, dash: "1,3" },
+    { radius: 2, color: 0x41528c, speed: 0.3, particleCount: 30 },
+    { radius: 3, color: 0x4d71dd, speed: 0.5, particleCount: 40 },
+    { radius: 4, color: 0x41528c, speed: 0.8, particleCount: 50 },
+    { radius: 5, color: 0x4d71dd, speed: 1.1, particleCount: 60 },
+    { radius: 6, color: 0x41528c, speed: 1.4, particleCount: 70 },
+    { radius: 7, color: 0x4d71dd, speed: 1.7, particleCount: 80 },
   ];
 
   // Labels data
@@ -498,6 +746,229 @@ const ScrollConstellation = () => {
     { orbit: 5, position: 300, text: "Exporter", color: "#4d71dd" },
   ];
 
+  // Initialize Three.js scene
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    // Scene setup
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x0a1128, 0.02);
+    sceneRef.current = scene;
+
+    // Camera setup
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000,
+    );
+    camera.position.z = 15;
+    cameraRef.current = camera;
+
+    // Renderer setup
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setClearColor(0x0a1128, 1);
+    containerRef.current.appendChild(renderer.domElement);
+    rendererRef.current = renderer;
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    const pointLight1 = new THREE.PointLight(0x4d71dd, 2, 50);
+    pointLight1.position.set(10, 10, 10);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0xd7824b, 1.5, 50);
+    pointLight2.position.set(-10, -10, 10);
+    scene.add(pointLight2);
+
+    // Central sphere (logo placeholder)
+    const centralGeometry = new THREE.SphereGeometry(0.8, 32, 32);
+    const centralMaterial = new THREE.MeshPhongMaterial({
+      color: 0x00a1e0,
+      emissive: 0x00a1e0,
+      emissiveIntensity: 0.5,
+      shininess: 100,
+    });
+    const centralSphere = new THREE.Mesh(centralGeometry, centralMaterial);
+    scene.add(centralSphere);
+
+    // Add glow to central sphere
+    const glowGeometry = new THREE.SphereGeometry(1.2, 32, 32);
+    const glowMaterial = new THREE.MeshBasicMaterial({
+      color: 0x00a1e0,
+      transparent: true,
+      opacity: 0.2,
+    });
+    const glowSphere = new THREE.Mesh(glowGeometry, glowMaterial);
+    scene.add(glowSphere);
+
+    // Create orbit rings and particles
+    orbitGroupsRef.current = orbitsData.map((orbit, orbitIndex) => {
+      const group = new THREE.Group();
+
+      // Create orbit ring
+      const ringGeometry = new THREE.RingGeometry(
+        orbit.radius - 0.02,
+        orbit.radius + 0.02,
+        128,
+      );
+      const ringMaterial = new THREE.MeshBasicMaterial({
+        color: orbit.color,
+        transparent: true,
+        opacity: 0.3,
+        side: THREE.DoubleSide,
+      });
+      const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+      ring.rotation.x = Math.PI / 2;
+      group.add(ring);
+
+      // Create particles along orbit
+      const particleGeometry = new THREE.BufferGeometry();
+      const particlePositions = [];
+      const particleColors = [];
+
+      for (let i = 0; i < orbit.particleCount; i++) {
+        const angle = (i / orbit.particleCount) * Math.PI * 2;
+        const x = Math.cos(angle) * orbit.radius;
+        const z = Math.sin(angle) * orbit.radius;
+        const y = (Math.random() - 0.5) * 0.2;
+
+        particlePositions.push(x, y, z);
+
+        const color = new THREE.Color(orbit.color);
+        particleColors.push(color.r, color.g, color.b);
+      }
+
+      particleGeometry.setAttribute(
+        "position",
+        new THREE.Float32BufferAttribute(particlePositions, 3),
+      );
+      particleGeometry.setAttribute(
+        "color",
+        new THREE.Float32BufferAttribute(particleColors, 3),
+      );
+
+      const particleMaterial = new THREE.PointsMaterial({
+        size: 0.08,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending,
+      });
+
+      const particles = new THREE.Points(particleGeometry, particleMaterial);
+      group.add(particles);
+
+      scene.add(group);
+      return { group, ring, particles };
+    });
+
+    // Create label spheres
+    labelsRef.current = labelsData.map((label) => {
+      const orbit = orbitsData[label.orbit];
+      const angle = (label.position * Math.PI) / 180;
+
+      const sphereGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+      const sphereMaterial = new THREE.MeshPhongMaterial({
+        color: label.color === "#d7824b" ? 0xd7824b : 0x4d71dd,
+        emissive: label.color === "#d7824b" ? 0xd7824b : 0x4d71dd,
+        emissiveIntensity: 0.5,
+        shininess: 100,
+      });
+
+      const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+
+      const x = Math.cos(angle) * orbit.radius;
+      const z = Math.sin(angle) * orbit.radius;
+      const y = 0;
+
+      sphere.position.set(x, y, z);
+      sphere.userData = { orbit: label.orbit, position: label.position };
+
+      scene.add(sphere);
+      return sphere;
+    });
+
+    // Background particles
+    const bgParticleGeometry = new THREE.BufferGeometry();
+    const bgParticlePositions = [];
+    const bgParticleCount = 1000;
+
+    for (let i = 0; i < bgParticleCount; i++) {
+      const x = (Math.random() - 0.5) * 50;
+      const y = (Math.random() - 0.5) * 50;
+      const z = (Math.random() - 0.5) * 50;
+      bgParticlePositions.push(x, y, z);
+    }
+
+    bgParticleGeometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(bgParticlePositions, 3),
+    );
+
+    const bgParticleMaterial = new THREE.PointsMaterial({
+      size: 0.05,
+      color: 0x4d71dd,
+      transparent: true,
+      opacity: 0.4,
+      blending: THREE.AdditiveBlending,
+    });
+
+    const bgParticles = new THREE.Points(
+      bgParticleGeometry,
+      bgParticleMaterial,
+    );
+    scene.add(bgParticles);
+    particlesRef.current = bgParticles;
+
+    // Animation loop
+    let animationId;
+    const animate = () => {
+      animationId = requestAnimationFrame(animate);
+
+      // Rotate central sphere
+      centralSphere.rotation.y += 0.005;
+      glowSphere.rotation.y -= 0.003;
+
+      // Pulse glow
+      glowSphere.scale.setScalar(1 + Math.sin(Date.now() * 0.001) * 0.1);
+
+      // Rotate background particles slowly
+      if (particlesRef.current) {
+        particlesRef.current.rotation.y += 0.0002;
+        particlesRef.current.rotation.x += 0.0001;
+      }
+
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    // Handle window resize
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", handleResize);
+      if (containerRef.current && renderer.domElement) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
+      renderer.dispose();
+    };
+  }, []);
+
   // Handle scroll progress
   useEffect(() => {
     const handleScroll = () => {
@@ -507,7 +978,6 @@ const ScrollConstellation = () => {
       const parentHeight = parentRef.current.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      // Calculate progress: 0 when section enters bottom, 1 when it exits top
       const start = viewportHeight;
       const end = -parentHeight + viewportHeight;
       const range = start - end;
@@ -525,170 +995,130 @@ const ScrollConstellation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animation on scroll progress change
+  // Update 3D scene based on scroll progress
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!sceneRef.current || !cameraRef.current) return;
 
-    // Animate orbits
-    orbitsData.forEach((orbit, index) => {
-      const rotation = scrollProgress * 360 * orbit.speed;
-      const orbitElements = containerRef.current.querySelectorAll(
-        `[data-orbit="${index}"]`,
-      );
+    // Rotate orbit groups
+    orbitGroupsRef.current.forEach((orbitObj, index) => {
+      const orbit = orbitsData[index];
+      orbitObj.group.rotation.y = scrollProgress * Math.PI * 2 * orbit.speed;
 
-      orbitElements.forEach((el) => {
-        gsap.to(el, {
-          rotation: rotation,
-          transformOrigin: "center center",
-          duration: 0.1,
-          ease: "none",
-        });
-      });
+      // Tilt orbits based on scroll
+      orbitObj.group.rotation.x = scrollProgress * Math.PI * 0.3;
     });
 
-    // Animate labels
-    labelsData.forEach((label, index) => {
-      const labelElement = containerRef.current.querySelector(
-        `[data-label="${index}"]`,
-      );
-      if (!labelElement) return;
+    // Update label positions
+    labelsRef.current.forEach((sphere) => {
+      const { orbit: orbitIndex, position } = sphere.userData;
+      const orbit = orbitsData[orbitIndex];
+      const angle =
+        (position * Math.PI) / 180 + scrollProgress * Math.PI * 2 * orbit.speed;
 
-      const orbit = orbitsData[label.orbit];
-      const angle = label.position + scrollProgress * 360 * orbit.speed;
-      const rad = (angle * Math.PI) / 180;
-      const x = Math.cos(rad) * orbit.radius;
-      const y = Math.sin(rad) * orbit.radius;
+      const x = Math.cos(angle) * orbit.radius;
+      const z = Math.sin(angle) * orbit.radius;
+      const y = Math.sin(scrollProgress * Math.PI * 2) * 0.5;
 
-      gsap.to(labelElement, {
-        x: x,
-        y: y,
-        scale: 1 + scrollProgress * 0.3,
-        opacity: 0.7 + scrollProgress * 0.3,
-        duration: 0.1,
-        ease: "none",
-      });
+      sphere.position.set(x, y, z);
+
+      // Scale based on scroll
+      const scale = 1 + scrollProgress * 0.5;
+      sphere.scale.setScalar(scale);
     });
 
-    // Animate central logo
-    const logoElement = containerRef.current.querySelector(".central-logo");
-    if (logoElement) {
-      gsap.to(logoElement, {
-        rotation: scrollProgress * 180,
-        scale: 1 + scrollProgress * 0.2,
-        duration: 0.1,
-        ease: "none",
-      });
+    // Camera movement
+    cameraRef.current.position.z = 15 - scrollProgress * 5;
+    cameraRef.current.position.y = scrollProgress * 3;
+    cameraRef.current.rotation.x = -scrollProgress * 0.3;
+
+    // Update background particles
+    if (particlesRef.current) {
+      particlesRef.current.rotation.y = scrollProgress * Math.PI * 2;
     }
   }, [scrollProgress]);
 
   return (
     <div
       ref={parentRef}
-      className="relative w-full min-h-[400vh] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
-      {/* Sticky Constellation Container */}
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center pointer-events-none z-20">
-        <div
-          ref={containerRef}
-          className="relative w-full h-full flex items-center justify-center">
-          {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-orange-500/10 blur-3xl rounded-full" />
+      className="relative w-full min-h-[400vh] bg-gradient-to-br from-[#0a1128] via-[#0f1941] to-[#1a237e]">
+      {/* 3D Canvas Container */}
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div ref={containerRef} className="w-full h-full" />
 
-          {/* Orbits Container - Centered */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            {/* Orbits */}
-            {orbitsData.map((orbit, index) => (
-              <div
-                key={index}
-                data-orbit={index}
-                className="absolute top-1/2 left-1/2 rounded-full border border-dashed will-change-transform"
-                style={{
-                  width: `${orbit.radius * 2}px`,
-                  height: `${orbit.radius * 2}px`,
-                  borderColor: orbit.color,
-                  borderWidth: "1px",
-                  borderDasharray: orbit.dash,
-                  transform: "translate(-50%, -50%)",
-                }}
-              />
-            ))}
-
-            {/* Central Logo */}
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-500 mb-1">
-                <svg viewBox="0 0 100 100" className="w-24 h-24 mx-auto">
+        {/* HTML Labels Overlay */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="relative w-full h-full flex items-center justify-center">
+            {/* Central Logo/Text */}
+            <div
+              className="absolute text-center z-10 pointer-events-auto"
+              style={{
+                transform: `scale(${1 + scrollProgress * 0.3}) rotate(${scrollProgress * 180}deg)`,
+                transition: "transform 0.1s ease-out",
+              }}>
+              <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 mx-auto drop-shadow-2xl">
                   <path
-                    fill="#00A1E0"
+                    fill="url(#logoGradient)"
                     d="M35 20c-8.3 0-15 6.7-15 15 0 1.5.2 3 .6 4.4C14.4 41.9 10 47.9 10 55c0 9.4 7.6 17 17 17h46c9.4 0 17-7.6 17-17 0-7.1-4.4-13.1-10.6-15.6.4-1.4.6-2.9.6-4.4 0-8.3-6.7-15-15-15-2.1 0-4.1.4-5.9 1.2C56.6 14.8 50 10 42.5 10c-5.8 0-11 2.7-14.4 6.9C36.8 20.3 35.9 20 35 20z"
                   />
+                  <defs>
+                    <linearGradient
+                      id="logoGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%">
+                      <stop offset="0%" stopColor="#00A1E0" />
+                      <stop offset="100%" stopColor="#4d71dd" />
+                    </linearGradient>
+                  </defs>
                 </svg>
               </div>
-
-              <div className="text-xl font-bold text-blue-500">salesforce</div>
-            </div>
-            {/* Labels */}
-            {labelsData.map((label, index) => (
-              <div
-                key={index}
-                data-label={index}
-                className="absolute top-1/2 left-1/2 will-change-transform pointer-events-auto cursor-pointer transition-all duration-300"
-                style={{
-                  transform: "translate(-50%, -50%)",
-                }}>
-                <div
-                  className={`
-                  px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap
-                  border backdrop-blur-sm transition-all duration-300
-                  hover:scale-110 hover:shadow-lg hover:z-50
-                  ${
-                    label.color === "#d7824b"
-                      ? "bg-gray-900/80 border-orange-500/40 text-white"
-                      : "bg-gray-900/80 border-blue-500/40 text-white"
-                  }
-                `}>
-                  {label.text}
-                </div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent tracking-wider">
+                salesforce
               </div>
-            ))}
+            </div>
 
-            {/* Connection Lines */}
-            <svg
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-              style={{ width: "600px", height: "600px" }}>
-              <defs>
-                <linearGradient
-                  id="lineGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="0%">
-                  <stop offset="0%" stopColor="#4d71dd" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="#d7824b" stopOpacity="0.3" />
-                </linearGradient>
-              </defs>
+            {/* Floating Labels */}
+            {labelsData.map((label, index) => {
+              const orbit = orbitsData[label.orbit];
+              const angle =
+                (label.position * Math.PI) / 180 +
+                scrollProgress * Math.PI * 2 * orbit.speed;
 
-              {labelsData.map((label, index) => {
-                const orbit = orbitsData[label.orbit];
-                const angle =
-                  label.position + scrollProgress * 360 * orbit.speed;
-                const rad = (angle * Math.PI) / 180;
-                const x = Math.cos(rad) * orbit.radius;
-                const y = Math.sin(rad) * orbit.radius;
+              // Convert 3D position to 2D screen position
+              const radius = orbit.radius * 50; // Scale for screen
+              const x = Math.cos(angle) * radius;
+              const y = Math.sin(angle) * radius;
 
-                return (
-                  <line
-                    key={index}
-                    x1="300"
-                    y1="300"
-                    x2={300 + x}
-                    y2={300 + y}
-                    stroke="url(#lineGradient)"
-                    strokeWidth="0.5"
-                    strokeDasharray="2,2"
-                    opacity={0.2 + scrollProgress * 0.3}
-                  />
-                );
-              })}
-            </svg>
+              return (
+                <div
+                  key={index}
+                  className="absolute pointer-events-auto cursor-pointer transition-all duration-200"
+                  style={{
+                    left: "50%",
+                    top: "50%",
+                    transform: `translate(-50%, -50%) translate(${x}px, ${y}px) scale(${1 + scrollProgress * 0.3})`,
+                    opacity: 0.7 + scrollProgress * 0.3,
+                  }}>
+                  <div
+                    className={`
+                      px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap
+                      backdrop-blur-md border-2 shadow-2xl transition-all duration-300
+                      hover:scale-125 hover:shadow-[0_0_30px_rgba(77,113,221,0.6)]
+                      ${
+                        label.color === "#d7824b"
+                          ? "bg-gradient-to-r from-orange-500/20 to-orange-600/20 border-orange-500/60 text-orange-200"
+                          : "bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/60 text-blue-200"
+                      }
+                    `}>
+                    {label.text}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -696,4 +1126,4 @@ const ScrollConstellation = () => {
   );
 };
 
-export default ScrollConstellation;
+export default ScrollConstellation3D;
