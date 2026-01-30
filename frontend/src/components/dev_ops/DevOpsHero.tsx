@@ -32,7 +32,7 @@ const DevOpsHero = () => {
     const drawInfinity = () => {
       const centerX = canvas.width / (2 * dpr);
       const centerY = canvas.height / (2 * dpr);
-      const scale = 80; // Size of infinity symbol
+      const scale = 120; // Size of infinity symbol
 
       ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
 
@@ -56,31 +56,31 @@ const DevOpsHero = () => {
         ctx.closePath();
 
         // Gradient glow effect
-        const gradient = ctx.createLinearGradient(
-          centerX - scale * 2,
-          centerY,
-          centerX + scale * 2,
-          centerY,
-        );
+        // const gradient = ctx.createLinearGradient(
+        //   centerX - scale * 2,
+        //   centerY,
+        //   centerX + scale * 2,
+        //   centerY,
+        // );
 
-        gradient.addColorStop(0, `rgba(77, 113, 221, ${0.8 - i * 0.15})`);
-        gradient.addColorStop(0.5, `rgba(0, 161, 224, ${1 - i * 0.15})`);
-        gradient.addColorStop(1, `rgba(77, 113, 221, ${0.8 - i * 0.15})`);
+        // gradient.addColorStop(0, `rgba(77, 113, 221, ${0.8 - i * 0.15})`);
+        // gradient.addColorStop(0.5, `rgba(0, 161, 224, ${1 - i * 0.15})`);
+        // gradient.addColorStop(1, `rgba(77, 113, 221, ${0.8 - i * 0.15})`);
 
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 15 + i * 8;
-        ctx.lineCap = "round";
-        ctx.lineJoin = "round";
+        // ctx.strokeStyle = gradient;
+        // ctx.lineWidth = 15 + i * 8;
+        // ctx.lineCap = "round";
+        // ctx.lineJoin = "round";
 
-        // Add blur for outer layers
-        ctx.shadowBlur = 20 + i * 10;
-        ctx.shadowColor = `rgba(77, 113, 221, ${0.6 - i * 0.1})`;
+        // // Add blur for outer layers
+        // ctx.shadowBlur = 20 + i * 10;
+        // ctx.shadowColor = `rgba(77, 113, 221, ${0.6 - i * 0.1})`;
 
-        ctx.stroke();
+        // ctx.stroke();
       }
 
       // Draw animated flowing particles
-      const numParticles = 50;
+      const numParticles = 60;
       for (let i = 0; i < numParticles; i++) {
         const t =
           (progress + i * ((Math.PI * 2) / numParticles)) % (Math.PI * 2);
@@ -90,7 +90,7 @@ const DevOpsHero = () => {
           (scale * Math.sin(t) * Math.cos(t)) / (1 + Math.sin(t) ** 2);
 
         // Particle glow
-        const particleGradient = ctx.createRadialGradient(x, y, 0, x, y, 8);
+        const particleGradient = ctx.createRadialGradient(x, y, 0, x, y, 16);
         particleGradient.addColorStop(
           0,
           `rgba(0, 161, 224, ${0.9 + glowIntensity * 0.1})`,
@@ -102,9 +102,9 @@ const DevOpsHero = () => {
         particleGradient.addColorStop(1, "rgba(77, 113, 221, 0)");
 
         ctx.beginPath();
-        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.arc(x, y, 7, 0, Math.PI * 2);
         ctx.fillStyle = particleGradient;
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur = 25;
         ctx.shadowColor = "rgba(0, 161, 224, 0.8)";
         ctx.fill();
       }
