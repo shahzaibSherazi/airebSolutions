@@ -11,6 +11,7 @@ import WebDevelopment from "./pages/web_development";
 import MobileAppDevelopment from "./pages/mobile_app_development";
 import CrmIntegration from "./pages/crm_integration";
 import DevOps from "./pages/dev_ops";
+import AiServices from "./pages/Ai_services";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           />
           <Route path="/crm-integration" element={<CrmIntegration />} />
           <Route path="/devops-services" element={<DevOps />} />
+          <Route path="/ai-services" element={<AiServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
