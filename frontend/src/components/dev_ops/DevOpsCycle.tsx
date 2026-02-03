@@ -41,45 +41,173 @@ const DevOpsCycle = () => {
   ];
 
   // Draw orbital layers with animated dot
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
+  //   if (!canvas) return;
+
+  //   const ctx = canvas.getContext("2d");
+  //   const dpr = window.devicePixelRatio || 1;
+
+  //   const setCanvasSize = () => {
+  //     const rect = canvas.getBoundingClientRect();
+  //     canvas.width = rect.width * dpr;
+  //     canvas.height = rect.height * dpr;
+  //     ctx.scale(dpr, dpr);
+  //   };
+
+  //   setCanvasSize();
+  //   window.addEventListener("resize", setCanvasSize);
+
+  //   // Draw function
+  //   const draw = () => {
+  //     const width = canvas.width / dpr;
+  //     const height = canvas.height / dpr;
+
+  //     ctx.clearRect(0, 0, width, height);
+
+  //     const layers = 6;
+
+  //     /* === DESIGN-CORRECT VALUES === */
+  //     const ellipseWidth = 220; // same width for all
+  //     const ellipseHeight = 50; // flat ellipse
+  //     const layerGap = 70; // vertical spacing
+
+  //     // Add padding for top dot and bottom ellipse
+  //     const topPadding = 100;
+  //     const bottomPadding = 50;
+  //     const totalEllipsesHeight = (layers - 1) * layerGap;
+  //     const centerX = width / 2;
+  //     const centerY = topPadding + totalEllipsesHeight / 2 + ellipseHeight;
+
+  //     // Draw ellipses
+  //     for (let i = 0; i < layers; i++) {
+  //       const yOffset = (i - (layers - 1) / 2) * layerGap;
+  //       const isActive = i === activeStep;
+
+  //       ctx.beginPath();
+  //       ctx.ellipse(
+  //         centerX,
+  //         centerY + yOffset,
+  //         ellipseWidth,
+  //         ellipseHeight,
+  //         0,
+  //         0,
+  //         Math.PI * 2,
+  //       );
+
+  //       if (isActive) {
+  //         ctx.strokeStyle = "#000000";
+  //         ctx.lineWidth = 3;
+  //         ctx.fillStyle = "#0B23C8";
+  //         ctx.fill();
+  //       } else {
+  //         ctx.strokeStyle = "#000000";
+  //         ctx.lineWidth = 0.5;
+  //       }
+
+  //       ctx.stroke();
+  //     }
+
+  //     // Draw animated dot on active layer
+  //     const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
+  //     const angle = dotPositionRef.current;
+
+  //     // Calculate position on active ellipse
+  //     const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
+  //     const ellipseY =
+  //       centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
+
+  //     // Dot position at top (fixed above all ellipses)
+  //     const dotX = ellipseX;
+  //     const dotY = 30; // Fixed position near top of canvas
+
+  //     // Draw vertical line from ellipse to dot
+  //     ctx.beginPath();
+  //     ctx.moveTo(ellipseX, ellipseY);
+  //     ctx.lineTo(dotX, dotY);
+  //     ctx.strokeStyle = "#0B23C8";
+  //     ctx.lineWidth = 2;
+  //     ctx.stroke();
+
+  //     // Draw dot (larger and more visible)
+  //     ctx.beginPath();
+  //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+  //     ctx.fillStyle = "#0B23C8";
+  //     ctx.fill();
+
+  //     // Draw white border around dot for better visibility
+  //     ctx.beginPath();
+  //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+  //     ctx.strokeStyle = "#FFFFFF";
+  //     ctx.lineWidth = 2;
+  //     ctx.stroke();
+
+  //     // Draw glow around dot
+  //     const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
+  //     gradient.addColorStop(0, "rgba(11, 35, 200, 0.6)");
+  //     gradient.addColorStop(1, "rgba(11, 35, 200, 0)");
+  //     ctx.beginPath();
+  //     ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
+  //     ctx.fillStyle = gradient;
+  //     ctx.fill();
+
+  //     // Update dot position
+  //     dotPositionRef.current += 0.015;
+
+  //     animationRef.current = requestAnimationFrame(draw);
+  //   };
+
+  //   draw();
+
+  //   return () => {
+  //     cancelAnimationFrame(animationRef.current);
+  //     window.removeEventListener("resize", setCanvasSize);
+  //   };
+  // }, [activeStep]);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
-    const dpr = window.devicePixelRatio || 1;
+    let animationId = null;
+    let lastTime = performance.now(); // ✅ FIXED
+    let dpr = window.devicePixelRatio || 1;
 
     const setCanvasSize = () => {
       const rect = canvas.getBoundingClientRect();
+      dpr = window.devicePixelRatio || 1;
+
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
+
+      // ✅ VERY IMPORTANT
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     };
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
 
-    // Draw function
-    const draw = () => {
+    const draw = (now) => {
+      const delta = (now - lastTime) / 1000; // seconds
+      lastTime = now;
+
       const width = canvas.width / dpr;
       const height = canvas.height / dpr;
 
       ctx.clearRect(0, 0, width, height);
 
       const layers = 6;
+      const ellipseWidth = 220;
+      const ellipseHeight = 50;
+      const layerGap = 70;
 
-      /* === DESIGN-CORRECT VALUES === */
-      const ellipseWidth = 220; // same width for all
-      const ellipseHeight = 50; // flat ellipse
-      const layerGap = 70; // vertical spacing
-
-      // Add padding for top dot and bottom ellipse
       const topPadding = 100;
-      const bottomPadding = 50;
-      const totalEllipsesHeight = (layers - 1) * layerGap;
       const centerX = width / 2;
-      const centerY = topPadding + totalEllipsesHeight / 2 + ellipseHeight;
+      const centerY =
+        topPadding + ((layers - 1) * layerGap) / 2 + ellipseHeight;
 
-      // Draw ellipses
+      // DRAW ELLIPSES
       for (let i = 0; i < layers; i++) {
         const yOffset = (i - (layers - 1) / 2) * layerGap;
         const isActive = i === activeStep;
@@ -96,32 +224,30 @@ const DevOpsCycle = () => {
         );
 
         if (isActive) {
-          ctx.strokeStyle = "#000000";
-          ctx.lineWidth = 3;
           ctx.fillStyle = "#0B23C8";
+          ctx.strokeStyle = "#000";
+          ctx.lineWidth = 3;
           ctx.fill();
         } else {
-          ctx.strokeStyle = "#000000";
+          ctx.strokeStyle = "#000";
           ctx.lineWidth = 0.5;
         }
 
         ctx.stroke();
       }
 
-      // Draw animated dot on active layer
+      // ACTIVE DOT
       const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
       const angle = dotPositionRef.current;
 
-      // Calculate position on active ellipse
       const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
       const ellipseY =
         centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
 
-      // Dot position at top (fixed above all ellipses)
       const dotX = ellipseX;
-      const dotY = 30; // Fixed position near top of canvas
+      const dotY = 30;
 
-      // Draw vertical line from ellipse to dot
+      // LINE
       ctx.beginPath();
       ctx.moveTo(ellipseX, ellipseY);
       ctx.lineTo(dotX, dotY);
@@ -129,38 +255,41 @@ const DevOpsCycle = () => {
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Draw dot (larger and more visible)
+      // DOT
       ctx.beginPath();
       ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
       ctx.fillStyle = "#0B23C8";
       ctx.fill();
 
-      // Draw white border around dot for better visibility
       ctx.beginPath();
       ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
-      ctx.strokeStyle = "#FFFFFF";
+      ctx.strokeStyle = "#FFF";
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Draw glow around dot
+      // GLOW
       const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
-      gradient.addColorStop(0, "rgba(11, 35, 200, 0.6)");
-      gradient.addColorStop(1, "rgba(11, 35, 200, 0)");
+      gradient.addColorStop(0, "rgba(11,35,200,0.6)");
+      gradient.addColorStop(1, "rgba(11,35,200,0)");
+
       ctx.beginPath();
       ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
 
-      // Update dot position
-      dotPositionRef.current += 0.015;
+      // ✅ TIME-BASED SPEED (FIXED)
+      dotPositionRef.current += delta * 1.2;
 
-      animationRef.current = requestAnimationFrame(draw);
+      animationId = requestAnimationFrame(draw);
     };
 
-    draw();
+    // START SAFELY
+    cancelAnimationFrame(animationId);
+    lastTime = performance.now();
+    animationId = requestAnimationFrame(draw);
 
     return () => {
-      cancelAnimationFrame(animationRef.current);
+      cancelAnimationFrame(animationId);
       window.removeEventListener("resize", setCanvasSize);
     };
   }, [activeStep]);

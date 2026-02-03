@@ -782,3 +782,45 @@ blockquote::-webkit-scrollbar-thumb:hover {
     opacity: 0;
   }
 }
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 40s linear infinite;
+}
