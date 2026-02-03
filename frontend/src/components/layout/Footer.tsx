@@ -9,7 +9,7 @@ const Footer = () => {
     <div
       className=" flex flex-col"
       style={{
-        background: "linear-gradient(180deg, #0A20B9 0%, #000000 100%)",
+        background: "linear-gradient(180deg, #629DFF 0%, #000000 100%)",
       }}>
       {/* Main Content */}
       <div className="flex md:pt-[87px] md:px-[29px] pt-[91px] px-[14px] w-full">

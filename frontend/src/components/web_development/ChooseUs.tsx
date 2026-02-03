@@ -24,7 +24,11 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className=" w-full bg-gradient-to-br from-[#000000] to-[#02082C] py-12 sm:py-16 md:py-20 lg:py-24 ">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #000000 61.15%, #629DFF 100%)",
+      }}
+      className=" w-full bg-gradient-to-br py-12 sm:py-16 md:py-20 lg:py-24 ">
       {/* Container */}
       <div className="flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         {/* Badge */}
@@ -39,7 +43,7 @@ const ChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group flex flex-col  items-center text-center space-y-4  bg-[#041167] border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-[#0d2999] hover:border-blue-700 cursor-pointer overflow-hidden">
+              className="group flex flex-col  items-center text-center space-y-4  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary  cursor-pointer overflow-hidden">
               {/* Card Content */}
               {/* Text */}
               <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">

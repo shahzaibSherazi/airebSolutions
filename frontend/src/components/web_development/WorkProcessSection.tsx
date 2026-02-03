@@ -97,9 +97,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
         {/* Card */}
         <div
           className={`flex-1 rounded-[5px] relative p-4 sm:p-6 md:p-7 lg:p-[clamp(24px,3.2vh,32px)] ${
-            isBlue
-              ? "bg-gradient-to-br from-[#0B23C8] to-[#000000]"
-              : "bg-transparent border-gray-700"
+            isBlue ? "bg-primary" : "bg-primary"
           }`}>
           <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4 md:gap-6">
             <div className="flex-1">
