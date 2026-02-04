@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay, FreeMode } from "swiper/modules";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const serviceVideos = [
   { id: 1, video: video },
@@ -45,11 +46,20 @@ export default function AdaptableSection() {
         modules={[Autoplay, FreeMode]}
         simulateTouch={false}
         loop={true}
-        speed={8000} // animation speed
+        speed={5000} // animation speed
         autoplay={{
-          delay: 0, // continuous
+          delay: 1, // continuous
           disableOnInteraction: false,
           // pauseOnMouseEnter: true,
+        }}
+        onAutoplay={(swiper) => {
+          // This helps sync with Lenis
+          requestAnimationFrame(() => {
+            const lenis = smoothScroll.getInstance();
+            if (lenis) {
+              lenis.raf(Date.now());
+            }
+          });
         }}
         freeMode={true}
         slidesPerView={1}

@@ -150,23 +150,16 @@ All colors MUST be HSL.
 
 @keyframes slide {
   0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
-    opacity: 0;
+    transform: translateX(-50%); /* Move by half the container width */
   }
 }
 
 .animate-slide {
-  animation: slide 15s infinite linear;
+  animation: slide 20s infinite linear;
+  display: flex;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

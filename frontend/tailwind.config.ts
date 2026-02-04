@@ -22,6 +22,7 @@ export default {
         outfit: ["Outfit", "Stoke", "sans-serif", "Plus Jakarta Sans"],
       },
       colors: {
+        textColor: "#FFFFFF",
         neonBlue: "#1e40ff",
         neonBlueDark: "#0b1a5e",
         border: "hsl(var(--border))",

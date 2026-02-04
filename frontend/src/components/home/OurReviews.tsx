@@ -261,12 +261,12 @@ export default function ClientReviews() {
               key={currentIndex}
               style={{
                 borderWidth: 0.5,
-                background: "linear-gradient(180deg, #0B23C8 0%, #000000 100%)",
+                background: "linear-gradient(180deg, #629DFF 0%, #000000 100%)",
                 boxShadow: `
-                  -80px 0 150px rgba(11, 35, 200, 0.25),
-                  80px 0 150px rgba(11, 35, 200, 0.25),
-                  -150px 0 250px rgba(11, 35, 200, 0.15),
-                  150px 0 250px rgba(11, 35, 200, 0.15)
+                 -80px 0 150px rgba(99, 157, 255, 0.25),
+      80px 0 150px rgba(99, 157, 255, 0.25),
+      -150px 0 250px rgba(99, 157, 255, 0.15),
+      150px 0 250px rgba(99, 157, 255, 0.15)
                 `,
                 animation:
                   direction === 1
@@ -275,11 +275,11 @@ export default function ClientReviews() {
                       ? "cardSlideRotateLeft 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)"
                       : "cardFadeIn 0.6s ease-out",
               }}
-              className="relative border-025 border-white p-[1px]">
+              className="relative  p-[1px]">
               <div
                 style={{
                   background:
-                    "linear-gradient(180deg, #0B23C8 0%, #000000 100%)",
+                    "linear-gradient(180deg, #629DFF 0%, #000000 100%)",
                 }}
                 className="px-[7px] sm:px-[15px] lg:px-[23px] py-[7px] sm:py-[15px] lg:py-[23px]">
                 <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[180px_1fr] md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] xl:grid-cols-[320px_1fr] gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center">
@@ -344,7 +344,7 @@ export default function ClientReviews() {
               }}
               className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-blue-600 w-8 sm:w-10"
+                  ? "bg-primary w-8 sm:w-10"
                   : "bg-gray-600 hover:bg-gray-500 w-2 sm:w-2.5"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}

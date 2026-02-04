@@ -7,11 +7,15 @@ import AnimatedParagraph from "../ui/AnimatedParagraph";
 
 const FeaturedSection = () => {
   return (
-    <section className="w-full bg-white px-4 md:px-6 py-[87px] md:py-[103px] flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #629DFF 0%, #3B5E99 100%)",
+      }}
+      className="w-full px-4 md:px-6 py-[87px] md:py-[103px] flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
       <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
         {/* Text Content */}
         <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">
-          <p className="text-[25px] font-outfit font-normal text-[#0B23C8]">
+          <p className="text-[25px] font-outfit font-normal text-textColor lg:text-black">
             Featured Insights
           </p>
 
@@ -25,7 +29,7 @@ const FeaturedSection = () => {
 
         {/* Button */}
         <div className="w-full lg:w-auto flex lg:justify-end items-start">
-          <button className="flex items-center gap-2 bg-primary text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-blue-700 transition">
+          <button className="group flex items-center gap-2 bg-black text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-white hover:text-black transition">
             Let's work together
             <img src={btnIcon} alt="icon" className="w-3 h-3" />
           </button>
@@ -56,7 +60,7 @@ opportunities, and get the inside track on eDesign news
           description="Understand digital possibilities, activate marketing 
 opportunities, and get the inside track on eDesign news 
 "
-          gradient="linear-gradient(180deg, #0B23C8 0%, #000000 100%)"
+          gradient="linear-gradient(180deg, #629DFF 0%, #3B5E99 100%)"
         />
 
         <FeaturedInsightCard

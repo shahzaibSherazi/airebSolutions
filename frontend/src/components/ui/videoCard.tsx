@@ -11,7 +11,7 @@ export default function VideoCard({ video }: VideoCardProps) {
         h-[500px]
         p-1.5 xs:p-2 sm:p-2.5
         overflow-hidden
-        bg-gradient-to-b from-[#0B23C8] to-black
+        bg-gradient-to-b from-primary to-black
       ">
       {/* CORNERS */}
       <span className="corner bottom-left" />

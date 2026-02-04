@@ -252,7 +252,7 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`w-full h-[500px] flex flex-col overflow-hidden border border-gray-200 transition-all duration-700 ease-out ${
+      className={`w-full h-[500px] flex flex-col overflow-hidden  transition-all duration-700 ease-out ${
         isVisible
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-12 scale-95"
@@ -361,15 +361,18 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
 
         {/* FOOTER */}
         <div
-          className={`mt-auto flex items-center justify-between bg-[#0B23C8] px-4 py-4 transition-all duration-700 ${
+          className={`mt-auto flex items-center justify-between ${type === "case-study" ? "bg-black" : "bg-white"} px-4 py-4 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
           style={{ transitionDelay: `${index * 150 + 600}ms` }}>
-          <p className="text-sm text-white">Read More</p>
+          <p
+            className={`text-sm ${type === "case-study" ? "text-textColor" : "text-black"}`}>
+            Read More
+          </p>
           <img
             src={icon}
             alt="icon"
-            className={`w-3 h-3 transition-transform duration-500 ${
+            className={`w-3 h-3  transition-transform duration-500 ${type === "case-study" ? "" : "filter invert"} ${
               isVisible ? "translate-x-0" : "-translate-x-2"
             }`}
             style={{ transitionDelay: `${index * 150 + 700}ms` }}

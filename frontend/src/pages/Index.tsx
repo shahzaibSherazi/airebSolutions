@@ -26,7 +26,7 @@ const Index = () => {
       {/* <WhyChooseUsSection /> */}
       {/* <TestimonialsSection /> */}
       <StrategicApproach />
-      <ContactForm />
+      {/* <ContactForm /> */}
       {/* <TeamSection /> */}
       {/* <CTASection /> */}
     </Layout>

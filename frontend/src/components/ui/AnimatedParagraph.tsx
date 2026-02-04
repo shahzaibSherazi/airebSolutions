@@ -54,7 +54,9 @@ export default function AnimatedParagraph({
         <span
           key={index}
           className={`inline-block mr-1 transition-colors duration-300 ${
-            index <= activeIndex ? textColor || "text-black" : "text-gray-400"
+            index <= activeIndex
+              ? textColor || "text-black lg:text-textColor"
+              : "text-textColor lg:text-black"
           }`}>
           {word}
         </span>

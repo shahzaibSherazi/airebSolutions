@@ -59,20 +59,20 @@ const ResultSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white flex flex-col px-4 md:px-6 py-[87px] md:py-[103px] items-center">
+      className="bg-primary w-full flex flex-col px-4 md:px-6 py-[87px] md:py-[103px] items-center">
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full ">
         {/* Left Column */}
         <div className="flex flex-col md:gap-[30px] gap-[7px] lg:w-1/3">
-          <h1 className="text-xl font-normal text-[#0B23C8]">Results</h1>
-          <p className="text-3xl sm:text-4xl font-stoke text-[#000000]">
+          <h1 className="text-xl font-normal text-white">Results</h1>
+          <p className="text-3xl sm:text-4xl font-stoke text-white">
             Impact you can feel
           </p>
         </div>
 
         {/* Middle Column */}
         <div className="lg:w-1/3">
-          <p className="text-[#4B4B4B] text-base font-normal font-outfit leading-[28px]">
+          <p className="text-white text-base font-normal font-outfit leading-[28px]">
             Our approach allows us to deliver exceptional experiences that drive
             growth and success for all stakeholders. Let's rise to new heights
             with the power of digital transformation.
@@ -81,12 +81,12 @@ const ResultSection = () => {
 
         {/* Right Column */}
         <div className="hidden md:flex lg:justify-end">
-          <button className="inline-flex items-center gap-2 bg-primary text-white text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
+          <button className="group inline-flex items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
             Read More About Us
             <img
               src={btnIcon}
               alt="icon"
-              className="w-2.5 h-2.5 sm:w-3 sm:h-3"
+              className="w-2.5 h-2.5 sm:w-3 sm:h-3 group-hover:invert group-hover:brightness-0 transition-all duration-300"
             />
           </button>
         </div>
@@ -99,32 +99,32 @@ const ResultSection = () => {
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             {count95}%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left">
+          <p className="text-textColor text-sm text-left">
             Clients who stay because we consistently deliver results
           </p>
         </div>
 
         {/* Stat 2 */}
-        <div className="flex flex-col items-start sm:flex-1 gap-2 lg:border-l-2 lg:pl-4 border-black">
+        <div className="flex flex-col items-start sm:flex-1 gap-2 lg:border-l-2 lg:pl-4 border-textColor">
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             {count45}%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left">
+          <p className="text-textColor text-sm text-left">
             Conversion growth driven by thoughtful design and optimisation
           </p>
         </div>
 
         {/* Stat 3 */}
-        <div className="flex flex-col items-start sm:flex-1 gap-2 lg:border-l-2 lg:pl-4 border-black">
+        <div className="flex flex-col items-start sm:flex-1 gap-2 lg:border-l-2 lg:pl-4 border-textColor">
           <p className="text-black font-normal text-[24px] sm:text-[42px]">
             {count99}%
           </p>
-          <p className="text-[#4B4B4B] text-sm text-left">
+          <p className="text-textColor text-sm text-left">
             Reliable, secure systems that perform with unwavering stability
           </p>
         </div>
         <div className="md:hidden justify-start pt-6 sm:pt-8">
-          <button className="inline-flex items-center gap-2 bg-primary text-white text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
+          <button className="inline-flex items-center gap-2 bg-black text-textColor text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
             Read More About Us
             <img
               src={btnIcon}

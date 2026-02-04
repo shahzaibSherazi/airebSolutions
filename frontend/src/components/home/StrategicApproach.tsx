@@ -21,7 +21,7 @@ const ValueCard = ({
   <div
     className={`bg-primary text-white p-6 hover:p-5 transition-all max-sm:pt-4 md:p-8 flex flex-col justify-between sm:min-h-[180px] ${className}`}>
     <div className="flex justify-between items-center">
-      <h3 className="text-2xl md:text-[26px] font-stoke">{title}</h3>
+      <h3 className="text-2xl text-black md:text-[26px] font-stoke">{title}</h3>
       <div className="bg-white text-black size-10 sm:size-11 flex justify-center items-center">
         {icon}
       </div>
@@ -95,17 +95,21 @@ const StrategicApproach = () => {
   ];
 
   return (
-    <section className="bg-white py-24 md:py-32 px-2 md:px-5">
+    <section
+      style={{
+        background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
+      }}
+      className=" py-24 md:py-32 px-2 md:px-5">
       <div className="font-outfit">
         {/* Header */}
         <div className="sm:text-center mb-16 md:mb-20">
-          <span className="inline-block bg-primary font-outfit text-white px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
+          <span className="inline-block bg-primary font-outfit text-textColor px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
             Strategic Approach
           </span>
-          <h2 className="font-stoke text-black mb-6 sm:mb-3.5 text-[32px] md:text-[42px] leading-[48px] md:leading-[56px]">
+          <h2 className="font-stoke text-textColor mb-6 sm:mb-3.5 text-[32px] md:text-[42px] leading-[48px] md:leading-[56px]">
             The drive behind <br className="sm:hidden" /> everything we build
           </h2>
-          <p className="text-muted font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
+          <p className="text-textColor font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
