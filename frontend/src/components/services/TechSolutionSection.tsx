@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Bookmark, ChevronRight, Frame, Maximize2 } from "lucide-react";
 import cardBgImage from "../../assets/techSolution_card_bg.png";
-import btnIcon from "../../assets/icons/btn_icon.png";
+import btnIcon from "../../assets/icons/btn_icon.svg";
 
 const TechSolutionsSection = () => {
   const [activeTab, setActiveTab] = useState("technology");

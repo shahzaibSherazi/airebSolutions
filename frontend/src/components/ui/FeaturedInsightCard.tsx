@@ -191,6 +191,7 @@
 // export default FeaturedInsightCard;
 
 import { useState, useEffect, useRef } from "react";
+import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 
 type CardType = "case-study" | "blog" | "white-paper";
 
@@ -198,7 +199,7 @@ type FeaturedInsightCardProps = {
   type: CardType;
   tag: string;
   image: string;
-  icon: string;
+
   title: string;
   description: string;
   heading?: string;
@@ -210,7 +211,7 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
   type,
   tag,
   image,
-  icon,
+
   title,
   heading,
   description,
@@ -369,10 +370,8 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
             className={`text-sm ${type === "case-study" ? "text-textColor" : "text-black"}`}>
             Read More
           </p>
-          <img
-            src={icon}
-            alt="icon"
-            className={`w-3 h-3  transition-transform duration-500 ${type === "case-study" ? "" : "filter invert"} ${
+          <BtnIcon
+            className={`w-3 h-3  transition-transform duration-500 ${type === "case-study" ? "text-white" : "text-black"} ${
               isVisible ? "translate-x-0" : "-translate-x-2"
             }`}
             style={{ transitionDelay: `${index * 150 + 700}ms` }}

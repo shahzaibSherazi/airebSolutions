@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import LogoSlider from "../ui/logoSlider";
-import btnIcon from "../../assets/icons/btn_icon.png";
+import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import { useInView } from "framer-motion";
 
 const ResultSection = () => {
@@ -83,11 +83,7 @@ const ResultSection = () => {
         <div className="hidden md:flex lg:justify-end">
           <button className="group inline-flex items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
             Read More About Us
-            <img
-              src={btnIcon}
-              alt="icon"
-              className="w-2.5 h-2.5 sm:w-3 sm:h-3 group-hover:invert group-hover:brightness-0 transition-all duration-300"
-            />
+            <BtnIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-current  transition-colors duration-300" />
           </button>
         </div>
       </div>
@@ -126,11 +122,11 @@ const ResultSection = () => {
         <div className="md:hidden justify-start pt-6 sm:pt-8">
           <button className="inline-flex items-center gap-2 bg-black text-textColor text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
             Read More About Us
-            <img
+            {/* <img
               src={btnIcon}
               alt="icon"
               className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-            />
+            /> */}
           </button>
         </div>
       </div>

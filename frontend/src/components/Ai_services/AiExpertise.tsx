@@ -150,7 +150,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import robotImg from "../../assets/ai-robot.png";
 import robotImg2 from "../../assets/ai-robot-lg.png";
-import btnIcon from "../../assets/icons/btn_icon.png";
+import btnIcon from "../../assets/icons/btn_icon.svg";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);

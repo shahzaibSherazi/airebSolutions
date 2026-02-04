@@ -2,7 +2,7 @@ import FeaturedInsightCard from "../ui/FeaturedInsightCard";
 import caseImg from "../../assets/case_study.png";
 import blogImg from "../../assets/blog.jpeg";
 import paperImg from "../../assets/white_paper.jpg";
-import btnIcon from "../../assets/icons/btn_icon.png";
+import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import AnimatedParagraph from "../ui/AnimatedParagraph";
 
 const FeaturedSection = () => {
@@ -31,7 +31,7 @@ const FeaturedSection = () => {
         <div className="w-full lg:w-auto flex lg:justify-end items-start">
           <button className="group flex items-center gap-2 bg-black text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-white hover:text-black transition">
             Let's work together
-            <img src={btnIcon} alt="icon" className="w-3 h-3" />
+            <BtnIcon className="w-3 h-3 text-current  transition-colors duration-300" />
           </button>
         </div>
       </div>
@@ -42,7 +42,7 @@ const FeaturedSection = () => {
           type="case-study"
           tag="Case Study"
           image={caseImg}
-          icon={btnIcon}
+          // icon={BtnIcon}
           title="Designing UI/UX that Converts:"
           heading="Best Practices for 2025"
           description="Understand digital possibilities, activate marketing 
@@ -54,7 +54,7 @@ opportunities, and get the inside track on eDesign news
           type="blog"
           tag="Blogs"
           image={blogImg}
-          icon={btnIcon}
+          // icon={BtnIcon}
           title="Designing UI/UX that Converts:"
           heading="Best Practices for 2025"
           description="Understand digital possibilities, activate marketing 
@@ -67,7 +67,7 @@ opportunities, and get the inside track on eDesign news
           type="white-paper"
           tag="White Paper"
           image={paperImg}
-          icon={btnIcon}
+          // icon={BtnIcon}
           title="Modernizing Legacy Systems with Confidence"
           description="A Fool-proof Guide To Transitioning Your Business from Outdated Systems to Modern Technology"
         />
