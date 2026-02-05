@@ -148,7 +148,7 @@ const WorkProcessTimeline: React.FC = () => {
       className="relative w-full bg-black py-10 sm:py-12 md:py-16 lg:py-[15vh]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Sticky block */}
-        <div className="sticky top-0 z-10 ">
+        <div className="sticky -top-12 z-10 ">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
             <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
