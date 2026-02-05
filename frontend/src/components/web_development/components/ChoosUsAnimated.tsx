@@ -267,10 +267,10 @@ const ChooseUsAnimated = () => {
     { text: "experiences.", x: 51, y: 41, width: 33, height: 9 },
   ];
 
-  // Animation phases
-  const getPhaseProgress = (start, end) => {
-    const phase = (progress - start) / (end - start);
-    return Math.max(0, Math.min(1, phase));
+  // Function to check if a box should have special background color
+  const shouldHighlightText = (text) => {
+    const lowerText = text.toLowerCase();
+    return lowerText.includes("code") || lowerText.includes("experience");
   };
 
   // Calculate which word to reveal
@@ -388,6 +388,17 @@ const ChooseUsAnimated = () => {
                 // Keep your original tighten logic
                 const tighten = revealProgress * 1.2;
 
+                // Check if this box should be highlighted
+                const isHighlighted = shouldHighlightText(box.text);
+
+                // Determine text color based on whether it should be highlighted
+                const getTextColor = () => {
+                  if (isHighlighted && revealProgress > 0) {
+                    return "#629DFF"; // Blue for highlighted words when they appear
+                  }
+                  return "white"; // White for all other words
+                };
+
                 return (
                   <g key={index}>
                     {/* box stays same */}
@@ -409,10 +420,10 @@ const ChooseUsAnimated = () => {
                       y={box.y + box.height / 2 + 0.8}
                       textAnchor="middle"
                       dominantBaseline="middle"
-                      fill="white"
+                      fill={getTextColor()}
                       fontSize="4.6"
                       fontWeight="400"
-                      fontFamily="'Stoke', serif"
+                      fontFamily="Stoke"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: revealProgress }}
                       transition={{

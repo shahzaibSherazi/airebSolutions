@@ -19,7 +19,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "Stoke", "sans-serif", "Plus Jakarta Sans"],
+        outfit: ["Outfit", "sans-serif"],
+        stoke: ["Stoke", "serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         textColor: "#FFFFFF",

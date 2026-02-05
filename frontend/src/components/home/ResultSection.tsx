@@ -65,7 +65,7 @@ const ResultSection = () => {
         {/* Left Column */}
         <div className="flex flex-col md:gap-[30px] gap-[7px] lg:w-1/3">
           <h1 className="text-xl font-normal text-white">Results</h1>
-          <p className="text-3xl sm:text-4xl font-stoke text-white">
+          <p className="text-3xl sm:text-4xl font-stoke lg:text-white text-black">
             Impact you can feel
           </p>
         </div>

@@ -60,7 +60,7 @@ opportunities, and get the inside track on eDesign news
           description="Understand digital possibilities, activate marketing 
 opportunities, and get the inside track on eDesign news 
 "
-          gradient="linear-gradient(180deg, #629DFF 0%, #3B5E99 100%)"
+          gradient="linear-gradient(180deg, #629DFF 0%, #000000 100%)"
         />
 
         <FeaturedInsightCard

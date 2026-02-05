@@ -22,11 +22,11 @@ const ValueCard = ({
     className={`bg-primary text-white p-6 hover:p-5 transition-all max-sm:pt-4 md:p-8 flex flex-col justify-between sm:min-h-[180px] ${className}`}>
     <div className="flex justify-between items-center">
       <h3 className="text-2xl text-black md:text-[26px] font-stoke">{title}</h3>
-      <div className="bg-white text-black size-10 sm:size-11 flex justify-center items-center">
+      <div className=" text-black size-10 sm:size-11 flex justify-center items-center">
         {icon}
       </div>
     </div>
-    <p className="text-muted-foreground leading-[22px] mt-3.5">{description}</p>
+    <p className="text-textColor leading-[22px] mt-3.5">{description}</p>
   </div>
 );
 

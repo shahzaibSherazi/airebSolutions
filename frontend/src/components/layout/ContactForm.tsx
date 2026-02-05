@@ -152,7 +152,9 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <ServiceDropdown value={service} onChange={setService} />
 
         <div>
-          <label className="text-sm opacity-80">Message</label>
+          <label className="text-sm opacity-80">
+            Project Details (optional)
+          </label>
           <textarea
             rows={4}
             name="message"
@@ -169,7 +171,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             name="privacyAgreed"
             checked={form.privacyAgreed}
             onChange={handleChange}
-            className="accent-blue-500 mt-1"
+            className="accent-primary mt-1"
           />
           <span>You agree to our friendly privacy policy.</span>
         </div>
@@ -178,7 +180,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
           type="button"
           onClick={submitForm}
           disabled={loading}
-          className="w-full rounded-xl bg-white text-black py-3 text-sm font-semibold hover:brightness-110 transition disabled:opacity-50">
+          className="w-full rounded-xl bg-textColor hover:bg-primary hover:text-textColor text-black py-3 text-sm font-semibold font-outfit  transition disabled:opacity-50">
           {loading ? "Sending..." : "Send Message"}
         </button>
       </div>

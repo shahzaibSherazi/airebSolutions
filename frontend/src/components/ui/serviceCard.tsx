@@ -4,7 +4,7 @@ const ServiceCard = ({ image, title, gradient }) => {
     <div className="card relative w-full bg-gradient-to-t from-black to-primary  sm:max-w-none lg:max-w-[403px] h-[480px] sm:h-[490px] md:h-[500px] lg:h-[565px] border border-primary flex flex-col gap-2 sm:gap-4 p-2 sm:p-3 overflow-hidden snap-center mx-auto shrink-0">
       {/* Image - Responsive height */}
       <div className="w-full flex-1 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-fill" />
+        <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
       {/* Title - Responsive text size */}

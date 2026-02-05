@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import {
-  Lightbulb,
-  Palette,
-  Code,
-  TestTube,
-  Rocket,
-  BarChart,
-} from "lucide-react";
+import PlanningIcon from "@/assets/icons/web_development_icons/planning.svg?react";
+import DesignIcon from "@/assets/icons/web_development_icons/design.svg?react";
+import DevolopmentIcon from "@/assets/icons/web_development_icons/development.svg?react";
+import TestingIcon from "@/assets/icons/web_development_icons/testing.svg?react";
+import OptimizationIcon from "@/assets/icons/web_development_icons/optimization.svg?react";
+import MaintienanceIcon from "@/assets/icons/web_development_icons/maintenance.svg?react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 /* ---------------- TYPES ---------------- */
 type Step = {
@@ -21,42 +21,42 @@ const steps: Step[] = [
     id: 1,
     title: "Planning & Strategy",
     description: "Defining the project scope, timeline, and technology stack.",
-    icon: <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <PlanningIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
   {
     id: 2,
     title: "UI/UX Design & Prototyping",
     description:
       "Crafting wireframes and interactive designs for an optimal user experience.",
-    icon: <Palette className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <DesignIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
   {
     id: 3,
     title: "Development & Implementation",
     description:
       "Writing clean, maintainable code using industry-leading frameworks and tools.",
-    icon: <Code className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <DevolopmentIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
   {
     id: 4,
     title: "Testing & Quality Assurance",
     description:
       "Conducting rigorous testing to ensure security, performance, and usability.",
-    icon: <TestTube className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <TestingIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
   {
     id: 5,
     title: "Deployment & Launch",
     description:
       "Launching your product with seamless deployment and monitoring.",
-    icon: <Rocket className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <OptimizationIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
   {
     id: 6,
     title: "Maintenance & Support",
     description:
       "Providing ongoing support, updates, and optimization for long-term success.",
-    icon: <BarChart className="w-6 h-6 sm:w-8 sm:h-8" />,
+    icon: <MaintienanceIcon className="w-10 h-10 sm:w-16 sm:h-16" />,
   },
 ];
 
@@ -101,7 +101,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
           }`}>
           <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4 md:gap-6">
             <div className="flex-1">
-              <h3 className="text-white text-base sm:text-lg md:text-2xl font-outfite font-bold mb-1 sm:mb-2">
+              <h3 className="text-white text-base sm:text-lg md:text-2xl font-outfit font-bold mb-1 sm:mb-2">
                 {step.title}
               </h3>
               <p className="text-white font-outfit font-normal text-sm sm:text-base">
@@ -109,7 +109,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
               </p>
             </div>
 
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-[64px] md:h-[64px] flex items-center justify-center bg-white text-primary flex-shrink-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-[64px] md:h-[64px] flex items-center justify-center  text-white flex-shrink-0">
               {step.icon}
             </div>
           </div>
@@ -120,31 +120,32 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
 };
 const WorkProcessTimeline: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(2);
-
+  const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const triggers = document.querySelectorAll<HTMLElement>(".scroll-trigger");
+    const ctx = gsap.context(() => {
+      const triggers = gsap.utils.toArray<HTMLElement>(".scroll-trigger");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const step = Number(entry.target.dataset.step);
-            setActiveIndex(step - 1);
-          }
+      triggers.forEach((el, index) => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top center",
+          end: "bottom center",
+          onEnter: () => setActiveIndex(index + 2),
+          onEnterBack: () => setActiveIndex(index + 2),
         });
-      },
-      { threshold: 0.6 },
-    );
+      });
+    }, sectionRef);
 
-    triggers.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    return () => ctx.revert();
   }, []);
 
   const fixedSteps = steps.slice(0, 2);
   const dynamicStep = steps[activeIndex];
 
   return (
-    <section className="relative w-full bg-black py-10 sm:py-12 md:py-16 lg:py-[15vh]">
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-black py-10 sm:py-12 md:py-16 lg:py-[15vh]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Sticky block */}
         <div className="sticky top-0 z-10 ">
