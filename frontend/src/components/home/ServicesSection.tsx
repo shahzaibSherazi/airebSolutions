@@ -165,7 +165,7 @@ const ServicesSection = () => {
         </div>
 
         {/* View All Button - Mobile */}
-        <div className="lg:hidden mt-12 px-4">
+        <div className="lg:hidden mt-12">
           <button
             style={{ paddingLeft: 14 }}
             className="group flex items-center text-black font-outfit gap-4 bg-primary px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition hover:shadow-lg">

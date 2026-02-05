@@ -72,18 +72,18 @@ const HowWeGetItDone = () => {
               {/* Card Row */}
               <div className="grid grid-cols-1 md:grid-cols-[230px_1fr] lg:grid-cols-[280px_1fr] gap-0 group">
                 {/* Left: Blue Box with Title */}
-                <div className="bg-primary  flex items-center justify-center py-8 px-10 sm:px-16 sm:py-6  border-025 rounded-tl-[7px] rounded-bl-[7px] border-blue-500 shadow-lg shadow-blue-600/30 transition-all duration-300 group-hover:shadow-blue-600/50 group-hover:bg-blue-700">
-                  <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-bold text-center leading-tight whitespace-pre-line">
+                <div className="bg-primary  flex items-center justify-center py-8 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
+                  <h3 className="text-white group-hover:text-primary text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight ">
                     {step.title}
                   </h3>
                 </div>
 
                 {/* Right: Content Box */}
-                <div className="relative flex flex-col lg:py-0 md:py-1 py-3 justify-center bg-black border-025 rounded-tr-[7px] rounded-br-[7px] border-gray-800 px-4 md:px-5 lg:px-6 transition-all duration-300 group-hover:border-gray-700">
+                <div className="relative flex flex-col lg:py-0 md:py-1 py-3 justify-center bg-black border-025 md:rounded-tr-[7px] md:rounded-br-[7px]  px-4 md:px-5 lg:px-6 transition-all duration-300 group-hover:border-gray-700">
                   {/* Top border accent */}
 
                   {/* Heading */}
-                  <h4 className="text-white text-base font-outfit font-medium mb-3 sm:mb-4">
+                  <h4 className="text-primary text-base font-outfit font-medium mb-3 sm:mb-4">
                     {step.heading}
                   </h4>
 

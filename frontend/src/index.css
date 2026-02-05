@@ -148,18 +148,24 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move by half the container width */
-  }
+/* Logo Slider Swiper Styles */
+.logo-swiper {
+  width: 100%;
+  height: 60px;
 }
 
-.animate-slide {
-  animation: slide 20s infinite linear;
-  display: flex;
+.logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Remove default Swiper cursor */
+.logo-swiper .swiper-slide {
+  cursor: default;
+}
+
+/* Optional: Pause on hover */
+.logo-swiper:hover .swiper-wrapper {
+  animation-play-state: paused;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

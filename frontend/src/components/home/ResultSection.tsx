@@ -120,13 +120,9 @@ const ResultSection = () => {
           </p>
         </div>
         <div className="md:hidden justify-start pt-6 sm:pt-8">
-          <button className="inline-flex items-center gap-2 bg-black text-textColor text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-blue-700 transition whitespace-nowrap">
+          <button className="group inline-flex items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
             Read More About Us
-            {/* <img
-              src={btnIcon}
-              alt="icon"
-              className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-            /> */}
+            <BtnIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-current  transition-colors duration-300" />
           </button>
         </div>
       </div>

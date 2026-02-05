@@ -44,6 +44,20 @@ const MobileAppServices = () => {
       description:
         "Comprehensive API documentation is crucial for developers. We provide detailed, easy-to-understand documentation to facilitate smooth implementation and integration, along with ongoing support to ensure optimal performance.",
     },
+    {
+      id: 7,
+      iconPath: cardIcon,
+      title: "App Testing & Quality Assurance",
+      description:
+        "Our comprehensive testing and QA process ensures that every app and game we develop is bug-free, secure, and fully optimized for the best performance on a variety of devices and operating systems. From functionality testing to stress and performance testing, we ensure quality every step of the way.",
+    },
+    {
+      id: 8,
+      iconPath: cardIcon,
+      title: "Mobile App Maintenance & Support",
+      description:
+        "Our services don’t end once your app is live. We provide ongoing maintenance and support to ensure your app stays up-to-date, secure, and fully optimized. From software updates to troubleshooting and new feature implementation, we handle everything to keep your app running smoothly.",
+    },
   ];
 
   return (
