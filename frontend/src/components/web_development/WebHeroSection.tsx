@@ -2,12 +2,7 @@ import bgImg from "../../assets/web_hero_bg.png";
 
 const WebHeroSection = () => {
   return (
-    <section
-      style={{
-        height: "calc(100vh - 80px)", // Subtract header height
-        // Push down below fixed header
-      }}
-      className="relative w-full bg-black overflow-hidden">
+    <section className="relative w-full bg-black overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"

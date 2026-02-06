@@ -13,7 +13,7 @@ const CrmIntegration = () => {
       <CrmServices />
       <WorkProcess />
       <OurWork />
-      <SalesforceIntegration />
+      {/* <SalesforceIntegration /> */}
       <ChooseUs />
     </Layout>
   );

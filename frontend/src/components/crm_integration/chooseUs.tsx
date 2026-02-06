@@ -31,12 +31,12 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-primary py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       {/* Container */}
       <div className=" px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <div className="mb-8 sm:mb-10 md:mb-12">
-          <span className="inline-block bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
+          <span className="inline-block bg-primary text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
             Why Choose Us
           </span>
         </div>
@@ -57,23 +57,28 @@ const ChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative bg-[#041167] border-2 rounded-[2px] border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-[#0d2999] hover:border-blue-700 cursor-pointer overflow-hidden">
+              className="group relative hover:bg-black border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10">
-                {/* Text */}
-                <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8  ">
-                  {feature.title}
-                </h3>
+              <div className="relative z-10 flex-1 flex flex-col">
+                {/* Text with fixed height and overflow handling */}
+                <div className=" overflow-hidden">
+                  <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8 line-clamp-2 h-full">
+                    {feature.title}
+                  </h3>
+                </div>
               </div>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
-              <div className="absolute bottom-0 right-0 w-16 h-16 curved-line">
-                {/* Arrow Icon */}
-                <div className="absolute bottom-2 right-2">
-                  <img
-                    src={ArrowUpRight}
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
-                  />
+              <div className="">
+                <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">
+                  {/* Arrow Icon */}
+                  <div className="absolute bottom-2 right-2">
+                    <img
+                      src={ArrowUpRight}
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
+                      alt="arrow icon"
+                    />
+                  </div>
                 </div>
               </div>
 
