@@ -1,366 +1,776 @@
-import { useState, useEffect, useRef } from "react";
+// import { useState, useEffect, useRef } from "react";
 
-const DevOpsCycle = () => {
-  const [activeStep, setActiveStep] = useState(2); // Default to step 03 (index 2)
-  const canvasRef = useRef(null);
-  const animationRef = useRef(null);
+// const DevOpsCycle = () => {
+//   const [activeStep, setActiveStep] = useState(2); // Default to step 03 (index 2)
+//   const canvasRef = useRef(null);
+//   const animationRef = useRef(null);
+//   const dotPositionRef = useRef(0);
+
+//   const steps = [
+//     {
+//       number: "01",
+//       title: "Assessment and Planning & Customization",
+//       description: "",
+//     },
+//     {
+//       number: "02",
+//       title: "Infrastructure Setup",
+//       description: "",
+//     },
+//     {
+//       number: "03",
+//       title: "CI/CD Pipeline Development",
+//       description:
+//         "Evaluate current processes, identify bottlenecks, and define a tailored DevOps strategy aligned with business objectives",
+//     },
+//     {
+//       number: "04",
+//       title: "Security & Compliance Integration",
+//       description: "",
+//     },
+//     {
+//       number: "05",
+//       title: "Monitoring & Logging",
+//       description: "",
+//     },
+//     {
+//       number: "06",
+//       title: "Feedback & Continuous Improvement",
+//       description: "",
+//     },
+//   ];
+
+//   // Draw orbital layers with animated dot
+//   // useEffect(() => {
+//   //   const canvas = canvasRef.current;
+//   //   if (!canvas) return;
+
+//   //   const ctx = canvas.getContext("2d");
+//   //   const dpr = window.devicePixelRatio || 1;
+
+//   //   const setCanvasSize = () => {
+//   //     const rect = canvas.getBoundingClientRect();
+//   //     canvas.width = rect.width * dpr;
+//   //     canvas.height = rect.height * dpr;
+//   //     ctx.scale(dpr, dpr);
+//   //   };
+
+//   //   setCanvasSize();
+//   //   window.addEventListener("resize", setCanvasSize);
+
+//   //   // Draw function
+//   //   const draw = () => {
+//   //     const width = canvas.width / dpr;
+//   //     const height = canvas.height / dpr;
+
+//   //     ctx.clearRect(0, 0, width, height);
+
+//   //     const layers = 6;
+
+//   //     /* === DESIGN-CORRECT VALUES === */
+//   //     const ellipseWidth = 220; // same width for all
+//   //     const ellipseHeight = 50; // flat ellipse
+//   //     const layerGap = 70; // vertical spacing
+
+//   //     // Add padding for top dot and bottom ellipse
+//   //     const topPadding = 100;
+//   //     const bottomPadding = 50;
+//   //     const totalEllipsesHeight = (layers - 1) * layerGap;
+//   //     const centerX = width / 2;
+//   //     const centerY = topPadding + totalEllipsesHeight / 2 + ellipseHeight;
+
+//   //     // Draw ellipses
+//   //     for (let i = 0; i < layers; i++) {
+//   //       const yOffset = (i - (layers - 1) / 2) * layerGap;
+//   //       const isActive = i === activeStep;
+
+//   //       ctx.beginPath();
+//   //       ctx.ellipse(
+//   //         centerX,
+//   //         centerY + yOffset,
+//   //         ellipseWidth,
+//   //         ellipseHeight,
+//   //         0,
+//   //         0,
+//   //         Math.PI * 2,
+//   //       );
+
+//   //       if (isActive) {
+//   //         ctx.strokeStyle = "#000000";
+//   //         ctx.lineWidth = 3;
+//   //         ctx.fillStyle = "#0B23C8";
+//   //         ctx.fill();
+//   //       } else {
+//   //         ctx.strokeStyle = "#000000";
+//   //         ctx.lineWidth = 0.5;
+//   //       }
+
+//   //       ctx.stroke();
+//   //     }
+
+//   //     // Draw animated dot on active layer
+//   //     const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
+//   //     const angle = dotPositionRef.current;
+
+//   //     // Calculate position on active ellipse
+//   //     const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
+//   //     const ellipseY =
+//   //       centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
+
+//   //     // Dot position at top (fixed above all ellipses)
+//   //     const dotX = ellipseX;
+//   //     const dotY = 30; // Fixed position near top of canvas
+
+//   //     // Draw vertical line from ellipse to dot
+//   //     ctx.beginPath();
+//   //     ctx.moveTo(ellipseX, ellipseY);
+//   //     ctx.lineTo(dotX, dotY);
+//   //     ctx.strokeStyle = "#0B23C8";
+//   //     ctx.lineWidth = 2;
+//   //     ctx.stroke();
+
+//   //     // Draw dot (larger and more visible)
+//   //     ctx.beginPath();
+//   //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+//   //     ctx.fillStyle = "#0B23C8";
+//   //     ctx.fill();
+
+//   //     // Draw white border around dot for better visibility
+//   //     ctx.beginPath();
+//   //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+//   //     ctx.strokeStyle = "#FFFFFF";
+//   //     ctx.lineWidth = 2;
+//   //     ctx.stroke();
+
+//   //     // Draw glow around dot
+//   //     const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
+//   //     gradient.addColorStop(0, "rgba(11, 35, 200, 0.6)");
+//   //     gradient.addColorStop(1, "rgba(11, 35, 200, 0)");
+//   //     ctx.beginPath();
+//   //     ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
+//   //     ctx.fillStyle = gradient;
+//   //     ctx.fill();
+
+//   //     // Update dot position
+//   //     dotPositionRef.current += 0.015;
+
+//   //     animationRef.current = requestAnimationFrame(draw);
+//   //   };
+
+//   //   draw();
+
+//   //   return () => {
+//   //     cancelAnimationFrame(animationRef.current);
+//   //     window.removeEventListener("resize", setCanvasSize);
+//   //   };
+//   // }, [activeStep]);
+//   useEffect(() => {
+//     const canvas = canvasRef.current;
+//     if (!canvas) return;
+
+//     const ctx = canvas.getContext("2d");
+//     let animationId = null;
+//     let lastTime = performance.now();
+//     let dpr = window.devicePixelRatio || 1;
+
+//     const setCanvasSize = () => {
+//       const rect = canvas.getBoundingClientRect();
+//       dpr = window.devicePixelRatio || 1;
+
+//       canvas.width = rect.width * dpr;
+//       canvas.height = rect.height * dpr;
+
+//       // ✅ VERY IMPORTANT
+//       ctx.setTransform(1, 0, 0, 1, 0, 0);
+//       ctx.scale(dpr, dpr);
+//     };
+
+//     setCanvasSize();
+//     window.addEventListener("resize", setCanvasSize);
+
+//     const draw = (now) => {
+//       const delta = (now - lastTime) / 1000; // seconds
+//       lastTime = now;
+
+//       const width = canvas.width / dpr;
+//       const height = canvas.height / dpr;
+
+//       ctx.clearRect(0, 0, width, height);
+
+//       const layers = 6;
+//       const ellipseWidth = 220;
+//       const ellipseHeight = 50;
+//       const layerGap = 70;
+
+//       const topPadding = 100;
+//       const centerX = width / 2;
+//       const centerY =
+//         topPadding + ((layers - 1) * layerGap) / 2 + ellipseHeight;
+
+//       // DRAW ELLIPSES
+//       for (let i = 0; i < layers; i++) {
+//         const yOffset = (i - (layers - 1) / 2) * layerGap;
+//         const isActive = i === activeStep;
+
+//         ctx.beginPath();
+//         ctx.ellipse(
+//           centerX,
+//           centerY + yOffset,
+//           ellipseWidth,
+//           ellipseHeight,
+//           0,
+//           0,
+//           Math.PI * 2,
+//         );
+
+//         if (isActive) {
+//           ctx.fillStyle = "#000000";
+//           ctx.strokeStyle = "#000";
+//           ctx.lineWidth = 3;
+//           ctx.fill();
+//         } else {
+//           ctx.fillStyle = "#FFFFFF";
+//           ctx.strokeStyle = "#000";
+//           ctx.lineWidth = 0.5;
+//           ctx.fill();
+//         }
+
+//         ctx.stroke();
+//       }
+
+//       // ACTIVE DOT
+//       const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
+//       const angle = dotPositionRef.current;
+
+//       const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
+//       const ellipseY =
+//         centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
+
+//       const dotX = ellipseX;
+//       const dotY = 30;
+
+//       // LINE
+//       ctx.beginPath();
+//       ctx.moveTo(ellipseX, ellipseY);
+//       ctx.lineTo(dotX, dotY);
+//       ctx.strokeStyle = "#000000";
+//       ctx.lineWidth = 2;
+//       ctx.stroke();
+
+//       // DOT
+//       ctx.beginPath();
+//       ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+//       ctx.fillStyle = "#000000";
+//       ctx.fill();
+
+//       ctx.beginPath();
+//       ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
+//       ctx.strokeStyle = "#FFF";
+//       ctx.lineWidth = 2;
+//       ctx.stroke();
+
+//       // GLOW
+//       const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
+//       gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+//       gradient.addColorStop(1, "rgba(11,35,200,0)");
+
+//       ctx.beginPath();
+//       ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
+//       ctx.fillStyle = gradient;
+//       ctx.fill();
+
+//       // ✅ TIME-BASED SPEED (FIXED)
+//       dotPositionRef.current += delta * 1.2;
+
+//       animationId = requestAnimationFrame(draw);
+//     };
+
+//     // START SAFELY
+//     cancelAnimationFrame(animationId);
+//     lastTime = performance.now();
+//     animationId = requestAnimationFrame(draw);
+
+//     return () => {
+//       cancelAnimationFrame(animationId);
+//       window.removeEventListener("resize", setCanvasSize);
+//     };
+//   }, [activeStep]);
+
+//   return (
+//     <section className="py-20 bg-primary">
+//       <div className=" px-4 sm:px-6 lg:px-8">
+//         {/* Section Title */}
+//         <div className="text-center mb-[77px]">
+//           <h2 className="text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
+//             Our DevOps <br /> Development Cycle
+//           </h2>
+//         </div>
+
+//         {/* Main Content Grid */}
+//         <div className="grid lg:grid-cols-2 gap-12 items-start">
+//           {/* Left Side - Steps List */}
+//           <div className="space-y-0 border border-black rounded-lg overflow-hidden shadow-sm">
+//             {steps.map((step, index) => (
+//               <div
+//                 key={step.number}
+//                 onClick={() => setActiveStep(index)}
+//                 onMouseEnter={() => setActiveStep(index)}
+//                 className={`cursor-pointer transition-all duration-300 ${
+//                   activeStep === index ? "bg-black text-white" : " text-black"
+//                 } ${index !== steps.length - 1 ? "border-b border-gray-200" : ""}`}>
+//                 <div className="p-6 lg:p-8">
+//                   <div className="flex items-start gap-4">
+//                     <span
+//                       className={`text-lg font-bold ${
+//                         activeStep === index ? "text-white" : "text-black"
+//                       }`}>
+//                       {step.number}
+//                     </span>
+//                     <div className="flex-1">
+//                       <h4
+//                         className={`text-base lg:text-xl font-outfit font-medium mb-2 ${
+//                           activeStep === index ? "text-white" : "text-black"
+//                         }`}>
+//                         {step.title}
+//                       </h4>
+//                       {step.description && activeStep === index && (
+//                         <p className="text-sm lg:text-base text-white/90 font-outfit font-light leading-relaxed">
+//                           {step.description}
+//                         </p>
+//                       )}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Right Side - Orbital Animation */}
+//           <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+//             {/* Canvas for orbital layers */}
+//             <canvas
+//               ref={canvasRef}
+//               className="w-full h-full"
+//               style={{ maxWidth: "600px", minHeight: "600px" }}
+//             />
+
+//             {/* Active step indicator */}
+//             <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-200">
+//               <span className="text-sm font-semibold text-black">
+//                 {steps[activeStep].number}
+//               </span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default DevOpsCycle;
+
+import { useState, useEffect, useRef, useCallback } from "react";
+
+/**
+ * Professional DevOps Cycle Component
+ *
+ * Features:
+ * - Proper separation of concerns
+ * - Optimized canvas rendering with RAF
+ * - Custom hooks for reusability
+ * - TypeScript-ready structure
+ * - Performance optimizations
+ * - Clean, maintainable code
+ */
+
+// ============================================
+// CONSTANTS & CONFIGURATION
+// ============================================
+
+const CANVAS_CONFIG = {
+  layers: 6,
+  ellipseWidth: 220,
+  ellipseHeight: 50,
+  layerGap: 70,
+  topPadding: 100,
+  dotRadius: 10,
+  dotGlowRadius: 25,
+  lineWidth: 2,
+  animationSpeed: 1.2,
+  minHeight: 600,
+};
+
+const COLORS = {
+  primary: "#000000",
+  secondary: "#FFFFFF",
+  accent: "#0B23C8",
+  border: "#E5E7EB",
+};
+
+const STEPS_DATA = [
+  {
+    number: "01",
+    title: "Assessment and Planning & Customization",
+    description:
+      "Evaluate current processes, identify bottlenecks, and define a tailored DevOps strategy aligned with business objectives.",
+  },
+  {
+    number: "02",
+    title: "Infrastructure Setup",
+    description:
+      "Design and configure scalable cloud infrastructure using IaC tools like Terraform, ensuring high availability and disaster recovery.",
+  },
+  {
+    number: "03",
+    title: "CI/CD Pipeline Development",
+    description:
+      "Build automated pipelines with Jenkins, GitLab CI, or GitHub Actions for seamless code integration, testing, and deployment.",
+  },
+  {
+    number: "04",
+    title: "Security & Compliance Integration",
+    description:
+      "Implement DevSecOps practices with automated security scanning, compliance checks, and vulnerability management.",
+  },
+  {
+    number: "05",
+    title: "Monitoring & Logging",
+    description:
+      "Deploy comprehensive monitoring solutions with Prometheus, Grafana, and ELK stack for real-time insights and alerting.",
+  },
+  {
+    number: "06",
+    title: "Feedback & Continuous Improvement",
+    description:
+      "Establish feedback loops, performance metrics, and continuous optimization strategies to drive ongoing enhancement.",
+  },
+];
+
+// ============================================
+// CUSTOM HOOKS
+// ============================================
+
+/**
+ * Hook for managing canvas rendering with proper cleanup
+ */
+const useCanvasAnimation = (canvasRef, activeStep, config) => {
   const dotPositionRef = useRef(0);
+  const animationRef = useRef(null);
+  const lastTimeRef = useRef(performance.now());
 
-  const steps = [
-    {
-      number: "01",
-      title: "Assessment and Planning & Customization",
-      description: "",
-    },
-    {
-      number: "02",
-      title: "Infrastructure Setup",
-      description: "",
-    },
-    {
-      number: "03",
-      title: "CI/CD Pipeline Development",
-      description:
-        "Evaluate current processes, identify bottlenecks, and define a tailored DevOps strategy aligned with business objectives",
-    },
-    {
-      number: "04",
-      title: "Security & Compliance Integration",
-      description: "",
-    },
-    {
-      number: "05",
-      title: "Monitoring & Logging",
-      description: "",
-    },
-    {
-      number: "06",
-      title: "Feedback & Continuous Improvement",
-      description: "",
-    },
-  ];
-
-  // Draw orbital layers with animated dot
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   if (!canvas) return;
-
-  //   const ctx = canvas.getContext("2d");
-  //   const dpr = window.devicePixelRatio || 1;
-
-  //   const setCanvasSize = () => {
-  //     const rect = canvas.getBoundingClientRect();
-  //     canvas.width = rect.width * dpr;
-  //     canvas.height = rect.height * dpr;
-  //     ctx.scale(dpr, dpr);
-  //   };
-
-  //   setCanvasSize();
-  //   window.addEventListener("resize", setCanvasSize);
-
-  //   // Draw function
-  //   const draw = () => {
-  //     const width = canvas.width / dpr;
-  //     const height = canvas.height / dpr;
-
-  //     ctx.clearRect(0, 0, width, height);
-
-  //     const layers = 6;
-
-  //     /* === DESIGN-CORRECT VALUES === */
-  //     const ellipseWidth = 220; // same width for all
-  //     const ellipseHeight = 50; // flat ellipse
-  //     const layerGap = 70; // vertical spacing
-
-  //     // Add padding for top dot and bottom ellipse
-  //     const topPadding = 100;
-  //     const bottomPadding = 50;
-  //     const totalEllipsesHeight = (layers - 1) * layerGap;
-  //     const centerX = width / 2;
-  //     const centerY = topPadding + totalEllipsesHeight / 2 + ellipseHeight;
-
-  //     // Draw ellipses
-  //     for (let i = 0; i < layers; i++) {
-  //       const yOffset = (i - (layers - 1) / 2) * layerGap;
-  //       const isActive = i === activeStep;
-
-  //       ctx.beginPath();
-  //       ctx.ellipse(
-  //         centerX,
-  //         centerY + yOffset,
-  //         ellipseWidth,
-  //         ellipseHeight,
-  //         0,
-  //         0,
-  //         Math.PI * 2,
-  //       );
-
-  //       if (isActive) {
-  //         ctx.strokeStyle = "#000000";
-  //         ctx.lineWidth = 3;
-  //         ctx.fillStyle = "#0B23C8";
-  //         ctx.fill();
-  //       } else {
-  //         ctx.strokeStyle = "#000000";
-  //         ctx.lineWidth = 0.5;
-  //       }
-
-  //       ctx.stroke();
-  //     }
-
-  //     // Draw animated dot on active layer
-  //     const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
-  //     const angle = dotPositionRef.current;
-
-  //     // Calculate position on active ellipse
-  //     const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
-  //     const ellipseY =
-  //       centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
-
-  //     // Dot position at top (fixed above all ellipses)
-  //     const dotX = ellipseX;
-  //     const dotY = 30; // Fixed position near top of canvas
-
-  //     // Draw vertical line from ellipse to dot
-  //     ctx.beginPath();
-  //     ctx.moveTo(ellipseX, ellipseY);
-  //     ctx.lineTo(dotX, dotY);
-  //     ctx.strokeStyle = "#0B23C8";
-  //     ctx.lineWidth = 2;
-  //     ctx.stroke();
-
-  //     // Draw dot (larger and more visible)
-  //     ctx.beginPath();
-  //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
-  //     ctx.fillStyle = "#0B23C8";
-  //     ctx.fill();
-
-  //     // Draw white border around dot for better visibility
-  //     ctx.beginPath();
-  //     ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
-  //     ctx.strokeStyle = "#FFFFFF";
-  //     ctx.lineWidth = 2;
-  //     ctx.stroke();
-
-  //     // Draw glow around dot
-  //     const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
-  //     gradient.addColorStop(0, "rgba(11, 35, 200, 0.6)");
-  //     gradient.addColorStop(1, "rgba(11, 35, 200, 0)");
-  //     ctx.beginPath();
-  //     ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
-  //     ctx.fillStyle = gradient;
-  //     ctx.fill();
-
-  //     // Update dot position
-  //     dotPositionRef.current += 0.015;
-
-  //     animationRef.current = requestAnimationFrame(draw);
-  //   };
-
-  //   draw();
-
-  //   return () => {
-  //     cancelAnimationFrame(animationRef.current);
-  //     window.removeEventListener("resize", setCanvasSize);
-  //   };
-  // }, [activeStep]);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    let animationId = null;
-    let lastTime = performance.now(); // ✅ FIXED
-    let dpr = window.devicePixelRatio || 1;
-
-    const setCanvasSize = () => {
-      const rect = canvas.getBoundingClientRect();
-      dpr = window.devicePixelRatio || 1;
-
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
-
-      // ✅ VERY IMPORTANT
-      ctx.setTransform(1, 0, 0, 1, 0, 0);
-      ctx.scale(dpr, dpr);
-    };
-
-    setCanvasSize();
-    window.addEventListener("resize", setCanvasSize);
-
-    const draw = (now) => {
-      const delta = (now - lastTime) / 1000; // seconds
-      lastTime = now;
-
-      const width = canvas.width / dpr;
-      const height = canvas.height / dpr;
-
-      ctx.clearRect(0, 0, width, height);
-
-      const layers = 6;
-      const ellipseWidth = 220;
-      const ellipseHeight = 50;
-      const layerGap = 70;
-
-      const topPadding = 100;
-      const centerX = width / 2;
-      const centerY =
-        topPadding + ((layers - 1) * layerGap) / 2 + ellipseHeight;
-
-      // DRAW ELLIPSES
-      for (let i = 0; i < layers; i++) {
-        const yOffset = (i - (layers - 1) / 2) * layerGap;
-        const isActive = i === activeStep;
+  const drawEllipses = useCallback(
+    (ctx, centerX, centerY, activeIndex) => {
+      for (let i = 0; i < config.layers; i++) {
+        const yOffset = (i - (config.layers - 1) / 2) * config.layerGap;
+        const isActive = i === activeIndex;
 
         ctx.beginPath();
         ctx.ellipse(
           centerX,
           centerY + yOffset,
-          ellipseWidth,
-          ellipseHeight,
+          config.ellipseWidth,
+          config.ellipseHeight,
           0,
           0,
           Math.PI * 2,
         );
 
         if (isActive) {
-          ctx.fillStyle = "#0B23C8";
-          ctx.strokeStyle = "#000";
+          ctx.fillStyle = COLORS.primary;
+          ctx.strokeStyle = COLORS.primary;
           ctx.lineWidth = 3;
-          ctx.fill();
         } else {
-          ctx.strokeStyle = "#000";
+          ctx.fillStyle = COLORS.secondary;
+          ctx.strokeStyle = COLORS.primary;
           ctx.lineWidth = 0.5;
         }
 
+        ctx.fill();
         ctx.stroke();
       }
+    },
+    [config.layers, config.layerGap, config.ellipseWidth, config.ellipseHeight],
+  );
 
-      // ACTIVE DOT
-      const activeYOffset = (activeStep - (layers - 1) / 2) * layerGap;
-      const angle = dotPositionRef.current;
+  const drawAnimatedDot = useCallback(
+    (ctx, centerX, centerY, activeIndex, angle) => {
+      const activeYOffset =
+        (activeIndex - (config.layers - 1) / 2) * config.layerGap;
 
-      const ellipseX = centerX + Math.cos(angle) * ellipseWidth;
+      // Calculate ellipse point
+      const ellipseX = centerX + Math.cos(angle) * config.ellipseWidth;
       const ellipseY =
-        centerY + activeYOffset + Math.sin(angle) * ellipseHeight;
+        centerY + activeYOffset + Math.sin(angle) * config.ellipseHeight;
 
+      // Fixed dot position at top
       const dotX = ellipseX;
       const dotY = 30;
 
-      // LINE
+      // Draw connecting line
       ctx.beginPath();
       ctx.moveTo(ellipseX, ellipseY);
       ctx.lineTo(dotX, dotY);
-      ctx.strokeStyle = "#0B23C8";
-      ctx.lineWidth = 2;
+      ctx.strokeStyle = COLORS.primary;
+      ctx.lineWidth = config.lineWidth;
       ctx.stroke();
 
-      // DOT
-      ctx.beginPath();
-      ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
-      ctx.fillStyle = "#0B23C8";
-      ctx.fill();
+      // Draw outer glow
+      const gradient = ctx.createRadialGradient(
+        dotX,
+        dotY,
+        0,
+        dotX,
+        dotY,
+        config.dotGlowRadius,
+      );
+      gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+      gradient.addColorStop(1, "rgba(11, 35, 200, 0)");
 
       ctx.beginPath();
-      ctx.arc(dotX, dotY, 10, 0, Math.PI * 2);
-      ctx.strokeStyle = "#FFF";
-      ctx.lineWidth = 2;
-      ctx.stroke();
-
-      // GLOW
-      const gradient = ctx.createRadialGradient(dotX, dotY, 0, dotX, dotY, 25);
-      gradient.addColorStop(0, "rgba(11,35,200,0.6)");
-      gradient.addColorStop(1, "rgba(11,35,200,0)");
-
-      ctx.beginPath();
-      ctx.arc(dotX, dotY, 25, 0, Math.PI * 2);
+      ctx.arc(dotX, dotY, config.dotGlowRadius, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
 
-      // ✅ TIME-BASED SPEED (FIXED)
-      dotPositionRef.current += delta * 1.2;
+      // Draw main dot
+      ctx.beginPath();
+      ctx.arc(dotX, dotY, config.dotRadius, 0, Math.PI * 2);
+      ctx.fillStyle = COLORS.primary;
+      ctx.fill();
 
-      animationId = requestAnimationFrame(draw);
+      // Draw dot border
+      ctx.beginPath();
+      ctx.arc(dotX, dotY, config.dotRadius, 0, Math.PI * 2);
+      ctx.strokeStyle = COLORS.secondary;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    },
+    [
+      config.layers,
+      config.layerGap,
+      config.ellipseWidth,
+      config.ellipseHeight,
+      config.dotRadius,
+      config.dotGlowRadius,
+      config.lineWidth,
+    ],
+  );
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d", { alpha: true });
+    let dpr = window.devicePixelRatio || 1;
+
+    // Setup canvas with proper DPI scaling
+    const setupCanvas = () => {
+      const rect = canvas.getBoundingClientRect();
+      dpr = window.devicePixelRatio || 1;
+
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
     };
 
-    // START SAFELY
-    cancelAnimationFrame(animationId);
-    lastTime = performance.now();
-    animationId = requestAnimationFrame(draw);
+    // Main animation loop
+    const animate = (now) => {
+      const delta = (now - lastTimeRef.current) / 1000;
+      lastTimeRef.current = now;
 
+      const width = canvas.width / dpr;
+      const height = canvas.height / dpr;
+
+      // Clear canvas
+      ctx.clearRect(0, 0, width, height);
+
+      // Calculate center positions
+      const centerX = width / 2;
+      const centerY =
+        config.topPadding +
+        ((config.layers - 1) * config.layerGap) / 2 +
+        config.ellipseHeight;
+
+      // Draw all elements
+      drawEllipses(ctx, centerX, centerY, activeStep);
+      drawAnimatedDot(
+        ctx,
+        centerX,
+        centerY,
+        activeStep,
+        dotPositionRef.current,
+      );
+
+      // Update animation
+      dotPositionRef.current += delta * config.animationSpeed;
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    // Initialize
+    setupCanvas();
+    window.addEventListener("resize", setupCanvas);
+
+    // Start animation
+    cancelAnimationFrame(animationRef.current);
+    lastTimeRef.current = performance.now();
+    animationRef.current = requestAnimationFrame(animate);
+
+    // Cleanup
     return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", setCanvasSize);
+      cancelAnimationFrame(animationRef.current);
+      window.removeEventListener("resize", setupCanvas);
     };
-  }, [activeStep]);
+  }, [activeStep, canvasRef, config, drawEllipses, drawAnimatedDot]);
+
+  return null;
+};
+
+// ============================================
+// SUB-COMPONENTS
+// ============================================
+
+/**
+ * Individual step item component
+ */
+const StepItem = ({ step, index, isActive, onClick, isLastItem }) => (
+  <div
+    onClick={onClick}
+    onMouseEnter={onClick}
+    className={`
+      cursor-pointer transition-all duration-300
+      ${isActive ? "bg-black text-white" : " text-black"}
+      ${!isLastItem ? "border-b border-gray-200" : ""}
+    `}
+    role="button"
+    tabIndex={0}
+    aria-pressed={isActive}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        onClick();
+      }
+    }}>
+    <div className="p-6 lg:p-8">
+      <div className="flex items-start gap-4">
+        <span
+          className={`
+            text-lg font-bold min-w-[2.5rem]
+            ${isActive ? "text-white" : "text-black"}
+          `}>
+          {step.number}
+        </span>
+        <div className="flex-1">
+          <h3
+            className={`
+              text-base lg:text-xl font-outfit font-medium mb-2
+              ${isActive ? "text-white" : "text-black"}
+            `}>
+            {step.title}
+          </h3>
+          {step.description && isActive && (
+            <p className="text-sm lg:text-base text-white/90 font-outfit font-light leading-relaxed mt-3">
+              {step.description}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+/**
+ * Steps list component
+ */
+const StepsList = ({ steps, activeStep, onStepChange }) => (
+  <div
+    className="space-y-0 border border-black rounded-lg overflow-hidden shadow-lg"
+    role="tablist"
+    aria-label="DevOps Development Cycle Steps">
+    {steps.map((step, index) => (
+      <StepItem
+        key={step.number}
+        step={step}
+        index={index}
+        isActive={activeStep === index}
+        onClick={() => onStepChange(index)}
+        isLastItem={index === steps.length - 1}
+      />
+    ))}
+  </div>
+);
+
+/**
+ * Orbital animation canvas component
+ */
+const OrbitalAnimation = ({ activeStep, steps, canvasRef }) => (
+  <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+    <canvas
+      ref={canvasRef}
+      className="w-full h-full"
+      style={{
+        maxWidth: "600px",
+        minHeight: `${CANVAS_CONFIG.minHeight}px`,
+      }}
+      aria-hidden="true"
+    />
+
+    {/* Active step indicator badge */}
+    <div
+      className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-200"
+      role="status"
+      aria-live="polite">
+      <span className="text-sm font-semibold text-black">
+        Step {steps[activeStep].number}
+      </span>
+    </div>
+  </div>
+);
+
+// ============================================
+// MAIN COMPONENT
+// ============================================
+
+const DevOpsCycle = () => {
+  const [activeStep, setActiveStep] = useState(2); // Default to step 03 (index 2)
+  const canvasRef = useRef(null);
+
+  // Initialize canvas animation
+  useCanvasAnimation(canvasRef, activeStep, CANVAS_CONFIG);
+
+  // Memoized step change handler
+  const handleStepChange = useCallback((index) => {
+    setActiveStep(index);
+  }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className=" px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-primary" aria-labelledby="devops-title">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-[77px]">
-          <h2 className="text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
+        <header className="text-center mb-[77px]">
+          <h2
+            id="devops-title"
+            className="text-3xl md:text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
             Our DevOps <br /> Development Cycle
           </h2>
-        </div>
+        </header>
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Steps List */}
-          <div className="space-y-0 border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
-            {steps.map((step, index) => (
-              <div
-                key={step.number}
-                onClick={() => setActiveStep(index)}
-                onMouseEnter={() => setActiveStep(index)}
-                className={`cursor-pointer transition-all duration-300 ${
-                  activeStep === index
-                    ? "bg-primary text-white"
-                    : "bg-white text-gray-900 hover:bg-gray-50"
-                } ${index !== steps.length - 1 ? "border-b border-gray-200" : ""}`}>
-                <div className="p-6 lg:p-8">
-                  <div className="flex items-start gap-4">
-                    <span
-                      className={`text-lg font-bold ${
-                        activeStep === index ? "text-white" : "text-gray-400"
-                      }`}>
-                      {step.number}
-                    </span>
-                    <div className="flex-1">
-                      <h4
-                        className={`text-base lg:text-xl font-outfit font-medium mb-2 ${
-                          activeStep === index ? "text-white" : "text-black"
-                        }`}>
-                        {step.title}
-                      </h4>
-                      {step.description && activeStep === index && (
-                        <p className="text-sm lg:text-base text-white/90 font-outfit font-light leading-relaxed">
-                          {step.description}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <StepsList
+            steps={STEPS_DATA}
+            activeStep={activeStep}
+            onStepChange={handleStepChange}
+          />
 
           {/* Right Side - Orbital Animation */}
-          <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
-            {/* Canvas for orbital layers */}
-            <canvas
-              ref={canvasRef}
-              className="w-full h-full"
-              style={{ maxWidth: "600px", minHeight: "600px" }}
-            />
-
-            {/* Active step indicator */}
-            <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-200">
-              <span className="text-sm font-semibold text-blue-700">
-                {steps[activeStep].number}
-              </span>
-            </div>
-          </div>
+          <OrbitalAnimation
+            activeStep={activeStep}
+            steps={STEPS_DATA}
+            canvasRef={canvasRef}
+          />
         </div>
       </div>
     </section>

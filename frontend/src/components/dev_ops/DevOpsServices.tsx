@@ -66,10 +66,10 @@ const DevOpsServices = () => {
         {/* Header Section */}
         <div className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]">
           <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
-            Our DevOps Services
+            Our DevOps Services
           </h2>
           <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
-            We don’t just create strategies we show the numbers. Growth means
+            We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
           </p>

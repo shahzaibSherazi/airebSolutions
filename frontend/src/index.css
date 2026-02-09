@@ -823,3 +823,90 @@ blockquote::-webkit-scrollbar-thumb:hover {
 .animate-spin-slow-reverse {
   animation: spin-slow-reverse 40s linear infinite;
 }
+
+/* blinking dot */
+.badge-with-dot {
+  position: relative;
+  padding-right: 24px;
+}
+
+.badge-with-dot::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-80px) translateX(40px);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow linear infinite;
+}
+
+/* Smooth scrolling */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Ensure smooth GPU-accelerated animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 640px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,51 +1,50 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
-import integraionIcon from "../../assets/icons/integration.png";
-import dataInsightsIcon from "../../assets/icons/data-insights.png";
-import nlpIcon from "../../assets/icons/nlp.png";
-import visionIcon from "../../assets/icons/computer-vision.png";
-import deepLearningIcon from "../../assets/icons/machine-learning.png";
-import aiPoweredIcon from "../../assets/icons/ai-powered.png";
+import IntegraionIcon from "../../assets/icons/AI-services-icons/integration.svg?react";
+import DataInsightsIcon from "../../assets/icons/AI-services-icons/data-insights.svg?react";
+import NlpIcon from "../../assets/icons/AI-services-icons/nlp.svg?react";
+import VisionIcon from "../../assets/icons/AI-services-icons/computer-vision.svg?react";
+import DeepLearningIcon from "../../assets/icons/AI-services-icons/machine-learning.svg?react";
+import AiPoweredIcon from "../../assets/icons/AI-services-icons/ai-powered.svg?react";
 const AiServicesSection = () => {
   const services = [
     {
       id: 1,
-      iconPath: integraionIcon,
+      iconPath: <IntegraionIcon />,
       title: "AI Integration & Automation",
       description:
         "We integrate AI technologies into your business workflows to streamline operations, enhance productivity, and reduce manual efforts. By automating routine processes, minimizing human errors, and enabling data-driven decision-making",
     },
     {
       id: 2,
-      iconPath: dataInsightsIcon,
+      iconPath: <DataInsightsIcon />,
       title: "Predictive Analytics & Data Insights",
       description:
         "Leverage the power of AI-driven analytics to make data-backed decisions. Our ML models analyze vast datasets to identify trends, forecast future outcomes, and optimize business strategies for maximum efficiency.",
     },
     {
       id: 3,
-      iconPath: nlpIcon,
+      iconPath: <NlpIcon />,
       title: "Natural Language Processing (NLP)",
       description:
         "Enhance customer interactions with AI-driven NLP solutions. We develop intelligent voice assistants, sentiment analysis tools, and automated content generation systems that improve engagement and communication.",
     },
     {
       id: 4,
-      iconPath: visionIcon,
+      iconPath: <VisionIcon />,
       title: "Computer Vision & Image Recognition",
       description:
         "Our AI-driven computer vision solutions analyze images and videos for object detection, facial recognition, and automated surveillance, providing businesses with advanced security and monitoring capabilities.",
     },
     {
       id: 5,
-      iconPath: deepLearningIcon,
+      iconPath: <DeepLearningIcon />,
       title: "Generative AI & Deep Learning",
       description:
         "We specialize in training and fine-tuning large neural networks for human-like text, realistic media generation, and complex problem-solving. By leveraging deep learning, we help businesses automate creativity, enhance data analysis, and drive AI innovation.",
     },
     {
       id: 6,
-      iconPath: aiPoweredIcon,
+      iconPath: <AiPoweredIcon />,
       title: "AI-Powered Recommendation Systems",
       description:
         "Boost user engagement and conversions with AI-driven recommendation engines. Our solutions analyze user behavior to deliver personalized content, product recommendations, and targeted marketing strategies.",
@@ -78,7 +77,7 @@ const AiServicesSection = () => {
   overflow-hidden
   ">
               {/* Icon Container */}
-              <div className="mb-[clamp(16px,2.5vh,32px)] flex justify-between">
+              <div className="mb-[clamp(16px,2.5vh,32px)] flex w-full  justify-between group">
                 {/* Title */}
                 <h3
                   className="font-outfit font-semibold text-white
@@ -87,8 +86,8 @@ const AiServicesSection = () => {
   line-clamp-2">
                   {service.title}
                 </h3>
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] px-[6px] py-[5px] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img src={service.iconPath} className="w-full h-full" />
+                <div className="group-hover:text-black text-primary">
+                  {service.iconPath}
                 </div>
               </div>
 

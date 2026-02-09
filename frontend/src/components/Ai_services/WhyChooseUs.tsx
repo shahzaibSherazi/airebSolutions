@@ -1,7 +1,9 @@
 import React from "react";
 import { Hand } from "lucide-react";
 import { PiHandPalmLight } from "react-icons/pi";
-
+import DeepLearningIcon from "../../assets/icons/AI-services-icons/machine-learning.svg?react";
+import CustomAiIcon from "../../assets/icons/AI-services-icons/custom_ai.svg?react";
+import ScalableIcon from "../../assets/icons/AI-services-icons/computer-vision.svg?react";
 const WhyChooseUs = () => {
   const features = [
     {
@@ -11,6 +13,7 @@ const WhyChooseUs = () => {
         "Our team of AI specialists and data scientists build state-of-the-art AI solutions that drive business transformation.",
       size: "large",
       color: "dark-blue",
+      icon: <DeepLearningIcon />,
     },
     {
       id: 2,
@@ -19,6 +22,7 @@ const WhyChooseUs = () => {
         "From healthcare and finance to retail and manufacturing, we design AI-driven applications that address industry-specific challenges.",
       size: "large",
       color: "bright-blue",
+      icon: <CustomAiIcon />,
     },
     {
       id: 3,
@@ -27,6 +31,7 @@ const WhyChooseUs = () => {
         "Security and scalability are at the core of our AI solutions, ensuring compliance and robustness for long-term success.",
       size: "small",
       color: "dark-blue",
+      icon: <ScalableIcon />,
     },
     {
       id: 4,
@@ -35,6 +40,7 @@ const WhyChooseUs = () => {
         "We provide comprehensive AI consulting, development, deployment, and ongoing support to ensure seamless integration into your business operations.",
       size: "small",
       color: "dark-blue",
+      icon: <DeepLearningIcon />,
     },
     {
       id: 5,
@@ -43,15 +49,12 @@ const WhyChooseUs = () => {
         "We prioritize fairness, transparency, and accountability in AI, ensuring bias-free and ethical AI solutions.",
       size: "small",
       color: "dark-blue",
+      icon: <DeepLearningIcon />,
     },
   ];
 
   return (
-    <div
-      className="min-h-screen text-white py-16 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{
-        background: "linear-gradient(135.23deg, #000000 2.74%, #030933 97.26%)",
-      }}>
+    <div className="min-h-screen text-white py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary">
       <div className="">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
@@ -66,22 +69,13 @@ const WhyChooseUs = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* First Row - 2 Large Cards */}
-          <div
-            className={`rounded-[5px] p-1 pb-8 group transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01]
-${
-  features[0].color === "dark-blue"
-    ? "bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B]"
-    : "bg-gradient-to-br from-blue-600 to-blue-700"
-}`}>
-            <div
-              className={`inline-flex px-7 py-[19px] rounded mb-6 ${
-                features[0].color === "dark-blue" ? "bg-primary" : "bg-white"
-              }`}>
-              <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+          <div className="rounded-[5px] p-1 pb-8 group border-025 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01]">
+            <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
+              {features[0].icon}
             </div>
 
             <div className="px-5">
-              <h3 className="text-lg leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
                 {features[0].title}
               </h3>
               <p className="text-white text-base font-outfit font-light leading-[28px]">
@@ -91,15 +85,15 @@ ${
           </div>
 
           <div
-            className="rounded-[5px] p-1 bg-[#0B23C8] pb-8 group transition-all duration-300 ease-out
+            className="rounded-[5px] border-025 p-1 pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
             <div className="mb-6">
-              <div className="inline-flex px-7 py-[19px] rounded bg-white">
-                <PiHandPalmLight className="w-10 h-10 text-primary transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+              <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125  mb-6 ">
+                {features[1].icon}
               </div>
             </div>
             <div className="px-5">
-              <h3 className="text-lg leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
                 {features[1].title}
               </h3>
               <p className="text-white text-base font-outfit font-light leading-[28px]">
@@ -113,15 +107,15 @@ hover:-translate-y-2 hover:scale-[1.01]">
             {features.slice(2).map((feature) => (
               <div
                 key={feature.id}
-                className="rounded-[5px] p-1 bg-gradient-to-br from-[#030933] to-[#041167] border border-[#4B4B4B] pb-8 group transition-all duration-300 ease-out
+                className="rounded-[5px] p-1  border-025 pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
                 <div className="mb-6">
-                  <div className="inline-flex px-7 py-[19px] rounded bg-primary">
-                    <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+                  <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
+                    {feature.icon}
                   </div>
                 </div>
                 <div className="px-5">
-                  <h3 className="text-lg leading-10 font-bold mb-[7px]">
+                  <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
                     {feature.title}
                   </h3>
                   <p className="text-white text-base font-outfit font-light leading-[28px]">

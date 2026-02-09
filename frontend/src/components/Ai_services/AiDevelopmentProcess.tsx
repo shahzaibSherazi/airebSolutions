@@ -135,7 +135,7 @@ const AIDevelopmentProcess = () => {
         {/* Process Steps Grid - Two per row */}
         <div className="relative">
           {/* Vertical Connection Line for Desktop - Hidden on mobile */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-blue-500 to-blue-500 hidden lg:block -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary hidden lg:block -translate-x-1/2" />
 
           {/* Steps Container with consistent gaps */}
           <div className="space-y-8 lg:space-y-16">
@@ -157,11 +157,11 @@ const AIDevelopmentProcess = () => {
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                       <div className="relative">
                         {/* Pulsing Ring */}
-                        <div className="absolute inset-0 rounded-full border-2 border-blue-600 animate-ping-slow" />
+                        <div className="absolute inset-0 rounded-full border-2 border-primary animate-ping-slow" />
 
                         {/* Center Circle */}
-                        <div className="relative w-12 h-12 rounded-full bg-gray-900 border-2 border-blue-600 flex items-center justify-center">
-                          <div className="w-3 h-3 rounded-full bg-blue-500" />
+                        <div className="relative w-12 h-12 rounded-full bg-gray-900 border-2 border-primary flex items-center justify-center">
+                          <div className="w-3 h-3 rounded-full bg-primary" />
                         </div>
                       </div>
                     </div>
@@ -171,6 +171,7 @@ const AIDevelopmentProcess = () => {
                       <div className="relative">
                         <StepCard
                           step={pair[0]}
+                          align="right"
                           activeStep={activeStep}
                           setActiveStep={setActiveStep}
                         />
@@ -217,7 +218,7 @@ const AIDevelopmentProcess = () => {
   );
 };
 
-const StepCard = ({ step, activeStep, setActiveStep }) => {
+const StepCard = ({ step, align = "left", activeStep, setActiveStep }) => {
   const isActive = activeStep === step.id;
 
   return (
@@ -226,11 +227,17 @@ const StepCard = ({ step, activeStep, setActiveStep }) => {
       onMouseEnter={() => setActiveStep(step.id)}
       onMouseLeave={() => setActiveStep(null)}>
       <div
-        className={`relative p-6 sm:p-8 rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border transition-all duration-500 flex flex-col min-h-[240px] ${
-          isActive
-            ? "border-blue-500 shadow-2xl shadow-blue-500/20 scale-105"
-            : "border-gray-800 hover:border-gray-700"
-        }`}>
+        className={`relative p-6 sm:p-8 rounded-xl group-hover:border transition-all duration-500 flex flex-col min-h-[240px]
+  ${
+    align === "right"
+      ? "lg:items-end lg:text-right"
+      : "lg:items-start lg:text-left"
+  }
+  ${
+    isActive
+      ? "border-blue-500 shadow-2xl shadow-primary/20 scale-105"
+      : "border-gray-800 hover:border-gray-700"
+  }`}>
         {/* Animated SVG Border - flows around entire card on hover */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none rounded-xl"
@@ -265,7 +272,9 @@ const StepCard = ({ step, activeStep, setActiveStep }) => {
         </svg>
 
         {/* Step Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-blue-600 rounded-full self-start">
+        <div
+          className={`inline-flex items-center gap-2 px-4 py-2 mb-4 bg-primary badge-with-dot
+  ${align === "right" ? "lg:self-end" : "lg:self-start"}`}>
           <span
             className="text-white font-semibold"
             style={{
@@ -274,17 +283,6 @@ const StepCard = ({ step, activeStep, setActiveStep }) => {
             }}>
             {step.number}
           </span>
-          <div className="flex gap-1">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="w-1 h-1 bg-white rounded-full animate-pulse"
-                style={{
-                  animationDelay: `${i * 200}ms`,
-                }}
-              />
-            ))}
-          </div>
         </div>
 
         {/* Title - with text clamping */}
@@ -298,7 +296,11 @@ const StepCard = ({ step, activeStep, setActiveStep }) => {
         </h3>
 
         {/* Description - with text clamping */}
-        <p className="text-gray-400 line-clamp-4 flex-grow font-outfit font-normal text-base">
+        <p
+          style={{
+            background: "linear-gradient(180deg, #141414 0%, #141414 100%)",
+          }}
+          className="text-textColor line-clamp-4 flex-grow font-outfit font-normal text-base rounded-[5px] border-025 border-[#4B4B4B] p-4">
           {step.description}
         </p>
       </div>
