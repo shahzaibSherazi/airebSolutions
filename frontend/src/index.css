@@ -910,3 +910,109 @@ html.lenis {
     height: auto;
   }
 }
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* AI development process */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes border-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-border-flow {
+  animation: border-flow 2s linear infinite;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sevicesCard_edge {
+  position: relative;
+
+  color: white;
+}
+
+.sevicesCard_edge::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.sevicesCard_edge::after {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  content: "";
+  /* content: "\f107";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900; */
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}

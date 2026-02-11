@@ -5,12 +5,11 @@ import AdaptableSection from "@/components/home/AdaptableSection";
 import StrategicApproach from "@/components/home/StrategicApproach";
 import ResultSection from "@/components/home/ResultSection";
 import FeaturedSection from "@/components/home/FeaturedSection";
-import ContactForm from "@/components/home/ContactForm";
 import OurReviews from "@/components/home/OurReviews";
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <HeroSection />
       <ServicesSection />
       <AdaptableSection />
@@ -19,7 +18,6 @@ const Index = () => {
       <OurReviews />
 
       <StrategicApproach />
-      {/* <ContactForm /> */}
     </Layout>
   );
 };

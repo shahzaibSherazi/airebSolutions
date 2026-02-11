@@ -7,7 +7,7 @@ import WorkProcessSection from "@/components/web_development/WorkProcessSection"
 
 const WebDevelopment = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <WebHeroSection />
       <WebServicesSection />
       <WorkProcessSection />

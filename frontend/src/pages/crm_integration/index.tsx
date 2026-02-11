@@ -8,7 +8,7 @@ import Layout from "@/components/layout/Layout";
 
 const CrmIntegration = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <CrmHero />
       <CrmServices />
       <WorkProcess />

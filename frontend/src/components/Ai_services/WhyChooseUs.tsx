@@ -70,12 +70,12 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* First Row - 2 Large Cards */}
           <div className="rounded-[5px] p-1 pb-8 group border-025 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01]">
-            <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
+            <div className=" px-7 py-[19px] w-10 h-10 text-textColor transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
               {features[0].icon}
             </div>
 
             <div className="px-5">
-              <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-textColor leading-10 font-bold mb-[7px]">
                 {features[0].title}
               </h3>
               <p className="text-white text-base font-outfit font-light leading-[28px]">
@@ -88,12 +88,12 @@ const WhyChooseUs = () => {
             className="rounded-[5px] border-025 p-1 pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
             <div className="mb-6">
-              <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125  mb-6 ">
+              <div className=" px-7 py-[19px] w-10 h-10 text-textColor transition-transform duration-300 ease-out group-hover:scale-125  mb-6 ">
                 {features[1].icon}
               </div>
             </div>
             <div className="px-5">
-              <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-textColor leading-10 font-bold mb-[7px]">
                 {features[1].title}
               </h3>
               <p className="text-white text-base font-outfit font-light leading-[28px]">
@@ -110,12 +110,12 @@ hover:-translate-y-2 hover:scale-[1.01]">
                 className="rounded-[5px] p-1  border-025 pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
                 <div className="mb-6">
-                  <div className=" px-7 py-[19px] w-10 h-10 text-black transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
+                  <div className=" px-7 py-[19px] w-10 h-10 text-textColor transition-transform duration-300 ease-out group-hover:scale-125 mb-6 ">
                     {feature.icon}
                   </div>
                 </div>
                 <div className="px-5">
-                  <h3 className="text-lg text-black leading-10 font-bold mb-[7px]">
+                  <h3 className="text-lg text-textColor leading-10 font-bold mb-[7px]">
                     {feature.title}
                   </h3>
                   <p className="text-white text-base font-outfit font-light leading-[28px]">

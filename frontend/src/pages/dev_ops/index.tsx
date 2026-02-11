@@ -6,7 +6,7 @@ import Layout from "@/components/layout/Layout";
 
 const DevOps = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <DevOpsHero />
       <DevOpsServices />
       <DevOpsCycle />

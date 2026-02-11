@@ -2,9 +2,9 @@ import React from "react";
 import workImg from "../../assets/mobile_work_img.png";
 const OurWork = () => {
   return (
-    <section className=" w-full bg-black pt-8 lg:pt-[41] overflow-hidden">
+    <section className=" w-full px-4 sm:px-6 lg:px-8 py-24 bg-primary">
       {/* Container */}
-      <div className=" px-4 sm:px-6 lg:px-8 py-24 bg-white">
+      <div className=" ">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
           {/* Left Content */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
@@ -28,10 +28,10 @@ const OurWork = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
-              <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-white text-gray-900 rounded border-025 border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+              <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded border-025 border-gray-900 hover:bg-white hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
                 Discover It
               </button>
-              <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-white text-gray-900 rounded border-025 border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+              <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded border-025 border-gray-900 hover:bg-white hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
                 Start A Project
               </button>
             </div>

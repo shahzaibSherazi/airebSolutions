@@ -217,23 +217,6 @@ export default function OurWorkProcess() {
 
   return (
     <>
-      <style>{`
-        @keyframes pulse-dot {
-          0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.4;
-            transform: scale(0.9);
-          }
-        }
-        
-        .pulse-dot {
-          animation: pulse-dot 2s ease-in-out infinite;
-        }
-      `}</style>
-
       {/* ===== PINNED SECTION ===== */}
       <section
         ref={sectionRef}
@@ -278,7 +261,7 @@ export default function OurWorkProcess() {
                       i === activeIndex
                         ? "bg-primary scale-110"
                         : i < activeIndex
-                          ? "bg-blue-600 border-blue-500"
+                          ? "bg-primary"
                           : "bg-white"
                     }`}>
                     {/* Inner Dot */}
@@ -294,7 +277,7 @@ export default function OurWorkProcess() {
           </div>
 
           {/* CARD */}
-          <div className="relative w-full max-w-3xl mx-auto">
+          <div className="relative w-full max-w-3xl mx-auto mb-20">
             <div
               ref={cardRef}
               className="bg-primary px-12 py-8 relative overflow-hidden min-h-[200px]">

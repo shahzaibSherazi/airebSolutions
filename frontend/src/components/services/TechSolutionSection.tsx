@@ -1,7 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Bookmark, ChevronRight, Frame, Maximize2 } from "lucide-react";
 import cardBgImage from "../../assets/techSolution_card_bg.png";
-import btnIcon from "../../assets/icons/btn_icon.svg";
+import BtnIcon from "../../assets/icons/btn_icon.svg?react";
+import AiBg from "@/assets/AllServices_assets/Ai_card_bg.png";
+import WebBg from "@/assets/AllServices_assets/web_card_bg.png";
+import ApiBg from "@/assets/AllServices_assets/api_card_bg.png";
+import MobileBg from "@/assets/AllServices_assets/mobile_card_bg.png";
+import CrmBg from "@/assets/AllServices_assets/crm_card_bg.png";
+import UiBg from "@/assets/AllServices_assets/ui_card_bg.png";
+import LogoBg from "@/assets/AllServices_assets/logo_card_bg.png";
+import ContentBg from "@/assets/AllServices_assets/content_card_bg.png";
+import ContactBg from "@/assets/AllServices_assets/contact_card_bg.png";
+import DevOpsBg from "@/assets/AllServices_assets/devOps_card_bg.png";
+import OnDemandBg from "@/assets/AllServices_assets/ondemand_card_bg.png";
+import EcommerceBg from "@/assets/AllServices_assets/ecomerce_card_bg.png";
+import DialerBg from "@/assets/AllServices_assets/dialer_card_bg.png";
 
 const TechSolutionsSection = () => {
   const [activeTab, setActiveTab] = useState("technology");
@@ -13,115 +26,79 @@ const TechSolutionsSection = () => {
       id: 1,
       title: "AI & Machine Learning",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: AiBg,
     },
     {
       id: 2,
       title: "Web Development",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: WebBg,
     },
     {
       id: 3,
       title: "API Development",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: ApiBg,
     },
     {
       id: 4,
       title: "Mobile Apps & Games",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: MobileBg,
     },
     {
       id: 5,
       title: "API & CRM Integration",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: CrmBg,
     },
     {
       id: 6,
       title: "UI/UX Design",
       category: "design",
-      backgroundImage: cardBgImage,
+      backgroundImage: UiBg,
     },
     {
       id: 7,
-      title: "Brand Identity",
+      title: "Content Writing",
       category: "design",
-      backgroundImage: cardBgImage,
+      backgroundImage: ContentBg,
     },
     {
       id: 8,
-      title: "Product Design",
+      title: "Logo Design",
       category: "design",
-      backgroundImage: cardBgImage,
+      backgroundImage: LogoBg,
     },
     {
       id: 9,
-      title: "Marketing Strategy",
+      title: "AI Dialer Software",
       category: "business",
-      backgroundImage: cardBgImage,
+      backgroundImage: DialerBg,
     },
     {
       id: 10,
-      title: "Content Creation",
+      title: "Contact Center Solutions",
       category: "business",
-      backgroundImage: cardBgImage,
+      backgroundImage: ContactBg,
     },
     {
       id: 11,
-      title: "Social Media",
+      title: "E-commerce",
       category: "business",
-      backgroundImage: cardBgImage,
+      backgroundImage: EcommerceBg,
     },
     {
       id: 12,
-      title: "Mobile Apps & Games",
+      title: "DevOPS",
       category: "technology",
-      backgroundImage: cardBgImage,
+      backgroundImage: DevOpsBg,
     },
     {
       id: 13,
-      title: "API & CRM Integration",
+      title: "On-Demand",
       category: "technology",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 14,
-      title: "UI/UX Design",
-      category: "design",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 15,
-      title: "Brand Identity",
-      category: "design",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 16,
-      title: "Product Design",
-      category: "design",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 17,
-      title: "Marketing Strategy",
-      category: "business",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 18,
-      title: "Content Creation",
-      category: "business",
-      backgroundImage: cardBgImage,
-    },
-    {
-      id: 19,
-      title: "Social Media",
-      category: "business",
-      backgroundImage: cardBgImage,
+      backgroundImage: OnDemandBg,
     },
   ];
 
@@ -180,28 +157,30 @@ const TechSolutionsSection = () => {
       <div className="">
         {/* Header Section */}
         <div className="text-center mb-16 lg:mb-[91px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-2 lg:leading-[58px]">
-            Innovative Technology, Design, and <br /> Communication Solutions
+          <h1 className="text-[clamp(24px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
+            Innovative Technology, Design, and{" "}
+            <br className="hiddend lg:block" />
+            Communication Solutions
           </h1>
           {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
             Communication Solutions
           </h1> */}
           <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
-            We don’t just create strategies we show the numbers. Growth means
+            We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
           </p>
         </div>
         {/* Center Card - Filter */}
-        <div className="sticky top-0 z-30 mb-4 flex justify-center items-center">
-          <div className=" bg-white rounded-full  px-4 py-[10px] flex item-center justify-center">
-            <div className="inline-flex gap-1 sm:gap-3">
+        <div className="sticky top-48 z-50 flex justify-center items-center">
+          <div className=" bg-white rounded-full px-2 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
+            <div className="flex gap-1 sm:gap-3">
               <button
                 onClick={() => setActiveTab("technology")}
                 className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
                   activeTab === "technology"
-                    ? "bg-blue-600 text-white "
-                    : " text-black hover:bg-gray-700 hover:text-white"
+                    ? "bg-primary text-white border-none"
+                    : " text-black hover:bg-black hover:text-white"
                 }`}>
                 Technology
               </button>
@@ -209,8 +188,8 @@ const TechSolutionsSection = () => {
                 onClick={() => setActiveTab("design")}
                 className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
                   activeTab === "design"
-                    ? "bg-blue-600 text-white"
-                    : " text-black hover:bg-gray-700 hover:text-white"
+                    ? "bg-primary text-white border-none"
+                    : " text-black hover:bg-black hover:text-white"
                 }`}>
                 Design
               </button>
@@ -218,8 +197,8 @@ const TechSolutionsSection = () => {
                 onClick={() => setActiveTab("business")}
                 className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
                   activeTab === "business"
-                    ? "bg-blue-600 text-white"
-                    : " text-black hover:bg-gray-700 hover:text-white"
+                    ? "bg-primary text-white border-none"
+                    : " text-black hover:bg-black hover:text-white"
                 }`}>
                 Business & Communication
               </button>
@@ -227,22 +206,13 @@ const TechSolutionsSection = () => {
           </div>
         </div>
         {/* Cards Container with Fixed Filter */}
-        <div
-          ref={containerRef}
-          className="relative h-[800px] overflow-y-auto  scrollbar-hide  ">
+        <div className="">
           {/* Sticky Filter Card - Centered in Top Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-            {/* First Card - Empty spacer for layout */}
-            {/* <div className="hidden lg:block"></div> */}
-
-            {/* Third Card - Empty spacer for layout */}
-            {/* <div className="hidden lg:block"></div> */}
-
-            {/* Service Cards - Start from second row */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative pt-4">
             {filteredCards.map((card, index) => (
               <div
                 key={card.id}
-                className="relative group  px-[19px] py-[27px] transition-all duration-500 opacity-0 animate-fadeInUp h-[331px] "
+                className="relative sevicesCard_edge group  px-[19px] py-[27px] transition-all duration-500 opacity-0 animate-fadeInUp h-[331px] "
                 style={{
                   animationDelay: `${index * 100}ms`,
                   animationFillMode: "forwards",
@@ -253,7 +223,13 @@ const TechSolutionsSection = () => {
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}>
-                {/* <span className="contactForm_corner contactForm_bottom-right" /> */}
+                <div
+                  style={{
+                    background:
+                      "linear-gradient(66.03deg, #629DFF -78.71%, rgba(0, 0, 0, 0.2) 114.21%)",
+                  }}
+                  className="absolute inset-0 "
+                />
                 {/* Expand Icon */}
                 <button className="absolute top-4 right-4 z-10 text-white/60 hover:text-white transition-colors">
                   <Bookmark size={20} />
@@ -268,9 +244,9 @@ const TechSolutionsSection = () => {
                     {card.title}
                   </h3>
                   <div className="">
-                    <button className="inline-flex items-center justify-center  gap-[15px] bg-primary hover:bg-blue-700 text-white px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
+                    <button className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
                       Start A Project
-                      <img src={btnIcon} className="w-[9px] h-[9px]" />
+                      <BtnIcon className="w-[9px] h-[9px]" />
                     </button>
                   </div>
 
@@ -282,24 +258,26 @@ const TechSolutionsSection = () => {
             {/* Technology & Engineering Info Card */}
             <div
               key={activeTab}
-              className="relative overflow-hidden bg-primary border border-blue-500/30 opacity-0 animate-fadeInUp h-[331px]"
+              className="relative overflow-hidden bg-primary opacity-0 animate-fadeInUp h-[331px]"
               style={{
                 animationDelay: `${filteredCards.length * 100}ms`,
                 animationFillMode: "forwards",
               }}>
               <div className="h-full flex flex-col p-4 sm:p-6 md:p-8 lg:px-[25px] lg:py-[10px]">
-                <h3 className="text-xl sm:text-2xl md:text-[26px] font-outfit font-bold mb-3 sm:mb-4 md:mb-[19px] leading-tight">
+                <h3 className="text-xl sm:text-2xl md:text-[26px] text-black font-outfit font-bold mb-3 sm:mb-4 md:mb-[19px] leading-tight">
                   {currentInfo.title}
                 </h3>
 
-                <p className="text-[#D9D9D9] font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed">
+                <p className="text-textColor font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed">
                   {currentInfo.description}
                 </p>
 
                 <ul className="space-y-2 sm:space-y-3">
                   {currentInfo.items.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2 sm:gap-3">
-                      <span className="text-blue-400 mt-1 text-sm sm:text-base">
+                    <li
+                      key={index}
+                      className="flex items-center gap-2 sm:gap-3">
+                      <span className="text-white mt-1 text-sm sm:text-base">
                         •
                       </span>
                       <span className="text-white font-outfit font-medium text-sm sm:text-base leading-5 break-words">

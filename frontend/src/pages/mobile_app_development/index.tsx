@@ -7,7 +7,7 @@ import WorkProcess from "@/components/mobile_app_development/WorkProcess";
 
 const MobileAppDevelopment = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <MobileHero />
       <MobileAppServices />
       <WorkProcess />

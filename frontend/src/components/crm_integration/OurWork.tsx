@@ -519,6 +519,25 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import saleForceLogo from "@/assets/CRM-logos/saleforce.png";
+import freeAgentLogo from "@/assets/CRM-logos/freeAgent_logo.png";
+import boberdo_logo from "@/assets/CRM-logos/boberdo_logo.png";
+import dropbox_logo from "@/assets/CRM-logos/dropbox_logo.png";
+import engaged_logo from "@/assets/CRM-logos/engaged_logo.png";
+import fastdox_logo from "@/assets/CRM-logos/fastdox_logo.png";
+import flg_logo from "@/assets/CRM-logos/flg_logo.png";
+import freeAgent_logo from "@/assets/CRM-logos/freeAgent_logo.png";
+import hubsolv_logo from "@/assets/CRM-logos/hubsolv_logo.png";
+import hubSpot_logo from "@/assets/CRM-logos/hubSpot_logo.png";
+import omni_logo from "@/assets/CRM-logos/omni_logo.png";
+import pipedrive_logo from "@/assets/CRM-logos/pipedrive_logo.png";
+import qb_logo from "@/assets/CRM-logos/qb_logo.png";
+import quickbase_logo from "@/assets/CRM-logos/quickbase_logo.png";
+import sage_logo from "@/assets/CRM-logos/sage_logo.png";
+import twilo from "@/assets/CRM-logos/twilo.png";
+import webform_logo from "@/assets/CRM-logos/webform_logo.png";
+import xero_logo from "@/assets/CRM-logos/xero_logo.png";
+import zoho_logo from "@/assets/CRM-logos/zoho_logo.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -534,46 +553,52 @@ const OurWork = () => {
       direction: "clockwise",
       rotations: 0.5,
       logos: [
-        { name: "Twilio", color: "bg-red-500" },
-        { name: "FreeAgent", color: "bg-blue-400" },
-        { name: "HubSpot", color: "bg-orange-500" },
+        { src: freeAgentLogo, alt: "freeAgentLogo" },
+        { src: boberdo_logo, alt: "boberdo_logo" },
+        { src: dropbox_logo, alt: "dropbox_logo" },
       ],
     },
     {
-      radius: 220,
+      radius: 200,
       direction: "anticlockwise",
       rotations: 0.4,
       logos: [
-        { name: "Xero", color: "bg-blue-500" },
-        { name: "Engage", color: "bg-green-500" },
-        { name: "Asana", color: "bg-pink-500" },
-        { name: "Zoho", color: "bg-red-600" },
+        { src: engaged_logo, alt: "engaged_logo" },
+        { src: fastdox_logo, alt: "fastdox_logo" },
+        { src: flg_logo, alt: "flg_logo" },
+        { src: freeAgent_logo, alt: "freeAgent_logo" },
       ],
     },
     {
-      radius: 300,
+      radius: 260,
       direction: "clockwise",
       rotations: 0.3,
       logos: [
-        { name: "Pipedrive", color: "bg-green-600" },
-        { name: "FAST", color: "bg-gray-800" },
-        { name: "Terminus", color: "bg-purple-600" },
-        { name: "MS", color: "bg-blue-600" },
-        { name: "Procore", color: "bg-orange-600" },
+        { src: hubsolv_logo, alt: "hubsolv_logo" },
+        { src: hubSpot_logo, alt: "hubSpot_logo" },
+        { src: omni_logo, alt: "omni_logo" },
+        { src: pipedrive_logo, alt: "pipedrive_logo" },
+        { src: qb_logo, alt: "qb_logo" },
+      ],
+    },
+    {
+      radius: 320,
+      direction: "anticlockwise",
+      rotations: 0.25,
+      logos: [
+        { src: quickbase_logo, alt: "quickbase_logo" },
+        { src: sage_logo, alt: "sage_logo" },
+        { src: twilo, alt: "twilo" },
+        { src: webform_logo, alt: "webform_logo" },
+        { src: xero_logo, alt: "xero_logo" },
+        { src: zoho_logo, alt: "zoho_logo" },
       ],
     },
     {
       radius: 380,
-      direction: "anticlockwise",
-      rotations: 0.25,
-      logos: [
-        { name: "Slack", color: "bg-purple-500" },
-        { name: "Demio", color: "bg-blue-500" },
-        { name: "QuickBooks", color: "bg-green-500" },
-        { name: "Zoom", color: "bg-blue-400" },
-        { name: "Chargebee", color: "bg-orange-500" },
-        { name: "Jira", color: "bg-blue-700" },
-      ],
+      direction: "clockwise",
+      rotations: 0.1,
+      logos: [],
     },
   ];
 
@@ -679,18 +704,8 @@ const OurWork = () => {
         className="relative w-full bg-black overflow-hidden">
         <div className="relative w-full h-screen max-w-4xl mx-auto flex items-center justify-center">
           {/* Center Salesforce logo */}
-          <div className="absolute z-20 w-48 h-48 bg-white rounded-full shadow-2xl flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-500 mb-1">
-                <svg viewBox="0 0 100 100" className="w-24 h-24 mx-auto">
-                  <path
-                    fill="#00A1E0"
-                    d="M35 20c-8.3 0-15 6.7-15 15 0 1.5.2 3 .6 4.4C14.4 41.9 10 47.9 10 55c0 9.4 7.6 17 17 17h46c9.4 0 17-7.6 17-17 0-7.1-4.4-13.1-10.6-15.6.4-1.4.6-2.9.6-4.4 0-8.3-6.7-15-15-15-2.1 0-4.1.4-5.9 1.2C56.6 14.8 50 10 42.5 10c-5.8 0-11 2.7-14.4 6.9C36.8 20.3 35.9 20 35 20z"
-                  />
-                </svg>
-              </div>
-              <div className="text-xl font-bold text-blue-500">salesforce</div>
-            </div>
+          <div className="absolute z-20 w-48 h-48 overflow-hidden p-5 bg-white rounded-full shadow-2xl flex items-center justify-center">
+            <img src={saleForceLogo} />
           </div>
 
           {/* Orbital rings with logos */}
@@ -745,13 +760,12 @@ const OurWork = () => {
                         transformOrigin: "center",
                       }}>
                       {/* Logo card stays horizontal */}
-                      <div className="bg-white rounded-lg shadow-lg px-4 py-2 flex items-center justify-center min-w-[80px] hover:scale-110 transition-transform duration-300">
-                        <div
-                          className={`w-2 h-2 rounded-full ${logo.color} mr-2`}
+                      <div className="bg-white rounded-lg shadow-lg px-4 py-2 flex items-center justify-center max-w-[115px] max-h-[36px] hover:scale-110 transition-transform duration-300">
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="max-h-full max-w-full object-contain"
                         />
-                        <span className="text-xs font-semibold text-gray-800 whitespace-nowrap">
-                          {logo.name}
-                        </span>
                       </div>
                     </div>
                   );

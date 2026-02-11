@@ -50,11 +50,11 @@ const FAQAccordion = () => {
   const rightColumn = faqs.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-black text-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="w-full">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex  gap-3 bg-[#001FEF] text-white pl-6 pr-3 py-[5px]   text-lg font-outfit font-normal mb-3">
+          <div className="inline-flex  gap-3 bg-primary text-textColor pl-6 pr-3 py-[5px]   text-lg font-outfit font-normal mb-6">
             PEOPLE USUALLY ASK
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
           </div>
@@ -107,9 +107,7 @@ const FAQAccordion = () => {
 const AccordionItem = ({ faq, isOpen, onClick }) => (
   <div
     className={`rounded-[5px] border-[0.5px] transition-all duration-300 overflow-hidden ${
-      isOpen
-        ? "bg-gradient-to-br from-[#051057] to-[#030933] border-blue-800"
-        : "bg-zinc-900 border-zinc-800"
+      isOpen ? "bg-primary border-[#4B4B4B]" : "bg-zinc-900 border-zinc-800"
     }`}>
     <button
       onClick={onClick}

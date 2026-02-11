@@ -100,9 +100,9 @@ const TechnologiesShowcase = () => {
   ];
 
   return (
-    <div className=" bg-black text-white px-4 md:px-12 lg:px-24 lg:py-32 md:py-20 py-16 ">
+    <div className=" bg-black text-textColor px-4 md:px-12 lg:px-24 lg:py-24 md:py-20 py-16 ">
       <div className="w-full">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-[56px] font-bold text-center mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-[56px] font-stoke font-bold text-center mb-8 sm:mb-14">
           Technologies we use
         </h1>
 
@@ -114,7 +114,7 @@ const TechnologiesShowcase = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-3 sm:py-4 text-sm font-outfit border border-[#D9D9D9]  font-bold transition-all duration-300 ${
                 activeTab === tab.id
-                  ? "bg-[#001FEF] text-white"
+                  ? "bg-primary text-white"
                   : "bg-gradient-to-b from-[#1A1A1A] to-[#1C1C1C]"
               }`}>
               {tab.label}

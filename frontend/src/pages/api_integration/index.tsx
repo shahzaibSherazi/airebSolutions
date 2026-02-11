@@ -7,7 +7,7 @@ import Layout from "@/components/layout/Layout";
 
 const ApiIntegration = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <ApiIntegrationHero />
       <ApiServices />
       <OurWorkProcess />

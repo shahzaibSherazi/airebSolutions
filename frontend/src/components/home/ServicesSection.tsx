@@ -88,6 +88,7 @@ import service1 from "../../assets/service1.png";
 import service2 from "../../assets/service2.png";
 import service3 from "../../assets/service3.png";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -116,7 +117,7 @@ const ServicesSection = () => {
           <div className="lg:sticky lg:top-20 lg:self-start">
             <div className="flex flex-col items-start gap-8 lg:gap-10">
               {/* Our Service Button */}
-              <button className="px-7 py-2 bg-primary text-white font-outfit font-medium text-base lg:text-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+              <button className="px-7 py-2 bg-primary text-white font-outfit font-medium text-base lg:text-lg">
                 Our Service
               </button>
 
@@ -134,14 +135,16 @@ const ServicesSection = () => {
 
               {/* View All Button - Desktop */}
               <div className="hidden lg:block mt-8">
-                <button
-                  style={{ paddingLeft: 14 }}
-                  className="group flex items-center text-black font-outfit gap-4 bg-primary px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition hover:shadow-lg">
-                  View All Services
-                  <span className="bg-white w-[46px] h-[43px] text-black flex items-center justify-center transition group-hover:translate-x-1">
-                    <ArrowRight size={18} />
-                  </span>
-                </button>
+                <Link to="/services" className="inline-block">
+                  <button
+                    style={{ paddingLeft: 14 }}
+                    className="group flex items-center text-textColor hover:text-black hover:bg-white font-outfit gap-4 bg-primary px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition-all hover:shadow-lg">
+                    View All Services
+                    <span className="bg-white w-[46px] h-[43px] text-black group-hover:bg-primary flex items-center justify-center transition-all group-hover:translate-x-1">
+                      <ArrowRight size={18} />
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -166,14 +169,16 @@ const ServicesSection = () => {
 
         {/* View All Button - Mobile */}
         <div className="lg:hidden mt-12">
-          <button
-            style={{ paddingLeft: 14 }}
-            className="group flex items-center text-black font-outfit gap-4 bg-primary px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition hover:shadow-lg">
-            View All Services
-            <span className="bg-white w-[46px] h-[43px] text-black flex items-center justify-center transition group-hover:translate-x-1">
-              <ArrowRight size={18} />
-            </span>
-          </button>
+          <Link to="/services" className="inline-block">
+            <button
+              style={{ paddingLeft: 14 }}
+              className="group flex items-center text-textColor hover:text-black hover:bg-white font-outfit gap-4 bg-primary px-1 py-1 text-base lg:text-lg font-medium tracking-wide transition hover:shadow-lg">
+              View All Services
+              <span className="bg-white w-[46px] h-[43px] text-black group-hover:bg-primary flex items-center justify-center transition group-hover:translate-x-1">
+                <ArrowRight size={18} />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

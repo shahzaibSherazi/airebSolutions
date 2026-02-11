@@ -631,7 +631,7 @@ const AIExpertiseSection = () => {
         .fromTo(
           smallRobotRef.current,
           {
-            opacity: 0,
+            opacity: 0.1,
             scale: 0.7,
           },
           {
@@ -684,7 +684,7 @@ const AIExpertiseSection = () => {
         titleRef.current,
         {
           x: -100,
-          opacity: 0,
+          opacity: 0.1,
         },
         {
           scrollTrigger: {
@@ -705,17 +705,17 @@ const AIExpertiseSection = () => {
         robotTimeline.fromTo(
           item,
           {
-            x: -60,
+            x: -100,
             opacity: 0,
           },
           {
             x: 0,
             opacity: 1,
-            ease: "power3.out",
+            ease: "power2.out",
             duration: 0.25,
           },
           // 🔑 stagger them while robot is animating
-          0.6 + index * 0.15,
+          0.1 + index * 0.15,
         );
       });
 
@@ -748,7 +748,7 @@ const AIExpertiseSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-black py-16 lg:py-24 overflow-hidden min-h-screen">
+      className="relative w-full bg-black py-16  overflow-hidden min-h-screen">
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -768,7 +768,7 @@ const AIExpertiseSection = () => {
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full  h-full items-start">
           {/* Left Side - Text Content */}
-          <div ref={contentRef} className="space-y-4">
+          <div ref={contentRef} className="">
             <div ref={titleRef} className="mb-4 lg:mb-5">
               <h2
                 className="text-white font-stoke font-normal"
@@ -791,44 +791,46 @@ const AIExpertiseSection = () => {
             </div>
 
             {/* Expertise Items */}
-            {expertiseItems.map((item, index) => (
-              <div
-                key={item.id}
-                ref={(el) => (expertiseRefs.current[index] = el)}
-                className="group py-8 lg:py-10 border-b border-gray-800"
-                style={{
-                  transform: "perspective(1000px)",
-                  transformStyle: "preserve-3d",
-                }}>
-                {/* Number Badge */}
-                <div className="flex items-start gap-4">
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold text-sm shadow-lg shadow-blue-500/50"
-                    style={{
-                      transform: `translateZ(20px) rotate(${scrollProgress * 360}deg)`,
-                    }}>
-                    {index + 1}
-                  </div>
-
-                  <div className="flex-1">
-                    <h3
-                      className="text-white mb-4 font-outfit font-normal group-hover:text-blue-400 transition-colors duration-300"
+            <div className="mb-16">
+              {expertiseItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  ref={(el) => (expertiseRefs.current[index] = el)}
+                  className="group py-8 lg:py-10 border-b border-gray-800"
+                  style={{
+                    transform: "perspective(1000px)",
+                    transformStyle: "preserve-3d",
+                  }}>
+                  {/* Number Badge */}
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold text-sm shadow-lg shadow-blue-500/50"
                       style={{
-                        fontSize: "clamp(18px, 2.5vw, 22px)",
-                        lineHeight: "1.4",
+                        transform: `translateZ(20px) rotate(${scrollProgress * 360}deg)`,
                       }}>
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-400 font-outfit font-normal text-base leading-relaxed">
-                      {item.description}
-                    </p>
+                      {index + 1}
+                    </div>
+
+                    <div className="flex-1">
+                      <h3
+                        className="text-white mb-4 font-outfit font-normal group-hover:text-blue-400 transition-colors duration-300"
+                        style={{
+                          fontSize: "clamp(18px, 2.5vw, 22px)",
+                          lineHeight: "1.4",
+                        }}>
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-400 font-outfit font-normal text-base leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
             {/* Button */}
-            <div ref={buttonRef} className="mt-10">
+            <div ref={buttonRef} className="pl-12">
               <button className="group relative inline-flex items-center gap-2 bg-primary text-white text-xs sm:text-sm font-medium px-[21px] py-[18px] overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105">
                 {/* Shimmer effect */}
                 <div
@@ -896,16 +898,16 @@ const AIExpertiseSection = () => {
             {/* Large Robot - Same position as small robot */}
             <div
               ref={largeRobotRef}
-              className="absolute top-0 left-1/2 lg:left-auto lg:right-0 -translate-x-1/2 lg:translate-x-0"
+              className="absolute top-0 left-1/2 lg:left-auto lg:right-10 -translate-x-1/2 lg:translate-x-0"
               style={{
                 transformStyle: "preserve-3d",
                 perspective: "1200px",
-                maxWidth: "550px",
+                maxWidth: "450px",
                 width: "100%",
               }}>
               {/* Rotating Ambient Glow */}
               <div
-                className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 via-purple-600/30 to-pink-600/20 blur-3xl scale-110"
+                className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 via-primary/30 to-primary/20 blur-3xl scale-110"
                 style={{
                   transform: `rotate(${-scrollProgress * 180}deg)`,
                   opacity: Math.min(1, scrollProgress * 2),

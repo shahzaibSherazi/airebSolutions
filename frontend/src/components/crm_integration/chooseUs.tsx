@@ -57,7 +57,7 @@ const ChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative hover:bg-black border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
+              className="group relative  border-025 hover:bg-black border-black px-4  py-6 md:py-8 transition-all duration-300 cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
               <div className="relative z-10 flex-1 flex flex-col">
                 {/* Text with fixed height and overflow handling */}

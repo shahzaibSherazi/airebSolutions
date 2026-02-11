@@ -7,7 +7,7 @@ import Layout from "@/components/layout/Layout";
 
 const AiServices = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <AiHero />
       <AiServicesSection />
       <AIExpertiseSection />
