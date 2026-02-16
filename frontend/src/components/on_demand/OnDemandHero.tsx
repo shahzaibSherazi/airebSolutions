@@ -1,6 +1,6 @@
-import bgImg from "../../assets/devops_hero_bg.png";
+import bgImg from "../../assets/Ondemand_assets/hero_bg.png";
 
-const DevOpsHero = () => {
+const OnDemandHero = () => {
   return (
     <section className="relative w-full bg-black">
       {/* Background Image */}
@@ -16,17 +16,17 @@ const DevOpsHero = () => {
       <div className="relative z-10 min-h-screen px-8 py-[8vh] sm:py-[10vh] lg:py-[14vh] flex flex-col justify-end ">
         <div className="mb-[2vh] sm:mb-[3vh] ">
           <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-gray-300 max-w-2xl">
-            Create a connected ecosystem that ensures smooth data flow
+            Scalable, flexible, and instant solutions
           </p>
         </div>
 
         <h1 className="font-stoke text-[clamp(28px,5vw,56px)] leading-[1.28] text-white">
-          End-to-End DevOps <br className="hidden lg:block" /> Services for
-          Innovation
+          Smart On-Demand
+          <br className="hidden lg:block" /> Solutions Provider
         </h1>
       </div>
     </section>
   );
 };
 
-export default DevOpsHero;
+export default OnDemandHero;

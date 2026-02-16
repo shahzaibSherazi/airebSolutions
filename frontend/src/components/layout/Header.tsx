@@ -17,8 +17,8 @@ const itemRoutes = {
   "DevOps Services": "/devops-services",
   "CRM Integration": "/crm-integration",
   Dialer: "/dialer",
-  "E-commerce Solutions": "/ecommerce-solutions",
-  "Custom Software": "/custom-software",
+  "E-commerce Solutions": "/ecommerce",
+  "On Demand": "/on-demand",
   "API Integration": "/api-integration",
   "Consulting Services": "/consulting-services",
 
@@ -80,7 +80,7 @@ const menuItems = [
       "API Integration",
       "Dialer",
       "E-commerce Solutions",
-      "Custom Software",
+      "On Demand",
 
       "Consulting Services",
     ],

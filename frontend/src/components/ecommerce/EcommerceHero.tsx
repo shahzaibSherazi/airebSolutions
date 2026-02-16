@@ -1,6 +1,6 @@
-import bgImg from "../../assets/devops_hero_bg.png";
+import bgImg from "../../assets/Ecommerce_assets/hero_bg.png";
 
-const DevOpsHero = () => {
+const EcommerceHero = () => {
   return (
     <section className="relative w-full bg-black">
       {/* Background Image */}
@@ -21,12 +21,12 @@ const DevOpsHero = () => {
         </div>
 
         <h1 className="font-stoke text-[clamp(28px,5vw,56px)] leading-[1.28] text-white">
-          End-to-End DevOps <br className="hidden lg:block" /> Services for
-          Innovation
+          Smart and Secure
+          <br className="hidden lg:block" /> E-commerce Services
         </h1>
       </div>
     </section>
   );
 };
 
-export default DevOpsHero;
+export default EcommerceHero;

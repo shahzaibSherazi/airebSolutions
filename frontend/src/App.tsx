@@ -14,6 +14,8 @@ import DevOps from "./pages/dev_ops";
 import AiServices from "./pages/Ai_services";
 import ApiIntegration from "./pages/api_integration";
 import Dialer from "./pages/Dialer";
+import Ecommerce from "./pages/ecommerce";
+import OnDemand from "./pages/on_demand";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +39,8 @@ const App = () => (
           <Route path="/ai-services" element={<AiServices />} />
           <Route path="/api-integration" element={<ApiIntegration />} />
           <Route path="/dialer" element={<Dialer />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
+          <Route path="/on-demand" element={<OnDemand />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
