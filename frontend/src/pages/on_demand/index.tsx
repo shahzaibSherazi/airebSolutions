@@ -7,7 +7,7 @@ import OurWork from "@/components/on_demand/OurWork";
 
 const OnDemand = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <OnDemandHero />
       <OnDemandServices />
       <OnDemandDevelopment />

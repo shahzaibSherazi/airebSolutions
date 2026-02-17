@@ -1016,3 +1016,17 @@ html.lenis {
   border-bottom: 2px solid white;
   border-right: 2px solid white;
 }
+
+/* ui/ux design process card animation */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

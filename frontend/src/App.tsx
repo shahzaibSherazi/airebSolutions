@@ -16,6 +16,10 @@ import ApiIntegration from "./pages/api_integration";
 import Dialer from "./pages/Dialer";
 import Ecommerce from "./pages/ecommerce";
 import OnDemand from "./pages/on_demand";
+import LogoDesign from "./pages/logo_design";
+import UiDesign from "./pages/ui_ux_design";
+import ContentWriting from "./pages/content_writing";
+import ContactCenter from "./pages/contact_center";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
           <Route path="/dialer" element={<Dialer />} />
           <Route path="/ecommerce" element={<Ecommerce />} />
           <Route path="/on-demand" element={<OnDemand />} />
+          <Route path="/logo-design" element={<LogoDesign />} />
+          <Route path="/ui-ux-design" element={<UiDesign />} />
+          <Route path="/content-writing" element={<ContentWriting />} />
+          <Route path="/contact-center" element={<ContactCenter />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

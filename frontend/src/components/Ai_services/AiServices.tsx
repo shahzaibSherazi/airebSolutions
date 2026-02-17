@@ -59,7 +59,7 @@ const AiServicesSection = () => {
           <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
             Our AI & Machine Learning Services
           </h2>
-          <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-[#EBEBEB] max-w-[890px] mx-auto px-4">
+          <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter

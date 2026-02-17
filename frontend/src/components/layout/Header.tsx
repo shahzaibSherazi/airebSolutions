@@ -11,8 +11,8 @@ const itemRoutes = {
   // Services routes
   "Web Development": "/web-development",
   "Mobile App Development": "/mobile-app-development",
-  // "UI/UX Design": "/ui-ux-design",
-  // "Cloud Solutions": "/cloud-solutions",
+  "UI/UX Design": "/ui-ux-design",
+  "Content Writing": "/content-writing",
   "AI Services": "/ai-services",
   "DevOps Services": "/devops-services",
   "CRM Integration": "/crm-integration",
@@ -20,7 +20,8 @@ const itemRoutes = {
   "E-commerce Solutions": "/ecommerce",
   "On Demand": "/on-demand",
   "API Integration": "/api-integration",
-  "Consulting Services": "/consulting-services",
+  "Logo Design": "/logo-design",
+  "Contact Center": "/contact-center",
 
   // Industries routes
   Healthcare: "/industries/healthcare",
@@ -72,8 +73,8 @@ const menuItems = [
     items: [
       "Web Development",
       "Mobile App Development",
-      // "UI/UX Design",
-      // "Cloud Solutions",
+      "UI/UX Design",
+      "Content Writing",
       "AI Services",
       "DevOps Services",
       "CRM Integration",
@@ -81,8 +82,8 @@ const menuItems = [
       "Dialer",
       "E-commerce Solutions",
       "On Demand",
-
-      "Consulting Services",
+      "Logo Design",
+      "Contact Center",
     ],
   },
   {
