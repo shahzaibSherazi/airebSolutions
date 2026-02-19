@@ -128,7 +128,7 @@ function ServiceCard({ service, animationDelay = 0 }) {
       className="border border-primary flex flex-col gap-4 p-8 transition-all duration-300 hover:-translate-y-1 group"
       style={{
         ...cardStyle,
-        animation: `fadeUp 0.4s ease ${animationDelay}ms both`,
+        animation: `faddeUp 0.4s ease ${animationDelay}ms both`,
         boxShadow: "0 0 0 rgba(66,133,244,0)",
       }}
       onMouseEnter={(e) => {
@@ -169,27 +169,12 @@ export default function HealthCareServices() {
 
   return (
     <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
-
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-
-        body {
-          background: #0a0a0f;
-          margin: 0;
-          font-family: 'DM Sans', sans-serif;
-        }
-      `}</style>
-
-      <section className="min-h-screen py-16 lg:py-24 px-6 bg-[#02070F]">
+      <section className=" py-16 lg:py-24 px-6 bg-[#02070F]">
         <div className="">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-[clamp(28px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
-              Our Healthcare &<br className="hidden lg:block" />
+            <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
+              Our Healthcare & <br className="hidden lg:block" />
               Pharmaceuticals Services
             </h1>
             <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
@@ -202,7 +187,7 @@ export default function HealthCareServices() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:mx-auto xl:max-w-screen-2xl">
             {visibleServices.map((service, i) => (
               <div key={service.id} className="flex justify-center">
                 <ServiceCard

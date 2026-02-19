@@ -30,7 +30,7 @@ const HealthCareHero = () => {
           </p>
         </div>
 
-        <h1 className="font-stoke text-[clamp(28px,5vw,56px)] leading-[1.28] text-white">
+        <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
           Healthcare &
           <br className="hidden lg:block" /> Pharmaceuticals
         </h1>

@@ -117,7 +117,7 @@ function StepRow({ step, index }) {
       <div className="hidden md:block relative pt-8">
         {/* Rectangle card */}
         <div
-          className="relative ml-36 lg:ml-44 min-h-[200px]  border border-transparent  flex items-center pl-28 lg:pl-32 pr-10 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+          className="relative healthCareRectangleCard_edge ml-36 lg:ml-44 min-h-[200px]  border border-transparent  flex items-center pl-28 lg:pl-32 pr-10 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
           style={{
             ...rectBorder,
             transitionDelay: `${recDelay}ms`,
@@ -131,7 +131,7 @@ function StepRow({ step, index }) {
 
         {/* Square card — absolutely overlapping top-left of rect */}
         <div
-          className="group p-3 absolute top-0 left-0 w-[200px] lg:w-[230px] h-[200px] border border-transparent flex flex-col items-center justify-center gap-3 z-10 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+          className="group healthCareSevricesCard_edge p-3 absolute top-0 left-0 w-[200px] lg:w-[230px] h-[200px] border border-transparent flex flex-col items-center justify-center gap-3 z-10 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
           style={{
             ...squareBorder,
             transitionDelay: `${sqDelay}ms`,
@@ -168,7 +168,7 @@ export default function HealthCareCycle() {
               opacity: headerInView ? 1 : 0,
               transform: headerInView ? "translateY(0)" : "translateY(28px)",
             }}>
-            <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-[clamp(36px,4vw,42px)]">
+            <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-[clamp(32px,4vw,42px)]">
               Our Healthcare & Pharmaceuticals
               <br className="hidden sm:block" /> Development Cycle
             </h1>

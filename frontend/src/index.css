@@ -1044,3 +1044,40 @@ html.lenis {
 .call-bounce {
   animation: callBounce 1.2s ease-in-out infinite;
 }
+
+.healthCareSevricesCard_edge {
+  color: white;
+}
+
+.healthCareSevricesCard_edge::before {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.healthCareRectangleCard_edge::after {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+@keyframes faddeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -122,7 +122,7 @@ export default function HealthCareTechStack() {
             <div className="">
               <h1 className="text-textColor font-outfit font-extralight leading-tight mb-4 text-[clamp(42px,5vw,52px)]">
                 Tech Stack & Compliance
-                <br className="hidden lg:block" />
+                <br className="" />
                 Expertise
               </h1>
               <p className="text-textColor font-outfit text-sm md:text-base max-w-2xl leading-[1.85] font-light">
