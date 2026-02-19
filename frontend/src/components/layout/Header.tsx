@@ -285,10 +285,10 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-md border-b border-white/10 ${
+        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 z-50">

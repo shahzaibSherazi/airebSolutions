@@ -20,6 +20,7 @@ import LogoDesign from "./pages/logo_design";
 import UiDesign from "./pages/ui_ux_design";
 import ContentWriting from "./pages/content_writing";
 import ContactCenter from "./pages/contact_center";
+import HealthCare from "./pages/Industries/health_care";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,8 @@ const App = () => (
           <Route path="/ui-ux-design" element={<UiDesign />} />
           <Route path="/content-writing" element={<ContentWriting />} />
           <Route path="/contact-center" element={<ContactCenter />} />
+          <Route path="/industries/healthcare" element={<HealthCare />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
