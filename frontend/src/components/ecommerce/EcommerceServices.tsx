@@ -1,87 +1,99 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import CustomIcon from "@/assets/icons/ecommerce/services-icons/custom.svg?react";
+import MultichennelIcon from "@/assets/icons/ecommerce/services-icons/multichannel.svg?react";
+import MobileEcommerceIcon from "@/assets/icons/ecommerce/services-icons/mobile-ecommerce.svg?react";
+import GetwayIcon from "@/assets/icons/ecommerce/services-icons/getway.svg?react";
+import SeoIcon from "@/assets/icons/ecommerce/services-icons/seo.svg?react";
+import CrmIcon from "@/assets/icons/ecommerce/services-icons/crm.svg?react";
+import SecurityIcon from "@/assets/icons/ecommerce/services-icons/security.svg?react";
+import ProductIcon from "@/assets/icons/ecommerce/services-icons/product.svg?react";
+import AnalyticsIcon from "@/assets/icons/ecommerce/services-icons/analytics.svg?react";
+import HostingIcon from "@/assets/icons/ecommerce/services-icons/hosting.svg?react";
+import AiPoweredIcon from "@/assets/icons/ecommerce/services-icons/ai-powered.svg?react";
+import SupportIcon from "@/assets/icons/ecommerce/services-icons/support.svg?react";
 const EcommerceServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <CustomIcon />,
       title: "Custom Ecommerce Store Development",
       description:
         "We build scalable, flexible, and secure e-commerce stores customized to your business’s unique needs. From platform selection to system integration, we ensure that your online store is equipped with the latest features to enhance your operations. Our team works with platforms such as Shopify, WooCommerce, Magento, and custom-built solutions for fully personalized websites that meet your brand vision.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <MultichennelIcon />,
       title: "Multi-Channel E-commerce Integration",
       description:
         "Expand your reach by integrating your e-commerce store with top platforms like Amazon, eBay, and Etsy. We help you streamline your inventory management and order processing across multiple channels, ensuring that your business can scale without complication.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <MobileEcommerceIcon />,
       title: "Mobile E-commerce Solutions",
       description:
         "With mobile shopping on the rise, we ensure that your online store is fully optimized for mobile devices. Our mobile-first approach guarantees that your e-commerce store is responsive, providing customers with an excellent shopping experience on their smartphones and tablets.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <GetwayIcon />,
       title: "Payment Gateway Integration",
       description:
         "We integrate secure and diverse payment gateways like PayPal, Stripe, Square, and Razorpay, providing customers with the flexibility to pay with their preferred method. We ensure that the payment process is smooth, secure, and reliable, giving your customers confidence to shop.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <SeoIcon />,
       title: "Advanced E-commerce SEO and Digital Marketing",
       description:
         "Our team helps you get your products seen by the right audience. Through comprehensive SEO strategies and digital marketing campaigns, we drive traffic to your online store, optimize your product pages for better visibility, and improve your conversion rates.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <CrmIcon />,
       title: "CRM Integration for Better Customer Engagement",
       description:
         "Our AI-powered dialer solutions integrate with a variety of communication channels, including phone calls, emails, SMS, and social media. This omni-channel approach ensures that businesses can engage customers on their preferred platform, leading to improved satisfaction and faster issue resolution.We integrate CRM tools such as HubSpot, Salesforce, and Zoho into your e-commerce platform to help manage customer relationships effectively. With a robust CRM, you can automate customer interactions, personalize marketing efforts, and improve customer retention.",
     },
     {
       id: 7,
-      iconPath: cardIcon,
+      iconPath: <SecurityIcon />,
       title: "E-commerce Security & Compliance",
       description:
         "Keeping your store and customers' data secure is our top priority. We integrate SSL certificates, enable two-factor authentication, and ensure compliance with regulations like PCI DSS. We also stay updated with the latest security trends to keep your site safe from threats.",
     },
     {
       id: 8,
-      iconPath: cardIcon,
+      iconPath: <ProductIcon />,
       title: "Product & Order Management",
       description:
         "Our product and order management systems streamline your operations, automate tasks, and improve efficiency. With real-time updates on inventory, order processing, and customer data, you can focus on growing your business rather than managing operations.",
     },
     {
       id: 9,
-      iconPath: cardIcon,
+      iconPath: <AnalyticsIcon />,
       title: "Analytics & Reporting for Business Growth",
       description:
         "We integrate CRM tools such as HubSpot, Salesforce, and Zoho into your e-commerce platform to help manage customer relationships effectively. With a robust CRM, you can automate customer interactions, personalize marketing efforts, and improve customer retention.",
     },
     {
       id: 10,
-      iconPath: cardIcon,
+      iconPath: <HostingIcon />,
       title: "Cloud Hosting & Scalability",
       description:
         "We ensure your e-commerce store is hosted on reliable cloud platforms like AWS, Google Cloud, or Microsoft Azure for robust performance and scalability. Our cloud hosting solutions provide high uptime, enhanced security, and the ability to scale as your business grows.",
     },
     {
       id: 11,
-      iconPath: cardIcon,
+      iconPath: <AiPoweredIcon />,
       title: "AI-Powered Solutions for E-commerce",
       description:
         "We implement AI-driven solutions such as personalized product recommendations, automated customer service chatbots, and predictive analytics to enhance the shopping experience. These innovations improve customer engagement and increase conversions.",
     },
     {
       id: 12,
-      iconPath: cardIcon,
+      iconPath: <SupportIcon />,
       title: "Omnichannel Support",
       description:
         "Provide a consistent and integrated experience across all customer touchpoints. We enable seamless omnichannel strategies that unify your website, mobile app, social media, and physical stores to create a holistic shopping experience.",
@@ -118,10 +130,7 @@ const EcommerceServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

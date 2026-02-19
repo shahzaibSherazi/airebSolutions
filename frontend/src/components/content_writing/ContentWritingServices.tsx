@@ -1,52 +1,59 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import BlogIcon from "@/assets/icons/content-writing_icons/services_icons/blog.svg?react";
+import CopyWritingIcon from "@/assets/icons/content-writing_icons/services_icons/copywriting.svg?react";
+import ProductIcon from "@/assets/icons/content-writing_icons/services_icons/product.svg?react";
+import SocialMediaIcon from "@/assets/icons/content-writing_icons/services_icons/social-media.svg?react";
+import SeoIcon from "@/assets/icons/content-writing_icons/services_icons/seo.svg?react";
+import PressIcon from "@/assets/icons/content-writing_icons/services_icons/press.svg?react";
+import EmailIcon from "@/assets/icons/content-writing_icons/services_icons/email.svg?react";
 const ContentWritingServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <BlogIcon />,
       title: "Blog Posts & Articles",
       description:
         "Regularly publishing informative and well-researched blog posts is one of the most effective ways to engage your audience, improve SEO rankings, and establish authority in your industry. Our blog posts are designed to educate, entertain, and inform, with a strong focus on SEO to drive organic traffic.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <CopyWritingIcon />,
       title: "Website Copywriting",
       description:
         "Your website is often the first point of contact between your brand and potential customers. That's why having clear, compelling, and persuasive website copy is crucial. Whether it's for landing pages, product descriptions, or about pages, we create copy that drives conversions and enhances user experience.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <ProductIcon />,
       title: "Product Descriptions",
       description:
         "Product descriptions are essential for converting visitors into buyers. We write compelling, detailed descriptions that highlight the key features and benefits of your products, while also focusing on the emotions and desires that drive consumer decisions.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <SocialMediaIcon />,
       title: "Social Media Content",
       description:
         "Building a strong social media presence is key to brand success, and we're here to help you connect with your audience. Our social media content is crafted to engage, entertain, and inform while keeping your brand's voice consistent across all platforms.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <SeoIcon />,
       title: "SEO Content Writing",
       description:
         "SEO (Search Engine Optimization) is the backbone of content strategy. Our SEO writing service ensures that your content is not only useful and informative but also optimized for the best possible rankings on search engines like Google.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <PressIcon />,
       title: "Press Releases",
       description:
         "Press releases are an excellent way to share important company news, events, product launches, or collaborations with the media and your audience. Our expert writers craft press releases that grab attention, convey key messages clearly, and ensure your brand gets the recognition it deserves.",
     },
     {
       id: 7,
-      iconPath: cardIcon,
+      iconPath: <EmailIcon />,
       title: "Email Marketing Campaigns",
       description:
         "Email marketing is one of the most direct ways to engage with your audience. We create personalized, engaging, and value-driven email copy that encourages recipients to open, read, and take action.",
@@ -82,10 +89,7 @@ const ContentWritingServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

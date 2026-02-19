@@ -1,17 +1,22 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import AppDevelopmentIcon from "@/assets/icons/on-demand/services-icon/app-development.svg?react";
+import MarketPlaceIcon from "@/assets/icons/on-demand/services-icon/market-place.svg?react";
+import DeliveryIcon from "@/assets/icons/on-demand/services-icon/delivery.svg?react";
+import HealthcareIcon from "@/assets/icons/on-demand/services-icon/health-care.svg?react";
+import TransportationIcon from "@/assets/icons/on-demand/services-icon/transportation.svg?react";
+import HomeIcon from "@/assets/icons/on-demand/services-icon/home.svg?react";
 const OnDemandServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <AppDevelopmentIcon />,
       title: "On-Demand App Development",
       description:
         "We design and develop feature-rich on-demand applications that cater to various industries. Our apps are equipped with advanced functionalities such as real-time tracking, secure payment gateways, AI-powered recommendations, and seamless UI/UX to enhance user engagement and retention.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <MarketPlaceIcon />,
       title: "On-Demand Marketplace Solutions",
       description:
         "Launch your own on-demand service marketplace with our custom-built solutions. We integrate multi-vendor management, automated scheduling, smart analytics, and seamless order processing to create a scalable and high-performing platform. ",
@@ -19,28 +24,28 @@ const OnDemandServices = () => {
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <DeliveryIcon />,
       title: "On-Demand Delivery Solutions",
       description:
         "Speed, efficiency, and accuracy define our on-demand delivery systems. Whether it’s food, groceries, medical supplies, or logistics, our real-time tracking, smart route optimization, and contactless payment features make delivery operations smoother than ever.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <HealthcareIcon />,
       title: "On-Demand Healthcare Services",
       description:
         "Empower your healthcare business with on-demand telemedicine, appointment scheduling, and virtual consultations. Our HIPAA-compliant solutions provide patients with instant access to healthcare providers while ensuring secure data management and seamless patient-doctor interactions.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <TransportationIcon />,
       title: "On-Demand Transportation & Ride-Sharing",
       description:
         "We develop high-performance ride-hailing and logistics solutions with real-time GPS tracking, automated dispatch, secure payment integration, and AI-powered route optimization to enhance fleet management and improve user experience.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <HomeIcon />,
       title: "On-Demand Home Services",
       description:
         "From house cleaning and repair services to beauty and wellness, our customized on-demand home service applications allow businesses to connect service providers with customers in real-time, ensuring efficiency and convenience.",
@@ -70,10 +75,7 @@ const OnDemandServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

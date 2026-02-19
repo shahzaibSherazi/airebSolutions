@@ -1,127 +1,3 @@
-// import { useEffect, useRef, useState } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const steps = [
-//   {
-//     title: "Requirement Analysis",
-//     desc: "Understanding your business needs and defining API functionality.",
-//     number: "01",
-//   },
-//   {
-//     title: "System Design",
-//     desc: "Designing scalable architecture and defining data flow.",
-//     number: "02",
-//   },
-//   {
-//     title: "Development",
-//     desc: "Building robust, secure, and efficient solutions.",
-//     number: "03",
-//   },
-//   {
-//     title: "Testing & QA",
-//     desc: "Ensuring reliability, performance, and security.",
-//     number: "04",
-//   },
-//   {
-//     title: "Deployment",
-//     desc: "Launching and monitoring in production environments.",
-//     number: "05",
-//   },
-// ];
-
-// export default function OurWorkProcess() {
-//   const sectionRef = useRef(null);
-//   const pinRef = useRef(null);
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   useEffect(() => {
-//     const ctx = gsap.context(() => {
-//       ScrollTrigger.create({
-//         trigger: sectionRef.current,
-//         start: "top top",
-//         end: `+=${steps.length * 100}%`,
-//         pin: pinRef.current,
-//         scrub: true,
-//         onUpdate: (self) => {
-//           const index = Math.min(
-//             steps.length - 1,
-//             Math.floor(self.progress * steps.length),
-//           );
-//           setActiveIndex(index);
-//         },
-//       });
-//     }, sectionRef);
-
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <>
-//       {/* ===== PINNED SECTION ===== */}
-//       <section
-//         ref={sectionRef}
-//         className="relative bg-black text-white overflow-hidden">
-//         <div
-//           ref={pinRef}
-//           className="min-h-screen flex flex-col items-center justify-center px-6">
-//           {/* HEADER */}
-//           <div className="text-center mb-16">
-//             <span className="inline-block mb-4 bg-blue-600 text-xs px-3 py-1 rounded-full">
-//               Our Work Process
-//             </span>
-//             <h2 className="text-4xl md:text-5xl font-light">
-//               How we get it done
-//             </h2>
-//             <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-//               Our structured development approach ensures successful project
-//               execution and delivery
-//             </p>
-//           </div>
-
-//           {/* HORIZONTAL STEPS */}
-//           <div className="relative w-full max-w-4xl mb-20">
-//             <div className="absolute top-1/2 left-0 w-full h-px bg-gray-700" />
-
-//             <div className="flex justify-between relative z-10">
-//               {steps.map((_, i) => (
-//                 <div
-//                   key={i}
-//                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
-//                     i <= activeIndex ? "bg-blue-500 scale-125" : "bg-white"
-//                   }`}
-//                 />
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* CARD */}
-//           <div className="relative w-full max-w-4xl">
-//             <div className="bg-blue-600 rounded-xl p-10 min-h-[200px] transition-all duration-500">
-//               <div className="flex justify-between items-start">
-//                 <div>
-//                   <h3 className="text-xl font-semibold mb-2">
-//                     {steps[activeIndex].title}
-//                   </h3>
-//                   <p className="text-blue-100 max-w-xl">
-//                     {steps[activeIndex].desc}
-//                   </p>
-//                 </div>
-
-//                 <div className="text-5xl font-bold text-blue-800">
-//                   {steps[activeIndex].number}
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -300,10 +176,10 @@ export default function OurWorkProcess() {
 
               {/* Content Area */}
               <div className="relative z-10 pt-2">
-                <h3 className="text-2xl font-bold font-stoke mb-2.5 text-white">
+                <h3 className="text-2xl font-bold font-stoke tracking-[2px] mb-2.5 text-textColor">
                   {steps[activeIndex].title}
                 </h3>
-                <p className="text-blue-100 max-w-xl font-outfit font-normal text-base line-clamp-2 leading-relaxed">
+                <p className="text-textColor max-w-xl font-outfit font-normal text-base line-clamp-2 leading-relaxed">
                   {steps[activeIndex].desc}
                 </p>
               </div>

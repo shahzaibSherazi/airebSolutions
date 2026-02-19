@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
 import OptimizationImg from "@/assets/Dialer_assets/optimization.svg?react";
 import CallIcon from "@/assets/Dialer_assets/call_icon.svg?react";
@@ -89,13 +89,13 @@ const DialerSolutions = () => {
                 </h3>
               </div>
               <div className="flex items-center justify-center gap-2 px-4 py-5">
-                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-gray-200 transition-colors">
+                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-black hover:text-textColor transition-colors">
                   Support
                 </button>
-                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-gray-200 transition-colors">
+                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-black hover:text-textColor transition-colors">
                   Sales
                 </button>
-                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-gray-200 transition-colors">
+                <button className="px-4 py-2 bg-white text-black text-xs font-medium rounded-full hover:bg-black hover:text-textColor transition-colors">
                   Premium
                 </button>
               </div>
@@ -110,76 +110,77 @@ const DialerSolutions = () => {
       title: "Integration",
       description:
         "The AI system is trained to understand your customer interactions and optimize the calling process, ensuring it continuously improves over time.",
-      rightContent: (
-        <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6">
-          {/* Left Column - Integration */}
-          <div
-            style={{
-              background: "linear-gradient(180deg, #629DFF 0%, #0E1828 100%)",
-            }}
-            className=" rounded-[22px] p-6 flex flex-col border border-primary">
-            <div className="bg-black rounded-[22px] px-5 py-2.5 mb-6 text-center">
-              <span className="text-textColor text-sm md:text-lg font-outfit font-medium">
-                Integration
-              </span>
-            </div>
-            <div className="space-y-2 flex-grow">
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Name
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Age
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Gender
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Website
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Purchase history
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Tracking Id
-              </div>
-              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                Contact Number
-              </div>
-            </div>
-          </div>
+      // rightContent: (
+      //   <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6">
+      //     {/* Left Column - Integration */}
+      //     <div
+      //       style={{
+      //         background: "linear-gradient(180deg, #629DFF 0%, #0E1828 100%)",
+      //       }}
+      //       className=" rounded-[22px] p-6 flex flex-col border border-primary">
+      //       <div className="bg-black rounded-[22px] px-5 py-2.5 mb-6 text-center">
+      //         <span className="text-textColor text-sm md:text-lg font-outfit font-medium">
+      //           Integration
+      //         </span>
+      //       </div>
+      //       <div className="space-y-2 flex-grow">
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Name
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Age
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Gender
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Website
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Purchase history
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Tracking Id
+      //         </div>
+      //         <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //           Contact Number
+      //         </div>
+      //       </div>
+      //     </div>
 
-          {/* Right Column - Contact History with bars */}
-          <div className=" rounded-[22px] border-025 p-6">
-            <h3 className="text-white text-base md:text-xl font-bold font-outfit mb-5">
-              Contact History
-            </h3>
-            <div className="space-y-2">
-              {[
-                { label: "Name", width: "100%" },
-                { label: "Gender", width: "85%" },
-                { label: "Website", width: "90%" },
-                { label: "Purchase history", width: "75%" },
-                { label: "Tracking Id", width: "95%" },
-                { label: "Contact Number", width: "80%" },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="space-y-2  grid grid-cols-1 md:grid-cols-2 md:gap-6">
-                  <div className="text-textColor font-outfit font-medium text-sm md:text-base">
-                    {item.label}
-                  </div>
-                  <div className="h-2 bg-gray-700/30 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-white rounded-full"
-                      style={{ width: item.width }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      ),
+      //     {/* Right Column - Contact History with bars */}
+      //     <div className=" rounded-[22px] border-025 p-6">
+      //       <h3 className="text-white text-base md:text-xl font-bold font-outfit mb-5">
+      //         Contact History
+      //       </h3>
+      //       <div className="space-y-2">
+      //         {[
+      //           { label: "Name", width: "100%" },
+      //           { label: "Gender", width: "85%" },
+      //           { label: "Website", width: "90%" },
+      //           { label: "Purchase history", width: "75%" },
+      //           { label: "Tracking Id", width: "95%" },
+      //           { label: "Contact Number", width: "80%" },
+      //         ].map((item, index) => (
+      //           <div
+      //             key={index}
+      //             className="space-y-2  grid grid-cols-1 md:grid-cols-2 md:gap-6">
+      //             <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+      //               {item.label}
+      //             </div>
+      //             <div className="h-2 bg-gray-700/30 rounded-full overflow-hidden">
+      //               <div
+      //                 className="h-full bg-white rounded-full"
+      //                 style={{ width: item.width }}
+      //               />
+      //             </div>
+      //           </div>
+      //         ))}
+      //       </div>
+      //     </div>
+      //   </div>
+      // ),
+      rightContent: <Step2Bars isActive={activeStep === 2} />,
     },
     {
       id: 3,
@@ -204,7 +205,7 @@ const DialerSolutions = () => {
   ];
 
   const currentStep = steps.find((step) => step.id === activeStep);
-
+  const isStep2Active = activeStep === 2;
   return (
     <section
       style={{
@@ -277,30 +278,105 @@ const DialerSolutions = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom Styles */}
-      <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
+  );
+};
+
+const Step2Bars = ({ isActive }) => {
+  const items = [
+    { label: "Name", width: 100 },
+    { label: "Gender", width: 85 },
+    { label: "Website", width: 90 },
+    { label: "Purchase history", width: 75 },
+    { label: "Tracking Id", width: 95 },
+    { label: "Contact Number", width: 80 },
+  ];
+
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (isActive) {
+      // reset first
+      setAnimate(false);
+
+      // allow DOM paint, then trigger animation
+      const timeout = setTimeout(() => {
+        setAnimate(true);
+      }, 50);
+
+      return () => clearTimeout(timeout);
+    } else {
+      setAnimate(false);
+    }
+  }, [isActive]);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6">
+      {/* Left Column - Integration */}
+      <div
+        style={{
+          background: "linear-gradient(180deg, #629DFF 0%, #0E1828 100%)",
+        }}
+        className=" rounded-[22px] p-6 flex flex-col border border-primary">
+        <div className="bg-black rounded-[22px] px-5 py-2.5 mb-6 text-center">
+          <span className="text-textColor text-sm md:text-lg font-outfit font-medium">
+            Integration
+          </span>
+        </div>
+        <div className="space-y-2 flex-grow">
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Name
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Age
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Gender
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Website
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Purchase history
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Tracking Id
+          </div>
+          <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+            Contact Number
+          </div>
+        </div>
+      </div>
+      <div className="rounded-[22px] border-025 p-6">
+        <h3 className="text-white text-base md:text-xl font-bold font-outfit mb-5">
+          Contact History
+        </h3>
+
+        <div className="space-y-4">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="grid grid-cols-1 md:grid-cols-2 md:gap-6 items-center">
+              <div className="text-textColor font-outfit font-medium text-sm md:text-base">
+                {item.label}
+              </div>
+
+              <div className="h-2 bg-gray-700/30 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-white rounded-full"
+                  style={{
+                    width: animate ? `${item.width}%` : "0%",
+                    transition: `width 1.2s cubic-bezier(0.22, 1, 0.36, 1) ${
+                      index * 120
+                    }ms`,
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -373,7 +449,7 @@ const Step3Content = () => {
         {/* Phone Icon */}
         <div className=" justify-center items-center flex">
           <div className="group cursor-pointer py-3 px-7 rounded-[6px] border-025 border-primary">
-            <CallIcon className="w-12 h-12 group-hover:scale-110 transition-all" />
+            <CallIcon className="w-12 h-12 call-bounce transition-all" />
           </div>
         </div>
       </div>

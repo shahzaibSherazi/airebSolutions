@@ -1,48 +1,55 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import SeamlessIcon from "@/assets/icons/crm-integration/services-icons/seamless.svg?react";
+import StreamedIcon from "@/assets/icons/crm-integration/services-icons/streamed.svg?react";
+import AutomatedIcon from "@/assets/icons/crm-integration/services-icons/automated.svg?react";
+import ReportingIcon from "@/assets/icons/crm-integration/services-icons/reporting.svg?react";
+import CrmIcon from "@/assets/icons/crm-integration/services-icons/crm.svg?react";
+import ThirdPartyIcon from "@/assets/icons/crm-integration/services-icons/third-party.svg?react";
+
 const CrmServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <SeamlessIcon />,
       title: "Seamless Data Synchronization",
       description:
         "Our API integrations allow data to be automatically synchronized between various platforms. Whether it’s customer details, sales leads, support tickets, or marketing data, you can ensure that your CRM is always up-to-date with the latest information. This eliminates manual data entry, reduces errors, and saves valuable time.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <StreamedIcon />,
       title: "Streamlined Customer Interaction",
       description:
         "Integrating your CRM with communication tools such as email, phone systems, and chat platforms can streamline customer interactions. With API integrations, you can track interactions, schedule follow-ups, and manage communication all from within a single CRM interface, allowing for a more personalized and responsive customer experience",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <AutomatedIcon />,
       title: "Automated Workflows",
       description:
         "Automating business workflows is crucial for improving efficiency and reducing manual effort. API integrations allow for the seamless automation of tasks, such as assigning leads, scheduling appointments, or updating customer records. This improves team collaboration and speeds up the overall process, ensuring that every task is completed on time",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <ReportingIcon />,
       title: "Enhanced Reporting and Analytics",
       description:
         "With integrated APIs, businesses can consolidate data from different sources, enabling advanced analytics and reporting. By syncing CRM data with other tools like marketing automation platforms, analytics dashboards, and financial systems, you gain comprehensive insights into your business performance, customer behavior, and market trends.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <CrmIcon />,
       title: "CRM with E-Commerce Integrations",
       description:
         "For businesses that also manage e-commerce stores, API integrations between CRMs and e-commerce platforms can offer a seamless shopping experience. Sync customer orders, inventory, payment status, and shipping details directly with your CRM, enabling you to provide timely and accurate information to customers.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <ThirdPartyIcon />,
       title: "Third-Party App Integrations",
       description:
-        "Whether it’s integrating your CRM with social media, customer support tools, or project management platforms, API integrations enable seamless communication between your CRM and third-party applications. These integrations ensure that data flows freely between platforms, ensuring you always have the latest customer information at your fingertips.",
+        "Whether it's integrating your CRM with social media, customer support tools, or project management platforms, API integrations enable seamless communication between your CRM and third-party applications. These integrations ensure that data flows freely between platforms, ensuring you always have the latest customer information at your fingertips.",
     },
   ];
 
@@ -77,10 +84,7 @@ const CrmServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

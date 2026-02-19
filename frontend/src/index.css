@@ -39,8 +39,8 @@ All colors MUST be HSL.
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 218 100% 69%;
-    --primary-foreground: 222 47% 5%;
+    --primary: 217 89% 61%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
@@ -1029,4 +1029,18 @@ html.lenis {
   100% {
     transform: translateX(100%);
   }
+}
+
+@keyframes callBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+}
+
+.call-bounce {
+  animation: callBounce 1.2s ease-in-out infinite;
 }

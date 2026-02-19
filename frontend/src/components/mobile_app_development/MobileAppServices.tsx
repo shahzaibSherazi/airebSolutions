@@ -1,62 +1,70 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import CustomMobielIcon from "@/assets/icons/mobile_app/services_icons/custom_mobile_dev.svg?react";
+import NativeMobielIcon from "@/assets/icons/mobile_app/services_icons/native_mobile_dev.svg?react";
+import CrossPlatformIcon from "@/assets/icons/mobile_app/services_icons/cross_platform.svg?react";
+import EnterpriseIcon from "@/assets/icons/mobile_app/services_icons/enterprise.svg?react";
+import OptimizationIcon from "@/assets/icons/mobile_app/services_icons/optimization.svg?react";
+import ArIcon from "@/assets/icons/mobile_app/services_icons/ar_vr.svg?react";
+import TestingIcon from "@/assets/icons/mobile_app/services_icons/testing.svg?react";
+import MaintenanceIcon from "@/assets/icons/mobile_app/services_icons/maintinance.svg?react";
 const MobileAppServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <CustomMobielIcon />,
       title: "Custom Mobile App Development",
       description:
         "Our expert team leverages the latest technologies to build intuitive, high-performing apps for iOS and Android. From concept to deployment, we deliver innovative solutions that enhance user engagement and drive business growth.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <NativeMobielIcon />,
       title: "Native Mobile App Development",
       description:
         "We design and build high-performing, native apps for iOS and Android, delivering a unique experience optimized for each platform. From enterprise solutions to consumer-focused apps, our native apps are tailored for maximum performance, responsiveness, and seamless interaction with mobile device features.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <CrossPlatformIcon />,
       title: "Cross-Platform App Development",
       description:
         "With cross-platform development tools like React Native and Flutter, we create apps that work seamlessly on both iOS and Android. This approach saves time and resources while ensuring high performance, and scalability, and delivering a consistent experience across devices.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <EnterpriseIcon />,
       title: "Enterprise Mobility Solutions",
       description:
         "Aireb Solutions specializes in developing custom enterprise mobility solutions that optimize internal workflows and boost productivity. We provide mobile apps tailored to the needs of your organization, enabling real-time data access, process automation, and improved communication across teams.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <OptimizationIcon />,
       title: "Mobile App Modernization and Optimization",
       description:
         "If your current app is outdated or underperforming, we offer modernization services that breathe new life into your mobile experience. From redesigns and feature enhancements to code optimization and platform upgrades, we ensure your app remains competitive and user-friendly.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <ArIcon />,
       title: "Augmented Reality (AR) & Virtual Reality (VR) App Development",
       description:
         "Comprehensive API documentation is crucial for developers. We provide detailed, easy-to-understand documentation to facilitate smooth implementation and integration, along with ongoing support to ensure optimal performance.",
     },
     {
       id: 7,
-      iconPath: cardIcon,
+      iconPath: <TestingIcon />,
       title: "App Testing & Quality Assurance",
       description:
         "Our comprehensive testing and QA process ensures that every app and game we develop is bug-free, secure, and fully optimized for the best performance on a variety of devices and operating systems. From functionality testing to stress and performance testing, we ensure quality every step of the way.",
     },
     {
       id: 8,
-      iconPath: cardIcon,
+      iconPath: <MaintenanceIcon />,
       title: "Mobile App Maintenance & Support",
       description:
-        "Our services don’t end once your app is live. We provide ongoing maintenance and support to ensure your app stays up-to-date, secure, and fully optimized. From software updates to troubleshooting and new feature implementation, we handle everything to keep your app running smoothly.",
+        "Our services don't end once your app is live. We provide ongoing maintenance and support to ensure your app stays up-to-date, secure, and fully optimized. From software updates to troubleshooting and new feature implementation, we handle everything to keep your app running smoothly.",
     },
   ];
 
@@ -83,10 +91,7 @@ const MobileAppServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

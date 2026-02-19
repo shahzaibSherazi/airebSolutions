@@ -1,45 +1,50 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import CustomDialerIcon from "@/assets/icons/dialer/services-icons/custom-dialer.svg?react";
+import PredictiveIcon from "@/assets/icons/dialer/services-icons/predictive.svg?react";
+import IvrIcon from "@/assets/icons/dialer/services-icons/ivr.svg?react";
+import OutbondingIcon from "@/assets/icons/dialer/services-icons/outbonding.svg?react";
+import AnalyticIcon from "@/assets/icons/dialer/services-icons/analytic.svg?react";
+import SupportIcon from "@/assets/icons/dialer/services-icons/support.svg?react";
 const DialerServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <CustomDialerIcon />,
       title: "Our AI-Powered Custom Dialer Solutions",
       description:
         "Our AI-powered custom dialer solutions streamline communication, boost agent productivity, and enhance customer engagement. By leveraging AI, machine learning, and advanced analytics, we deliver automated calling with smarter lead management, higher conversions, and personalized interactions.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <PredictiveIcon />,
       title: "AI-Driven Predictive Dialer",
       description:
         "Our predictive dialer uses advanced algorithms to auto-dial at the right time, maximizing agent efficiency. By reducing downtime and prioritizing high-value leads, it boosts productivity and lowers call abandonment rates.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <IvrIcon />,
       title: "Intelligent IVR (Interactive Voice Response)",
       description:
         "Our AI-driven Interactive Voice Response (IVR) system helps businesses manage high call volumes by automatically routing calls to the appropriate department or agent. With the power of AI, the IVR can understand natural language, ensuring customers get quick resolutions without waiting for a human agent.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <OutbondingIcon />,
       title: "Automated Outbound Dialing",
       description:
         "Our automated outbound dialing solution uses AI to place calls at the most optimal times, maximizing lead conversion. Whether it’s cold calling or following up on leads, AI ensures that calls are made efficiently, enhancing sales productivity.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <AnalyticIcon />,
       title: "Voice AI and Speech Analytics",
       description:
         "Our Voice AI technology provides powerful insights into customer conversations, enabling businesses to understand emotions, sentiments, and key concerns. Speech analytics can analyze customer interactions to identify patterns, common issues, and areas for improvement. Get In Touch",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <SupportIcon />,
       title: "Omni-Channel Support",
       description:
         "Our AI-powered dialer solutions integrate with a variety of communication channels, including phone calls, emails, SMS, and social media. This omni-channel approach ensures that businesses can engage customers on their preferred platform, leading to improved satisfaction and faster issue resolution.",
@@ -75,10 +80,7 @@ const DialerServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

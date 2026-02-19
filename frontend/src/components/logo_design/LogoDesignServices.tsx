@@ -1,45 +1,50 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import TailoredIcon from "@/assets/icons/logo-design/services-icon/tailored.svg?react";
+import IdentityIcon from "@/assets/icons/logo-design/services-icon/identity.svg?react";
+import VerstailIcon from "@/assets/icons/logo-design/services-icon/verstail.svg?react";
+import HighResolutionIcon from "@/assets/icons/logo-design/services-icon/high-resolution.svg?react";
+import VariationIcon from "@/assets/icons/logo-design/services-icon/variation.svg?react";
+import HomeIcon from "@/assets/icons/logo-design/services-icon/home.svg?react";
 const LogoDesignServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <TailoredIcon />,
       title: "Tailored Logo Creation",
       description:
         "We work closely with you to create logos that reflect your brand's values and vision. Each design is unique, creative, and aligned with your business goals — whether minimalist, typographic, emblematic, or abstract. Our designers research your industry, analyze competitors, and craft distinctive logos that are both meaningful and impactful.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <IdentityIcon />,
       title: "Brand Identity Development",
       description:
         "A logo is just the beginning of your brand's identity. At Aireb Solutions, we create a cohesive brand presence that effectively communicates your message across all platforms. Our approach includes carefully selecting color palettes that evoke the right emotions and resonate with your audience, choosing typography that aligns with your brand personality for consistency ",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <VerstailIcon />,
       title: "Versatile Logo Solutions",
       description:
         "We design logos optimized for various applications, ensuring they look exceptional across digital platforms, print materials, merchandise, and signage. Our designs are adaptable to all branding needs, from business cards to billboards. Whether you need a logo for your website, social media, or physical store, we make sure it maintains clarity and impact in any format.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <HighResolutionIcon />,
       title: "Vector & High-Resolution Files",
       description:
         "We provide your logo in multiple formats to ensure maximum usability and versatility.Each file format ensures that your logo maintains its sharpness and clarity across different mediums, whether it's displayed on a website, printed on a brochure, or embroidered on company apparel.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <VariationIcon />,
       title: "Logo Variations & File Packages",
       description:
         "To maximize usability, we provide different versions of your logo to accommodate various branding needs,Primary Logo, Secondary Logo, Monochrome Logo, Favicon & Social Media Icons Responsive & Adaptive Logos",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <HomeIcon />,
       title: "Animated Logo Design",
       description:
         "An animated logo adds movement and engagement to your brand identity. We create dynamic, engaging animated logos that bring life to your brand for digital content, video marketing, and website applications. Our motion graphics experts craft animations that enhance brand recall and captivate audiences.",
@@ -68,10 +73,7 @@ const LogoDesignServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

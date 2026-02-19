@@ -9,7 +9,7 @@ const FeaturedSection = () => {
   return (
     <section
       style={{
-        background: "linear-gradient(180deg, #629DFF 0%, #3B5E99 100%)",
+        background: "linear-gradient(180deg, #4285F4 0%, #5193FF 100%)",
       }}
       className="w-full px-4 md:px-6 py-[87px] md:py-[103px] flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
       <div className="w-full flex flex-col lg:flex-row items-start  gap-16">

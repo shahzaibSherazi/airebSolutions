@@ -1,45 +1,51 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import CustomIcon from "@/assets/icons/api_development/services_icons/custom_api.svg?react";
+import IntegrationIcon from "@/assets/icons/api_development/services_icons/third_party.svg?react";
+import AuthenticationIcon from "@/assets/icons/api_development/services_icons/authentication.svg?react";
+import MicroservicesIcon from "@/assets/icons/api_development/services_icons/microservices.svg?react";
+import CloudApiIcon from "@/assets/icons/api_development/services_icons/cloud_api.svg?react";
+import DocumentationIcon from "@/assets/icons/api_development/services_icons/documentation.svg?react";
 const ApiServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <CustomIcon />,
       title: "Custom API Development",
       description:
         "We build robust, feature-rich APIs tailored to your business needs. Whether you require RESTful, SOAP, or GraphQL APIs, our expert developers ensure seamless data exchange and high-performance connectivity.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <IntegrationIcon />,
       title: "Third-Party API Integration",
       description:
         "Enhance your existing systems by integrating third-party APIs, including payment gateways, CRM, ERP, social media platforms, and more. We ensure smooth integration that optimizes your workflows and user experience.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <AuthenticationIcon />,
       title: "API Security & Authentication",
       description:
         "Security is our priority. We implement OAuth, JWT, API key authentication, and other advanced security protocols to protect data integrity and ensure secure transactions between applications.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <MicroservicesIcon />,
       title: "Microservices API Development",
       description:
         "Our microservices-based API solutions help businesses break down complex systems into smaller, independently deployable services, improving scalability, efficiency, and maintainability.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <CloudApiIcon />,
       title: "Cloud API Development",
       description:
         "We design and develop cloud-based APIs that facilitate seamless communication between cloud applications, ensuring high availability and optimal performance on platforms like AWS, Azure, and Google Cloud.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <DocumentationIcon />,
       title: "API Documentation & Support",
       description:
         "Comprehensive API documentation is crucial for developers. We provide detailed, easy-to-understand documentation to facilitate smooth implementation and integration, along with ongoing support to ensure optimal performance.",
@@ -74,10 +80,7 @@ const ApiServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

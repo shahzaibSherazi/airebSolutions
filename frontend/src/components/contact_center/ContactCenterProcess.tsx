@@ -222,14 +222,13 @@ export default function ContactCenterProcess() {
                       className={[
                         "font-stoke font-light leading-snug transition-colors duration-300 mb-1.5",
                         "text-[clamp(14px,1.5vw,24px)]",
-                        isLit ? "text-white" : "text-white/50",
+                        isLit ? "text-black" : "text-textColor",
                       ].join(" ")}>
                       {step.title}
                     </h3>
                     <p
                       className={[
-                        "font-outfit font-light leading-relaxed transition-colors duration-300 text-xs sm:text-sm",
-                        isLit ? "text-textColor" : "text-white/30",
+                        "font-outfit font-light text-textColor leading-relaxed transition-colors duration-300 text-xs sm:text-sm",
                       ].join(" ")}>
                       {step.description}
                     </p>

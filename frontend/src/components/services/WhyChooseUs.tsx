@@ -48,9 +48,9 @@ const WhyChooseUs = () => {
 
   return (
     <div
-      className="min-h-screen text-white py-16 md:py-32 px-4 sm:px-6 lg:px-8"
+      className=" text-white py-16 md:py-32 px-4 sm:px-6 lg:px-8"
       style={{
-        background: "linear-gradient(135.23deg, #629DFF 2.74%, #629DFF 97.26%)",
+        background: "linear-gradient(135.23deg, #4285F4 2.74%, #629DFF 97.26%)",
       }}>
       <div className="">
         {/* Header */}

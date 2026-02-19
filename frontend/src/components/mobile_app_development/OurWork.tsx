@@ -1,5 +1,5 @@
 import React from "react";
-import workImg from "../../assets/mobile_work_img.png";
+import workImg from "../../assets/mobile_app/work_img.png";
 const OurWork = () => {
   return (
     <section className=" w-full px-4 sm:px-6 lg:px-8 py-24  bg-primary overflow-hidden">

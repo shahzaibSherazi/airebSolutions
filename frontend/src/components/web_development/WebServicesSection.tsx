@@ -1,17 +1,22 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import EcommerceIcon from "@/assets/icons/web_development_icons/services_icons/ecommerce.svg?react";
+import CmsIcon from "@/assets/icons/web_development_icons/services_icons/cms.svg?react";
+import IntegrationIcon from "@/assets/icons/web_development_icons/services_icons/integration.svg?react";
+import WebSolutionIcon from "@/assets/icons/web_development_icons/services_icons/web_solutions.svg?react";
+import PwaIcon from "@/assets/icons/web_development_icons/services_icons/pwa.svg?react";
+import WebDevelopmentIcon from "@/assets/icons/web_development_icons/services_icons/web_development.svg?react";
 const WebServicesSection = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <WebDevelopmentIcon />,
       title: "Custom Web Development",
       description:
         "We build feature-rich, highly scalable web applications tailored to your specific business requirements. Whether you need a complex enterprise application or a sleek corporate website, our custom web development services ensure top-tier performance and usability.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <EcommerceIcon />,
       title: "E-commerce Development",
       description:
         "Aireb Solutions creates robust e-commerce platforms that provide seamless shopping experiences. From WooCommerce and Shopify to Magento and custom-built solutions, we develop online stores that drive sales and maximize user retention.",
@@ -19,28 +24,28 @@ const WebServicesSection = () => {
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <CmsIcon />,
       title: "Content Management Systems (CMS)",
       description:
         "Take control of your content with our CMS development services. We work with leading platforms like WordPress, Joomla, and Drupal, offering intuitive and easy-to-manage content solutions that keep your website updated with minimal effort.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <IntegrationIcon />,
       title: "API Development & Integration",
       description:
         "Seamlessly integrate third-party services and applications with our API development expertise. We create secure and scalable APIs, enabling smooth communication between your website and external platforms like CRM, ERP, and payment gateways.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <WebSolutionIcon />,
       title: "AI-Powered Web Solutions",
       description:
         "We leverage artificial intelligence to enhance web functionality, including chatbots, predictive analytics, and automated workflows, improving efficiency and user experience",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <PwaIcon />,
       title: "Progressive Web Apps (PWA)",
       description:
         "Enhance your web presence with Progressive Web Apps that deliver a mobile app-like experience with fast loading times, offline accessibility, and responsive design across all devices.",
@@ -75,10 +80,7 @@ const WebServicesSection = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

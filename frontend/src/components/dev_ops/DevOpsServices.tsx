@@ -1,59 +1,66 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import CiIcon from "@/assets/icons/devOps-icons/services-icons/ci-cd.svg?react";
+import ContainerizationIcon from "@/assets/icons/devOps-icons/services-icons/containerization.svg?react";
+import InfrastructureIcon from "@/assets/icons/devOps-icons/services-icons/infrastructure.svg?react";
+import MicroservicesIcon from "@/assets/icons/devOps-icons/services-icons/microservices.svg?react";
+import IntegrationIcon from "@/assets/icons/devOps-icons/services-icons/integration.svg?react";
+import AutomationIcon from "@/assets/icons/devOps-icons/services-icons/automation.svg?react";
+import OptimizationIcon from "@/assets/icons/devOps-icons/services-icons/optimization.svg?react";
+import CloudIcon from "@/assets/icons/devOps-icons/services-icons/devops.svg?react";
 const DevOpsServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <CiIcon />,
       title: "Continuous Integration and Continuous Deployment (CI/CD)",
       description:
         "We implement automated CI/CD pipelines that test and deploy code changes automatically, reducing manual effort and speeding up releases. This improves code quality, minimizes errors, and enables faster, more reliable delivery while keeping applications stable and secure throughout the development lifecycle.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <ContainerizationIcon />,
       title: "Containerization and Orchestration",
       description:
         "We use Docker and Kubernetes to build portable, scalable applications with consistent environments across all stages. This improves reliability, speeds up deployments, reduces dependency issues, and enhances resilience through a microservices-based architecture.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <InfrastructureIcon />,
       title: "Infrastructure as Code",
       description:
         "We implement Infrastructure as Code (IaC) to manage infrastructure through automated scripts, ensuring consistency, scalability, and version control. Using tools like Terraform and AWS CloudFormation, this approach reduces configuration drift and enables fast, reliable, and compliant infrastructure deployment.",
     },
     {
       id: 4,
-      iconPath: cardIcon,
+      iconPath: <IntegrationIcon />,
       title: "Security Integration (DevSecOps)",
       description:
         "We embed security into the DevOps pipeline with automated checks, vulnerability scanning, and compliance monitoring. This DevSecOps approach reduces risk, strengthens application security, and maintains fast, agile deployments.",
     },
     {
       id: 5,
-      iconPath: cardIcon,
+      iconPath: <AutomationIcon />,
       title: "Configuration Management & Automation",
       description:
         "We use tools like Ansible, Chef, and Puppet to automate configuration, deployment, and provisioning, improving efficiency, reducing errors, and ensuring consistent environments across all stages.",
     },
     {
       id: 6,
-      iconPath: cardIcon,
+      iconPath: <OptimizationIcon />,
       title: "Monitoring, Logging & Performance Optimization",
       description:
         "We implement monitoring and logging with tools like Prometheus, Grafana, ELK Stack, and Datadog to gain real-time insights, detect issues proactively, optimize performance, reduce downtime, and improve user experience.",
     },
     {
       id: 7,
-      iconPath: cardIcon,
+      iconPath: <CloudIcon />,
       title: "Cloud DevOps & Multi-Cloud Management",
       description:
         "Aireb Solutions delivers cloud-native DevOps solutions using AWS, Azure, and Google Cloud to build scalable, high-performance applications. We focus on automation, cost optimization, and multi-cloud strategies to ensure smooth deployment and reliable operations across cloud environments.",
     },
     {
       id: 8,
-      iconPath: cardIcon,
+      iconPath: <MicroservicesIcon />,
       title: "Microservices & Serverless Architecture",
       description:
         "We modernize applications by transitioning monolithic systems to microservices and serverless architectures, enabling faster deployments, greater scalability, and flexibility. Using AWS Lambda, Google Cloud Functions, and Azure Functions, we reduce infrastructure overhead while improving performance and cost efficiency.",
@@ -88,10 +95,7 @@ const DevOpsServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

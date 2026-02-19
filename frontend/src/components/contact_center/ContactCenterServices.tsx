@@ -1,24 +1,27 @@
 import React from "react";
-import cardIcon from "../../assets/icons/webService_icon.png";
+import VoiceIcon from "@/assets/icons/contact-center/services-icon/voice.svg?react";
+import NonVoiceIcon from "@/assets/icons/contact-center/services-icon/non-voice.svg?react";
+import TechnicalIcon from "@/assets/icons/contact-center/services-icon/technical.svg?react";
+
 const ContactCenterServices = () => {
   const services = [
     {
       id: 1,
-      iconPath: cardIcon,
+      iconPath: <VoiceIcon />,
       title: "Voice support",
       description:
         "Voice supportWe handle all inbound and outbound call center services, ensuring seamless customer interactions while you stay focused on your core business priorities.",
     },
     {
       id: 2,
-      iconPath: cardIcon,
+      iconPath: <NonVoiceIcon />,
       title: "Non-voice support",
       description:
         "Providing cost-effective, efficient, and tailor-made non-voice customer support designed to align perfectly with your brand.",
     },
     {
       id: 3,
-      iconPath: cardIcon,
+      iconPath: <TechnicalIcon />,
       title: "Technical support",
       description:
         "WeofferTier-1supportservicesenhancedwithautomationtoolsandstreamlinedprocesses,enabling our experts to deliver swift first-contact resolutions.",
@@ -48,10 +51,7 @@ const ContactCenterServices = () => {
               {/* Icon Container */}
               <div className="mb-[clamp(16px,2.5vh,32px)]">
                 <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  <img
-                    src={service.iconPath}
-                    className="w-[clamp(20px,2.5vh,28px)] h-[clamp(20px,2.5vh,28px)]"
-                  />
+                  {service.iconPath}
                 </div>
               </div>
 

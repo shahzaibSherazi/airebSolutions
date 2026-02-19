@@ -74,9 +74,11 @@ const HeroSection = () => {
 
           {/* CTA Button - Consistent spacing */}
           <div className="mt-12 sm:mt-16 lg:mt-12 flex justify-center">
-            <button className="group flex items-center gap-3 sm:gap-4 bg-primary pl-4 sm:pl-6 pr-1 py-1 text-base sm:text-lg tracking-wide hover:bg-blue-700 transition-all duration-300">
-              <span className="whitespace-nowrap">Get Started</span>
-              <span className="bg-white w-11 h-11 sm:w-12 sm:h-12 text-black flex items-center justify-center transition-transform group-hover:translate-x-1">
+            <button className="group flex items-center gap-3 sm:gap-4 bg-primary pl-4 sm:pl-6 pr-1 py-1 text-base sm:text-lg tracking-wide hover:bg-white transition-all duration-300">
+              <span className="whitespace-nowrap text-textColor group-hover:text-black">
+                Get Started
+              </span>
+              <span className="bg-white group-hover:bg-primary w-11 h-11 sm:w-12 sm:h-12 text-black flex items-center justify-center transition-transform group-hover:translate-x-1">
                 <ArrowRight size={16} className="sm:w-5 sm:h-5" />
               </span>
             </button>
