@@ -21,6 +21,7 @@ import UiDesign from "./pages/ui_ux_design";
 import ContentWriting from "./pages/content_writing";
 import ContactCenter from "./pages/contact_center";
 import HealthCare from "./pages/Industries/health_care";
+import Education from "./pages/Industries/education";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/content-writing" element={<ContentWriting />} />
           <Route path="/contact-center" element={<ContactCenter />} />
           <Route path="/industries/healthcare" element={<HealthCare />} />
+          <Route path="/industries/education" element={<Education />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

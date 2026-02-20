@@ -1081,3 +1081,24 @@ html.lenis {
     transform: translateY(0);
   }
 }
+
+.education-cycle::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+}
+.education-cycle::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}

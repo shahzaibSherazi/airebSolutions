@@ -90,9 +90,9 @@ const menuItems = [
     name: "Industries",
     items: [
       "Healthcare",
+      "Education",
       "Finance & Banking",
       "E-commerce & Retail",
-      "Education",
       "Real Estate",
       "Manufacturing",
       "Transportation",

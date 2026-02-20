@@ -69,7 +69,7 @@ function Card({ card, delay }) {
         transform: inView ? "translateY(0)" : "translateY(32px)",
         transitionDelay: `${delay}ms`,
       }}>
-      <h3 className="text-white font-outfit  text-lg sm:text-2xl font-normal leading-snug">
+      <h3 className="text-primary font-outfit  text-lg sm:text-2xl font-normal leading-snug">
         {card.title}
       </h3>
 
@@ -80,7 +80,7 @@ function Card({ card, delay }) {
   );
 }
 
-export default function HealthCareExpertise() {
+export default function EducationExpertise() {
   const [headerRef, headerInView] = useInView(0.2);
 
   return (
