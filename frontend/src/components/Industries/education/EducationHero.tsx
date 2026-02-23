@@ -1,5 +1,6 @@
 import heroImg1 from "@/assets/Industies/education/hero-imag1.png";
 import heroImg2 from "@/assets/Industies/education/hero-imag2.png";
+import PhoneMockup from "./PhoneMockup";
 
 export default function EducationHero() {
   return (
@@ -7,7 +8,7 @@ export default function EducationHero() {
       className=""
       style={{
         background:
-          "linear-gradient(257.21deg, rgba(0,0,0,0) 1.73%, #0E1828 98.27%)",
+          "linear-gradient(257.21deg, rgba(0, 0, 0, 0) 1.73%, #0E1828 98.27%)",
       }}>
       <div className="w-full lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
         {/* LEFT CONTENT */}
@@ -31,6 +32,7 @@ export default function EducationHero() {
 
         {/* RIGHT IMAGES */}
         <div className="relative w-full flex justify-center lg:justify-end items-center gap-6 mt-16 lg:mt-0">
+          {/* <PhoneMockup /> */}
           {/* First Phone */}
           <img
             src={heroImg1}

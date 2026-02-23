@@ -313,6 +313,7 @@ import ContactCenter from "./pages/contact_center";
 import HealthCare from "./pages/Industries/health_care";
 import Education from "./pages/Industries/education";
 import logoImg from "@/assets/aireb_logo.png";
+import IndustriesEcommerce from "./pages/Industries/ecommerce";
 
 const queryClient = new QueryClient();
 
@@ -394,6 +395,7 @@ const AnimatedRoutes = () => {
         <Route path="/contact-center" element={<ContactCenter />} />
         <Route path="/industries/healthcare" element={<HealthCare />} />
         <Route path="/industries/education" element={<Education />} />
+        <Route path="/industries/ecommerce" element={<IndustriesEcommerce />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

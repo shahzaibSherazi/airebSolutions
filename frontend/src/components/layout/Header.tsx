@@ -26,7 +26,7 @@ const itemRoutes = {
   // Industries routes
   Healthcare: "/industries/healthcare",
   "Finance & Banking": "/industries/finance-banking",
-  "E-commerce & Retail": "/industries/ecommerce-retail",
+  "E-commerce": "/industries/ecommerce",
   Education: "/industries/education",
   "Real Estate": "/industries/real-estate",
   Manufacturing: "/industries/manufacturing",
@@ -91,8 +91,8 @@ const menuItems = [
     items: [
       "Healthcare",
       "Education",
+      "E-commerce",
       "Finance & Banking",
-      "E-commerce & Retail",
       "Real Estate",
       "Manufacturing",
       "Transportation",
