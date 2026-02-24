@@ -1,21 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-/**
- * Professional DevOps Cycle Component
- *
- * Features:
- * - Proper separation of concerns
- * - Optimized canvas rendering with RAF
- * - Custom hooks for reusability
- * - TypeScript-ready structure
- * - Performance optimizations
- * - Clean, maintainable code
- */
-
-// ============================================
-// CONSTANTS & CONFIGURATION
-// ============================================
-
 const CANVAS_CONFIG = {
   layers: 6,
   ellipseWidth: 220,
@@ -30,8 +14,8 @@ const CANVAS_CONFIG = {
 };
 
 const COLORS = {
-  primary: "#000000",
-  secondary: "#FFFFFF",
+  primary: "#4285F4",
+  secondary: "#0E1828",
   accent: "#0B23C8",
   border: "#E5E7EB",
 };
@@ -39,37 +23,37 @@ const COLORS = {
 const STEPS_DATA = [
   {
     number: "01",
-    title: "Assessment and Planning & Customization",
+    title: "CONSULTATION & STRATEGY",
     description:
       "Evaluate current processes, identify bottlenecks, and define a tailored DevOps strategy aligned with business objectives.",
   },
   {
     number: "02",
-    title: "Infrastructure Setup",
+    title: "DESIGN & PROTOTYPING",
     description:
       "Design and configure scalable cloud infrastructure using IaC tools like Terraform, ensuring high availability and disaster recovery.",
   },
   {
     number: "03",
-    title: "CI/CD Pipeline Development",
+    title: "DEVELOPMENT & INTEGRATION",
     description:
-      "Build automated pipelines with Jenkins, GitLab CI, or GitHub Actions for seamless code integration, testing, and deployment.",
+      "We build secure, scalable solutions that seamlessly integrate with your existing infrastructure for optimal performance.We build secure, scalable solutions that seamlessly integrate with your existing infrastructure for optimal performance.",
   },
   {
     number: "04",
-    title: "Security & Compliance Integration",
+    title: "TESTING & QUALITY ASSURANCE",
     description:
       "Implement DevSecOps practices with automated security scanning, compliance checks, and vulnerability management.",
   },
   {
     number: "05",
-    title: "Monitoring & Logging",
+    title: "LAUNCH & DEPLOYMENT",
     description:
       "Deploy comprehensive monitoring solutions with Prometheus, Grafana, and ELK stack for real-time insights and alerting.",
   },
   {
     number: "06",
-    title: "Feedback & Continuous Improvement",
+    title: "ONGOING SUPPORT",
     description:
       "Establish feedback loops, performance metrics, and continuous optimization strategies to drive ongoing enhancement.",
   },
@@ -269,7 +253,7 @@ const StepItem = ({ step, index, isActive, onClick, isLastItem }) => (
     onMouseEnter={onClick}
     className={`
       cursor-pointer transition-all duration-300
-      ${isActive ? "bg-black text-white" : " text-black"}
+      ${isActive ? "bg-[#0E1828] text-white" : "bg-primary text-black"}
       ${!isLastItem ? "border-b border-gray-200" : ""}
     `}
     role="button"
@@ -299,7 +283,7 @@ const StepItem = ({ step, index, isActive, onClick, isLastItem }) => (
             {step.title}
           </h3>
           {step.description && isActive && (
-            <p className="text-sm lg:text-base text-white/90 font-outfit font-light leading-relaxed mt-3">
+            <p className="text-sm lg:text-base text-white/90 font-outfit font-light line-clamp-2 overflow-hidden leading-relaxed mt-3">
               {step.description}
             </p>
           )}
@@ -334,13 +318,12 @@ const StepsList = ({ steps, activeStep, onStepChange }) => (
  * Orbital animation canvas component
  */
 const OrbitalAnimation = ({ activeStep, steps, canvasRef }) => (
-  <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+  <div className="relative flex items-center justify-center h-[500px] md:h-[550px] lg:h-[700px]">
     <canvas
       ref={canvasRef}
       className="w-full h-full"
       style={{
         maxWidth: "600px",
-        minHeight: `${CANVAS_CONFIG.minHeight}px`,
       }}
       aria-hidden="true"
     />
@@ -361,7 +344,7 @@ const OrbitalAnimation = ({ activeStep, steps, canvasRef }) => (
 // MAIN COMPONENT
 // ============================================
 
-const DevOpsCycle = () => {
+const TelecommunicationCycle = () => {
   const [activeStep, setActiveStep] = useState(2); // Default to step 03 (index 2)
   const canvasRef = useRef(null);
 
@@ -374,15 +357,25 @@ const DevOpsCycle = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-primary" aria-labelledby="devops-title">
+    <section
+      className="py-16 lg:py-24 bg-[#02070F]"
+      aria-labelledby="devops-title">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
           <h2
             id="devops-title"
-            className="text-3xl md:text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
-            Our DevOps <br /> Development Cycle
+            className="text-[clamp(24px,4vw,42px)] font-stoke font-normal text-textColor lg:leading-[56px] mb-6">
+            Our Telecommunications <br /> Development Cycle
           </h2>
+          <p className="font-outfit font-normal text-textColor  mx-auto text-sm md:text-lg leading-relaxed">
+            At Aireb Solutions, we follow a structured development cycle to
+            ensure that our telecommunications{" "}
+            <br className="hidden lg:block" /> solutions are scalable, secure,
+            and designed to meet the evolving needs of the industry. From
+            planning <br className="hidden lg:block" /> to implementation and
+            beyond, we are committed to delivering high-quality results.
+          </p>
         </header>
 
         {/* Main Content Grid */}
@@ -406,4 +399,4 @@ const DevOpsCycle = () => {
   );
 };
 
-export default DevOpsCycle;
+export default TelecommunicationCycle;

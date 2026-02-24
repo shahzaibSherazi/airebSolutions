@@ -8,7 +8,7 @@ import Layout from "@/components/layout/Layout";
 
 const Education = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <EducationHero />
       <EducationSolutions />
       <EducationServices />
