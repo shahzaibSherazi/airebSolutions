@@ -9,7 +9,9 @@ const HealthCareSolutions = () => {
             Transforming Healthcare & Pharmaceuticals with Innovative Digital
             Solutions
           </h1>
-          <LogoSlider />
+          <div className="md:flex justify-start">
+            <LogoSlider />
+          </div>
         </div>
         <div>
           <p className="font-outfit text-[clamp(14px,1.5vw,18px)] font-normal">

@@ -3,6 +3,7 @@ import logo from "@/assets/aireb_logo.png";
 import UsaFlag from "@/assets/icons/footer/usa-flag.svg?react";
 import CanadaFlag from "@/assets/icons/footer/canada-flag.svg?react";
 import PakFlag from "@/assets/icons/footer/pak-flag.svg?react";
+import bgImg from "@/assets/icons/footer/circle.png";
 import { Link } from "react-router-dom";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
@@ -79,7 +80,7 @@ export default function Footer() {
         background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
       }}>
       {/* ── Top: 4 columns ─────────────────────────────────────────────────── */}
-      <div className=" px-6 lg:px-8 pt-14 pb-10">
+      <div className=" px-6 lg:px-8 pt-16 lg:pt-24 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
           {/* Services */}
           <div className="flex flex-col gap-3">
@@ -89,7 +90,7 @@ export default function Footer() {
             {visibleServices.map((item, i) => (
               <Link
                 to={ROUTES[item] || "#"}
-                className="text-textColor text-base font-outfit font-light hover:text-black transition-colors duration-200 leading-snug">
+                className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
                 {item}
               </Link>
             ))}
@@ -108,7 +109,7 @@ export default function Footer() {
             {visibleIndustries.map((item, i) => (
               <Link
                 to={ROUTES[item] || "#"}
-                className="text-textColor text-base font-outfit font-light hover:text-black transition-colors duration-200 leading-snug">
+                className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
                 {item}
               </Link>
             ))}
@@ -131,7 +132,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="text-textColor text-base font-outfit font-light hover:text-black transition-colors duration-200 leading-snug">
+                  className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
                   {item}
                 </a>
               ),
@@ -171,12 +172,16 @@ export default function Footer() {
       </div>
 
       {/* ── Bottom section ─────────────────────────────────────────────────── */}
-      <div className=" px-6 lg:px-8 py-10 overflow-hidden">
+      <div className=" px-6 lg:px-8 pt-10 lg:pb-24 pb-16 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,2fr,1fr] items-start gap-28">
           {/* Left — brand + description */}
           <div className=" ">
             {/* Content sits above the circle */}
             <div className="relative flex flex-col gap-3">
+              <div
+                className="absolute -top-50 -left-50 w-[200px] h-[200px] 
+                  bg-[radial-gradient(circle_at_center,_#3b82f6_0%,_#2563eb_40%,_#1e40af_70%,_transparent_75%)]
+                  blur-3xl opacity-70 rounded-full"></div>
               <div
                 className="absolute lg:block hidden pointer-events-none"
                 style={{

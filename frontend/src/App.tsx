@@ -316,6 +316,8 @@ import logoImg from "@/assets/aireb_logo.png";
 import IndustriesEcommerce from "./pages/Industries/ecommerce";
 import Gaming from "./pages/Industries/gaming";
 import Telecommunication from "./pages/Industries/telecommunication";
+import StartUp from "./pages/Industries/start-up";
+import Banking from "./pages/Industries/banking-fintech";
 
 const queryClient = new QueryClient();
 
@@ -403,6 +405,8 @@ const AnimatedRoutes = () => {
           path="/industries/telecommunication"
           element={<Telecommunication />}
         />
+        <Route path="/industries/start-up" element={<StartUp />} />
+        <Route path="/industries/banking-fintech" element={<Banking />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

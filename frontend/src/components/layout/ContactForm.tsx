@@ -319,7 +319,7 @@ export default function ContactForm() {
   return (
     <section className="bg-black text-white relative min-h-screen flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
-      <div className="w-full flex items-center justify-center px-4 sm:px-8 lg:px-[58px] py-8 sm:py-12 lg:py-16">
+      <div className="w-full flex items-center justify-center px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
             <h1 className="font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[48px] leading-tight sm:leading-snug lg:leading-[64px]">

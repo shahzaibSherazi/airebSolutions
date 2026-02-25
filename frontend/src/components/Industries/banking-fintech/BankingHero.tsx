@@ -1,0 +1,49 @@
+import heroImg from "@/assets/Industies/banking-fintech/hero-img.png";
+
+export default function BankingHero() {
+  return (
+    <section
+      className=""
+      style={{
+        background:
+          "radial-gradient(45.2% 145.22% at 83.64% 50.07%, #02070F 0%, #213659 100%)",
+      }}>
+      <div className="w-full lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
+        {/* LEFT CONTENT */}
+        <div className="flex flex-col justify-end items-start w-full space-y-6">
+          {/* Sector Button */}
+          <div
+            style={{
+              background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
+            }}
+            className="mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
+            <p className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold ">
+              Sector
+            </p>
+          </div>
+
+          <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
+            Custom FinTech
+            <br className="hidden lg:block" /> Software Solutions
+          </h1>
+        </div>
+
+        <div className="w-full lg:w-1/2 flex items-start justify-center lg:justify-end">
+          <img
+            src={heroImg}
+            alt="FinTech Hero"
+            className="
+      w-[85%] 
+      sm:w-[75%] 
+      md:w-[70%] 
+      lg:w-[100%] 
+      max-w-[720px] 
+      h-auto 
+      object-contain
+    "
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

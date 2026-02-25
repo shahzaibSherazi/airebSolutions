@@ -88,7 +88,7 @@ export default function EcommerceHero() {
             </div>
 
             {/* Heading */}
-            <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
+            <h1 className="font-stoke text-[clamp(24px,5vw,52px)] leading-[1.28] text-white">
               E-commerce Solutions
               <br />
               for Modern Businesses
@@ -96,7 +96,7 @@ export default function EcommerceHero() {
           </div>
 
           {/* ── RIGHT: Chat UI Panel ── */}
-          <div className="relative w-full lg:w-[50%] max-w-[480px]">
+          <div className="relative w-full  max-w-[480px]">
             {/* Corner marks top-right and bottom-left */}
             <div className="absolute -top-2 -right-2 w-4 h-4 pointer-events-none">
               <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#4285F4]" />
@@ -107,13 +107,13 @@ export default function EcommerceHero() {
 
             {/* Panel with gradient border */}
             <div
-              className="w-full  p-5 flex flex-col gap-3"
+              className="w-full  p-5 flex flex-col gap-6"
               style={{ ...rightPanelBorder }}>
               {/* Bubble 1 — User message */}
               {visible >= 1 && (
                 <div className="chat-item flex items-center justify-end gap-3">
                   <div
-                    className="flex items-center gap-3 px-4 py-3 border border-primary rounded-2xl rounded-tr-sm"
+                    className="flex items-center gap-3 px-4 py-4 border border-primary rounded-2xl rounded-tr-sm"
                     style={{
                       background:
                         "linear-gradient(90deg, #000000 0%, #4285F4 100%)",
@@ -138,7 +138,7 @@ export default function EcommerceHero() {
                     <img src={botIcon} className="w-full h-full" />
                   </div>
                   <div
-                    className="px-4 py-3 rounded-2xl rounded-tl-sm border border-primary"
+                    className="px-4 py-4 rounded-2xl rounded-tl-sm border border-primary"
                     style={{
                       background:
                         "linear-gradient(90deg, #000000 0%, #4285F4 100%)",
@@ -157,13 +157,13 @@ export default function EcommerceHero() {
               {visible >= 3 && (
                 <div className="chat-item flex items-start gap-3 ml-12">
                   <div
-                    className="flex  items-center gap-3 p-2 border border-primary rounded-2xl overflow-hidden w-full"
+                    className="flex  items-center md:flex-row flex-col gap-3 px-2 py-4 border border-primary rounded-2xl overflow-hidden w-full"
                     style={{
                       background:
                         "linear-gradient(90deg, #000000 0%, #4285F4 100%)",
                     }}>
                     {/* Product image placeholder */}
-                    <div className="max-w-24 rounded-xl  flex items-center justify-center overflow-hidden">
+                    <div className="md:max-w-32 w-full  h-[130px]  rounded-xl  flex items-center justify-center overflow-hidden">
                       <img src={productIcon} className="w-full h-full" />
                     </div>
 
@@ -186,7 +186,7 @@ export default function EcommerceHero() {
               {visible >= 4 && (
                 <div className="chat-item flex justify-end mt-1">
                   <div
-                    className="flex items-center justify-between gap-4 px-5 py-3 rounded-xl "
+                    className="flex items-center justify-between gap-4 px-5 py-4 rounded-xl "
                     style={{ ...purchaseBorder }}>
                     <div className="flex items-center gap-2 text-white text-sm font-medium">
                       <CartIcon size={16} color="#4285F4" />
