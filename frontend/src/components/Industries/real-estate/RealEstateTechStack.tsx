@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TeckStackImg from "@/assets/icons/industries/banking-fintech/search-icon.svg?react";
+import teckStackImg from "@/assets/Industies/real-estate/techStack-img.png";
 const techStack = [
   {
     name: "Node.Js",
@@ -110,7 +110,7 @@ const rectBorder = {
   backgroundClip: "padding-box, border-box",
 };
 
-export default function BankingTechStack() {
+export default function RealEstateTechStack() {
   return (
     <>
       <section className=" bg-[#02070F] px-6 sm:px-8  py-16 md:py-24">
@@ -125,7 +125,7 @@ export default function BankingTechStack() {
                 Expertise
               </h1>
               <p className="text-textColor font-outfit text-sm md:text-base max-w-2xl leading-[1.85] font-light">
-                Our fintech application development services combine proven
+                Our gaming application development services combine proven
                 regulatory expertise with a robust, modern tech stack to deliver
                 secure, scalable, and compliant fintech solutions.
               </p>
@@ -148,33 +148,30 @@ export default function BankingTechStack() {
           </div>
 
           {/* ── Main Content Row ── */}
-          <div className="flex flex-col md:flex-row gap-5  ">
+          <div className="grid grid-cols-1 md:grid-cols-[0.9fr,3fr] gap-5  ">
             {/* ── Left Card: Gradient yellow-blue education card ── */}
             <div
-              className=" rounded-[9px]  overflow-hidden flex flex-col justify-between p-6 "
+              className="relative rounded-[9px]  min-h-[320px] overflow-hidden flex flex-col justify-between p-3 "
               style={{
-                border: "1.5px solid transparent",
-                backgroundImage:
-                  "linear-gradient(#02070F, #02070F),linear-gradient(180deg, #629DFF 0%, #000000 52.4%, #629DFF 99.52%)",
-                backgroundOrigin: "border-box",
-                backgroundClip: "padding-box, border-box",
+                background: "linear-gradient(180deg, #E23237 0%, #0E1828 100%)",
               }}>
               {/* Bottom text + button */}
-              <div className="flex flex-col justify-between flex-1 items-start gap-4">
-                <div className=" bg-primary p-1 rounded-md">
-                  <TeckStackImg />
+              <div className="flex flex-col justify-center items-start gap-4">
+                <div className="absolute inset-0 w-full h-full">
+                  <img
+                    src={teckStackImg}
+                    className="w-full h-full object-center"
+                  />
                 </div>
-                <div>
-                  <p className="font-stoke font-normal text-base md:text-lg lg:text-xl mb-4 flex items-center gap-4">
-                    Banking and Fintech{" "}
-                    <span className="text-primary text-2xl">→</span>
-                  </p>
-
-                  <p className="flex items-center font-outfit font-light text-white text-sm max-w-xs">
-                    We tailor our solutions to meet your specific business needs
-                    and challenges, ensuring maximum impact.
-                  </p>
-                </div>
+                <button
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #4285F4 0%, #000000 100%)",
+                  }}
+                  className="absolute bottom-4 group flex items-center font-outfit font-bold gap-2  hover:text-black text-white text-sm  px-2 py-2 rounded-full transition-all duration-200 border border-primary">
+                  Start A Project
+                  <span className="group-hover:text-primary text-white">→</span>
+                </button>
               </div>
             </div>
 
@@ -182,7 +179,7 @@ export default function BankingTechStack() {
             <div
               className="flex-1 rounded-[9px]  p-6 sm:p-8 flex items-center justify-center"
               style={rectBorder}>
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 w-full place-items-center auto-rows-fr  gap-4 sm:gap-6">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 w-full place-items-center auto-rows-fr  gap-4 sm:gap-12">
                 {techStack.map((tech) => (
                   <div
                     key={tech.name}

@@ -318,6 +318,9 @@ import Gaming from "./pages/Industries/gaming";
 import Telecommunication from "./pages/Industries/telecommunication";
 import StartUp from "./pages/Industries/start-up";
 import Banking from "./pages/Industries/banking-fintech";
+import RealEstate from "./pages/Industries/real-estate";
+import Retail from "./pages/Industries/retail";
+import TravelHospitality from "./pages/Industries/travel-hospitality";
 
 const queryClient = new QueryClient();
 
@@ -407,6 +410,12 @@ const AnimatedRoutes = () => {
         />
         <Route path="/industries/start-up" element={<StartUp />} />
         <Route path="/industries/banking-fintech" element={<Banking />} />
+        <Route path="/industries/real-estate" element={<RealEstate />} />
+        <Route path="/industries/retail" element={<Retail />} />
+        <Route
+          path="/industries/travel-hospitality"
+          element={<TravelHospitality />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

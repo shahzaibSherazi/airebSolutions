@@ -1,14 +1,23 @@
 import heroImg from "@/assets/Industies/banking-fintech/hero-img.png";
+import bgImg from "@/assets/Industies/banking-fintech/hero-bg.png";
 
 export default function BankingHero() {
   return (
-    <section
-      className=""
-      style={{
-        background:
-          "radial-gradient(45.2% 145.22% at 83.64% 50.07%, #02070F 0%, #213659 100%)",
-      }}>
-      <div className="w-full lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
+    <section className="relative">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${bgImg})`,
+        }}
+      />
+      <div
+        style={{
+          background:
+            "linear-gradient(66.03deg, rgba(66, 133, 244, 0.4) -38.71%, #000000 73.04%)",
+        }}
+        className="absolute inset-0"
+      />
+      <div className="w-full z-10 relative lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}

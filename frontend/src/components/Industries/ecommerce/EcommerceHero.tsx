@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import avatarIcon from "@/assets/Industies/ecommerce/avatar.png";
 import botIcon from "@/assets/Industies/ecommerce/bot.png";
 import productIcon from "@/assets/Industies/ecommerce/product.png";
+import bgImg from "@/assets/Industies/ecommerce/hero-bg.png";
 
 // ── Gradient border helpers (CSS background-clip trick) ───────────────────────
 const rightPanelBorder = {
@@ -67,12 +68,20 @@ export default function EcommerceHero() {
         .corner-br::after  { bottom:0; left:0; border-width:0 0 2px 2px; }
       `}</style>
 
-      <section
-        className="relative w-full  overflow-hidden flex items-center"
-        style={{
-          background:
-            " linear-gradient(257.21deg, rgba(0, 0, 0, 0.2) 45.87%, #4285F4 98.27%)",
-        }}>
+      <section className="relative w-full  overflow-hidden flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${bgImg})`,
+          }}
+        />
+        <div
+          style={{
+            background:
+              "linear-gradient(257.21deg, rgba(0, 0, 0, 0.2) 45.87%, rgba(66, 133, 244, 0.5) 98.27%)",
+          }}
+          className="absolute inset-0"
+        />
         <div className="relative lg:h-screen z-10 w-full  px-6 lg:px-8 py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           {/* ── LEFT: Text Content ── */}
           <div className="flex flex-col items-start self-end gap-5 w-full">

@@ -32,10 +32,8 @@ const itemRoutes = {
   Gaming: "/industries/gaming",
   Telecommunication: "/industries/telecommunication",
   "Start Up": "/industries/start-up",
-  Hospitality: "/industries/hospitality",
-  "Energy & Utilities": "/industries/energy-utilities",
-  Agriculture: "/industries/agriculture",
-  Government: "/industries/government",
+  Retail: "/industries/retail",
+  "Travel & Hospitality": "/industries/travel-hospitality",
 
   // Resources routes
   "Blog Articles": "/resources/blog",
@@ -97,10 +95,8 @@ const menuItems = [
       "Gaming",
       "Telecommunication",
       "Start Up",
-      "Hospitality",
-      "Energy & Utilities",
-      "Agriculture",
-      "Government",
+      "Retail",
+      "Travel & Hospitality",
     ],
   },
   {
