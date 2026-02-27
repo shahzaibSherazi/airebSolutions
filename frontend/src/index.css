@@ -1134,3 +1134,25 @@ html.lenis {
   border-bottom: 2px solid white;
   border-right: 2px solid white;
 }
+
+.blogsCards_TopEdge::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.blogsCards_BottomEdge::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}

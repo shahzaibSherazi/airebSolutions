@@ -36,7 +36,7 @@ const itemRoutes = {
   "Travel & Hospitality": "/industries/travel-hospitality",
 
   // Resources routes
-  "Blog Articles": "/resources/blog",
+  Blogs: "/resources/blogs",
   "Case Studies": "/resources/case-studies",
   Whitepapers: "/resources/whitepapers",
   Webinars: "/resources/webinars",
@@ -102,7 +102,7 @@ const menuItems = [
   {
     name: "Resources",
     items: [
-      "Blog Articles",
+      "Blogs",
       "Case Studies",
       "Whitepapers",
       "Webinars",

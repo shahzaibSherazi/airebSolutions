@@ -321,6 +321,7 @@ import Banking from "./pages/Industries/banking-fintech";
 import RealEstate from "./pages/Industries/real-estate";
 import Retail from "./pages/Industries/retail";
 import TravelHospitality from "./pages/Industries/travel-hospitality";
+import Blogs from "./pages/resources";
 
 const queryClient = new QueryClient();
 
@@ -416,6 +417,7 @@ const AnimatedRoutes = () => {
           path="/industries/travel-hospitality"
           element={<TravelHospitality />}
         />
+        <Route path="/resources/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
