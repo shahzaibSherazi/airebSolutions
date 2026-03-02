@@ -38,7 +38,7 @@ const itemRoutes = {
   // Resources routes
   Blogs: "/resources/blogs",
   "Case Studies": "/resources/case-studies",
-  Whitepapers: "/resources/whitepapers",
+  Whitepapers: "/resources/white-papers",
   Webinars: "/resources/webinars",
   "E-books": "/resources/ebooks",
   Documentation: "/resources/documentation",
@@ -377,7 +377,7 @@ const Header = () => {
             {/* Contact Button - Desktop */}
             <div className="hidden lg:block">
               <button
-                onClick={() => navigate("/contact")}
+                onClick={() => navigate("/contact-us")}
                 className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-[3px] font-medium text-sm transition-all shadow-lg hover:shadow-xl border border-white/20">
                 CONTACT
               </button>
@@ -500,7 +500,7 @@ const Header = () => {
             {/* Contact Button - Mobile */}
             <button
               onClick={() => {
-                navigate("/contact");
+                navigate("/contact-us");
                 setIsMobileMenuOpen(false);
                 setActiveMobileMenu(null);
               }}

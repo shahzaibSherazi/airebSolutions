@@ -368,7 +368,7 @@ export default function AllBlogs() {
   const smallCards = currentPosts.slice(2);
 
   return (
-    <section className="w-full bg-[#02070F] py-12 px-4 sm:px-6 lg:px-10 font-outfit">
+    <section className="w-full bg-[#02070F] py-16 lg:py-24 px-6 lg:px-8 font-outfit">
       <div>
         {/* ── Filter tabs ───────────────────────────────── */}
         <div className="flex items-center gap-1 sm:gap-2 flex-wrap justify-center mb-10">

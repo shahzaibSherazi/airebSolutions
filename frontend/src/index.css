@@ -1156,3 +1156,24 @@ html.lenis {
   border-right: 2px solid white;
   border-bottom: 2px solid white;
 }
+.whitePaperCards_TopEdge::before {
+  position: absolute;
+  top: 1px;
+  left: -2px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.whitePaperCards_TopEdge::after {
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}

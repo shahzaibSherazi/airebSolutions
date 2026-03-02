@@ -321,7 +321,9 @@ import Banking from "./pages/Industries/banking-fintech";
 import RealEstate from "./pages/Industries/real-estate";
 import Retail from "./pages/Industries/retail";
 import TravelHospitality from "./pages/Industries/travel-hospitality";
-import Blogs from "./pages/resources";
+import Blogs from "./pages/resources/blogs";
+import WhitePaper from "./pages/resources/white-paper";
+import ContactUs from "./pages/contactUs";
 
 const queryClient = new QueryClient();
 
@@ -418,6 +420,8 @@ const AnimatedRoutes = () => {
           element={<TravelHospitality />}
         />
         <Route path="/resources/blogs" element={<Blogs />} />
+        <Route path="/resources/white-papers" element={<WhitePaper />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
