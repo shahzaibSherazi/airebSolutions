@@ -1177,3 +1177,81 @@ html.lenis {
   border-right: 2px solid white;
   border-bottom: 2px solid white;
 }
+.aboutUsCards_Edge::before {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.aboutUsCards_Edge::after {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.aboutUs_Cards_Edge::before {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.aboutUs_Cards_Edge::after {
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-company-location-fadeSlideIn {
+  animation: fadeSlideIn 1s ease;
+}
+
+.leadersCards_Edge::before {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.leadersCards_Edge::after {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}

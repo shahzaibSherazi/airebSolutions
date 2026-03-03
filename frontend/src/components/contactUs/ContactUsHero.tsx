@@ -17,9 +17,9 @@ export default function ContactUsHero() {
         className="absolute inset-0 "
       />
 
-      <div className="relative z-10 max-w-8xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+      <div className="relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
         {/* ───────── LEFT CONTENT ───────── */}
-        <div className="self-end mb-14">
+        <div className="self-center lg:self-end mb-14">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary text-white font-outfit font-bold text-sm px-4 py-2 rounded-[5px] mb-8">
             <span className="w-2 h-2 bg-[#6FD3FF] rounded-full"></span>
@@ -41,7 +41,7 @@ export default function ContactUsHero() {
           </p>
 
           {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 text-white/80 text-sm">
+          <div className="flex flex-wrap items-start sm:items-center gap-6 text-white text-sm">
             <div className="flex items-center gap-2 font-outfit font-medium text-[clamp(16px,2vw,20px)]">
               <Mail size={16} className="text-[#6FD3FF]" />
               sales@airebsolutions.com
@@ -130,8 +130,8 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   };
 
   return (
-    <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative">
-      <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6 md:py-8 space-y-3 sm:space-y-4 md:space-y-5">
+    <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative lg:mb-10">
+      <div className="px-3 sm:px-4 md:px-[18px] py-[clamp(14px,2.8vh,32px)] space-y-[clamp(10px,1.8vh,24px)]">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           <Input

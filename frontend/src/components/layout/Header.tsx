@@ -50,7 +50,7 @@ const itemRoutes = {
   FAQs: "/resources/faqs",
 
   // About Us routes
-  "Our Story": "/about/our-story",
+  "Our Story": "/about-us",
   Team: "/about/team",
   Careers: "/about/careers",
   Partners: "/about/partners",

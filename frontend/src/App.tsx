@@ -324,6 +324,7 @@ import TravelHospitality from "./pages/Industries/travel-hospitality";
 import Blogs from "./pages/resources/blogs";
 import WhitePaper from "./pages/resources/white-paper";
 import ContactUs from "./pages/contactUs";
+import AboutUs from "./pages/aboutUs";
 
 const queryClient = new QueryClient();
 
@@ -422,6 +423,7 @@ const AnimatedRoutes = () => {
         <Route path="/resources/blogs" element={<Blogs />} />
         <Route path="/resources/white-papers" element={<WhitePaper />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
