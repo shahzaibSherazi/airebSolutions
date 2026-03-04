@@ -325,6 +325,7 @@ import Blogs from "./pages/resources/blogs";
 import WhitePaper from "./pages/resources/white-paper";
 import ContactUs from "./pages/contactUs";
 import AboutUs from "./pages/aboutUs";
+import Careers from "./pages/careers";
 
 const queryClient = new QueryClient();
 
@@ -424,6 +425,7 @@ const AnimatedRoutes = () => {
         <Route path="/resources/white-papers" element={<WhitePaper />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about/careers" element={<Careers />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

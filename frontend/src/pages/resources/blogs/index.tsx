@@ -4,7 +4,7 @@ import BlogsHero from "@/components/resources/blogs/BlogsHero";
 
 const Blogs = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <BlogsHero />
       <AllBlogs />
     </Layout>

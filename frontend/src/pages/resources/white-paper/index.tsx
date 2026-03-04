@@ -6,7 +6,7 @@ import WhitePaperHero from "@/components/resources/white-paper/WhitePaperHero";
 
 const WhitePaper = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <WhitePaperHero />
       <AllWhitePapers />
     </Layout>

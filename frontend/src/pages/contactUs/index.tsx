@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout";
 
 const ContactUs = () => {
   return (
-    <Layout>
+    <Layout enableSmoothScroll>
       <ContactUsHero />
       <CompanyLocations />
     </Layout>
