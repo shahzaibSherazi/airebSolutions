@@ -7,22 +7,20 @@ const locations = {
   USA: {
     label: "USA",
     address: "1309 Coffeen Avenue STE 1200 Sheridan, Wyoming 82801",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=1309+Coffeen+Avenue+STE+1200+Sheridan+Wyoming+82801",
+
     flag: <UsaIcon />,
   },
   Canada: {
     label: "Canada",
     address: "55 Village Centre Place, Suite 200, Mississauga, ON L4Z1V9",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=55+Village+Centre+Place+Suite+200+Mississauga+ON+L4Z1V9",
+
     flag: <CanadaIcon />,
   },
   Pakistan: {
     label: "Pakistan",
-    address: "55 Village Centre Place, Suite 200, Mississauga, ON L4Z1V9",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=55+Village+Centre+Place+Suite+200+Mississauga+ON+L4Z1V9",
+    address:
+      "Farooq Avenue Housing Society Block G Phase 1  Johar Town, Lahore, Pakistan",
+
     flag: <PakIcon />,
   },
 };
@@ -146,7 +144,7 @@ export default function CompanyLocations() {
             </div>
 
             {/* Address */}
-            <p className="text-base leading-relaxed font-outfit line-clamp-3 overflow-hidden text-textColor mb-5">
+            <p className="text-base leading-relaxed font-outfit line-clamp-2 overflow-hidden text-textColor mb-5">
               {current.address}
             </p>
 

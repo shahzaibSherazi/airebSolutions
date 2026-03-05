@@ -245,13 +245,13 @@ export default function Footer() {
             {/* Privacy + Terms */}
             <div className="flex items-center gap-2 text-sm">
               <a
-                href="#"
+                href="/privacy-policy"
                 className="text-white font-outfit hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <span className="text-white font-outfit">and</span>
+              <span className="text-white font-outfit">|</span>
               <a
-                href="#"
+                href="/terms&conditions"
                 className="text-white font-outfit hover:text-primary transition-colors">
                 Terms of Use
               </a>

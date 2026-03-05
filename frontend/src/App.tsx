@@ -326,6 +326,8 @@ import WhitePaper from "./pages/resources/white-paper";
 import ContactUs from "./pages/contactUs";
 import AboutUs from "./pages/aboutUs";
 import Careers from "./pages/careers";
+import PrivacyPolicy from "./pages/privacyPolicy";
+import TermsAndConditions from "./pages/terms-conditions";
 
 const queryClient = new QueryClient();
 
@@ -426,6 +428,8 @@ const AnimatedRoutes = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/about/careers" element={<Careers />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms&conditions" element={<TermsAndConditions />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
