@@ -96,7 +96,7 @@ export default function Footer() {
             ))}
             <button
               onClick={() => setShowAllServices((p) => !p)}
-              className="text-white font-outfit text-base font-light mt-1 text-left hover:underline transition-all duration-200">
+              className="text-white font-outfit text-base font-light mt-1 text-left hover:text-black transition-all duration-200">
               {showAllServices ? "View Less Services ↑" : "View All Services"}
             </button>
           </div>
@@ -115,7 +115,7 @@ export default function Footer() {
             ))}
             <button
               onClick={() => setShowAllIndustries((p) => !p)}
-              className="text-white font-outfit text-base font-light mt-1 text-left hover:underline transition-all duration-200">
+              className="text-white font-outfit text-base font-light mt-1 text-left hover:text-black  transition-all duration-200">
               {showAllIndustries
                 ? "View Less Industries ↑"
                 : "View All Industries"}
@@ -155,7 +155,7 @@ export default function Footer() {
               },
               {
                 flag: <PakFlag />,
-                addr: "55 Village Centre Place, Suite 200,\nMississauga, ON L4Z1V9",
+                addr: "Farooq Avenue Housing Society Block G Phase 1  Johar Town, Lahore, Pakistan",
               },
             ].map(({ flag, addr }, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -244,17 +244,17 @@ export default function Footer() {
 
             {/* Privacy + Terms */}
             <div className="flex items-center gap-2 text-sm">
-              <a
-                href="/privacy-policy"
+              <Link
+                to="/privacy-policy"
                 className="text-white font-outfit hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <span className="text-white font-outfit">|</span>
-              <a
-                href="/terms&conditions"
+              <Link
+                to="/terms&conditions"
                 className="text-white font-outfit hover:text-primary transition-colors">
                 Terms of Use
-              </a>
+              </Link>
             </div>
 
             {/* Copyright */}

@@ -328,6 +328,9 @@ import AboutUs from "./pages/aboutUs";
 import Careers from "./pages/careers";
 import PrivacyPolicy from "./pages/privacyPolicy";
 import TermsAndConditions from "./pages/terms-conditions";
+import Portfolio from "./pages/resources/portfolio";
+import BlogDetailPage from "./pages/resources/blogs/DetailPage";
+import DetailPage from "./pages/resources/blogs/DetailPage";
 
 const queryClient = new QueryClient();
 
@@ -424,7 +427,9 @@ const AnimatedRoutes = () => {
           element={<TravelHospitality />}
         />
         <Route path="/resources/blogs" element={<Blogs />} />
+        <Route path="/resources/blogs/:id" element={<DetailPage />} />
         <Route path="/resources/white-papers" element={<WhitePaper />} />
+        <Route path="/resources/portfolio" element={<Portfolio />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/about/careers" element={<Careers />} />
