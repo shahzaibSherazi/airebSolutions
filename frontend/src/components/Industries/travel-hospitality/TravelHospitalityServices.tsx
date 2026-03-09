@@ -1,49 +1,49 @@
 import { useState } from "react";
-import SoftwareDevIcon from "@/assets/icons/industries/health-care/services-icons/software_dev.svg?react";
-import MhealthIcon from "@/assets/icons/industries/health-care/services-icons/mHealth.svg?react";
-import LabIcon from "@/assets/icons/industries/health-care/services-icons/lab.svg?react";
-import MachinLearningIcon from "@/assets/icons/industries/health-care/services-icons/machin-learning.svg?react";
-import CloudIcon from "@/assets/icons/industries/health-care/services-icons/cloud.svg?react";
-import DigitalIcon from "@/assets/icons/industries/health-care/services-icons/digital.svg?react";
+import HotelIcon from "@/assets/Industies/travel-hospitality/services/hotel.svg?react";
+import TravelIcon from "@/assets/Industies/travel-hospitality/services/travel.svg?react";
+import MobileIcon from "@/assets/Industies/travel-hospitality/services/mobile-app.svg?react";
+import MarketingIcon from "@/assets/Industies/travel-hospitality/services/marketing.svg?react";
+import IntegrationIcon from "@/assets/Industies/travel-hospitality/services/integration.svg?react";
+import WebsiteIcon from "@/assets/Industies/travel-hospitality/services/website.svg?react";
 const services = [
   {
     id: 1,
-    icon: <SoftwareDevIcon />,
+    icon: <HotelIcon />,
     title: "Hotel Management Solutions",
     description:
       "Managing a hotel requires balancing guest satisfaction, operational efficiency, and business growth. Our hotel management solutions streamline processes, enabling you to focus on delivering exceptional service to your guests.",
   },
   {
     id: 2,
-    icon: <MhealthIcon />,
+    icon: <TravelIcon />,
     title: "Travel Agency Solutions",
     description:
       "Travel agencies need streamlined operations, effective customer communication, and easy booking systems to thrive in the competitive travel industry. Aireb Solutions provides solutions that allow agencies to stay organized and offer high-quality service to travelers.",
   },
   {
     id: 3,
-    icon: <LabIcon />,
+    icon: <MobileIcon />,
     title: "Mobile App Development for Travel & Hospitality",
     description:
       "In today's digital age, mobile apps are essential for improving customer engagement and enhancing convenience. We create custom mobile applications for the travel and hospitality sector that enable businesses to provide an exceptional mobile experience for their customers.",
   },
   {
     id: 4,
-    icon: <MachinLearningIcon />,
+    icon: <MarketingIcon />,
     title: "Digital Marketing Solutions",
     description:
       "Effective digital marketing is essential for attracting customers and increasing brand awareness in the competitive travel and hospitality industry. Aireb Solutions provides a range of digital marketing services to help businesses boost their online presence.",
   },
   {
     id: 5,
-    icon: <CloudIcon />,
+    icon: <IntegrationIcon />,
     title: "Booking Engine Integration & Optimization",
     description:
       "An efficient booking engine is the backbone of any travel or hospitality business. We integrate high-performance booking engines that optimize the booking process for both customers and businesses, ensuring higher conversion rates and better user experiences.",
   },
   {
     id: 6,
-    icon: <DigitalIcon />,
+    icon: <WebsiteIcon />,
     title: "Property Website Design & Development",
     description:
       "Having a professional, visually appealing, and user-friendly website is essential for any hospitality business. Our design and development services ensure that your website reflects your brand while providing an excellent user experience.",

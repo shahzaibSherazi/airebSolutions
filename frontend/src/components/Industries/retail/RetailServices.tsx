@@ -1,49 +1,49 @@
 import { useState } from "react";
-import SoftwareDevIcon from "@/assets/icons/industries/health-care/services-icons/software_dev.svg?react";
-import MhealthIcon from "@/assets/icons/industries/health-care/services-icons/mHealth.svg?react";
-import LabIcon from "@/assets/icons/industries/health-care/services-icons/lab.svg?react";
-import MachinLearningIcon from "@/assets/icons/industries/health-care/services-icons/machin-learning.svg?react";
-import CloudIcon from "@/assets/icons/industries/health-care/services-icons/cloud.svg?react";
-import DigitalIcon from "@/assets/icons/industries/health-care/services-icons/digital.svg?react";
+import WebIcon from "@/assets/Industies/retail/services/web-development.svg?react";
+import MobileIcon from "@/assets/Industies/retail/services/mobile-app.svg?react";
+import SupplyIcon from "@/assets/Industies/retail/services/supply-chain.svg?react";
+import CrmIcon from "@/assets/Industies/retail/services/crm.svg?react";
+import CgpIcon from "@/assets/Industies/retail/services/cgp.svg?react";
+import ArIcon from "@/assets/Industies/retail/services/ar.svg?react";
 const services = [
   {
     id: 1,
-    icon: <SoftwareDevIcon />,
+    icon: <WebIcon />,
     title: "E-Commerce Website Development",
     description:
       "A strong online presence is essential for any retail business. We design and develop e-commerce websites that provide customers with an intuitive, fast, and secure shopping experience. Our websites are fully optimized for mobile devices, ensuring that customers can shop anytime, anywhere.",
   },
   {
     id: 2,
-    icon: <MhealthIcon />,
+    icon: <MobileIcon />,
     title: "Mobile App Development for Retail",
     description:
       "Mobile apps are becoming a critical tool for retailers to engage with customers and increase sales. We create custom mobile apps that deliver an exceptional shopping experience, integrate loyalty programs, and offer personalized recommendations.",
   },
   {
     id: 3,
-    icon: <LabIcon />,
+    icon: <SupplyIcon />,
     title: "Inventory and Supply Chain Management Systems",
     description:
       "Efficient inventory and supply chain management are key to the success of retail and CGP businesses. We offer software solutions that automate inventory tracking, manage stock levels, and streamline supply chain operations.",
   },
   {
     id: 4,
-    icon: <MachinLearningIcon />,
+    icon: <CrmIcon />,
     title: "Customer Relationship Management (CRM)",
     description:
       "Effective customer management is essential for building loyalty and increasing sales. Our CRM solutions help retail businesses manage customer interactions, track sales leads, and create personalized marketing campaigns.",
   },
   {
     id: 5,
-    icon: <CloudIcon />,
+    icon: <CgpIcon />,
     title: "Digital Marketing for Retail & CGP",
     description:
       "To remain competitive, businesses must leverage digital marketing strategies that attract and retain customers. We offer a wide range of digital marketing services to help retail and CGP companies boost their online visibility and drive sales.",
   },
   {
     id: 6,
-    icon: <DigitalIcon />,
+    icon: <ArIcon />,
     title: "Augmented Reality (AR) Solutions",
     description:
       "Augmented Reality is transforming the shopping experience by allowing customers to visualize products in real-time before making a purchase. We help retail businesses create AR solutions that provide customers with immersive experiences.",

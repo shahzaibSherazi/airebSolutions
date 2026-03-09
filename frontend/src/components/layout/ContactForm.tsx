@@ -317,7 +317,9 @@ export default function ContactForm() {
   const [showSuccess, setShowSuccess] = useState(false);
 
   return (
-    <section className="bg-black text-white relative min-h-screen flex items-center">
+    <section
+      id="contact-form"
+      className="bg-black text-white relative min-h-screen flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
       <div className="w-full flex items-center justify-center px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
@@ -372,6 +374,21 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   };
 
   const submitForm = async () => {
+    if (!form.fullName || !form.email) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    if (!phone) {
+      alert("Please enter phone number.");
+      return;
+    }
+
+    if (!service) {
+      alert("Please select a service.");
+      return;
+    }
+
     if (!form.privacyAgreed) {
       alert("Please agree to the privacy policy.");
       return;
@@ -379,37 +396,43 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
     setLoading(true);
 
+    const payload = {
+      fullName: form.fullName.trim(),
+      email: form.email.trim(),
+      phoneNumber: phone,
+      service: service,
+      message: form.message.trim(),
+      privacyAgreed: form.privacyAgreed,
+    };
+
     try {
       const response = await fetch("http://localhost:5000/api/contact/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: form.fullName,
-          email: form.email,
-          phoneNumber: phone,
-          service,
-          message: form.message,
-          privacyAgreed: form.privacyAgreed,
-        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
       if (data.success) {
         onSuccess();
+
         setForm({
           fullName: "",
           email: "",
           message: "",
           privacyAgreed: false,
         });
+
         setPhone("");
         setService("");
       } else {
-        alert("Something went wrong. Please try again.");
+        alert(data.message || "Something went wrong.");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Submit error:", error);
       alert("Server error. Please try later.");
     } finally {
       setLoading(false);
@@ -467,6 +490,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
           <textarea
             rows={3}
             name="message"
+            maxLength={1000}
             value={form.message}
             onChange={handleChange}
             placeholder="Leave us a message..."
@@ -567,7 +591,7 @@ function ServiceDropdown({ value, onChange }) {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative select-none">
       <label className="text-xs sm:text-sm">Select Service</label>
 
       {/* Trigger */}

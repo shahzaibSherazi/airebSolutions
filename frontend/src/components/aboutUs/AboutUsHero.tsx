@@ -128,13 +128,13 @@ const AboutHero = () => {
               About Us
             </button>
 
-            <h1 className="text-white font-stoke font-normal text-[clamp(32px,4vw,42px)] leading-[1.2]  mb-6">
+            <h1 className="text-white font-stoke font-normal text-[clamp(32px,5vw,48px)] leading-[1.2]  mb-6">
               Delivering software <br />
               teams, expertise <br />
               and results
             </h1>
 
-            <p className="text-white font-outfit font-light text-[clamp(16px,2vw,24px)] leading-relaxed">
+            <p className="text-white font-outfit font-extralight text-[clamp(14px,1.8vw,22px)] leading-relaxed">
               Aireb Solutions delivers custom software development services to
               businesses worldwide, partnering with startups and enterprises to
               build scalable engineering teams and create high-quality digital
