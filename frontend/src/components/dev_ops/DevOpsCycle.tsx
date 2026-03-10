@@ -1,20 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-
-/**
- * Professional DevOps Cycle Component
- *
- * Features:
- * - Proper separation of concerns
- * - Optimized canvas rendering with RAF
- * - Custom hooks for reusability
- * - TypeScript-ready structure
- * - Performance optimizations
- * - Clean, maintainable code
- */
-
-// ============================================
-// CONSTANTS & CONFIGURATION
-// ============================================
+import { motion } from "framer-motion";
 
 const CANVAS_CONFIG = {
   layers: 6,
@@ -75,13 +60,6 @@ const STEPS_DATA = [
   },
 ];
 
-// ============================================
-// CUSTOM HOOKS
-// ============================================
-
-/**
- * Hook for managing canvas rendering with proper cleanup
- */
 const useCanvasAnimation = (canvasRef, activeStep, config) => {
   const dotPositionRef = useRef(0);
   const animationRef = useRef(null);
@@ -194,6 +172,14 @@ const useCanvasAnimation = (canvasRef, activeStep, config) => {
     // Setup canvas with proper DPI scaling
     const setupCanvas = () => {
       const rect = canvas.getBoundingClientRect();
+
+      const scale = Math.min(rect.width / 600, 1);
+
+      config.ellipseWidth = 220 * scale;
+      config.ellipseHeight = 50 * scale;
+      config.layerGap = 70 * scale;
+      config.dotRadius = 10 * scale;
+      config.dotGlowRadius = 25 * scale;
       dpr = window.devicePixelRatio || 1;
 
       canvas.width = rect.width * dpr;
@@ -334,7 +320,7 @@ const StepsList = ({ steps, activeStep, onStepChange }) => (
  * Orbital animation canvas component
  */
 const OrbitalAnimation = ({ activeStep, steps, canvasRef }) => (
-  <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+  <div className="relative flex items-center justify-center min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[650px]">
     <canvas
       ref={canvasRef}
       className="w-full h-full"
@@ -374,19 +360,27 @@ const DevOpsCycle = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-primary" aria-labelledby="devops-title">
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      className="py-16 lg:py-24 bg-primary"
+      aria-labelledby="devops-title">
+      <div className="px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
-          <h2
-            id="devops-title"
-            className="text-3xl md:text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
-            Our DevOps <br /> Development Cycle
-          </h2>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2
+              id="devops-title"
+              className="text-3xl md:text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
+              Our DevOps <br /> Development Cycle
+            </h2>
+          </motion.div>
         </header>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Steps List */}
           <StepsList
             steps={STEPS_DATA}

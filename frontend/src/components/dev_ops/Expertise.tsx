@@ -1,32 +1,38 @@
 import React from "react";
-// import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 import ArrowUpRight from "../../assets/icons/top-left.png";
 
 const OurExpertise = () => {
   const features = [
     {
       id: 1,
-      title: "User-Centric UI/UX for Engaging Apps & Games",
+      title: "Continuous Integration (CI)",
+      desc: "Automating code integration and testing to ensure a smooth development cycle.",
     },
     {
       id: 2,
-      title: "Full-Cycle App & Game Development for the Digital Era",
+      title: "Continuous delivery (CD)",
+      desc: "Reliable deployment of software updates to production environments.",
     },
     {
       id: 3,
-      title: "Agile Development with Real-Time Collaboration",
+      title: "Infrastructure and code (IaC)",
+      desc: "Managing servers and system configurations through code for consistency and scalability.",
     },
     {
       id: 4,
-      title: "Future-Ready Apps with Enterprise-Grade Security",
+      title: "Containerization & Orchestration",
+      desc: "Using Docker, Kubernetes, and other tools for efficient deployment and management.",
     },
     {
       id: 5,
-      title: "Advanced Frameworks. Smarter Solutions.",
+      title: "Configuration Management",
+      desc: "Structured control and automation of system setup and configurations.",
     },
     {
       id: 6,
-      title: "Consistent Performance on Every Device",
+      title: "Monitoring & Logging",
+      desc: "Real-time tracking and analysis of system performance errors and metrics.",
     },
   ];
 
@@ -47,13 +53,19 @@ const OurExpertise = () => {
 
         {/* Heading */}
         <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-            An established partner that can speed
-            <br className="hidden sm:block" />
-            up innovation, with a focus on real-
-            <br className="hidden sm:block" />
-            world applications
-          </h2>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
+              An established partner that can speed
+              <br className="hidden sm:block" />
+              up innovation, with a focus on real-
+              <br className="hidden sm:block" />
+              world applications
+            </h2>
+          </motion.div>
         </div>
 
         {/* Features Grid */}
@@ -65,10 +77,13 @@ const OurExpertise = () => {
               {/* Card Content */}
               <div className="relative z-10 flex-1 flex flex-col">
                 {/* Text with fixed height and overflow handling */}
-                <div className=" overflow-hidden">
-                  <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8 line-clamp-2 h-full">
+                <div className=" ">
+                  <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed mb-2 pr-8 line-clamp-2">
                     {feature.title}
                   </h3>
+                  <p className="text-white font-outfit text-sm sm:text-base line-clamp-2 overflow-hidden pr-8">
+                    {feature.desc}
+                  </p>
                 </div>
               </div>
 
