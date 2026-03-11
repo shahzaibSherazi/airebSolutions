@@ -18,17 +18,15 @@ export default function WhitePaperHero() {
       </h1>
 
       {/* ── Content row ── */}
-      <div className="relative z-10 flex items-center justify-center  px-6 lg:px-8">
-        <div className="relative flex flex-col lg:flex-row items-center gap-16  w-full">
+      <div className="relative z-10 flex items-center justify-center  px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="relative flex flex-col lg:flex-row items-center gap-24  w-full">
           {/* ── Left image with corner brackets ── */}
           <div className="relative flex items-center justify-center flex-shrink-0 w-1/2 mb-10 md:mb-0">
-            {/* Image — replace src with your import */}
-            <div className=" relative whitePaperCards_TopEdge ml-0 md:ml-10 w-[clamp(250px,30vw,310px)] aspect-square ">
+            <div className=" relative whitePaperCards_TopEdge  w-[clamp(300px,50vh,510px)] aspect-square ">
               <img
                 src={paperImg}
                 alt="White Paper Featured"
                 className="w-full h-full object-cover "
-                // Replace with: src={leftImage}
               />
             </div>
           </div>
@@ -51,7 +49,7 @@ export default function WhitePaperHero() {
 
             {/* Read Now button */}
             <div className="flex justify-center md:justify-start">
-              <button className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white  rounded-sm px-6 py-3 transition-all duration-200 hover:opacity-90 active:scale-95">
+              <button className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white  rounded-sm px-[clamp(10px,2vw,24px)] py-[clamp(8px,1.1vw,12px)] transition-all duration-200 hover:opacity-90 active:scale-95">
                 Read Now
                 <span className="text-base">→</span>
               </button>

@@ -34,7 +34,7 @@ const services = [
   },
   {
     id: 2,
-    image: containerImg,
+    image: cloudImg,
     title: "Containerization & Orchestration",
     points: [
       {
@@ -110,7 +110,7 @@ const services = [
   },
   {
     id: 6,
-    image: monitoringImg,
+    image: cloudsImg,
     title: "Monitoring Logging & Performance Optimization",
     points: [
       {
@@ -197,17 +197,15 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
           <h3 className="font-outfit font-bold text-white text-[clamp(14px,2vw,20px)] leading-snug mb-3">
             {service.title}
           </h3>
-          <button
-            className="px-5 py-1.5 font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all"
-            style={{ background: "#4285F4" }}>
-            Grab Now
+          <button className="px-5 py-1.5 bg-primary font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
+            Connect With Experts
           </button>
         </div>
       </div>
 
       {/* ── HOVER STATE — absolutely fills card, scrollable if needed ── */}
       <div
-        className="absolute inset-0 z-20 flex flex-col p-3 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-3 group-hover:translate-y-0 "
+        className="absolute inset-0 z-20 flex flex-col p-4 opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-3 group-hover:translate-y-0 "
         style={{
           background: "linear-gradient(180deg, #02070F 0%, #102545 100%)",
         }}>
@@ -217,14 +215,14 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
           style={{ border: "1px solid rgba(255,255,255,0.4)" }}>
           <Boxes size={16} className="text-white" strokeWidth={1.5} />
         </div>
+        <div className="flex flex-col gap-2 flex-1 justify-center">
+          {/* Title */}
+          <h3 className="font-outfit font-bold text-white text-base sm:text-lg lg:text-xl line-clamp-2 overflow-hidden leading-snug mb-2 shrink-0">
+            {service.title}
+          </h3>
 
-        {/* Title */}
-        <h3 className="font-outfit font-bold text-white text-base sm:text-lg lg:text-xl line-clamp-2 overflow-hidden leading-snug mb-2 shrink-0">
-          {service.title}
-        </h3>
+          {/* Points */}
 
-        {/* Points */}
-        <div className="flex flex-col gap-2 flex-1">
           {service.points.map((point, i) => (
             <div key={i}>
               <p className="font-outfit text-xs sm:text-sm lg:text-base line-clamp-1 overflow-hidden  font-semibold text-primary leading-none ">
@@ -238,8 +236,8 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
         </div>
 
         {/* Button — always at bottom */}
-        <button className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-xs text-white font-medium hover:opacity-90 transition-all shrink-0">
-          Grab Now
+        <button className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
+          Connect With Experts
         </button>
       </div>
     </div>

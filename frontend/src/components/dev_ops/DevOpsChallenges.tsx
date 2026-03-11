@@ -41,7 +41,7 @@ const DevOpsChallenges = () => {
               DevOps Challenges Holding <br /> You Back?
             </h2>
             {/* Subheading */}
-            <p className="font-outfit text-sm text-white mb-12">
+            <p className="font-outfit text-sm lg:text-base text-white mb-12">
               You're not alone, here's what we fix every day.
             </p>
           </motion.div>
@@ -56,7 +56,7 @@ const DevOpsChallenges = () => {
       </div>
 
       {/* ── Two cards ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
         <div
           className="p-px"
           style={{
@@ -71,13 +71,13 @@ const DevOpsChallenges = () => {
               {keyProblems.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                  <span className="font-outfit text-sm text-white leading-relaxed">
+                  <span className="font-outfit text-sm lg:text-base text-white leading-relaxed">
                     {item}
                   </span>
                 </li>
               ))}
             </ul>
-            <p className="font-outfit text-sm text-white leading-relaxed">
+            <p className="font-outfit text-sm lg:text-base text-white leading-relaxed">
               These issues resulted in slow response times and frustrated users,
               and an unreliable learning platform.
             </p>
@@ -97,7 +97,7 @@ const DevOpsChallenges = () => {
             <h3 className="font-stoke text-[clamp(16px,2vw,28px)] font-normal text-white mb-6">
               Solution by Aireb Solutions:
             </h3>
-            <p className="font-outfit text-sm text-white leading-relaxed">
+            <p className="font-outfit text-sm lg:text-base text-white leading-relaxed">
               Aireb Solutions implemented a devops base database optimization
               strategy to improve performance and stability.
             </p>
@@ -105,7 +105,7 @@ const DevOpsChallenges = () => {
               {valuePropositions.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                  <span className="font-outfit text-sm text-white leading-relaxed">
+                  <span className="font-outfit text-sm lg:text-base text-white leading-relaxed">
                     {item}
                   </span>
                 </li>
