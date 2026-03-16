@@ -59,7 +59,7 @@ const ResultSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-primary w-full flex flex-col px-4 md:px-6 py-[87px] md:py-[103px] items-center">
+      className="bg-primary w-full flex flex-col px-6 lg:px-8 py-16 lg:py-24 items-center">
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full ">
         {/* Left Column */}

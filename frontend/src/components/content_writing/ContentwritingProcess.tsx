@@ -31,15 +31,6 @@ const steps = [
   },
 ];
 
-/* ─────────────────────────────────────────────
-   Slab geometry constants
-   hw     = half-width  (FL/FR x-offset from cx)
-   slantY = FL/FR y-rise above FC
-   bw     = back half-width (BL/BR x-offset from cx)
-   backY  = BL/BR y-rise above FC
-   pk     = extra y-rise for BC (back-center peak)
-   H      = slab front-strip thickness
-───────────────────────────────────────────── */
 const G = { hw: 140, slantY: 34, bw: 10, backY: 56, pk: 2, H: 41 };
 
 function IsoSlab({ cx, y, lit, showTop = true }) {
@@ -119,13 +110,6 @@ function LayerStack({ activeIndex, hoveredIndex, onHover, litIndex }) {
   const svgH = 460;
   const cx = svgW / 2;
 
-  /*
-    Step = vertical distance between successive slab FC points.
-    With backY=56 + pk=11 = 67 total top height per slab.
-    We want all 6 to fit inside svgH with some padding.
-    step = (svgH - topPadding - bottomPadding - firstSlabTopH) / (n-1)
-    Keep it tight so they look stacked like the image.
-  */
   const { backY, pk, H } = G;
   const step = 78; // px between successive FC Y positions
   const baseY = svgH - 18; // bottom-most slab FC y
@@ -185,8 +169,8 @@ export default function ContentWritingProcess() {
   const litIndex = hoveredIndex !== null ? hoveredIndex : activeIndex;
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#0E1828] py-16 sm:py-20">
-      <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+    <section ref={sectionRef} className="w-full bg-[#0E1828] py-16 lg:py-24">
+      <div className="px-6 md:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-10 sm:mb-14">
           <h1 className="text-textColor font-extralight font-outfit text-[clamp(24px,4vw,52px)] mb-3 leading-tight">

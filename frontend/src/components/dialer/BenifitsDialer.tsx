@@ -74,7 +74,7 @@ const BenifitsDialer = () => {
       className="overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
         {/* Left Column - Content */}
-        <div className="flex flex-col px-4 sm:px-6 lg:pl-8 xl:pl-12 lg:pr-0 py-12 sm:py-14 lg:py-16">
+        <div className="flex flex-col px-6 lg:pl-8 lg:pr-0 py-16 lg:py-24">
           <div className="mb-8 sm:mb-10">
             <h1 className="text-textColor font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] mb-4 leading-tight">
               Benefits of AI Custom <br /> Dialer Solutions

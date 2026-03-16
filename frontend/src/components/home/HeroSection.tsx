@@ -1,38 +1,55 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import bgVideo from "@/assets/hero-video.mp4";
-
-// AnimatedText component
-const AnimatedText = ({ text, className }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  return (
-    <span
-      className={`inline-block transition-all duration-700 ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
-      } ${className}`}>
-      {text}
-    </span>
-  );
-};
+import AnimatedText from "../ui/LetterStagger";
+import heroPoster from "@/assets/CRM_hero_bg.png";
 
 const HeroSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [completed, setCompleted] = useState([false, false, false]);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleComplete = () => {
+    const next = activeIndex + 1;
+
+    const updated = [...completed];
+    updated[activeIndex] = true;
+    setCompleted(updated);
+
+    if (next < 3) {
+      setActiveIndex(next);
+    } else {
+      // all words completed
+      setTimeout(() => {
+        setCompleted([false, false, false]);
+        setActiveIndex(0);
+      }, 2000);
+    }
+  };
   return (
     <section className="relative min-h-screen flex justify-center items-center w-full overflow-hidden text-white">
+      {/* Background Video */}
+      {/* Background Image (shown while video loads) */}
+      <img
+        src={heroPoster}
+        alt="Hero background"
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
+          videoLoaded ? "opacity-0" : "opacity-100"
+        }`}
+      />
+
       {/* Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover">
+        onLoadedData={() => setVideoLoaded(true)}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
+          videoLoaded ? "opacity-100" : "opacity-0"
+        }`}>
         <source src={bgVideo} type="video/mp4" />
       </video>
-
       {/* Dark Overlay for better text readability */}
       {/* <div className="absolute inset-0 bg-black/40 z-10"></div> */}
 
@@ -50,18 +67,27 @@ const HeroSection = () => {
             <div className="overflow-hidden">
               <AnimatedText
                 text="DESIGN"
+                active={activeIndex === 0}
+                completed={completed[0]}
+                onComplete={handleComplete}
                 className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedText
                 text="FOR"
+                active={activeIndex === 1}
+                completed={completed[1]}
+                onComplete={handleComplete}
                 className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedText
                 text="EVERYONE"
+                active={activeIndex === 2}
+                completed={completed[2]}
+                onComplete={handleComplete}
                 className="text-[clamp(2.5rem,8vw,10rem)] sm:text-[clamp(2.5rem,8vh,10rem)] leading-[1.1]"
               />
             </div>

@@ -39,9 +39,9 @@ const UiDesignExpertise = () => {
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
       }}
-      className="relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      className="relative w-full py-16  lg:py-24 overflow-hidden">
       {/* Container */}
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-6 lg:px-8">
         {/* Badge */}
         <div className="mb-8 sm:mb-10 md:mb-12">
           <span className="inline-block bg-primary text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">

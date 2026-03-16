@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import NodeIcon from "@/assets/AllServices_assets/technologies-icons/node_js.svg?react";
+import PythonIcon from "@/assets/AllServices_assets/technologies-icons/python.svg?react";
+import TypescriptIcon from "@/assets/AllServices_assets/technologies-icons/typescript.svg?react";
+import AngrularIcon from "@/assets/AllServices_assets/technologies-icons/angular.svg?react";
+import FirebaseIcon from "@/assets/AllServices_assets/technologies-icons/firebase.svg?react";
+import FlutterIcon from "@/assets/AllServices_assets/technologies-icons/flutter.svg?react";
+import HtmlIcon from "@/assets/AllServices_assets/technologies-icons/html.svg?react";
+import JavascriptIcon from "@/assets/AllServices_assets/technologies-icons/javascript.svg?react";
+import PhpIcon from "@/assets/AllServices_assets/technologies-icons/php.svg?react";
+import SwiftIcon from "@/assets/AllServices_assets/technologies-icons/swift.svg?react";
 
 const TechnologiesShowcase = () => {
   const [activeTab, setActiveTab] = useState("frontend");
@@ -7,7 +17,7 @@ const TechnologiesShowcase = () => {
     frontend: [
       { name: "React", icon: "⚛️" },
       { name: "Vue.js", icon: "💚" },
-      { name: "Angular", icon: "🅰️" },
+      { name: "Angular", icon: <AngrularIcon /> },
       { name: "TypeScript", icon: "📘" },
       { name: "Tailwind CSS", icon: "🎨" },
       { name: "Next.js", icon: "▲" },
@@ -19,10 +29,10 @@ const TechnologiesShowcase = () => {
       { name: "Babel", icon: "🔀" },
     ],
     backend: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Python", icon: "🐍" },
+      { name: "Node.js", icon: <NodeIcon /> },
+      { name: "Python", icon: <PythonIcon /> },
       { name: "Java", icon: "☕" },
-      { name: "PHP", icon: "🐘" },
+      { name: "PHP", icon: <PhpIcon /> },
       { name: "Ruby", icon: "💎" },
       { name: "Go", icon: "🔷" },
       { name: "C#", icon: "🔷" },
@@ -30,14 +40,14 @@ const TechnologiesShowcase = () => {
       { name: "Kotlin", icon: "🟠" },
       { name: "Scala", icon: "🧪" },
       { name: "Perl", icon: "🐪" },
-      { name: "Swift", icon: "🐦" },
+      { name: "Swift", icon: <SwiftIcon /> },
     ],
     database: [
       { name: "MongoDB", icon: "🍃" },
       { name: "PostgreSQL", icon: "🐘" },
       { name: "MySQL", icon: "🐬" },
       { name: "Redis", icon: "🔴" },
-      { name: "Firebase", icon: "🔥" },
+      { name: "Firebase", icon: <FirebaseIcon /> },
       { name: "Cassandra", icon: "📊" },
       { name: "Elasticsearch", icon: "🔍" },
       { name: "SQLite", icon: "🗄️" },
@@ -100,7 +110,7 @@ const TechnologiesShowcase = () => {
   ];
 
   return (
-    <div className=" bg-black text-textColor px-4 md:px-12 lg:px-24 lg:py-24 md:py-20 py-16 ">
+    <div className=" bg-black text-textColor px-6 lg:px-8 lg:pb-24 pb-16 ">
       <div className="w-full">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-[56px] font-stoke font-bold text-center mb-8 sm:mb-14">
           Technologies we use
@@ -128,7 +138,7 @@ const TechnologiesShowcase = () => {
             <div
               key={index}
               className="bg-gradient-to-b from-[#242424] to-[#141414] border-025 border-white p-2 sm:p-[15px] flex sm:flex-row flex-col items-center justify-center text-center sm:text-start sm:justify-start  gap-2 hover:bg-zinc-800 transition-all duration-300 hover:scale-105 cursor-pointer hover:border-zinc-700">
-              <div className="text-3xl sm:text-4xl">{tech.icon}</div>
+              <div className="text-3xl sm:text-6xl">{tech.icon}</div>
               <span className="text-xs sm:text-sm font-medium font-outfit text-white">
                 {tech.name}
               </span>

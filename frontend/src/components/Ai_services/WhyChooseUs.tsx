@@ -54,14 +54,14 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary">
+    <div className=" text-white py-16 lg:py-24 px-6 lg:px-8 bg-primary">
       <div className="">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-stoke leading-[56px] mb-[15px]">
             Why Choose Us
           </h1>
-          <p className="text-[#D9D9D9] font-outfit font-normal text-sm sm:text-lg leading-[40px]">
+          <p className="text-white font-outfit font-normal text-sm sm:text-lg leading-[40px]">
             We Design for the Future to Drive Today's Success
           </p>
         </div>

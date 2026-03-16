@@ -574,8 +574,8 @@ export default function UiDesignProcess() {
   }, []);
 
   return (
-    <section className="w-full bg-[#0E1828] py-24">
-      <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+    <section className="w-full bg-[#0E1828] py-16 lg:py-24">
+      <div className="px-6 md:px-8 max-w-7xl mx-auto">
         {/* ── Header ── */}
         <div className="mb-16">
           <h1 className="text-textColor font-extralight font-outfit text-[clamp(20px,4vw,52px)] mb-4 leading-tight">

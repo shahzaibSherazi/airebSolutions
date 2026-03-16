@@ -5,6 +5,7 @@ import CanadaFlag from "@/assets/icons/footer/canada-flag.svg?react";
 import PakFlag from "@/assets/icons/footer/pak-flag.svg?react";
 import bgImg from "@/assets/icons/footer/circle.png";
 import { Link } from "react-router-dom";
+import AnimatedCircle from "../ui/AnimatedCircle";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const ALL_SERVICES = [
@@ -175,39 +176,21 @@ export default function Footer() {
       <div className=" px-6 lg:px-8 pt-10 lg:pb-24 pb-16 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,2fr,1fr] items-start gap-28">
           {/* Left — brand + description */}
-          <div className=" ">
-            {/* Content sits above the circle */}
+          <div className="relative">
+            <AnimatedCircle />
+
             <div className="relative flex flex-col gap-3">
-              <div
-                className="absolute -top-50 -left-50 w-[200px] h-[200px] 
-                  bg-[radial-gradient(circle_at_center,_#3b82f6_0%,_#2563eb_40%,_#1e40af_70%,_transparent_75%)]
-                  blur-3xl opacity-70 rounded-full"></div>
-              <div
-                className="absolute lg:block hidden pointer-events-none"
-                style={{
-                  width: 430,
-                  height: 340,
-                  borderRadius: "50%",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  top: "55%",
-                  left: "30%",
-                  transform: "translate(-50%, -50%)",
-                  zIndex: 0,
-                }}
-              />{" "}
               <div className="flex items-center gap-1">
-                {" "}
                 <h3 className="bg-gradient-to-r from-primary to-textColor bg-clip-text text-transparent font-bold text-xl">
-                  {" "}
-                  Aireb Solutions{" "}
-                </h3>{" "}
-              </div>{" "}
+                  Aireb Solutions
+                </h3>
+              </div>
+
               <p className="text-textColor font-outfit text-sm leading-relaxed max-w-[320px]">
-                {" "}
                 Aireb Solutions empowers businesses with innovative fintech and
                 AI-driven services. From CRM integrations to digital content and
-                automation, we tailor solutions that drive growth.{" "}
-              </p>{" "}
+                automation, we tailor solutions that drive growth.
+              </p>
             </div>
           </div>
 

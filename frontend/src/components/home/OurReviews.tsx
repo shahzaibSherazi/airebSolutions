@@ -173,6 +173,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import cardImg from "../../assets/review_card.png";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -222,11 +223,11 @@ export default function ClientReviews() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative bg-black text-white py-12 sm:py-16 lg:py-20 xl:py-24 overflow-hidden">
+    <section className="relative bg-black text-white py-16 lg:py-24 overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Our Reviews Button */}
         <div className="flex justify-center mb-[44px] sm:mb-10 lg:mb-[34px]">
           <button className="relative bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
@@ -237,12 +238,18 @@ export default function ClientReviews() {
 
         {/* Heading */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-stoke leading-tight">
-            Our Clients Love
-          </h2>
-          <p className="text-2xl sm:text-3xl lg:text-4xl  font-stoke font-light mt-2">
-            to Recommend us
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-stoke leading-tight">
+              Our Clients Love
+            </h2>
+            <p className="text-2xl sm:text-3xl lg:text-4xl  font-stoke font-light mt-2">
+              to Recommend us
+            </p>
+          </motion.div>
         </div>
 
         {/* Slider Container */}

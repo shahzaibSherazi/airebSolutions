@@ -670,7 +670,7 @@ const OurWork = () => {
       {/* Scrolling Content Layer - Our Work Section (ON TOP) */}
       <div
         ref={contentRef}
-        className="relative z-10 bg-primary w-full px-4 sm:px-6 lg:px-8 py-24">
+        className="relative z-10 bg-primary w-full px-6 lg:px-8 py-16 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
           {/* Left Content */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">

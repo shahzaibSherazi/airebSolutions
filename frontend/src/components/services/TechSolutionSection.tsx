@@ -153,7 +153,7 @@ const TechSolutionsSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white lg:py-24 py-11 px-4 sm:px-6 lg:px-9">
+    <div className="min-h-screen bg-black text-white lg:py-24 py-16 px-6 lg:px-8">
       <div className="">
         {/* Header Section */}
         <div className="text-center mb-16 lg:mb-[91px]">

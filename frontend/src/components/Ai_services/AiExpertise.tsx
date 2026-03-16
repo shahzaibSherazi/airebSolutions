@@ -852,7 +852,7 @@ const AIExpertiseSection = () => {
           </div>
 
           {/* Right Side - Single Transforming Robot */}
-          <div className="flex flex-col justify-start items-center lg:items-end min-h-[600px] relative pt-0">
+          <div className="flex flex-col justify-center lg:justify-end items-end min-h-[600px] relative pt-0">
             {/* Small Robot - Positioned at top, aligned with heading */}
             <div
               ref={smallRobotRef}
@@ -898,7 +898,7 @@ const AIExpertiseSection = () => {
             {/* Large Robot - Same position as small robot */}
             <div
               ref={largeRobotRef}
-              className="absolute top-0 left-1/2 lg:left-auto lg:right-10 -translate-x-1/2 lg:translate-x-0"
+              className="absolute top-0   lg:right-0 -translate-x-1/2 lg:translate-x-0"
               style={{
                 transformStyle: "preserve-3d",
                 perspective: "1200px",

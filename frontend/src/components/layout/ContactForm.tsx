@@ -340,7 +340,7 @@ export default function ContactForm() {
               <img
                 src={contactImage}
                 alt="Contact"
-                className="w-full h-full object-fill"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -444,7 +444,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       style={{
         background: "linear-gradient(180deg, #629DFF 0%, #0B0B0B 100%)",
       }}
-      className="w-full max-w-full lg:max-w-[537px] px-[9px] py-[10px] contact_form relative">
+      className="w-full max-w-full px-[9px] py-[10px] contact_form relative">
       <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6 md:py-8 space-y-3 sm:space-y-4 md:space-y-5 bg-black">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">

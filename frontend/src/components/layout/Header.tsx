@@ -301,7 +301,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}>
                   <button
                     onClick={() => handleMenuClick(menu.name)}
-                    className={`px-4 py-2 font-medium text-sm flex items-center gap-1 transition-all rounded-lg ${
+                    className={`px-4 py-2 font-stoke font-medium text-sm flex items-center gap-1 transition-all rounded-lg ${
                       activeDropdown === menu.name
                         ? "text-white bg-white/10"
                         : "text-white/90 hover:text-white hover:bg-white/10"
@@ -320,7 +320,7 @@ const Header = () => {
                   {/* Dropdown Menu - Grid Layout */}
                   {menu.items.length > 0 && activeDropdown === menu.name && (
                     <div
-                      className="absolute top-full left-0 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 border border-white/20 animate-fadeIn"
+                      className="absolute top-full left-0 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
                       style={{
                         minWidth: menu.items.length > 6 ? "600px" : "320px",
                         background:
@@ -336,7 +336,7 @@ const Header = () => {
                           <button
                             key={index}
                             onClick={() => handleItemClick(item)}
-                            className="text-left px-4 py-2.5 text-sm text-white/90 hover:bg-white/20 hover:text-white rounded-lg transition-all hover:translate-x-1">
+                            className="text-left px-4 py-2.5 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all hover:translate-x-1">
                             {item}
                           </button>
                         ))}
@@ -345,7 +345,7 @@ const Header = () => {
                       {/* Engagement Models for Services */}
                       {menu.name === "Services" && (
                         <div className="mt-4 pt-4 border-t border-white/20">
-                          <p className="px-4 text-xs font-semibold text-white/70 mb-2">
+                          <p className="px-4 text-xs font-outfit font-semibold text-white mb-2">
                             ENGAGEMENT MODELS
                           </p>
                           <div className="grid grid-cols-2 gap-2">
@@ -354,7 +354,7 @@ const Header = () => {
                                 navigate("/engagement-models/project-based");
                                 setActiveDropdown(null);
                               }}
-                              className="text-left px-4 py-2 text-sm text-white/90 hover:bg-white/20 hover:text-white rounded-lg transition-all">
+                              className="text-left px-4 py-2 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all">
                               Project Based Delivery
                             </button>
                             <button
@@ -362,7 +362,7 @@ const Header = () => {
                                 navigate("/engagement-models/dedicated-team");
                                 setActiveDropdown(null);
                               }}
-                              className="text-left px-4 py-2 text-sm text-white/90 hover:bg-white/20 hover:text-white rounded-lg transition-all">
+                              className="text-left px-4 py-2 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all">
                               Dedicated Team
                             </button>
                           </div>
@@ -378,8 +378,11 @@ const Header = () => {
             <div className="hidden lg:block">
               <button
                 onClick={() => navigate("/contact-us")}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-[3px] font-medium text-sm transition-all shadow-lg hover:shadow-xl border border-white/20">
+                className="relative bg-primary hover:bg-primary/90 font-stoke text-white px-6 py-2 rounded-[3px] font-medium text-sm transition-all shadow-lg hover:shadow-xl border border-white/20">
                 CONTACT
+                <span className=" absolute -top-2 right-2 w-3 h-3 animate-pulse">
+                  .
+                </span>
               </button>
             </div>
 

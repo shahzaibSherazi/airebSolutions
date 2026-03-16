@@ -145,7 +145,7 @@ const WorkProcessTimeline: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-black py-10 sm:py-12 md:py-16 lg:py-[15vh]">
+      className="relative w-full bg-black pb-12 md:pb-16 lg:pb-[15vh]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Sticky block */}
         <div className="sticky -top-12 z-10 ">

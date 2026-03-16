@@ -2,7 +2,7 @@ import React from "react";
 import workImg from "../../assets/Ondemand_assets/ourWork_img.png";
 const ContentWritingWork = () => {
   return (
-    <section className=" w-full px-4 sm:px-6 lg:px-8 py-24  bg-primary overflow-hidden">
+    <section className=" w-full px-6 lg:px-8 py-16 lg:py-24  bg-primary overflow-hidden">
       {/* Container */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
         {/* Left Content */}

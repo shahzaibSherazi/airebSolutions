@@ -11,7 +11,7 @@ const FeaturedSection = () => {
       style={{
         background: "linear-gradient(180deg, #4285F4 0%, #5193FF 100%)",
       }}
-      className="w-full px-4 md:px-6 py-[87px] md:py-[103px] flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
+      className="w-full px-6 lg:px-8 pb-16 lg:pb-24 flex flex-col gap-8 sm:gap-10 md:gap-12 mx-auto">
       <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
         {/* Text Content */}
         <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">

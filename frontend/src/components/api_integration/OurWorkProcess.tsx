@@ -96,8 +96,8 @@ export default function OurWorkProcess() {
       {/* ===== PINNED SECTION ===== */}
       <section
         ref={sectionRef}
-        className="relative min-h-screen bg-black text-white flex items-center">
-        <div className="max-w-6xl mx-auto w-full px-6">
+        className="relative  bg-black text-white flex items-center">
+        <div className="max-w-6xl mx-auto w-full px-6 lg:px-8 pb-16 lg:pb-24">
           {/* HEADER */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
             <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
@@ -153,7 +153,7 @@ export default function OurWorkProcess() {
           </div>
 
           {/* CARD */}
-          <div className="relative w-full max-w-3xl mx-auto mb-20">
+          <div className="relative w-full max-w-3xl mx-auto ">
             <div
               ref={cardRef}
               className="bg-primary px-12 py-8 relative overflow-hidden min-h-[200px]">

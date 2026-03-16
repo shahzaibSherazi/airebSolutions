@@ -32,7 +32,7 @@ const ServicesSection = () => {
           <div className="lg:sticky lg:top-20 lg:self-start">
             <div className="flex flex-col items-start gap-8 lg:gap-10">
               {/* Our Service Button */}
-              <button className="px-7 py-2 bg-primary text-white font-outfit font-medium text-base lg:text-lg">
+              <button className="px-7 py-2 bg-primary cursor-default text-white font-outfit font-medium text-base lg:text-lg">
                 Our Service
               </button>
 

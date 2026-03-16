@@ -53,7 +53,7 @@ const WebServicesSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-black py-[8vh] sm:py-[10vh] lg:py-[12vh] px-8">
+    <section className="relative w-full bg-black py-16 lg:py-24 px-6 lg:px-8">
       <div className="">
         {/* Header Section */}
         <div className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]">

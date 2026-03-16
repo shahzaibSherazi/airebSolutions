@@ -2,7 +2,7 @@ import React from "react";
 import processImg from "../../assets/Ecommerce_assets/development_img.png";
 const DevelopmentProcess = () => {
   return (
-    <section className="relative w-full bg-primary py-[8vh] sm:py-[10vh] lg:py-[12vh] px-8">
+    <section className="relative w-full bg-primary py-16 lg:py-24 px-6 lg:px-8">
       <div className="">
         {/* Header Section */}
         <div className="flex flex-col text-center ">

@@ -211,7 +211,7 @@ const DialerSolutions = () => {
       style={{
         background: "linear-gradient(180deg, #0E1828 0%, #000000 22.96%)",
       }}
-      className=" text-white py-16 px-4 sm:px-6 lg:px-8">
+      className=" text-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="">
         {/* Header */}
         <div className="text-center mb-16">
@@ -553,11 +553,11 @@ const Step3Content = () => {
             style={{
               background: "linear-gradient(180deg, #629DFF 0%, #0E1828 100%)",
             }}
-            className=" rounded-[22px] p-6 flex flex-col gap-8 border border-primary">
+            className=" rounded-[22px] p-[clamp(12px,2vh,24px)] flex flex-col  border border-primary">
             <h3 className="text-black font-outfit text-base md:text-xl font-bold">
               Fields Layout
             </h3>
-            <div className="space-y-4 mb-5">
+            <div className="space-y-[clamp(2px,1.4vh,14px)] ">
               <div className="flex items-center justify-between">
                 <span className="text-black text-sm md:text-base font-normal">
                   Created time
@@ -566,7 +566,7 @@ const Step3Content = () => {
                   2025-11-03 17:47:06
                 </span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 justify-between">
                 <span className="text-black text-sm md:text-base font-normal">
                   Last connect
                 </span>

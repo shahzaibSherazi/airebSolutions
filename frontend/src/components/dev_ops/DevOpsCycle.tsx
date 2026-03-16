@@ -348,8 +348,9 @@ const OrbitalAnimation = ({ activeStep, steps, canvasRef }) => (
 // ============================================
 
 const DevOpsCycle = () => {
-  const [activeStep, setActiveStep] = useState(2); // Default to step 03 (index 2)
+  const [activeStep, setActiveStep] = useState(0); // Default to step 03 (index 2)
   const canvasRef = useRef(null);
+  const sectionRef = useRef(null);
 
   // Initialize canvas animation
   useCanvasAnimation(canvasRef, activeStep, CANVAS_CONFIG);
@@ -358,9 +359,27 @@ const DevOpsCycle = () => {
   const handleStepChange = useCallback((index) => {
     setActiveStep(index);
   }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setActiveStep(0); // reset to step 1
+        }
+      },
+      {
+        threshold: 0.3, // section must be at least 30% visible
+      },
+    );
 
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section
+      ref={sectionRef}
       className="py-16 lg:py-24 bg-primary"
       aria-labelledby="devops-title">
       <div className="px-6 lg:px-8 max-w-7xl mx-auto">

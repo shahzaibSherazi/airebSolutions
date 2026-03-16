@@ -506,7 +506,7 @@ const AIDevelopmentProcess = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col justify-center py-16 px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-12 lg:mb-16">
           <h2

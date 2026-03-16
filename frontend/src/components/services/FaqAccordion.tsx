@@ -50,7 +50,7 @@ const FAQAccordion = () => {
   const rightColumn = faqs.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className=" bg-black text-white py-24 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-black text-white pb-16 lg:pb-24 px-6 lg:px-8">
       <div className="w-full">
         {/* Header */}
         <div className="text-center mb-16">

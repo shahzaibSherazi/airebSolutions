@@ -6,7 +6,7 @@ const OurWork = () => {
       {/* Container */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
         {/* Left Content */}
-        <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
+        <div className="flex-1 w-full lg:w-auto text-center lg:text-left flex flex-col items-center lg:items-start justify-center gap-6">
           {/* Label */}
           <div className="inline-block mb-4 sm:mb-10 border-025 px-3 py-[1.5] sm:px-5 sm:py-1 ">
             <p className="text-xs sm:text-base font-light font-outfit text-black tracking-[-1px] uppercase ">
