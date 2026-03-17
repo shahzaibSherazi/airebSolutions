@@ -394,22 +394,22 @@ const AnimatedRoutes = () => {
       <Routes location={location}>
         <Route path="/" element={<Index />} />
         <Route path="/services" element={<AllServices />} />
-        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
         <Route
-          path="/mobile-app-development"
+          path="/services/mobile-app-development"
           element={<MobileAppDevelopment />}
         />
-        <Route path="/crm-integration" element={<CrmIntegration />} />
-        <Route path="/devops-services" element={<DevOps />} />
-        <Route path="/ai-services" element={<AiServices />} />
-        <Route path="/api-integration" element={<ApiIntegration />} />
-        <Route path="/dialer" element={<Dialer />} />
-        <Route path="/ecommerce" element={<Ecommerce />} />
-        <Route path="/on-demand" element={<OnDemand />} />
-        <Route path="/logo-design" element={<LogoDesign />} />
-        <Route path="/ui-ux-design" element={<UiDesign />} />
-        <Route path="/content-writing" element={<ContentWriting />} />
-        <Route path="/contact-center" element={<ContactCenter />} />
+        <Route path="/services/crm-integration" element={<CrmIntegration />} />
+        <Route path="/services/devops-services" element={<DevOps />} />
+        <Route path="/services/ai-services" element={<AiServices />} />
+        <Route path="/services/api-integration" element={<ApiIntegration />} />
+        <Route path="/services/dialer" element={<Dialer />} />
+        <Route path="/services/ecommerce" element={<Ecommerce />} />
+        <Route path="/services/on-demand" element={<OnDemand />} />
+        <Route path="/services/logo-design" element={<LogoDesign />} />
+        <Route path="/services/ui-ux-design" element={<UiDesign />} />
+        <Route path="/services/content-writing" element={<ContentWriting />} />
+        <Route path="/services/contact-center" element={<ContactCenter />} />
         <Route path="/industries/healthcare" element={<HealthCare />} />
         <Route path="/industries/education" element={<Education />} />
         <Route path="/industries/ecommerce" element={<IndustriesEcommerce />} />

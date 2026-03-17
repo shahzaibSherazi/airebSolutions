@@ -9,16 +9,19 @@ const services = [
   {
     image: service1,
     title: "AI & Machine Learning",
+    link: "/services/ai-services",
     gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
   {
     image: service2,
     title: "Web Development",
+    link: "/services/web-development",
     gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
   {
     image: service3,
     title: "UI/UX Design",
+    link: "/services/ui-ux-design",
     gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
 ];
@@ -74,6 +77,7 @@ const ServicesSection = () => {
                   <ServiceCard
                     image={service.image}
                     title={service.title}
+                    link={service.link}
                     gradient={service.gradient}
                   />
                 </div>

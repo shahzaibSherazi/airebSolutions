@@ -111,6 +111,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-in-left": "slideInLeft 0.5s ease-in-out",
         "slide-in-right": "slideInRight 0.5s ease-in-out",
+        "draw-loop": "drawLoop 3s ease-in-out infinite",
       },
     },
   },

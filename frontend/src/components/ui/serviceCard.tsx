@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import btnIcon from "../../assets/icons/servicCardbtn_icon.png";
-const ServiceCard = ({ image, title, gradient }) => {
+const ServiceCard = ({ image, title, link, gradient }) => {
   return (
     <div className="card relative w-full bg-gradient-to-t from-black to-primary  sm:max-w-none lg:max-w-[403px] h-[480px] sm:h-[490px] md:h-[500px] lg:h-[565px] border border-primary flex flex-col gap-2 sm:gap-4 p-2 sm:p-3 overflow-hidden snap-center mx-auto shrink-0">
       {/* Image - Responsive height */}
@@ -15,11 +16,13 @@ const ServiceCard = ({ image, title, gradient }) => {
       </div>
 
       {/* Learn More Button */}
-      <div className="relative w-fit flex items-center gap-1 sm:gap-1.5 bg-primary px-2 sm:px-3 py-1 text-xs font-outfit btn_edge">
-        <span className="btn_corner btn_bottom-left" />
-        <p className="whitespace-nowrap">Learn More</p>
-        <img src={btnIcon} alt="" className="w-3 h-3 sm:w-3 sm:h-3" />
-      </div>
+      <Link to={link} className="w-fit">
+        <div className="relative  flex items-center gap-1 sm:gap-1.5 bg-primary px-2 sm:px-3 py-1 text-xs font-outfit btn_edge">
+          <span className="btn_corner btn_bottom-left" />
+          <p className="whitespace-nowrap">Learn More</p>
+          <img src={btnIcon} alt="" className="w-3 h-3 sm:w-3 sm:h-3" />
+        </div>
+      </Link>
     </div>
   );
 };

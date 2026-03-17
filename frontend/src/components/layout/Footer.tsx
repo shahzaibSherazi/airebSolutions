@@ -6,6 +6,8 @@ import PakFlag from "@/assets/icons/footer/pak-flag.svg?react";
 import bgImg from "@/assets/icons/footer/circle.png";
 import { Link } from "react-router-dom";
 import AnimatedCircle from "../ui/AnimatedCircle";
+import AnimatedCircleRight from "../ui/AnimatedCircleRight";
+import PremiumCircle from "../ui/AnimatedCircleRight";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const ALL_SERVICES = [
@@ -186,7 +188,7 @@ export default function Footer() {
                 </h3>
               </div>
 
-              <p className="text-textColor font-outfit text-sm leading-relaxed max-w-[320px]">
+              <p className="text-textColor font-outfit text-sm leading-relaxed max-w-[290px]">
                 Aireb Solutions empowers businesses with innovative fintech and
                 AI-driven services. From CRM integrations to digital content and
                 automation, we tailor solutions that drive growth.
@@ -247,24 +249,14 @@ export default function Footer() {
           </div>
 
           {/* Right — social icons with circular gradient border */}
-          <div className=" flex lg:justify-end justify-center items-start">
-            <div className="relative flex items-center gap-4 mt-1">
-              <div
-                className="absolute pointer-events-none"
-                style={{
-                  width: 380,
-                  height: 360,
-                  borderRadius: "50%",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  top: "40%",
-                  right: "-180%",
-                  transform: "translate(-50%, -50%)",
-                  zIndex: 0,
-                }}
-              />
+          <div className="flex lg:justify-end justify-center items-start overflow-visible relative">
+            <div className="relative flex items-center gap-4 mt-1 overflow-visible">
+              <PremiumCircle positionClass="right-[-100px] top-0 -translate-y-1/2" />
+
               {[
                 {
                   label: "Facebook",
+                  url: "https://www.facebook.com/share/14DqPu5326R/",
                   icon: (
                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -273,6 +265,7 @@ export default function Footer() {
                 },
                 {
                   label: "Instagram",
+                  url: "https://www.instagram.com/airebsolutions?igsh=MWExbWoyYnRqMzZueg==",
                   icon: (
                     <svg
                       viewBox="0 0 24 24"
@@ -290,6 +283,7 @@ export default function Footer() {
                 },
                 {
                   label: "LinkedIn",
+                  url: "https://www.linkedin.com/company/aireb-solutions-ltd/",
                   icon: (
                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
@@ -297,10 +291,12 @@ export default function Footer() {
                     </svg>
                   ),
                 },
-              ].map(({ label, icon }) => (
+              ].map(({ label, url, icon }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="relative z-10 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:brightness-125"
                   style={{

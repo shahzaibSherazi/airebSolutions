@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/aireb_logo.png";
 
 // Define routes for all menu items
@@ -9,19 +9,19 @@ const itemRoutes = {
   Home: "/",
 
   // Services routes
-  "Web Development": "/web-development",
-  "Mobile App Development": "/mobile-app-development",
-  "UI/UX Design": "/ui-ux-design",
-  "Content Writing": "/content-writing",
-  "AI Services": "/ai-services",
-  "DevOps Services": "/devops-services",
-  "CRM Integration": "/crm-integration",
-  Dialer: "/dialer",
-  "E-commerce Solutions": "/ecommerce",
-  "On Demand": "/on-demand",
-  "API Integration": "/api-integration",
-  "Logo Design": "/logo-design",
-  "Contact Center": "/contact-center",
+  "Web Development": "/services/web-development",
+  "Mobile App Development": "/services/mobile-app-development",
+  "UI/UX Design": "/services/ui-ux-design",
+  "Content Writing": "/services/content-writing",
+  "AI Services": "/services/ai-services",
+  "DevOps Services": "/services/devops-services",
+  "CRM Integration": "/services/crm-integration",
+  Dialer: "/services/dialer",
+  "E-commerce Solutions": "/services/ecommerce",
+  "On Demand": "/services/on-demand",
+  "API Integration": "/services/api-integration",
+  "Logo Design": "/services/logo-design",
+  "Contact Center": "/services/contact-center",
 
   // Industries routes
   Healthcare: "/industries/healthcare",
@@ -145,6 +145,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   // Handle scroll to show/hide header
   useEffect(() => {
@@ -277,11 +278,16 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // helper to check if route matches current path
+  const isActive = (itemName) => {
+    const route = itemRoutes[itemName];
+    return route && location.pathname === route;
+  };
   return (
     <>
       <header
         ref={headerRef}
-        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-md ${
+        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-transparent backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
         <div className=" px-6 lg:px-8">
@@ -297,14 +303,28 @@ const Header = () => {
                 <div
                   key={menu.name}
                   className="relative"
-                  onMouseEnter={() => handleMouseEnter(menu.name)}
-                  onMouseLeave={handleMouseLeave}>
+                  // Keep dropdown open when mouse is over button or dropdown
+                  onMouseEnter={() => {
+                    if (dropdownTimeoutRef.current)
+                      clearTimeout(dropdownTimeoutRef.current);
+                    setActiveDropdown(menu.name);
+                  }}
+                  onMouseLeave={() => {
+                    // Delay hiding slightly to prevent flicker
+                    dropdownTimeoutRef.current = setTimeout(() => {
+                      setActiveDropdown(null);
+                    }, 150); // 150ms delay
+                  }}>
                   <button
-                    onClick={() => handleMenuClick(menu.name)}
+                    onClick={() =>
+                      menu.items.length === 0 && navigate(itemRoutes[menu.name])
+                    }
                     className={`px-4 py-2 font-stoke font-medium text-sm flex items-center gap-1 transition-all rounded-lg ${
-                      activeDropdown === menu.name
-                        ? "text-white bg-white/10"
-                        : "text-white/90 hover:text-white hover:bg-white/10"
+                      isActive(menu.name)
+                        ? "bg-white/20 text-white"
+                        : activeDropdown === menu.name
+                          ? "bg-white/10 text-white"
+                          : "text-white/90 hover:text-white hover:bg-white/10"
                     }`}>
                     {menu.name}
                     {menu.items.length > 0 && (
@@ -317,7 +337,7 @@ const Header = () => {
                     )}
                   </button>
 
-                  {/* Dropdown Menu - Grid Layout */}
+                  {/* Dropdown Menu */}
                   {menu.items.length > 0 && activeDropdown === menu.name && (
                     <div
                       className="absolute top-full left-0 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
@@ -326,48 +346,32 @@ const Header = () => {
                         background:
                           "linear-gradient(180deg, #629DFF 0%, #000000 100%)",
                       }}
-                      onMouseEnter={() => handleMouseEnter(menu.name)}
-                      onMouseLeave={handleMouseLeave}>
+                      onMouseEnter={() => {
+                        // Prevent closing while hovering the dropdown
+                        if (dropdownTimeoutRef.current)
+                          clearTimeout(dropdownTimeoutRef.current);
+                        setActiveDropdown(menu.name);
+                      }}
+                      onMouseLeave={() => {
+                        dropdownTimeoutRef.current = setTimeout(() => {
+                          setActiveDropdown(null);
+                        }, 150);
+                      }}>
                       <div
-                        className={`grid gap-2 ${
-                          menu.items.length > 6 ? "grid-cols-2" : "grid-cols-1"
-                        }`}>
+                        className={`grid gap-2 ${menu.items.length > 6 ? "grid-cols-2" : "grid-cols-1"}`}>
                         {menu.items.map((item, index) => (
                           <button
                             key={index}
-                            onClick={() => handleItemClick(item)}
-                            className="text-left px-4 py-2.5 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all hover:translate-x-1">
+                            onClick={() => navigate(itemRoutes[item])}
+                            className={`text-left px-4 py-2.5 font-outfit text-sm rounded-lg transition-all ${
+                              isActive(item)
+                                ? "bg-white/20 text-white"
+                                : "text-white hover:bg-white/20 hover:text-white"
+                            }`}>
                             {item}
                           </button>
                         ))}
                       </div>
-
-                      {/* Engagement Models for Services */}
-                      {menu.name === "Services" && (
-                        <div className="mt-4 pt-4 border-t border-white/20">
-                          <p className="px-4 text-xs font-outfit font-semibold text-white mb-2">
-                            ENGAGEMENT MODELS
-                          </p>
-                          <div className="grid grid-cols-2 gap-2">
-                            <button
-                              onClick={() => {
-                                navigate("/engagement-models/project-based");
-                                setActiveDropdown(null);
-                              }}
-                              className="text-left px-4 py-2 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all">
-                              Project Based Delivery
-                            </button>
-                            <button
-                              onClick={() => {
-                                navigate("/engagement-models/dedicated-team");
-                                setActiveDropdown(null);
-                              }}
-                              className="text-left px-4 py-2 font-outfit text-sm text-white hover:bg-white/20 hover:text-white rounded-lg transition-all">
-                              Dedicated Team
-                            </button>
-                          </div>
-                        </div>
-                      )}
                     </div>
                   )}
                 </div>

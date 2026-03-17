@@ -1,5 +1,6 @@
 // import { useState, useEffect, useRef } from "react";
 // import BtnIcon from "@/assets/icons/btn_icon.svg?react";
+// import { motion } from "framer-motion";
 
 // type CardType = "case-study" | "blog" | "white-paper";
 
@@ -7,7 +8,6 @@
 //   type: CardType;
 //   tag: string;
 //   image: string;
-
 //   title: string;
 //   description: string;
 //   heading?: string;
@@ -19,7 +19,6 @@
 //   type,
 //   tag,
 //   image,
-
 //   title,
 //   heading,
 //   description,
@@ -31,168 +30,217 @@
 
 //   const isWhitePaper = type === "white-paper";
 //   const isBlog = type === "blog";
-//   const isOverlayCard = type === "case-study" || isBlog;
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setIsVisible(true);
-//           observer.unobserve(entry.target);
-//         }
-//       },
-//       {
-//         threshold: 0.2,
-//         rootMargin: "0px 0px -50px 0px",
-//       },
-//     );
-
-//     if (cardRef.current) {
-//       observer.observe(cardRef.current);
-//     }
-
-//     return () => {
-//       if (cardRef.current) {
-//         observer.unobserve(cardRef.current);
-//       }
-//     };
-//   }, []);
+//   const isCaseStudy = type === "case-study";
 
 //   return (
 //     <div
-//       ref={cardRef}
-//       className={`w-full h-[500px] flex flex-col overflow-hidden  transition-all duration-700 ease-out ${
-//         isVisible
-//           ? "opacity-100 translate-y-0 scale-100"
-//           : "opacity-0 translate-y-12 scale-95"
-//       }`}
+//       className={`w-full h-[500px] flex flex-col overflow-hidden transition-all duration-700 ease-out `}
 //       style={{
 //         background: isBlog && gradient ? gradient : "#ffffff",
 //         transitionDelay: `${index * 150}ms`,
 //       }}>
-//       {/* IMAGE / HERO */}
-//       {isOverlayCard && (
-//         <div
-//           className={`relative h-[240px] bg-cover overflow-hidden transition-transform duration-1000 ease-out ${
-//             isVisible ? "scale-100" : "scale-110"
-//           }`}
-//           style={{
-//             backgroundImage: `url(${image})`,
-//             transitionDelay: `${index * 150 + 100}ms`,
-//           }}>
+//       {/* BLOG CARD - Full height image */}
+//       {isBlog ? (
+//         <motion.div
+//           initial={{ y: 60, opacity: 0 }}
+//           whileInView={{ y: 0, opacity: 1 }}
+//           transition={{ duration: 0.8, ease: "easeOut" }}
+//           viewport={{ once: false }}
+//           className="relative h-full flex flex-col">
+//           {/* Full height background image */}
 //           <div
-//             className={`absolute inset-0 bg-black/40 transition-opacity duration-700 ${
-//               isVisible ? "opacity-100" : "opacity-0"
-//             }`}
-//             style={{ transitionDelay: `${index * 150 + 200}ms` }}
-//           />
+//             className="absolute inset-0 bg-cover bg-center"
+//             style={{
+//               backgroundImage: `url(${image})`,
+//             }}>
+//             {/* Dark overlay */}
+//             <div
+//               className={`absolute inset-0 bg-black/50 transition-opacity duration-700 `}
+//               style={{ transitionDelay: `${index * 150 + 200}ms` }}
+//             />
+//           </div>
 
+//           {/* Tag positioned at the top */}
 //           <div
-//             className={`absolute top-4 left-6 right-6 text-white transition-all duration-700 ${
-//               isVisible
-//                 ? "opacity-100 translate-y-0"
-//                 : "opacity-0 -translate-y-4"
-//             }`}
+//             className={`relative z-10 top-6 left-6 text-white transition-all duration-700 `}
 //             style={{ transitionDelay: `${index * 150 + 300}ms` }}>
 //             <p className="text-2xl font-normal font-stoke mb-1">{tag}</p>
 //           </div>
-//         </div>
-//       )}
 
-//       {/* WHITE PAPER IMAGE */}
-//       {isWhitePaper && (
-//         <div className="h-[240px] bg-black px-6 pt-4 overflow-hidden">
-//           <p
-//             className={`text-2xl font-normal font-stoke text-white transition-all duration-700 ${
-//               isVisible
-//                 ? "opacity-100 translate-x-0"
-//                 : "opacity-0 -translate-x-8"
-//             }`}
-//             style={{ transitionDelay: `${index * 150 + 200}ms` }}>
-//             {tag}
-//           </p>
+//           {/* Content positioned above footer */}
+//           <div className="relative mt-auto  ">
+//             <div className="px-6">
+//               {/* Title */}
+//               <h3
+//                 className={`text-[18px] font-medium font-outfit leading-snug text-white transition-all duration-700 `}
+//                 style={{ transitionDelay: `${index * 150 + 400}ms` }}>
+//                 {title}
+//               </h3>
 
-//           <div className="flex justify-end mt-2">
-//             <img
-//               src={image}
-//               alt={title}
-//               className={`w-[130px] rotate-[-12deg] rounded shadow-xl transition-all duration-1000 ease-out ${
-//                 isVisible
-//                   ? "opacity-100 translate-y-0 rotate-[-12deg]"
-//                   : "opacity-0 translate-y-8 rotate-[15deg]"
-//               }`}
-//               style={{ transitionDelay: `${index * 150 + 400}ms` }}
-//             />
+//               {/* Heading if exists */}
+//               {heading && (
+//                 <h3
+//                   className={`text-[18px] font-medium font-outfit leading-snug text-white mt-1 transition-all duration-700
+//                     `}
+//                   style={{ transitionDelay: `${index * 150 + 450}ms` }}>
+//                   {heading}
+//                 </h3>
+//               )}
+
+//               {/* Description */}
+//               <p
+//                 className={`text-base font-normal leading-relaxed mt-2 text-white line-clamp-3 transition-all duration-700 `}
+//                 style={{ transitionDelay: `${index * 150 + 500}ms` }}>
+//                 {description}
+//               </p>
+//             </div>
+//             {/* Footer - Matching white-paper style */}
+//             <div
+//               className={`relative mt-14 z-10  flex items-center justify-between hover:cursor-pointer px-4 py-4 bg-white backdrop-blur-sm transition-all duration-700 `}
+//               style={{ transitionDelay: `${index * 150 + 600}ms` }}>
+//               <p className="text-sm text-black">Read More</p>
+//               <BtnIcon
+//                 className={`w-3 h-3 text-black transition-transform duration-500 }`}
+//                 style={{ transitionDelay: `${index * 150 + 700}ms` }}
+//               />
+//             </div>
 //           </div>
-//         </div>
+//         </motion.div>
+//       ) : (
+//         /* CASE-STUDY and WHITE-PAPER CARDS - Original layout */
+//         <>
+//           {/* CASE-STUDY IMAGE */}
+//           {isCaseStudy && (
+//             <motion.div
+//               initial={{ y: 60, opacity: 0 }}
+//               whileInView={{ y: 0, opacity: 1 }}
+//               transition={{
+//                 duration: 0.8,
+//                 ease: "easeOut",
+//                 delay: index * 0.15, // delay each card properly
+//               }}
+//               viewport={{ once: true }} // play only once
+//               className="relative h-[240px] bg-cover bg-center overflow-hidden"
+//               style={{ backgroundImage: `url(${image})` }}>
+//               {/* Overlay */}
+//               <motion.div
+//                 initial={{ opacity: 0 }}
+//                 whileInView={{ opacity: 0.4 }}
+//                 transition={{
+//                   duration: 0.7,
+//                   ease: "easeOut",
+//                   delay: index * 0.15 + 0.1,
+//                 }}
+//                 className="absolute inset-0 bg-black"
+//               />
+
+//               {/* Text */}
+//               <motion.div
+//                 initial={{ y: 20, opacity: 0 }}
+//                 whileInView={{ y: 0, opacity: 1 }}
+//                 transition={{
+//                   duration: 0.7,
+//                   ease: "easeOut",
+//                   delay: index * 0.15 + 0.2,
+//                 }}
+//                 className="absolute top-4 left-6 right-6 text-white">
+//                 <p className="text-2xl font-normal font-stoke mb-1">{tag}</p>
+//               </motion.div>
+//             </motion.div>
+//           )}
+
+//           {/* WHITE PAPER IMAGE */}
+//           {isWhitePaper && (
+//             <motion.div
+//               initial={{ y: 60, opacity: 0 }}
+//               whileInView={{ y: 0, opacity: 1 }}
+//               transition={{ duration: 0.8, ease: "easeOut" }}
+//               viewport={{ once: false }}
+//               className="h-[240px] bg-black px-6 pt-4 overflow-hidden">
+//               <p
+//                 className={`text-2xl font-normal font-stoke text-white transition-all duration-700`}
+//                 style={{ transitionDelay: `${index * 150 + 200}ms` }}>
+//                 {tag}
+//               </p>
+
+//               <div className="flex justify-end mt-2">
+//                 <img
+//                   src={image}
+//                   alt={title}
+//                   className={`w-[130px] rotate-[-12deg] rounded shadow-xl transition-all duration-1000 ease-out `}
+//                   style={{ transitionDelay: `${index * 150 + 400}ms` }}
+//                 />
+//               </div>
+//             </motion.div>
+//           )}
+
+//           {/* CONTENT FOR CASE-STUDY and WHITE-PAPER */}
+//           <motion.div
+//             initial={{ y: 60, opacity: 0 }}
+//             whileInView={{ y: 0, opacity: 1 }}
+//             transition={{ duration: 0.8, ease: "easeOut" }}
+//             viewport={{ once: false }}
+//             className={`flex flex-col flex-1 pt-4 ${
+//               isWhitePaper ? "bg-black text-white" : "text-black"
+//             }`}>
+//             {/* TITLE */}
+//             <h3
+//               className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 ${
+//                 isWhitePaper ? "text-white" : "text-black"
+//               } `}
+//               style={{ transitionDelay: `${index * 150 + 400}ms` }}>
+//               {title}
+//             </h3>
+
+//             {heading && isCaseStudy && (
+//               <h3
+//                 className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 `}
+//                 style={{ transitionDelay: `${index * 150 + 450}ms` }}>
+//                 {heading}
+//               </h3>
+//             )}
+
+//             {/* DESCRIPTION */}
+//             <p
+//               className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 transition-all duration-700 ${
+//                 isWhitePaper ? "text-white" : "text-[#4B4B4B]"
+//               } `}
+//               style={{ transitionDelay: `${index * 150 + 500}ms` }}>
+//               {description}
+//             </p>
+
+//             {/* FOOTER */}
+//             <div
+//               className={`mt-auto flex items-center justify-between hover:cursor-pointer ${
+//                 isCaseStudy ? "bg-black" : "bg-white"
+//               } px-4 py-4 transition-all duration-700 }`}
+//               style={{ transitionDelay: `${index * 150 + 600}ms` }}>
+//               <p
+//                 className={`text-sm ${
+//                   isCaseStudy ? "text-textColor" : "text-black"
+//                 }`}>
+//                 Read More
+//               </p>
+//               <BtnIcon
+//                 className={`w-3 h-3 transition-transform duration-500 ${
+//                   isCaseStudy ? "text-white" : "text-black"
+//                 } `}
+//                 style={{ transitionDelay: `${index * 150 + 700}ms` }}
+//               />
+//             </div>
+//           </motion.div>
+//         </>
 //       )}
-
-//       {/* CONTENT */}
-//       <div
-//         className={`flex flex-col flex-1 pt-4 ${
-//           isWhitePaper ? "bg-black text-white" : "text-black"
-//         }`}>
-//         {/* TITLE */}
-//         <h3
-//           className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 ${
-//             isBlog || isWhitePaper ? "text-white" : "text-black"
-//           } ${
-//             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-//           }`}
-//           style={{ transitionDelay: `${index * 150 + 400}ms` }}>
-//           {title}
-//         </h3>
-
-//         {heading && !isWhitePaper && (
-//           <h3
-//             className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 ${
-//               isBlog ? "text-white" : "text-black"
-//             } ${
-//               isVisible
-//                 ? "opacity-100 translate-x-0"
-//                 : "opacity-0 -translate-x-4"
-//             }`}
-//             style={{ transitionDelay: `${index * 150 + 450}ms` }}>
-//             {heading}
-//           </h3>
-//         )}
-
-//         {/* DESCRIPTION */}
-//         <p
-//           className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 transition-all duration-700 ${
-//             isBlog || isWhitePaper ? "text-white" : "text-[#4B4B4B]"
-//           } ${
-//             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-//           }`}
-//           style={{ transitionDelay: `${index * 150 + 500}ms` }}>
-//           {description}
-//         </p>
-
-//         {/* FOOTER */}
-//         <div
-//           className={`mt-auto flex items-center justify-between ${type === "case-study" ? "bg-black" : "bg-white"} px-4 py-4 transition-all duration-700 ${
-//             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-//           }`}
-//           style={{ transitionDelay: `${index * 150 + 600}ms` }}>
-//           <p
-//             className={`text-sm ${type === "case-study" ? "text-textColor" : "text-black"}`}>
-//             Read More
-//           </p>
-//           <BtnIcon
-//             className={`w-3 h-3  transition-transform duration-500 ${type === "case-study" ? "text-white" : "text-black"} ${
-//               isVisible ? "translate-x-0" : "-translate-x-2"
-//             }`}
-//             style={{ transitionDelay: `${index * 150 + 700}ms` }}
-//           />
-//         </div>
-//       </div>
 //     </div>
 //   );
 // };
+
 // export default FeaturedInsightCard;
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 type CardType = "case-study" | "blog" | "white-paper";
 
@@ -217,265 +265,207 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
   gradient,
   index = 0,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
   const cardRef = useRef<HTMLDivElement>(null);
+
+  // Determine navigation link
+  const getCardLink = () => {
+    if (type === "blog") return "/resources/blogs";
+    if (type === "white-paper") return "/resources/white-papers";
+    return "#"; // case-study or others
+  };
+
+  const handleCardClick = () => {
+    const link = getCardLink();
+    if (link !== "#") navigate(link);
+  };
 
   const isWhitePaper = type === "white-paper";
   const isBlog = type === "blog";
   const isCaseStudy = type === "case-study";
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px",
-      },
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div
+    <motion.div
       ref={cardRef}
-      className={`w-full h-[500px] flex flex-col overflow-hidden transition-all duration-700 ease-out ${
-        isVisible
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-12 scale-95"
-      }`}
+      onClick={handleCardClick}
+      className={`w-full h-[500px] flex flex-col overflow-hidden transition-all duration-700 ease-out cursor-pointer`}
       style={{
         background: isBlog && gradient ? gradient : "#ffffff",
         transitionDelay: `${index * 150}ms`,
-      }}>
-      {/* BLOG CARD - Full height image */}
-      {isBlog ? (
+      }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}>
+      {/* BLOG CARD */}
+      {isBlog && (
         <div className="relative h-full flex flex-col">
-          {/* Full height background image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${image})`,
-            }}>
-            {/* Dark overlay */}
-            <div
-              className={`absolute inset-0 bg-black/50 transition-opacity duration-700 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 200}ms` }}
-            />
+            style={{ backgroundImage: `url(${image})` }}>
+            <div className="absolute inset-0 bg-black/50 transition-opacity duration-700" />
           </div>
 
-          {/* Tag positioned at the top */}
-          <div
-            className={`relative z-10 top-6 left-6 text-white transition-all duration-700 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-4"
-            }`}
-            style={{ transitionDelay: `${index * 150 + 300}ms` }}>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="relative z-10 top-6 left-6 text-white">
             <p className="text-2xl font-normal font-stoke mb-1">{tag}</p>
-          </div>
+          </motion.div>
 
-          {/* Content positioned above footer */}
-          <div className="relative mt-auto  ">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="relative mt-auto">
             <div className="px-6">
-              {/* Title */}
               <h3
-                className={`text-[18px] font-medium font-outfit leading-snug text-white transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-4"
-                }`}
+                className="text-[18px] font-medium font-outfit leading-snug text-white transition-all duration-700"
                 style={{ transitionDelay: `${index * 150 + 400}ms` }}>
                 {title}
               </h3>
 
-              {/* Heading if exists */}
               {heading && (
                 <h3
-                  className={`text-[18px] font-medium font-outfit leading-snug text-white mt-1 transition-all duration-700 ${
-                    isVisible
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 -translate-x-4"
-                  }`}
+                  className="text-[18px] font-medium font-outfit leading-snug text-white mt-1 transition-all duration-700"
                   style={{ transitionDelay: `${index * 150 + 450}ms` }}>
                   {heading}
                 </h3>
               )}
 
-              {/* Description */}
               <p
-                className={`text-base font-normal leading-relaxed mt-2 text-white line-clamp-3 transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4"
-                }`}
+                className="text-base font-normal leading-relaxed mt-2 text-white line-clamp-3 transition-all duration-700"
                 style={{ transitionDelay: `${index * 150 + 500}ms` }}>
                 {description}
               </p>
             </div>
-            {/* Footer - Matching white-paper style */}
-            <div
-              className={`relative mt-14 z-10  flex items-center justify-between px-4 py-4 bg-white backdrop-blur-sm transition-all duration-700 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 600}ms` }}>
-              <p className="text-sm text-black">Read More</p>
-              <BtnIcon
-                className={`w-3 h-3 text-black transition-transform duration-500 ${
-                  isVisible ? "translate-x-0" : "-translate-x-2"
-                }`}
-                style={{ transitionDelay: `${index * 150 + 700}ms` }}
-              />
-            </div>
-          </div>
-        </div>
-      ) : (
-        /* CASE-STUDY and WHITE-PAPER CARDS - Original layout */
-        <>
-          {/* CASE-STUDY IMAGE */}
-          {isCaseStudy && (
-            <div
-              className={`relative h-[240px] bg-cover overflow-hidden transition-transform duration-1000 ease-out ${
-                isVisible ? "scale-100" : "scale-110"
-              }`}
-              style={{
-                backgroundImage: `url(${image})`,
-                transitionDelay: `${index * 150 + 100}ms`,
-              }}>
-              <div
-                className={`absolute inset-0 bg-black/40 transition-opacity duration-700 ${
-                  isVisible ? "opacity-100" : "opacity-0"
-                }`}
-                style={{ transitionDelay: `${index * 150 + 200}ms` }}
-              />
 
-              <div
-                className={`absolute top-4 left-6 right-6 text-white transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-4"
-                }`}
-                style={{ transitionDelay: `${index * 150 + 300}ms` }}>
-                <p className="text-2xl font-normal font-stoke mb-1">{tag}</p>
+            {/* FULL WIDTH FOOTER */}
+            <div
+              className="relative mt-14 z-10 flex items-center justify-between hover:cursor-pointer w-full px-0 py-4 bg-white backdrop-blur-sm transition-all duration-700"
+              style={{ transitionDelay: `${index * 150 + 600}ms` }}>
+              <p className="text-sm text-black pl-6">Read More</p>
+              <div className="pr-6">
+                <BtnIcon
+                  className="w-3 h-3 text-black transition-transform duration-500"
+                  style={{ transitionDelay: `${index * 150 + 700}ms` }}
+                />
               </div>
             </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* CASE-STUDY & WHITE-PAPER */}
+      {!isBlog && (
+        <>
+          {isCaseStudy && (
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true }}
+              className="relative h-[240px] bg-cover bg-center overflow-hidden"
+              style={{ backgroundImage: `url(${image})` }}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.4 }}
+                transition={{
+                  duration: 0.7,
+                  ease: "easeOut",
+                  delay: index * 0.15 + 0.1,
+                }}
+                className="absolute inset-0 bg-black"
+              />
+
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.7,
+                  ease: "easeOut",
+                  delay: index * 0.15 + 0.2,
+                }}
+                className="absolute top-4 left-6 right-6 text-white">
+                <p className="text-2xl font-normal font-stoke mb-1">{tag}</p>
+              </motion.div>
+            </motion.div>
           )}
 
-          {/* WHITE PAPER IMAGE */}
           {isWhitePaper && (
             <div className="h-[240px] bg-black px-6 pt-4 overflow-hidden">
-              <p
-                className={`text-2xl font-normal font-stoke text-white transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-8"
-                }`}
-                style={{ transitionDelay: `${index * 150 + 200}ms` }}>
-                {tag}
-              </p>
-
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false }}>
+                <p className="text-2xl font-normal font-stoke text-white transition-all duration-700">
+                  {tag}
+                </p>
+              </motion.div>
               <div className="flex justify-end mt-2">
                 <img
                   src={image}
                   alt={title}
-                  className={`w-[130px] rotate-[-12deg] rounded shadow-xl transition-all duration-1000 ease-out ${
-                    isVisible
-                      ? "opacity-100 translate-y-0 rotate-[-12deg]"
-                      : "opacity-0 translate-y-8 rotate-[15deg]"
-                  }`}
-                  style={{ transitionDelay: `${index * 150 + 400}ms` }}
+                  className="w-[130px] rotate-[-12deg] rounded shadow-xl transition-all duration-1000 ease-out"
                 />
               </div>
             </div>
           )}
 
-          {/* CONTENT FOR CASE-STUDY and WHITE-PAPER */}
-          <div
+          {/* CONTENT */}
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}
             className={`flex flex-col flex-1 pt-4 ${
               isWhitePaper ? "bg-black text-white" : "text-black"
             }`}>
-            {/* TITLE */}
             <h3
-              className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 ${
+              className={`text-[18px] font-medium font-outfit leading-snug px-6 ${
                 isWhitePaper ? "text-white" : "text-black"
-              } ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-4"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 400}ms` }}>
+              }`}>
               {title}
             </h3>
 
             {heading && isCaseStudy && (
-              <h3
-                className={`text-[18px] font-medium font-outfit leading-snug px-6 transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-4"
-                }`}
-                style={{ transitionDelay: `${index * 150 + 450}ms` }}>
+              <h3 className="text-[18px] font-medium font-outfit leading-snug px-6">
                 {heading}
               </h3>
             )}
 
-            {/* DESCRIPTION */}
             <p
-              className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 transition-all duration-700 ${
+              className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 ${
                 isWhitePaper ? "text-white" : "text-[#4B4B4B]"
-              } ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 500}ms` }}>
+              }`}>
               {description}
             </p>
 
-            {/* FOOTER */}
+            {/* FULL WIDTH FOOTER */}
             <div
-              className={`mt-auto flex items-center justify-between ${
+              className={`mt-auto flex items-center justify-between hover:cursor-pointer w-full px-0 py-4 ${
                 isCaseStudy ? "bg-black" : "bg-white"
-              } px-4 py-4 transition-all duration-700 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 600}ms` }}>
+              }`}>
               <p
-                className={`text-sm ${
-                  isCaseStudy ? "text-textColor" : "text-black"
-                }`}>
+                className={`text-sm ${isCaseStudy ? "text-white" : "text-black"} pl-6`}>
                 Read More
               </p>
-              <BtnIcon
-                className={`w-3 h-3 transition-transform duration-500 ${
-                  isCaseStudy ? "text-white" : "text-black"
-                } ${isVisible ? "translate-x-0" : "-translate-x-2"}`}
-                style={{ transitionDelay: `${index * 150 + 700}ms` }}
-              />
+              <div className="pr-6">
+                <BtnIcon
+                  className={`w-3 h-3 ${isCaseStudy ? "text-white" : "text-black"}`}
+                />
+              </div>
             </div>
-          </div>
+          </motion.div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 

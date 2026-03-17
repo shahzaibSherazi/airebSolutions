@@ -1291,3 +1291,11 @@ html.lenis {
 .blogDetail-fade-up {
   animation: fadeUp 0.5s ease both;
 }
+@keyframes drawLoop {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
