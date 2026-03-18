@@ -21,8 +21,8 @@ const FeaturedSection = () => {
 
           {/* <p className="lg:max-w-[60vw] text-base sm:text-lg md:text-xl font-normal font-outfit text-[#000000] leading-relaxed"> */}
           <AnimatedParagraph
-            className="lg:max-w-[80vw] text-2xl md:text-4xl font-outfit leading-[48px] md:leading-relaxed"
-            text="Highlights our latest perspectives on design, technology and digital innovation.From UI/UX best practices and modern web development to DevOps,automation and emerging tech trends,we share practical insights that help businesses make smarter decisions,stay competitive,and build scalable digital solutions."
+            className="lg:max-w-[80vw] text-[clamp(24px,3vw,32px)] font-outfit leading-[48px] md:leading-relaxed"
+            text="We share insights on design, technology, and digital innovation from UI/UX design best practices, modern web development, DevOps automation and emerging tech. Explore our case studies, blogs and white papers for practical knowledge, real-world solutions and expert perspectives to help businesses make smarter decisions and build scalable digital solutions."
           />
           {/* </p> */}
         </div>

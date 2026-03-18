@@ -1,7 +1,8 @@
 import { Mail, Phone } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import SelectIcon from "@/assets/contact-us/select-file.svg?react";
 
 export default function ContactUsHero() {
   const [phone, setPhone] = useState("");
@@ -75,7 +76,8 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const [file, setFile] = useState(null);
+  const fileInputRef = useRef(null);
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm({
@@ -93,17 +95,23 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     setLoading(true);
 
     try {
+      const formData = new FormData();
+
+      formData.append("fullName", form.fullName);
+      formData.append("email", form.email);
+      formData.append("phoneNumber", phone);
+      formData.append("service", service);
+      formData.append("message", form.message);
+      formData.append("privacyAgreed", String(form.privacyAgreed));
+
+      // ✅ optional file
+      if (file) {
+        formData.append("file", file);
+      }
+
       const response = await fetch("http://localhost:5000/api/contact/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: form.fullName,
-          email: form.email,
-          phoneNumber: phone,
-          service,
-          message: form.message,
-          privacyAgreed: form.privacyAgreed,
-        }),
+        body: formData, // ❗ no headers
       });
 
       const data = await response.json();
@@ -118,6 +126,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         });
         setPhone("");
         setService("");
+        setFile(null); // reset file
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -152,7 +161,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
         {/* Phone */}
         <div>
-          <label className="text-xs sm:text-sm opacity-80">Phone number</label>
+          <label className="text-xs sm:text-sm text-white">Phone number</label>
           <div className="mt-1 rounded-md bg-[#0E2142] border border-primary px-2 py-1">
             <PhoneInput
               international
@@ -169,8 +178,8 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <ServiceDropdown value={service} onChange={setService} />
 
         {/* Message */}
-        <div>
-          <label className="text-xs sm:text-sm opacity-80">
+        <div className="relative">
+          <label className="text-xs sm:text-sm text-white">
             Project Details (optional)
           </label>
           <textarea
@@ -181,6 +190,18 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             placeholder="Leave us a message..."
             className="mt-1 w-full placeholder:text-[#F8F8F8] rounded-md bg-[#0E2142] border border-primary px-3 py-2 text-xs sm:text-sm outline-none resize-none"
           />
+          <SelectIcon
+            onClick={() => fileInputRef.current.click()}
+            className="absolute top-10 right-3 w-4 h-4 opacity-80 cursor-pointer hover:opacity-100 transition"
+          />{" "}
+          <input
+            type="file"
+            accept=".pdf"
+            ref={fileInputRef}
+            onChange={(e) => setFile(e.target.files[0])}
+            className="hidden"
+          />
+          {file && <p className="text-xs text-green-400">{file.name}</p>}
         </div>
 
         {/* Privacy Checkbox */}

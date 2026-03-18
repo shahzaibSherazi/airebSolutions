@@ -186,14 +186,14 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* HERO CONTENT */}
-      <div className="relative z-20 flex items-center justify-center w-full h-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="relative z-20 flex items-center justify-center w-full h-full px-6 lg:px-8 py-16  lg:py-24">
         <div className="text-center max-w-7xl mx-auto">
-          <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-md mx-auto opacity-100 uppercase">
+          <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
             THOUGHTFUL DESIGN ACROSS <br className="hidden sm:inline" />
             BRANDS, PRODUCTS, AND DIGITAL EXPERIENCES
           </p>
 
-          <h1 className="font-stoke leading-tight tracking-widest mt-8 lg:mt-10 mb-8 lg:mb-10">
+          <h1 className="font-stoke leading-tight tracking-widest mt-8 mb-8">
             {["DESIGN", "FOR", "EVERYONE"].map((word, idx) => (
               <div key={idx} className="overflow-hidden">
                 <AnimatedText
@@ -207,11 +207,13 @@ const HeroSection = () => {
             ))}
           </h1>
 
-          <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-md mx-auto opacity-100 uppercase">
-            Where ideas become clear, usable, and beautifully crafted.
+          <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
+            We create smart digital solutions that help businesses grow,
+            automate processes, and deliver better results through modern
+            technology.
           </p>
 
-          <div className="mt-12 sm:mt-16 lg:mt-12 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <button className="group flex items-center gap-3 sm:gap-4 bg-primary pl-4 sm:pl-6 pr-1 py-1 text-base sm:text-lg tracking-wide hover:bg-white transition-all duration-300">
               <span className="whitespace-nowrap text-textColor group-hover:text-black">
                 Get Started

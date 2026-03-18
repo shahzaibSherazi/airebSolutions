@@ -272,12 +272,12 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
   const getCardLink = () => {
     if (type === "blog") return "/resources/blogs";
     if (type === "white-paper") return "/resources/white-papers";
-    return "#"; // case-study or others
+    return "/resources/case-studies"; // case-study or others
   };
 
   const handleCardClick = () => {
     const link = getCardLink();
-    if (link !== "#") navigate(link);
+    navigate(link);
   };
 
   const isWhitePaper = type === "white-paper";
@@ -442,7 +442,7 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
 
             <p
               className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 ${
-                isWhitePaper ? "text-white" : "text-[#4B4B4B]"
+                isWhitePaper ? "text-white" : "text-black"
               }`}>
               {description}
             </p>

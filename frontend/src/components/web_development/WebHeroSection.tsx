@@ -14,7 +14,7 @@ const WebHeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 min-h-[100svh] px-8 py-[8vh] sm:py-[10vh] lg:py-[12vh] flex flex-col justify-end gap-[2vh] sm:gap-[3vh] lg:gap-[4.5vh]">
-        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-gray-300 max-w-2xl">
+        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-textColor max-w-2xl">
           Scalable Web Solutions for Ambitious Brands
         </p>
 

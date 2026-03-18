@@ -8,6 +8,7 @@ import OptimizationIcon from "@/assets/icons/web_development_icons/optimization.
 import MaintienanceIcon from "@/assets/icons/web_development_icons/maintenance.svg?react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
 /* ---------------- TYPES ---------------- */
 type Step = {
@@ -154,13 +155,19 @@ const WorkProcessTimeline: React.FC = () => {
             <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
               Our Work Process
             </span>
-            <h2 className="text-white font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mt-3 sm:mt-[34px]">
-              How we get it done
-            </h2>
-            <p className="font-outfit font-normal text-base mt-[27px]">
-              Cleaning, organizing, and optimizing datasets for accurate model
-              training.
-            </p>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <h2 className="text-white font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mt-3 sm:mt-[34px]">
+                How we get it done
+              </h2>
+              <p className="font-outfit font-normal text-base mt-[27px]">
+                Cleaning, organizing, and optimizing datasets for accurate model
+                training.
+              </p>
+            </motion.div>
           </div>
 
           {/* Cards */}

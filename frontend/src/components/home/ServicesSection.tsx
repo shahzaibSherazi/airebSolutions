@@ -45,10 +45,9 @@ const ServicesSection = () => {
   sm:text-xl sm:leading-[1.75]
   md:text-2xl md:leading-[1.8]
   lg:text-4xl lg:leading-[1.25]  font-normal font-outfit text-white">
-                We deliver custom digital solutions, including web and mobile
-                development, UI/UX, DevOps, e-commerce, AI, and system
-                integrations helping businesses scale with efficient,
-                high-performance technology.
+                We build powerful digital solutions, including web apps, mobile
+                apps, UI/UX design, DevOps, AI systems, and e-commerce platforms
+                that help businesses grow faster and operate efficiently.
               </p>
 
               {/* View All Button - Desktop */}

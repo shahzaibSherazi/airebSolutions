@@ -1299,3 +1299,34 @@ html.lenis {
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes rotateAntiClockIn {
+  0% {
+    transform: rotateY(80deg) translateX(60px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateAntiClockOut {
+  0% {
+    transform: rotateY(0deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(-80deg) translateX(-60px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* smooth GPU rendering */
+.preserve-3d {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}

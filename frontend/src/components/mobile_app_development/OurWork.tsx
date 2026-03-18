@@ -1,5 +1,6 @@
 import React from "react";
 import workImg from "../../assets/mobile_app/work_img.png";
+import { motion } from "framer-motion";
 const OurWork = () => {
   return (
     <section className=" w-full px-4 sm:px-6 lg:px-8 py-24  bg-primary overflow-hidden">
@@ -13,18 +14,22 @@ const OurWork = () => {
               See Our Work
             </p>
           </div>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal font-stoke text-black mb-4 sm:mb-6">
+              How we get it done
+            </h2>
 
-          {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal font-stoke text-black mb-4 sm:mb-6">
-            How we get it done
-          </h2>
-
-          {/* Description */}
-          <p className="text-base sm:text-lg font-outfit font-light text-[#141414] mb-6 sm:mb-12 max-w-lg mx-auto lg:mx-0">
-            Dive into our collection of projects that showcase creativity,
-            precision, and purpose.
-          </p>
-
+            {/* Description */}
+            <p className="text-base sm:text-lg font-outfit font-light text-[#141414] mb-6 sm:mb-12 max-w-lg mx-auto lg:mx-0">
+              Dive into our collection of projects that showcase creativity,
+              precision, and purpose.
+            </p>
+          </motion.div>
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
             <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded border-025 hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">

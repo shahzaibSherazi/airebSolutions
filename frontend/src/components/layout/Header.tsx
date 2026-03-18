@@ -40,28 +40,10 @@ const itemRoutes = {
   "Case Studies": "/resources/case-studies",
   Whitepapers: "/resources/white-papers",
   Portfolio: "/resources/portfolio",
-  "E-books": "/resources/ebooks",
-  Documentation: "/resources/documentation",
-  "Video Tutorials": "/resources/video-tutorials",
-  Podcasts: "/resources/podcasts",
-  Infographics: "/resources/infographics",
-  "Research Reports": "/resources/research-reports",
-  "Best Practices": "/resources/best-practices",
-  FAQs: "/resources/faqs",
 
   // About Us routes
   "Our Story": "/about-us",
-  Team: "/about/team",
   Careers: "/about/careers",
-  Partners: "/about/partners",
-  Testimonials: "/about/testimonials",
-  Awards: "/about/awards",
-  "News & Press": "/about/news-press",
-  "Corporate Culture": "/about/corporate-culture",
-  Leadership: "/about/leadership",
-  "Office Locations": "/about/office-locations",
-  "CSR Initiatives": "/about/csr-initiatives",
-  "Contact Info": "/about/contact-info",
 };
 
 const menuItems = [
@@ -101,37 +83,11 @@ const menuItems = [
   },
   {
     name: "Resources",
-    items: [
-      "Blogs",
-      "Case Studies",
-      "Whitepapers",
-      "Portfolio",
-      "E-books",
-      "Documentation",
-      "Video Tutorials",
-      "Podcasts",
-      "Infographics",
-      "Research Reports",
-      "Best Practices",
-      "FAQs",
-    ],
+    items: ["Blogs", "Case Studies", "Whitepapers", "Portfolio"],
   },
   {
     name: "About Us",
-    items: [
-      "Our Story",
-      "Team",
-      "Careers",
-      "Partners",
-      "Testimonials",
-      "Awards",
-      "News & Press",
-      "Corporate Culture",
-      "Leadership",
-      "Office Locations",
-      "CSR Initiatives",
-      "Contact Info",
-    ],
+    items: ["Our Story", "Careers"],
   },
 ];
 
@@ -340,7 +296,7 @@ const Header = () => {
                   {/* Dropdown Menu */}
                   {menu.items.length > 0 && activeDropdown === menu.name && (
                     <div
-                      className="absolute top-full left-0 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
                       style={{
                         minWidth: menu.items.length > 6 ? "600px" : "320px",
                         background:
@@ -357,8 +313,7 @@ const Header = () => {
                           setActiveDropdown(null);
                         }, 150);
                       }}>
-                      <div
-                        className={`grid gap-2 ${menu.items.length > 6 ? "grid-cols-2" : "grid-cols-1"}`}>
+                      <div className="grid gap-2 grid-cols-2">
                         {menu.items.map((item, index) => (
                           <button
                             key={index}

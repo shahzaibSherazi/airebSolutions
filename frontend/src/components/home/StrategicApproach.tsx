@@ -43,7 +43,7 @@ const StrategicApproach = () => {
     {
       title: "Clarity",
       description:
-        "We identify where the real opportunities lie and where systems, brand or processes get stuck, so every next decision drives direction and impact.",
+        "We identify real growth opportunities and find what is slowing down your systems, processes, or brand direction, so every decision helps your business move forward with clear purpose and strong results.",
       icon: (
         <img
           src={developmentSkillIcon}
@@ -55,7 +55,7 @@ const StrategicApproach = () => {
     {
       title: "Partnership",
       description:
-        "We don't just build for you we build with you. Together we operate as one team that turns ambition into scalable reality.",
+        "We dont simple build a solution for you, we collaborate with you. Working as one team, we turn ideas and ambitions into scalable and practical outcomes.",
       icon: (
         <img
           src={conferenceIcon}
@@ -67,7 +67,7 @@ const StrategicApproach = () => {
     {
       title: "Engineering",
       description:
-        "We build technology that works seamlessly, scales intelligently and is strategically designed to push your business forward.",
+        "We develop technology that runs smoothly, adapts as you grow and is thoughtfully engineered to support long term business success.",
       icon: (
         <img
           src={toolIcon}
@@ -79,7 +79,7 @@ const StrategicApproach = () => {
     {
       title: "Evolution",
       description:
-        "We create solutions that adapt to change, respond faster, work smarter and help your brand get more out of every new development.",
+        "Our solutions are built to evolve with change, respond quickly to new challenges, work smarter and help your business gain more value from every advancement.",
       icon: (
         <img
           src={lifeCycleIcon}
@@ -91,7 +91,7 @@ const StrategicApproach = () => {
     {
       title: "Leadership",
       description:
-        "We strengthen your position in the market by sharpening visibility, improving performance and building an advantage that continues to grow.",
+        "We help strengthen your market position by improving visibility, enhancing performance nad creating a competitive advantage taht continuous to grow.",
       icon: (
         <img
           src={bussinessIcon}
@@ -123,9 +123,10 @@ const StrategicApproach = () => {
               The drive behind <br className="sm:hidden" /> everything we build
             </h2>
             <p className="text-textColor font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
-              We don't just create strategies we show the numbers. Growth means
-              higher conversions, lower costs, and stronger brands. Discover how
-              we help brands grow smarter
+              We don't plan strategies; we focus on measurable results. Real
+              growth means better conversasion optimized strong brands. See how
+              our approach helpbussiness grow smarter and achieve long term
+              success.
             </p>
           </motion.div>
         </div>
