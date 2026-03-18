@@ -9,12 +9,12 @@ const contactSchema = new mongoose.Schema(
       minlength: [2, "Name must be at least 2 characters long"],
       maxlength: [100, "Name cannot exceed 100 characters"],
     },
-    city: {
+    service: {
       type: String,
-      required: [true, "City is required"],
+      required: [true, "service is required"],
       trim: true,
-      minlength: [2, "City must be at least 2 characters long"],
-      maxlength: [100, "City cannot exceed 100 characters"],
+      minlength: [2, "service must be at least 2 characters long"],
+      maxlength: [100, "service cannot exceed 100 characters"],
     },
     email: {
       type: String,
@@ -32,9 +32,9 @@ const contactSchema = new mongoose.Schema(
     },
     message: {
       type: String,
-      required: [true, "Message is required"],
-      minlength: [10, "Message must be at least 10 characters long"],
+      trim: true,
       maxlength: [5000, "Message cannot exceed 5000 characters"],
+      default: "",
     },
     privacyAgreed: {
       type: Boolean,
@@ -48,6 +48,18 @@ const contactSchema = new mongoose.Schema(
     },
     notes: {
       type: String,
+      default: null,
+    },
+    fileName: {
+      type: String,
+      default: null,
+    },
+    fileMimeType: {
+      type: String,
+      default: null,
+    },
+    fileSize: {
+      type: Number,
       default: null,
     },
   },

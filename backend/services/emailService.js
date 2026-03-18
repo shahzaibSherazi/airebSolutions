@@ -31,8 +31,8 @@ export const sendContactEmail = async (contactData) => {
               <td style="padding: 12px 0; color: #555;">${contactData.fullName}</td>
             </tr>
             <tr style="border-bottom: 1px solid #e0e0e0;">
-              <td style="padding: 12px 0; font-weight: bold; color: #333;">City:</td>
-              <td style="padding: 12px 0; color: #555;">${contactData.city}</td>
+              <td style="padding: 12px 0; font-weight: bold; color: #333;">Service:</td>
+              <td style="padding: 12px 0; color: #555;">${contactData.service}</td>
             </tr>
             <tr style="border-bottom: 1px solid #e0e0e0;">
               <td style="padding: 12px 0; font-weight: bold; color: #333;">Email:</td>
@@ -57,6 +57,9 @@ export const sendContactEmail = async (contactData) => {
             <p style="color: #0B5A7B; margin: 0;">
               <strong>✓ Privacy Policy Agreed:</strong> Yes
             </p>
+            <p style="color: #0B5A7B; margin: 6px 0 0 0;">
+              <strong>Attachment:</strong> ${contactData.file ? "PDF attached" : "No file attached"}
+            </p>
           </div>
 
           <p style="color: #999; font-size: 12px; text-align: center; margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px;">
@@ -67,12 +70,22 @@ export const sendContactEmail = async (contactData) => {
       </div>
     `;
 
+    const attachments = [];
+    if (contactData.file) {
+      attachments.push({
+        filename: contactData.file.originalname,
+        content: contactData.file.buffer,
+        contentType: contactData.file.mimetype,
+      });
+    }
+
     const mailOptions = {
       from: `${process.env.SENDER_NAME} <${process.env.GMAIL_USER}>`,
       to: process.env.COMPANY_EMAIL,
       subject: `New Contact Form Submission from ${contactData.fullName}`,
       html: htmlTemplate,
       replyTo: contactData.email,
+      attachments,
     };
 
     await transporter.sendMail(mailOptions);

@@ -9,12 +9,12 @@ export const validateContact = [
     .isLength({ min: 2, max: 100 })
     .withMessage("Name must be between 2 and 100 characters"),
 
-  body("city")
+  body("service")
     .trim()
     .notEmpty()
-    .withMessage("City is required")
+    .withMessage("service is required")
     .isLength({ min: 2, max: 100 })
-    .withMessage("City must be between 2 and 100 characters"),
+    .withMessage("service must be select from dropdown"),
 
   body("email")
     .trim()
@@ -32,14 +32,23 @@ export const validateContact = [
     .withMessage("Please provide a valid phone number"),
 
   body("message")
+    .optional({ checkFalsy: true })
     .trim()
-    .notEmpty()
-    .withMessage("Message is required")
-    .isLength({ min: 10, max: 5000 })
-    .withMessage("Message must be between 10 and 5000 characters"),
+    .isLength({ max: 5000 })
+    .withMessage("Message must be less than 5000 characters"),
 
   body("privacyAgreed")
-    .equals("true")
+    .custom((value) => {
+      if (
+        value === true ||
+        value === "true" ||
+        value === "on" ||
+        value === "1"
+      ) {
+        return true;
+      }
+      return false;
+    })
     .withMessage("You must agree to the privacy policy"),
 ];
 

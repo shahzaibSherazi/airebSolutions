@@ -7,32 +7,43 @@ import {
 // Submit contact form
 export const submitContact = async (req, res, next) => {
   try {
-    const { fullName, city, email, phoneNumber, message, privacyAgreed } =
-      req.body;
+    const {
+      fullName,
+      service,
+      email,
+      phoneNumber,
+      message = "",
+      privacyAgreed,
+    } = req.body;
 
     // Check if all required fields are provided
-    if (
-      !fullName ||
-      !city ||
-      !email ||
-      !phoneNumber ||
-      !message ||
-      !privacyAgreed
-    ) {
-      return res.status(400).json({
-        success: false,
-        message: "All fields are required",
-      });
-    }
+    // if (
+    //   !fullName ||
+    //   !service ||
+    //   !email ||
+    //   !phoneNumber ||
+    //   !message ||
+    //   !privacyAgreed
+    // ) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "All fields are required",
+    //   });
+    // }
 
     // Create new contact document
+    const fileData = req.file;
+
     const contact = new Contact({
       fullName,
-      city,
+      service,
       email,
       phoneNumber,
       message,
       privacyAgreed: privacyAgreed === "true" || privacyAgreed === true,
+      fileName: fileData ? fileData.originalname : null,
+      fileMimeType: fileData ? fileData.mimetype : null,
+      fileSize: fileData ? fileData.size : null,
     });
 
     // Save to database
@@ -41,10 +52,11 @@ export const submitContact = async (req, res, next) => {
     // Send email to company
     await sendContactEmail({
       fullName,
-      city,
+      service,
       email,
       phoneNumber,
       message,
+      file: fileData,
     });
 
     // Send confirmation email to user

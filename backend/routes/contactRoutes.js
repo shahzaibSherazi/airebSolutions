@@ -1,4 +1,5 @@
 import express from "express";
+import multer from "multer";
 import {
   submitContact,
   getAllContacts,
@@ -12,10 +13,27 @@ import {
   handleValidationErrors,
 } from "../middleware/validation.js";
 
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB max
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype !== "application/pdf") {
+      return cb(new Error("Only PDF files are allowed"));
+    }
+    cb(null, true);
+  },
+});
+
 const router = express.Router();
 
 // Contact form routes
-router.post("/submit", validateContact, handleValidationErrors, submitContact);
+router.post(
+  "/submit",
+  upload.single("file"),
+  validateContact,
+  handleValidationErrors,
+  submitContact,
+);
 
 // Admin routes
 router.get("/", getAllContacts); // Get all contacts
