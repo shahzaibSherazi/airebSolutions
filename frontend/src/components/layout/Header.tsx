@@ -243,7 +243,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-transparent backdrop-blur-md ${
+        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
         <div className=" px-6 lg:px-8">

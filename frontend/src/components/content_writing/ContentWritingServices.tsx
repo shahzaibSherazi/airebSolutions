@@ -1,5 +1,6 @@
 import React from "react";
 import cardIcon from "../../assets/icons/webService_icon.png";
+import { motion } from "framer-motion";
 import BlogIcon from "@/assets/icons/content-writing_icons/services_icons/blog.svg?react";
 import CopyWritingIcon from "@/assets/icons/content-writing_icons/services_icons/copywriting.svg?react";
 import ProductIcon from "@/assets/icons/content-writing_icons/services_icons/product.svg?react";
@@ -65,16 +66,22 @@ const ContentWritingServices = () => {
       <div className="">
         {/* Header Section */}
         <div className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]">
-          <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
-            Our Content Writing Services
-          </h2>
-          <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
-            At Aireb Solutions, we offer a comprehensive range of content
-            writing services designed to meet the diverse needs of your
-            business. From SEO-optimized website copy to in-depth articles and
-            engaging social media posts, our team of expert writers is here to
-            craft content that delivers results.
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
+              Our Content Writing Services
+            </h2>
+            <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
+              At Aireb Solutions, we offer a comprehensive range of content
+              writing services designed to meet the diverse needs of your
+              business. From SEO-optimized website copy to in-depth articles and
+              engaging social media posts, our team of expert writers is here to
+              craft content that delivers results.
+            </p>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[clamp(16px,2vh,24px)]">
@@ -86,30 +93,36 @@ const ContentWritingServices = () => {
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
-              {/* Icon Container */}
-              <div className="mb-[clamp(16px,2.5vh,32px)]">
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                  {service.iconPath}
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false }}>
+                {/* Icon Container */}
+                <div className="mb-[clamp(16px,2.5vh,32px)]">
+                  <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                    {service.iconPath}
+                  </div>
                 </div>
-              </div>
 
-              {/* Title */}
-              <h3
-                className="font-outfit font-semibold text-white
+                {/* Title */}
+                <h3
+                  className="font-outfit font-semibold text-white
   text-[clamp(16px,1.8vw,22px)] leading-[1.3]
   mb-[clamp(12px,1.5vh,20px)]
   line-clamp-2">
-                {service.title}
-              </h3>
+                  {service.title}
+                </h3>
 
-              {/* Description */}
-              <p
-                className="font-outfit font-normal text-gray-400 group-hover:text-white
+                {/* Description */}
+                <p
+                  className="font-outfit font-normal text-gray-400 group-hover:text-white
   text-[clamp(12px,1.3vw,15px)] leading-[1.7]
   transition-colors duration-500
   line-clamp-5">
-                {service.description}
-              </p>
+                  {service.description}
+                </p>
+              </motion.div>
             </div>
           ))}
         </div>

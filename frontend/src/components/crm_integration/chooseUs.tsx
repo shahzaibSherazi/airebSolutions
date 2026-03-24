@@ -1,6 +1,6 @@
 import React from "react";
-// import { ArrowUpRight } from "lucide-react";
 import ArrowUpRight from "../../assets/icons/top-left.png";
+import { motion } from "framer-motion";
 
 const ChooseUs = () => {
   const features = [
@@ -43,13 +43,19 @@ const ChooseUs = () => {
 
         {/* Heading */}
         <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-            An established partner that can speed
-            <br className="hidden sm:block" />
-            up innovation, with a focus on real-
-            <br className="hidden sm:block" />
-            world applications
-          </h2>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
+              An established partner that can speed
+              <br className="hidden sm:block" />
+              up innovation, with a focus on real-
+              <br className="hidden sm:block" />
+              world applications
+            </h2>
+          </motion.div>
         </div>
 
         {/* Features Grid */}

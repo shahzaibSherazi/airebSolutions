@@ -15,7 +15,7 @@ const OnDemandHero = () => {
       {/* Content */}
       <div className="relative z-10 min-h-screen px-8 py-[8vh] sm:py-[10vh] lg:py-[14vh] flex flex-col justify-end ">
         <div className="mb-[2vh] sm:mb-[3vh] ">
-          <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-gray-300 max-w-2xl">
+          <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-textColor max-w-2xl">
             Scalable, flexible, and instant solutions
           </p>
         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import contactImage from "@/assets/contact-image.png";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-
+import { motion } from "framer-motion";
 /* ================= MAIN ================= */
 export default function ContactForm() {
   const [phone, setPhone] = useState("");
@@ -16,10 +16,15 @@ export default function ContactForm() {
       <div className="w-full flex items-center justify-between px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
-            <h1 className="font-stoke font-normal text-[clamp(24px,4vw,48px)] leading-tight sm:leading-snug lg:leading-[64px]">
-              Tell us about your project
-            </h1>
-
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <h1 className="font-stoke font-normal text-[clamp(24px,4vw,48px)] leading-tight sm:leading-snug lg:leading-[64px]">
+                Tell us about your project
+              </h1>
+            </motion.div>
             <FormComponent
               phone={phone}
               setPhone={setPhone}
@@ -136,7 +141,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       style={{
         background: "linear-gradient(180deg, #629DFF 0%, #0B0B0B 100%)",
       }}
-      className="w-full max-w-full px-[9px] py-[10px] contact_form relative">
+      className="w-full max-w-[576px] px-[9px] py-[10px] contact_form relative">
       <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6 md:py-8 space-y-3 sm:space-y-4 md:space-y-5 bg-black">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">

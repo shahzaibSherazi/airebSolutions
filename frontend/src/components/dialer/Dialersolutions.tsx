@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Phone } from "lucide-react";
 import OptimizationImg from "@/assets/Dialer_assets/optimization.svg?react";
 import CallIcon from "@/assets/Dialer_assets/call_icon.svg?react";
 import SearchIcon from "@/assets/Dialer_assets/search_icon.svg?react";
-
+import { motion } from "framer-motion";
 const DialerSolutions = () => {
   const [activeStep, setActiveStep] = useState(1);
 
@@ -215,11 +214,17 @@ const DialerSolutions = () => {
       <div className="">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] lg:leading-[56px] font-stoke font-normal mb-4">
-            How Our AI Custom Dialer
-            <br />
-            Solutions Work
-          </h2>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] lg:leading-[56px] font-stoke font-normal mb-4">
+              How Our AI Custom Dialer
+              <br />
+              Solutions Work
+            </h2>
+          </motion.div>
         </div>
 
         {/* Main Content Grid */}

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import IdeationIcon from "@/assets/logoDesign_assets/ideation_icon.svg?react";
 import InvestigationIcon from "@/assets/logoDesign_assets/investigation_icon.svg?react";
 import IterationIcon from "@/assets/logoDesign_assets/iteration_icon.svg?react";
@@ -47,15 +48,21 @@ const LogoDesignDevelopment = () => {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
-            Our Development Process
-          </h2>
-          <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
-            At Aireb Solutions, we follow a streamlined on-demand app
-            development
-            <br className="hidden sm:block" />
-            cycle that ensures efficiency and innovation
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
+              Our Development Process
+            </h2>
+            <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
+              At Aireb Solutions, we follow a streamlined on-demand app
+              development
+              <br className="hidden sm:block" />
+              cycle that ensures efficiency and innovation
+            </p>
+          </motion.div>
         </div>
 
         {/* Process Steps */}

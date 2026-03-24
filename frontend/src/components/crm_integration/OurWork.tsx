@@ -518,6 +518,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import saleForceLogo from "@/assets/CRM-logos/saleforce.png";
 import freeAgentLogo from "@/assets/CRM-logos/freeAgent_logo.png";
@@ -675,18 +676,23 @@ const OurWork = () => {
           {/* Left Content */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
             {/* Heading */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal md:leading-[55px] font-stoke text-black mb-4 sm:mb-6">
-              Power Up Your Workflow with <br /> 50 + CRM Integration
-            </h2>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal md:leading-[55px] font-stoke text-black mb-4 sm:mb-6">
+                Power Up Your Workflow with <br /> 50 + CRM Integration
+              </h2>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg font-outfit font-light text-[#141414] mb-6 sm:mb-12 lg:mx-0">
-              Aireb Solutions empowers businesses with 50+ CRM integrations,
-              streamlining workflows, automating processes, <br /> and ensuring
-              seamless data synchronization for enhanced efficiency and
-              productivity.
-            </p>
-
+              {/* Description */}
+              <p className="text-base sm:text-lg font-outfit font-light text-[#141414] mb-6 sm:mb-12 lg:mx-0">
+                Aireb Solutions empowers businesses with 50+ CRM integrations,
+                streamlining workflows, automating processes, <br /> and
+                ensuring seamless data synchronization for enhanced efficiency
+                and productivity.
+              </p>
+            </motion.div>
             {/* Buttons */}
             <div className="flex items-center justify-center lg:justify-start">
               <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-white rounded border-025 border-gray-900 hover:text-black hover:bg-white transition-all duration-300 shadow-md hover:shadow-lg">

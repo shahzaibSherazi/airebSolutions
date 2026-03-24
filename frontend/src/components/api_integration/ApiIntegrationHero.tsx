@@ -32,7 +32,7 @@ const ApiIntegrationHero = () => {
           <div className="flex flex-col justify-end h-full pb-20">
             <div className="space-y-6 lg:space-y-8">
               {/* Subtitle */}
-              <p className="text-blue-200/90 font-outfit text-sm lg:text-base tracking-wide">
+              <p className="text-textColor font-outfit text-sm lg:text-base tracking-wide">
                 Seamless brand experiences built to deliver long-term commercial
                 value.
               </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ArrowIcon from "@/assets/icons/card_arrow.svg?react";
 export default function APICRMIntegration() {
   const phases = [
@@ -54,20 +55,31 @@ export default function APICRMIntegration() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-24">
           {/* LEFT — Sticky */}
           <div className="lg:sticky lg:top-24 self-start">
-            <h1 className="text-3xl sm:text-4xl md:text-[42px] font-normal font-stoke md:leading-[56px] mb-6">
-              Our API and CRM
-              <br className="hidden sm:block" />
-              Integration Development
-              <br className="hidden sm:block" />
-              Cycle
-            </h1>
-
-            <p className="text-textColor font-normal font-outfit text-base leading-relaxed max-w-xl">
-              Transform your business by connecting your CRM with powerful tools
-              and platforms through Airish Solutions API integration services.
-              Let us help you streamline your operations, enhance customer
-              experiences, and drive business growth.
-            </p>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <h1 className="text-3xl sm:text-4xl md:text-[42px] font-normal font-stoke md:leading-[56px] mb-6">
+                Our API and CRM
+                <br className="hidden sm:block" />
+                Integration Development
+                <br className="hidden sm:block" />
+                Cycle
+              </h1>
+            </motion.div>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <p className="text-textColor font-normal font-outfit text-base leading-relaxed max-w-xl">
+                Transform your business by connecting your CRM with powerful
+                tools and platforms through Airish Solutions API integration
+                services. Let us help you streamline your operations, enhance
+                customer experiences, and drive business growth.
+              </p>
+            </motion.div>
           </div>
 
           {/* RIGHT — Cards Column */}

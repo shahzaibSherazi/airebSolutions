@@ -326,13 +326,13 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
                 {title}
               </h3>
 
-              {heading && (
+              {/* {heading && (
                 <h3
                   className="text-[18px] font-medium font-outfit leading-snug text-white mt-1 transition-all duration-700"
                   style={{ transitionDelay: `${index * 150 + 450}ms` }}>
                   {heading}
                 </h3>
-              )}
+              )} */}
 
               <p
                 className="text-base font-normal leading-relaxed mt-2 text-white line-clamp-3 transition-all duration-700"
@@ -434,11 +434,11 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
               {title}
             </h3>
 
-            {heading && isCaseStudy && (
+            {/* {heading && isCaseStudy && (
               <h3 className="text-[18px] font-medium font-outfit leading-snug px-6">
                 {heading}
               </h3>
-            )}
+            )} */}
 
             <p
               className={`text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 ${

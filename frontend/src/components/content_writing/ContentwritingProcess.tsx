@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import { motion } from "framer-motion";
 const steps = [
   {
     title: "Consultation & Understanding",
@@ -173,14 +173,20 @@ export default function ContentWritingProcess() {
       <div className="px-6 md:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-10 sm:mb-14">
-          <h1 className="text-textColor font-extralight font-outfit text-[clamp(24px,4vw,52px)] mb-3 leading-tight">
-            Our UI/UX Design Process
-          </h1>
-          <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
-            At Aireb Solutions, we follow a streamlined on-demand app
-            development <br className="hidden lg:block" /> cycle that ensures
-            efficiency and innovation
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="text-textColor font-extralight font-outfit text-[clamp(24px,4vw,52px)] mb-3 leading-tight">
+              Our UI/UX Design Process
+            </h1>
+            <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
+              At Aireb Solutions, we follow a streamlined on-demand app
+              development <br className="hidden lg:block" /> cycle that ensures
+              efficiency and innovation
+            </p>
+          </motion.div>
         </div>
 
         {/* Two-column */}

@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowUpRight from "../../assets/icons/top-left.png";
-
+import { motion } from "framer-motion";
 const ContentWritingExpertise = () => {
   const features = [
     {
@@ -52,11 +52,17 @@ const ContentWritingExpertise = () => {
 
         {/* Heading */}
         <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-            Why Choose Aireb Solutions for
-            <br className="hidden sm:block" />
-            Content Writing?
-          </h2>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
+              Why Choose Aireb Solutions for
+              <br className="hidden sm:block" />
+              Content Writing?
+            </h2>
+          </motion.div>
         </div>
 
         {/* Features Grid */}

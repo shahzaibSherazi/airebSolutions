@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const OnDemandDevelopment = () => {
   const processes = [
     {
@@ -39,15 +39,21 @@ const OnDemandDevelopment = () => {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
-            Our Development Process
-          </h2>
-          <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
-            At Aireb Solutions, we follow a streamlined on-demand app
-            development
-            <br className="hidden sm:block" />
-            cycle that ensures efficiency and innovation
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
+              Our Development Process
+            </h2>
+            <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
+              At Aireb Solutions, we follow a streamlined on-demand app
+              development
+              <br className="hidden sm:block" />
+              cycle that ensures efficiency and innovation
+            </p>
+          </motion.div>
         </div>
 
         {/* Process Steps */}
@@ -56,26 +62,32 @@ const OnDemandDevelopment = () => {
             <div
               key={index}
               className="border-t border-gray-700 first:border-t-0">
-              <div className="grid grid-cols-1 lg:grid-cols-[1.8fr,2fr] gap-6 lg:gap-10 py-4 sm:py-6 md:py-8">
-                {/* Left Column - Title */}
-                <div className="space-y-2">
-                  <h3 className="text-white text-[clamp(18px,3vw,24px)] font-stoke font-light leading-tight">
-                    {process.title}
-                  </h3>
-                  {process.subtitle && (
-                    <p className="text-textColor font-outfit font-light text-sm sm:text-base">
-                      {process.subtitle}
-                    </p>
-                  )}
-                </div>
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false }}>
+                <div className="grid grid-cols-1 lg:grid-cols-[1.8fr,2fr] gap-6 lg:gap-10 py-4 sm:py-6 md:py-8">
+                  {/* Left Column - Title */}
+                  <div className="space-y-2">
+                    <h3 className="text-white text-[clamp(18px,3vw,24px)] font-stoke font-light leading-tight">
+                      {process.title}
+                    </h3>
+                    {process.subtitle && (
+                      <p className="text-textColor font-outfit font-light text-sm sm:text-base">
+                        {process.subtitle}
+                      </p>
+                    )}
+                  </div>
 
-                {/* Right Column - Description */}
-                <div className="flex items-center">
-                  <p className="text-textColor font-outfit text-sm sm:text-base font-light leading-relaxed">
-                    {process.description}
-                  </p>
+                  {/* Right Column - Description */}
+                  <div className="flex items-center">
+                    <p className="text-textColor font-outfit text-sm sm:text-base font-light leading-relaxed">
+                      {process.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>

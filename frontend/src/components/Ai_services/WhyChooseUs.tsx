@@ -1,6 +1,5 @@
 import React from "react";
-import { Hand } from "lucide-react";
-import { PiHandPalmLight } from "react-icons/pi";
+import { motion } from "framer-motion";
 import DeepLearningIcon from "../../assets/icons/AI-services-icons/machine-learning.svg?react";
 import CustomAiIcon from "../../assets/icons/AI-services-icons/custom_ai.svg?react";
 import ScalableIcon from "../../assets/icons/AI-services-icons/computer-vision.svg?react";
@@ -58,12 +57,18 @@ const WhyChooseUs = () => {
       <div className="">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-stoke leading-[56px] mb-[15px]">
-            Why Choose Us
-          </h1>
-          <p className="text-white font-outfit font-normal text-sm sm:text-lg leading-[40px]">
-            We Design for the Future to Drive Today's Success
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-stoke leading-[56px] mb-[15px]">
+              Why Choose Us
+            </h1>
+            <p className="text-white font-outfit font-normal text-sm sm:text-lg leading-[40px]">
+              We Design for the Future to Drive Today's Success
+            </p>
+          </motion.div>
         </div>
 
         {/* Features Grid */}

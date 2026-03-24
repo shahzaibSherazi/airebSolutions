@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { motion } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
@@ -66,10 +66,16 @@ export default function ContactCenterSection() {
       <div className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-6 mb-5 md:mb-4">
-          <h1 className="text-white font-outfit text-[clamp(22px,4vw,52px)] font-extralight leading-tight">
-            Our Contact Center Comman <br className="hidden lg:block" />{" "}
-            Challenges
-          </h1>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="text-white font-outfit text-[clamp(22px,4vw,52px)] font-extralight leading-tight">
+              Our Contact Center Comman <br className="hidden lg:block" />{" "}
+              Challenges
+            </h1>
+          </motion.div>
           <div
             className="flex items-center gap-2 px-4 py-3 md:px-5 md:py-4 rounded-md group border border-primary hover:cursor-pointer text-white text-sm font-medium "
             style={{

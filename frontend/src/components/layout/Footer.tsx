@@ -41,19 +41,19 @@ const ALL_INDUSTRIES = [
 
 const ROUTES: Record<string, string> = {
   // Services
-  "Web Development": "/web-development",
-  "Mobile App Development": "/mobile-app-development",
-  "UI/UX Design": "/ui-ux-design",
-  "Content Writing": "/content-writing",
-  "AI Services": "/ai-services",
-  "DevOps Services": "/devops-services",
-  "CRM Integration": "/crm-integration",
-  "API Integration": "/api-integration",
-  Dialer: "/dialer",
-  "E-commerce Solutions": "/ecommerce",
-  "On Demand": "/on-demand",
-  "Logo Design": "/logo-design",
-  "Contact Center": "/contact-center",
+  "Web Development": "/services/web-development",
+  "Mobile App Development": "/services/mobile-app-development",
+  "UI/UX Design": "/services/ui-ux-design",
+  "Content Writing": "/services/content-writing",
+  "AI Services": "/services/ai-services",
+  "DevOps Services": "/services/devops-services",
+  "CRM Integration": "/services/crm-integration",
+  "API Integration": "/services/api-integration",
+  Dialer: "/services/dialer",
+  "E-commerce Solutions": "/services/ecommerce",
+  "On Demand": "/services/on-demand",
+  "Logo Design": "/services/logo-design",
+  "Contact Center": "/services/contact-center",
 
   // Industries
   Healthcare: "/industries/healthcare",
@@ -61,6 +61,11 @@ const ROUTES: Record<string, string> = {
   "E-commerce": "/industries/ecommerce",
   "Banking & FinTech": "/industries/finance-banking",
   "Real Estate": "/industries/real-estate",
+  Gaming: "/industries/gaming",
+  Telecommunication: "/industries/telecommunication",
+  "Start Up": "/industries/start-up",
+  Retail: "/industries/retail",
+  "Travel & Hospitality": "/industries/travel-hospitality",
 };
 
 const INITIAL_COUNT = 5;
@@ -130,16 +135,18 @@ export default function Footer() {
             <h4 className="text-white font-stoke font-medium text-lg mb-1">
               Resources
             </h4>
-            {["Blogs", "White Papers", "Careers", "Contact Us"].map(
-              (item, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
-                  {item}
-                </a>
-              ),
-            )}
+            {[
+              { name: "Blogs", path: "/resources/blogs" },
+              { name: "White Papers", path: "/resources/white-papers" },
+              { name: "Careers", path: "/about/careers" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* About Us */}
@@ -199,7 +206,10 @@ export default function Footer() {
           {/* Center — logo in circle + contact + legal */}
           <div className="flex flex-col items-center gap-4 w-full">
             {/* Logo wrapped in circular gradient border */}
-            <div className="footerLogo_edge relative flex items-center justify-center w-full  mb-8 border-t border-b  border-primary px-12 py-4">
+            <div className="footerLogo_edge relative flex items-center justify-center w-full  mb-8  px-12 py-4">
+              {/* Animated borders */}
+              <span className="top-line"></span>
+              <span className="bottom-line"></span>
               <div className="max-w-[234px] h-[90px]">
                 <img src={logo} className="w-full h-full object-contain" />
               </div>

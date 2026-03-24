@@ -43,10 +43,11 @@ const FeaturedSection = () => {
           tag="Case Study"
           image={caseImg}
           // icon={BtnIcon}
-          title="Designing UI/UX that Converts:"
+          title="DevOps Transformation & Assessment for Improved Software Delivery:"
           heading="Best Practices for 2025"
-          description="Understand digital possibilities, activate marketing 
-opportunities, and get the inside track on eDesign news 
+          description="DevOps assessment revealed gaps in automation, deployment workflows, and monitoring.
+Manual processes and lack of CI/CD slowed releases and increased risk.
+Optimizations enabled faster deployments, better reliability, and stronger collaboration. 
 "
         />
 
@@ -55,10 +56,9 @@ opportunities, and get the inside track on eDesign news
           tag="Blogs"
           image={blogImg}
           // icon={BtnIcon}
-          title="Designing UI/UX that Converts:"
+          title="Boost Sales with Smart E-Commerce Development:"
           heading="Best Practices for 2025"
-          description="Understand digital possibilities, activate marketing 
-opportunities, and get the inside track on eDesign news 
+          description="Build fast, secure, and user-friendly online stores that drive conversions, improve customer experience, and scale your business globally.
 "
           gradient="linear-gradient(180deg, #629DFF 0%, #000000 100%)"
         />
@@ -68,8 +68,9 @@ opportunities, and get the inside track on eDesign news
           tag="White Paper"
           image={paperImg}
           // icon={BtnIcon}
-          title="Modernizing Legacy Systems with Confidence"
-          description="A Fool-proof Guide To Transitioning Your Business from Outdated Systems to Modern Technology"
+          title="Transforming Businesses with Web Development Excellence"
+          description="A strategic look at how modern web development drives growth, engagement, and digital success.
+Helping businesses overcome challenges with scalable, user-focused solutions."
         />
       </div>
     </section>
