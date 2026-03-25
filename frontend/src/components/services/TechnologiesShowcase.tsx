@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import NodeIcon from "@/assets/AllServices_assets/technologies-icons/node_js.svg?react";
 import PythonIcon from "@/assets/AllServices_assets/technologies-icons/python.svg?react";
 import TypescriptIcon from "@/assets/AllServices_assets/technologies-icons/typescript.svg?react";
@@ -112,10 +113,15 @@ const TechnologiesShowcase = () => {
   return (
     <div className=" bg-black text-textColor px-6 lg:px-8 lg:pb-24 pb-16 ">
       <div className="w-full">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-[56px] font-stoke font-bold text-center mb-8 sm:mb-14">
-          Technologies we use
-        </h1>
-
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl lg:leading-[56px] font-stoke font-bold text-center mb-8 sm:mb-14">
+            Technologies we use
+          </h1>
+        </motion.div>
         {/* Tabs */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 mb-[38px]">
           {tabs.map((tab) => (

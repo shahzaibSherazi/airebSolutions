@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
+import { motion } from "framer-motion";
 const FAQAccordion = () => {
   const [openIndexes, setOpenIndexes] = useState([0]);
 
@@ -58,11 +58,17 @@ const FAQAccordion = () => {
             PEOPLE USUALLY ASK
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-outfit leading-[56px] font-normal">
-            Your Questions
-            <br />
-            Answered!
-          </h1>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-outfit leading-[56px] font-normal">
+              Your Questions
+              <br />
+              Answered!
+            </h1>
+          </motion.div>
         </div>
 
         {/* FAQ Grid */}

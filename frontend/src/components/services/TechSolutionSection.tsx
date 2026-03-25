@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Bookmark, ChevronRight, Frame, Maximize2 } from "lucide-react";
-import cardBgImage from "../../assets/techSolution_card_bg.png";
+import { motion } from "framer-motion";
 import BtnIcon from "../../assets/icons/btn_icon.svg?react";
 import AiBg from "@/assets/AllServices_assets/Ai_card_bg.png";
 import WebBg from "@/assets/AllServices_assets/web_card_bg.png";
@@ -157,24 +157,35 @@ const TechSolutionsSection = () => {
       <div className="">
         {/* Header Section */}
         <div className="text-center mb-16 lg:mb-[91px]">
-          <h1 className="text-[clamp(24px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
-            Innovative Technology, Design, and{" "}
-            <br className="hiddend lg:block" />
-            Communication Solutions
-          </h1>
-          {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="text-[clamp(24px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
+              Innovative Technology, Design, and{" "}
+              <br className="hiddend lg:block" />
+              Communication Solutions
+            </h1>
+            {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
             Communication Solutions
           </h1> */}
-          <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
-            We don't just create strategies we show the numbers. Growth means
-            higher conversions, lower costs, and stronger brands. Discover how
-            we help brands grow smarter
-          </p>
+            <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
+              We don't just create strategies we show the numbers. Growth means
+              higher conversions, lower costs, and stronger brands. Discover how
+              we help brands grow smarter
+            </p>
+          </motion.div>
         </div>
         {/* Center Card - Filter */}
         <div className="sticky top-48 z-50 flex justify-center items-center">
           <div className=" bg-white rounded-full px-2 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
-            <div className="flex gap-1 sm:gap-3">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}
+              className="flex gap-1 sm:gap-3">
               <button
                 onClick={() => setActiveTab("technology")}
                 className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
@@ -202,7 +213,7 @@ const TechSolutionsSection = () => {
                 }`}>
                 Business & Communication
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* Cards Container with Fixed Filter */}

@@ -43,7 +43,7 @@ const FeaturedSection = () => {
           tag="Case Study"
           image={caseImg}
           // icon={BtnIcon}
-          title="DevOps Transformation & Assessment for Improved Software Delivery:"
+          title="DevOps Transformation & Assessment for Improved Software Delivery"
           heading="Best Practices for 2025"
           description="DevOps assessment revealed gaps in automation, deployment workflows, and monitoring.
 Manual processes and lack of CI/CD slowed releases and increased risk.
@@ -56,7 +56,7 @@ Optimizations enabled faster deployments, better reliability, and stronger colla
           tag="Blogs"
           image={blogImg}
           // icon={BtnIcon}
-          title="Boost Sales with Smart E-Commerce Development:"
+          title="Boost Sales with Smart E-Commerce Development"
           heading="Best Practices for 2025"
           description="Build fast, secure, and user-friendly online stores that drive conversions, improve customer experience, and scale your business globally.
 "

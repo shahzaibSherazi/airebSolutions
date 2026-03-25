@@ -3,6 +3,7 @@ import togetherImg from "@/assets/contact-us/together.png";
 import UsaIcon from "@/assets/contact-us/usa-flag.svg?react";
 import CanadaIcon from "@/assets/contact-us/canada-flag.svg?react";
 import PakIcon from "@/assets/contact-us/pak-flag.svg?react";
+import { Link } from "react-router-dom";
 const locations = {
   USA: {
     label: "USA",
@@ -72,7 +73,7 @@ export default function CompanyLocations() {
       <section className="px-6 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
         {/* Left */}
         <div className="">
-          <h1 className="text-[clamp(32px,4vw,42px)] font-stoke font-bold mb-8 text-white">
+          <h1 className="text-[clamp(32px,4vw,42px)] font-stoke font-normal mb-8 text-white">
             Together, We Write What's Next
           </h1>
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed font-outfit font-light mb-12 w-full lg:max-w-3xl">
@@ -96,7 +97,7 @@ export default function CompanyLocations() {
       <section className="px-6 lg:px-8 py-24 flex lg:flex-row flex-col items-center lg:items-start justify-between gap-16">
         {/* Left */}
         <div className="">
-          <h2 className="text-[clamp(32px,4vw,42px)] font-stoke font-bold leading-tight mb-8 text-white">
+          <h2 className="text-[clamp(32px,4vw,42px)] font-stoke font-normal leading-tight mb-8 text-white">
             Company Locations
           </h2>
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed font-outfit font-light mb-12 w-full lg:max-w-2xl">
@@ -105,9 +106,11 @@ export default function CompanyLocations() {
             cost-efficiency of top global talent giving you seamless
             communication, faster delivery, and exceptional results.
           </p>
-          <button className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
+          <Link
+            to="/about-us"
+            className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
             About Us <ArrowIcon />
-          </button>
+          </Link>
         </div>
 
         {/* Right: tabs + card */}

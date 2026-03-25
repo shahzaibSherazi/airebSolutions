@@ -1,5 +1,5 @@
 import bgImg from "@/assets/Industies/health-care/hero-bg.png";
-
+import { motion } from "framer-motion";
 const HealthCareHero = () => {
   return (
     <section className="relative w-full bg-black">
@@ -29,11 +29,16 @@ const HealthCareHero = () => {
             Sector
           </p>
         </div>
-
-        <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
-          Healthcare &
-          <br className="hidden lg:block" /> Pharmaceuticals
-        </h1>
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
+            Healthcare &
+            <br className="hidden lg:block" /> Pharmaceuticals
+          </h1>
+        </motion.div>
       </div>
     </section>
   );

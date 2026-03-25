@@ -133,7 +133,8 @@ export default function TelecommunicationTechStack() {
 
             {/* Right: Contact Us button */}
             <div className="flex-shrink-0 sm:pt-2">
-              <button
+              <a
+                href="#contact-form"
                 className="group flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
@@ -143,7 +144,7 @@ export default function TelecommunicationTechStack() {
                 <span className="text-lg font-bold group-hover:text-white text-primary">
                   →
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 

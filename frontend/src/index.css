@@ -375,6 +375,17 @@ All colors MUST be HSL.
   font-size: 14px;
   outline: none;
   cursor: pointer;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for Chrome, Safari and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
+  }
 }
 .custom-country-select option {
   background-color: #0b0b0b;

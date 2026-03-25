@@ -1,7 +1,7 @@
 import React from "react";
 import { Hand } from "lucide-react";
 import { PiHandPalmLight } from "react-icons/pi";
-
+import { motion } from "framer-motion";
 const WhyChooseUs = () => {
   const features = [
     {
@@ -58,9 +58,15 @@ const WhyChooseUs = () => {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-normal font-stoke leading-[56px] mb-[20px]">
             Why Choose Us
           </h1>
-          <p className="text-textColor font-outfit font-normal text-sm sm:text-lg leading-[40px]">
-            We Design for the Future to Drive Today's Success
-          </p>
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <p className="text-textColor font-outfit font-normal text-sm sm:text-lg leading-[40px]">
+              We Design for the Future to Drive Today's Success
+            </p>
+          </motion.div>
         </div>
 
         {/* Features Grid */}

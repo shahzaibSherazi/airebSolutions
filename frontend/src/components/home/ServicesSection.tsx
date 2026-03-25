@@ -20,8 +20,8 @@ const services = [
   },
   {
     image: service3,
-    title: "UI/UX Design",
-    link: "/services/ui-ux-design",
+    title: "Contact Center",
+    link: "/services/contact-center",
     gradient: "linear-gradient(180deg, #0B23C8 0%, rgba(0,0,0,0) 100%)",
   },
 ];

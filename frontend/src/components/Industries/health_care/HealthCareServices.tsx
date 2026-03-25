@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import SoftwareDevIcon from "@/assets/icons/industries/health-care/services-icons/software_dev.svg?react";
 import MhealthIcon from "@/assets/icons/industries/health-care/services-icons/mHealth.svg?react";
 import LabIcon from "@/assets/icons/industries/health-care/services-icons/lab.svg?react";
@@ -173,17 +174,23 @@ export default function HealthCareServices() {
         <div className="">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
-              Our Healthcare & <br className="hidden lg:block" />
-              Pharmaceuticals Services
-            </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-              At Aireb Solutions, we provide a range of services designed to
-              support healthcare and <br className="hidden lg:block" />{" "}
-              pharmaceutical businesses in navigating digital challenges,
-              optimizing processes, and <br className="hidden lg:block" />{" "}
-              meeting the needs of patients, providers, and stakeholders.
-            </p>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false }}>
+              <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
+                Our Healthcare & <br className="hidden lg:block" />
+                Pharmaceuticals Services
+              </h1>
+              <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
+                At Aireb Solutions, we provide a range of services designed to
+                support healthcare and <br className="hidden lg:block" />{" "}
+                pharmaceutical businesses in navigating digital challenges,
+                optimizing processes, and <br className="hidden lg:block" />{" "}
+                meeting the needs of patients, providers, and stakeholders.
+              </p>
+            </motion.div>
           </div>
 
           {/* Grid */}
