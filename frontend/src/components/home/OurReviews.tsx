@@ -8,25 +8,73 @@ const testimonials = [
     id: 1,
     image: cardImg,
     quote:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
-    name: "Jema G",
-    position: "Marketing Head",
+      "We approached Aireb Solutions to revamp our eyeora.com website, and we couldn't be happier with the results. The team listened to our needs, provided expert advice, and delivered an intuitive, user-friendly site that perfectly aligns with our brand. Their attention to detail and commitment to quality is truly commendable. We’ve seen increased traffic and customer engagement since the redesign. Highly recommend!",
+    name: "Daniel Corazzi",
+    position: "CEO at eyeora XR",
   },
   {
     id: 2,
     image: cardImg,
     quote:
-      "Working with this team has been an absolute pleasure. Their attention to detail and commitment to excellence is unmatched. They transformed our vision into reality",
-    name: "Michael Chen",
-    position: "CEO, Tech Solutions",
+      "Setting up our online store was a complex task, but Aireb Solutions made it easy. They guided us through every step of the e-commerce setup process, from choosing the right platform to integrating secure payment gateways. Thanks to their expertise, we now have a fully functional, visually appealing online store. We’ve seen a steady increase in sales and customer satisfaction since launch",
+    name: "",
+    position: "CEO of Hateef Jewelry",
   },
   {
     id: 3,
     image: cardImg,
     quote:
-      "Exceptional service from start to finish. The team's professionalism and expertise made the entire process seamless. They truly understand what it takes to deliver outstanding results and build",
-    name: "Sarah Johnson",
-    position: "Director of Operations",
+      "We struggled with managing customer data across multiple platforms, but Aireb Solutions provided the perfect CRM integration solution. Their team carefully integrated our CRM system with existing tools, automating many processes and improving our customer relationship management. We now have a 360-degree view of our clients, and our sales and customer service teams are working more efficiently than ever.",
+    name: "Smith",
+    position: "Sales Director ZenBee",
+  },
+  {
+    id: 4,
+    image: cardImg,
+    quote:
+      "We needed a seamless API solution to connect our existing systems with third-party platforms, and Aireb Solutions delivered beyond expectations. The team took the time to fully understand our technical requirements and integrated the APIs flawlessly. The process was efficient, and the API is now stable, fast, and highly reliable. This integration has greatly improved our workflow and data accuracy.",
+    name: "",
+    position: "Sales Director, Izhar Digital",
+  },
+  {
+    id: 5,
+    image: cardImg,
+    quote:
+      "We were in search of a fresh, professional logo to represent our new brand identity, and Aireb Solutions absolutely nailed it. From the initial brainstorming session to the final design, they understood our vision and delivered a logo that perfectly represents our values. It's modern, memorable, and instantly recognizable. The entire team is thrilled with the result!",
+    name: "",
+    position: "Sales Manager Nourai.pk",
+  },
+  {
+    id: 6,
+    image: cardImg,
+    quote:
+      "Working with Aireb Solutions to develop our mobile app was an incredible experience. The development process was seamless, and the team provided constant updates. They not only met our functional requirements but also offered suggestions to enhance user experience. The app is performing brilliantly, and we've received fantastic feedback from our users.",
+    name: "John M",
+    position: "Product Manager",
+  },
+  {
+    id: 7,
+    image: cardImg,
+    quote:
+      "Our business required a custom software solution to streamline our internal processes, and Aireb Solutions delivered exactly what we needed. The team understood our complex requirements and worked closely with us to create a tailored solution that significantly improved our workflow. We’re now more efficient and can focus on growing our business",
+    name: "Ethan James",
+    position: "CEO at OYS Digital",
+  },
+  {
+    id: 8,
+    image: cardImg,
+    quote:
+      "We were in search of a fresh, professional logo to represent our new brand identity, and Aireb Solutions absolutely nailed it. From the initial brainstorming session to the final design, they understood our vision and delivered a logo that perfectly represents our values. It's modern, memorable, and instantly recognizable. The entire team is thrilled with the result!",
+    name: "",
+    position: "Sales Manager Nourai.pk",
+  },
+  {
+    id: 9,
+    image: cardImg,
+    quote:
+      "We hired Aireb Solutions to help us redesign our user interface, and the results were nothing short of amazing. They completely transformed the design into something modern, intuitive, and visually appealing. User feedback has been overwhelmingly positive, and we’ve seen a noticeable increase in user retention.",
+    name: "",
+    position: "Founder of Happy Steppy",
   },
 ];
 

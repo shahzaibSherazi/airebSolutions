@@ -1,7 +1,7 @@
 import FeaturedInsightCard from "../ui/FeaturedInsightCard";
 import caseImg from "../../assets/case_study.png";
-import blogImg from "../../assets/blog.jpeg";
-import paperImg from "../../assets/white_paper.jpg";
+import blogImg from "../../assets/blog.png";
+import paperImg from "../../assets/white_paper.png";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import AnimatedParagraph from "../ui/AnimatedParagraph";
 
