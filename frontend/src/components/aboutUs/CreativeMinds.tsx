@@ -10,6 +10,7 @@ import hussainImg from "@/assets/about-us/Hussain.png";
 import shoaibImg from "@/assets/about-us/Shoaib.png";
 import zareefImg from "@/assets/about-us/Zareef.png";
 import sabeenImg from "@/assets/about-us/Sabeen.png";
+import muneebImg from "@/assets/about-us/muneeb.png";
 const leaders = [
   {
     name: "Shahzaib Sherazi",
@@ -61,6 +62,11 @@ const leaders = [
     name: "M. Zareef",
     role: "AI Software Engineer",
     image: zareefImg,
+  },
+  {
+    name: "Muneeb",
+    role: "Senior Accountant",
+    image: muneebImg,
   },
   {
     name: "Sabeen Sheikh",
