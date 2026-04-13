@@ -11,42 +11,42 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Custom Ecommerce Website Development",
     description:
-      "We specialize in designing and developing custom ecommerce websites that reflect your brand’s unique identity. Our team of expert developers creates fully responsive, mobile-friendly, and SEO-optimized websites that are easy to navigate, secure, and highly functional.",
+      "We design and develop custom e-commerce websites that match your brand identity. Our websites are responsive, mobile-friendly, SEO optimized, and easy to use for better performance.",
   },
   {
     id: 2,
     icon: <MobileIcon />,
     title: "Ecommerce Platform Integration",
     description:
-      "We help businesses integrate powerful ecommerce platforms such as Shopify, WooCommerce, Magento, and BigCommerce to enhance their online presence. Whether you are looking to create a store from scratch or migrate from one platform to another, we provide seamless integration solutions.",
+      "We integrate platforms like Shopify, WooCommerce, and BigCommerce. We also help you build a new store or smoothly migrate existing ones without any data loss.",
   },
   {
     id: 3,
     icon: <LmsIcon />,
     title: "Payment Gateway Integration",
     description:
-      "Our ecommerce solutions include integrating secure, reliable, and user-friendly payment gateways to facilitate smooth transactions. Whether it’s PayPal, Stripe, Square, or cryptocurrency payments, we ensure your customers have a secure and frictionless checkout experience.",
+      "We integrate a secure payment gateway like PayPal, Stripe, Square, and crypto options. This ensures safe, fast, and smooth checkout for your customers.",
   },
   {
     id: 4,
     icon: <VirtualIcon />,
     title: "Ecommerce Marketing Strategies",
     description:
-      "We develop targeted ecommerce marketing strategies to drive traffic, increase conversion rates, and boost sales. Our strategies include content marketing, SEO, social media campaigns, email marketing, and paid advertising.",
+      "We create targeted marketing strategies to increase traffic, improve conversions, and boots sale using SEO, social media, content marketing, and paid ads.",
   },
   {
     id: 5,
     icon: <WebIcon />,
-    title: "Inventory and Order Management Solutions",
+    title: " Inventory and order management solution",
     description:
-      "Effective inventory management is critical to the success of any ecommerce business. We offer solutions that streamline inventory tracking, order processing, and fulfillment to ensure a seamless experience for both business owners and customers.",
+      "We provide a smart inventory and order management system to track stock, process orders, and handle fulfillment efficiently for a smooth business operation.",
   },
   {
     id: 6,
     icon: <CrmIcon />,
     title: "Ecommerce Mobile App Development",
     description:
-      "In addition to building ecommerce websites, we also create custom mobile applications to enhance customer engagement and streamline shopping experiences. Our mobile apps are user-friendly, secure, and optimized for both Android and iOS devices.",
+      "We build user-friendly e-commerce mobile apps for android nad ios. These apps improve customer engagement and provide a smooth shopping experience any time, anywhere.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Custom E-commerce Features",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We add custom features like product recommendations, advanced filters, and personalized experiences to make your online store more engaging and unique.",
   },
   {
     id: 8,
@@ -82,29 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "E-commerce Analytics Report",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We provide detailed analytics and reports to track sales, customer behavior, and product performance, helping you make better business decisions.",
   },
 ];
 
@@ -176,12 +156,12 @@ export default function EcommerceServices() {
             <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
               Our Ecommerce Services
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-              We offer a comprehensive range of ecommerce services to cater to
-              every aspect <br className="hidden lg:block" /> of your online
-              business. From platform development to marketing strategies and{" "}
-              <br className="hidden lg:block" />
-              customer engagement, we deliver solutions that drive growth.
+            <p className="font-outfit font-normal max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
+              We provide complete e-commerce services to support every part of
+              your online business. From building and developing your store,
+              marketing, and customer engagement, we create solutions that help
+              your business grow, improve performance, and achieve long-term
+              success online.
             </p>
           </div>
 

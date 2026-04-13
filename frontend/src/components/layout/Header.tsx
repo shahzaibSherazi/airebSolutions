@@ -241,13 +241,19 @@ const Header = () => {
   };
   return (
     <>
+      {/* <header
+        ref={headerRef}
+        className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black backdrop-blur-md ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}> */}
       <header
         ref={headerRef}
         className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
-        <div className=" px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="container px-6 lg:px-8">
+          {/* <div className="flex items-center justify-between h-16 sm:h-20"> */}
+          <div className="flex items-center justify-between header">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 z-50">
               <img src={logo} alt="Logo" className="h-10 sm:h-12 w-auto" />
@@ -474,7 +480,7 @@ const Header = () => {
       </div>
 
       {/* Spacer div to prevent content from going under fixed header */}
-      <div className="h-16 sm:h-20" />
+      {/* <div className="h-16 sm:h-20" /> */}
     </>
   );
 };

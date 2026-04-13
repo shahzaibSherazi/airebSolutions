@@ -11,42 +11,42 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Core Banking Systems",
     description:
-      "Core banking systems are the backbone of any financial institution. We specialize in developing, implementing, and maintaining robust, scalable, and secure core banking solutions that streamline operations and enable real-time transactions.",
+      "We build secure and scalable core banking systems that streamline operations and support fast, real-time transactions.",
   },
   {
     id: 2,
     icon: <MobileIcon />,
     title: "Payment Processing Solutions",
     description:
-      "In a world where consumers demand faster, more convenient payment options, we offer customized payment processing solutions that cater to a wide range of payment methods. Whether it's mobile wallets, card payments, or peer-to-peer transfers, we help fintech companies develop secure and seamless payment processing systems.",
+      "We create secure payment systems supporting mobile wallets, cards, and transfers for fast and smooth transactions.",
   },
   {
     id: 3,
     icon: <LmsIcon />,
     title: "Blockchain & Cryptocurrency Solutions",
     description:
-      "Blockchain technology is revolutionizing the fintech industry by offering secure, transparent, and decentralized solutions. We develop blockchain-based solutions for businesses looking to leverage cryptocurrencies, smart contracts, and decentralized finance (DeFi).",
+      "We develop blockchain solutions for secure, transparent systems, including cryptocurrencies, smart contracts, and DeFi platforms.",
   },
   {
     id: 4,
     icon: <VirtualIcon />,
     title: "Robo-Advisory Solutions",
     description:
-      "Robo-advisory platforms are transforming wealth management by offering low-cost, automated investment advice. Our team specializes in creating AI-driven robo-advisors that deliver personalized investment recommendations based on user preferences and financial goals.",
+      "We build AI-based robo-advisors that provide automated and personalized investment advice based on user goals.",
   },
   {
     id: 5,
     icon: <WebIcon />,
     title: "Digital Banking Solutions",
     description:
-      "The digital transformation of banking services is inevitable. We help banks and financial institutions offer online banking services, mobile apps, and digital wallets, ensuring customers have access to their financial data and services at their fingertips.",
+      "We help banks offer online banking, mobile apps, and digital wallets for easy access to financial services.",
   },
   {
     id: 6,
     icon: <CrmIcon />,
     title: "Regulatory Compliance Solutions",
     description:
-      "Press releases are an excellent way to share important company news, events, product launches, or collaborations with the media and your audience. Our expert writers craft press releases that grab attention, convey key messages clearly, and ensure your brand gets the recognition it deserves.",
+      "We provide solutions to help businesses follow financial regulations, manage risks, and ensure secure and compliant operations.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Lending Solutions",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We develop lending systems with credit scoring and loan management to simplify and improve the lending process.",
   },
   {
     id: 8,
@@ -82,29 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "Insurtech Solutions",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We offer insurtech solutions to automate claims, improve underwriting, and provide personalized insurance services.",
   },
 ];
 
@@ -176,12 +156,11 @@ export default function BankingServices() {
             <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
               Our Banking and Fintech Services
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-              We offer a comprehensive range of banking and fintech solutions
-              that cover <br /> everything from payment processing to regulatory
-              compliance. With our <br /> industry expertise, we help businesses
-              enhance operational efficiency, drive <br /> digital
-              transformation, and unlock new growth opportunities.
+            <p className="font-outfit font-normal max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
+              We provide complete banking and fintech solutions, from payment
+              processing to compliance. Our expertise helps businesses improve
+              efficiency, adopt digital transformation, and create new growth
+              opportunities.
             </p>
           </div>
 

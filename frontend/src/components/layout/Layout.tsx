@@ -8,9 +8,14 @@ import { gsapConfig } from "@/lib/gsap-config";
 interface LayoutProps {
   children: ReactNode;
   enableSmoothScroll?: boolean;
+  hideContactForm?: boolean;
 }
 
-const Layout = ({ children, enableSmoothScroll = false }: LayoutProps) => {
+const Layout = ({
+  children,
+  enableSmoothScroll = false,
+  hideContactForm = false,
+}: LayoutProps) => {
   useEffect(() => {
     if (enableSmoothScroll) {
       gsapConfig.init();
@@ -22,11 +27,12 @@ const Layout = ({ children, enableSmoothScroll = false }: LayoutProps) => {
       }
     };
   }, [enableSmoothScroll]);
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <Header />
       <main className="">{children}</main>
-      <ContactForm />
+      {!hideContactForm && <ContactForm />}
       <Footer />
     </div>
   );

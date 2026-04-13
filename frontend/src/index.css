@@ -1,35 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
 
-.font-stoke-light {
-  font-family: "Stoke", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.font-stoke {
-  font-family: "Stoke", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.font-jakarta {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
+    --headerHeight: 80px;
+    --headingBackground: linear-gradient(90deg, #02070f 0%, #102545 100%);
     --background: 222 47% 5%;
     --foreground: 210 40% 98%;
 
@@ -109,6 +83,67 @@ All colors MUST be HSL.
     --sidebar-ring: 217 91% 60%;
   }
 }
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @media screen and (max-width: 767px) {
+  .heros_height {
+    min-height: 700px;
+    height: calc(100vh - var(--headerHeight));
+  }
+}
+.heros_height {
+  height: calc(100vh - var(--headerHeight));
+  margin-top: var(--headerHeight);
+} */
+
+.heros_height {
+  min-height: calc(100vh - var(--headerHeight));
+  height: auto;
+  margin-top: var(--headerHeight);
+}
+
+@media screen and (max-width: 767px) {
+  .heros_height {
+    min-height: calc(100svh - var(--headerHeight));
+  }
+}
+.header {
+  height: var(--headerHeight);
+}
+.main_heading {
+  background: var(--headingBackground);
+}
+.font-stoke-light {
+  font-family: "Stoke", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-stoke {
+  font-family: "Stoke", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
 @layer base {
   * {
@@ -457,7 +492,7 @@ blockquote::-webkit-scrollbar-thumb:hover {
 }
 
 .border-025 {
-  border-width: 0.25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .perspective-1000 {
@@ -1402,4 +1437,49 @@ html.lenis {
     width: 0%;
     right: 100%;
   }
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose ul li::marker {
+  color: #4285f4;
+}
+.prose ol li::marker {
+  color: #4285f4;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chat-item {
+  animation: fadeSlideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.corner-tl::before,
+.corner-br::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: #4285f4;
+  border-style: solid;
+}
+.corner-tl::before {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+.corner-br::after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
 }

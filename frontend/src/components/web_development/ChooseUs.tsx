@@ -5,21 +5,27 @@ const ChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "Agile Development Approach",
-      description:
-        "We use Agile methodologies for seamless execution, ensuring flexibility, efficiency, and continuous collaboration",
+      title: "Experienced web developers and UI/UX designers",
     },
     {
       id: 2,
-      title: "Secure & Scalable Solutions",
-      description:
-        "Security first with encryption, authentication, and compliance for user protection",
+      title: "Clean, scalable, and maintainable code",
     },
     {
       id: 3,
-      title: "Transparent Communication & Support",
-      description:
-        "We Building lasting client relationships with clear communication, timely delivery, and support.",
+      title: "Business focus development approach",
+    },
+    {
+      id: 4,
+      title: "On-time project delivery",
+    },
+    {
+      id: 5,
+      title: "Transparent Communication Process",
+    },
+    {
+      id: 6,
+      title: "Strong focus on performance and security",
     },
   ];
 
@@ -43,18 +49,22 @@ const ChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group flex flex-col  items-center text-center space-y-4  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary  cursor-pointer overflow-hidden">
+              className="group flex flex-col  items-center justify-center text-center  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary  cursor-pointer overflow-hidden">
               {/* Card Content */}
               {/* Text */}
               <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
                 {feature.title}
               </h3>
-              <p className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed">
+              {/* <p className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed">
                 {feature.description}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
+        <p className="mt-10 text-white font-outfit text-sm sm:text-base md:text-lg font-light leading-relaxed text-center">
+          We do not just build a website, we build a reliable digital platforms
+          that deliver results.
+        </p>
       </div>
     </section>
   );

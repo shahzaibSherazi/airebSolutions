@@ -3,7 +3,7 @@ import bgImg from "@/assets/Industies/banking-fintech/hero-bg.png";
 
 export default function BankingHero() {
   return (
-    <section className="relative">
+    <section className="heros_height relative">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -17,7 +17,7 @@ export default function BankingHero() {
         }}
         className="absolute inset-0"
       />
-      <div className="w-full z-10 relative lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
+      <div className="w-full z-10 relative  px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}
@@ -31,7 +31,7 @@ export default function BankingHero() {
             </p>
           </div>
 
-          <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
+          <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
             Custom FinTech
             <br className="hidden lg:block" /> Software Solutions
           </h1>

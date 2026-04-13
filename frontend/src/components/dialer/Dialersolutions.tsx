@@ -12,7 +12,7 @@ const DialerSolutions = () => {
       number: "01",
       title: "Setup & Customization",
       description:
-        "The AI system is trained to understand your customer interactions and optimize the calling process, ensuring it continuously improves over time.",
+        "We understand your business needs and customize the AI dialer for sales, support, or marketing.",
       rightContent: (
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6 ">
           {/* Left Column - Customer Details */}
@@ -108,7 +108,7 @@ const DialerSolutions = () => {
       number: "02",
       title: "Integration",
       description:
-        "The AI system is trained to understand your customer interactions and optimize the calling process, ensuring it continuously improves over time.",
+        "We connect the AI dialer with your CRM and tools for a smooth workflow.",
       // rightContent: (
       //   <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6">
       //     {/* Left Column - Integration */}
@@ -186,7 +186,7 @@ const DialerSolutions = () => {
       number: "03",
       title: "AI Training",
       description:
-        "The AI system is trained to understand your customer interactions and optimize the calling process, ensuring it continuously improves over time.",
+        "We train the system to handle customer interactions and improve performance over time.",
       rightContent: <Step3Content />,
     },
     {
@@ -194,7 +194,7 @@ const DialerSolutions = () => {
       number: "04",
       title: "Launch & Optimization",
       description:
-        "The AI system is trained to understand your customer interactions and optimize the calling process, ensuring it continuously improves over time.",
+        "We launch the system, monitor performance, and make improvements for better results.",
       rightContent: (
         <div className="flex w-full h-full">
           <OptimizationImg className="w-full h-full object-contain" />

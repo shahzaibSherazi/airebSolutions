@@ -6,7 +6,7 @@ const EcommerceSolutions = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-6 lg:px-8">
         <div>
           <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal mb-12">
-            Drive Sales with Cutting-Edge Ecommerce Solutions!
+            Drive sales with Advanced E-commerce Solutions
           </h1>
           <div className="md:flex justify-start">
             <LogoSlider />
@@ -14,17 +14,12 @@ const EcommerceSolutions = () => {
         </div>
         <div>
           <p className="font-outfit text-[clamp(14px,1.5vw,18px)] font-normal">
-            At Aireb Solutions, we specialize in providing cutting-edge
-            ecommerce solutions that enable businesses to thrive in the digital
-            marketplace. Our ecommerce services are tailored to meet the unique
-            needs of your brand, enhancing customer experiences, boosting sales,
-            and improving operational efficiency. With a focus on innovation,
-            scalability, and user-centric design, we help businesses build,
-            manage, and scale ecommerce platforms that deliver tangible
-            results.Whether you are looking to launch a new ecommerce store,
-            optimize an existing one, or integrate advanced features like AI and
-            automated systems, Aireb Solutions is your trusted partner in
-            ecommerce success.
+            At the Aireb solution, we provide smart e-commerce solutions to help
+            your business grow online. Our services improve customer experience,
+            increase sales, and streamline operations. We focus on innovation,
+            scalability, and user-friendly design. Whether launching a new store
+            or upgrading an existing one with AI features, we help you succeed
+            in e-commerce.
           </p>
         </div>
       </div>

@@ -98,9 +98,9 @@ export default function OurWorkProcess() {
       <section
         ref={sectionRef}
         className="relative  bg-black text-white flex items-center">
-        <div className="max-w-6xl mx-auto w-full px-6 lg:px-8 pb-16 lg:pb-24">
+        <div className="max-w-6xl mx-auto w-full px-6 lg:px-8 py-16 lg:py-24">
           {/* HEADER */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
+          <div className="text-center mb-8 ">
             <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
               Our Work Process
             </span>

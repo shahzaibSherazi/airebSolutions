@@ -10,9 +10,9 @@ import SupportIcon from "@/assets/icons/industries/education/development-cycle/s
 const steps = [
   {
     id: 1,
-    title: "Requirement Analysis",
+    title: " Planning & Strategy",
     description:
-      "This initial step focuses on understanding specific educational goals and the needs of students and faculty to create tailored solutions.",
+      "We understand your goals, challenges, and requirements to create a clear and effective plan.",
     icon: <AnalysisIcon />,
     defaultActive: true,
   },
@@ -20,35 +20,35 @@ const steps = [
     id: 2,
     title: "Design & Prototyping",
     description:
-      "Our design team crafts intuitive prototypes and wireframes that align with your educational vision and user experience goals.",
+      "We design user-friendly layouts and create prototypes to visualize the platform before development.",
     icon: <PrototypingIcon />,
   },
   {
     id: 3,
     title: "Development & Integration",
     description:
-      "We build scalable, secure platforms with seamless integration of third-party tools, LMS systems, and APIs.",
+      "We build the system and integrate all features to ensure smooth performance and functionality.",
     icon: <DevelopmentIcon />,
   },
   {
     id: 4,
     title: "Testing & Quality Assurance",
     description:
-      "Rigorous testing ensures your platform performs flawlessly across devices, browsers, and user scenarios.",
+      "We test everything carefully to fix issues and ensure the platform works perfectly.",
     icon: <TestingIcon />,
   },
   {
     id: 5,
-    title: "Launch & Optimization",
+    title: "Launch & Deployment",
     description:
-      "We deploy your solution and continuously optimize performance, scalability, and user engagement post-launch.",
+      "We launch your solution and make it ready for users with full support.",
     icon: <LaunchIcon />,
   },
   {
     id: 6,
-    title: "Ongoing \nSupport",
+    title: "Support & Improvement",
     description:
-      "Our dedicated team provides continuous support, updates, and enhancements to keep your platform ahead of the curve.",
+      "We provide ongoing support and updates to keep your system improved and up to date.",
     icon: <SupportIcon />,
   },
 ];
@@ -85,7 +85,6 @@ function StepCard({ step, index, sectionInView }) {
 
   return (
     <div
-      // flex-1 so all cards share equal width in the row
       className="flex-1 min-w-0 cursor-pointer"
       style={{
         opacity: sectionInView ? 1 : 0,
@@ -97,13 +96,6 @@ function StepCard({ step, index, sectionInView }) {
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}>
-      {/* 
-        The card itself has NO fixed height.
-        Collapsed state = icon + title only (natural height).
-        Hover state = icon + title + description (natural height, grows downward).
-        All cards have the same width because parent is flex-1.
-        Collapsed height is kept identical via fixed padding + icon + title sizes.
-      */}
       <div
         style={{
           border: "1px solid transparent",
@@ -112,15 +104,20 @@ function StepCard({ step, index, sectionInView }) {
           backgroundOrigin: "border-box",
           backgroundClip: "padding-box, border-box",
         }}
-        className="relative education-cycle w-full p-1 md:p-2  transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
-        {/* Inner content — fixed padding so collapsed height is identical across all cards */}
+        className="relative education-cycle w-full p-1 md:p-2">
+        {/* ✅ Inner div grows in height when expanded */}
         <div
-          className={`flex flex-col items-center text-center px-3 pt-4  gap-4 
-  ${showContent ? "bg-primary" : "bg-[#1B2941]"}`}
+          className={`flex flex-col items-center text-center px-3 pt-4 pb-4 gap-4
+            ${showContent ? "bg-primary" : "bg-[#1B2941]"}`}
           style={{
-            minHeight: "clamp(130px, 16vh, 180px)", // 👈 ensures equal collapsed height
+            // ✅ Smoothly transitions between collapsed and expanded height
+            minHeight: showContent
+              ? `clamp(260px, 30vh, 320px)`
+              : "clamp(130px, 16vh, 180px)",
+            transition:
+              "min-height 0.5s cubic-bezier(0.22,1,0.36,1), background-color 0.3s ease",
           }}>
-          {/* Icon — fixed size via clamp, never changes */}
+          {/* Icon */}
           <div
             className="flex items-center justify-center flex-shrink-0 transition-all duration-300"
             style={{
@@ -128,30 +125,33 @@ function StepCard({ step, index, sectionInView }) {
               height: "clamp(44px,3.5vw,56px)",
               minWidth: "clamp(44px,3.5vw,56px)",
               minHeight: "clamp(44px,3.5vw,56px)",
-
               color: showContent ? "#000000" : "#ffffff",
             }}>
             {step.icon}
           </div>
 
+          {/* Title */}
           <h3
-            className={` whitespace-pre-line flex items-center justify-center text-[clamp(10px,1.08vw,18px)] font-stoke font-normal leading-snug transition-colors duration-300 w-full ${showContent ? "text-black" : "text-textColor"}`}>
+            className={`whitespace-pre-line flex items-center justify-center
+              text-[clamp(10px,1.08vw,18px)] font-stoke font-normal leading-snug
+              transition-colors duration-300 w-full
+              ${showContent ? "text-black" : "text-textColor"}`}>
             {step.title}
           </h3>
 
-          {/* Description — animates max-height 0 → real height, expands downward */}
+          {/* Description — slides down */}
           <div
             style={{
               maxHeight: showContent ? `${descHeight + 8}px` : "0px",
               overflow: "hidden",
-
               transition:
                 "max-height 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease",
               opacity: showContent ? 1 : 0,
             }}>
             <p
               ref={descRef}
-              className="font-outfit pb-1 font-light line-clamp-4 overflow-hidden text-textColor leading-relaxed text-[clamp(12px,0.9vw,14px)]">
+              className="font-outfit pb-1 font-light  overflow-hidden
+                text-textColor leading-relaxed text-[clamp(12px,0.9vw,14px)]">
               {step.description}
             </p>
           </div>

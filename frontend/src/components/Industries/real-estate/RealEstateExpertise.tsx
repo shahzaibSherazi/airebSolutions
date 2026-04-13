@@ -12,31 +12,31 @@ const cards = [
     id: 1,
     title: "Industry Expertise",
     description:
-      "With years of experience working with real estate businesses, we understand the unique challenges of the industry and offer solutions tailored to meet those challenges.",
+      "We understand real estate challenges well and provide solutions based on our experience in the industry.",
   },
   {
     id: 2,
     title: "Innovative Technology",
     description:
-      "We stay at the forefront of technological advancements, such as virtual reality, mobile apps, and AI, to ensure that your real estate solutions are cutting-edge.",
+      "We use modern technologies like AI, mobile apps, and virtual reality to deliver advanced real estate solutions.",
   },
   {
     id: 3,
     title: "Customization & Flexibility",
     description:
-      "We offer fully customizable solutions that are scalable to meet the growing needs of your real estate business.",
+      "We create fully customizable and scalable solutions that grow with your real estate business needs.",
   },
   {
     id: 4,
     title: "Comprehensive Services",
     description:
-      "From website and mobile app development to digital marketing and data analytics, we provide a full range of services to help you succeed.",
+      "We offer complete services, including websites, mobile apps, marketing, and analytics, to support your business.",
   },
   {
     id: 5,
     title: "Ongoing Support",
     description:
-      "Our post-launch support ensures that your solution continues to evolve with the ever-changing real estate market.",
+      "We provide continuous support after launch to keep your real estate solutions updated and running smoothly.",
   },
 ];
 
@@ -61,7 +61,7 @@ function Card({ card, delay }) {
   return (
     <div
       ref={ref}
-      className="rounded-[6px] border-[1.5px] border-transparent bg-[#0e1828] flex flex-col justify-start gap-4 p-6 sm:p-7 w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(66,133,244,0.12)]"
+      className="rounded-[6px] border-[1.5px] border-transparent bg-[#0e1828] flex flex-col justify-start gap-4 p-6 sm:p-7 w-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]  hover:shadow-[0_12px_32px_rgba(66,133,244,0.12)]"
       style={{
         ...cardBorder,
         minHeight: "215px",

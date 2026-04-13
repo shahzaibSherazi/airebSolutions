@@ -2,7 +2,7 @@ import bgImg from "../../assets/AllServices_assets/hero_bg.png";
 import { motion } from "framer-motion";
 const AllServicesHero = () => {
   return (
-    <section className="relative w-full bg-black">
+    <section className="heros_height relative flex flex-col justify-end w-full bg-black">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,7 +19,7 @@ const AllServicesHero = () => {
         className="absolute inset-0 "
       />
       {/* Content */}
-      <div className="relative z-10 min-h-screen px-8 py-[8vh] sm:py-[10vh] lg:py-[14vh] flex flex-col justify-end ">
+      <div className="container relative z-10 px-6 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -31,7 +31,7 @@ const AllServicesHero = () => {
             </p>
           </div>
 
-          <h1 className="font-stoke text-[clamp(28px,5vw,56px)] leading-[1.28] text-textColor">
+          <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-textColor">
             AI Consulting,
             <br className="hidden lg:block" />
             IT & Digital Services

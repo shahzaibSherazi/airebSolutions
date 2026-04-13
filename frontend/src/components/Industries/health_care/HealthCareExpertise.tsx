@@ -24,7 +24,7 @@ const cards = [
     id: 3,
     title: "Innovative Features",
     description:
-      "We integrate AI, gamification, mobile learning, and personalized learning experiences to enhance engagement and performance.",
+      "We integrate AI, gamification, mobile learning, and personalized learning experinces learning to enhance engagement performance.",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const cards = [
     id: 5,
     title: "Continuous Support",
     description:
-      "Our team offers ongoing support to ensure your platform remains up-to-date, secure, and functional.",
+      "Our team offers ongoing support to ensure your platform remains up to date, secure, and functional.",
   },
 ];
 

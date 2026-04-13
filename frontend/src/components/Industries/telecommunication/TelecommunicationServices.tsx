@@ -9,44 +9,44 @@ const services = [
   {
     id: 1,
     icon: <SoftwareDevIcon />,
-    title: "Network Infrastructure & Cloud Solutions",
+    title: "Network Infrastructure and Cloud Services",
     description:
-      "Telecommunications businesses rely heavily on robust network infrastructure and cloud solutions to ensure seamless communication and service delivery. We help design and deploy scalable and secure network solutions that meet the growing demands of the industry.",
+      "We create and set up safe and scalable network and cloud solutions to make sure that communication goes well and that the telecom business can flourish.",
   },
   {
     id: 2,
     icon: <MhealthIcon />,
-    title: "Customer Relationship Management (CRM) Solutions",
+    title: " Solutions for Customer Relationship Management (CRM)",
     description:
-      "Telecommunications businesses interact with a large volume of customers, making it critical to have effective systems in place to manage customer relationships. Our CRM solutions help you deliver personalized, high-quality customer service while optimizing business processes.",
+      "We offer CRM systems to help telecom companies better manage consumers, increase service quality, and speed up their business processes.",
   },
   {
     id: 3,
     icon: <LabIcon />,
-    title: "Billing & Payment Solutions",
+    title: "Billing and Payment Solutions",
     description:
-      "Accurate billing and efficient payment processing are critical for telecommunications companies. We provide billing and payment solutions that streamline invoicing, ensure accurate data processing, and enhance customer satisfaction.",
+      "We offer billing and payment solutions to help you keep track of invoices, make sure the data is correct, and give clients a smooth and dependable way to pay.",
   },
   {
     id: 4,
     icon: <MachinLearningIcon />,
-    title: "Mobile App Development",
+    title: "Making mobile apps",
     description:
-      "In today's digital world, mobile apps are essential for telecommunications companies to provide easy access to services and enhance customer engagement. We develop user-friendly, high-performance mobile applications that offer customers a seamless experience.",
+      "We make mobile apps that are easy to use and assist telecom businesses in giving customers instant access to services and get them more involved.",
   },
   {
     id: 5,
     icon: <CloudIcon />,
-    title: "Digital Transformation & IT Solutions",
+    title: "IT Solutions and Digital Transformation",
     description:
-      "The telecommunications industry is increasingly embracing the Internet of Things (IoT) to enhance services, optimize network management, and improve customer experiences. We help businesses leverage IoT and digital transformation technologies to drive innovation and efficiency.",
+      "We assist telecom companies in using new technologies like the Internet of Things (IoT) to make their services better, operate their networks better, and be more efficient overall.",
   },
   {
     id: 6,
     icon: <DigitalIcon />,
-    title: "Data Analytics & Business Intelligence",
+    title: "Business Intelligence and Data Analytics",
     description:
-      "The telecommunications industry generates vast amounts of data, which can be leveraged to gain insights into customer behavior, optimize network operations, and drive business decisions. Our data analytics and business intelligence (BI) solutions enable telecom companies to turn raw data into actionable insights.",
+      "We offer data analytics tools that turn telecom data into meaningful information that can help you make better decisions, understand your customers better, and improve the performance of your network.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Cybersecurity Solutions",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We offer powerful security solutions to keep telecom systems, networks, and consumer data safe from cyber threats.",
   },
   {
     id: 8,
@@ -82,29 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "VoIP & Communication Solutions",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We offer VoIP services that make communication cheaper and better so that businesses can work better and stay connected.",
   },
 ];
 

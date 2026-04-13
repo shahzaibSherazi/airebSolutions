@@ -12,31 +12,31 @@ const cards = [
     id: 1,
     title: "Tailored Solutions",
     description:
-      "We understand the unique challenges startups face and offer customized solutions to help you overcome obstacles and grow your business.",
+      "We provide custom solutions based on your startup needs to help you grow and solve challenges.",
   },
   {
     id: 2,
     title: "End-to-End Services",
     description:
-      "From branding and website development to marketing and automation, we provide a comprehensive suite of services that cover all aspects of startup growth.",
+      "We offer complete services from branding and development to marketing and automation.",
   },
   {
     id: 3,
     title: "Scalable Infrastructure",
     description:
-      "Our cloud-based and scalable solutions ensure that your startup can grow without worrying about infrastructure limitations.",
+      "Our scalable solutions help your startup grow without technical limitations.",
   },
   {
     id: 4,
     title: "Cost-Effective",
     description:
-      "We understand the need for startups to optimize their budgets, which is why we offer cost-effective solutions that provide maximum value.",
+      "We provide budget-friendly solutions that deliver strong results and value.",
   },
   {
     id: 5,
     title: "Proven Expertise",
     description:
-      "Our team of experienced professionals has helped numerous startups successfully launch and grow in their respective markets.",
+      "Our experienced team has helped many startups launch and grow successfully.",
   },
 ];
 

@@ -2,7 +2,7 @@ import paperImg from "@/assets/resources/white-papers/hero-img.png";
 import rightImg from "@/assets/resources/white-papers/hero-bg-right.png";
 export default function WhitePaperHero() {
   return (
-    <section className="relative lg:h-screen w-full overflow-hidden py-16 lg:py-24">
+    <section className="heros_height relative w-full flex flex-col justify-center overflow-hidden py-8 lg:py-10">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -39,7 +39,8 @@ export default function WhitePaperHero() {
 
             {/* Title */}
             <h2 className="text-white text-[clamp(18px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
-              Transforming Bussinesses With Web <br /> Development Excellence
+              Transforming Bussinesses With Web{" "}
+              <br className="hidden lg:block" /> Development Excellence
             </h2>
 
             {/* Category tag */}

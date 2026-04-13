@@ -2,7 +2,7 @@ import careerImg from "@/assets/careers/hero-img.png";
 import rightImg from "@/assets/careers/rightImg.png";
 export default function CareersHero() {
   return (
-    <section className="relative lg:h-screen  flex  justify-center flex-col overflow-hidden py-16 lg:py-24">
+    <section className="heros_height relative flex  justify-center flex-col overflow-hidden py-8 lg:py-10">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -12,7 +12,7 @@ export default function CareersHero() {
       />
 
       {/* ── Title ── */}
-      <h1 className="relative z-10 text-center text-[clamp(32px,5vw,56px)] font-stoke font-normal text-white mb-10">
+      <h1 className="relative z-10 text-center text-[clamp(18px,5vw,56px)] font-stoke font-normal text-white mb-10">
         Careers
       </h1>
 
@@ -38,7 +38,7 @@ export default function CareersHero() {
             </div>
 
             {/* Title */}
-            <h2 className="text-white text-[clamp(18px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
+            <h2 className="text-white text-[clamp(16px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
               Mid Frontend Developer (React.js & Next.js) <br /> - open source
             </h2>
 

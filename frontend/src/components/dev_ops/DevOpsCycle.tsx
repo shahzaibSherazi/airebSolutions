@@ -380,9 +380,9 @@ const DevOpsCycle = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 lg:py-24 bg-primary"
+      className=" bg-primary"
       aria-labelledby="devops-title">
-      <div className="px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="px-6 lg:px-8 py-16 lg:py-24 max-w-7xl mx-auto">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
           <motion.div

@@ -103,30 +103,27 @@ export default function ClientReviews() {
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="container relative max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center">
         {/* Our Reviews Button */}
-        <div className="flex justify-center mb-[44px] sm:mb-10 lg:mb-[34px]">
-          <button className="relative bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
-            Our Reviews
-            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
-          </button>
-        </div>
+        <button className="relative mb-[44px] sm:mb-10 lg:mb-[34px] bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
+          Our Reviews
+          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+        </button>
 
         {/* Heading */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-stoke leading-tight">
-              Our Clients Love
-            </h2>
-            <p className="text-2xl sm:text-3xl lg:text-4xl  font-stoke font-light mt-2">
-              to Recommend us
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-stoke leading-tight">
+            Our Clients Love
+          </h2>
+          <p className="text-xl md:text-3xl lg:text-4xl  font-stoke font-light mt-2">
+            to Recommend us
+          </p>
+        </motion.div>
 
         {/* Slider Container */}
         <div className="relative flex items-center justify-center px-[7px] sm:px-[15px] lg:px-[23px]">
@@ -168,11 +165,11 @@ export default function ClientReviews() {
                 <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[180px_1fr] md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] xl:grid-cols-[320px_1fr] gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center">
                   {/* Image */}
                   <div className="flex justify-center">
-                    <div className="w-full h-[160px] sm:h-[240px] md:h-[280px] lg:h-[340px] xl:h-[380px] border-[#8B8B8B] overflow-hidden">
+                    <div className="w-full h-[160px] sm:h-[240px] md:h-[280px] lg:h-[340px] xl:h-[380px] overflow-hidden">
                       <img
                         src={currentTestimonial.image}
                         alt={currentTestimonial.name}
-                        className="w-full h-full object-cover border-[0.25px] rounded-[10px]"
+                        className="w-full h-full object-contain "
                       />
                     </div>
                   </div>
@@ -180,12 +177,12 @@ export default function ClientReviews() {
                   {/* Content */}
                   <div className="flex flex-col justify-center space-y-[14px] sm:space-y-8 md:space-y-10 lg:space-y-12 xl:space-y-14 lg:pr-0 md:pr-3 pr-[26px]">
                     {/* Quote Icon */}
-                    <div className="text-base sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal">
+                    {/* <div className="text-base sm:text-4xl md:text-5xl lg:text-6xl text-white font-normal">
                       <span className="md:tracking-[-4px]">
                         {" "}
                         &#x275B; &#x275B;{" "}
                       </span>
-                    </div>
+                    </div> */}
 
                     {/* Quote Text */}
                     <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 lg:mb-6 xl:mb-8 text-gray-200 line-clamp-3 sm:line-clamp-4 lg:line-clamp-5">
@@ -197,7 +194,7 @@ export default function ClientReviews() {
                       <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold mb-1">
                         {currentTestimonial.name}
                       </h4>
-                      <p className="text-xs sm:text-sm md:text-base text-gray-400">
+                      <p className="text-xs sm:text-sm md:text-base text-white">
                         {currentTestimonial.position}
                       </p>
                     </div>

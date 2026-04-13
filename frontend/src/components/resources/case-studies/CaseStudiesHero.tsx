@@ -2,7 +2,7 @@ import paperImg from "@/assets/resources/white-papers/hero-img.png";
 import rightImg from "@/assets/resources/white-papers/hero-bg-right.png";
 export default function CaseStudiesHero() {
   return (
-    <section className="relative lg:h-screen w-full overflow-hidden py-16 lg:py-24">
+    <section className="heros_height relative  w-full overflow-hidden py-8 lg:py-10">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"

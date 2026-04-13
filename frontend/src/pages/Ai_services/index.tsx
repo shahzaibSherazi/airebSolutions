@@ -1,3 +1,4 @@
+import AiChallenges from "@/components/Ai_services/AiChallenges";
 import AIDevelopmentProcess from "@/components/Ai_services/AiDevelopmentProcess";
 import AIExpertiseSection from "@/components/Ai_services/AiExpertise";
 import AiHero from "@/components/Ai_services/AiHero";
@@ -10,6 +11,7 @@ const AiServices = () => {
     <Layout enableSmoothScroll>
       <AiHero />
       <AiServicesSection />
+      <AiChallenges />
       <AIExpertiseSection />
       <AIDevelopmentProcess />
       <WhyChooseUs />

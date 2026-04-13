@@ -20,7 +20,7 @@ const ValueCard = ({
   className = "",
 }: ValueCardProps) => (
   <div
-    className={`
+    className={`group
     bg-primary text-white p-6 md:p-8
     flex flex-col justify-between
     sm:min-h-[180px]
@@ -30,7 +30,7 @@ const ValueCard = ({
   `}>
     <div className="flex justify-between items-center">
       <h3 className="text-2xl text-black md:text-[26px] font-stoke">{title}</h3>
-      <div className=" text-black size-10 sm:size-11 flex justify-center items-center">
+      <div className=" text-black size-10 sm:size-11 flex justify-center items-center brightness-0 group-hover:invert trasitaion-all duration-300">
         {icon}
       </div>
     </div>
@@ -106,30 +106,28 @@ const StrategicApproach = () => {
     <section
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
-      }}
-      className=" pb-16 lg:pb-24 px-6 lg:px-8">
-      <div className="font-outfit">
+      }}>
+      <div className="container font-outfit pb-16 lg:pb-24 lg:pt-0 pt-16 px-6 lg:px-8">
         {/* Header */}
-        <div className="sm:text-center mb-16 md:mb-20">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <span className="inline-block bg-primary font-outfit text-textColor px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
-              Strategic Approach
-            </span>
-            <h2 className="font-stoke text-textColor mb-6 sm:mb-3.5 text-[32px] md:text-[42px] leading-[48px] md:leading-[56px]">
-              The drive behind <br className="sm:hidden" /> everything we build
-            </h2>
-            <p className="text-textColor font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
-              We don't plan strategies; we focus on measurable results. Real
-              growth means better conversasion optimized strong brands. See how
-              our approach helpbussiness grow smarter and achieve long term
-              success.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-16 md:mb-20"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <span className="inline-block bg-primary font-outfit text-textColor px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
+            Strategic Approach
+          </span>
+          <h2 className="font-stoke text-textColor text-center mb-6 sm:mb-3.5 text-2xl md:text-[32px] lg:text-[42px] lg:leading-[56px]">
+            The drive behind <br className="sm:hidden" /> everything we build
+          </h2>
+          <p className="text-textColor font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
+            We don't plan strategies; we focus on measurable results. Real
+            growth means better conversasion optimized strong brands. See how
+            our approach helpbussiness grow smarter and achieve long term
+            success.
+          </p>
+        </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-1.5 text-white">

@@ -10,7 +10,7 @@ export default function EducationHero() {
         background:
           "linear-gradient(257.21deg, rgba(0, 0, 0, 0) 1.73%, #0E1828 98.27%)",
       }}>
-      <div className="w-full lg:h-screen px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-16 lg:py-24">
+      <div className="heros_height w-full px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}
@@ -24,7 +24,7 @@ export default function EducationHero() {
             </p>
           </div>
 
-          <h1 className="font-stoke text-[clamp(24px,5vw,56px)] leading-[1.28] text-white">
+          <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
             Healthcare &
             <br className="hidden lg:block" /> Pharmaceuticals
           </h1>

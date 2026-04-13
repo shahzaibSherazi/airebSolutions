@@ -12,31 +12,31 @@ const cards = [
     id: 1,
     title: "Expertise in Game Development",
     description:
-      "Our experienced developers understand the nuances of the gaming industry, ensuring your game meets the highest standards of quality and playability.",
+      "Our skilled developers understand gaming needs and create high-quality, engaging games.",
   },
   {
     id: 2,
     title: "Innovative Technologies",
     description:
-      "We leverage AR, VR, cloud gaming, and AI to create engaging and cutting-edge gaming experiences.",
+      "We use AR, VR, AI, and cloud gaming to build modern and immersive gaming experiences.",
   },
   {
     id: 3,
     title: "Comprehensive Services",
     description:
-      "From game development and marketing to monetization and player analytics, we offer end-to-end solutions.",
+      "We provide complete solutions from game development to marketing, monetization, and analytics.",
   },
   {
     id: 4,
     title: "Player-Centric Approach",
     description:
-      "We prioritize player engagement, retention, and satisfaction, ensuring your game captivates audiences and builds a loyal fan base.",
+      "We focus on player satisfaction, engagement, and retention to build a loyal audience.",
   },
   {
     id: 5,
     title: "Ongoing Support",
     description:
-      "Our team is dedicated to providing ongoing support and updates to keep your game performing at its best.",
+      "We offer continuous support and updates to keep your game running smoothly and improved.",
   },
 ];
 

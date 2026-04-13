@@ -9,44 +9,44 @@ const services = [
   {
     id: 1,
     icon: <SoftwareDevIcon />,
-    title: "Custom E-Learning Platforms Development",
+    title: "Custom E-Learning Platform Development",
     description:
-      "With the rise of online learning, developing a robust e-learning platform is crucial. We create custom e-learning platforms that provide intuitive interfaces, interactive content, and seamless user experiences for students and instructors alike.",
+      "We create custom e-learning systems that are simple to use, provide interactive content, and are good for both teachers and students.",
   },
   {
     id: 2,
     icon: <MobileIcon />,
     title: "Mobile Learning Apps",
     description:
-      "As mobile learning becomes increasingly popular, we offer mobile app development services to provide students and educators with flexible, on-the-go access to course content and communication tools.",
+      "We make smartphone apps that make it easy for professors and students to get to classes and talk to each other whenever and wherever they choose.",
   },
   {
     id: 3,
     icon: <LmsIcon />,
-    title: "Learning Management System (LMS) Development",
+    title: "Creating a Learning Management System (LMS)",
     description:
-      "A comprehensive and centralized LMS helps educational institutions manage their educational content, track student progress, and enhance communication between students and faculty.",
+      "We make LMS solutions that allow teachers and students talk to each other better, keep track of how students are doing, and manage content.",
   },
   {
     id: 4,
     icon: <VirtualIcon />,
     title: "Virtual Classroom Solutions",
     description:
-      "We provide secure and interactive virtual classroom solutions, enabling live sessions, real-time collaboration, and seamless communication between students and instructors.",
+      "We have safe online classrooms where you can take live lessons, talk to other students in real time, and easily communicate.",
   },
   {
     id: 5,
     icon: <WebIcon />,
     title: "Custom Web and Mobile Portals",
     description:
-      "Educational institutions often require custom web and mobile portals to manage student information, resources, and administrative tasks.",
+      "We create one-of-a-kind portals that make it simple to keep track of student information, resources, and daily tasks.",
   },
   {
     id: 6,
     icon: <CrmIcon />,
     title: "CRM & Student Engagement Solutions",
     description:
-      "We implement CRM systems designed specifically for educational institutions, helping you manage interactions with prospective students, current students, and alumni.",
+      "We have CRM tools that let you keep track of how students engage with each other, improve communication, and get them more active.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "AI-Powered Personalized  Learning",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We use AI to create personalised learning experiences for each student so they can do better",
   },
   {
     id: 8,
@@ -82,9 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "Conferences, events, and webinars",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
+      "We help you plan online events, webinars, and conferences that bring together students, teachers, and professionals.",
   },
   {
     id: 9,
@@ -102,9 +102,29 @@ const services = [
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    title: "Health Data Analytics",
+    title: "Content Writing for educational websites",
     description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We write good content that keeps students, parents, and teachers interested.",
+  },
+  {
+    id: 9,
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        className="w-5 h-5"
+        stroke="#4285F4"
+        fill="none"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+    ),
+    title: "Gamification in Education",
+    description:
+      "We use game-like features like rewards and challenges to make studying more entertaining and fascinating for students.",
   },
 ];
 

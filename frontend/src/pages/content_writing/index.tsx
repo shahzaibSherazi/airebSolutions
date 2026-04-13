@@ -1,3 +1,4 @@
+import ContentWritingChallenges from "@/components/content_writing/ContentWritingChallenges";
 import ContentWritingExpertise from "@/components/content_writing/ContentwritingExpertise";
 import ContentWritingHero from "@/components/content_writing/ContentWritingHero";
 import ContentWritingProcess from "@/components/content_writing/ContentwritingProcess";
@@ -10,8 +11,9 @@ const ContentWriting = () => {
     <Layout enableSmoothScroll>
       <ContentWritingHero />
       <ContentWritingServices />
+      <ContentWritingChallenges />
       <ContentWritingProcess />
-      <ContentWritingWork />
+      {/* <ContentWritingWork /> */}
       <ContentWritingExpertise />
     </Layout>
   );

@@ -49,9 +49,9 @@ const HowWeGetItDone = () => {
   ];
 
   return (
-    <section className="relative w-full bg-black pb-16 pt-2  lg:pb-24 overflow-hidden">
+    <section className="relative w-full bg-black   overflow-hidden">
       {/* Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container px-6 lg:px-8 py-16  lg:py-24">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
           <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
             Our Work Process

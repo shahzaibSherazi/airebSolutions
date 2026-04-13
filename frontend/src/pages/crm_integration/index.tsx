@@ -1,4 +1,5 @@
 import ChooseUs from "@/components/crm_integration/chooseUs";
+import CrmChallenges from "@/components/crm_integration/CrmChallenges";
 import CrmHero from "@/components/crm_integration/CrmHero";
 import CrmServices from "@/components/crm_integration/CrmServices";
 import OurWork from "@/components/crm_integration/OurWork";
@@ -11,6 +12,7 @@ const CrmIntegration = () => {
     <Layout enableSmoothScroll>
       <CrmHero />
       <CrmServices />
+      <CrmChallenges />
       <WorkProcess />
       <OurWork />
       {/* <SalesforceIntegration /> */}

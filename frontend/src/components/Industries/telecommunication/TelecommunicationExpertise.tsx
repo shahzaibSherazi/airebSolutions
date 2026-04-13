@@ -12,31 +12,31 @@ const cards = [
     id: 1,
     title: "Industry Expertise",
     description:
-      "We have extensive experience working with telecommunications companies, providing solutions that drive efficiency, innovation, and customer satisfaction.",
+      "We have strong experience in telecom and provide solutions that improve efficiency, innovation, and customer satisfaction.",
   },
   {
     id: 2,
     title: "Customized Solutions",
     description:
-      "Our solutions are tailored to meet the unique needs of your business, whether you're looking to optimize operations, enhance customer experience, or integrate new technologies.",
+      "We create solutions based on your business needs to improve operations, customer experience, and technology integration.",
   },
   {
     id: 3,
     title: "Scalable & Flexible",
     description:
-      "We provide scalable solutions that grow with your business, ensuring that your infrastructure and services can evolve with the telecommunications landscape.",
+      "Our solutions are flexible and scalable, helping your business grow and adapt to industry changes.",
   },
   {
     id: 4,
     title: "Cutting-Edge Technologies",
     description:
-      "We utilize the latest technologies to deliver high-performance, secure, and reliable solutions that help your business stay competitive in the ever-changing telecom industry.",
+      "We use modern technologies to deliver secure, high-performance, and reliable telecom solutions.",
   },
   {
     id: 5,
     title: "Ongoing Support",
     description:
-      "Our post-launch support ensures that your solution continues to evolve with the ever-changing telecommunication Era.",
+      "We provide continuous support to keep your systems updated and running smoothly.",
   },
 ];
 

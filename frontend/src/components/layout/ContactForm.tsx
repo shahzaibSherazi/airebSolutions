@@ -11,9 +11,9 @@ export default function ContactForm() {
   return (
     <section
       id="contact-form"
-      className="bg-black text-white relative min-h-screen flex items-center">
+      className="bg-black text-white relative  flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
-      <div className="w-full flex items-center justify-between px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container w-full flex items-center justify-between px-6 lg:px-8 py-16 lg:py-24">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
             <motion.div
@@ -21,7 +21,7 @@ export default function ContactForm() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <h1 className="font-stoke font-normal text-[clamp(24px,4vw,48px)] leading-tight sm:leading-snug lg:leading-[64px]">
+              <h1 className="font-stoke font-normal text-[clamp(18px,4vw,48px)] lg:text-start text-center leading-tight sm:leading-snug lg:leading-[64px]">
                 Tell us about your project
               </h1>
             </motion.div>
@@ -141,7 +141,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       style={{
         background: "linear-gradient(180deg, #629DFF 0%, #0B0B0B 100%)",
       }}
-      className="w-full max-w-[576px] px-[9px] py-[10px] contact_form relative">
+      className="w-full lg:max-w-[576px] px-[9px] py-[10px] contact_form relative">
       <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6 md:py-8 space-y-3 sm:space-y-4 md:space-y-5 bg-black">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">

@@ -5,32 +5,29 @@ const UiDesignExpertise = () => {
   const features = [
     {
       id: 1,
-      heading: "Tailored Solutions",
-      title:
-        "Our UI/UX designs are custom-tailored to your specific business needs and user expectations",
+      heading:
+        "UI/UX designers with a lot of experience and knowledge of the field",
     },
     {
       id: 2,
-      heading: "User-Centered Approach",
-      title:
-        "We prioritize creating user-friendly and engaging experiences that enhance user satisfaction.",
+      heading: "Design that focuses on the user and getting them to convert",
     },
     {
       id: 3,
-      heading: "Collaboration",
-      title:
-        "We work closely with your team to ensure that the design aligns perfectly with your brand vision and goals",
+      heading: "Designs that are clean, modern, and fit with the brand",
     },
     {
       id: 4,
-      heading: "Experience & Expertise",
-      title:
-        "Our team is made up of highly skilled UI/UX designers with years of experience in delivering top-notch designs",
+      heading: "Making choices based on data",
     },
     {
       id: 5,
-      heading: "24/7 Support & Maintenance",
-      title: "Continuous updates and technical assistance.",
+      heading: "Delivery on time with clear communication",
+    },
+    {
+      id: 6,
+      heading:
+        "Strong attention on how well it works and how easy it is to use",
     },
   ];
 
@@ -69,31 +66,24 @@ const UiDesignExpertise = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
+              className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex items-center justify-center">
               {/* Card Content */}
-              <div className="relative z-10 flex-1 flex flex-col">
+              <div className="relative z-10  text-center">
                 {/* Text with fixed height and overflow handling */}
-                <div className=" overflow-hidden">
-                  <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
-                    {feature.heading}
-                  </h1>
-                  <h3 className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed pr-8 line-clamp-2 h-full">
-                    {feature.title}
-                  </h3>
-                </div>
+                <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
+                  {feature.heading}
+                </h1>
               </div>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
-              <div className="">
-                <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">
-                  {/* Arrow Icon */}
-                  <div className="absolute bottom-2 right-2">
-                    <img
-                      src={ArrowUpRight}
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
-                      alt="arrow icon"
-                    />
-                  </div>
+              <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">
+                {/* Arrow Icon */}
+                <div className="absolute bottom-2 right-2">
+                  <img
+                    src={ArrowUpRight}
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
+                    alt="arrow icon"
+                  />
                 </div>
               </div>
 

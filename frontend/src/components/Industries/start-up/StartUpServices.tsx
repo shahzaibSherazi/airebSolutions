@@ -11,45 +11,52 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Website Development for Startups",
     description:
-      "Your website is often the first impression your customers will have of your business. We help startups build professional, mobile-responsive websites that are optimized for speed, SEO, and conversion. Our solutions are not just about aesthetics—they're designed to create a seamless user experience that drives results.",
+      "We build fast, mobile-friendly websites that look professional, rank well on search engines, and convert visitors into customers.",
   },
   {
     id: 2,
     icon: <MhealthIcon />,
     title: "Mobile App Development",
     description:
-      "In a world where mobile usage is at an all-time high, having a well-designed mobile app can significantly boost a startup's success. We build intuitive, user-friendly mobile apps for both iOS and Android platforms, ensuring that your business stays connected with your audience on the go.",
+      "We create easy-to-use mobile apps for Android and iOS to help startups connect with users anytime.",
   },
   {
     id: 3,
     icon: <LabIcon />,
     title: "Branding & Graphic Design",
     description:
-      "Strong branding is essential for any startup looking to make a lasting impact. We help create a powerful visual identity for your startup that resonates with your target audience and builds brand recognition.",
+      "We design strong brand identities that help your startup stand out and attract the right audience.",
   },
   {
     id: 4,
     icon: <MachinLearningIcon />,
     title: "Digital Marketing for Startups",
     description:
-      "Effective marketing is critical for startup growth. Our digital marketing solutions are designed to help you reach your target audience, generate leads, and increase sales, all while optimizing your budget.",
+      "We provide marketing strategies to reach your audience, generate leads, and grow sales within your budget.",
   },
   {
     id: 5,
     icon: <CloudIcon />,
     title: "Cloud-Based Solutions",
     description:
-      "Startups need scalable and flexible solutions that can grow with their business. We offer cloud-based solutions that allow you to manage operations more efficiently, reduce IT overhead, and ensure that your infrastructure can scale as needed.",
+      "We offer flexible cloud solutions to manage operations efficiently and scale your business easily.",
   },
   {
     id: 6,
     icon: <DigitalIcon />,
     title: "CRM & Automation Solutions",
     description:
-      "Customer relationship management (CRM) systems are essential for startups looking to manage leads, automate marketing, and build strong relationships with customers. We offer CRM solutions tailored to startups, helping you manage your customer data efficiently and automate key business processes.",
+      "We provide CRM systems to manage leads, automate tasks, and improve customer relationships.",
+  },
+  {
+    id: 7,
+    icon: <DigitalIcon />,
+    title: "Funding & Investment Solutions",
+    description:
+      "We help startups manage funding, connect with investors, and track financial performance effectively.",
   },
 ];
-
+const INITIAL_COUNT = 6;
 const cardStyle = {
   border: "1.5px solid transparent",
   backgroundImage:
@@ -102,6 +109,9 @@ function ServiceCard({ service, animationDelay = 0 }) {
 }
 
 export default function StartUpServices() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleServices = showAll ? services : services.slice(0, INITIAL_COUNT);
   return (
     <>
       <section className=" py-16 lg:py-24 px-6 lg:px-8 bg-[#02070F]">
@@ -109,7 +119,9 @@ export default function StartUpServices() {
           {/* Header */}
           <div className="text-center mb-14">
             <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
-              Our Startup Solutions
+              Our Gaming Industry
+              <br className="hidden lg:block" />
+              Services
             </h1>
             <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
               At Aireb Solutions, we offer tailored solutions that help startups
@@ -121,12 +133,52 @@ export default function StartUpServices() {
 
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:mx-auto xl:max-w-screen-2xl">
-            {services.map((service, i) => (
+            {visibleServices.map((service, i) => (
               <div key={service.id} className="flex justify-center">
-                <ServiceCard service={service} />
+                <ServiceCard
+                  service={service}
+                  animationDelay={
+                    showAll && i >= INITIAL_COUNT
+                      ? (i - INITIAL_COUNT) * 100
+                      : 0
+                  }
+                />
               </div>
             ))}
           </div>
+
+          {/* View More / Less Button */}
+          {services.length > INITIAL_COUNT && (
+            <div className="flex justify-center mt-14">
+              <button
+                onClick={() => setShowAll((prev) => !prev)}
+                className="relative overflow-hidden border border-primary text-textColor text-sm md:text-base lg:text-[22px] font-bold font-outfit px-12 py-3.5 rounded-md transition-all duration-300 hover:-translate-y-0.5"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 28px rgba(66,133,244,0.5)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 4px 20px rgba(66,133,244,0.3)";
+                }}>
+                <span className="relative z-10">
+                  {showAll ? "View Less" : `View More`}
+                </span>
+                {/* Shine overlay */}
+                <span
+                  className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,255,255,0.15), transparent)",
+                  }}
+                />
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>

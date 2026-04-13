@@ -12,7 +12,7 @@ const cards = [
     id: 1,
     title: "Tailored Solutions",
     description:
-      "We create ecommerce websites and apps that are customized to your business needs and goals.",
+      "We design and build e-commerce websites and apps that fit the objectives and goals of your business.",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const cards = [
     id: 3,
     title: "Mobile Optimization",
     description:
-      "We ensure your ecommerce platform is fully optimized for mobile users, offering a seamless experience across devices.",
+      "We ensure your e-commerce platform is fully optimized for mobile users, offering a seamless experience across devices.",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const cards = [
     id: 5,
     title: "End-to-End Services",
     description:
-      "From development to marketing, we offer comprehensive ecommerce solutions that cover all aspects of your online business.",
+      "We provide full e-commerce solutions that cover all aspects of your internet business, from building it to promoting it.",
   },
 ];
 
@@ -105,8 +105,7 @@ export default function EcommerceExpertise() {
 
             {/* ── Heading ── */}
             <h1 className="text-white font-normal font-stoke leading-tight mb-16 text-[clamp(36px,4vw,48px)] ">
-              Why Choose Aireb Solutions for <br className="hidden lg:block" />{" "}
-              Ecommerce Development?
+              Why You Choose Aireb Solutions
             </h1>
           </div>
 

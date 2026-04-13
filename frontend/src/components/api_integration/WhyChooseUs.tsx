@@ -5,33 +5,23 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "Agile Development Approach",
-      description:
-        "We use Agile methodologies for seamless execution, ensuring flexibility, efficiency, and continuous collaboration",
+      title: "Developers and architects with a lot of experience in APIs",
     },
     {
       id: 2,
-      title: "Secure & Scalable Solutions",
-      description:
-        "Security first with encryption, authentication, and compliance for user protection",
+      title: "Code that is clean, easy to read, and easy to scale",
     },
     {
       id: 3,
-      title: "Transparent Communication & Support",
-      description:
-        "We Building lasting client relationships with clear communication, timely delivery, and support.",
+      title: "Integration tactics that are good for business",
     },
     {
       id: 4,
-      title: "Secure & Scalable Solutions",
-      description:
-        "Security first with encryption, authentication, and compliance for user protection",
+      title: "Safe solutions that focus on performance",
     },
     {
       id: 5,
-      title: "Transparent Communication & Support",
-      description:
-        "We Building lasting client relationships with clear communication, timely delivery, and support.",
+      title: "A clear and smooth way to talk to each other",
     },
   ];
 
@@ -57,15 +47,12 @@ const WhyChooseUs = () => {
             {features.slice(0, 3).map((feature) => (
               <div
                 key={feature.id}
-                className="group flex flex-col  items-center text-center space-y-4  bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
+                className="group flex justify-center items-center text-center  bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
                 {/* Card Content */}
                 {/* Text */}
                 <h3 className="text-primary group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
                   {feature.title}
                 </h3>
-                <p className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             ))}
           </div>
@@ -74,19 +61,19 @@ const WhyChooseUs = () => {
               {features.slice(3, 5).map((feature) => (
                 <div
                   key={feature.id}
-                  className="group flex flex-col  items-center text-center space-y-4  bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
+                  className="group flex justify-center items-center text-center bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
                   {/* Card Content */}
                   {/* Text */}
                   <h3 className="text-primary group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
                     {feature.title}
                   </h3>
-                  <p className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed">
-                    {feature.description}
-                  </p>
                 </div>
               ))}
             </div>
           </div>
+          <p className="text-white text-center font-outfit text-sm sm:text-base  font-light leading-relaxed">
+            Affordable prices for high-quality API solutions
+          </p>
         </div>
       </div>
     </section>

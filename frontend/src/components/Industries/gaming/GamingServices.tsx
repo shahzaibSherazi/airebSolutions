@@ -11,42 +11,42 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Game Development & Design",
     description:
-      "Our experienced game developers create high-quality games that offer compelling gameplay, stunning graphics, and an immersive experience.",
+      "We create high-quality games with engaging gameplay, strong graphics, and immersive player experiences.",
   },
   {
     id: 2,
     icon: <MhealthIcon />,
-    title: "Augmented Reality (AR) & Virtual Reality (VR) Game Solutions",
+    title: "AR & VR Game Solutions",
     description:
-      "As AR and VR technologies revolutionize the gaming industry, we develop cutting-edge immersive experiences for your games, creating lifelike, interactive environments.",
+      "We develop AR and VR games with realistic and interactive environments for better immersion.",
   },
   {
     id: 3,
     icon: <LabIcon />,
     title: "Multiplayer Online Games & Community Building",
     description:
-      "We create multiplayer games that allow players to connect, compete, and collaborate in real time, fostering a sense of community and competition.",
+      "We build multiplayer games that let players connect, compete, and collaborate in real time.",
   },
   {
     id: 4,
     icon: <MachinLearningIcon />,
     title: "E-Commerce Integration for Gaming Platforms",
     description:
-      "Expand your gaming business with integrated e-commerce solutions, offering players a seamless way to purchase in-game items, downloadable content (DLC), subscriptions, and merchandise.",
+      "We integrate e-commerce features for in-game purchases, DLC, subscriptions, and gaming merchandise.",
   },
   {
     id: 5,
     icon: <CloudIcon />,
     title: "Game Marketing & User Acquisition",
     description:
-      "To stand out in a crowded marketplace, your game needs effective marketing strategies. Aireb Solutions helps you create campaigns that attract, engage, and retain players.",
+      "We create effective marketing strategies to attract, engage, and retain more players.",
   },
   {
     id: 6,
     icon: <DigitalIcon />,
     title: "Game Analytics & Player Insights",
     description:
-      "Understanding player behavior is key to improving the gaming experience and optimizing game performance. We provide comprehensive analytics tools to track player engagement, preferences, and performance.",
+      "We provide analytics tools to track player behavior, engagement, and game performance.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Cloud Gaming Solutions",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We enable cloud gaming so players can access games on any device without high-end hardware.",
   },
   {
     id: 8,
@@ -82,9 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "Custom Game Portals & Platforms",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
+      "We build custom gaming platforms where players can access games, interact, and join events.",
   },
   {
     id: 9,
@@ -102,9 +102,29 @@ const services = [
         <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
-    title: "Health Data Analytics",
+    title: "Game Monetization Strategies",
     description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We implement monetization methods like ads, microtransactions, and premium content to increase revenue.",
+  },
+  {
+    id: 10,
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        className="w-5 h-5"
+        stroke="#4285F4"
+        fill="none"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+    ),
+    title: "Game Security Solutions",
+    description:
+      "We ensure strong security to protect user data, transactions, and game servers from threats.",
   },
 ];
 

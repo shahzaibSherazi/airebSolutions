@@ -5,33 +5,27 @@ const ContentWritingExpertise = () => {
   const features = [
     {
       id: 1,
-      heading: "Experienced Writers",
-      title:
-        "Our team consists of seasoned content writers who specialize in crafting high-quality content for diverse industries.",
+      heading: "Content writers and SEO experts with a lot of experience",
     },
     {
       id: 2,
-      heading: "Customized Content",
-      title:
-        "We tailor each piece of content to your brand, audience, and goals.",
+      heading: "Content that is high-quality and free of plagiarism",
     },
     {
       id: 3,
-      heading: "SEO Expertise",
-      title:
-        "Our writers are skilled in SEO, ensuring your content ranks well and drives traffic.",
+      heading: "Writing with SEO in mind to get better rankings",
     },
     {
       id: 4,
-      heading: "Timely Delivery",
-      title:
-        "We understand deadlines and ensure that your content is delivered on time, every time.",
+      heading: "Content strategy that focuses on conversions",
     },
     {
       id: 5,
-      heading: "Ongoing Support",
-      title:
-        "We offer continuous content updates and optimization to keep your brand relevant and engaging.",
+      heading: "Delivery on time with quality that stays the same",
+    },
+    {
+      id: 6,
+      heading: "Communication that is clear and open",
     },
   ];
 
@@ -58,7 +52,7 @@ const ContentWritingExpertise = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              Why Choose Aireb Solutions for
+              Why pick Aireb Solutions for
               <br className="hidden sm:block" />
               Content Writing?
             </h2>
@@ -72,17 +66,10 @@ const ContentWritingExpertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10 flex-1 flex flex-col">
-                {/* Text with fixed height and overflow handling */}
-                <div className=" overflow-hidden">
-                  <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
-                    {feature.heading}
-                  </h1>
-                  <h3 className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed pr-8 line-clamp-2 h-full">
-                    {feature.title}
-                  </h3>
-                </div>
-              </div>
+              {/* Text with fixed height and overflow handling */}
+              <h1 className="text-primary text-center relative z-10 group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
+                {feature.heading}
+              </h1>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
               <div className="">
@@ -103,6 +90,10 @@ const ContentWritingExpertise = () => {
             </div>
           ))}
         </div>
+        <p className="text-white text-center text-sm sm:text-base md:text-lg font-outfit font-normal leading-relaxed mt-10 ">
+          {" "}
+          Affordable solutions that provide you the most value
+        </p>
       </div>
     </section>
   );

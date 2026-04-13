@@ -4,7 +4,7 @@ import bgImg from "@/assets/Industies/travel-hospitality/hero-bg.png";
 
 const TravelHospitalityHero = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen px-6 lg:px-8 py-16 lg:py-24">
+    <section className="heros_height relative overflow-hidden px-6 lg:px-8 py-8 lg:py-10">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -19,40 +19,36 @@ const TravelHospitalityHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="w-full h-full ">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 h-full min-h-[calc(100vh-10rem)]">
-          {/* Left Side - Content */}
-          <div className="relative flex flex-col justify-end mb-8">
-            <div
-              style={{
-                background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
-              }}
-              className="mb-[2vh] sm:mb-[4vh] border border-primary rounded-sm w-fit px-10 py-3">
-              <p className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold ">
-                Sector
-              </p>
-            </div>
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
+        {/* Left Side - Content */}
+        <div className="relative flex flex-col justify-end mb-8">
+          <p
+            style={{
+              background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
+            }}
+            className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold mb-[2vh] sm:mb-[4vh] border border-primary rounded-sm w-fit px-10 py-3 ">
+            Sector
+          </p>
 
-            <h1 className="font-stoke text-[clamp(24px,5vw,52px)] leading-[1.28] text-white">
-              Travel & Hospitality
-            </h1>
-          </div>
+          <h1 className="font-stoke text-[clamp(18px,5vw,52px)] leading-[1.28] text-white">
+            Travel & Hospitality
+          </h1>
+        </div>
 
-          {/* Right Side */}
-          <div className="flex items-start justify-center lg:justify-end  h-full">
-            <div
-              className="relative"
-              style={{
-                width: "100%",
-                maxWidth: "450px",
-                aspectRatio: "450 / 450",
-              }}>
-              <img
-                src={heroImg}
-                alt="API Development"
-                className="w-full h-full object-contain"
-              />
-            </div>
+        {/* Right Side */}
+        <div className="flex items-start justify-center lg:justify-end  h-full">
+          <div
+            className="relative"
+            style={{
+              width: "100%",
+              maxWidth: "450px",
+              aspectRatio: "450 / 450",
+            }}>
+            <img
+              src={heroImg}
+              alt="API Development"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>

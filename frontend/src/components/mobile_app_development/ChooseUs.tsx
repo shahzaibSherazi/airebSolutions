@@ -5,27 +5,27 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "User-Centric UI/UX for Engaging Apps & Games",
+      title: "Smart UI/UX designers and mobile app developers",
     },
     {
       id: 2,
-      title: "Full-Cycle App & Game Development for the Digital Era",
+      title: "Apps that are easy to grow, keep up with, and work well",
     },
     {
       id: 3,
-      title: "Agile Development with Real-Time Collaboration",
+      title: "Mobile methods that help businesses",
     },
     {
       id: 4,
-      title: "Future-Ready Apps with Enterprise-Grade Security",
+      title: "Getting projects done on time",
     },
     {
       id: 5,
-      title: "Advanced Frameworks. Smarter Solutions.",
+      title: "Clear communication all the way through the development phase",
     },
     {
       id: 6,
-      title: "Consistent Performance on Every Device",
+      title: "A lot of attention is paid to safety and reliability.",
     },
   ];
 
@@ -51,12 +51,8 @@ const WhyChooseUs = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              An established partner that can speed
-              <br className="hidden sm:block" />
-              up innovation, with a focus on real-
-              <br className="hidden sm:block" />
-              world applications
+            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit leading-10 lg:leading-[72px] ">
+              Why you should choose Aireb Solutions for <br /> your Mobile Apps
             </h2>
           </motion.div>
         </div>
@@ -96,6 +92,9 @@ const WhyChooseUs = () => {
             </div>
           ))}
         </div>
+        <p className="text-white text-center text-sm sm:text-base md:text-lg font-outfit font-normal leading-relaxed mt-10">
+          Affordable solutions without compromising quality.
+        </p>
       </div>
     </section>
   );

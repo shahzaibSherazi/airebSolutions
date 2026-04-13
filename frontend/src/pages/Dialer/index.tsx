@@ -1,4 +1,5 @@
 import BenifitsDialer from "@/components/dialer/BenifitsDialer";
+import DialerChallenges from "@/components/dialer/DialerChallenges";
 import DialerHero from "@/components/dialer/DialerHero";
 import DialerServices from "@/components/dialer/DialerServices";
 import DialerSolutions from "@/components/dialer/Dialersolutions";
@@ -9,6 +10,7 @@ const Dialer = () => {
     <Layout enableSmoothScroll>
       <DialerHero />
       <DialerServices />
+      <DialerChallenges />
       <DialerSolutions />
       <BenifitsDialer />
     </Layout>

@@ -5,29 +5,28 @@ const LogoDesignExpertise = () => {
   const features = [
     {
       id: 1,
-      heading: "Industry Expertise",
-      title:
-        "Years of experience in on-demand app development across diverse sectors.",
+      heading:
+        "Logo designers and branding professionals with a lot of experience",
     },
     {
       id: 2,
-      heading: "Scalable & Customizable Solutions",
-      title: "Fully tailored to your business needs and growth potential.",
+      heading: "A design technique that is both creative and based on research",
     },
     {
       id: 3,
-      heading: "Cutting-Edge Technology",
-      title: "AI-driven, cloud-based, and high-performance applications.",
+      heading: "Ideas that are one-of-a-kind and made only for your business",
     },
     {
       id: 4,
-      heading: "Seamless Integration",
-      title: "API and CRM integration for enhanced efficiency.",
+      heading: "Designs that are clean, professional, and up-to-date",
     },
     {
       id: 5,
-      heading: "24/7 Support & Maintenance",
-      title: "Continuous updates and technical assistance.",
+      heading: "Quick delivery with the option to make changes",
+    },
+    {
+      id: 6,
+      heading: "Clear communication throughout the whole project",
     },
   ];
 
@@ -54,7 +53,7 @@ const LogoDesignExpertise = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              Why Choose Aireb Solutions for
+              Why did you choose Aireb Solutions for
               <br className="hidden sm:block" />
               Logo Design Services?
             </h2>
@@ -68,16 +67,11 @@ const LogoDesignExpertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10 flex-1 flex flex-col">
+              <div className="relative z-10  flex justify-center items-center ">
                 {/* Text with fixed height and overflow handling */}
-                <div className=" overflow-hidden">
-                  <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
-                    {feature.heading}
-                  </h1>
-                  <h3 className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed pr-8 line-clamp-2 h-full">
-                    {feature.title}
-                  </h3>
-                </div>
+                <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
+                  {feature.heading}
+                </h1>
               </div>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
@@ -99,6 +93,10 @@ const LogoDesignExpertise = () => {
             </div>
           ))}
         </div>
+        <p className="text-white text-center text-base sm:text-lg md:text-xl font-outfit font-light leading-relaxed mt-8">
+          We don't just make logos; we make strong brand identities <br /> that
+          help your business stand out and grow.
+        </p>
       </div>
     </section>
   );

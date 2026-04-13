@@ -5,29 +5,27 @@ const Expertise = () => {
   const features = [
     {
       id: 1,
-      heading: "Industry Expertise",
-      title:
-        "Years of experience in on-demand app development across diverse sectors.",
+      heading: "A team with experience in programming and UI/UX",
     },
     {
       id: 2,
-      heading: "Scalable & Customizable Solutions",
-      title: "Fully tailored to your business needs and growth potential.",
+      heading: "Digital platforms that can grow as needed",
     },
     {
       id: 3,
-      heading: "Cutting-Edge Technology",
-      title: "AI-driven, cloud-based, and high-performance applications.",
+      heading: "Pay attention to performance, safety, and dependability",
     },
     {
       id: 4,
-      heading: "Seamless Integration",
-      title: "API and CRM integration for enhanced efficiency.",
+      heading: "Business-driven approach to development",
     },
     {
       id: 5,
-      heading: "24/7 Support & Maintenance",
-      title: "Continuous updates and technical assistance.",
+      heading: "Delivering projects on time",
+    },
+    {
+      id: 6,
+      heading: "Clear way of talking to each other",
     },
   ];
 
@@ -54,7 +52,7 @@ const Expertise = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              Why Choose Aireb Solutions for
+              Why you should pick Aireb Solutions for your
               <br className="hidden sm:block" />
               On-Demand Services?
             </h2>
@@ -68,29 +66,22 @@ const Expertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10 flex-1 flex flex-col">
+              <div className="relative z-10 flex-1 flex flex-col items-center justify-center">
                 {/* Text with fixed height and overflow handling */}
-                <div className=" overflow-hidden">
-                  <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
-                    {feature.heading}
-                  </h1>
-                  <h3 className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed pr-8 line-clamp-2 h-full">
-                    {feature.title}
-                  </h3>
-                </div>
+                <h1 className="text-primary group-hover:text-textColor text-center font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
+                  {feature.heading}
+                </h1>
               </div>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
-              <div className="">
-                <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">
-                  {/* Arrow Icon */}
-                  <div className="absolute bottom-2 right-2">
-                    <img
-                      src={ArrowUpRight}
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
-                      alt="arrow icon"
-                    />
-                  </div>
+              <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">
+                {/* Arrow Icon */}
+                <div className="absolute bottom-2 right-2">
+                  <img
+                    src={ArrowUpRight}
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:-translate-x-1 "
+                    alt="arrow icon"
+                  />
                 </div>
               </div>
 
@@ -99,6 +90,9 @@ const Expertise = () => {
             </div>
           ))}
         </div>
+        <p className="text-white text-center font-outfit text-base sm:text-lg md:text-xl font-light leading-relaxed mt-8">
+          We deliver reliable on-demand solutions at a budget-friendly cost.
+        </p>
       </div>
     </section>
   );

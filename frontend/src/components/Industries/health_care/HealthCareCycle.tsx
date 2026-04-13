@@ -24,7 +24,7 @@ const steps = [
     number: "01",
     title: "Assessment &\nPlanning",
     description:
-      "We begin by assessing your current systems and understanding your business needs, challenges, and goals. We then create a tailored strategy that aligns with industry regulations, technological advancements, and patient requirements.",
+      "We analyze your current systems and understand needs and goals, then create a custom strategy following regulations and healthcare requirements.",
     icon: <AssessmentIcon />,
   },
   {
@@ -32,7 +32,7 @@ const steps = [
     number: "02",
     title: "Design &\nPrototyping",
     description:
-      "Our design team creates prototypes to visualize and refine your healthcare or pharmaceutical solution, ensuring it meets functionality, usability, and compliance standards.",
+      "We design and create prototypes to visualize solutions, ensuring usability, functionality, and compliance with healthcare standards.",
     icon: <PrototypingIcon />,
   },
   {
@@ -40,7 +40,7 @@ const steps = [
     number: "03",
     title: "Development &\nIntegration",
     description:
-      "We build the system, integrating necessary features like data security, HIPAA compliance, and machine learning models while ensuring seamless integration with existing tools and platforms.",
+      "We develop the system with secure features, compliance, and AI tools, ensuring smooth integration with existing platforms.",
     icon: <DevelopmentIcon />,
   },
   {
@@ -48,7 +48,7 @@ const steps = [
     number: "04",
     title: "Deployment &\nGo-Live",
     description:
-      "Once tested and optimized, we deploy the solution and ensure that the system is ready for use in a live environment.",
+      "After testing and optimization, we deploy the solution and make sure it works smoothly in a live environment.",
     icon: <GoliveIcon />,
   },
 ];

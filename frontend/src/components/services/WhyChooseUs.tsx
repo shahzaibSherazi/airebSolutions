@@ -48,14 +48,14 @@ const WhyChooseUs = () => {
 
   return (
     <div
-      className=" text-white py-16 lg:py-24 px-6 lg:px-8"
+      className=" text-white "
       style={{
         background: "linear-gradient(135.23deg, #4285F4 2.74%, #629DFF 97.26%)",
       }}>
-      <div className="">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-normal font-stoke leading-[56px] mb-[20px]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-normal font-stoke leading-[56px] mb-[20px]">
             Why Choose Us
           </h1>
           <motion.div
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <p className="text-textColor font-outfit font-normal text-sm sm:text-lg leading-[40px]">
+            <p className="text-textColor font-outfit font-normal text-sm sm:text-lg">
               We Design for the Future to Drive Today's Success
             </p>
           </motion.div>

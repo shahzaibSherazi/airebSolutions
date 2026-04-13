@@ -4,7 +4,7 @@ import bgImage from "@/assets/resources/portfolio/hero-bg.png";
 
 const PortfolioHero = () => {
   return (
-    <section className="relative bg-[#02070F] min-h-screen w-full flex items-center justify-center px-4 py-16 sm:py-24 overflow-hidden">
+    <section className="heros_height relative bg-[#02070F] w-full flex items-center justify-center px-6 lg:px-8 py-8 lg:py-10 overflow-hidden">
       {/* Background glow circle image — full section */}
       <img
         src={bgImage}
@@ -25,7 +25,7 @@ const PortfolioHero = () => {
         }}>
         {/* Content */}
         <div className="flex flex-col items-center justify-center text-center px-[clamp(16px,2.8vw,32px)]  py-[clamp(32px,6vw,64px)]  gap-10">
-          <h2 className="font-stoke text-white text-[clamp(30px,4.8vw,50px)] font-normal leading-tight tracking-wide uppercase">
+          <h2 className="font-stoke text-white text-[clamp(18px,4.8vw,50px)] font-normal leading-tight tracking-wide uppercase">
             We Create Digital
             <br />
             Experiences That

@@ -153,151 +153,144 @@ const TechSolutionsSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white lg:py-24 py-16 px-6 lg:px-8">
-      <div className="">
+    <div className="min-h-screen bg-black text-white ">
+      <div className="container lg:py-24 py-16 px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-16 lg:mb-[91px]">
+        <motion.div
+          className="text-center mb-16 lg:mb-[91px]"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="text-[clamp(18px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
+            Innovative Technology, Design, and{" "}
+            <br className="hidden lg:block" />
+            Communication Solutions
+          </h1>
+          {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
+            Communication Solutions
+          </h1> */}
+          <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
+            We don't just create strategies we show the numbers. Growth means
+            higher conversions, lower costs, and stronger brands. Discover how
+            we help brands grow smarter
+          </p>
+        </motion.div>
+        {/* Center Card - Filter */}
+        <div className="sticky top-48 z-50 flex justify-center items-center">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h1 className="text-[clamp(24px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
-              Innovative Technology, Design, and{" "}
-              <br className="hiddend lg:block" />
-              Communication Solutions
-            </h1>
-            {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
-            Communication Solutions
-          </h1> */}
-            <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
-              We don't just create strategies we show the numbers. Growth means
-              higher conversions, lower costs, and stronger brands. Discover how
-              we help brands grow smarter
-            </p>
+            viewport={{ once: false }}
+            className="gap-1 sm:gap-3  bg-white rounded-full px-2 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
+            <button
+              onClick={() => setActiveTab("technology")}
+              className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                activeTab === "technology"
+                  ? "bg-primary text-white border-none"
+                  : " text-black hover:bg-black hover:text-white"
+              }`}>
+              Technology
+            </button>
+            <button
+              onClick={() => setActiveTab("design")}
+              className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                activeTab === "design"
+                  ? "bg-primary text-white border-none"
+                  : " text-black hover:bg-black hover:text-white"
+              }`}>
+              Design
+            </button>
+            <button
+              onClick={() => setActiveTab("business")}
+              className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+                activeTab === "business"
+                  ? "bg-primary text-white border-none"
+                  : " text-black hover:bg-black hover:text-white"
+              }`}>
+              Business & Communication
+            </button>
           </motion.div>
         </div>
-        {/* Center Card - Filter */}
-        <div className="sticky top-48 z-50 flex justify-center items-center">
-          <div className=" bg-white rounded-full px-2 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
-            <motion.div
-              initial={{ y: 60, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: false }}
-              className="flex gap-1 sm:gap-3">
-              <button
-                onClick={() => setActiveTab("technology")}
-                className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                  activeTab === "technology"
-                    ? "bg-primary text-white border-none"
-                    : " text-black hover:bg-black hover:text-white"
-                }`}>
-                Technology
-              </button>
-              <button
-                onClick={() => setActiveTab("design")}
-                className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                  activeTab === "design"
-                    ? "bg-primary text-white border-none"
-                    : " text-black hover:bg-black hover:text-white"
-                }`}>
-                Design
-              </button>
-              <button
-                onClick={() => setActiveTab("business")}
-                className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
-                  activeTab === "business"
-                    ? "bg-primary text-white border-none"
-                    : " text-black hover:bg-black hover:text-white"
-                }`}>
-                Business & Communication
-              </button>
-            </motion.div>
-          </div>
-        </div>
         {/* Cards Container with Fixed Filter */}
-        <div className="">
-          {/* Sticky Filter Card - Centered in Top Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative pt-4">
-            {filteredCards.map((card, index) => (
-              <div
-                key={card.id}
-                className="relative sevicesCard_edge group  px-[19px] py-[27px] transition-all duration-500 opacity-0 animate-fadeInUp h-[331px] "
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                  animationFillMode: "forwards",
-                  backgroundImage: card.backgroundImage
-                    ? `url(${card.backgroundImage})`
-                    : "linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3))",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}>
-                <div
-                  style={{
-                    background:
-                      "linear-gradient(66.03deg, #629DFF -78.71%, rgba(0, 0, 0, 0.2) 114.21%)",
-                  }}
-                  className="absolute inset-0 "
-                />
-                {/* Expand Icon */}
-                <button className="absolute top-4 right-4 z-10 text-white/60 hover:text-white transition-colors">
-                  <Bookmark size={20} />
-                </button>
-
-                {/* Card Content Container */}
-                <div className="relative justify-end h-full flex flex-col  z-10">
-                  {/* Top Section - Title and Icon */}
-
-                  {/* Title */}
-                  <h3 className="text-[22px] leading-[64px] font-outfit font-bold  text-white">
-                    {card.title}
-                  </h3>
-                  <div className="">
-                    <button className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
-                      Start A Project
-                      <BtnIcon className="w-[9px] h-[9px]" />
-                    </button>
-                  </div>
-
-                  {/* Bottom Section - Button */}
-                </div>
-              </div>
-            ))}
-
-            {/* Technology & Engineering Info Card */}
+        {/* Sticky Filter Card - Centered in Top Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative pt-4">
+          {filteredCards.map((card, index) => (
             <div
-              key={activeTab}
-              className="relative overflow-hidden bg-primary opacity-0 animate-fadeInUp h-[331px]"
+              key={card.id}
+              className="relative sevicesCard_edge group  px-[19px] py-[27px] transition-all duration-500 opacity-0 animate-fadeInUp h-[331px] "
               style={{
-                animationDelay: `${filteredCards.length * 100}ms`,
+                animationDelay: `${index * 100}ms`,
                 animationFillMode: "forwards",
+                backgroundImage: card.backgroundImage
+                  ? `url(${card.backgroundImage})`
+                  : "linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3))",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}>
-              <div className="h-full flex flex-col p-4 sm:p-6 md:p-8 lg:px-[25px] lg:py-[10px]">
-                <h3 className="text-xl sm:text-2xl md:text-[26px] text-black font-outfit font-bold mb-3 sm:mb-4 md:mb-[19px] leading-tight">
-                  {currentInfo.title}
+              <div
+                style={{
+                  background:
+                    "linear-gradient(66.03deg, #629DFF -78.71%, rgba(0, 0, 0, 0.2) 114.21%)",
+                }}
+                className="absolute inset-0 "
+              />
+              {/* Expand Icon */}
+              <button className="absolute top-4 right-4 z-10 text-white/60 hover:text-white transition-colors">
+                <Bookmark size={20} />
+              </button>
+
+              {/* Card Content Container */}
+              <div className="relative justify-end h-full flex flex-col  z-10">
+                {/* Top Section - Title and Icon */}
+
+                {/* Title */}
+                <h3 className="text-[22px] leading-[64px] font-outfit font-bold  text-white">
+                  {card.title}
                 </h3>
+                <div className="">
+                  <button className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
+                    Start A Project
+                    <BtnIcon className="w-[9px] h-[9px]" />
+                  </button>
+                </div>
 
-                <p className="text-textColor font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed">
-                  {currentInfo.description}
-                </p>
-
-                <ul className="space-y-2 sm:space-y-3">
-                  {currentInfo.items.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center gap-2 sm:gap-3">
-                      <span className="text-white mt-1 text-sm sm:text-base">
-                        •
-                      </span>
-                      <span className="text-white font-outfit font-medium text-sm sm:text-base leading-5 break-words">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Bottom Section - Button */}
               </div>
+            </div>
+          ))}
+
+          {/* Technology & Engineering Info Card */}
+          <div
+            key={activeTab}
+            className="relative overflow-hidden bg-primary opacity-0 animate-fadeInUp h-[331px]"
+            style={{
+              animationDelay: `${filteredCards.length * 100}ms`,
+              animationFillMode: "forwards",
+            }}>
+            <div className="h-full flex flex-col p-4 sm:p-6 md:p-8 lg:px-[25px] lg:py-[10px]">
+              <h3 className="text-xl sm:text-2xl md:text-[26px] text-black font-outfit font-bold mb-3 sm:mb-4 md:mb-[19px] leading-tight">
+                {currentInfo.title}
+              </h3>
+
+              <p className="text-textColor font-outfit font-light mb-4 sm:mb-5 md:mb-6 text-xs sm:text-sm leading-relaxed">
+                {currentInfo.description}
+              </p>
+
+              <ul className="space-y-2 sm:space-y-3">
+                {currentInfo.items.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 sm:gap-3">
+                    <span className="text-white mt-1 text-sm sm:text-base">
+                      •
+                    </span>
+                    <span className="text-white font-outfit font-medium text-sm sm:text-base leading-5 break-words">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

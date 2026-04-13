@@ -15,31 +15,31 @@ const steps = [
     number: 2,
     title: "Design & Prototyping",
     description:
-      "feedback. prototypes through testing and optimize operations, refining enhance guest experiences and We design intuitive solutions to",
+      "We design intuitive solutions to enhance guest experiences and optimize operations, refining prototypes through testing and feedback.",
   },
   {
     number: 3,
     title: "Development & Integration",
     description:
-      "enhanced guest experiences. seamless functionality and integrating systems for solutions tailored to your needs, We develop secure, scalable",
+      "We develop secure, scalable solutions tailored to your needs, integrating systems for seamless functionality and enhanced guest experiences.",
   },
   {
     number: 4,
     title: "Testing",
     description:
-      "We rigorously test our solutions to ensure they are bug-free, user-friendly, and optimized for seamless performance across platforms.",
+      "We test everything carefully to ensure it is bug-free, easy to use, and works smoothly on all platforms.",
   },
   {
     number: 5,
     title: "Deployment & Launch",
     description:
-      "After testing, we deploy the solution smoothly, ensuring full integration and seamless operation for a successful launch.",
+      "After testing, we launch your solution smoothly with full integration and ensure everything runs properly.",
   },
   {
     number: 6,
     title: "Ongoing Support",
     description:
-      "We offer ongoing support to issues, and optimize the monitor performance, resolve solution as your business evolves.",
+      "We provide continuous support to fix issues, monitor performance, and improve your solution as your business grows.",
   },
 ];
 

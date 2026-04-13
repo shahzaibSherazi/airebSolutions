@@ -22,7 +22,7 @@ export default function BlogsHero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className="heros_height relative w-full flex flex-col justify-center overflow-hidden"
       style={{
         background:
           "radial-gradient(50% 295.84% at 50% 50%, rgba(66, 133, 244, 0.25) 0%, rgba(2, 7, 15, 0) 70.6%)",
@@ -32,9 +32,9 @@ export default function BlogsHero() {
       <img src={rightCircleImg} className="absolute -bottom-20 right-0" />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
-      <div className="relative z-10  lg:h-screen  flex flex-col items-center justify-center text-center px-6 lg:px-8 py-16 sm:py-24">
+      <div className="relative z-10  flex flex-col items-center justify-center text-center px-6 lg:px-8 py-8 lg:py-10">
         {/* Title */}
-        <h1 className="text-white text-[clamp(40px,6vw,72px)] font-normal font-stoke mb-4 leading-tight">
+        <h1 className="text-white text-[clamp(32px,6vw,72px)] font-normal font-stoke mb-4 leading-tight">
           Blogs
         </h1>
 

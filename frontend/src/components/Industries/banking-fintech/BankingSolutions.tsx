@@ -14,18 +14,12 @@ const BankingSolutions = () => {
         </div>
         <div>
           <p className="font-outfit text-[clamp(14px,1.5vw,18px)] font-normal">
-            At Aireb Solutions, we specialize in providing innovative banking
-            and fintech solutions that empower financial institutions and
-            technology-driven businesses to thrive in the digital economy. Our
-            expertise in this dynamic industry enables us to help clients
-            navigate complex financial landscapes, enhance customer experiences,
-            and ensure secure, scalable, and efficient operations.With a deep
-            understanding of the banking sector, financial services, and the
-            latest fintech trends, we deliver tailored solutions that enable our
-            clients to drive growth, reduce risks, and meet the ever-evolving
-            demands of consumers and regulatory bodies. From core banking
-            systems to blockchain integration, our fintech solutions are
-            designed to future-proof your business.
+            At Aireb Solutions, we provide smart banking and fintech solutions
+            to help financial businesses grow in the digital world. Our services
+            improve customer experience, ensure security, and streamline
+            operations. From core banking systems to modern technologies, we
+            deliver solutions that reduce risks and support long-term business
+            success.
           </p>
         </div>
       </div>

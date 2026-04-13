@@ -11,42 +11,42 @@ const services = [
     icon: <HotelIcon />,
     title: "Hotel Management Solutions",
     description:
-      "Managing a hotel requires balancing guest satisfaction, operational efficiency, and business growth. Our hotel management solutions streamline processes, enabling you to focus on delivering exceptional service to your guests.",
+      "We provide hotel management systems to improve operations, manage bookings, and deliver better guest experiences.",
   },
   {
     id: 2,
     icon: <TravelIcon />,
     title: "Travel Agency Solutions",
     description:
-      "Travel agencies need streamlined operations, effective customer communication, and easy booking systems to thrive in the competitive travel industry. Aireb Solutions provides solutions that allow agencies to stay organized and offer high-quality service to travelers.",
+      "We help travel agencies manage bookings, communication, and operations efficiently for better customer service.",
   },
   {
     id: 3,
     icon: <MobileIcon />,
     title: "Mobile App Development for Travel & Hospitality",
     description:
-      "In today's digital age, mobile apps are essential for improving customer engagement and enhancing convenience. We create custom mobile applications for the travel and hospitality sector that enable businesses to provide an exceptional mobile experience for their customers.",
+      "We build mobile apps to improve customer experience and provide easy access to travel services.",
   },
   {
     id: 4,
     icon: <MarketingIcon />,
     title: "Digital Marketing Solutions",
     description:
-      "Effective digital marketing is essential for attracting customers and increasing brand awareness in the competitive travel and hospitality industry. Aireb Solutions provides a range of digital marketing services to help businesses boost their online presence.",
+      "We offer marketing services to increase online visibility, attract customers, and grow your brand.",
   },
   {
     id: 5,
     icon: <IntegrationIcon />,
     title: "Booking Engine Integration & Optimization",
     description:
-      "An efficient booking engine is the backbone of any travel or hospitality business. We integrate high-performance booking engines that optimize the booking process for both customers and businesses, ensuring higher conversion rates and better user experiences.",
+      "We integrate booking systems to make reservations fast, easy, and improve conversion rates.",
   },
   {
     id: 6,
     icon: <WebsiteIcon />,
     title: "Property Website Design & Development",
     description:
-      "Having a professional, visually appealing, and user-friendly website is essential for any hospitality business. Our design and development services ensure that your website reflects your brand while providing an excellent user experience.",
+      "We create professional, user-friendly websites that reflect your brand and improve user experience.",
   },
   {
     id: 7,
@@ -64,9 +64,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Virtual Concierge & AI Chatbots",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "We provide AI chatbots to assist customers, answer queries, and offer personalized support.",
   },
   {
     id: 8,
@@ -82,29 +82,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "Data Analytics & Reporting",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We offer analytics tools to track customer behavior and improve business decisions.",
   },
 ];
 

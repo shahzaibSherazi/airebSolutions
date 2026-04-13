@@ -11,100 +11,42 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Real Estate Website Development",
     description:
-      "A well-designed website is essential for any real estate business. We create professional, user-friendly websites that allow you to showcase your properties, attract new clients, and offer valuable information to potential buyers.",
+      "We create professional and easy-to-use real estate websites to showcase properties, attract clients, and provide helpful information to potential buyers.",
   },
   {
     id: 2,
     icon: <MhealthIcon />,
     title: "Real Estate Mobile App Development",
     description:
-      "Mobile apps are an essential tool for enhancing client engagement and improving the property buying/selling process. We develop custom mobile applications for real estate businesses to help clients access property listings, communicate with agents, and even schedule viewings on the go.",
+      "We build custom mobile apps for real estate businesses so users can view listings, contact agents, and schedule property visits anytime, anywhere.",
   },
   {
     id: 3,
     icon: <LabIcon />,
     title: "Real Estate CRM Solutions",
     description:
-      "A CRM (Customer Relationship Management) system is essential for real estate agents and agencies to manage client relationships and drive sales. Our custom CRM solutions help streamline workflows, automate follow-ups, and manage leads more efficiently.",
+      "We develop CRM systems to help real estate businesses manage clients, track leads, automate follow-ups, and improve sales efficiency.",
   },
   {
     id: 4,
     icon: <MachinLearningIcon />,
-    title: "Virtual Property Tours and Augmented Reality(AR) Solutions",
+    title: "Virtual Property Tours and AR Solutions",
     description:
-      "Virtual property tours and augmented reality are transforming the way buyers experience properties. We help real estate companies create immersive virtual tours and AR experiences to allow potential buyers to explore properties without having to visit them in person.",
+      "We offer property management software to simplify daily tasks like tenant communication, rent tracking, and lease management for landlords and agencies.",
   },
   {
     id: 5,
     icon: <CloudIcon />,
-    title: "GProperty Management Solutions",
+    title: "Property Management Solutions",
     description:
-      "Efficient property management is crucial for landlords, property managers, and real estate agencies. We offer software solutions that simplify the day-to-day management of rental properties, from tenant communication to lease tracking.",
+      "We offer property management software to simplify daily tasks like tenant communication, rent tracking, and lease management for landlords and agencies.",
   },
   {
     id: 6,
     icon: <DigitalIcon />,
     title: "Real Estate Marketplaces and E-commerce Solutions",
     description:
-      "We provide e-commerce solutions for real estate businesses to buy, sell, or rent properties online. Our marketplace solutions are designed to enhance user experience, streamline transactions, and improve visibility for properties.",
-  },
-  {
-    id: 7,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    title: "Patient Engagement Solutions",
-    description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
-  },
-  {
-    id: 8,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Healthcare Cybersecurity",
-    description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "We build online marketplace platforms for buying, selling, and renting properties, making transactions easier, faster, and more visible for real estate businesses.",
   },
 ];
 
@@ -174,18 +116,14 @@ export default function RealEstateServices() {
           {/* Header */}
           <div className="text-center mb-14">
             <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
-              Our Real Estate
-              <br className="hidden lg:block" />
-              Solutions
+              Our Real Estate Solutions
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-              At Aireb Solutions, we offer a comprehensive suite of services to
-              address the diverse <br className="hidden lg:block" /> needs of
-              real estate businesses. Whether you are a real estate agent,
-              property manager, <br className="hidden lg:block" /> or a
-              developer, our solutions are designed to simplify processes,
-              improve customer <br className="hidden lg:block" />
-              engagement, and boost operational efficiency.
+            <p className="font-outfit font-normal max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
+              At Aireb Solutions, we provide complete services for real estate
+              businesses. Whether you are an agent, property manager, or
+              developer, our solution helps simplify your work, improve customer
+              engagement, and increase overall business efficiency and
+              performance.
             </p>
           </div>
 

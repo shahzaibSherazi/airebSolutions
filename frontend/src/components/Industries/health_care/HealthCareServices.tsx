@@ -12,42 +12,42 @@ const services = [
     icon: <SoftwareDevIcon />,
     title: "Healthcare Software Development",
     description:
-      "We specialize in the development of custom healthcare software solutions that help streamline clinical workflows, enhance patient management, and improve operational efficiencies.",
+      "We build custom healthcare software that helps improve clinical workflows, patient management, and overall operational efficiency.",
   },
   {
     id: 2,
     icon: <MhealthIcon />,
-    title: "Mobile Health (mHealth) Applications",
+    title: "Mobile health (mHeath) Applications",
     description:
-      "Mobile health applications are transforming patient care by providing patients and healthcare providers with tools for real-time monitoring, appointment scheduling, and treatment management.",
+      "Mobile health apps are changing patient care by giving patients providers tools for real time monitoring, appointment booking, and treatment tracking.",
   },
   {
     id: 3,
     icon: <LabIcon />,
     title: "Pharmaceutical Solutions",
     description:
-      "The pharmaceutical industry requires secure, efficient, and compliant solutions for research, drug development, supply chain management, and patient support.",
+      "The Pharmaceutical industry needs secure and efficient systems for research, drug development, supply chain management, and patient support.",
   },
   {
     id: 4,
     icon: <MachinLearningIcon />,
-    title: "AI and Machine Learning in Healthcare",
+    title: "AI and Machine Learning and Healthcare",
     description:
-      "Artificial Intelligence (AI) and Machine Learning (ML) are playing a significant role in the healthcare industry by enhancing decision-making, improving diagnostics, and personalizing treatment plans.",
+      "AI and machine learning help healthcare by improving decision making, enhancing diagnostics, and creating more personalized treatment plans.",
   },
   {
     id: 5,
     icon: <CloudIcon />,
     title: "Healthcare Cloud Solutions",
     description:
-      "Cloud technology is transforming how healthcare organizations store and access data, improving collaboration and providing greater scalability and flexibility.",
+      "Cloud technology is changing healthcare by making data storage easier, improving access, and enabling better collaboration and scalability.",
   },
   {
     id: 6,
     icon: <DigitalIcon />,
     title: "Healthcare Digital Marketing",
     description:
-      "Effective digital marketing is essential for healthcare providers and pharmaceutical companies to reach patients and stakeholders, promote their services, and improve brand visibility.",
+      "Digital marketing helps healthcare providers and pharmaceutical companies reach patient, promote services, and improve brand awareness.",
   },
   {
     id: 7,
@@ -65,9 +65,9 @@ const services = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Patient Engagement Solutions",
+    title: "Healthcare Data Analytics & Reporting",
     description:
-      "We build platforms that foster stronger patient-provider relationships through personalized communication, remote care tools, and intelligent health tracking systems.",
+      "Data analytics helps healthcare providers improve patient care, streamline operations, and maintain regulatory compliance.",
   },
   {
     id: 8,
@@ -83,29 +83,9 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Healthcare Cybersecurity",
+    title: "Health Tech Integration",
     description:
-      "Protecting sensitive patient data is critical. We provide robust cybersecurity frameworks, compliance audits, and threat monitoring tailored for healthcare environments.",
-  },
-  {
-    id: 9,
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-5 h-5"
-        stroke="#4285F4"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-    title: "Health Data Analytics",
-    description:
-      "Turn raw clinical and operational data into actionable insights. Our analytics platforms help healthcare organizations improve outcomes, reduce costs, and optimize resource allocation.",
+      "Integrating modern health technologies into existing systems improves healthcare results and increases operational efficiency.",
   },
 ];
 
@@ -184,11 +164,11 @@ export default function HealthCareServices() {
                 Pharmaceuticals Services
               </h1>
               <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-                At Aireb Solutions, we provide a range of services designed to
-                support healthcare and <br className="hidden lg:block" />{" "}
-                pharmaceutical businesses in navigating digital challenges,
-                optimizing processes, and <br className="hidden lg:block" />{" "}
-                meeting the needs of patients, providers, and stakeholders.
+                At Aireb solutions, we offer services that help healthcare and{" "}
+                Pharmaceutical companies <br className="hidden lg:block" />{" "}
+                handle digital challenges, improve their processes, and better
+                serve patients, <br className="hidden lg:block" /> healthcare
+                providers, and all stakeholders.
               </p>
             </motion.div>
           </div>

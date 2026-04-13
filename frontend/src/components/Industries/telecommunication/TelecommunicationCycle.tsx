@@ -25,37 +25,37 @@ const STEPS_DATA = [
     number: "01",
     title: "CONSULTATION & STRATEGY",
     description:
-      "Evaluate current processes, identify bottlenecks, and define a tailored DevOps strategy aligned with business objectives.",
+      "We start by understanding the goal, market challenges, and customer needs, then craft a tailored strategy to deliver the perfect solution.",
   },
   {
     number: "02",
     title: "DESIGN & PROTOTYPING",
     description:
-      "Design and configure scalable cloud infrastructure using IaC tools like Terraform, ensuring high availability and disaster recovery.",
+      "Use IaC technologies like Terraform to design and set up cloud infrastructure that can grow and make sure it is always available and can recover from disasters.",
   },
   {
     number: "03",
     title: "DEVELOPMENT & INTEGRATION",
     description:
-      "We build secure, scalable solutions that seamlessly integrate with your existing infrastructure for optimal performance.We build secure, scalable solutions that seamlessly integrate with your existing infrastructure for optimal performance.",
+      "We build secure, scalable solutions that integrate smoothly with your existing systems. We develop custom features and ensure seamless performance to support your business growth.",
   },
   {
     number: "04",
     title: "TESTING & QUALITY ASSURANCE",
     description:
-      "Implement DevSecOps practices with automated security scanning, compliance checks, and vulnerability management.",
+      "Use DevSecOps methods like automated security scanning, compliance checks, and vulnerability management.",
   },
   {
     number: "05",
     title: "LAUNCH & DEPLOYMENT",
     description:
-      "Deploy comprehensive monitoring solutions with Prometheus, Grafana, and ELK stack for real-time insights and alerting.",
+      "Use Prometheus, Grafana, and the ELK stack to set up full monitoring systems that provide you with real-time information and alerts.",
   },
   {
     number: "06",
     title: "ONGOING SUPPORT",
     description:
-      "Establish feedback loops, performance metrics, and continuous optimization strategies to drive ongoing enhancement.",
+      "Set up feedback loops, performance measures, and techniques for continuous improvement to keep things getting better.",
   },
 ];
 
@@ -283,7 +283,7 @@ const StepItem = ({ step, index, isActive, onClick, isLastItem }) => (
             {step.title}
           </h3>
           {step.description && isActive && (
-            <p className="text-sm lg:text-base text-white/90 font-outfit font-light line-clamp-2 overflow-hidden leading-relaxed mt-3">
+            <p className="text-sm lg:text-base text-white/90 font-outfit font-light line-clamp-3 overflow-hidden leading-relaxed mt-3">
               {step.description}
             </p>
           )}
@@ -368,13 +368,12 @@ const TelecommunicationCycle = () => {
             className="text-[clamp(24px,4vw,42px)] font-stoke font-normal text-textColor lg:leading-[56px] mb-6">
             Our Telecommunications <br /> Development Cycle
           </h2>
-          <p className="font-outfit font-normal text-textColor  mx-auto text-sm md:text-lg leading-relaxed">
+          <p className="font-outfit font-normal text-textColor max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
             At Aireb Solutions, we follow a structured development cycle to
-            ensure that our telecommunications{" "}
-            <br className="hidden lg:block" /> solutions are scalable, secure,
+            ensure that our telecommunications solutions are scalable, secure,
             and designed to meet the evolving needs of the industry. From
-            planning <br className="hidden lg:block" /> to implementation and
-            beyond, we are committed to delivering high-quality results.
+            planning to implementation and beyond, we are committed to
+            delivering high-quality results.
           </p>
         </header>
 

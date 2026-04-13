@@ -5,33 +5,27 @@ const ContactCenterExpertise = () => {
   const features = [
     {
       id: 1,
-      heading: "Increased retention",
-      title:
-        "By minimizing hold times and ensuring swift first-contact resolutions, we foster meaningful interactions and build lasting relationships.",
+      heading: "Professionals with experience in contact centers",
     },
     {
       id: 2,
-      heading: "Reduced cost",
-      title:
-        "By integrating IVR and advanced automation tools, we ensure seamless scalability whenever needed.",
+      heading: "Processes that work to speed up resolutions",
     },
     {
       id: 3,
-      heading: "Reduced cost",
-      title:
-        "Our contact center services help you achieve a 50% reduction in operational expenses while maintaining high efficiency.",
+      heading: "Smart automation and AI tools for good service",
     },
     {
       id: 4,
-      heading: "Proactive engagement",
-      title:
-        "We proactively anticipate customer needs, delivering effective solutions that boost satisfaction and minimize churn.",
+      heading: "Focus on customer satisfaction and experience",
     },
     {
       id: 5,
-      heading: "AI Solutions",
-      title:
-        "Enhancing customer experience with intelligent automation and personalized interactions.",
+      heading: "Operations that can expand with your business",
+    },
+    {
+      id: 6,
+      heading: "Systems that are safe, cost-effective, and dependable",
     },
   ];
 
@@ -78,9 +72,6 @@ const ContactCenterExpertise = () => {
                   <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
                     {feature.heading}
                   </h1>
-                  <h3 className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed pr-8 line-clamp-2 h-full">
-                    {feature.title}
-                  </h3>
                 </div>
               </div>
 

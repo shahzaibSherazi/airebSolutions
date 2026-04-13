@@ -6,7 +6,7 @@ const RealEstateSolutions = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-6 lg:px-8">
         <div>
           <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal mb-12">
-            Transforming Real Estate with Innovative Digital Solutions
+            Transforming Real Estate with Smart Digital Solutions
           </h1>
           <div className="md:flex justify-start">
             <LogoSlider />
@@ -14,14 +14,11 @@ const RealEstateSolutions = () => {
         </div>
         <div>
           <p className="font-outfit text-[clamp(14px,1.5vw,18px)] font-normal">
-            The real estate industry is constantly evolving, and technology is
-            playing a vital role in shaping the future of property buying,
-            selling, and management. Aireb Solutions empowers real estate
-            businesses with innovative solutions that streamline operations,
-            enhance customer experiences, and drive business growth. From
-            property management platforms to virtual property tours, we provide
-            a range of services designed to meet the unique challenges of the
-            real estate industry and enhance its overall efficiency.
+            The real estate industry is changing fast with technology. At Aireb
+            Solutions, we provide smart digital solutions to improve property
+            buying, selling, and management. Our services include property
+            platforms and virtual tours to enhance customer experience, simplify
+            operations, and help real estate businesses grow efficiently.
           </p>
         </div>
       </div>

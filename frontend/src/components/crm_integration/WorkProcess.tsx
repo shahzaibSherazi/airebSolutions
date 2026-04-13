@@ -43,7 +43,7 @@ export default function APICRMIntegration() {
 
   return (
     <section className="bg-black text-white">
-      <div className="px-6 lg:px-8 pb-16 md:pb-24">
+      <div className="px-6 lg:px-8 py-16 lg:py-24">
         {/* Header */}
         <div className="mb-12 md:mb-16">
           <span className="inline-block bg-primary text-textColor text-base font-outfit font-medium px-4 py-2 rounded">

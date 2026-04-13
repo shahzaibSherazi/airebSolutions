@@ -6,27 +6,28 @@ const ChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "User-Centric UI/UX for Engaging Apps & Games",
+      title:
+        "A group of developers and integrators who have worked together for a long time",
     },
     {
       id: 2,
-      title: "Full-Cycle App & Game Development for the Digital Era",
+      title: "Safe and reliable ways to combine",
     },
     {
       id: 3,
-      title: "Agile Development with Real-Time Collaboration",
+      title: "Systems that can expand with your business",
     },
     {
       id: 4,
-      title: "Future-Ready Apps with Enterprise-Grade Security",
+      title: "Approach based on automation",
     },
     {
       id: 5,
-      title: "Advanced Frameworks. Smarter Solutions.",
+      title: "Clear communication and getting everything done on time",
     },
     {
       id: 6,
-      title: "Consistent Performance on Every Device",
+      title: "A heavy focus on data accuracy and performance",
     },
   ];
 
@@ -49,11 +50,7 @@ const ChooseUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              An established partner that can speed
-              <br className="hidden sm:block" />
-              up innovation, with a focus on real-
-              <br className="hidden sm:block" />
-              world applications
+              Why you choose Aireb Solutions for API & CRM Integration Services
             </h2>
           </motion.div>
         </div>
@@ -68,7 +65,7 @@ const ChooseUs = () => {
               <div className="relative z-10 flex-1 flex flex-col">
                 {/* Text with fixed height and overflow handling */}
                 <div className=" overflow-hidden">
-                  <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8 line-clamp-2 h-full">
+                  <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8  h-full">
                     {feature.title}
                   </h3>
                 </div>
@@ -93,6 +90,9 @@ const ChooseUs = () => {
             </div>
           ))}
         </div>
+        <p className="text-white text-center text-sm sm:text-base md:text-lg font-outfit font-normal leading-relaxed mt-10">
+          We deliver reliable integration solutions at a budget-friendly cost.
+        </p>
       </div>
     </section>
   );

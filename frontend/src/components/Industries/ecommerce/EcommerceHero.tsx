@@ -53,22 +53,7 @@ export default function EcommerceHero() {
 
   return (
     <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap');
-        @keyframes fadeSlideUp {
-          from { opacity:0; transform:translateY(14px); }
-          to   { opacity:1; transform:translateY(0);    }
-        }
-        .chat-item { animation: fadeSlideUp 0.45s cubic-bezier(0.22,1,0.36,1) both; }
-        .corner-tl::before, .corner-br::after {
-          content:''; position:absolute; width:12px; height:12px;
-          border-color:#4285F4; border-style:solid;
-        }
-        .corner-tl::before { top:0; right:0; border-width:2px 2px 0 0; }
-        .corner-br::after  { bottom:0; left:0; border-width:0 0 2px 2px; }
-      `}</style>
-
-      <section className="relative w-full  overflow-hidden flex items-center">
+      <section className="heros_height relative w-full  overflow-hidden flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -82,7 +67,7 @@ export default function EcommerceHero() {
           }}
           className="absolute inset-0"
         />
-        <div className="relative lg:h-screen z-10 w-full  px-6 lg:px-8 py-16 lg:py-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+        <div className="relative  z-10 w-full  px-6 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           {/* ── LEFT: Text Content ── */}
           <div className="flex flex-col items-start self-end gap-5 w-full">
             {/* Sector badge */}
@@ -97,7 +82,7 @@ export default function EcommerceHero() {
             </div>
 
             {/* Heading */}
-            <h1 className="font-stoke text-[clamp(24px,5vw,52px)] leading-[1.28] text-white">
+            <h1 className="font-stoke text-[clamp(18px,5vw,52px)] leading-[1.28] text-white">
               E-commerce Solutions
               <br />
               for Modern Businesses

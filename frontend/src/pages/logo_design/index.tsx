@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import LogoDesignChallenges from "@/components/logo_design/LogoDesignChallenges";
 import LogoDesignDevelopment from "@/components/logo_design/LogoDesignDevelopment";
 import LogoDesignExpertise from "@/components/logo_design/LogoDesignExpertise";
 import LogoDesignHero from "@/components/logo_design/LogoDesignHero";
@@ -10,8 +11,9 @@ const LogoDesign = () => {
     <Layout enableSmoothScroll>
       <LogoDesignHero />
       <LogoDesignServices />
+      <LogoDesignChallenges />
       <LogoDesignDevelopment />
-      <LogoDesignWork />
+      {/* <LogoDesignWork /> */}
       <LogoDesignExpertise />
     </Layout>
   );

@@ -333,6 +333,15 @@ import BlogDetailPage from "./pages/resources/blogs/DetailPage";
 import DetailPage from "./pages/resources/blogs/DetailPage";
 import CaseStudy from "./pages/resources/case-studies";
 
+// Admin pages
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import BlogsManagement from "./pages/admin/BlogsManagement";
+import BlogForm from "./pages/admin/BlogForm";
+import WhitePapersManagement from "./pages/admin/WhitePapersManagement";
+import WhitePaperForm from "./pages/admin/WhitePaperForm";
+import ProtectedRoute from "@/components/admin/ProtectedRoute";
+
 const queryClient = new QueryClient();
 
 /* =========================
@@ -437,6 +446,66 @@ const AnimatedRoutes = () => {
         <Route path="/about/careers" element={<Careers />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms&conditions" element={<TermsAndConditions />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/blogs"
+          element={
+            <ProtectedRoute>
+              <BlogsManagement />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/blogs/create"
+          element={
+            <ProtectedRoute>
+              <BlogForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/blogs/:id"
+          element={
+            <ProtectedRoute>
+              <BlogForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/whitepapers"
+          element={
+            <ProtectedRoute>
+              <WhitePapersManagement />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/whitepapers/create"
+          element={
+            <ProtectedRoute>
+              <WhitePaperForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/whitepapers/:id"
+          element={
+            <ProtectedRoute>
+              <WhitePaperForm />
+            </ProtectedRoute>
+          }
+        />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

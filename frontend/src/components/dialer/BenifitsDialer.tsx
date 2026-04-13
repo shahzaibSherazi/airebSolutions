@@ -80,25 +80,11 @@ const BenifitsDialer = () => {
 
         {/* Right Column - Headphone Image */}
         <div className="flex items-start justify-end h-[400px] sm:h-[500px] md:h-[550px] lg:h-[649px] relative">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{
-              y: [60, 0, 60], // Moves up and down
-              opacity: [0, 1, 0],
-              transition: {
-                duration: 2,
-                ease: "easeOut",
-                repeat: Infinity,
-                repeatType: "loop",
-              },
-            }}
-            viewport={{ once: false }}>
-            <img
-              src={headPhoneImg}
-              alt="AI Headphones"
-              className="w-full h-full object-center"
-            />
-          </motion.div>
+          <img
+            src={headPhoneImg}
+            alt="AI Headphones"
+            className="w-full h-full object-center"
+          />
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import ApiChallenges from "@/components/api_integration/ApiChallenges";
 import ApiIntegrationHero from "@/components/api_integration/ApiIntegrationHero";
 import ApiServices from "@/components/api_integration/ApiServices";
 import OurWork from "@/components/api_integration/OurWork";
@@ -10,8 +11,9 @@ const ApiIntegration = () => {
     <Layout enableSmoothScroll>
       <ApiIntegrationHero />
       <ApiServices />
+      <ApiChallenges />
       <OurWorkProcess />
-      <OurWork />
+      {/* <OurWork /> */}
       <WhyChooseUs />
     </Layout>
   );

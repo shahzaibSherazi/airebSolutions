@@ -9,7 +9,7 @@ export default function ContactUsHero() {
   const [showSuccess, setShowSuccess] = useState(false);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-between overflow-hidden py-8 px-6 lg:px-8">
+    <section className="heros_height relative w-full flex items-center justify-center overflow-hidden  px-6 lg:px-8 py-6">
       {/* Subtle bottom gradient */}
       <div
         style={{
@@ -20,7 +20,7 @@ export default function ContactUsHero() {
 
       <div className="relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
         {/* ───────── LEFT CONTENT ───────── */}
-        <div className="self-center lg:self-end mb-14">
+        <div className="">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary text-white font-outfit font-bold text-sm px-4 py-2 rounded-[5px] mb-8">
             <span className="w-2 h-2 bg-[#6FD3FF] rounded-full"></span>
@@ -28,27 +28,27 @@ export default function ContactUsHero() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-white font-stoke font-light text-[clamp(28px,4vw,42px)] leading-tight mb-6">
+          <h2 className="text-white font-stoke font-light text-[clamp(16px,4vw,42px)] leading-tight mb-6">
             Our Team is <br />
-            <span className="font-extrabold font-outfit text-[clamp(32px,4.5vw,52px)]">
+            <span className="font-extrabold font-outfit text-[clamp(18px,4.5vw,52px)]">
               Always ready.
             </span>
           </h2>
 
           {/* Description */}
-          <p className="text-white font-outfit font-light text-[clamp(16px,2vw,20px)] leading-relaxed mb-10 max-w-md">
+          <p className="text-white font-outfit font-light text-[clamp(14px,2vw,20px)] leading-relaxed mb-10 max-w-md">
             Tell us about your company and project goals. Our team will review
             your details and get back to you with the next steps.
           </p>
 
           {/* Contact Info */}
           <div className="flex flex-wrap items-start sm:items-center gap-6 text-white text-sm">
-            <div className="flex items-center gap-2 font-outfit font-medium text-[clamp(16px,2vw,20px)]">
+            <div className="flex items-center gap-2 font-outfit font-medium text-[clamp(14px,2vw,20px)]">
               <Mail size={16} className="text-[#6FD3FF]" />
               sales@airebsolutions.com
             </div>
 
-            <div className="flex items-center gap-2 font-outfit font-medium text-[clamp(16px,2vw,20px)]">
+            <div className="flex items-center gap-2 font-outfit font-medium text-[clamp(14px,2vw,20px)]">
               <Phone size={16} className="text-[#6FD3FF]" />
               +1 (307) 456-7721
             </div>
@@ -139,7 +139,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   };
 
   return (
-    <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative lg:mb-10">
+    <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative">
       <div className="px-3 sm:px-4 md:px-[18px] py-[clamp(14px,2.8vh,32px)] space-y-[clamp(10px,1.8vh,24px)]">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
