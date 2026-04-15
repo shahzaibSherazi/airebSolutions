@@ -217,7 +217,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
         </div>
         <div className="flex flex-col gap-2 flex-1 justify-center">
           {/* Title */}
-          <h3 className="font-outfit font-bold text-white text-base sm:text-lg lg:text-xl line-clamp-2 overflow-hidden leading-snug mb-2 shrink-0">
+          <h3 className="font-outfit font-bold text-white text-title line-clamp-2 overflow-hidden leading-snug mb-2 shrink-0">
             {service.title}
           </h3>
 
@@ -236,7 +236,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
         </div>
 
         {/* Button — always at bottom */}
-        <button className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
+        <button className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-[clamp(12px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
           Connect With Experts
         </button>
       </div>
@@ -246,30 +246,29 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
 
 const DevOpsServices = () => {
   return (
-    <section className="w-full bg-[#02070F] text-white px-6 lg:px-8 py-16 lg:py-24">
+    <section className="w-full bg-[#02070F] text-white ">
       {/* Heading */}
-      <div className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto gap-3 ">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         <motion.div
+          className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto gap-3 "
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="font-stoke text-[clamp(28px,4vw,42px)] text-white">
-            Our DevOps Services
-          </h2>
-          <p className="font-outfit text-sm sm:text-base text-textColor leading-relaxed">
+          <h2 className="font-stoke text-h2 text-white">Our DevOps Services</h2>
+          <p className="font-outfit text-p text-textColor leading-relaxed">
             We don't just create strategies; we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
           </p>
         </motion.div>
-      </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[90rem] mx-auto   gap-5">
-        {services.map((service) => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
       </div>
     </section>
   );

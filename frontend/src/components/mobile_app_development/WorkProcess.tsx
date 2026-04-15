@@ -61,7 +61,7 @@ const HowWeGetItDone = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <h2 className="text-white font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mt-3 sm:mt-[34px]">
+            <h2 className="text-white font-stoke font-normal text-h2 mt-6 sm:mt-[34px]">
               How we get it done
             </h2>
             <p className="font-outfit font-normal text-base mt-[27px]">
@@ -78,11 +78,9 @@ const HowWeGetItDone = () => {
               {/* Card Row */}
               <div className="grid grid-cols-1 md:grid-cols-[230px_1fr] lg:grid-cols-[280px_1fr] gap-0 group">
                 {/* Left: Blue Box with Title */}
-                <div className="bg-primary  flex items-center justify-center py-8 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
-                  <h3 className="text-white group-hover:text-primary text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight ">
-                    {step.title}
-                  </h3>
-                </div>
+                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight bg-primary  flex items-center justify-center py-4 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
+                  {step.title}
+                </h3>
 
                 {/* Right: Content Box */}
                 <div className="relative flex flex-col lg:py-0 md:py-1 py-3 justify-center bg-black border-025 md:rounded-tr-[7px] md:rounded-br-[7px]  px-4 md:px-5 lg:px-6 transition-all duration-300 group-hover:border-gray-700">

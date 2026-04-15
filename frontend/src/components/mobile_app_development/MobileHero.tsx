@@ -12,12 +12,12 @@ const MobileHero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 px-6 py-8 lg:py-10 flex flex-col justify-end gap-[2vh] sm:gap-[3vh] lg:gap-[4.5vh]">
-        <h1 className="font-stoke text-[clamp(28px,5vw,56px)] leading-[1.28] text-white">
+      <div className="container relative z-10 px-6 py-8 lg:py-10 flex flex-col justify-end gap-[2vh] sm:gap-[3vh] lg:gap-[4.5vh]">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           Mobile Apps & Gaming <br className="hidden lg:block" />
           Service
         </h1>
-        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-textColor max-w-2xl">
+        <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl">
           We build mobile apps and games for iOS and Android that are simple to
           use and work effectively. Our solutions are designed to help
           organisations grow from the idea stage to deployment by making

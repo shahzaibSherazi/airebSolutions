@@ -30,15 +30,13 @@ const WhyChooseUs = () => {
       style={{
         background: "linear-gradient(180deg, #000000 61.15%, #0E1828 100%)",
       }}
-      className=" w-full py-16  lg:py-24 ">
+      className=" w-full ">
       {/* Container */}
-      <div className="flex flex-col justify-center items-center px-6 lg:px-8">
+      <div className="container py-16  lg:py-24 px-6 lg:px-8 flex flex-col justify-center items-center ">
         {/* Badge */}
-        <div className="mb-8 sm:mb-10 md:mb-12">
-          <span className="inline-block bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
-            Why Choose Us
-          </span>
-        </div>
+        <span className="inline-block mb-8 sm:mb-10 md:mb-12 bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
+          Why Choose Us
+        </span>
         <ChooseUsAnimated />
         {/* Features Grid */}
         <div className="space-y-4 sm:space-y-5 md:space-y-6">

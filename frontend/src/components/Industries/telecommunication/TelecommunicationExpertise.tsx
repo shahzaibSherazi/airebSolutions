@@ -86,11 +86,11 @@ export default function TelecommunicationExpertise() {
   return (
     <>
       <section
-        className=" px-6 lg:px-8 py-16 md:py-24"
+        className=" "
         style={{
           background: "linear-gradient(180deg, #4285F4 0%, #0E1828 38.46%)",
         }}>
-        <div className="">
+        <div className="container px-6 lg:px-8 py-16 md:py-24">
           {/* ── Badge ── */}
           <div
             ref={headerRef}

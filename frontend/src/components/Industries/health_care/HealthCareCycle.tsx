@@ -92,7 +92,7 @@ function StepRow({ step, index }) {
               {step.icon}
             </div>
 
-            <h3 className="text-[#02070F] group-hover:text-textColor font-stoke font-normal text-center text-lg md:text-xl  leading-snug whitespace-pre-line px-3 m-0">
+            <h3 className="text-[#02070F] group-hover:text-textColor font-stoke font-normal text-center text-title  leading-snug whitespace-pre-line px-3 m-0">
               {step.title}
             </h3>
           </div>
@@ -158,8 +158,8 @@ export default function HealthCareCycle() {
 
   return (
     <>
-      <section className="min-h-screen bg-[#02070F] py-16 md:py-24 px-6 md:px-8">
-        <div className="max-w-[960px] mx-auto">
+      <section className="min-h-screen bg-[#02070F] ">
+        <div className="max-w-[960px] mx-auto py-16 md:py-24 px-6 md:px-8">
           {/* Header */}
           <div
             ref={headerRef}
@@ -168,7 +168,7 @@ export default function HealthCareCycle() {
               opacity: headerInView ? 1 : 0,
               transform: headerInView ? "translateY(0)" : "translateY(28px)",
             }}>
-            <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-[clamp(32px,4vw,42px)]">
+            <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-h2 font-stoke">
               Our Healthcare & Pharmaceuticals
               <br className="hidden sm:block" /> Development Cycle
             </h1>

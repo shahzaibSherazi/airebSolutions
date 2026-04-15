@@ -3,9 +3,9 @@ import LogoSlider from "@/components/ui/logoSlider";
 const TravelHospitalitySolutions = () => {
   return (
     <section className=" bg-[#02070F]">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-6 lg:px-8">
         <div>
-          <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal mb-12">
+          <h1 className="font-stoke text-h2 font-normal mb-12">
             Transforming Travel & Hospitality with Smart Digital Solutions
           </h1>
           <div className="md:flex justify-start">
@@ -13,7 +13,7 @@ const TravelHospitalitySolutions = () => {
           </div>
         </div>
         <div>
-          <p className="font-outfit text-[clamp(14px,1.5vw,18px)] font-normal">
+          <p className="font-outfit text-p font-normal">
             The travel and hospitality industry is growing and changing fast.
             Aireb Solutions provides smart digital solutions to improve guest
             experience, streamline operations, and stay competitive. Whether you

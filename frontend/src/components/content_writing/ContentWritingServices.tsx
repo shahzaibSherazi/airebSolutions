@@ -62,27 +62,26 @@ const ContentWritingServices = () => {
   ];
 
   return (
-    <section className="relative w-full bg-black py-16 lg:py-24 px-6 lg:px-8">
-      <div className="">
+    <section className="relative w-full bg-black ">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
-              Our Content Writing Services
-            </h2>
-            <p className="font-outfit font-normal text-[clamp(13px,1.3vw,16px)] leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
-              At Aireb Solutions, we offer a comprehensive range of content
-              writing services designed to meet the diverse needs of your
-              business. From SEO-optimized website copy to in-depth articles and
-              engaging social media posts, our team of expert writers is here to
-              craft content that delivers results.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
+            Our Content Writing Services
+          </h2>
+          <p className="font-outfit font-normal text-p leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
+            At Aireb Solutions, we offer a comprehensive range of content
+            writing services designed to meet the diverse needs of your
+            business. From SEO-optimized website copy to in-depth articles and
+            engaging social media posts, our team of expert writers is here to
+            craft content that delivers results.
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[clamp(16px,2vh,24px)]">
           {services.map((service) => (

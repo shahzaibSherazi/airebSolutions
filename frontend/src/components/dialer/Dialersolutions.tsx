@@ -210,22 +210,21 @@ const DialerSolutions = () => {
       style={{
         background: "linear-gradient(180deg, #0E1828 0%, #000000 22.96%)",
       }}
-      className=" text-white py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="">
+      className=" text-white ">
+      <div className="container py-16 lg:py-24 px-4 sm:px-6 lg:px-8 ">
         {/* Header */}
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] lg:leading-[56px] font-stoke font-normal mb-4">
-              How Our AI Custom Dialer
-              <br />
-              Solutions Work
-            </h2>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-h2 lg:leading-[56px] font-stoke font-normal mb-4">
+            How Our AI Custom Dialer
+            <br />
+            Solutions Work
+          </h2>
+        </motion.div>
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-2">

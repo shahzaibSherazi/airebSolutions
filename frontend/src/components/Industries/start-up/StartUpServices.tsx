@@ -114,11 +114,11 @@ export default function StartUpServices() {
   const visibleServices = showAll ? services : services.slice(0, INITIAL_COUNT);
   return (
     <>
-      <section className=" py-16 lg:py-24 px-6 lg:px-8 bg-[#02070F]">
-        <div className="">
+      <section className="  bg-[#02070F]">
+        <div className="container py-16 lg:py-24 px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
+            <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
               Our Gaming Industry
               <br className="hidden lg:block" />
               Services

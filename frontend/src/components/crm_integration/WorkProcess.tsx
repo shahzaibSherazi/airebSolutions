@@ -43,13 +43,11 @@ export default function APICRMIntegration() {
 
   return (
     <section className="bg-black text-white">
-      <div className="px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         {/* Header */}
-        <div className="mb-12 md:mb-16">
-          <span className="inline-block bg-primary text-textColor text-base font-outfit font-medium px-4 py-2 rounded">
-            Our Work Process
-          </span>
-        </div>
+        <span className="inline-block mb-12 md:mb-16 bg-primary text-textColor text-base font-outfit font-medium px-4 py-2">
+          Our Work Process
+        </span>
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-24">
@@ -60,7 +58,7 @@ export default function APICRMIntegration() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <h1 className="text-3xl sm:text-4xl md:text-[42px] font-normal font-stoke md:leading-[56px] mb-6">
+              <h1 className="text-h2 font-normal font-stoke md:leading-[56px] mb-6">
                 Our API and CRM
                 <br className="hidden sm:block" />
                 Integration Development
@@ -73,7 +71,7 @@ export default function APICRMIntegration() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <p className="text-textColor font-normal font-outfit text-base leading-relaxed max-w-xl">
+              <p className="text-textColor font-normal font-outfit text-p leading-relaxed max-w-xl">
                 Transform your business by connecting your CRM with powerful
                 tools and platforms through Airish Solutions API integration
                 services. Let us help you streamline your operations, enhance
@@ -94,31 +92,23 @@ export default function APICRMIntegration() {
                 {/* Top Row: Number, Title, Arrow in one line */}
                 <div className="flex items-center justify-between mb-4 sm:mb-6 gap-3 sm:gap-4">
                   {/* Number - Fixed width */}
-                  <div className="flex-shrink-0 w-10 sm:w-12">
-                    <span className="text-textColor font-bold text-lg sm:text-xl">
-                      {phase.number}
-                    </span>
-                  </div>
+                  <span className="text-textColor font-bold text-lg sm:text-xl flex-shrink-0 w-10 sm:w-12">
+                    {phase.number}
+                  </span>
 
                   {/* Title - Takes remaining space */}
-                  <div className="flex-grow min-w-0">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-outfit font-medium text-textColor line-clamp-2 sm:line-clamp-3">
-                      {phase.title}
-                    </h3>
-                  </div>
+                  <h3 className="text-title font-outfit flex-grow min-w-0 font-medium text-textColor line-clamp-2 sm:line-clamp-3">
+                    {phase.title}
+                  </h3>
 
                   {/* Arrow - Fixed width */}
-                  <div className="flex-shrink-0 w-4 h-3">
-                    <ArrowIcon className="w-full h-full text-primary group-hover:text-white transition-transform duration-300 group-hover:translate-x-1" />
-                  </div>
+                  <ArrowIcon className=" flex-shrink-0 w-4 h-3 text-primary group-hover:text-white transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
 
                 {/* Description - Starts below title, not number */}
-                <div className="pl-12 sm:pl-14 md:pl-16 mt-2">
-                  <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
-                    {phase.description}
-                  </p>
-                </div>
+                <p className="text-textColor font-outfit pl-12 sm:pl-14 md:pl-16 mt-2 font-light text-p leading-relaxed">
+                  {phase.description}
+                </p>
               </div>
             ))}
           </div>

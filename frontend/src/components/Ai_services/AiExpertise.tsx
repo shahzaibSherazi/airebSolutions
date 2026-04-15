@@ -196,33 +196,16 @@ const AIExpertiseSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-black py-16  overflow-hidden min-h-screen">
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-blue-400/30 rounded-full animate-float-slow"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${8 + Math.random() * 12}s`,
-            }}
-          />
-        ))}
-      </div>
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 h-full">
+      className="relative w-full bg-black   overflow-hidden min-h-screen">
+      <div className="container relative z-10 py-16 px-4 sm:px-6 lg:px-8 h-full">
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full  h-full items-start">
           {/* Left Side - Text Content */}
           <div ref={contentRef} className="">
             <div ref={titleRef} className="mb-4 lg:mb-5">
               <h2
-                className="text-white font-stoke font-normal"
+                className="text-white font-stoke font-normal text-h2"
                 style={{
-                  fontSize: "clamp(28px, 4vw, 36px)",
-                  lineHeight: "1.4",
                   transform: "perspective(1000px)",
                 }}>
                 AI & ML Expertise Powered by

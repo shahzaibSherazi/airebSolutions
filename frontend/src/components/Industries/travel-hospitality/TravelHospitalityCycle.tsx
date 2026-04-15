@@ -193,13 +193,11 @@ export default function TravelHospitalityCycle() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-full bg-[#0E1828] py-16 md:py-24 px-6 lg:px-8">
-      <div>
+    <section ref={sectionRef} className="w-full bg-[#0E1828] ">
+      <div className="container py-16 md:py-24 px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="mb-16 md:mb-20">
-          <h1 className="font-stoke text-[clamp(24px,4vw,42px)] leading-[1.28] text-white mb-6">
+          <h1 className="font-stoke text-h2 leading-[1.28] text-white mb-6">
             Our Travel & Hospitality Development Cycle
           </h1>
           <p className="text-textColor text-sm leading-relaxed">

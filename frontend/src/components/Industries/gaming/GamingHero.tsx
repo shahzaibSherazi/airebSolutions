@@ -19,18 +19,16 @@ const GamingHero = () => {
         className="absolute inset-0"
       />
       {/* Content */}
-      <div className="relative z-10 px-6 lg:px-8 py-8  lg:py-10 flex flex-col justify-end ">
-        <div
+      <div className="container relative z-10 px-6 lg:px-8 py-8  lg:py-10 flex flex-col justify-end ">
+        <p
           style={{
             background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
           }}
-          className="mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
-          <p className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold ">
-            Sector
-          </p>
-        </div>
+          className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
+          Sector
+        </p>
 
-        <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           Next Level
           <br className="hidden lg:block" /> Gaming Solutions
         </h1>

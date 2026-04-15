@@ -2,7 +2,7 @@ import paperImg from "@/assets/resources/white-papers/hero-img.png";
 import rightImg from "@/assets/resources/white-papers/hero-bg-right.png";
 export default function CaseStudiesHero() {
   return (
-    <section className="heros_height relative  w-full overflow-hidden py-8 lg:py-10">
+    <section className="heros_height relative flex flex-col justify-center w-full overflow-hidden py-8 lg:py-10">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -13,7 +13,7 @@ export default function CaseStudiesHero() {
       />
 
       {/* ── Title ── */}
-      <h1 className="relative z-10 text-center text-[clamp(32px,5vw,56px)] font-stoke font-normal text-white mb-10">
+      <h1 className="relative z-10 text-center text-h1 font-stoke font-normal text-white mb-10">
         Case Studies
       </h1>
 

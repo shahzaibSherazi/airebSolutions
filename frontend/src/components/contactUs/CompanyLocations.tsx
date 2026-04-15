@@ -70,10 +70,10 @@ export default function CompanyLocations() {
       }}
       className="min-h-screen text-white ">
       {/* ── HERO SECTION ── */}
-      <section className="px-6 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
+      <section className="container px-6 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
         {/* Left */}
         <div className="">
-          <h1 className="text-[clamp(32px,4vw,42px)] font-stoke font-normal mb-8 text-white">
+          <h1 className="text-h2 font-stoke font-normal mb-8 text-white">
             Together, We Write What's Next
           </h1>
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed font-outfit font-light mb-12 w-full lg:max-w-3xl">
@@ -94,10 +94,10 @@ export default function CompanyLocations() {
       </section>
 
       {/* ── LOCATIONS SECTION ── */}
-      <section className="px-6 lg:px-8 py-24 flex lg:flex-row flex-col items-center lg:items-start justify-between gap-16">
+      <section className="container px-6 lg:px-8 py-24 flex lg:flex-row flex-col items-center lg:items-start justify-between gap-16">
         {/* Left */}
         <div className="">
-          <h2 className="text-[clamp(32px,4vw,42px)] font-stoke font-normal leading-tight mb-8 text-white">
+          <h2 className="text-h2 font-stoke font-normal leading-tight mb-8 text-white">
             Company Locations
           </h2>
           <p className="text-[clamp(14px,1.5vw,18px)] leading-relaxed font-outfit font-light mb-12 w-full lg:max-w-2xl">

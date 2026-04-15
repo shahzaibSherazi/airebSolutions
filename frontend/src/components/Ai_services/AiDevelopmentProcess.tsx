@@ -128,35 +128,14 @@ const AIDevelopmentProcess = () => {
     <section
       ref={sectionRef}
       className="relative w-full bg-black overflow-hidden">
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-blue-400 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center py-16 px-6 lg:px-8">
+      <div className="container relative z-10 flex flex-col justify-center py-16 px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-12 lg:mb-16">
-          <h2
-            className="text-white mb-6 font-stoke font-normal"
-            style={{
-              fontSize: "clamp(32px, 5vw, 52px)",
-              lineHeight: "1.2",
-            }}>
+          <h2 className="text-white text-h2 mb-6 font-stoke font-normal">
             Our AI Development Process
           </h2>
-          <p className="text-white max-w-2xl mx-auto font-outfit font-normal text-base">
+          <p className="text-white max-w-2xl mx-auto font-outfit font-normal text-p">
             At Aireb Solutions, we follow a proven, results-driven process that
             ensures the delivery of high-quality, scalable, and secure
             solutions:

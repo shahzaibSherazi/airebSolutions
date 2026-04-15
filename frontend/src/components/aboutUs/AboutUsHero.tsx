@@ -36,21 +36,21 @@ const AboutHero = () => {
   const count200 = useCountUp(200);
 
   return (
-    <section className="heros_height flex flex-col justify-center relative w-full bg-gradient-to-b from-[#061326] to-[#0B1F3D] px-6 lg:px-8 py-8 lg:py-10 overflow-hidden">
-      <div className="flex lg:flex-row flex-col justify-between items-center gap-16">
+    <section className="heros_height flex flex-col justify-center relative w-full bg-gradient-to-b from-[#061326] to-[#0B1F3D]  overflow-hidden">
+      <div className="container px-6 lg:px-8 py-8 lg:py-10 flex lg:flex-row flex-col justify-between items-center gap-16">
         {/* LEFT CONTENT */}
         <div className="max-w-[560px]">
           <button className="bg-primary cursor-default text-white font-jakarta font-bold text-sm md:text-base px-4 py-1.5 rounded-[5px] mb-6">
             About Us
           </button>
 
-          <h1 className="text-white font-stoke font-normal text-[clamp(18px,5vw,48px)] leading-[1.2]  mb-6">
+          <h1 className="text-white font-stoke font-normal text-h2 leading-[1.2]  mb-6">
             Delivering software <br />
             teams, expertise <br />
             and results
           </h1>
 
-          <p className="text-white font-outfit font-extralight text-[clamp(14px,1.8vw,22px)] leading-relaxed">
+          <p className="text-white font-outfit font-extralight text-p leading-relaxed">
             Aireb Solutions delivers custom software development services to
             businesses worldwide, partnering with startups and enterprises to
             build scalable engineering teams and create high-quality digital

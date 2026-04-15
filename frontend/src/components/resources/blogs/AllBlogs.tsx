@@ -145,10 +145,10 @@ export default function AllBlogs() {
   const smallCards = currentPosts.slice(2);
 
   return (
-    <section className="w-full bg-[#02070F] py-16 lg:py-24 px-6 lg:px-8 font-outfit">
-      <div>
+    <section className="w-full bg-[#02070F]  font-outfit">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         <div className="flex justify-center items-center gap-2 mb-4">
-          <h2 className="text-white text-3xl font-bold">Latest Blogs</h2>
+          <h2 className="text-white font-stoke text-h2 font-bold">Latest Blogs</h2>
           <span className="text-white/60">({blogs.length})</span>
         </div>
 

@@ -19,7 +19,7 @@ const RetailHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 h-full ">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full ">
         {/* Left Side - Content */}
         <div className="relative flex flex-col justify-end mb-8">
           <div
@@ -32,10 +32,8 @@ const RetailHero = () => {
             </p>
           </div>
 
-          <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
-            Retail & Consumer
-            <br />
-            Goods
+          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
+            Retail & Consumer Goods
           </h1>
         </div>
 

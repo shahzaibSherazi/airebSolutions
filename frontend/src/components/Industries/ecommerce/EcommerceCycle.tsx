@@ -91,7 +91,7 @@ function StepCard({ step, index, sectionInView }) {
             {step.icon}
           </div>
 
-          <h3 className=" whitespace-pre-line flex items-center justify-center text-[clamp(16px,2vw,24px)] font-stoke font-normal leading-snug transition-colors duration-300 w-full group-hover:text-black text-textColor">
+          <h3 className=" whitespace-pre-line flex items-center justify-center text-title font-stoke font-normal leading-snug transition-colors duration-300 w-full group-hover:text-black text-textColor">
             {step.title}
           </h3>
 
@@ -114,8 +114,8 @@ export default function EcommerceCycle() {
   const [headerRef, headerInView] = useInView(0.2);
 
   return (
-    <section className="w-full bg-[#02070F] py-16  lg:py-24 px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-[1300px] mx-auto">
+    <section className="w-full bg-[#02070F]  overflow-hidden">
+      <div className="container py-16  lg:py-24 px-6 lg:px-8">
         {/* Header */}
         <div
           ref={headerRef}
@@ -124,10 +124,10 @@ export default function EcommerceCycle() {
             opacity: headerInView ? 1 : 0,
             transform: headerInView ? "translateY(0)" : "translateY(24px)",
           }}>
-          <h2 className="font-stoke text-[clamp(22px,4vw,48px)] font-normal text-white leading-tight mb-4">
+          <h2 className="font-stoke text-h2 font-normal text-white leading-tight mb-4">
             Our E-commerce <br className="hidden lg:block" /> Development Cycle
           </h2>
-          <p className="font-outfit font-light text-[clamp(13px,1.1vw,16px)] text-textColor mx-auto leading-relaxed">
+          <p className="font-outfit font-light text-p text-textColor mx-auto leading-relaxed">
             At Aireb Solutions, we follow a streamlined e-commerce development
             cycle to ensure <br className="hidden lg:block" /> that your project
             is completed on time, within budget, and to the highest quality

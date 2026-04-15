@@ -35,26 +35,25 @@ const OnDemandDevelopment = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0E1828] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="w-full bg-[#0E1828]">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
-              Our Development Process
-            </h2>
-            <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
-              At Aireb Solutions, we follow a streamlined on-demand app
-              development
-              <br className="hidden sm:block" />
-              cycle that ensures efficiency and innovation
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-12 sm:mb-16 md:mb-20"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-white font-outfit text-h2 font-extralight mb-4 sm:mb-6">
+            Our Development Process
+          </h2>
+          <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
+            At Aireb Solutions, we follow a streamlined on-demand app
+            development
+            <br className="hidden sm:block" />
+            cycle that ensures efficiency and innovation
+          </p>
+        </motion.div>
 
         {/* Process Steps */}
         <div className="space-y-0">
@@ -81,11 +80,9 @@ const OnDemandDevelopment = () => {
                   </div>
 
                   {/* Right Column - Description */}
-                  <div className="flex items-center">
-                    <p className="text-textColor font-outfit text-sm sm:text-base font-light leading-relaxed">
-                      {process.description}
-                    </p>
-                  </div>
+                  <p className="text-textColor flex items-center font-outfit text-sm sm:text-base font-light leading-relaxed">
+                    {process.description}
+                  </p>
                 </div>
               </motion.div>
             </div>

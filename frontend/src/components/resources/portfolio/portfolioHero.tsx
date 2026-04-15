@@ -25,7 +25,7 @@ const PortfolioHero = () => {
         }}>
         {/* Content */}
         <div className="flex flex-col items-center justify-center text-center px-[clamp(16px,2.8vw,32px)]  py-[clamp(32px,6vw,64px)]  gap-10">
-          <h2 className="font-stoke text-white text-[clamp(18px,4.8vw,50px)] font-normal leading-tight tracking-wide uppercase">
+          <h2 className="font-stoke text-white text-h2 font-normal leading-tight tracking-wide uppercase">
             We Create Digital
             <br />
             Experiences That

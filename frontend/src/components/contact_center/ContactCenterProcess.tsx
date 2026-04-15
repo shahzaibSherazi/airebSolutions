@@ -185,25 +185,24 @@ export default function ContactCenterProcess() {
   const litIndex = hoveredIndex !== null ? hoveredIndex : activeIndex;
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#0E1828] py-16 sm:py-20">
-      <div className="px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+    <section ref={sectionRef} className="w-full bg-[#0E1828] ">
+      <div className="container px-6 lg:px-8 py-16 sm:py-20">
         {/* Header */}
-        <div className="mb-10 sm:mb-14">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h1 className="text-textColor font-extralight font-outfit text-[clamp(24px,4vw,52px)] mb-3 leading-tight">
-              Our UI/UX Design Process
-            </h1>
-            <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
-              At Aireb Solutions, we follow a streamlined on-demand app
-              development <br className="hidden lg:block" /> cycle that ensures
-              efficiency and innovation
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mb-10 sm:mb-14"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="text-textColor font-extralight font-outfit text-h2 mb-3 leading-tight">
+            Our UI/UX Design Process
+          </h1>
+          <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
+            At Aireb Solutions, we follow a streamlined on-demand app
+            development <br className="hidden lg:block" /> cycle that ensures
+            efficiency and innovation
+          </p>
+        </motion.div>
 
         {/* Two-column */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">

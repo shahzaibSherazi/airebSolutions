@@ -102,7 +102,7 @@ const LeaderCard = ({
       />
 
       {/* Name & Role bar — bottom overlay */}
-      <div className=" px-[clamp(8px,0.8vw,16px)] py-3 ">
+      <div className=" px-[clamp(8px,0.8vw,14px)] py-3 ">
         <h3 className="text-white font-outfit font-normal text-[clamp(14px,1.8vw,20px)] leading-tight">
           {name}
         </h3>
@@ -122,10 +122,10 @@ const CreativeMinds = () => {
           "linear-gradient(359.92deg, #02070F 22.66%, #102545 73.53%)",
       }}
       className="w-full  overflow-hidden">
-      <div className=" px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-textColor font-outfit font-normal text-[clamp(32px,4vw,42px)] leading-tight mb-4">
+          <h2 className="text-textColor font-stoke font-normal text-h2 leading-tight mb-4">
             Creative Minds
           </h2>
         </div>

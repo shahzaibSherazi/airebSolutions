@@ -667,15 +667,15 @@ const OurWork = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative">
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-black overflow-hidden">
       {/* Scrolling Content Layer - Our Work Section (ON TOP) */}
-      <div
+      {/* <div
         ref={contentRef}
         className="relative z-10 bg-primary w-full px-6 lg:px-8 py-16 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
-          {/* Left Content */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
-            {/* Heading */}
             <motion.div
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -685,7 +685,6 @@ const OurWork = () => {
                 Power Up Your Workflow with <br /> 50 + CRM Integration
               </h2>
 
-              {/* Description */}
               <p className="text-base sm:text-lg font-outfit font-light text-[#141414] mb-6 sm:mb-12 lg:mx-0">
                 Aireb Solutions empowers businesses with 50+ CRM integrations,
                 streamlining workflows, automating processes, <br /> and
@@ -693,7 +692,6 @@ const OurWork = () => {
                 and productivity.
               </p>
             </motion.div>
-            {/* Buttons */}
             <div className="flex items-center justify-center lg:justify-start">
               <button className="w-full font-outfit font-bold text-sm md:text-lg sm:w-auto px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-white rounded border-025 border-gray-900 hover:text-black hover:bg-white transition-all duration-300 shadow-md hover:shadow-lg">
                 Get Started
@@ -701,14 +699,14 @@ const OurWork = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Fixed Salesforce Background Section (BELOW) */}
       <div
         style={{ minHeight: "200vh" }}
         ref={salesforceRef}
-        className="relative w-full bg-black overflow-hidden">
-        <div className="relative w-full h-screen max-w-4xl mx-auto flex items-center justify-center">
+        className="relative ">
+        <div className="relative w-full h-screen flex items-center justify-center">
           {/* Center Salesforce logo */}
           <div className="absolute z-20 w-48 h-48 overflow-hidden p-5 bg-white rounded-full shadow-2xl flex items-center justify-center">
             <img src={saleForceLogo} />
@@ -779,11 +777,6 @@ const OurWork = () => {
               </div>
             );
           })}
-
-          {/* Subtle glow effect */}
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-64 h-64 bg-blue-300/10 rounded-full blur-3xl" />
-          </div>
         </div>
       </div>
     </section>

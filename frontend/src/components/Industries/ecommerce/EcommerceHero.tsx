@@ -67,22 +67,21 @@ export default function EcommerceHero() {
           }}
           className="absolute inset-0"
         />
-        <div className="relative  z-10 w-full  px-6 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+        <div className="container relative  z-10 w-full  px-6 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           {/* ── LEFT: Text Content ── */}
           <div className="flex flex-col items-start self-end gap-5 w-full">
             {/* Sector badge */}
-            <div
+
+            <p
               style={{
                 background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
               }}
-              className="mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
-              <p className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold ">
-                Sector
-              </p>
-            </div>
+              className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
+              Sector
+            </p>
 
             {/* Heading */}
-            <h1 className="font-stoke text-[clamp(18px,5vw,52px)] leading-[1.28] text-white">
+            <h1 className="font-stoke text-h1 leading-[1.28] text-white">
               E-commerce Solutions
               <br />
               for Modern Businesses

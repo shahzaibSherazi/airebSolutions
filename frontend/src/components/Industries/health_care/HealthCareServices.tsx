@@ -130,12 +130,12 @@ function ServiceCard({ service, animationDelay = 0 }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-textColor font-stoke font-normal text-[clamp(18px,1vw,24px)] leading-snug">
+      <h3 className="text-textColor font-stoke font-normal text-title leading-snug">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-[clamp(14px,1vw,16px)] text-textColor font-outfit font-light leading-relaxed flex-1">
+      <p className="text-p text-textColor font-outfit font-light leading-relaxed flex-1">
         {service.description}
       </p>
     </div>
@@ -150,31 +150,30 @@ export default function HealthCareServices() {
 
   return (
     <>
-      <section className=" py-16 lg:py-24 px-6 bg-[#02070F]">
-        <div className="">
+      <section className="  bg-[#02070F]">
+        <div className="container py-16 lg:py-24 px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-14">
-            <motion.div
-              initial={{ y: 60, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: false }}>
-              <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
-                Our Healthcare & <br className="hidden lg:block" />
-                Pharmaceuticals Services
-              </h1>
-              <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
-                At Aireb solutions, we offer services that help healthcare and{" "}
-                Pharmaceutical companies <br className="hidden lg:block" />{" "}
-                handle digital challenges, improve their processes, and better
-                serve patients, <br className="hidden lg:block" /> healthcare
-                providers, and all stakeholders.
-              </p>
-            </motion.div>
-          </div>
+          <motion.div
+            className="text-center mb-14"
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
+              Our Healthcare & <br className="hidden lg:block" />
+              Pharmaceuticals Services
+            </h1>
+            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
+              At Aireb solutions, we offer services that help healthcare and{" "}
+              Pharmaceutical companies <br className="hidden lg:block" /> handle
+              digital challenges, improve their processes, and better serve
+              patients, <br className="hidden lg:block" /> healthcare providers,
+              and all stakeholders.
+            </p>
+          </motion.div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:mx-auto xl:max-w-screen-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {visibleServices.map((service, i) => (
               <div key={service.id} className="flex justify-center">
                 <ServiceCard

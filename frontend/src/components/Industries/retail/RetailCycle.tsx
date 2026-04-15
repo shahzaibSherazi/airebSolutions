@@ -1,131 +1,3 @@
-// import React from "react";
-
-// const steps = [
-//   {
-//     number: 1,
-//     title: "Discovery & Ideation",
-//     description:
-//       "We analyze your startup's mission, goals, and challenges to craft a strategic plan with tailored digital solutions.",
-//   },
-//   {
-//     number: 2,
-//     title: "Design & Branding",
-//     description:
-//       "Our design team crafts intuitive UI/UX that reflects your brand and engages your audience while ensuring consistency across platforms.",
-//   },
-//   {
-//     number: 3,
-//     title: "Development & Integration",
-//     description:
-//       "We develop scalable, secure websites, apps, and back-end systems, integrating CRM, payment gateways, and third-party tools for seamless operations.",
-//   },
-//   {
-//     number: 4,
-//     title: "Testing",
-//     description:
-//       "We conduct rigorous testing to ensure that all systems are functioning smoothly, ensuring the final product bug-free and optimized for performance.",
-//   },
-//   {
-//     number: 5,
-//     title: "Launch & Marketing",
-//     description:
-//       "We launch your startup online with an optimized website or app, boosting visibility through digital marketing campaigns.",
-//   },
-//   {
-//     number: 6,
-//     title: "Ongoing Support",
-//     description:
-//       "We provide ongoing support, monitoring, and optimizations to ensure sustainable growth, scaling your startup with evolving features and processes.",
-//   },
-// ];
-
-// function Badge({ number }) {
-//   return (
-//     <div
-//       className="w-12 h-12 md:w-[52px] md:h-[52px] rounded-full flex items-center justify-center
-//                     bg-primary
-//                     text-white font-outfit font-bold text-lg shadow-lg
-//                     ring-4 ring-blue-500/20">
-//       {number}
-//     </div>
-//   );
-// }
-
-// function Arrow() {
-//   return (
-//     <div className="flex items-center flex-1 ml-4 min-w-0">
-//       <div
-//         style={{
-//           backgroundImage: "linear-gradient(90deg, #0E1828 0%, #FFFFFF 100%)",
-//         }}
-//         className="h-[1px] flex-1"
-//       />
-//       <svg
-//         viewBox="0 0 10 16"
-//         className="w-3 h-4 text-white flex-shrink-0"
-//         fill="none">
-//         <polyline
-//           points="2,2 8,8 2,14"
-//           stroke="currentColor"
-//           strokeWidth="1.8"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         />
-//       </svg>
-//     </div>
-//   );
-// }
-
-// function StepCard({ step }) {
-//   return (
-//     <div className="flex flex-col">
-//       {/* Badge + Arrow */}
-//       <div className="flex items-center mb-6">
-//         <Badge number={step.number} />
-//         <Arrow />
-//       </div>
-
-//       {/* Content */}
-//       <h3 className="text-textColor font-stoke font-normal text-base md:text-lg lg:text-xl mb-3 leading-snug">
-//         {step.title}
-//       </h3>
-
-//       <p className="text-textColor font-outfit text-sm md:text-base font-light leading-relaxed">
-//         {step.description}
-//       </p>
-//     </div>
-//   );
-// }
-
-// export default function StartUpCycle() {
-//   return (
-//     <section className="w-full bg-[#0E1828] py-16 md:py-24 px-6 lg:px-8">
-//       <div className="">
-//         {/* Header */}
-//         <div className="mb-16 md:mb-20">
-//           <h1 className="font-stoke text-[clamp(24px,4vw,42px)] leading-[1.28] text-white mb-6">
-//             Our Startup Development Cycle
-//           </h1>
-
-//           <p className="text-textColor text-sm leading-relaxed">
-//             At Aireb Solutions, we follow a structured development cycle that
-//             ensures the success of every startup <br /> project. From initial
-//             concept to market launch and beyond, we are with you every step of
-//             the way.
-//           </p>
-//         </div>
-
-//         {/* Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-12">
-//           {steps.map((step) => (
-//             <StepCard key={step.number} step={step} />
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -321,13 +193,11 @@ export default function RetailCycle() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-full bg-[#0E1828] py-16 md:py-24 px-6 lg:px-8">
-      <div>
+    <section ref={sectionRef} className="w-full bg-[#0E1828] ">
+      <div className="container py-16 md:py-24 px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="mb-16 md:mb-20">
-          <h1 className="font-stoke text-[clamp(24px,4vw,42px)] leading-[1.28] text-white mb-6">
+          <h1 className="font-stoke text-h2 leading-[1.28] text-white mb-6">
             Our Retail & CGP Development Cycle
           </h1>
           <p className="text-textColor text-sm leading-relaxed">

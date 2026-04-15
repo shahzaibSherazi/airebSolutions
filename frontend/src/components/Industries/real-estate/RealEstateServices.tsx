@@ -91,12 +91,12 @@ function ServiceCard({ service, animationDelay = 0 }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-textColor font-stoke font-normal text-[clamp(18px,1vw,24px)] leading-snug">
+      <h3 className="text-textColor font-stoke font-normal text-title leading-snug">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-[clamp(14px,1vw,16px)] text-textColor font-outfit font-light line-clamp-4 overflow-hidden leading-relaxed">
+      <p className="text-p text-textColor font-outfit font-light line-clamp-4 overflow-hidden leading-relaxed">
         {service.description}
       </p>
     </div>
@@ -111,11 +111,11 @@ export default function RealEstateServices() {
 
   return (
     <>
-      <section className=" py-16 lg:py-24 px-6 bg-[#02070F]">
-        <div className="">
+      <section className="  bg-[#02070F]">
+        <div className="container py-16 lg:py-24 px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal leading-[1.28] text-white mb-5">
+            <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
               Our Real Estate Solutions
             </h1>
             <p className="font-outfit font-normal max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
@@ -128,7 +128,7 @@ export default function RealEstateServices() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:mx-auto xl:max-w-screen-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {visibleServices.map((service, i) => (
               <div key={service.id} className="flex justify-center">
                 <ServiceCard

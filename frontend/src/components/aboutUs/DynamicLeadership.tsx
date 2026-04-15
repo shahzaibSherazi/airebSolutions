@@ -68,15 +68,15 @@ const DynamicLeadership = () => {
         background: "linear-gradient(269.9deg, #102545 43.69%, #02070F 99.92%)",
       }}
       className="w-full  overflow-hidden">
-      <div className=" px-6 lg:px-8 pt-16 lg:pt-24 lg:pb-36 pb-20">
+      <div className="container px-6 lg:px-8 pt-16 lg:pt-24 lg:pb-36 pb-20">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-textColor font-stoke font-normal text-[clamp(36px,5vw,56px)] leading-tight mb-4">
+          <h2 className="text-textColor font-stoke font-normal text-h2 leading-tight mb-4">
             Meet Our Dynamic
             <br />
             Leadership
           </h2>
-          <p className="text-textColor font-outfit font-light text-[clamp(14px,1.2vw,18px)] leading-relaxed  mx-auto">
+          <p className="text-textColor font-outfit font-light text-p leading-relaxed  mx-auto">
             Discover the visionary minds leading our journey. Our accomplished
             leaders <br className="hidden sm:block" /> bring innovation,
             integrity, and insight to every step of our success.

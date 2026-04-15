@@ -8,23 +8,17 @@ const DialerHero = () => {
         background:
           "linear-gradient(66.03deg, #629DFF -38.71%, #629DFF -38.7%, #000000 114.21%)",
       }}
-      className="heros_height relative overflow-hidden px-6 lg:px-8 py-8 lg:py-10 flex items-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-2 w-full h-full ">
+      className="heros_height relative overflow-hidden  flex items-center">
+      <div className="container px-6 lg:px-8 py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-2 w-full h-full ">
         {/* Left Side - Content */}
         <div className="flex flex-col gap-4 justify-end">
           {/* Title */}
-          <h1
-            className="text-textColor font-stoke font-normal"
-            style={{
-              fontSize: "clamp(18px, 5vw, 56px)",
-              lineHeight: "1.15",
-              //   letterSpacing: "0.02em",
-            }}>
+          <h1 className="text-textColor text-h1 font-stoke font-normal">
             AI-Powered Custom <br className="hidden lg:block" />
             Dialer Solutions
           </h1>
           {/* Subtitle */}
-          <p className="text-textColor font-outfit text-sm lg:text-base tracking-wide">
+          <p className="text-textColor font-outfit text-p tracking-wide">
             We provide advanced AI-powered dialer solutions to automate outbound
             calls, make agents more productive, and get customers more involved.
             We help organizations get more conversions, better manage leads, and

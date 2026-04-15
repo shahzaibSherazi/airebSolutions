@@ -202,14 +202,14 @@ export default function RealEstateCycle() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#02070F] py-[60px] px-5 box-border font-outfit">
-      <div>
+      className="w-full bg-[#02070F]  box-border font-outfit">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header — unchanged */}
         <div className="text-center mb-[52px] flex flex-col items-center">
-          <h1 className="text-white font-normal leading-tight mb-4 mt-0 font-stoke text-[clamp(36px,4vw,42px)]">
+          <h1 className="text-white font-normal leading-tight mb-4 mt-0 font-stoke text-h2">
             Our Real Estate Development Cycle
           </h1>
-          <p className="text-textColor max-w-4xl font-outfit text-[clamp(14px,1.5vw,16px)] leading-[1.7]">
+          <p className="text-textColor max-w-4xl font-outfit text-p leading-[1.7]">
             Our step-by-step development process ensures we deliver real estate
             solutions that match your business needs, improve customer
             engagement, and increase overall efficiency and performance.

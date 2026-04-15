@@ -5,26 +5,25 @@ import PhoneMockup from "./PhoneMockup";
 export default function EducationHero() {
   return (
     <section
-      className=""
+      className="heros_height relative w-full flex flex-col justify-end"
       style={{
         background:
           "linear-gradient(257.21deg, rgba(0, 0, 0, 0) 1.73%, #0E1828 98.27%)",
       }}>
-      <div className="heros_height w-full px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
+      <div className="container w-full px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}
-          <div
+
+          <p
             style={{
               background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
             }}
-            className="mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
-            <p className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold ">
-              Sector
-            </p>
-          </div>
+            className="font-outfit text-[clamp(14px,1.5vw,22px)] font-bold mb-[2vh] sm:mb-[3vh] border border-primary rounded-sm w-fit px-10 py-3">
+            Sector
+          </p>
 
-          <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
+          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
             Healthcare &
             <br className="hidden lg:block" /> Pharmaceuticals
           </h1>

@@ -34,9 +34,9 @@ const ChooseUs = () => {
       style={{
         background: "linear-gradient(180deg, #000000 61.15%, #629DFF 100%)",
       }}
-      className=" w-full bg-gradient-to-br py-16  lg:py-24 ">
+      className=" w-full">
       {/* Container */}
-      <div className="flex flex-col justify-center items-center px-6 lg:px-8">
+      <div className="container flex flex-col justify-center items-center px-6 lg:px-8 py-16  lg:py-24">
         {/* Badge */}
         <div className="mb-8 sm:mb-10 md:mb-12">
           <span className="inline-block bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">

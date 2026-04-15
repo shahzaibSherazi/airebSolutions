@@ -63,7 +63,7 @@ export default function ContactCenterSection() {
 
   return (
     <div className=" w-full flex items-center justify-center bg-black">
-      <div className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16">
+      <div className="container px-6 lg:px-8 py-16 md:py-24">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-6 mb-5 md:mb-4">
           <motion.div
@@ -71,7 +71,7 @@ export default function ContactCenterSection() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <h1 className="text-white font-outfit text-[clamp(22px,4vw,52px)] font-extralight leading-tight">
+            <h1 className="text-white font-stoke text-h2 font-extralight leading-tight">
               Our Contact Center Comman <br className="hidden lg:block" />{" "}
               Challenges
             </h1>
@@ -135,9 +135,7 @@ export default function ContactCenterSection() {
               <p className="text-textColor font-outfit font-normal text-sm leading-snug ">
                 {stat.label}
               </p>
-              <p className="text-white text-[clamp(28px,5vw,56px)] font-bold">
-                {stat.value}
-              </p>
+              <p className="text-white text-h2 font-bold">{stat.value}</p>
             </div>
           ))}
           {/* 4th empty/content card */}

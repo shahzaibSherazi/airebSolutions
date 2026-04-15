@@ -142,14 +142,14 @@ function StepCard({ step }) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function BankingCycle() {
   return (
-    <section className="w-full py-16 lg:py-24 px-6 lg:px-8 bg-[#0E1828]">
-      <div className="">
+    <section className="w-full bg-[#0E1828]">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-white font-normal leading-tight mb-4 font-stoke text-[clamp(24px,3.5vw,42px)]">
+          <h1 className="text-white font-normal leading-tight mb-4 font-stoke text-h2">
             Banking & Fintech Development <br /> Cycle
           </h1>
-          <p className="text-textColor font-outfit text-[clamp(12px,1vw,16px)] leading-relaxed">
+          <p className="text-textColor font-outfit text-p leading-relaxed">
             Our development cycle is designed to ensure that every project in
             the banking and fintech industry meets <br /> industry standards,
             complies with regulations, and delivers a seamless user experience.

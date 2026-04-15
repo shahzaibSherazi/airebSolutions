@@ -176,12 +176,12 @@ export default function EcommerceTechStack() {
 
   return (
     <>
-      <section className="bg-[#02070F] px-6 sm:px-8 py-16 md:py-24">
-        <div className="">
+      <section className="bg-[#02070F] ">
+        <div className="container px-6 sm:px-8 py-16 md:py-24">
           {/* ── Top Header Row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
-            <div className="">
-              <h1 className="text-white font-outfit font-extralight leading-tight mb-4 text-[clamp(42px,5vw,52px)]">
+            <div>
+              <h1 className="text-white font-stoke font-extralight leading-tight mb-4 text-h2">
                 Tech Stack & Compliance
                 <br />
                 Expertise
@@ -195,7 +195,7 @@ export default function EcommerceTechStack() {
             <div className="flex-shrink-0 sm:pt-2">
               <a
                 href="#contact-form"
-                className="group flex items-center gap-3 border border-blue-500 text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+                className="group flex w-fit items-center gap-3 border border-blue-500 text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",

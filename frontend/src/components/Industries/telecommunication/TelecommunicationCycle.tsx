@@ -357,15 +357,13 @@ const TelecommunicationCycle = () => {
   }, []);
 
   return (
-    <section
-      className="py-16 lg:py-24 bg-[#02070F]"
-      aria-labelledby="devops-title">
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className=" bg-[#02070F]" aria-labelledby="devops-title">
+      <div className="container sm:px-6 lg:px-8 py-16 lg:py-24">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
           <h2
             id="devops-title"
-            className="text-[clamp(24px,4vw,42px)] font-stoke font-normal text-textColor lg:leading-[56px] mb-6">
+            className="text-h2 font-stoke font-normal text-textColor lg:leading-[56px] mb-6">
             Our Telecommunications <br /> Development Cycle
           </h2>
           <p className="font-outfit font-normal text-textColor max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">

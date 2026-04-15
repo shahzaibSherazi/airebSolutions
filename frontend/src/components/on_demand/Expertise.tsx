@@ -34,30 +34,27 @@ const Expertise = () => {
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
       }}
-      className="relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      className="relative w-full  overflow-hidden">
       {/* Container */}
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         {/* Badge */}
-        <div className="mb-8 sm:mb-10 md:mb-12">
-          <span className="inline-block bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
-            Why Choose Us
-          </span>
-        </div>
+        <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
+          Why Choose Us
+        </span>
 
         {/* Heading */}
-        <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              Why you should pick Aireb Solutions for your
-              <br className="hidden sm:block" />
-              On-Demand Services?
-            </h2>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mb-12 sm:mb-16 md:mb-20 lg:mb-24"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-white text-h2 font-stoke font-thin leading-10 lg:leading-[72px] ">
+            Why you should pick Aireb Solutions for your
+            <br className="hidden sm:block" />
+            On-Demand Services?
+          </h2>
+        </motion.div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -66,9 +63,9 @@ const Expertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10 flex-1 flex flex-col items-center justify-center">
+              <div className="relative z-10 flex-1 flex items-center justify-center">
                 {/* Text with fixed height and overflow handling */}
-                <h1 className="text-primary group-hover:text-textColor text-center font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2 mb-3 ">
+                <h1 className="text-primary group-hover:text-textColor text-center font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2  ">
                   {feature.heading}
                 </h1>
               </div>

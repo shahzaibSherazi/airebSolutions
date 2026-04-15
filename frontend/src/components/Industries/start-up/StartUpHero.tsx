@@ -18,7 +18,7 @@ const StartUpHero = () => {
         className="absolute inset-0"
       />
       {/* Content */}
-      <div className="relative z-10 px-6 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
+      <div className="container relative z-10 px-6 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
         <div
           style={{
             background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
@@ -29,7 +29,7 @@ const StartUpHero = () => {
           </p>
         </div>
 
-        <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           Digital Solutions for
           <br />
           Startup Success.

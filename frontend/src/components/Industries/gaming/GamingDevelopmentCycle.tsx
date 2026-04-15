@@ -238,9 +238,9 @@ export default function GamingDevelopmentCycle() {
   const [headerRef, headerInView] = useInView(0.3);
 
   return (
-    <section className="min-h-screen bg-[#02070F] py-16 md:py-24 px-4 sm:px-6">
+    <section className="min-h-screen bg-[#02070F] ">
       <div
-        className="max-w-[960px] mx-auto"
+        className="max-w-[960px] mx-auto py-16 md:py-24 px-4 sm:px-6"
         style={{
           /*
             paddingLeft/Right = OVERHANG (115px) so the square cards
@@ -258,7 +258,7 @@ export default function GamingDevelopmentCycle() {
             opacity: headerInView ? 1 : 0,
             transform: headerInView ? "translateY(0)" : "translateY(28px)",
           }}>
-          <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-[clamp(32px,4vw,42px)]">
+          <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-h2 font-stoke">
             Our Gaming Development Cycle
           </h1>
           <p className="text-textColor text-sm md:text-base font-outfit leading-[1.85] font-light">

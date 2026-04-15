@@ -71,24 +71,23 @@ export default function UiDesignProcess() {
   }, []);
 
   return (
-    <section className="w-full bg-[#0E1828] py-16 lg:py-24">
-      <div className="px-6 md:px-8 max-w-7xl mx-auto">
+    <section className="w-full bg-[#0E1828] ">
+      <div className="container px-6 md:px-8 py-16 lg:py-24">
         {/* ── Header ── */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h1 className="text-textColor font-extralight font-outfit text-[clamp(20px,4vw,52px)] mb-4 leading-tight">
-              Our UI/UX Design Process
-            </h1>
-            <p className="text-textColor/70 font-outfit font-light text-sm sm:text-base max-w-xl leading-relaxed">
-              At Aireb Solutions, we follow a streamlined on-demand app
-              development cycle that ensures efficiency and innovation
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mb-16"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-4 leading-tight">
+            Our UI/UX Design Process
+          </h1>
+          <p className="text-textColor font-outfit font-light text-p max-w-xl leading-relaxed">
+            At Aireb Solutions, we follow a streamlined on-demand app
+            development cycle that ensures efficiency and innovation
+          </p>
+        </motion.div>
 
         {/* ── Steps ── */}
         <div className="space-y-8 sm:space-y-16">
@@ -114,7 +113,7 @@ export default function UiDesignProcess() {
                     {/* Left — Title */}
                     <h3
                       className={[
-                        "font-stoke font-light text-[clamp(16px,2vw,24px)] leading-snug transition-colors duration-500",
+                        "font-stoke font-light text-title leading-snug transition-colors duration-500",
                         isTop ? "text-white" : "text-white/50",
                       ].join(" ")}>
                       {step.title}

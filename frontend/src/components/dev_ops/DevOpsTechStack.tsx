@@ -105,8 +105,8 @@ const TechStack = () => {
   const currentTab = tabs.find((t) => t.id === activeTab) ?? tabs[0];
 
   return (
-    <section className="relative w-full bg-white px-6 lg:px-8 py-16 lg:py-24 overflow-hidden ">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative w-full bg-white  overflow-hidden ">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         {/* ── Background decorative rings ── */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-[#c7d2fe] pointer-events-none opacity-40" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-[#c7d2fe] pointer-events-none opacity-20" />
@@ -118,21 +118,20 @@ const TechStack = () => {
         />
 
         {/* ── Heading ── */}
-        <div className="relative z-10 flex flex-col items-center text-center mb-10 gap-3">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className=" font-stoke text-[clamp(28px,4vw,42px)] font-bold text-primary">
-              Tech Stack We Use
-            </h2>
-            <p className=" font-outfit text-sm sm:text-base text-black  leading-relaxed">
-              At Airebsolution, we use modern technologies to build
-              high-performance DevOps ecosystems.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="relative z-10 flex flex-col items-center text-center mb-10 gap-3"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className=" font-stoke text-h2 font-bold text-primary">
+            Tech Stack We Use
+          </h2>
+          <p className=" font-outfit text-p text-black  leading-relaxed">
+            At Airebsolution, we use modern technologies to build
+            high-performance DevOps ecosystems.
+          </p>
+        </motion.div>
 
         {/* ── Tabs ── */}
         <div className="relative z-10 flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-12">

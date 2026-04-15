@@ -13,12 +13,12 @@ const ContentWritingHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="relative z-10  px-6 py-8 lg:py-10 flex flex-col justify-end gap-4">
-        <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
+      <div className="container relative z-10  px-6 py-8 lg:py-10 flex flex-col justify-end gap-4">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           High Quality Content
           <br className="hidden lg:block" /> Writing Services
         </h1>
-        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-white max-w-2xl">
+        <p className="font-outfit text-p leading-[1.6] text-white max-w-2xl">
           Aireb solutions write high-quality content that is optimised for
           search engines and gets people to visit your site, interact with your
           content, and make purchases. Our content solutions help your brand

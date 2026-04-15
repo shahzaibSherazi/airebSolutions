@@ -36,30 +36,27 @@ const UiDesignExpertise = () => {
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
       }}
-      className="relative w-full py-16  lg:py-24 overflow-hidden">
+      className="relative w-full  overflow-hidden">
       {/* Container */}
-      <div className="px-6 lg:px-8">
+      <div className="container px-6 lg:px-8 py-16  lg:py-24">
         {/* Badge */}
-        <div className="mb-8 sm:mb-10 md:mb-12">
-          <span className="inline-block bg-primary text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
-            Our Expertise
-          </span>
-        </div>
+        <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
+          Our Expertise
+        </span>
 
         {/* Heading */}
-        <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[52px] font-outfit font-thin leading-10 lg:leading-[72px] ">
-              Why Choose Aireb Solutions for Your
-              <br className="hidden sm:block" />
-              UI/UX Design Needs?
-            </h2>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mb-12 sm:mb-16 md:mb-20 lg:mb-24"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-white text-h2 font-outfit font-thin lg:leading-[72px] ">
+            Why Choose Aireb Solutions for Your
+            <br className="hidden sm:block" />
+            UI/UX Design Needs?
+          </h2>
+        </motion.div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -68,12 +65,10 @@ const UiDesignExpertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex items-center justify-center">
               {/* Card Content */}
-              <div className="relative z-10  text-center">
-                {/* Text with fixed height and overflow handling */}
-                <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
-                  {feature.heading}
-                </h1>
-              </div>
+              {/* Text with fixed height and overflow handling */}
+              <h1 className="text-primary relative z-10  text-center group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
+                {feature.heading}
+              </h1>
 
               {/* Arrow Icon with Curved Line - Bottom Right Corner */}
               <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 curved-line">

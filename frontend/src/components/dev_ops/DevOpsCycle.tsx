@@ -382,21 +382,20 @@ const DevOpsCycle = () => {
       ref={sectionRef}
       className=" bg-primary"
       aria-labelledby="devops-title">
-      <div className="px-6 lg:px-8 py-16 lg:py-24 max-w-7xl mx-auto">
+      <div className="container px-6 lg:px-8 py-16 lg:py-24">
         {/* Section Title */}
-        <header className="text-center mb-[77px]">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2
-              id="devops-title"
-              className="text-3xl md:text-4xl lg:text-[42px] font-stoke font-normal text-black leading-[56px]">
-              Our DevOps <br /> Development Cycle
-            </h2>
-          </motion.div>
-        </header>
+        <motion.div
+          className="text-center mb-[77px]"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2
+            id="devops-title"
+            className="text-h2 font-stoke font-normal text-black sm:leading-[56px]">
+            Our DevOps <br /> Development Cycle
+          </h2>
+        </motion.div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

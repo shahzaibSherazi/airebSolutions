@@ -129,13 +129,13 @@ function SmallCard({ post, variant }) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function AllCaseStudies() {
   return (
-    <section className="w-full bg-[#02070F] py-16 lg:py-24 px-6 lg:px-8">
-      <div>
+    <section className="w-full bg-[#02070F] ">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         <div className="flex justify-center">
-          <h1 className="font-outfit font-bold text-[clamp(36px,4vw,42px)] text-white text-center mb-20 mr-1">
+          <h1 className="font-outfit font-bold text-h2 text-white text-center mb-20 mr-1">
             All Case Studies
           </h1>
-          <span className="font-outfit font-thin text-[clamp(36px,4vw,42px)] text-white">
+          <span className="font-outfit font-thin text-h2 text-white">
             {" "}
             (05)
           </span>

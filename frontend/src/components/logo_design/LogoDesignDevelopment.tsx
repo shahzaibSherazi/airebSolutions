@@ -44,26 +44,25 @@ const LogoDesignDevelopment = () => {
   ];
 
   return (
-    <section className="w-full bg-[#0E1828] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="w-full bg-[#0E1828] ">
+      <div className=" max-w-5xl mx-auto py-16  lg:py-24 px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="text-white font-outfit text-[clamp(32px,5vw,52px)] font-extralight mb-4 sm:mb-6">
-              Our Development Process
-            </h2>
-            <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
-              At Aireb Solutions, we follow a streamlined on-demand app
-              development
-              <br className="hidden sm:block" />
-              cycle that ensures efficiency and innovation
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-12 sm:mb-16 md:mb-20"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="text-white font-stoke text-h2 font-extralight mb-4 sm:mb-6">
+            Our Development Process
+          </h2>
+          <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
+            At Aireb Solutions, we follow a streamlined on-demand app
+            development
+            <br className="hidden sm:block" />
+            cycle that ensures efficiency and innovation
+          </p>
+        </motion.div>
 
         {/* Process Steps */}
         <div className="space-y-0">
@@ -75,7 +74,7 @@ const LogoDesignDevelopment = () => {
                 {/* Left Column - Title */}
                 <div className="flex items-center justify-center md:justify-start gap-4">
                   <div>{process.icon}</div>
-                  <h3 className="text-white text-[clamp(18px,3vw,24px)] font-stoke font-light leading-tight">
+                  <h3 className="text-white text-title font-stoke font-light leading-tight">
                     {process.title}
                   </h3>
                 </div>

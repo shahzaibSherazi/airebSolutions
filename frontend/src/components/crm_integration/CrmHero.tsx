@@ -13,12 +13,12 @@ const CrmHero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
 
       {/* Content */}
-      <div className="relative z-10  px-6 py-8  lg:py-10 flex flex-col justify-end gap-4">
-        <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-textColor">
+      <div className="container relative z-10  px-6 py-8  lg:py-10 flex flex-col justify-end gap-4">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-textColor">
           CRM Integration's for <br className="hidden lg:block" /> Smarter
           Business Growth!
         </h1>
-        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-textColor max-w-2xl">
+        <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl">
           With our API and CRM connection solutions, your systems can easily
           talk to each other, share data across platforms, and automate
           activities. Our services help organizations get rid of manual work,

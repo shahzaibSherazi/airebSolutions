@@ -13,12 +13,12 @@ const ContactCenterHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="relative z-10 px-6 lg:px-8 py-8 lg:py-10  flex flex-col justify-end gap-4">
-        <h1 className="font-stoke text-[clamp(18px,5vw,56px)] leading-[1.28] text-white">
+      <div className="container relative z-10 px-6 lg:px-8 py-8 lg:py-10  flex flex-col justify-end gap-4">
+        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           Contact Center
           <br className="hidden lg:block" /> Services
         </h1>
-        <p className="font-outfit text-[clamp(14px,1.5vw,18px)] leading-[1.6] text-textColor max-w-2xl">
+        <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl">
           We provide a reliable, scalable contact center solution that elevates
           customer support and engagement. From voice and non-voice support to
           technical assistance and AI-enhanced interactions, our services ensure

@@ -4,7 +4,7 @@ import bgImg from "@/assets/Industies/travel-hospitality/hero-bg.png";
 
 const TravelHospitalityHero = () => {
   return (
-    <section className="heros_height relative overflow-hidden px-6 lg:px-8 py-8 lg:py-10">
+    <section className="heros_height flex justify-end flex-col  relative overflow-hidden ">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -19,7 +19,7 @@ const TravelHospitalityHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
+      <div className="container px-6 lg:px-8 py-8 lg:py-10 grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
         {/* Left Side - Content */}
         <div className="relative flex flex-col justify-end mb-8">
           <p
@@ -30,7 +30,7 @@ const TravelHospitalityHero = () => {
             Sector
           </p>
 
-          <h1 className="font-stoke text-[clamp(18px,5vw,52px)] leading-[1.28] text-white">
+          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
             Travel & Hospitality
           </h1>
         </div>

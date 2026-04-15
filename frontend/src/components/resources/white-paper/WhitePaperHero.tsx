@@ -13,7 +13,7 @@ export default function WhitePaperHero() {
       />
 
       {/* ── Title ── */}
-      <h1 className="relative z-10 text-center text-[clamp(32px,5vw,56px)] font-stoke font-normal text-white mb-10">
+      <h1 className="relative z-10 text-center text-h1 font-stoke font-normal text-white mb-10">
         White Papers
       </h1>
 

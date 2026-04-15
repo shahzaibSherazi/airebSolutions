@@ -34,7 +34,7 @@ export default function BlogsHero() {
       {/* ── Main content ─────────────────────────────────────────────────────── */}
       <div className="relative z-10  flex flex-col items-center justify-center text-center px-6 lg:px-8 py-8 lg:py-10">
         {/* Title */}
-        <h1 className="text-white text-[clamp(32px,6vw,72px)] font-normal font-stoke mb-4 leading-tight">
+        <h1 className="text-white text-h1 font-normal font-stoke mb-4 leading-tight">
           Blogs
         </h1>
 

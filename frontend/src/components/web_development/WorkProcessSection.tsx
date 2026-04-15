@@ -81,7 +81,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
       <div className="flex items-center gap-3 sm:gap-6 md:gap-8 lg:gap-[clamp(24px,3.5vw,48px)]">
         {/* Step number */}
         <div
-          className={`relative flex-shrink-0 z-20 timeline-dot  ${step.id === 6 ? "last" : ""} `}>
+          className={`sm:block relative hidden flex-shrink-0 z-20 timeline-dot  ${step.id === 6 ? "last" : ""} `}>
           <div
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-[44px] md:h-[44px] rounded-full flex items-center justify-center font-bold text-sm sm:text-base ${
               isBlue
@@ -122,7 +122,17 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
 const WorkProcessTimeline: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(2);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  useEffect(() => {
+    if (isMobile) return; // ❌ STOP animation on mobile
+
     const ctx = gsap.context(() => {
       const triggers = gsap.utils.toArray<HTMLElement>(".scroll-trigger");
 
@@ -138,7 +148,7 @@ const WorkProcessTimeline: React.FC = () => {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isMobile]);
 
   const fixedSteps = steps.slice(0, 2);
   const dynamicStep = steps[activeIndex];
@@ -160,7 +170,7 @@ const WorkProcessTimeline: React.FC = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <h2 className="text-white font-stoke font-normal text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mt-3 sm:mt-[34px]">
+              <h2 className="text-white font-stoke font-normal text-h2 mt-6 sm:mt-[34px]">
                 How we get it done
               </h2>
               <p className="font-outfit font-normal text-base mt-[27px]">
@@ -172,30 +182,38 @@ const WorkProcessTimeline: React.FC = () => {
 
           {/* Cards */}
           <div className="max-w-[900px] mx-auto space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 relative -translate-y-4 sm:-translate-y-6 md:-translate-y-8">
-            {fixedSteps.map((step) => (
-              <StepCard key={step.id} step={step} />
-            ))}
+            {isMobile ? (
+              // ✅ MOBILE → show ALL cards
+              steps.map((step) => <StepCard key={step.id} step={step} />)
+            ) : (
+              // ✅ DESKTOP → original behavior
+              <>
+                {steps.slice(0, 2).map((step) => (
+                  <StepCard key={step.id} step={step} />
+                ))}
 
-            {/* 🔥 Animated swap */}
-            {dynamicStep && (
-              <StepCard
-                key={dynamicStep.id} // 👈 THIS triggers animation
-                step={dynamicStep}
-              />
+                {steps[activeIndex] && (
+                  <StepCard
+                    key={steps[activeIndex].id}
+                    step={steps[activeIndex]}
+                  />
+                )}
+              </>
             )}
           </div>
         </div>
 
         {/* Scroll triggers */}
-        <div className="mt-[30vh] sm:mt-[35vh] md:mt-[40vh]">
-          {steps.slice(2).map((step) => (
-            <div
-              key={step.id}
-              className="scroll-trigger h-[40vh] sm:h-[45vh] md:h-[50vh]"
-              data-step={step.id}
-            />
-          ))}
-        </div>
+        {!isMobile && (
+          <div className="mt-[30vh] sm:mt-[35vh] md:mt-[40vh]">
+            {steps.slice(2).map((step) => (
+              <div
+                key={step.id}
+                className="scroll-trigger h-[40vh] sm:h-[45vh] md:h-[50vh]"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

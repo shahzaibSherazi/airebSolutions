@@ -86,11 +86,11 @@ export default function TravelHospitalityExpertise() {
   return (
     <>
       <section
-        className=" px-6 lg:px-8 py-16 md:py-24"
+        className=" "
         style={{
           background: "linear-gradient(180deg, #4285F4 0%, #0E1828 38.46%)",
         }}>
-        <div className="">
+        <div className="container px-6 lg:px-8 py-16 md:py-24">
           {/* ── Badge ── */}
           <div
             ref={headerRef}
@@ -104,7 +104,7 @@ export default function TravelHospitalityExpertise() {
             </span>
 
             {/* ── Heading ── */}
-            <h1 className="text-white font-normal font-stoke leading-tight mb-16 text-[clamp(24px,4vw,48px)] ">
+            <h1 className="text-white font-normal font-stoke leading-tight mb-16 text-h2 ">
               Why Choose Aireb Solutions for <br />
               Travel & Hospitality?
             </h1>

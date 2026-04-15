@@ -11,7 +11,7 @@ const ContactCenterServices = () => {
       iconPath: <VoiceIcon />,
       title: "Voice support",
       description:
-        "Voice supportWe handle all inbound and outbound call center services, ensuring seamless customer interactions while you stay focused on your core business priorities.",
+        "Voice support We handle all inbound and outbound call center services, ensuring seamless customer interactions while you stay focused on your core business priorities.",
     },
     {
       id: 2,
@@ -25,26 +25,25 @@ const ContactCenterServices = () => {
       iconPath: <TechnicalIcon />,
       title: "Technical support",
       description:
-        "WeofferTier-1supportservicesenhancedwithautomationtoolsandstreamlinedprocesses,enabling our experts to deliver swift first-contact resolutions.",
+        "We offer Tier-1 support services enhanced with automation tools and streamlined processes,enabling our experts to deliver swift first-contact resolutions.",
     },
   ];
 
   return (
-    <section className="relative w-full bg-black py-[8vh] sm:py-[10vh] lg:py-[12vh] px-8">
-      <div className="">
+    <section className="relative w-full bg-black ">
+      <div className="container py-16 lg:py-24 px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]">
-          <motion.div
-            initial={{ y: 60, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false }}>
-            <h2 className="font-stoke font-normal text-[clamp(28px,4.5vw,42px)] leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
-              Seamless Engagement & Swift <br className="hidden lg:block" />
-              Resolutions Exactly What We Deliver!
-            </h2>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
+            Seamless Engagement & Swift <br className="hidden lg:block" />
+            Resolutions Exactly What We Deliver!
+          </h2>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[clamp(16px,2vh,24px)]">
           {services.map((service) => (
@@ -61,12 +60,9 @@ const ContactCenterServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="mb-[clamp(16px,2.5vh,32px)]">
-                  <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                    {service.iconPath}
-                  </div>
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                  {service.iconPath}
                 </div>
-
                 {/* Title */}
                 <h3
                   className="font-outfit font-semibold text-white
