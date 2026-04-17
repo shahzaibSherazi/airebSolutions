@@ -2,7 +2,7 @@ import bgImg from "@/assets/Industies/start-up/hero-bg.png";
 
 const StartUpHero = () => {
   return (
-    <section className="heros_height relative w-full flex flex-col justify-end bg-black">
+    <section className="heros_height relative w-full flex flex-col justify-center bg-black">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -18,7 +18,7 @@ const StartUpHero = () => {
         className="absolute inset-0"
       />
       {/* Content */}
-      <div className="container relative z-10 px-6 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
+      <div className="container relative z-10 px-2 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
         <div
           style={{
             background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",

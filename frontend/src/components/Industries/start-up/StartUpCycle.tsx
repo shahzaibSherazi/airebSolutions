@@ -194,13 +194,13 @@ export default function StartUpCycle() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#0E1828] ">
-      <div className="container py-16 md:py-24 px-6 lg:px-8">
+      <div className="container py-16 md:py-24 px-2 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="mb-16 md:mb-20">
           <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-6">
             Our Startup Development Cycle
           </h1>
-          <p className="text-textColor text-sm leading-relaxed">
+          <p className="text-textColor text-p leading-relaxed">
             At Aireb Solutions, we follow a structured development cycle that
             ensures the success of every startup <br /> project. From initial
             concept to market launch and beyond, we are with you every step of

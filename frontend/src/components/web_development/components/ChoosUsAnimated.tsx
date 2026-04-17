@@ -296,9 +296,9 @@ const ChooseUsAnimated = () => {
       className="relative w-full min-h-[50vh] md:min-h-[100vh] lg:min-h-[150vh]">
       {/* Sticky container */}
       <div className="sticky top-0 left-0 right-0 flex items-center justify-center">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-2 lg:px-8">
           {/* SVG Animation Container */}
-          <div className="relative w-full aspect-[16/9] max-h-[800px] mx-auto">
+          <div className="relative w-full aspect-[10/9] max-h-[800px] mx-auto">
             <svg
               viewBox="0 0 90 90"
               className="w-full h-full"

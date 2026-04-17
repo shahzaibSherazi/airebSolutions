@@ -56,7 +56,7 @@ const ApiChallenges = () => {
       }}
       className="relative w-full text-white ">
       {/* ── Top row: heading left, button right ── */}
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         <div className="flex sm:flex-row flex-col items-start justify-center sm:justify-between gap-2 sm:gap-6 mb-3">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
@@ -84,7 +84,7 @@ const ApiChallenges = () => {
         </div>
 
         {/* ── Two cards ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div
             className="p-px"
             style={{
@@ -125,14 +125,15 @@ const ApiChallenges = () => {
             }}>
             <div className="bg-[#192B4A] p-6 sm:p-8 h-full">
               <h3 className="font-stoke text-[clamp(16px,2vw,28px)] font-normal text-white mb-6">
-                What we get with our API development services
+                {/* What we get with our API development services */}
+                Solutions:
               </h3>
 
               <ul className="flex flex-col gap-3">
                 {valuePropositions.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                    <span className="font-outfit text-sm lg:text-base text-white leading-relaxed">
+                    <span className="font-outfit text-p text-white leading-relaxed">
                       {item}
                     </span>
                   </li>

@@ -37,7 +37,7 @@ const AboutHero = () => {
 
   return (
     <section className="heros_height flex flex-col justify-center relative w-full bg-gradient-to-b from-[#061326] to-[#0B1F3D]  overflow-hidden">
-      <div className="container px-6 lg:px-8 py-8 lg:py-10 flex lg:flex-row flex-col justify-between items-center gap-16">
+      <div className="container px-2 lg:px-8 py-8 lg:py-10 flex lg:flex-row flex-col justify-between items-center gap-16">
         {/* LEFT CONTENT */}
         <div className="max-w-[560px]">
           <button className="bg-primary cursor-default text-white font-jakarta font-bold text-sm md:text-base px-4 py-1.5 rounded-[5px] mb-6">

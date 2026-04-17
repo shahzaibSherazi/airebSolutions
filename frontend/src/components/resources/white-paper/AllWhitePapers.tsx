@@ -111,9 +111,9 @@ export default function AllWhitePapers() {
 
   return (
     <section className="w-full bg-[#02070F] ">
-      <div className="container py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8">
         <div className="flex justify-center items-center gap-3 mb-10">
-          <h1 className="font-outfit font-bold text-h2 text-white text-center">
+          <h1 className="font-stoke font-normal text-h2 text-white text-center">
             All Whitepapers
           </h1>
           <span className="font-outfit font-thin text-h2 text-white">

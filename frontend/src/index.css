@@ -43,17 +43,21 @@
     --sidebar-border: 217 33% 17%;
     --sidebar-ring: 217 91% 60%;
 
-    --fs-sm: clamp(12px, 1.4vw, 16px);
+    --fs-sm: 16px;
     --fs-base: clamp(14px, 1.4vw, 16px);
-    --fs-md: clamp(16px, 1.8vw, 18px);
-    --fs-lg: clamp(12px, 2vw, 22px);
+    --fs-md: clamp(18px, 1.8vw, 20px);
+    --fs-lg: clamp(18px, 2vw, 22px);
     --fs-xl: clamp(20px, 3vw, 32px);
-    --fs-2xl: clamp(18px, 4vw, 42px);
-    --fs-3xl: clamp(18px, 5vw, 56px);
+    --fs-2xl: clamp(24px, 4vw, 42px);
+    --fs-3xl: clamp(30px, 5vw, 56px);
   }
 
   .text-p {
     font-size: var(--fs-sm); /* Your requested size */
+    line-height: 24px;
+  }
+  .text-md {
+    font-size: var(--fs-md); /* Your requested size */
   }
   .text-title {
     font-size: var(--fs-lg); /* Your requested size */
@@ -113,7 +117,7 @@
 
 /* @media screen and (max-width: 767px) {
   .heros_height {
-    min-height: 700px;
+    min-height: 600px;
     height: calc(100vh - var(--headerHeight));
   }
 }
@@ -130,7 +134,8 @@
 
 @media screen and (max-width: 767px) {
   .heros_height {
-    min-height: calc(100svh - var(--headerHeight));
+    /* min-height: calc(100svh - var(--headerHeight)); */
+    min-height: 650px;
   }
 }
 .header {

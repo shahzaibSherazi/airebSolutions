@@ -51,7 +51,7 @@ const HowWeGetItDone = () => {
   return (
     <section className="relative w-full bg-black   overflow-hidden">
       {/* Container */}
-      <div className="container px-6 lg:px-8 py-16  lg:py-24">
+      <div className="container px-2 lg:px-8 py-16  lg:py-24">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
           <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
             Our Work Process
@@ -64,7 +64,7 @@ const HowWeGetItDone = () => {
             <h2 className="text-white font-stoke font-normal text-h2 mt-6 sm:mt-[34px]">
               How we get it done
             </h2>
-            <p className="font-outfit font-normal text-base mt-[27px]">
+            <p className="font-outfit font-normal text-p mt-[27px]">
               Our structured development approach ensures successful{" "}
               <br className="hidden sm:block" /> project execution and delivery
             </p>

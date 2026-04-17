@@ -17,10 +17,10 @@ export default function CareersHero() {
       </h1>
 
       {/* ── Content row ── */}
-      <div className="relative z-10 flex items-center justify-center  px-6 lg:px-8">
-        <div className="relative flex flex-col lg:flex-row items-center gap-16 max-w-7xl mx-auto  w-full">
+      <div className="relative z-10 flex items-center justify-center  px-2 lg:px-8">
+        <div className="relative flex flex-col lg:flex-row items-center text-center sm:text-start gap-16 max-w-7xl mx-auto  w-full">
           {/* ── Left image with corner brackets ── */}
-          <div className="relative flex items-center justify-center flex-shrink-0 w-1/2 mb-10 md:mb-0">
+          <div className="relative flex items-center justify-center flex-shrink-0 w-1/2 ">
             {/* Image — replace src with your import */}
             <div className=" relative careerHeroImg_Edge ml-0 md:ml-10 w-[clamp(250px,30vw,310px)] aspect-[387/388] ">
               <img
@@ -43,7 +43,7 @@ export default function CareersHero() {
             </h2>
 
             {/* Category tag */}
-            <p className="mb-20 text-[clamp(12px,1.1vw,14px)] font-outfit font-normal text-primary">
+            <p className="mb-6 text-[clamp(12px,1.1vw,14px)] font-outfit font-normal text-primary">
               Open Postion
             </p>
 

@@ -98,7 +98,7 @@ function StepCard({ step, index, sectionInView }) {
           <div>
             <p
               ref={descRef}
-              className="font-outfit pb-1 font-light line-clamp-4 overflow-hidden group-hover:text-black text-textColor  leading-relaxed text-[clamp(14px,0.9vw,16px)]">
+              className="font-outfit pb-1 font-light line-clamp-4 overflow-hidden group-hover:text-black text-textColor  leading-relaxed text-p">
               {step.description}
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function EcommerceCycle() {
 
   return (
     <section className="w-full bg-[#02070F]  overflow-hidden">
-      <div className="container py-16  lg:py-24 px-6 lg:px-8">
+      <div className="container py-16  lg:py-24 px-2 lg:px-8">
         {/* Header */}
         <div
           ref={headerRef}

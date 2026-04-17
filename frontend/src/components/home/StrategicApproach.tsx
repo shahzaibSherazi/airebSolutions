@@ -34,7 +34,9 @@ const ValueCard = ({
         {icon}
       </div>
     </div>
-    <p className="text-textColor leading-[22px] mt-3.5">{description}</p>
+    <p className="text-textColor text-p font-outfit leading-[22px] mt-3.5">
+      {description}
+    </p>
   </div>
 );
 
@@ -107,7 +109,7 @@ const StrategicApproach = () => {
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
       }}>
-      <div className="container font-outfit pb-16 lg:pb-24 lg:pt-0 pt-16 px-6 lg:px-8">
+      <div className="container font-outfit pb-16 lg:pb-24 lg:pt-0 pt-16 px-2 lg:px-8">
         {/* Header */}
         <motion.div
           className="text-center mb-16 md:mb-20"
@@ -118,10 +120,10 @@ const StrategicApproach = () => {
           <span className="inline-block bg-primary font-outfit text-textColor px-6 py-3 text-2xl leading-4 mb-9 sm:mb-6">
             Strategic Approach
           </span>
-          <h2 className="font-stoke text-textColor text-center mb-6 sm:mb-3.5 text-2xl md:text-[32px] lg:text-[42px] lg:leading-[56px]">
+          <h2 className="font-stoke text-textColor text-center mb-6 sm:mb-3.5 text-h2 lg:leading-[56px]">
             The drive behind <br className="sm:hidden" /> everything we build
           </h2>
-          <p className="text-textColor font-outfit max-w-[833px] mx-auto text-base leading-[22px]">
+          <p className="text-textColor font-outfit max-w-[833px] mx-auto text-p leading-[22px]">
             We don't plan strategies; we focus on measurable results. Real
             growth means better conversasion optimized strong brands. See how
             our approach helpbussiness grow smarter and achieve long term

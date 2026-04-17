@@ -178,6 +178,14 @@ const useCanvasAnimation = (canvasRef, activeStep, config) => {
     // Setup canvas with proper DPI scaling
     const setupCanvas = () => {
       const rect = canvas.getBoundingClientRect();
+
+      const scale = Math.min(rect.width / 600, 1);
+
+      config.ellipseWidth = 220 * scale;
+      config.ellipseHeight = 50 * scale;
+      config.layerGap = 70 * scale;
+      config.dotRadius = 10 * scale;
+      config.dotGlowRadius = 25 * scale;
       dpr = window.devicePixelRatio || 1;
 
       canvas.width = rect.width * dpr;
@@ -358,7 +366,7 @@ const TelecommunicationCycle = () => {
 
   return (
     <section className=" bg-[#02070F]" aria-labelledby="devops-title">
-      <div className="container sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
           <h2
@@ -366,7 +374,7 @@ const TelecommunicationCycle = () => {
             className="text-h2 font-stoke font-normal text-textColor lg:leading-[56px] mb-6">
             Our Telecommunications <br /> Development Cycle
           </h2>
-          <p className="font-outfit font-normal text-textColor max-w-4xl  mx-auto text-sm md:text-lg leading-relaxed">
+          <p className="font-outfit font-normal text-textColor max-w-4xl  mx-auto text-p leading-relaxed">
             At Aireb Solutions, we follow a structured development cycle to
             ensure that our telecommunications solutions are scalable, secure,
             and designed to meet the evolving needs of the industry. From

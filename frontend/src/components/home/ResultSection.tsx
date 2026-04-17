@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import LogoSlider from "../ui/logoSlider";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import { useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ResultSection = () => {
   const [counts, setCounts] = useState({ count95: 0, count45: 0, count99: 0 });
@@ -43,7 +44,7 @@ const ResultSection = () => {
   return (
     <section ref={sectionRef} className="bg-primary w-full ">
       {/* Header */}
-      <div className="container flex flex-col px-6 lg:px-8 py-16 lg:py-24 items-center">
+      <div className="container flex flex-col px-2 lg:px-8 py-16 lg:py-24 items-center">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-1 lg:gap-0 w-full ">
           <div className="flex flex-col md:gap-[30px] gap-[7px] lg:w-1/3">
             <h1 className="text-xl font-normal text-white">Results</h1>
@@ -51,15 +52,17 @@ const ResultSection = () => {
               Impact you can feel
             </p>
           </div>
-          <p className="text-white text-base font-normal font-outfit leading-[28px] lg:w-1/3">
+          <p className="text-white text-md font-normal font-outfit leading-[28px] lg:w-1/3">
             Our approach allows us to deliver exceptional experiences that drive
             growth and success for all stakeholders. Let's rise to new heights
             with the power of digital transformation.
           </p>
-          <button className="group hidden md:flex lg:justify-end items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
+          <Link
+            to="/about-us"
+            className="group hidden md:flex lg:justify-end items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
             Read More About Us
             <BtnIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-current  transition-colors duration-300" />
-          </button>
+          </Link>
         </div>
 
         {/* Stats Section */}
@@ -68,7 +71,7 @@ const ResultSection = () => {
             <p className="text-black font-normal text-[24px] sm:text-[42px]">
               {counts.count95}%
             </p>
-            <p className="text-textColor text-sm text-left">
+            <p className="text-textColor font-outfit  text-md text-left">
               Clients who stay because we consistently deliver results
             </p>
           </div>
@@ -77,7 +80,7 @@ const ResultSection = () => {
             <p className="text-black font-normal text-[24px] sm:text-[42px]">
               {counts.count45}%
             </p>
-            <p className="text-textColor text-sm text-left">
+            <p className="text-textColor text-md font-outfit text-left">
               Conversion growth driven by thoughtful design and optimisation
             </p>
           </div>
@@ -86,16 +89,18 @@ const ResultSection = () => {
             <p className="text-black font-normal text-[24px] sm:text-[42px]">
               {counts.count99}%
             </p>
-            <p className="text-textColor text-sm text-left">
+            <p className="text-textColor font-outfit text-md text-left">
               Reliable, secure systems that perform with unwavering stability
             </p>
           </div>
 
           <div className="md:hidden justify-start pt-6 sm:pt-8">
-            <button className="group inline-flex items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
+            <Link
+              to="/about-us"
+              className="group inline-flex items-center gap-2 text-textColor bg-black text-xs sm:text-sm font-medium px-[21px] py-[18px] hover:bg-white hover:text-black transition whitespace-nowrap">
               Read More About Us
               <BtnIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-current  transition-colors duration-300" />
-            </button>
+            </Link>
           </div>
         </div>
 

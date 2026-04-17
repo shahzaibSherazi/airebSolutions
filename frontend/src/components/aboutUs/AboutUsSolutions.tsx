@@ -6,7 +6,7 @@ const AboutUsSolutions = () => {
       style={{
         background: "linear-gradient(269.9deg, #102545 43.69%, #02070F 99.92%)",
       }}>
-      <div className="container grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-2 lg:px-8">
         <div>
           <h1 className="font-stoke font-light text-h2 mb-12">
             Elevating brands with <br className="hidden lg:block" /> digital

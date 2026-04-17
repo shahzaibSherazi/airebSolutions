@@ -43,7 +43,7 @@ export default function APICRMIntegration() {
 
   return (
     <section className="bg-black text-white">
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         {/* Header */}
         <span className="inline-block mb-12 md:mb-16 bg-primary text-textColor text-base font-outfit font-medium px-4 py-2">
           Our Work Process
@@ -86,7 +86,7 @@ export default function APICRMIntegration() {
               <div
                 key={index}
                 className="
-                border-b  p-6 sm:p-8 
+                border-b  p-2 sm:p-8 
                transition-all duration-300 group
                 flex flex-col h-auto hover:bg-primary">
                 {/* Top Row: Number, Title, Arrow in one line */}

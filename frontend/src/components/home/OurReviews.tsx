@@ -99,16 +99,16 @@ export default function ClientReviews() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative bg-black text-white py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-black text-white  overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
 
-      <div className="container relative max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center">
+      <div className="container relative py-16 lg:py-24 px-1 lg:px-8 flex flex-col items-center">
         {/* Our Reviews Button */}
-        <button className="relative mb-[44px] sm:mb-10 lg:mb-[34px] bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] hover:bg-blue-700 transition-colors">
+        <div className="relative mb-[44px] sm:mb-10 lg:mb-[34px] bg-primary font-stoke font-medium text-white px-6 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[22px] transition-colors">
           Our Reviews
           <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
-        </button>
+        </div>
 
         {/* Heading */}
         <motion.div
@@ -161,7 +161,7 @@ export default function ClientReviews() {
                   background:
                     "linear-gradient(180deg, #629DFF 0%, #000000 100%)",
                 }}
-                className="px-[7px] sm:px-[15px] lg:px-[23px] py-[7px] sm:py-[15px] lg:py-[23px]">
+                className="px-[4px] sm:px-[15px] lg:px-[23px] py-[7px] sm:py-[15px] lg:py-[23px]">
                 <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[180px_1fr] md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr] xl:grid-cols-[320px_1fr] gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center">
                   {/* Image */}
                   <div className="flex justify-center">
@@ -185,16 +185,16 @@ export default function ClientReviews() {
                     </div> */}
 
                     {/* Quote Text */}
-                    <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 lg:mb-6 xl:mb-8 text-gray-200 line-clamp-3 sm:line-clamp-4 lg:line-clamp-5">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg font-outfit sm:leading-relaxed leading-3 mb-3 sm:mb-4 lg:mb-6 xl:mb-8 text-white line-clamp-3 sm:line-clamp-4 lg:line-clamp-5">
                       {currentTestimonial.quote}
                     </p>
 
                     {/* Author */}
                     <div>
-                      <h4 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold mb-1">
+                      <h4 className="text-xs sm:text-base md:text-lg font-outfit lg:text-xl xl:text-2xl font-semibold mb-1">
                         {currentTestimonial.name}
                       </h4>
-                      <p className="text-xs sm:text-sm md:text-base text-white">
+                      <p className="text-xs sm:text-sm md:text-base text-white font-outfit">
                         {currentTestimonial.position}
                       </p>
                     </div>

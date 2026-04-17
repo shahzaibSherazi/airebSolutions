@@ -36,13 +36,11 @@ const ChooseUs = () => {
       }}
       className=" w-full">
       {/* Container */}
-      <div className="container flex flex-col justify-center items-center px-6 lg:px-8 py-16  lg:py-24">
+      <div className="container flex flex-col justify-center items-center px-2 lg:px-8 py-16  lg:py-24">
         {/* Badge */}
-        <div className="mb-8 sm:mb-10 md:mb-12">
-          <span className="inline-block bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
-            Why Choose Us
-          </span>
-        </div>
+        <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
+          Why Choose Us
+        </span>
         <ChooseUsAnimated />
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">

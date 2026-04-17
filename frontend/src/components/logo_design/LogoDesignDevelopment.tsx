@@ -45,7 +45,7 @@ const LogoDesignDevelopment = () => {
 
   return (
     <section className="w-full bg-[#0E1828] ">
-      <div className=" max-w-5xl mx-auto py-16  lg:py-24 px-6 lg:px-8">
+      <div className=" max-w-5xl mx-auto py-16  lg:py-24 px-2 lg:px-8">
         {/* Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16 md:mb-20"
@@ -56,7 +56,7 @@ const LogoDesignDevelopment = () => {
           <h2 className="text-white font-stoke text-h2 font-extralight mb-4 sm:mb-6">
             Our Development Process
           </h2>
-          <p className="text-textColor font-outfit text-sm sm:text-base max-w-3xl mx-auto">
+          <p className="text-textColor font-outfit text-p max-w-3xl mx-auto">
             At Aireb Solutions, we follow a streamlined on-demand app
             development
             <br className="hidden sm:block" />

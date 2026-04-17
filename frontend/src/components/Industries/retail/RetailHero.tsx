@@ -4,7 +4,7 @@ import bgImg from "@/assets/Industies/retail/bg-img.png";
 
 const RetailHero = () => {
   return (
-    <section className="heros_height relative overflow-hidden flex flex-col justify-end px-6 lg:px-8 py-8 lg:py-10">
+    <section className="heros_height relative overflow-hidden flex flex-col justify-end ">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -19,7 +19,7 @@ const RetailHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full ">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full px-2 lg:px-8 py-8 lg:py-10">
         {/* Left Side - Content */}
         <div className="relative flex flex-col justify-end mb-8">
           <div

@@ -105,7 +105,7 @@ function StepCard({ step }) {
 
   return (
     <div
-      className="rounded-xl cursor-pointer transition-all duration-300 px-7 py-9 border border-primary"
+      className="rounded-xl cursor-pointer transition-all duration-300 px-4 sm:px-7 py-9 border border-primary"
       style={{
         background: "linear-gradient(90deg, #4285F4 0%, #0E1828 100%)",
       }}
@@ -115,7 +115,7 @@ function StepCard({ step }) {
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 min-w-0">
           <StepIcon />
-          <span className="text-white font-bold font-outfit text-[clamp(16px,1.1vw,20px)] leading-snug">
+          <span className="text-white font-bold font-outfit text-title leading-snug">
             {step.title}
           </span>
         </div>
@@ -131,7 +131,7 @@ function StepCard({ step }) {
             "max-height 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease",
           opacity: isOpen ? 1 : 0,
         }}>
-        <p className="text-white font-outfit text-[clamp(14px,1vw,16px)] line-clamp-2 overflow-hidden font-light leading-relaxed mt-4">
+        <p className="text-white font-outfit text-p line-clamp-2 overflow-hidden font-light leading-relaxed mt-4">
           {step.description}
         </p>
       </div>
@@ -143,7 +143,7 @@ function StepCard({ step }) {
 export default function BankingCycle() {
   return (
     <section className="w-full bg-[#0E1828]">
-      <div className="container py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8">
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-white font-normal leading-tight mb-4 font-stoke text-h2">

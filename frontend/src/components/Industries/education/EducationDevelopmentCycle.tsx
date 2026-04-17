@@ -168,7 +168,7 @@ export default function EducationDevelopmentCycle() {
 
   return (
     <section className="w-full bg-[#02070F]  overflow-hidden">
-      <div className="container py-16  lg:py-24 px-6 lg:px-8">
+      <div className="container py-16  lg:py-24 px-2 lg:px-8">
         {/* Header */}
         <div
           ref={headerRef}

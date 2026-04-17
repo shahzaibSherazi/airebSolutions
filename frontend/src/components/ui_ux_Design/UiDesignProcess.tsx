@@ -72,7 +72,7 @@ export default function UiDesignProcess() {
 
   return (
     <section className="w-full bg-[#0E1828] ">
-      <div className="container px-6 md:px-8 py-16 lg:py-24">
+      <div className="container px-2 md:px-8 py-16 lg:py-24">
         {/* ── Header ── */}
         <motion.div
           className="mb-16"

@@ -8,7 +8,7 @@ const BenifitsDialer = () => {
         background: "linear-gradient(97.32deg, #0E1828 1.89%, #000000 98.11%)",
       }}
       className="overflow-hidden">
-      <div className="container px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
+      <div className="container px-2 lg:px-8 grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
         {/* Left Column - Content */}
         <div
           className="flex flex-col  sm:space-y-10 space-y-8  py-16 lg:py-24 

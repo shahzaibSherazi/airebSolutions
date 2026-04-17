@@ -211,7 +211,7 @@ const DialerSolutions = () => {
         background: "linear-gradient(180deg, #0E1828 0%, #000000 22.96%)",
       }}
       className=" text-white ">
-      <div className="container py-16 lg:py-24 px-4 sm:px-6 lg:px-8 ">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8 ">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

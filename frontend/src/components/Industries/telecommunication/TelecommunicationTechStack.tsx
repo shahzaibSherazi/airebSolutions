@@ -114,7 +114,7 @@ export default function TelecommunicationTechStack() {
   return (
     <>
       <section className=" bg-[#02070F] ">
-        <div className="container px-6 sm:px-8  py-16 md:py-24">
+        <div className="container px-2 lg:px-8  py-16 md:py-24">
           {/* ── Top Header Row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
             {/* Left: Title + Description */}
@@ -124,7 +124,7 @@ export default function TelecommunicationTechStack() {
                 <br className="" />
                 Expertise
               </h1>
-              <p className="text-textColor font-outfit text-sm md:text-base max-w-2xl leading-[1.85] font-light">
+              <p className="text-textColor font-outfit text-p max-w-2xl leading-[1.85] font-light">
                 Our gaming application development services combine proven
                 regulatory expertise with a robust, modern tech stack to deliver
                 secure, scalable, and compliant fintech solutions.
@@ -135,7 +135,7 @@ export default function TelecommunicationTechStack() {
             <div className="flex-shrink-0 sm:pt-2">
               <a
                 href="#contact-form"
-                className="group flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+                className="group w-fit font-outfit flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",

@@ -2,7 +2,7 @@ import bgImg from "../../assets/ui-ux-design_assets/hero_bg.png";
 
 const UiDesignHero = () => {
   return (
-    <section className="heros_height relative flex flex-col justify-end w-full bg-black">
+    <section className="heros_height relative flex flex-col justify-center text-center sm:text-start w-full bg-black">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -13,7 +13,7 @@ const UiDesignHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="container relative z-10  px-6 py-8 lg:py-10 flex flex-col gap-4 justify-end ">
+      <div className="container relative z-10  px-2 py-8 lg:py-10 flex flex-col gap-4 sm:items-start items-center justify-end ">
         <h1 className="font-stoke text-h1 leading-[1.28] text-white">
           User-Focused,Flexible
           <br className="hidden lg:block" /> Design Solutions.

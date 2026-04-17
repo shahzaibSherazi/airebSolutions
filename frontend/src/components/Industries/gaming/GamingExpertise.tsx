@@ -69,11 +69,11 @@ function Card({ card, delay }) {
         transform: inView ? "translateY(0)" : "translateY(32px)",
         transitionDelay: `${delay}ms`,
       }}>
-      <h3 className="text-primary font-outfit  text-lg sm:text-2xl font-normal leading-snug">
+      <h3 className="text-primary font-outfit  text-title font-normal leading-snug">
         {card.title}
       </h3>
 
-      <p className="text-textColor font-outfit  text-sm md:text-base leading-[1.8] font-light">
+      <p className="text-textColor font-outfit  text-p leading-[1.8] font-light">
         {card.description}
       </p>
     </div>
@@ -90,7 +90,7 @@ export default function GamingExpertise() {
         style={{
           background: "linear-gradient(180deg, #4285F4 0%, #0E1828 38.46%)",
         }}>
-        <div className="container  px-6 lg:px-8 py-16 md:py-24">
+        <div className="container  px-2 lg:px-8 py-16 md:py-24">
           {/* ── Badge ── */}
           <div
             ref={headerRef}

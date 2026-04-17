@@ -186,7 +186,7 @@ export default function ContactCenterProcess() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#0E1828] ">
-      <div className="container px-6 lg:px-8 py-16 sm:py-20">
+      <div className="container px-2 lg:px-8 py-16 sm:py-20">
         {/* Header */}
         <motion.div
           className="mb-10 sm:mb-14"
@@ -194,8 +194,8 @@ export default function ContactCenterProcess() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-textColor font-extralight font-outfit text-h2 mb-3 leading-tight">
-            Our UI/UX Design Process
+          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-3 leading-tight">
+            Our Contact Center Process
           </h1>
           <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
             At Aireb Solutions, we follow a streamlined on-demand app

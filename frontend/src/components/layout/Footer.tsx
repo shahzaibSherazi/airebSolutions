@@ -4,11 +4,10 @@ import UsaFlag from "@/assets/icons/footer/usa-flag.svg?react";
 import CanadaFlag from "@/assets/icons/footer/canada-flag.svg?react";
 import PakFlag from "@/assets/icons/footer/pak-flag.svg?react";
 import bgImg from "@/assets/icons/footer/circle.png";
-import { Link } from "react-router-dom";
 import AnimatedCircle from "../ui/AnimatedCircle";
 import AnimatedCircleRight from "../ui/AnimatedCircleRight";
 import PremiumCircle from "../ui/AnimatedCircleRight";
-
+import { Link, NavLink, useLocation } from "react-router-dom";
 // ── Data ──────────────────────────────────────────────────────────────────────
 const ALL_SERVICES = [
   "Web Development",
@@ -73,7 +72,9 @@ const INITIAL_COUNT = 5;
 export default function Footer() {
   const [showAllServices, setShowAllServices] = useState(false);
   const [showAllIndustries, setShowAllIndustries] = useState(false);
-
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `text-textColor text-base font-outfit font-thin leading-snug transition-colors duration-200
+   ${isActive ? "underline underline-offset-2 text-white" : "hover:text-black"}`;
   const visibleServices = showAllServices
     ? ALL_SERVICES
     : ALL_SERVICES.slice(0, INITIAL_COUNT);
@@ -87,9 +88,9 @@ export default function Footer() {
       style={{
         background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
       }}>
-      <div className="container">
+      <div className="container pt-16 lg:pt-24 pb-10 lg:px-8 px-2">
         {/* ── Top: 4 columns ─────────────────────────────────────────────────── */}
-        <div className="  pt-16 lg:pt-24 pb-10">
+        <div className="  ">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
             {/* Services */}
             <div className="flex flex-col gap-3">
@@ -97,11 +98,9 @@ export default function Footer() {
                 Services
               </h4>
               {visibleServices.map((item, i) => (
-                <Link
-                  to={ROUTES[item] || "#"}
-                  className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
+                <NavLink key={i} to={ROUTES[item] || "#"} className={linkClass}>
                   {item}
-                </Link>
+                </NavLink>
               ))}
               <button
                 onClick={() => setShowAllServices((p) => !p)}
@@ -116,11 +115,9 @@ export default function Footer() {
                 Industries
               </h4>
               {visibleIndustries.map((item, i) => (
-                <Link
-                  to={ROUTES[item] || "#"}
-                  className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
+                <NavLink key={i} to={ROUTES[item] || "#"} className={linkClass}>
                   {item}
-                </Link>
+                </NavLink>
               ))}
               <button
                 onClick={() => setShowAllIndustries((p) => !p)}
@@ -141,12 +138,9 @@ export default function Footer() {
                 { name: "White Papers", path: "/resources/white-papers" },
                 { name: "Careers", path: "/about/careers" },
               ].map((item, i) => (
-                <Link
-                  key={i}
-                  to={item.path}
-                  className="text-textColor text-base font-outfit font-thin hover:text-black transition-colors duration-200 leading-snug">
+                <NavLink key={i} to={item.path} className={linkClass}>
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
 
@@ -240,17 +234,13 @@ export default function Footer() {
 
               {/* Privacy + Terms */}
               <div className="flex items-center gap-2 text-sm">
-                <Link
-                  to="/privacy-policy"
-                  className="text-white font-outfit hover:text-primary transition-colors">
+                <NavLink to="/privacy-policy" className={linkClass}>
                   Privacy Policy
-                </Link>
+                </NavLink>
                 <span className="text-white font-outfit">|</span>
-                <Link
-                  to="/terms&conditions"
-                  className="text-white font-outfit hover:text-primary transition-colors">
+                <NavLink to="/terms&conditions" className={linkClass}>
                   Terms of Use
-                </Link>
+                </NavLink>
               </div>
 
               {/* Copyright */}

@@ -17,7 +17,7 @@ export default function BankingHero() {
         }}
         className="absolute inset-0"
       />
-      <div className="container w-full z-10 relative  px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
+      <div className="container w-full z-10 relative  px-2 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}

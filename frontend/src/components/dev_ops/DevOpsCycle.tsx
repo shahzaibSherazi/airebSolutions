@@ -382,7 +382,7 @@ const DevOpsCycle = () => {
       ref={sectionRef}
       className=" bg-primary"
       aria-labelledby="devops-title">
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         {/* Section Title */}
         <motion.div
           className="text-center mb-[77px]"

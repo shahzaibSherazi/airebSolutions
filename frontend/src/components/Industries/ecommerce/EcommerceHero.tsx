@@ -67,7 +67,7 @@ export default function EcommerceHero() {
           }}
           className="absolute inset-0"
         />
-        <div className="container relative  z-10 w-full  px-6 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+        <div className="container relative  z-10 w-full  px-2 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           {/* ── LEFT: Text Content ── */}
           <div className="flex flex-col items-start self-end gap-5 w-full">
             {/* Sector badge */}
@@ -91,10 +91,10 @@ export default function EcommerceHero() {
           {/* ── RIGHT: Chat UI Panel ── */}
           <div className="relative w-full  max-w-[480px]">
             {/* Corner marks top-right and bottom-left */}
-            <div className="absolute -top-2 -right-2 w-4 h-4 pointer-events-none">
+            <div className="absolute -top-1 -right-1 w-4 h-4 pointer-events-none">
               <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#4285F4]" />
             </div>
-            <div className="absolute -bottom-2 -left-2 w-4 h-4 pointer-events-none">
+            <div className="absolute -bottom-1 -left-1 w-4 h-4 pointer-events-none">
               <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#4285F4]" />
             </div>
 

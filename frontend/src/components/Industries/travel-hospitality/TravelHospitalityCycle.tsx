@@ -194,7 +194,7 @@ export default function TravelHospitalityCycle() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#0E1828] ">
-      <div className="container py-16 md:py-24 px-6 lg:px-8">
+      <div className="container py-16 md:py-24 px-2 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="mb-16 md:mb-20">
           <h1 className="font-stoke text-h2 leading-[1.28] text-white mb-6">

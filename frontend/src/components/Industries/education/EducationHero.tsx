@@ -5,12 +5,12 @@ import PhoneMockup from "./PhoneMockup";
 export default function EducationHero() {
   return (
     <section
-      className="heros_height relative w-full flex flex-col justify-end"
+      className="heros_height relative w-full flex flex-col justify-center"
       style={{
         background:
           "linear-gradient(257.21deg, rgba(0, 0, 0, 0) 1.73%, #0E1828 98.27%)",
       }}>
-      <div className="container w-full px-6 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
+      <div className="container w-full px-2 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-end items-start w-full space-y-6">
           {/* Sector Button */}

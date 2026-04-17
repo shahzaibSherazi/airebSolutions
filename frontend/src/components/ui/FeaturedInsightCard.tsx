@@ -381,11 +381,11 @@ const FeaturedInsightCard: React.FC<FeaturedInsightCardProps> = ({
         viewport={{ once: false }}
         className={`flex flex-col flex-1 ${theme.content}`}>
         <h3
-          className={`text-base md:text-lg font-medium font-outfit px-6 ${theme.title}`}>
+          className={`text-title font-medium font-outfit px-6 ${theme.title}`}>
           {title}
         </h3>
         <p
-          className={`text-sm md:text-base font-normal leading-relaxed mt-2 line-clamp-3 px-6 ${theme.description}`}>
+          className={`text-p font-outfit font-normal mt-2 line-clamp-3 px-6 ${theme.description}`}>
           {description}
         </p>
 

@@ -63,7 +63,7 @@ export default function ContactCenterSection() {
 
   return (
     <div className=" w-full flex items-center justify-center bg-black">
-      <div className="container px-6 lg:px-8 py-16 md:py-24">
+      <div className="container px-2 lg:px-8 py-16 md:py-24">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-6 mb-5 md:mb-4">
           <motion.div
@@ -81,7 +81,7 @@ export default function ContactCenterSection() {
             style={{
               background: "linear-gradient(90deg, #4875BE 0%, #000000 100%)",
             }}>
-            <span className="leading-snug font-outfit group-hover:translate-x-2 transition-transform duration-500 ease-out  font-medium text-sm md:text-lg flex-1">
+            <span className="leading-snug font-outfit group-hover:translate-x-2 transition-transform duration-500 ease-out  font-medium text-p flex-1">
               AI-Powered Communications Make <br className="hidden lg:block" />
               Working Together Smarter
             </span>
@@ -92,7 +92,7 @@ export default function ContactCenterSection() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-textColor text-sm md:text-base mb-8 md:mb-14 font-outfit font-light leading-relaxed">
+        <p className="text-textColor text-p mb-8 md:mb-14 font-outfit font-light leading-relaxed">
           At Aireb Solutions, we follow a streamlined on-demand app development{" "}
           <br className="hidden lg:block" />
           cycle that ensures efficiency and innovation
@@ -109,10 +109,10 @@ export default function ContactCenterSection() {
                   "linear-gradient(180deg, #629DFF 0%, #000000 52.4%, #629DFF 99.52%)",
               }}>
               <div className="rounded-xl p-4 md:p-6 h-full bg-black">
-                <h3 className="text-textColor font-semibold text-base md:text-lg lg:text-xl mb-2 md:mb-3">
+                <h3 className="text-textColor font-semibold text-title lg:text-xl mb-2 md:mb-3">
                   {card.title}
                 </h3>
-                <p className="text-textColor font-outfit font-normal text-sm leading-relaxed">
+                <p className="text-textColor font-outfit font-normal text-p leading-relaxed">
                   {card.desc}
                 </p>
               </div>
@@ -146,10 +146,10 @@ export default function ContactCenterSection() {
             }}
             className="flex-[2] h-64 rounded-xl p-px">
             <div className="rounded-xl p-6 h-full bg-black">
-              <h3 className="text-textColor font-semibold text-[clamp(16px,2vw,24px)] mb-3">
+              <h3 className="text-textColor font-semibold text-title mb-3">
                 Bussiness-Driven Design
               </h3>
-              <p className="text-textColor font-outfit font-normal text-base line-clamp-5 overflow-hidden leading-relaxed">
+              <p className="text-textColor font-outfit font-normal text-p line-clamp-5 overflow-hidden leading-relaxed">
                 We don't just create beautiful interfaces; we build strategic
                 tools that boost your business metrics. Every design element
                 serves a clear purpose to increase conversion and retention.

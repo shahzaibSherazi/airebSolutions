@@ -120,7 +120,7 @@ const OurValues = () => {
         background:
           "linear-gradient(359.99deg, #02070F 39.11%, #102545 57.01%)",
       }}>
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         <section
           ref={sectionRef}
           className="relative w-full text-white"
@@ -207,9 +207,9 @@ const OurValues = () => {
               cost-efficiency of top global talent giving you seamless
               communication, faster delivery, and exceptional results.
             </p>
-            <button className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
+            <a href="#contact-form" className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
               About Us <ArrowIcon />
-            </button>
+            </a>
           </div>
 
           {/* Right: tabs + card */}

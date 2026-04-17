@@ -13,7 +13,7 @@ export default function ContactForm() {
       id="contact-form"
       className="bg-black text-white relative  flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
-      <div className="container w-full flex items-center justify-between px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container w-full flex items-center justify-between px-2 lg:px-8 py-16 lg:py-24">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
             <motion.div

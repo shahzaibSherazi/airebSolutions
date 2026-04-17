@@ -9,6 +9,7 @@ import proj4 from "@/assets/resources/portfolio/card-4.png";
 import proj5 from "@/assets/resources/portfolio/card-5.png";
 import proj6 from "@/assets/resources/portfolio/card-6.png";
 import proj7 from "@/assets/resources/portfolio/card-7.png";
+import { Link } from "react-router-dom";
 
 // ── Project Data ──
 const projects = [
@@ -21,6 +22,7 @@ const projects = [
     satisfaction: 4,
     production: "May 10, 2022",
     image: proj1,
+    link: "https://tozcall.com/",
   },
   {
     id: 2,
@@ -101,7 +103,7 @@ const StarRating = ({ count }) => (
 // ── Project Card ──
 const ProjectCard = ({ project }) => (
   <div
-    className="relative w-full rounded-2xl overflow-hidden flex flex-col sm:flex-row gap-6 p-6 sm:p-8"
+    className="relative w-full rounded-2xl overflow-hidden flex flex-col sm:flex-row gap-6 p-2 sm:p-8"
     style={{
       background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
       borderBottom: "1px solid #4285F4",
@@ -115,12 +117,12 @@ const ProjectCard = ({ project }) => (
         </span>
 
         {/* Title */}
-        <h3 className="font-outfit text-[clamp(20px,3vw,36px)] line-clamp-2 overflow-hidden font-bold text-white leading-snug">
+        <h3 className="font-outfit text-title line-clamp-2 overflow-hidden font-bold text-white leading-snug">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="font-outfit text-[clamp(13px,1.5vw,20px)] line-clamp-4 overflow-hidden font-normal text-white leading-relaxed">
+        <p className="font-outfit text-p line-clamp-4 overflow-hidden font-normal text-white leading-relaxed">
           {project.desc}
         </p>
       </div>
@@ -157,9 +159,13 @@ const ProjectCard = ({ project }) => (
       </div>
 
       {/* View Project Button */}
-      <button className="mt-4 self-start bg-primary px-5 py-2 rounded-sm font-outfit text-sm text-white font-medium transition-all hover:opacity-90">
+      <Link
+        to={project.link}
+        className="mt-4 self-start bg-primary px-5 py-2 rounded-sm font-outfit text-sm text-white font-medium transition-all hover:opacity-90"
+        target="_blank"
+        rel="noopener noreferrer">
         View Project
-      </button>
+      </Link>
     </div>
 
     {/* Right: Laptop mockup image */}
@@ -180,7 +186,7 @@ const AllProjects = () => {
   return (
     <section className="relative w-full bg-[#02070F] text-white ">
       {/* Heading */}
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         <div className="flex flex-col items-center text-center mb-10 gap-1">
           <h2 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal text-white">
             Proven Success In

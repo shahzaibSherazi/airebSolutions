@@ -122,7 +122,7 @@ const CreativeMinds = () => {
           "linear-gradient(359.92deg, #02070F 22.66%, #102545 73.53%)",
       }}
       className="w-full  overflow-hidden">
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-textColor font-stoke font-normal text-h2 leading-tight mb-4">

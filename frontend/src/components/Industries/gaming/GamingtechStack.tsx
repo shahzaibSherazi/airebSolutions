@@ -114,7 +114,7 @@ export default function GamingTechStack() {
   return (
     <>
       <section className=" bg-[#02070F] ">
-        <div className="container px-6 sm:px-8  py-16 md:py-24">
+        <div className="container px-2 lg:px-8  py-16 md:py-24">
           {/* ── Top Header Row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
             {/* Left: Title + Description */}
@@ -124,7 +124,7 @@ export default function GamingTechStack() {
                 <br className="" />
                 Expertise
               </h1>
-              <p className="text-textColor font-outfit text-sm md:text-base max-w-2xl leading-[1.85] font-light">
+              <p className="text-textColor font-outfit text-p max-w-2xl leading-[1.85] font-light">
                 Our gaming application development services combine proven
                 regulatory expertise with a robust, modern tech stack to deliver
                 secure, scalable, and compliant fintech solutions.
@@ -135,7 +135,7 @@ export default function GamingTechStack() {
             <div className="flex-shrink-0 sm:pt-2">
               <a
                 href="#contact-form"
-                className="group flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+                className="group w-fit font-outfit flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",
@@ -149,19 +149,24 @@ export default function GamingTechStack() {
           </div>
 
           {/* ── Main Content Row ── */}
-          <div className="flex flex-col md:flex-row gap-5  ">
+          <div className="relative flex flex-col md:flex-row gap-5  ">
             {/* ── Left Card: Gradient yellow-blue education card ── */}
             <div
               className="relative rounded-[9px] 
-             w-full max-w-[333px] 
+             w-full sm:max-w-[333px] h-full
              
-             flex flex-col justify-end 
-             pt-24 pb-6 px-6"
+             flex flex-col justify-end  items-center
+              pb-6 px-6"
               style={{
                 background: "linear-gradient(180deg, #E23237 0%, #629DFF 100%)",
               }}>
               {/* Floating Image */}
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[70%] max-w-[220px]">
+              <div
+                className="
+   
+  flex items-start justify-center
+  max-w-[160px] md:max-w-[220px]
+">
                 <img
                   src={teckStackImg}
                   alt="Tech Stack"
@@ -175,7 +180,7 @@ export default function GamingTechStack() {
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #000000 100%)",
                 }}
-                className="absolute group bottom-6 flex items-center font-outfit font-bold gap-2  hover:text-black text-white text-sm px-2 py-2 rounded-full transition-all duration-200 border border-primary">
+                className="absolute group bottom-6 left-5 flex items-center font-outfit font-bold gap-2  hover:text-black text-white text-sm px-2 py-2 rounded-full transition-all duration-200 border border-primary">
                 Start A Project
                 <span className="group-hover:text-primary text-white">→</span>
               </button>

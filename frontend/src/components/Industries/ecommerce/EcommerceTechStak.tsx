@@ -177,7 +177,7 @@ export default function EcommerceTechStack() {
   return (
     <>
       <section className="bg-[#02070F] ">
-        <div className="container px-6 sm:px-8 py-16 md:py-24">
+        <div className="container px-2 sm:px-8 py-16 md:py-24">
           {/* ── Top Header Row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
             <div>
@@ -186,7 +186,7 @@ export default function EcommerceTechStack() {
                 <br />
                 Expertise
               </h1>
-              <p className="text-white/70 font-outfit text-sm md:text-base max-w-2xl leading-[1.85] font-light">
+              <p className="text-white font-outfit text-p max-w-2xl leading-[1.85] font-light">
                 Our fintech application development services combine proven
                 regulatory expertise with a robust, modern tech stack to deliver
                 secure, scalable, and compliant fintech solutions.
@@ -195,7 +195,7 @@ export default function EcommerceTechStack() {
             <div className="flex-shrink-0 sm:pt-2">
               <a
                 href="#contact-form"
-                className="group flex w-fit items-center gap-3 border border-blue-500 text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+                className="group flex w-fit font-outfit items-center gap-3 border border-blue-500 text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",
@@ -214,11 +214,11 @@ export default function EcommerceTechStack() {
             <div className="flex flex-col gap-3">
               {/* Card */}
               <div
-                className="rounded-[9px] overflow-hidden flex flex-col justify-between p-6 relative"
+                className="rounded-[9px] overflow-hidden sm:max-w-[340px] w-full flex flex-col justify-between p-6 relative"
                 style={{
                   background: card.gradient,
                   minHeight: "320px",
-                  width: "clamp(260px,30vw,340px)",
+                  // maxWidth: "340px",
                   ...cardStyle,
                 }}>
                 {/* Top label */}

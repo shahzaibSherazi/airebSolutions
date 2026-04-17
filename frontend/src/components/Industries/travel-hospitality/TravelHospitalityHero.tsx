@@ -19,7 +19,7 @@ const TravelHospitalityHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="container px-6 lg:px-8 py-8 lg:py-10 grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
+      <div className="container px-2 lg:px-8 py-8 lg:py-10 grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
         {/* Left Side - Content */}
         <div className="relative flex flex-col justify-end mb-8">
           <p

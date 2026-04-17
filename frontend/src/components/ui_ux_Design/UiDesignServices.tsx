@@ -78,7 +78,7 @@ const UiDesignServices = () => {
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -96,7 +96,7 @@ const UiDesignServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 p-[clamp(24px,3vh,40px)]
+  border border-gray-800 sm:p-[20px] p-[8px]
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -124,7 +124,7 @@ const UiDesignServices = () => {
                 {/* Description */}
                 <p
                   className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-[clamp(12px,1.3vw,15px)] leading-[1.7]
+  text-p leading-[1.7]
   transition-colors duration-500
   line-clamp-5">
                   {service.description}

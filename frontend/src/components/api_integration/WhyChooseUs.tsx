@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
       }}
       className=" w-full ">
       {/* Container */}
-      <div className="container py-16  lg:py-24 px-6 lg:px-8 flex flex-col justify-center items-center ">
+      <div className="container py-16  lg:py-24 px-2 lg:px-8 flex flex-col justify-center items-center ">
         {/* Badge */}
         <span className="inline-block mb-8 sm:mb-10 md:mb-12 bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
           Why Choose Us

@@ -54,7 +54,7 @@ const BenefitsSection = () => {
   return (
     <section className="relative w-full bg-[#02070F] text-white">
       {/* ── Header ── */}
-      <div className="container  px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container  px-2 lg:px-8 py-16 lg:py-24">
         <div className="mb-10">
           <button className="bg-primary text-white font-outfit text-[clamp(12px,1.8vw,18px)] font-medium px-4 py-1.5 mb-6">
             Benefits
@@ -62,7 +62,7 @@ const BenefitsSection = () => {
           <h2 className="font-stoke text-h2 font-normal mb-4">
             We Get You Covered!
           </h2>
-          <p className="font-outfit text-[clamp(12px,1.8vw,18px)] font-medium  leading-relaxed">
+          <p className="font-outfit text-p font-medium  leading-relaxed">
             We're here to support your well-being and make sure you have
             everything <br className="hidden lg:block" /> you need to thrive at
             work and in life!
@@ -136,7 +136,7 @@ const BenefitsSection = () => {
             </div>
 
             {/* Email input + button */}
-            <div className="flex items-stretch gap-2 mt-2 max-w-lg">
+            <div className="flex items-stretch flex-wrap gap-2 mt-2 max-w-lg">
               <input
                 type="email"
                 placeholder="Enter Your e-mail"

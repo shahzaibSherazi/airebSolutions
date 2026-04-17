@@ -98,7 +98,7 @@ function StepRow({ step, index, rightStep }) {
   return (
     <div ref={ref} className="mb-6 md:mb-16">
       {/* ── MOBILE: vertical stack ─────────────────────────────────── */}
-      <div className="flex flex-col gap-4 md:hidden">
+      <div className="flex flex-col gap-4 lg:hidden">
         {/* Left square */}
         <div
           className="w-full group p-3 border border-transparent transition-all duration-700"
@@ -150,6 +150,18 @@ function StepRow({ step, index, rightStep }) {
             </h3>
           </div>
         </div>
+        <div
+          className="w-full border border-transparent px-6 py-7 transition-all duration-700"
+          style={{
+            ...rectBorder,
+            transitionDelay: `${recDelay}ms`,
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(24px)",
+          }}>
+          <p className="text-textColor font-outfit font-normal text-sm leading-[1.9] m-0">
+            {step.description2}
+          </p>
+        </div>
       </div>
 
       {/* ── DESKTOP: absolute overlap ──────────────────────────────────
@@ -158,7 +170,7 @@ function StepRow({ step, index, rightStep }) {
           Container padding = OVERHANG so neither square escapes the section.
           Rect paddingLeft/Right = OVERHANG + gap so text never slides under a square.
       ──────────────────────────────────────────────────────────────── */}
-      <div className="hidden md:block relative">
+      <div className="hidden lg:block relative">
         {/* Rectangle */}
         <div
           className="relative healthCareRectangleCard_edge border border-transparent flex flex-col justify-between transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
@@ -168,13 +180,13 @@ function StepRow({ step, index, rightStep }) {
             paddingTop: 32,
             paddingBottom: 32,
             paddingLeft: 150,
-            paddingRight: 100,
+            paddingRight: 150,
             transitionDelay: `${recDelay}ms`,
             opacity: inView ? 1 : 0,
             transform: inView ? "translateX(0)" : "translateX(80px)",
             zIndex: 1,
           }}>
-          <p className="text-textColor font-outfit font-normal text-sm md:text-base line-clamp-2 overflow-hidden leading-[1.9] m-0">
+          <p className="text-textColor font-outfit font-normal  text-sm md:text-base line-clamp-2 overflow-hidden leading-[1.9] m-0">
             {step.description}
           </p>
           <p className="text-textColor font-outfit font-normal text-sm md:text-base line-clamp-2 overflow-hidden leading-[1.9] m-0">
@@ -240,16 +252,18 @@ export default function GamingDevelopmentCycle() {
   return (
     <section className="min-h-screen bg-[#02070F] ">
       <div
-        className="max-w-[960px] mx-auto py-16 md:py-24 px-4 sm:px-6"
-        style={{
-          /*
+        className="max-w-[767px] mx-auto py-16 lg:py-24 px-2"
+        style={
+          {
+            /*
             paddingLeft/Right = OVERHANG (115px) so the square cards
             that use left:-OVERHANG / right:-OVERHANG always land
             inside the section — zero page overflow on any screen size.
           */
-          paddingLeft: OVERHANG,
-          paddingRight: OVERHANG,
-        }}>
+            // paddingLeft: OVERHANG,
+            // paddingRight: OVERHANG,
+          }
+        }>
         {/* Header */}
         <div
           ref={headerRef}
@@ -261,7 +275,7 @@ export default function GamingDevelopmentCycle() {
           <h1 className="text-textColor font-normal leading-tight mb-4 md:mb-5 text-h2 font-stoke">
             Our Gaming Development Cycle
           </h1>
-          <p className="text-textColor text-sm md:text-base font-outfit leading-[1.85] font-light">
+          <p className="text-textColor text-p font-outfit leading-[1.85] font-light">
             Our development cycle ensures that every game we help create or
             enhance is optimized for <br className="hidden lg:block" />
             quality, engagement, and performance.

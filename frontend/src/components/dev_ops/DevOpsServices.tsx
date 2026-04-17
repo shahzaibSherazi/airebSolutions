@@ -248,7 +248,7 @@ const DevOpsServices = () => {
   return (
     <section className="w-full bg-[#02070F] text-white ">
       {/* Heading */}
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         <motion.div
           className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto gap-3 "
           initial={{ y: 60, opacity: 0 }}

@@ -36,7 +36,7 @@ const Expertise = () => {
       }}
       className="relative w-full  overflow-hidden">
       {/* Container */}
-      <div className="container px-6 lg:px-8 py-16 lg:py-24">
+      <div className="container px-2 lg:px-8 py-16 lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
           Why Choose Us

@@ -121,14 +121,15 @@ const ContentWritingChallenges = () => {
             }}>
             <div className="bg-[#192B4A] p-6 sm:p-8 h-full">
               <h3 className="font-stoke text-[clamp(16px,2vw,28px)] font-normal text-white mb-6">
-                What you get with our content writing services
+                {/* What you get with our content writing services */}
+                Solutions:
               </h3>
 
               <ul className="flex flex-col gap-3">
                 {valuePropositions.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                    <span className="font-outfit text-sm lg:text-base text-white leading-relaxed">
+                    <span className="font-outfit text-p text-white leading-relaxed">
                       {item}
                     </span>
                   </li>

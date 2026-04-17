@@ -99,13 +99,13 @@ const cardStyle = {
   borderRadius: "9px",
   width: "100%",
   maxWidth: "450px",
-  minHeight: "347px",
+  // minHeight: "347px",
 };
 
 function ServiceCard({ service, animationDelay = 0 }) {
   return (
     <div
-      className="border border-primary flex flex-col gap-4 p-8 transition-all duration-300 hover:-translate-y-1 group"
+      className="border border-primary flex flex-col gap-4 p-4 sm:p-8 transition-all duration-300 hover:-translate-y-1 group"
       style={{
         ...cardStyle,
         animation: `faddeUp 0.4s ease ${animationDelay}ms both`,
@@ -150,13 +150,13 @@ export default function TravelHospitalityServices() {
   return (
     <>
       <section className="  bg-[#02070F]">
-        <div className="container py-16 lg:py-24 px-6 lg:px-8">
+        <div className="container py-16 lg:py-24 px-2 lg:px-8">
           {/* Header */}
           <div className="text-center mb-14">
             <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
               Our Travel & Hospitality Solutions
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
+            <p className="font-outfit font-normal  mx-auto text-p leading-relaxed">
               At Aireb Solutions, we provide tailored solutions that help travel
               and hospitality businesses <br /> improve operational efficiency,
               enhance guest experiences, and drive profitability.

@@ -159,7 +159,7 @@ export default function HealthCareCycle() {
   return (
     <>
       <section className="min-h-screen bg-[#02070F] ">
-        <div className="max-w-[960px] mx-auto py-16 md:py-24 px-6 md:px-8">
+        <div className="max-w-[960px] mx-auto py-16 md:py-24 px-2 md:px-8">
           {/* Header */}
           <div
             ref={headerRef}

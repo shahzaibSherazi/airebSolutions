@@ -2,7 +2,7 @@ import paperImg from "@/assets/resources/white-papers/hero-img.png";
 import rightImg from "@/assets/resources/white-papers/hero-bg-right.png";
 export default function WhitePaperHero() {
   return (
-    <section className="heros_height relative w-full flex flex-col justify-center overflow-hidden py-8 lg:py-10">
+    <section className="heros_height relative w-full flex flex-col justify-center overflow-hidden ">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -18,7 +18,7 @@ export default function WhitePaperHero() {
       </h1>
 
       {/* ── Content row ── */}
-      <div className="relative z-10 flex items-center justify-center  px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex items-center justify-center py-8 lg:py-10  px-2 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="relative flex flex-col lg:flex-row items-center gap-24  w-full">
           {/* ── Left image with corner brackets ── */}
           <div className="relative flex items-center justify-center flex-shrink-0 w-1/2 mb-10 md:mb-0">
@@ -32,7 +32,7 @@ export default function WhitePaperHero() {
           </div>
 
           {/* ── Right content ── */}
-          <div className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start w-1/2">
+          <div className="relative flex flex-col sm:text-start text-center items-center lg:items-start justify-center lg:justify-start w-full md:w-1/2">
             <div className="absolute left-0 -bottom-28 pointer-events-none hidden md:block">
               <img src={rightImg} className="w-full h-full object-contain" />
             </div>

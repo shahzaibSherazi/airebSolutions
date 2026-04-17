@@ -210,7 +210,7 @@ const ChooseUs = () => {
       }}
       className=" w-full  ">
       {/* Container */}
-      <div className="container flex flex-col justify-center items-center px-6 lg:px-8 py-16  lg:py-24">
+      <div className="container flex flex-col justify-center items-center px-2 lg:px-8 py-16  lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-white mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
           Why Airebsolutions

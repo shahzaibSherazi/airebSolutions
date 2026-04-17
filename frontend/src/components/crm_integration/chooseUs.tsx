@@ -34,7 +34,7 @@ const ChooseUs = () => {
   return (
     <section className="relative w-full bg-primary overflow-hidden">
       {/* Container */}
-      <div className="container px-6 lg:px-8  py-16  lg:py-24">
+      <div className="container px-2 lg:px-8  py-16  lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
           Why Choose Us
@@ -61,7 +61,7 @@ const ChooseUs = () => {
               className="group relative  border-025 hover:bg-black border-black px-4  py-6 md:py-8 transition-all duration-300 cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
               {/* Text with fixed height and overflow handling */}
-              <h3 className="text-white text-center font-outfit relative z-10 text-sm sm:text-base md:text-xl font-normal leading-relaxed pr-8  h-full">
+              <h3 className="text-white text-center font-outfit relative z-10 text-title font-normal leading-relaxed pr-8  h-full">
                 {feature.title}
               </h3>
 
@@ -82,7 +82,7 @@ const ChooseUs = () => {
             </div>
           ))}
         </div>
-        <p className="text-white text-center text-sm sm:text-base md:text-lg font-outfit font-normal leading-relaxed mt-10">
+        <p className="text-white text-center text-p font-outfit font-normal leading-relaxed mt-10">
           We deliver reliable integration solutions at a budget-friendly cost.
         </p>
       </div>

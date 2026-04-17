@@ -68,7 +68,7 @@ const DynamicLeadership = () => {
         background: "linear-gradient(269.9deg, #102545 43.69%, #02070F 99.92%)",
       }}
       className="w-full  overflow-hidden">
-      <div className="container px-6 lg:px-8 pt-16 lg:pt-24 lg:pb-36 pb-20">
+      <div className="container px-2 lg:px-8 pt-16 lg:pt-24 lg:pb-36 pb-20">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-textColor font-stoke font-normal text-h2 leading-tight mb-4">

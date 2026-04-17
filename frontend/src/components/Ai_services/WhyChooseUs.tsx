@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
   return (
     <div className=" text-white  bg-primary">
       {/* Header */}
-      <div className="container py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8">
         <motion.div
           className="text-center mb-16 md:mb-[85px]"
           initial={{ y: 60, opacity: 0 }}
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
           <h1 className="text-h2 font-normal font-stoke leading-[56px] mb-[15px]">
             Why Choose Us
           </h1>
-          <p className="text-white font-outfit font-normal text-sm sm:text-lg leading-[40px]">
+          <p className="text-white font-outfit font-normal text-p leading-[40px]">
             We Design for the Future to Drive Today's Success
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ hover:-translate-y-2 hover:scale-[1.01]">
             </div>
           ))}
         </div>
-        <p className="text-center text-textColor font-outfit font-normal text-sm sm:text-lg leading-[40px] mt-10">
+        <p className="text-center text-textColor font-outfit font-normal text-p leading-[40px] mt-10">
           AI solutions that are cheap and give you a high return on investment
         </p>
       </div>

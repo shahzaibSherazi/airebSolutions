@@ -65,13 +65,13 @@ const HeroSection = () => {
       </video>
 
       {/* HERO CONTENT */}
-      <div className="container relative z-20 flex flex-col items-center justify-center text-center w-full h-full px-6 lg:px-8 py-6 lg:py-8">
-        <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
+      <div className="container relative z-20 flex flex-col items-center justify-center text-center w-full h-full px-1 lg:px-8 py-6 lg:py-8">
+        <p className="font-outfit font-normal text-p leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
           THOUGHTFUL DESIGN ACROSS <br className="hidden sm:inline" />
           BRANDS, PRODUCTS, AND DIGITAL EXPERIENCES
         </p>
 
-        <div className="font-stoke leading-tight tracking-widest mt-8 mb-8">
+        <div className="font-stoke leading-tight tracking-widest mt-8 mb-8 ">
           {["DESIGN", "FOR", "EVERYONE"].map((word, idx) => (
             <div key={idx} className="overflow-hidden">
               <AnimatedText
@@ -79,13 +79,13 @@ const HeroSection = () => {
                 active={activeIndex === idx}
                 completed={completed[idx]}
                 onComplete={handleComplete}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl  leading-[1.1]"
+                className="text-4xl lg:text-6xl "
               />
             </div>
           ))}
         </div>
 
-        <p className="font-outfit font-normal text-sm sm:text-base leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
+        <p className="font-outfit font-normal text-p leading-relaxed tracking-wide text-center max-w-xs sm:max-w-lg mx-auto opacity-100 uppercase">
           We create smart digital solutions that help businesses grow, automate
           processes, and deliver better results through modern technology.
         </p>

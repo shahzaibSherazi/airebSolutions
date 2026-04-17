@@ -11,7 +11,7 @@ const FeaturedSection = () => {
       style={{
         background: "linear-gradient(180deg, #4285F4 0%, #5193FF 100%)",
       }}>
-      <div className="container px-6 lg:px-8 pb-16 lg:pb-24 flex flex-col gap-8 sm:gap-10 md:gap-12">
+      <div className="container px-2 lg:px-8 pb-16 lg:pb-24 flex flex-col gap-8 sm:gap-10 md:gap-12">
         <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
           {/* Text Content */}
           <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">
@@ -21,17 +21,19 @@ const FeaturedSection = () => {
 
             {/* <p className="lg:max-w-[60vw] text-base sm:text-lg md:text-xl font-normal font-outfit text-[#000000] leading-relaxed"> */}
             <AnimatedParagraph
-              className="lg:max-w-[80vw] text-[clamp(18px,3vw,32px)] font-outfit leading-[48px] md:leading-relaxed"
+              className="lg:max-w-[80vw] text-[clamp(18px,3vw,36px)] font-outfit sm:leading-[48px] md:leading-relaxed"
               text="We share insights on design, technology, and digital innovation from UI/UX design best practices, modern web development, DevOps automation and emerging tech. Explore our case studies, blogs and white papers for practical knowledge, real-world solutions and expert perspectives to help businesses make smarter decisions and build scalable digital solutions."
             />
             {/* </p> */}
           </div>
 
           {/* Button */}
-          <button className="group lg:w-auto  lg:justify-end flex items-center gap-2 bg-black text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-white hover:text-black transition">
+          <a
+            href="#contact-form"
+            className="group lg:w-auto  lg:justify-end flex items-center gap-2 bg-black text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-white hover:text-black transition">
             Let's work together
             <BtnIcon className="w-3 h-3 text-current  transition-colors duration-300" />
-          </button>
+          </a>
         </div>
 
         {/* Cards */}
