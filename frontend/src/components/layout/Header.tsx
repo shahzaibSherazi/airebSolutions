@@ -960,7 +960,7 @@ const Header = () => {
                 setIsMobileMenuOpen(false);
                 setActiveMobileMenu(null);
               }}
-              className="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium shadow-lg border border-white/20 transition-all">
+              className="w-fit bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium shadow-lg border border-white/20 transition-all">
               CONTACT US
             </button>
           </div>

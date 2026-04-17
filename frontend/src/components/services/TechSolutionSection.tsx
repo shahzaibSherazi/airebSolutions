@@ -154,7 +154,7 @@ const TechSolutionsSection = () => {
 
   return (
     <div className="min-h-screen bg-black text-white ">
-      <div className="container lg:py-24 py-16 px-6 lg:px-8">
+      <div className="container lg:py-24 py-16 px-2 lg:px-8">
         {/* Header Section */}
         <motion.div
           className="text-center mb-16 lg:mb-[91px]"
@@ -162,7 +162,7 @@ const TechSolutionsSection = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-[clamp(18px,4vw,42px)] font-normal font-stoke mb-2 lg:leading-[58px]">
+          <h1 className="text-h2 font-normal font-stoke mb-2 lg:leading-[58px]">
             Innovative Technology, Design, and{" "}
             <br className="hidden lg:block" />
             Communication Solutions
@@ -170,7 +170,7 @@ const TechSolutionsSection = () => {
           {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
             Communication Solutions
           </h1> */}
-          <p className="text-[#EBEBEB] text-sm sm:text-base font-outfit font-normal max-w-3xl mx-auto">
+          <p className="text-[#EBEBEB] text-p font-outfit font-normal max-w-3xl mx-auto">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter

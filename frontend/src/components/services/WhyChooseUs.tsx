@@ -52,10 +52,10 @@ const WhyChooseUs = () => {
       style={{
         background: "linear-gradient(135.23deg, #4285F4 2.74%, #629DFF 97.26%)",
       }}>
-      <div className="container py-16 lg:py-24 px-6 lg:px-8">
+      <div className="container py-16 lg:py-24 px-2 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-normal font-stoke leading-[56px] mb-[20px]">
+          <h1 className="text-h2 text-black font-normal font-stoke leading-[56px] mb-[20px]">
             Why Choose Us
           </h1>
           <motion.div
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <p className="text-textColor font-outfit font-normal text-sm sm:text-lg">
+            <p className="text-textColor font-outfit font-normal text-p">
               We Design for the Future to Drive Today's Success
             </p>
           </motion.div>
@@ -77,11 +77,11 @@ const WhyChooseUs = () => {
               <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
             </div>
 
-            <div className="px-5">
+            <div className="px-2 sm:px-5">
               <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-bold mb-[7px]">
                 {features[0].title}
               </h3>
-              <p className="text-black group-hover:text-textColor text-base font-outfit font-light leading-[28px]">
+              <p className="text-black group-hover:text-textColor text-p font-outfit font-light leading-[28px]">
                 {features[0].description}
               </p>
             </div>
@@ -95,11 +95,11 @@ hover:-translate-y-2 hover:scale-[1.01]">
                 <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
               </div>
             </div>
-            <div className="px-5">
+            <div className="px-2 sm:px-5">
               <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-bold mb-[7px]">
                 {features[1].title}
               </h3>
-              <p className="text-black group-hover:text-textColor text-base font-outfit font-light leading-[28px]">
+              <p className="text-black group-hover:text-textColor text-p font-outfit font-light leading-[28px]">
                 {features[1].description}
               </p>
             </div>

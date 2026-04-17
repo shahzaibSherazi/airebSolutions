@@ -1,5 +1,6 @@
 import paperImg from "@/assets/resources/white-papers/hero-img.png";
 import rightImg from "@/assets/resources/white-papers/hero-bg-right.png";
+import { Link } from "react-router-dom";
 export default function CaseStudiesHero() {
   return (
     <section className="heros_height relative flex flex-col justify-center w-full overflow-hidden ">
@@ -49,10 +50,12 @@ export default function CaseStudiesHero() {
 
             {/* Read Now button */}
             <div className="flex justify-center md:justify-start">
-              <button className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white  rounded-sm px-[clamp(10px,2vw,24px)] py-[clamp(8px,1.1vw,12px)] transition-all duration-200 hover:opacity-90 active:scale-95">
+              <Link
+                to="/services/web-development"
+                className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white  rounded-sm px-[clamp(10px,2vw,24px)] py-[clamp(8px,1.1vw,12px)] transition-all duration-200 hover:opacity-90 active:scale-95">
                 Read Now
                 <span className="text-base">→</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

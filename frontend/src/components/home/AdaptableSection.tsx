@@ -39,14 +39,16 @@ export default function AdaptableSection() {
         {/* Scrollable cards */}
         <Swiper
           modules={[Autoplay, FreeMode]}
+          allowTouchMove={false}
           simulateTouch={false}
+          touchStartPreventDefault={false}
+          freeMode={false}
           loop={true}
           speed={5000}
           autoplay={{
             delay: 1,
             disableOnInteraction: false,
           }}
-          freeMode={true}
           slidesPerView="auto"
           spaceBetween={16}
           breakpoints={{

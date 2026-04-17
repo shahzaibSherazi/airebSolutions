@@ -9,7 +9,9 @@ export default function ContactUsHero() {
   const [showSuccess, setShowSuccess] = useState(false);
 
   return (
-    <section className="heros_height relative w-full flex items-center justify-center overflow-hidden  ">
+    <section
+      id="contact-us"
+      className="heros_height relative w-full flex items-center justify-center overflow-hidden  ">
       {/* Subtle bottom gradient */}
       <div
         style={{
@@ -18,7 +20,7 @@ export default function ContactUsHero() {
         className="absolute inset-0 "
       />
 
-      <div className="container relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-6 lg:px-8 py-6">
+      <div className="container relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-2 lg:px-8 py-6">
         {/* ───────── LEFT CONTENT ───────── */}
         <div className="">
           {/* Badge */}

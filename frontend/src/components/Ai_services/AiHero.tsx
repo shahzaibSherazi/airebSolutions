@@ -12,7 +12,7 @@ const AiHero = () => {
         }}
       />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
+      <div className="absolute inset-0  bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.5)_50%,rgba(66,133,244,0.25)_100%)] sm:bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
       <div className="container relative z-10  px-6 py-8  lg:py-10 flex flex-col sm:items-start items-center justify-end gap-4 ">
         <h1 className="font-stoke text-h1 leading-[1.28] text-white">

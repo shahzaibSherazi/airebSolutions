@@ -11,7 +11,7 @@ const UiDesignHero = () => {
         }}
       />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.7)_100%)] sm:bg-[linear-gradient(66deg,#629DFF_-10%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
       <div className="container relative z-10  px-2 py-8 lg:py-10 flex flex-col gap-4 sm:items-start items-center justify-end ">
         <h1 className="font-stoke text-h1 leading-[1.28] text-white">

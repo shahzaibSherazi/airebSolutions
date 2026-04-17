@@ -51,7 +51,7 @@ const FAQAccordion = () => {
 
   return (
     <div className=" bg-black text-white ">
-      <div className="container pb-16 lg:pb-24 px-6 lg:px-8">
+      <div className="container pb-16 lg:pb-24 px-2 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex  gap-3 bg-primary text-textColor pl-6 pr-3 py-[5px]   text-lg font-outfit font-normal mb-6">
@@ -63,7 +63,7 @@ const FAQAccordion = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-outfit leading-[56px] font-normal">
+            <h1 className="text-h2 font-stoke font-normal">
               Your Questions
               <br />
               Answered!
@@ -117,10 +117,8 @@ const AccordionItem = ({ faq, isOpen, onClick }) => (
     }`}>
     <button
       onClick={onClick}
-      className="w-full px-5 py-3 flex justify-between items-center text-left hover:bg-opacity-80 transition-all">
-      <h3 className=" font-outfit font-bold text-base md:text-[22px] pr-4">
-        {faq.question}
-      </h3>
+      className="w-full px-2 sm:px-5 py-3 flex justify-between items-center text-left hover:bg-opacity-80 transition-all">
+      <h3 className=" font-outfit font-bold text-title pr-4">{faq.question}</h3>
       <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 bg-white text-blue-900 ">
         {isOpen ? <ChevronUp size={23} /> : <ChevronDown size={23} />}
       </div>
@@ -130,7 +128,7 @@ const AccordionItem = ({ faq, isOpen, onClick }) => (
       className={`overflow-hidden transition-all duration-300 ${
         isOpen ? "max-h-96  py-3" : "max-h-0"
       }`}>
-      <div className="px-6 pb-6 text-white text-sm md:text-base font-normal font-outfit leading-[22px]">
+      <div className="px-2 sm:px-6 pb-6 text-white text-p font-normal font-outfit leading-[22px]">
         {faq.answer}
       </div>
     </div>

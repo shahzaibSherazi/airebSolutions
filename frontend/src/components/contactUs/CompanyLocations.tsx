@@ -70,7 +70,7 @@ export default function CompanyLocations() {
       }}
       className="min-h-screen text-white ">
       {/* ── HERO SECTION ── */}
-      <section className="container px-6 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
+      <section className="container px-2 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
         {/* Left */}
         <div className="">
           <h1 className="text-h2 font-stoke font-normal mb-8 text-white">
@@ -82,9 +82,11 @@ export default function CompanyLocations() {
             support your growth, and help you become the best version of
             yourself professionally and personally.
           </p>
-          <button className="inline-flex items-center font-outfit font-bold gap-2 bg-primary hover:bg-white hover:text-black text-white text-sm  px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
+          <a
+            href="#contact-us"
+            className="inline-flex items-center font-outfit font-bold gap-2 bg-primary hover:bg-white hover:text-black text-white text-sm  px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
             See Opportunity <ArrowIcon />
-          </button>
+          </a>
         </div>
 
         {/* Right illustration */}

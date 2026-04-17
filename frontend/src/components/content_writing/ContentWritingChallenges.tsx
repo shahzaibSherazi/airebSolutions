@@ -80,7 +80,7 @@ const ContentWritingChallenges = () => {
         </div>
 
         {/* ── Two cards ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div
             className="p-px"
             style={{

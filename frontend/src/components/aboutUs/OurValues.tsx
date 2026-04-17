@@ -141,7 +141,7 @@ const OurValues = () => {
 
             <div className="relative z-10 max-w-2xl w-full">
               {/* Static heading */}
-              <p className="font-stoke text-[clamp(14px,1.8vw,18px)] text-textColor underline-offset-[12px] underline font-medium tracking-widest uppercase mb-4 opacity-80">
+              <p className="font-stoke text-[clamp(14px,1.8vw,18px)] text-textColor underline-offset-[12px] underline font-medium tracking-widest uppercase mb-4">
                 Our Values
               </p>
               <h2 className="font-stoke font-normal text-textColor text-h2 mb-6">

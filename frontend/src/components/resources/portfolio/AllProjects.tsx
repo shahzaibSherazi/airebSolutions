@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, Star } from "lucide-react";
-
+import { Link } from "react-router-dom";
 // ── Replace these imports with your actual project images ──
 import proj1 from "@/assets/resources/portfolio/card-1.png";
 import proj2 from "@/assets/resources/portfolio/card-2.png";
@@ -9,80 +9,134 @@ import proj4 from "@/assets/resources/portfolio/card-4.png";
 import proj5 from "@/assets/resources/portfolio/card-5.png";
 import proj6 from "@/assets/resources/portfolio/card-6.png";
 import proj7 from "@/assets/resources/portfolio/card-7.png";
-import { Link } from "react-router-dom";
+import proj8 from "@/assets/resources/portfolio/eyeora.png";
+import proj9 from "@/assets/resources/portfolio/fiscfiler.png";
+import proj10 from "@/assets/resources/portfolio/infusion.png";
+import proj11 from "@/assets/resources/portfolio/joinmasstorts.png";
+import proj12 from "@/assets/resources/portfolio/nur.png";
 
 // ── Project Data ──
 const projects = [
   {
     id: 1,
-    tag: "Communication",
-    title: "A Contact Center Solutions Provider",
-    desc: "Tazacall enables teams to communicate smarter: unified voice, SMS and email tools + AI-driven analytics all in one cloud platform so you spend less time managing systems, and more time building relationships.",
-    category: "Branding",
+    tag: "Tozcall",
+    title: "Tozcall for Smart VoIP & Call Center Solutions",
+    desc: "Tozcall is a cloud-based call center platform offering VoIP, predictive dialing, virtual numbers, SMS APIs, email marketing, and CRM integrations—powered by AI for scalable, reliable performance with 99.9% uptime.",
+    category: "Cloud Base",
     satisfaction: 4,
-    production: "May 10, 2022",
+    production: "Complete solution",
     image: proj1,
     link: "https://tozcall.com/",
   },
   {
     id: 2,
-    tag: "Communication",
-    title: "A Contact Center Solutions Provider",
-    desc: "Tazacall enables teams to communicate smarter: unified voice, SMS and email tools + AI-driven analytics all in one cloud platform so you spend less time managing systems, and more time building relationships.",
-    category: "Branding",
+    tag: "PKLabs",
+    title: "PKLabs Smart AI & Automation Solutions",
+    desc: "PKLabs.ai is an AI-driven digital solutions company that builds custom software, automation systems, and marketing strategies to help businesses grow faster and smarter.",
+    category: "Cloud Base",
     satisfaction: 4,
-    production: "May 10, 2022",
+    production: "Complete solution",
     image: proj2,
+    link: "https://pklabs.ai/",
   },
   {
     id: 3,
-    tag: "E-Commerce",
-    title: "Smart Shopping Experience Platform",
-    desc: "A fully integrated e-commerce solution with AI-powered recommendations, real-time inventory tracking, and seamless checkout experience built for modern retail brands.",
-    category: "Development",
+    tag: "Happyvitamins",
+    title: "HappyVitamins Vitamins for Health & Wellness",
+    desc: "HappyVitamins.pk is an eCommerce platform that sells imported vitamins and health supplements to support fitness, wellness, and daily nutrition in Pakistan.",
+    category: "Supplements Store",
     satisfaction: 5,
-    production: "Aug 15, 2022",
+    production: "Complete solution",
     image: proj3,
+    link: "https://happyvitamins.pk/",
   },
   {
     id: 4,
-    tag: "Healthcare",
-    title: "Patient Management & Telehealth App",
-    desc: "A HIPAA-compliant telehealth platform enabling doctors and patients to connect virtually, manage appointments, and share medical records securely from any device.",
-    category: "UI/UX Design",
+    tag: "B2B sales intelligence platform",
+    title: "Boost Sales with ZenBee Intelligence Platform",
+    desc: "ZenBee.io is a SaaS-based sales intelligence and lead generation platform that provides data, insights, and tools to help businesses find prospects and close more deals faster.",
+    category: "B2B Sales",
     satisfaction: 5,
-    production: "Jan 20, 2023",
+    production: "Complete Solution",
     image: proj4,
+    link: "https://zenbee.io/",
   },
   {
     id: 5,
-    tag: "Finance",
-    title: "Digital Banking Dashboard",
-    desc: "A next-generation digital banking interface offering real-time transaction tracking, AI budgeting tools, and multi-currency support for modern financial institutions.",
-    category: "Branding",
+    tag: "Hsaatchi",
+    title: "HSaatchi Luxury Boutique Jewelry Brand",
+    desc: "HSaatchi.com represents a boutique jewelry brand with a refined, luxurious aesthetic. It blends regional craftsmanship with modern design sensibilities, making it appealing to style-conscious buyers across the Middle East",
+    category: "Jewelry Brand",
     satisfaction: 4,
-    production: "Mar 5, 2023",
+    production: "Complete solution",
     image: proj5,
+    link: "https://www.hsaatchi.com/",
   },
   {
     id: 6,
-    tag: "Education",
-    title: "Interactive Learning Management System",
-    desc: "A cloud-based LMS built for schools and enterprises — featuring live classes, progress analytics, gamified learning paths, and seamless integrations with third-party tools.",
-    category: "Development",
+    tag: "eyeora",
+    title: "Eyeora XR for Immersive Events & Monetization",
+    desc: "Eyeora is a SaaS-based XR platform that lets users create and monetize immersive 3D virtual experiences, events, and social environments.",
+    category: "Saas",
     satisfaction: 5,
-    production: "Jun 12, 2023",
-    image: proj6,
+    production: "Complete solution",
+    image: proj8,
+    link: "https://www.eyeora.com/",
   },
   {
     id: 7,
-    tag: "Communication",
-    title: "Omnichannel Marketing Automation Tool",
-    desc: "A unified marketing platform that automates email, SMS, and social media campaigns using AI segmentation and real-time performance analytics for maximum ROI.",
-    category: "UI/UX Design",
+    tag: "Sirat Ul Baqi",
+    title: "Explore Sacred Journeys with Sirat-ul-Baqi",
+    desc: "Sirat-ul-Baqi provides reliable and spiritually enriching travel services for Muslims visiting sacred destinations, while promoting awareness and preserving Islamic heritage through community engagement.",
+    category: "Travel Agency",
     satisfaction: 4,
-    production: "Sep 30, 2023",
+    production: "Complete solution",
     image: proj7,
+    link: "https://www.sirat-ul-baqi.com/",
+  },
+  {
+    id: 8,
+    tag: "FISCFILER",
+    title: "FiscFiler for Easy Tax Filing & Accounting",
+    desc: "FiscFiler provides a user-friendly platform for global accounting and tax filing, offering comprehensive services for individuals and small businesses with a strong focus on simplicity, compliance, and conversions.",
+    category: "Accounting",
+    satisfaction: 4,
+    production: "Complete solution",
+    image: proj9,
+    link: "https://www.fiscfiler.com/",
+  },
+  {
+    id: 9,
+    tag: "Infusion Capital",
+    title: "Predictive Dialer for High-Volume Sales Ops",
+    desc: "Infusion Capital uses a high-performance outbound dialer designed for large-scale calling. With predictive and progressive dialing, it connects agents to pre-loaded leads, minimizes downtime, and maximizes productivity. Real-time tracking, logging, and analytics enable a fast-paced,high-volume sales environment across multiple industries.",
+    category: "Dialer",
+    satisfaction: 4,
+    production: "Complete solution",
+    image: proj10,
+    link: "#",
+  },
+  {
+    id: 10,
+    tag: "JointMasstorts",
+    title: "JoinMassTorts Connection Platform",
+    desc: "joinmasstorts.com is a landing page that claims to connect people with mass tort lawsuits. Currently, it only shows a bot verification (CAPTCHA) and does not provide any law firm credentials, case details, or legal guidance.",
+    category: "Jewelry Brand",
+    satisfaction: 4,
+    production: "Complete solution",
+    image: proj11,
+    link: "https://joinmasstorts.com/",
+  },
+  {
+    id: 11,
+    tag: "Narsun Studios",
+    title: "Narsun Studios AI & Immersive Tech Solutions",
+    desc: "Narsun Studios is a tech and immersive design firm that helps businesses bring cutting-edge AI, virtual reality, augmented reality, blockchain, and interactive experiences to life.",
+    category: "Gamification",
+    satisfaction: 4,
+    production: "Complete solution",
+    image: proj12,
+    link: "https://narsunstudios.com/en/",
   },
 ];
 
@@ -117,7 +171,7 @@ const ProjectCard = ({ project }) => (
         </span>
 
         {/* Title */}
-        <h3 className="font-outfit text-title line-clamp-2 overflow-hidden font-bold text-white leading-snug">
+        <h3 className="font-stoke text-title line-clamp-2 overflow-hidden font-normal text-white leading-snug">
           {project.title}
         </h3>
 

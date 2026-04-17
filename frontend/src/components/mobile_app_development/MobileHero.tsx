@@ -11,14 +11,20 @@ const MobileHero = () => {
           backgroundImage: `url(${bgImg})`,
         }}
       />
-      <div
+      {/* <div
         className="absolute inset-0"
         style={{
           background:
             "linear-gradient(66.03deg, #629DFF -22.54%, rgba(0, 0, 0, 0.2) 77.45%)",
         }}
+      /> */}
+      <div
+        className="
+    absolute inset-0
+    bg-[linear-gradient(90deg,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.2)_40%,transparent_70%)]
+    sm:bg-[linear-gradient(66.03deg,#629DFF_-80.54%,rgba(0,0,0,0.2)_77.45%)]
+  "
       />
-
       {/* Content */}
       <div className="container relative z-10 px-6 py-8 lg:py-10 flex flex-col items-center sm:items-start justify-end gap-[2vh] sm:gap-[3vh] lg:gap-[4.5vh]">
         <h1 className="font-stoke text-h1 leading-[1.28] text-white">

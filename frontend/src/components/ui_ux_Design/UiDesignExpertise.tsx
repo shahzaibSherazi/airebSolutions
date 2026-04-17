@@ -51,7 +51,7 @@ const UiDesignExpertise = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="text-white text-h2 font-outfit font-thin lg:leading-[72px] ">
+          <h2 className="text-white text-h2 font-stoke font-thin lg:leading-[72px] ">
             Why Choose Aireb Solutions for Your
             <br className="hidden sm:block" />
             UI/UX Design Needs?

@@ -112,13 +112,13 @@ const TechnologiesShowcase = () => {
 
   return (
     <div className=" bg-black text-textColor  ">
-      <div className="container px-6 lg:px-8 lg:pb-24 pb-16">
+      <div className="container px-2 lg:px-8 lg:pb-24 pb-16">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[56px] font-stoke font-normal text-center mb-8 sm:mb-14">
+          <h1 className="text-h2 font-stoke font-normal text-center mb-8 sm:mb-14">
             Technologies we use
           </h1>
         </motion.div>
