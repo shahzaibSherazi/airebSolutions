@@ -78,7 +78,7 @@ const HowWeGetItDone = () => {
               {/* Card Row */}
               <div className="grid grid-cols-1 md:grid-cols-[230px_1fr] lg:grid-cols-[280px_1fr] gap-0 group">
                 {/* Left: Blue Box with Title */}
-                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight bg-primary  flex items-center justify-center py-4 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
+                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight bg-primary sm:h-32  flex items-center justify-center py-4 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
                   {step.title}
                 </h3>
 

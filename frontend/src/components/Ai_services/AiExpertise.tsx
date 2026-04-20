@@ -868,7 +868,7 @@ export default function AIExpertiseSection() {
 
   return (
     <div ref={containerRef} className="h-auto lg:h-[400vh]">
-      <section className="relative w-full bg-black overflow-hidden lg:sticky lg:top-0 min-h-screen">
+      <section className="relative w-full bg-black overflow-hidden lg:sticky lg:top-0 ">
         <div className="container relative z-10 py-16 px-2 lg:px-8 h-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 w-full h-full items-start">
             {/* LEFT CONTENT */}
@@ -932,7 +932,9 @@ export default function AIExpertiseSection() {
               <motion.div
                 style={!isMobile ? { y: buttonY, opacity: buttonOpacity } : {}}
                 className="pl-12">
-                <a className="group font-outfit inline-flex items-center gap-2 bg-primary text-white px-6 py-4">
+                <a
+                  href="#contact-form"
+                  className="group font-outfit inline-flex items-center gap-2 bg-primary text-white px-6 py-4">
                   Start A Project
                   <motion.div style={!isMobile ? { rotate } : {}}>
                     <BtnIcon className="w-3 h-3" />

@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
               key={feature.id}
               className="rounded-[5px] px-4 py-6 border-025 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
-              <h3 className="text-lg text-textColor  font-bold ">
+              <h3 className="text-lg text-textColor  font-outfit ">
                 {feature.title}
               </h3>
             </div>

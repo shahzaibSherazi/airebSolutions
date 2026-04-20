@@ -6,41 +6,41 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "Perfect Until You Approve",
+      title: "Tailored Solutions",
       description:
-        "We refine every detail until it matches your vision. Your satisfaction is our top priority we'll keep improving the design until it feels just right.",
+        "We understand your business needs and create custom solutions that match your goals.",
       size: "large",
       color: "dark-blue",
     },
     {
       id: 2,
-      title: "Perfect Until You Approve",
+      title: "Expertise Across Industries",
       description:
-        "We refine every detail until it matches your vision. Your satisfaction is our top priority we'll keep improving the design until it feels just right.",
+        "We work with multiple industries like e-commerce, fintech, real estate, education, and more, with proven experience.",
       size: "large",
       color: "bright-blue",
     },
     {
       id: 3,
-      title: "Perfect Until You Approve",
+      title: "End-to-End Services",
       description:
-        "We refine every detail until it matches your vision. Your satisfaction is our top priority we'll keep improving the design until it feels just right.",
+        "From design and development to integration, marketing, and support — we handle everything.",
       size: "small",
       color: "dark-blue",
     },
     {
       id: 4,
-      title: "Perfect Until You Approve",
+      title: "Innovative Technology",
       description:
-        "We refine every detail until it matches your vision. Your satisfaction is our top priority we'll keep improving the design until it feels just right.",
+        "We use modern technologies like AI, cloud, automation, and mobile solutions to keep your business ahead.",
       size: "small",
       color: "dark-blue",
     },
     {
       id: 5,
-      title: "Perfect Until You Approve",
+      title: "Customer-Focused Approach",
       description:
-        "We refine every detail until it matches your vision. Your satisfaction is our top priority we'll keep improving the design until it feels just right.",
+        "We focus on delivering real results, better user experience, and long-term business growth.",
       size: "small",
       color: "dark-blue",
     },
@@ -64,7 +64,8 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <p className="text-textColor font-outfit font-normal text-p">
-              We Design for the Future to Drive Today's Success
+              At Aireb Solutions, we help businesses grow with modern, reliable,
+              and scalable digital solutions.
             </p>
           </motion.div>
         </div>
@@ -78,7 +79,7 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="px-2 sm:px-5">
-              <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-stoke font-bold mb-[7px]">
                 {features[0].title}
               </h3>
               <p className="text-black group-hover:text-textColor text-p font-outfit font-light leading-[28px]">
@@ -96,7 +97,7 @@ hover:-translate-y-2 hover:scale-[1.01]">
               </div>
             </div>
             <div className="px-2 sm:px-5">
-              <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-bold mb-[7px]">
+              <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-stoke font-bold mb-[7px]">
                 {features[1].title}
               </h3>
               <p className="text-black group-hover:text-textColor text-p font-outfit font-light leading-[28px]">
@@ -118,7 +119,7 @@ hover:-translate-y-2 hover:scale-[1.01]">
                   </div>
                 </div>
                 <div className="px-5">
-                  <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-bold mb-[7px]">
+                  <h3 className="text-lg text-black group-hover:text-textColor leading-10 font-stoke font-bold mb-[7px]">
                     {feature.title}
                   </h3>
                   <p className="text-black group-hover:text-textColor text-base font-outfit font-light leading-[28px]">

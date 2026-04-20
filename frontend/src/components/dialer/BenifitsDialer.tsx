@@ -8,10 +8,10 @@ const BenifitsDialer = () => {
         background: "linear-gradient(97.32deg, #0E1828 1.89%, #000000 98.11%)",
       }}
       className="overflow-hidden">
-      <div className="container px-2 lg:px-8 grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
+      <div className="  grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
         {/* Left Column - Content */}
         <div
-          className="flex flex-col  sm:space-y-10 space-y-8  py-16 lg:py-24 
+          className="flex flex-col  sm:space-y-10 space-y-8 px-2 lg:px-8  py-16 lg:py-24 
 ">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
@@ -39,10 +39,10 @@ const BenifitsDialer = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 hover:bg-white rounded-sm hover:text-black cursor-pointer border-025 border-[#8897FF]">
+                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 hover:bg-white rounded-sm hover:text-black border-025 border-[#8897FF]">
                   Increased Efficiency
                 </p>
-                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap inline-flex px-3 sm:px-4 py-2 sm:py-3 hover:bg-white hover:text-black cursor-pointer rounded-sm border-025 border-[#8897FF]">
+                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap inline-flex px-3 sm:px-4 py-2 sm:py-3 hover:bg-white hover:text-black  rounded-sm border-025 border-[#8897FF]">
                   Improved Customer Experience
                 </p>
               </div>
@@ -54,14 +54,11 @@ const BenifitsDialer = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 border-025 hover:bg-white hover:text-black cursor-pointer rounded-sm border-[#8897FF]">
+                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 border-025 hover:bg-white hover:text-black rounded-sm border-[#8897FF]">
                   Cost Savings
                 </p>
-                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 border-025 hover:bg-white hover:text-black cursor-pointer rounded-sm border-[#8897FF]">
+                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 border-025 hover:bg-white hover:text-black rounded-sm border-[#8897FF]">
                   Scalability
-                </p>
-                <p className="font-stoke text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap px-3 sm:px-4 py-2 sm:py-3 border-025 hover:bg-white rounded-sm hover:text-black cursor-pointer border-[#8897FF]">
-                  Get Started
                 </p>
               </div>
             </motion.div>

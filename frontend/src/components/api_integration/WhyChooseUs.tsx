@@ -45,10 +45,10 @@ const WhyChooseUs = () => {
             {features.slice(0, 3).map((feature) => (
               <div
                 key={feature.id}
-                className="group flex justify-center items-center text-center  bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
+                className="group flex justify-center items-center text-center  bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 overflow-hidden">
                 {/* Card Content */}
                 {/* Text */}
-                <h3 className="text-primary group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
+                <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
                   {feature.title}
                 </h3>
               </div>
@@ -59,10 +59,10 @@ const WhyChooseUs = () => {
               {features.slice(3, 5).map((feature) => (
                 <div
                   key={feature.id}
-                  className="group flex justify-center items-center text-center bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 cursor-pointer overflow-hidden">
+                  className="group flex justify-center items-center text-center bg-black border-2 border-[#7474741F] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary hover:border-blue-700 overflow-hidden">
                   {/* Card Content */}
                   {/* Text */}
-                  <h3 className="text-primary group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
+                  <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
                     {feature.title}
                   </h3>
                 </div>

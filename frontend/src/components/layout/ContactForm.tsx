@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { toast } from "sonner";
 import contactImage from "@/assets/contact-image.png";
 import PhoneInput from "react-phone-number-input";
+import { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { motion } from "framer-motion";
 /* ================= MAIN ================= */
@@ -62,6 +64,9 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm({
@@ -72,22 +77,30 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
   const submitForm = async () => {
     if (!form.fullName || !form.email) {
-      alert("Please fill all required fields.");
+      toast.error("Please fill all required fields.");
       return;
     }
 
+    if (!isValidEmail(form.email)) {
+      toast.error("Invalid email format");
+      return;
+    }
     if (!phone) {
-      alert("Please enter phone number.");
+      toast.error("Please enter phone number.");
+      return;
+    }
+    if (!isValidPhoneNumber(phone)) {
+      toast.error("Invalid phone number for selected country");
       return;
     }
 
     if (!service) {
-      alert("Please select a service.");
+      toast.error("Please select a service.");
       return;
     }
 
     if (!form.privacyAgreed) {
-      alert("Please agree to the privacy policy.");
+      toast.error("Please agree to the privacy policy.");
       return;
     }
 
@@ -126,11 +139,12 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         setPhone("");
         setService("");
       } else {
-        alert(data.message || "Something went wrong.");
+        toast.error(data.message || "Something went wrong.");
+        console.log("error", data);
       }
     } catch (error) {
       console.error("Submit error:", error);
-      alert("Server error. Please try later.");
+      toast.error("Server error. Please try later.");
     } finally {
       setLoading(false);
     }

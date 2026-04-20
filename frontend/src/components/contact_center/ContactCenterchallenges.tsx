@@ -76,7 +76,8 @@ export default function ContactCenterSection() {
               Challenges
             </h1>
           </motion.div>
-          <div
+          <a
+            href="#contact-form"
             className="flex items-center gap-2 px-4 py-3 md:px-5 md:py-4 rounded-md group border border-primary hover:cursor-pointer text-white text-sm font-medium "
             style={{
               background: "linear-gradient(90deg, #4875BE 0%, #000000 100%)",
@@ -88,7 +89,7 @@ export default function ContactCenterSection() {
             <span className="text-xl text-primary self-end flex-shrink-0 group-hover:translate-x-2 transition-transform duration-500 ease-ou">
               →
             </span>
-          </div>
+          </a>
         </div>
 
         {/* Subtitle */}

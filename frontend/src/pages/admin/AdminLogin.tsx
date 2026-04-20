@@ -130,11 +130,11 @@ export default function AdminLogin() {
           </form>
 
           {/* Demo credentials */}
-          <div className="mt-6 pt-6 border-t border-primary/20 text-center">
+          {/* <div className="mt-6 pt-6 border-t border-primary/20 text-center">
             <p className="text-white/50 text-xs mb-2">Demo Credentials:</p>
             <p className="text-primary/70 text-xs font-mono">admin@aireb.com</p>
             <p className="text-primary/70 text-xs font-mono">password123</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

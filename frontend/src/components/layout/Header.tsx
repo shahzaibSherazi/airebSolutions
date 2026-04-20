@@ -742,7 +742,7 @@ const Header = () => {
         className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
-        <div className="container px-6 lg:px-8">
+        <div className="container px-2 lg:px-8">
           <div className="flex items-center justify-between header">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 z-50">

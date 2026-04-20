@@ -51,12 +51,14 @@ export default function WhitePaperHero() {
 
             {/* Read Now button */}
             <div className="flex justify-center md:justify-start">
-              <Link
-                to="/services/web-development"
-                className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white  rounded-sm px-[clamp(10px,2vw,24px)] py-[clamp(8px,1.1vw,12px)] transition-all duration-200 hover:opacity-90 active:scale-95">
+              <a
+                href="/pdfs/white-paper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-primary text-[clamp(13px,1.1vw,15px)] font-outfit font-bold gap-2 text-white rounded-sm px-[clamp(10px,2vw,24px)] py-[clamp(8px,1.1vw,12px)] transition-all duration-200 hover:opacity-90 active:scale-95">
                 Read Now
                 <span className="text-base">→</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

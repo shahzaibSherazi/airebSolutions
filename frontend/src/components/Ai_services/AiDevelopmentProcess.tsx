@@ -432,7 +432,7 @@ const AIDevelopmentProcess = () => {
     // Outer: tall on desktop for scroll room, auto on mobile
     <div ref={containerRef} className="h-auto lg:h-[300vh]">
       {/* Sticky on desktop, static on mobile */}
-      <div className="relative lg:sticky lg:top-0 w-full bg-black h-auto lg:h-screen flex items-center">
+      <div className="relative lg:sticky lg:top-0 w-full bg-black  flex items-center">
         <div className="container relative z-10 flex flex-col justify-center py-16 px-2 lg:px-8 w-full">
           {/* Section Header */}
           <div className="text-center mb-12 lg:mb-16">

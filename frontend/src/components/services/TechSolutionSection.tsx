@@ -27,78 +27,91 @@ const TechSolutionsSection = () => {
       title: "AI & Machine Learning",
       category: "technology",
       backgroundImage: AiBg,
+      link: "#contact-form",
     },
     {
       id: 2,
       title: "Web Development",
       category: "technology",
       backgroundImage: WebBg,
+      link: "#contact-form",
     },
     {
       id: 3,
       title: "API Development",
       category: "technology",
       backgroundImage: ApiBg,
+      link: "#contact-form",
     },
     {
       id: 4,
       title: "Mobile Apps & Games",
       category: "technology",
       backgroundImage: MobileBg,
+      link: "#contact-form",
     },
     {
       id: 5,
       title: "API & CRM Integration",
       category: "technology",
       backgroundImage: CrmBg,
+      link: "#contact-form",
     },
     {
       id: 6,
       title: "UI/UX Design",
       category: "design",
       backgroundImage: UiBg,
+      link: "#contact-form",
     },
     {
       id: 7,
       title: "Content Writing",
       category: "design",
       backgroundImage: ContentBg,
+      link: "#contact-form",
     },
     {
       id: 8,
       title: "Logo Design",
       category: "design",
       backgroundImage: LogoBg,
+      link: "#contact-form",
     },
     {
       id: 9,
       title: "AI Dialer Software",
       category: "business",
       backgroundImage: DialerBg,
+      link: "#contact-form",
     },
     {
       id: 10,
       title: "Contact Center Solutions",
       category: "business",
       backgroundImage: ContactBg,
+      link: "#contact-form",
     },
     {
       id: 11,
       title: "E-commerce",
       category: "business",
       backgroundImage: EcommerceBg,
+      link: "#contact-form",
     },
     {
       id: 12,
       title: "DevOPS",
       category: "technology",
       backgroundImage: DevOpsBg,
+      link: "#contact-form",
     },
     {
       id: 13,
       title: "On-Demand",
       category: "technology",
       backgroundImage: OnDemandBg,
+      link: "#contact-form",
     },
   ];
 
@@ -154,7 +167,7 @@ const TechSolutionsSection = () => {
 
   return (
     <div className="min-h-screen bg-black text-white ">
-      <div className="container lg:py-24 py-16 px-2 lg:px-8">
+      <div className="container lg:py-24 py-16 px-2 lg:px-8 flex flex-col justify-center items-center">
         {/* Header Section */}
         <motion.div
           className="text-center mb-16 lg:mb-[91px]"
@@ -170,23 +183,23 @@ const TechSolutionsSection = () => {
           {/* <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-stoke mb-6">
             Communication Solutions
           </h1> */}
-          <p className="text-[#EBEBEB] text-p font-outfit font-normal max-w-3xl mx-auto">
+          <p className="text-white text-p font-outfit font-normal max-w-3xl mx-auto">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
           </p>
         </motion.div>
         {/* Center Card - Filter */}
-        <div className="sticky top-48 z-50 flex justify-center items-center">
+        <div className="sticky top-48 z-50">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}
-            className="gap-1 sm:gap-3  bg-white rounded-full px-2 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
+            className="gap-1 sm:gap-3  bg-white rounded-full px-1 sm:px-4 py-1 sm:py-[10px] flex item-center justify-center">
             <button
               onClick={() => setActiveTab("technology")}
-              className={` px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+              className={`px-1 sm:px-3 py-[3px] rounded-full border font-outfit text-xs font-normal transition-all duration-300 text-center ${
                 activeTab === "technology"
                   ? "bg-primary text-white border-none"
                   : " text-black hover:bg-black hover:text-white"
@@ -195,7 +208,7 @@ const TechSolutionsSection = () => {
             </button>
             <button
               onClick={() => setActiveTab("design")}
-              className={`px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+              className={`px-1 sm:px-3 py-[3px] rounded-full border font-outfit text-xs font-normal transition-all duration-300 text-center ${
                 activeTab === "design"
                   ? "bg-primary text-white border-none"
                   : " text-black hover:bg-black hover:text-white"
@@ -204,7 +217,7 @@ const TechSolutionsSection = () => {
             </button>
             <button
               onClick={() => setActiveTab("business")}
-              className={`flex-1 px-3 py-[3px] rounded-full border text-xs font-normal transition-all duration-300 text-center ${
+              className={`flex-1 px-1 sm:px-3 py-[3px] rounded-full border font-outfit text-xs font-normal transition-all duration-300 text-center ${
                 activeTab === "business"
                   ? "bg-primary text-white border-none"
                   : " text-black hover:bg-black hover:text-white"
@@ -251,10 +264,12 @@ const TechSolutionsSection = () => {
                   {card.title}
                 </h3>
                 <div className="">
-                  <button className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
+                  <a
+                    href={card.link}
+                    className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
                     Start A Project
                     <BtnIcon className="w-[9px] h-[9px]" />
-                  </button>
+                  </a>
                 </div>
 
                 {/* Bottom Section - Button */}

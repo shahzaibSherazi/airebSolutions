@@ -63,7 +63,7 @@ const UiDesignExpertise = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary cursor-pointer overflow-hidden sm:min-h-[150px] h-full flex items-center justify-center">
+              className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary  overflow-hidden sm:min-h-[150px] h-full flex items-center justify-center">
               {/* Card Content */}
               {/* Text with fixed height and overflow handling */}
               <h1 className="text-primary relative z-10  text-center group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">

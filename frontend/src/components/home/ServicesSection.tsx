@@ -33,8 +33,10 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* LEFT */}
           <div className="lg:sticky lg:top-20 self-start flex flex-col gap-8 lg:gap-10">
-            <div className="border main_heading rounded-full px-7 py-2 text-white font-outfit font-medium text-base lg:text-lg w-fit">
-              Our Service
+            <div className="p-[0.5px] rounded-full bg-[linear-gradient(90deg,#000000_0%,#4285F4_100%)] w-fit">
+              <div className="main_heading rounded-full px-7 py-2 text-white font-outfit font-medium text-base lg:text-lg bg-black">
+                Our Service
+              </div>
             </div>
 
             <p className="max-w-full lg:max-w-[550px] xl:max-w-full text-base leading-[1.7] sm:text-xl sm:leading-[1.75] md:text-2xl md:leading-[1.8] lg:text-4xl lg:leading-[1.25] font-normal font-outfit text-white">

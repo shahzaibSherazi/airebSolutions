@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import SelectIcon from "@/assets/contact-us/select-file.svg?react";
+import { toast } from "sonner";
 
 export default function ContactUsHero() {
   const [phone, setPhone] = useState("");
@@ -80,6 +81,10 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
   const fileInputRef = useRef(null);
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm({
@@ -89,8 +94,27 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   };
 
   const submitForm = async () => {
+    if (!form.fullName || !form.email) {
+      toast.error("Please fill all required fields.");
+      return;
+    }
+
+    if (!isValidEmail(form.email)) {
+      toast.error("Invalid email format");
+      return;
+    }
+    if (!phone) {
+      toast.error("Please enter phone number.");
+      return;
+    }
+
+    if (!service) {
+      toast.error("Please select a service.");
+      return;
+    }
+
     if (!form.privacyAgreed) {
-      alert("Please agree to the privacy policy.");
+      toast.error("Please agree to the privacy policy.");
       return;
     }
 

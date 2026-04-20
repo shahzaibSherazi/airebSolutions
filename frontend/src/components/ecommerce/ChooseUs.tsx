@@ -205,14 +205,16 @@ const ChooseUs = () => {
   return (
     <section
       ref={sectionRef}
-      style={{
-        background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
-      }}
-      className=" w-full  ">
+      style={
+        {
+          // background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
+        }
+      }
+      className=" w-full  bg-white">
       {/* Container */}
       <div className="container flex flex-col justify-center items-center px-2 lg:px-8 py-16  lg:py-24">
         {/* Badge */}
-        <span className="inline-block bg-white mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
+        <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
           Why Airebsolutions
         </span>
         <motion.div
@@ -220,7 +222,7 @@ const ChooseUs = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="font-stoke font-extralight text-h2 text-center">
+          <h1 className="font-stoke text-black font-extralight text-h2 text-center">
             AirebSolutions Takes Your Scattered
             <br className="hidden lg:block" /> Marketing Systems and Connects
             Them <br className="hidden lg:block" /> Globally
@@ -233,7 +235,7 @@ const ChooseUs = () => {
             className="w-full h-[400px] sm:h-[600px] md:h-[700px] lg:h-[800px]"
           />
         </div>
-        <h1 className="font-stoke font-extralight text-h2 text-center mt-24 mb-16">
+        <h1 className="font-stoke font-extralight text-black text-h2 text-center mt-24 mb-16">
           Effortlessly connect with your entire
           <br className="hidden lg:block" /> marketing stack to build powerful,
           fluid <br className="hidden lg:block" /> workflows

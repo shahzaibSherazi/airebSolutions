@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import bgImg from "../../assets/Ondemand_assets/hero_bg.png";
+import { motion } from "../ui/motion";
 
 const OnDemandHero = () => {
   return (
@@ -14,18 +15,25 @@ const OnDemandHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="container relative z-10 px-2 lg:px-8 py-8 lg:py-10 flex flex-col justify-end sm:items-start items-center gap-4 ">
-        <h1 className="font-stoke text-h1 leading-[1.28] text-white">
-          Smart On-Demand
-          <br className="hidden lg:block" /> Solutions Provider
-        </h1>
-        <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl">
-          We develop strong digital platforms that let customers connect with
-          services in real time. We make scalable, safe, and easy-to-use
-          solutions for anything from mobile apps and marketplaces to delivery,
-          healthcare, transportation, and home services. These solutions are
-          meant to boost business development, engagement, and efficiency.
-        </p>
+      <div className="container relative z-10 px-2 lg:px-8 py-8 lg:py-10 flex flex-col justify-end sm:items-start items-center">
+        <motion.div
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false }}>
+          <h1 className="font-stoke text-h1 leading-[1.28] text-white mb-4 lg:mb-2">
+            Smart On-Demand
+            <br className="hidden lg:block" /> Solutions Provider
+          </h1>
+          <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl mb-10">
+            We develop strong digital platforms that let customers connect with
+            services in real time. We make scalable, safe, and easy-to-use
+            solutions for anything from mobile apps and marketplaces to
+            delivery, healthcare, transportation, and home services. These
+            solutions are meant to boost business development, engagement, and
+            efficiency.
+          </p>
+        </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 w-fit gap-3 sm:gap-4">
           <Link
             to="/resources/portfolio"

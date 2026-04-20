@@ -47,7 +47,7 @@ const ChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group flex flex-col  items-center justify-center text-center  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary  cursor-pointer overflow-hidden">
+              className="group flex flex-col  items-center justify-center text-center  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary overflow-hidden">
               {/* Card Content */}
               {/* Text */}
               <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">

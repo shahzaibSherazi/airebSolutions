@@ -50,7 +50,7 @@ function SmallCard({ post }: { post: WhitePaper }) {
         className="relative flex flex-col flex-1 p-4 gap-2 blogsCards_BottomEdge"
         style={contentBorderStyle}>
         <div className="flex flex-col items-start justify-start gap-3">
-          <div className="flex justify-between w-full">
+          <div className="flex justify-start items-center gap-4 w-full">
             <p className="font-outfit font-normal text-sm text-white py-1 px-2 bg-[#4285F433]">
               White Paper
             </p>
@@ -61,7 +61,7 @@ function SmallCard({ post }: { post: WhitePaper }) {
             {post.title}
           </h3>
         </div>
-        <div className="flex items-center justify-between mt-auto pt-3">
+        <div className="flex items-center justify-end mt-auto pt-3">
           <button
             onClick={() => {
               if (post.pdfUrl) {

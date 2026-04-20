@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const keyProblems = [
   "Slow database queries when students accessed the course dashboards",
   "Delays in loading video lessons and course materials.",
@@ -45,13 +46,14 @@ const DevOpsChallenges = () => {
               You're not alone, here's what we fix every day.
             </p>
           </motion.div>
-          <button
+          <Link
+            to="/resources/case-studies"
             style={{
               background: "linear-gradient(90deg, #4285F4 0%, #000000 100%)",
             }}
             className="shrink-0  self-start mt-2 px-4 py-2 font-outfit text-xs sm:text-sm text-white font-medium border border-primary transition-all whitespace-nowrap">
             View All Case Studies
-          </button>
+          </Link>
         </div>
 
         {/* ── Two cards ── */}

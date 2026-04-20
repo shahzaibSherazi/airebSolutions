@@ -17,6 +17,7 @@ const services = [
     id: 1,
     image: cicdImg,
     title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    link: "#contact-form",
     points: [
       {
         label: "Automated pipelines",
@@ -36,6 +37,7 @@ const services = [
     id: 2,
     image: cloudImg,
     title: "Containerization & Orchestration",
+    link: "#contact-form",
     points: [
       {
         label: "Docker Containers",
@@ -55,6 +57,7 @@ const services = [
     id: 3,
     image: iacImg,
     title: " Infrastructure as Code (IaC)",
+    link: "#contact-form",
     points: [
       {
         label: "Automated Infrastructure",
@@ -74,6 +77,7 @@ const services = [
     id: 4,
     image: securityImg,
     title: "Security Integration (DevSecOps)",
+    link: "#contact-form",
     points: [
       {
         label: "Built-in Security",
@@ -93,6 +97,7 @@ const services = [
     id: 5,
     image: configrationImg,
     title: "Configuration Management & Automation",
+    link: "#contact-form",
     points: [
       {
         label: "Automated Configurations",
@@ -112,6 +117,7 @@ const services = [
     id: 6,
     image: cloudsImg,
     title: "Monitoring Logging & Performance Optimization",
+    link: "#contact-form",
     points: [
       {
         label: "Real-time insights",
@@ -131,6 +137,7 @@ const services = [
     id: 7,
     image: multiCloudImg,
     title: "Cloud DevOps & Multi-cloud management ",
+    link: "#contact-form",
     points: [
       {
         label: "Cloud Native Solutions",
@@ -150,6 +157,7 @@ const services = [
     id: 8,
     image: microserviceImg,
     title: "Microservices & Serverless Architecture",
+    link: "#contact-form",
     points: [
       {
         label: "Modern Architecture",
@@ -197,9 +205,11 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
           <h3 className="font-outfit font-bold text-white text-[clamp(14px,2vw,20px)] leading-snug mb-3">
             {service.title}
           </h3>
-          <button className="px-5 py-1.5 bg-primary font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
+          <a
+            href={service.link}
+            className="px-5 py-1.5 bg-primary font-outfit text-[clamp(14px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
             Connect With Experts
-          </button>
+          </a>
         </div>
       </div>
 
@@ -236,9 +246,11 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
         </div>
 
         {/* Button — always at bottom */}
-        <button className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-[clamp(12px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
+        <a
+          href={service.link}
+          className="mt-4 self-start bg-primary px-5 py-1.5 font-outfit text-[clamp(12px,2vw,18px)] text-white font-medium hover:opacity-90 transition-all">
           Connect With Experts
-        </button>
+        </a>
       </div>
     </div>
   );
