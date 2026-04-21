@@ -3,10 +3,15 @@ import nodemailer from "nodemailer";
 // Create transporter for Gmail
 const createMailTransporter = () => {
   return nodemailer.createTransport({
-    service: "gmail",
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: true,
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASSWORD,
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 };
@@ -80,7 +85,7 @@ export const sendContactEmail = async (contactData) => {
     }
 
     const mailOptions = {
-      from: `${process.env.SENDER_NAME} <${process.env.GMAIL_USER}>`,
+      from: `${process.env.SENDER_NAME} <${process.env.SMTP_USER}>`,
       to: process.env.COMPANY_EMAIL,
       subject: `New Contact Form Submission from ${contactData.fullName}`,
       html: htmlTemplate,
@@ -146,7 +151,7 @@ export const sendConfirmationEmail = async (email, fullName) => {
     `;
 
     const mailOptions = {
-      from: `${process.env.SENDER_NAME} <${process.env.GMAIL_USER}>`,
+      from: `${process.env.SENDER_NAME} <${process.env.SMTP_USER}>`,
       to: email,
       subject: "We Received Your Message - Aireb Solutions",
       html: htmlTemplate,

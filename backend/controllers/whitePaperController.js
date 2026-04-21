@@ -1,5 +1,22 @@
 import WhitePaper from "../models/WhitePaper.js";
 
+// Helper function to convert PDF URL to full URL if needed
+const normalizePdfUrl = (pdfUrl, req) => {
+  if (!pdfUrl) return pdfUrl;
+
+  // Skip data URLs and full URLs
+  if (
+    pdfUrl.startsWith("data:") ||
+    pdfUrl.startsWith("http://") ||
+    pdfUrl.startsWith("https://")
+  ) {
+    return pdfUrl;
+  }
+
+  // Convert relative paths to full URLs
+  return `${req.protocol}://${req.get("host")}${pdfUrl}`;
+};
+
 // @desc Get all white papers
 // @route GET /api/whitepapers
 // @access Public
@@ -38,13 +55,20 @@ export const getWhitePapers = async (req, res) => {
 
     const total = await WhitePaper.countDocuments(filter);
 
+    // Convert relative paths to full URLs
+    const whitePapersWithUrls = whitePapers.map((paper) => {
+      const paperObj = paper.toObject();
+      paperObj.pdfUrl = normalizePdfUrl(paperObj.pdfUrl, req);
+      return paperObj;
+    });
+
     res.status(200).json({
       success: true,
-      count: whitePapers.length,
+      count: whitePapersWithUrls.length,
       total,
       pages: Math.ceil(total / limit),
       currentPage: page,
-      whitePapers,
+      whitePapers: whitePapersWithUrls,
     });
   } catch (error) {
     res.status(500).json({
@@ -80,9 +104,13 @@ export const getWhitePaper = async (req, res) => {
     whitePaper.views += 1;
     await whitePaper.save();
 
+    // Convert relative path to full URL
+    const paperObj = whitePaper.toObject();
+    paperObj.pdfUrl = normalizePdfUrl(paperObj.pdfUrl, req);
+
     res.status(200).json({
       success: true,
-      whitePaper,
+      whitePaper: paperObj,
     });
   } catch (error) {
     res.status(500).json({

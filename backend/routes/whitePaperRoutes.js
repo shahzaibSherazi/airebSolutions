@@ -14,7 +14,9 @@ const router = express.Router();
 
 // Public routes
 router.get("/", getWhitePapers);
+// Specific routes (must come before /:id to avoid matching as ID)
 router.get("/admin/categories", getCategories);
+// Dynamic routes (must come last)
 router.get("/:id", getWhitePaper);
 router.post("/:id/download", trackDownload);
 

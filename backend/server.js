@@ -57,6 +57,17 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 // Serve static files from public/uploads directory
 app.use("/uploads", express.static("public/uploads"));
 
+// Serve PDF files from public/pdfs directory with proper headers
+app.use(
+  "/pdfs",
+  express.static("public/pdfs", {
+    setHeaders: (res, path) => {
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", "inline");
+    },
+  }),
+);
+
 // Rate limiting - to prevent spam
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -127,11 +138,11 @@ const startServer = async () => {
     // Start server
     app.listen(PORT, () => {
       console.log(`
-╔════════════════════════════════════════╗
-║   Aireb Solutions Backend Server       ║
-║   Server running on port ${PORT}        ║
-║   Environment: ${process.env.NODE_ENV || "development"}      ║
-╚════════════════════════════════════════╝
+
+   Aireb Solutions Backend Server       
+   Server running on port ${PORT}        
+   Environment: ${process.env.NODE_ENV || "development"}      ║
+
       `);
     });
   } catch (error) {
