@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Globe, TrendingUp, Users, FileText, Download } from "lucide-react";
+import {
+  Globe,
+  TrendingUp,
+  Users,
+  FileText,
+  Download,
+  Divide,
+} from "lucide-react";
 import GlobIcon from "@/assets/careers/global.svg?react";
 import GrowthIcon from "@/assets/careers/growth.svg?react";
 import CultureIcon from "@/assets/careers/culture.svg?react";
@@ -56,9 +63,9 @@ const BenefitsSection = () => {
       {/* ── Header ── */}
       <div className="container  px-2 lg:px-8 py-16 lg:py-24">
         <div className="mb-10">
-          <button className="bg-primary text-white font-outfit text-[clamp(12px,1.8vw,18px)] font-medium px-4 py-1.5 mb-6">
+          <div className="bg-primary w-fit text-white font-outfit text-[clamp(12px,1.8vw,18px)] font-medium px-4 py-1.5 mb-6">
             Benefits
-          </button>
+          </div>
           <h2 className="font-stoke text-h2 font-normal mb-4">
             We Get You Covered!
           </h2>
