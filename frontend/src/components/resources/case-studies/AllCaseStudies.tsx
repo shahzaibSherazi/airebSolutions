@@ -10,6 +10,7 @@ interface WhiePaperPost {
   id: number;
   image: string;
   title: string;
+  pdfUrl?: string;
 }
 
 const posts: WhiePaperPost[] = [
@@ -17,38 +18,24 @@ const posts: WhiePaperPost[] = [
     id: 1,
     image: cardImg1,
 
-    title: "Build a High-Quality Content Website For Better SEO",
+    title:
+      "DevOps Transformation & Assessment for Education Technology (EdTech) Platform",
+    pdfUrl: "/pdfs/Edtechcasestudy.pdf",
   },
   {
     id: 2,
     image: cardImg2,
 
-    title: "Build a High-Quality Content Website For Better SEO",
+    title: "DevOps Transformation & Assessment for Job Portal Platform",
+    pdfUrl: "/pdfs/jobscasestudy.pdf",
   },
-  {
-    id: 3,
-    image: cardImg3,
+  // {
+  //   id: 3,
+  //   image: cardImg3,
 
-    title: "Build a High-Quality Content Website For Better SEO",
-  },
-  {
-    id: 4,
-    image: cardImg4,
-
-    title: "Build a High-Quality Content Website For Better SEO",
-  },
-  {
-    id: 5,
-    image: cardImg5,
-
-    title: "Build a High-Quality Content Website For Better SEO",
-  },
-  {
-    id: 6,
-    image: cardImg6,
-
-    title: "Build a High-Quality Content Website For Better SEO",
-  },
+  //   title: "Build a High-Quality Content Website For Better SEO",
+  //   pdfUrl: "/pdfs/Edtechcasestudy.pdf",
+  // },
 ];
 
 // ── Gradient border helpers (must be inline — no Tailwind equivalent) ─────────
@@ -78,7 +65,7 @@ const readMoreBorderStyle = {
 
 // ── Small Card ────────────────────────────────────────────────────────────────
 function SmallCard({ post, variant }) {
-  const onClick = () => window.open("/pdfs/telecomcasestudy.pdf", "_blank");
+  const onClick = () => window.open(post.pdfUrl, "_blank");
   return (
     <div className="flex flex-col h-full">
       {/* Image */}
@@ -140,7 +127,7 @@ export default function AllCaseStudies() {
           </h1>
           <span className="font-outfit font-thin text-h2 text-white">
             {" "}
-            (05)
+            ( {posts?.length})
           </span>
         </div>
         {/* SMALL CARDS GRID */}

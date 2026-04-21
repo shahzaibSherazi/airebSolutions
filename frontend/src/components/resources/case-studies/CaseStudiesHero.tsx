@@ -21,7 +21,7 @@ export default function CaseStudiesHero() {
 
       {/* ── Content row ── */}
       <div className="container relative z-10 flex items-center justify-center py-8 lg:py-10  px-2 lg:px-8 w-full">
-        <div className="relative flex flex-col lg:flex-row items-center gap-24  w-full">
+        <div className="relative flex flex-col lg:flex-row items-center gap-6  w-full">
           {/* ── Left image with corner brackets ── */}
           <div className="relative flex items-center justify-center flex-shrink-0 w-1/2">
             <div className=" relative whitePaperCards_TopEdge  w-[clamp(300px,50vh,510px)] aspect-square ">
@@ -41,7 +41,8 @@ export default function CaseStudiesHero() {
 
             {/* Title */}
             <h2 className="text-white text-[clamp(18px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
-              Transforming Bussinesses With Web <br /> Development Excellence
+              DevOps Transformation & Assessment <br />
+              for Telecommunication Platform (Tozcall)
             </h2>
 
             {/* Category tag */}

@@ -1,25 +1,12 @@
-import { useEffect, useState } from "react";
 import circleImg from "@/assets/resources/blogs/hero-bg.png";
 import rightCircleImg from "@/assets/resources/blogs/hero-bg-right.png";
-import SearchIcon from "@/assets/icons/resources/blogs/search-icon.svg?react";
+import BlogSearch from "./BlogSearch";
 
-export default function BlogsHero() {
-  const [query, setQuery] = useState("");
-  const [isMobile, setIsMobile] = useState(false);
+interface BlogsHeroProps {
+  onSearchChange?: (query: string) => void;
+}
 
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 767px)");
-
-    const listener = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsMobile(e.matches);
-    };
-
-    listener(media);
-    media.addEventListener("change", listener);
-
-    return () => media.removeEventListener("change", listener);
-  }, []);
-
+export default function BlogsHero({ onSearchChange }: BlogsHeroProps) {
   return (
     <section
       className="heros_height relative w-full flex flex-col justify-center overflow-hidden"
@@ -32,7 +19,7 @@ export default function BlogsHero() {
       <img src={rightCircleImg} className="absolute -bottom-20 right-0" />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
-      <div className="relative z-10  flex flex-col items-center justify-center text-center px-2 lg:px-8 py-8 lg:py-10">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 lg:px-8 py-8 lg:py-10">
         {/* Title */}
         <h1 className="text-white text-h1 font-normal font-stoke mb-4 leading-tight">
           Blogs
@@ -45,34 +32,8 @@ export default function BlogsHero() {
           Helping you navigate the digital landscape.
         </p>
 
-        {/* ── Search bar ───────────────────────────────────────────────────── */}
-        <div
-          className="flex items-center w-full border border-primary rounded-2xl py-2 px-[clamp(10px,1.5vw,20px)]"
-          style={{
-            maxWidth: 580,
-            background: "linear-gradient(90deg, #4285F4 0%, #000000 100%)",
-          }}>
-          {/* Search icon */}
-          <SearchIcon className="text-white mr-4" />
-
-          {/* Input */}
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={
-              isMobile
-                ? "Search articles..."
-                : "Search for articles, guides, or tech news..."
-            }
-            className="flex-1 text-[clamp(12px,1.1vw,14px)] bg-transparent outline-none text-white placeholder-white placeholder:text-xs placeholder:font-outfit placeholder:font-normal md:placeholder:text-sm min-w-0 "
-          />
-
-          {/* Search button */}
-          <button className="flex-shrink-0 text-primary bg-white hover:bg-primary hover:text-white whitespace-nowrap font-outfit text-sm border-0 font-bold rounded-2xl px-[clamp(10px,1.5vw,20px)] py-2 transition-all duration-200 hover:opacity-90 active:scale-95">
-            Search
-          </button>
-        </div>
+        {/* ── Professional Search bar ───────────────────────────────────────────────────── */}
+        <BlogSearch onSearchChange={onSearchChange} />
       </div>
     </section>
   );
