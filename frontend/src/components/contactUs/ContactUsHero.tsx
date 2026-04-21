@@ -1,6 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { useRef, useState } from "react";
 import PhoneInput from "react-phone-number-input";
+import { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import SelectIcon from "@/assets/contact-us/select-file.svg?react";
 import { toast } from "sonner";
@@ -107,7 +108,10 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       toast.error("Please enter phone number.");
       return;
     }
-
+    if (!isValidPhoneNumber(phone)) {
+      toast.error("Invalid phone number for selected country");
+      return;
+    }
     if (!service) {
       toast.error("Please select a service.");
       return;
@@ -154,11 +158,11 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         setService("");
         setFile(null); // reset file
       } else {
-        alert("Something went wrong. Please try again.");
+        toast.error("Network error. Please try again.");
       }
     } catch (error) {
       console.error(error);
-      alert("Server error. Please try later.");
+      toast.error("Server error. Please try later.");
     } finally {
       setLoading(false);
     }

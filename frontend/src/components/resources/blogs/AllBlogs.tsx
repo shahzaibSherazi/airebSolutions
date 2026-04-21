@@ -271,7 +271,7 @@ export default function AllBlogs() {
             </div>
           )}
 
-          {!loading && !error && blogs.length === 0 && (
+          {!loading && !error && filtered.length === 0 && (
             <div className="text-center py-20 text-white/30 font-outfit">
               No blogs available yet.
             </div>
