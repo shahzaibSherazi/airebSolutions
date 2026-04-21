@@ -116,13 +116,16 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/contact/submit`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       const data = await response.json();
 
@@ -143,6 +146,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         console.log("error", data);
       }
     } catch (error) {
+      console.log("error", error);
       console.error("Submit error:", error);
       toast.error("Server error. Please try later.");
     } finally {

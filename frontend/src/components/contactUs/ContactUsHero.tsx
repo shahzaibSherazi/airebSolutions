@@ -139,10 +139,13 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         formData.append("file", file);
       }
 
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
-        method: "POST",
-        body: formData, // ❗ no headers
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/contact/submit`,
+        {
+          method: "POST",
+          body: formData, // ❗ no headers
+        },
+      );
 
       const data = await response.json();
 
@@ -264,7 +267,7 @@ function SuccessModal({ onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
       <div className="bg-[#0B0B0B] border border-neonBlue rounded-2xl px-6 sm:px-8 py-8 sm:py-10 text-center w-full max-w-[420px]">
         <h2 className="text-xl sm:text-2xl font-semibold mb-3">
-          Message Sent Successfully 🎉
+          Message Sent Successfully
         </h2>
         <p className="text-xs sm:text-sm opacity-80 mb-6">
           Thank you for contacting Aireb Solutions. Our team will get back to

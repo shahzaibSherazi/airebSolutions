@@ -198,18 +198,21 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: form.fullName,
-          city: form.city,
-          email: form.email,
-          phoneNumber: phone,
-          message: form.message,
-          privacyAgreed: form.privacyAgreed,
-        }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/contact/submit`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName: form.fullName,
+            city: form.city,
+            email: form.email,
+            phoneNumber: phone,
+            message: form.message,
+            privacyAgreed: form.privacyAgreed,
+          }),
+        },
+      );
 
       const data = await response.json();
 
@@ -323,7 +326,7 @@ function SuccessModal({ onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
       <div className="bg-[#0B0B0B] border border-neonBlue rounded-2xl px-8 py-10 text-center w-[90%] max-w-[420px]">
         <h2 className="text-2xl font-semibold mb-3">
-          Message Sent Successfully 🎉
+          Message Sent Successfully
         </h2>
         <p className="text-sm opacity-80 mb-6">
           Thank you for contacting Aireb Solutions. Our team will get back to
