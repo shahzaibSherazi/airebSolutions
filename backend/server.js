@@ -26,7 +26,7 @@ app.use(helmet());
 // CORS configuration
 const allowedOrigins = process.env.FRONTEND_URL?.split(",").map((o) =>
   o.trim(),
-) || ["http://localhost:5173"];
+) || ["http://localhost:8080"];
 
 app.use(
   cors({
@@ -108,7 +108,7 @@ app.use(errorHandler);
 
 // ===================== SERVER START =====================
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
 
 const startServer = async () => {
   try {
