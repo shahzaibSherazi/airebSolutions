@@ -78,10 +78,12 @@ const readMoreBorderStyle = {
 
 // ── Small Card ────────────────────────────────────────────────────────────────
 function SmallCard({ post, variant }) {
+  const onClick = () => window.open("/pdfs/telecomcasestudy.pdf", "_blank");
   return (
     <div className="flex flex-col h-full">
       {/* Image */}
       <div
+        onClick={onClick}
         className="relative overflow-hidden flex-shrink-0 blogsCards_TopEdge"
         style={imageBorderStyle}>
         <img
@@ -113,6 +115,7 @@ function SmallCard({ post, variant }) {
         {/* Meta row */}
         <div className="flex items-center justify-end pt-3">
           <button
+            onClick={onClick}
             style={readMoreBorderStyle}
             className="text-primary font-outfit text-[11px] font-medium hover:text-white transition-colors duration-200 flex items-center gap-0.5 py-2 px-[clamp(6px,2vw,24px)] group">
             Read More

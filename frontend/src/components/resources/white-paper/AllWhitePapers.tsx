@@ -31,9 +31,27 @@ const readMoreBorderStyle: React.CSSProperties = {
 function SmallCard({ post }: { post: WhitePaper }) {
   const navigate = useNavigate();
 
+  const onReadMore = () => {
+    if (!post.pdfUrl) {
+      navigate(`/resources/white-paper/${post._id}`);
+      return;
+    }
+
+    // Only open HTTP URLs (file paths), not data URLs
+    if (
+      post.pdfUrl.startsWith("http://") ||
+      post.pdfUrl.startsWith("https://")
+    ) {
+      window.open(post.pdfUrl, "_blank");
+    } else if (post._id) {
+      // Fallback to detail page for data URLs or missing paths
+      navigate(`/resources/white-paper/${post._id}`);
+    }
+  };
   return (
     <div className="flex flex-col h-full">
       <div
+        onClick={onReadMore}
         className="relative overflow-hidden flex-shrink-0 blogsCards_TopEdge"
         style={imageBorderStyle}>
         <img
@@ -63,13 +81,7 @@ function SmallCard({ post }: { post: WhitePaper }) {
         </div>
         <div className="flex items-center justify-end mt-auto pt-3">
           <button
-            onClick={() => {
-              if (post.pdfUrl) {
-                window.open(post.pdfUrl, "_blank");
-              } else if (post._id) {
-                navigate(`/resources/white-paper/${post._id}`);
-              }
-            }}
+            onClick={onReadMore}
             style={readMoreBorderStyle}
             className="text-primary font-outfit text-[11px] font-medium hover:text-white transition-colors duration-200 flex items-center gap-0.5 py-2 px-[clamp(6px,2vw,24px)] group">
             Read More
@@ -108,7 +120,7 @@ export default function AllWhitePapers() {
 
     fetchWhitePapers();
   }, []);
-
+  console.log("whitepaper", whitePapers);
   return (
     <section className="w-full bg-[#02070F] ">
       <div className="container py-16 lg:py-24 px-2 lg:px-8">

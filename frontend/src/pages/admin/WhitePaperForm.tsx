@@ -118,15 +118,17 @@ export default function WhitePaperForm() {
     }
 
     try {
-      const base64 = await fileToBase64(file);
-      setFormData({
-        ...formData,
-        pdfUrl: base64,
-        pdfFileName: file.name,
-      });
-      setError("");
-    } catch (err) {
-      setError("Failed to process PDF");
+      const res = await whitePaperAPI.uploadPDF(file);
+      if (res.success) {
+        setFormData({
+          ...formData,
+          pdfUrl: res.file.path,
+          pdfFileName: res.file.filename,
+        });
+        setError("");
+      }
+    } catch (err: any) {
+      setError(err.response?.data?.message || "Failed to upload PDF");
     }
   };
 

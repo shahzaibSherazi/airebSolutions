@@ -21,6 +21,18 @@ interface CreateWhitePaperResponse {
   whitePaper: WhitePaper;
 }
 
+interface UploadResponse {
+  success: boolean;
+  message: string;
+  file: {
+    filename: string;
+    path: string;
+    url: string;
+    size: number;
+    mimetype: string;
+  };
+}
+
 export const whitePaperAPI = {
   // Get all white papers with pagination and filtering
   getWhitePapers: async (
@@ -87,6 +99,19 @@ export const whitePaperAPI = {
     id: string,
   ): Promise<{ success: boolean; message: string }> => {
     const response = await apiClient.post(`/whitepapers/${id}/download`);
+    return response.data;
+  },
+
+  // Upload white paper PDF
+  uploadPDF: async (file: File): Promise<UploadResponse> => {
+    const formData = new FormData();
+    formData.append("whitePaperPdf", file);
+
+    const response = await apiClient.post("/upload/whitepaper-pdf", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
     return response.data;
   },
 };
