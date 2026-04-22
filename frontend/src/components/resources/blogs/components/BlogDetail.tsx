@@ -693,7 +693,7 @@ interface TocItem {
 
 // ── Extract & inject IDs into rendered HTML headings ───────────────
 function buildToc(container: HTMLElement): TocItem[] {
-  const headings = container.querySelectorAll("h2, h3");
+  const headings = container.querySelectorAll("h1,h2, h3");
   const items: TocItem[] = [];
   headings.forEach((el, i) => {
     const id = `toc-heading-${i}`;
@@ -910,8 +910,44 @@ export default function BlogDetail() {
     window.scrollTo({ top, behavior: "smooth" });
   };
 
-  if (loading)
-    return <div className="text-white p-16">Loading blog details...</div>;
+  if (loading) {
+    return (
+      <div className="w-full bg-[#02070F] px-6 lg:px-8 py-16 animate-pulse">
+        <div className="container space-y-10">
+          {/* Hero Skeleton */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4">
+              <div className="h-6 w-32 bg-white/10 rounded"></div>
+              <div className="h-10 w-3/4 bg-white/10 rounded"></div>
+              <div className="h-4 w-1/2 bg-white/10 rounded"></div>
+              <div className="h-4 w-1/3 bg-white/10 rounded"></div>
+            </div>
+            <div className="h-64 w-full bg-white/10 rounded-xl"></div>
+          </div>
+
+          {/* Content Skeleton */}
+          <div className="space-y-4 max-w-3xl">
+            <div className="h-4 w-full bg-white/10 rounded"></div>
+            <div className="h-4 w-5/6 bg-white/10 rounded"></div>
+            <div className="h-4 w-4/6 bg-white/10 rounded"></div>
+            <div className="h-4 w-full bg-white/10 rounded"></div>
+            <div className="h-4 w-3/4 bg-white/10 rounded"></div>
+          </div>
+
+          {/* Related Posts Skeleton */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="space-y-3">
+                <div className="h-40 bg-white/10 rounded-lg"></div>
+                <div className="h-4 w-3/4 bg-white/10 rounded"></div>
+                <div className="h-3 w-1/2 bg-white/10 rounded"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
   if (error) return <div className="text-red-400 p-16">{error}</div>;
   if (!post) return <div className="text-white p-16">Post not found.</div>;
 
