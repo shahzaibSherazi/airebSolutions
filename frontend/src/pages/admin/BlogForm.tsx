@@ -134,7 +134,6 @@ export default function BlogForm() {
   const fetchCategories = async () => {
     try {
       const res = await blogAPI.getCategories();
-      console.log("categories response", res);
       if (res.success) {
         setCategories(res.categories);
       }
