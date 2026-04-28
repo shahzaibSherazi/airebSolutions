@@ -4,5 +4,7 @@ node_modules
 .env.local
 .env.*.local
 # Build
+frontend/dist.zip
+dist.zip
 dist/
 build/
