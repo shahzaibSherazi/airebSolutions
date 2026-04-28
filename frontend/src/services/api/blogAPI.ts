@@ -74,6 +74,7 @@ export const blogAPI = {
     categories: string[];
   }> => {
     const response = await apiClient.get("/blogs/categories");
+    response.config.headers["Cache-Control"] = "no-store";
     return response.data;
   },
 };

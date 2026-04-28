@@ -105,31 +105,33 @@ const sections = [
 
 const PrivacyPolicySection = () => {
   return (
-    <section className="relative w-full min-h-screen bg-[#02070F] text-white px-6 lg:px-8 py-16 lg:py-24">
-      {/* Page Title */}
-      <h1 className="font-stoke text-[clamp(38px,5vw,56px)] font-normal mb-10 lg:mb-14">
-        Privacy &amp; Policy
-      </h1>
+    <section className="relative w-full bg-[#02070F] text-white ">
+      <div className="container px-2 lg:px-8 py-24">
+        {/* Page Title */}
+        <h1 className="font-stoke text-[clamp(38px,5vw,56px)] font-normal mb-10 lg:mb-14">
+          Privacy &amp; Policy
+        </h1>
 
-      {/* Sections */}
-      <div className="flex flex-col gap-10 lg:gap-14">
-        {sections.map((section, index) => (
-          <div key={index}>
-            {/* Section Title */}
-            <h2
-              className="text-[clamp(14px,2vw,24px)] font-bold font-outfit mb-3"
-              style={{
-                color: section.color === "blue" ? "#4285F4" : "#ffffff",
-              }}>
-              {section.title}
-            </h2>
+        {/* Sections */}
+        <div className="flex flex-col gap-10 lg:gap-14">
+          {sections.map((section, index) => (
+            <div key={index}>
+              {/* Section Title */}
+              <h2
+                className="text-[clamp(14px,2vw,24px)] font-bold font-outfit mb-3"
+                style={{
+                  color: section.color === "blue" ? "#4285F4" : "#ffffff",
+                }}>
+                {section.title}
+              </h2>
 
-            {/* Section Content */}
-            <div className="flex flex-col gap-2 font-outfit font-light text-[clamp(12px,1.8vw,18px)]">
-              {section.content}
+              {/* Section Content */}
+              <div className="flex flex-col gap-2 font-outfit font-light text-[clamp(12px,1.8vw,18px)]">
+                {section.content}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

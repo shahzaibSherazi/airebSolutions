@@ -4,8 +4,30 @@ import blogImg from "../../assets/blog.png";
 import paperImg from "../../assets/white_paper.png";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import AnimatedParagraph from "../ui/AnimatedParagraph";
+import { useCallback } from "react";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const FeaturedSection = () => {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <section
       style={{
@@ -28,12 +50,12 @@ const FeaturedSection = () => {
           </div>
 
           {/* Button */}
-          <a
-            href="#contact-form"
+          <button
+            onClick={scrollToContact}
             className="group lg:w-auto  lg:justify-end flex items-center gap-2 bg-black text-white text-sm font-outfit font-medium px-[22px] py-[18px] hover:bg-white hover:text-black transition">
             Let's work together
             <BtnIcon className="w-3 h-3 text-current  transition-colors duration-300" />
-          </a>
+          </button>
         </div>
 
         {/* Cards */}

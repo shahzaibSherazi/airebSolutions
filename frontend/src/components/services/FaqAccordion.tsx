@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion";
 const FAQAccordion = () => {
-  const [openIndexes, setOpenIndexes] = useState([0]);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
@@ -38,11 +38,7 @@ const FAQAccordion = () => {
   ];
 
   const toggle = (index) => {
-    if (openIndexes.includes(index)) {
-      setOpenIndexes(openIndexes.filter((i) => i !== index));
-    } else {
-      setOpenIndexes([...openIndexes, index]);
-    }
+    setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
   // Split into two independent columns
@@ -77,7 +73,7 @@ const FAQAccordion = () => {
           <div className="flex flex-col gap-4">
             {leftColumn.map((faq, i) => {
               const realIndex = i * 2;
-              const isOpen = openIndexes.includes(realIndex);
+              const isOpen = openIndex === realIndex;
               return (
                 <AccordionItem
                   key={realIndex}
@@ -93,7 +89,7 @@ const FAQAccordion = () => {
           <div className="flex flex-col gap-4">
             {rightColumn.map((faq, i) => {
               const realIndex = i * 2 + 1;
-              const isOpen = openIndexes.includes(realIndex);
+              const isOpen = openIndex === realIndex;
               return (
                 <AccordionItem
                   key={realIndex}

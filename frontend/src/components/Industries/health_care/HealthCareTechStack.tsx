@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import CapIcon from "@/assets/icons/industries/health-care/tech-stack_icons/cap.svg?react";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const techStack = [
   {
@@ -112,6 +113,26 @@ const rectBorder = {
 };
 
 export default function HealthCareTechStack() {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <>
       <section className=" bg-[#02070F] ">
@@ -134,9 +155,9 @@ export default function HealthCareTechStack() {
 
             {/* Right: Contact Us button */}
             <div className="flex-shrink-0 sm:pt-2">
-              <a
-                href="#contact-form"
-                className="group font-outfit w-fit flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+              <button
+                onClick={scrollToContact}
+                className="group w-fit font-outfit flex items-center gap-3 border border-primary hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",
@@ -145,7 +166,7 @@ export default function HealthCareTechStack() {
                 <span className="text-lg font-bold group-hover:text-white text-primary">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -170,7 +191,9 @@ export default function HealthCareTechStack() {
                   Build the future of education or elevate your current platform
                   with Aireb Solutions' advanced education technology services.
                 </p>
-                <button className="flex items-center font-outfit font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm  px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10">
+                <button
+                  onClick={scrollToContact}
+                  className="flex w-fit items-center font-outfit font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm  px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10">
                   Start A Project
                   <span>→</span>
                 </button>

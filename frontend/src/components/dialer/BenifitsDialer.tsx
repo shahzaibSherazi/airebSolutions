@@ -7,11 +7,11 @@ const BenifitsDialer = () => {
       style={{
         background: "linear-gradient(97.32deg, #0E1828 1.89%, #000000 98.11%)",
       }}
-      className="overflow-hidden">
-      <div className="  grid grid-cols-1 lg:grid-cols-[2fr,1fr]">
+      className="overflow-hidden flex lg:flex-row lg:items-center flex-col">
+      <div className="container  px-2 lg:px-8">
         {/* Left Column - Content */}
         <div
-          className="flex flex-col  sm:space-y-10 space-y-8 px-2 lg:px-8  py-16 lg:py-24 
+          className="lg:container flex flex-col ml-0 2xl:ml-44 sm:space-y-10 space-y-8 py-16  lg:py-24 
 ">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
@@ -66,13 +66,13 @@ const BenifitsDialer = () => {
         </div>
 
         {/* Right Column - Headphone Image */}
-        <div className="flex items-start justify-end h-[400px] sm:h-[500px] md:h-[550px] lg:h-[649px] relative">
-          <img
-            src={headPhoneImg}
-            alt="AI Headphones"
-            className="w-full h-full object-center"
-          />
-        </div>
+      </div>
+      <div className="flex items-start justify-end h-[400px] sm:h-[500px] md:h-[550px] lg:h-[649px] relative">
+        <img
+          src={headPhoneImg}
+          alt="AI Headphones"
+          className="w-full h-full object-center"
+        />
       </div>
     </section>
   );

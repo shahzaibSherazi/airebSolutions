@@ -84,7 +84,7 @@ export default function CompanyLocations() {
           </p>
           <a
             href="#contact-us"
-            className="inline-flex items-center font-outfit font-bold gap-2 bg-primary hover:bg-white hover:text-black text-white text-sm  px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
+            className="inline-flex items-center font-outfit font-normal gap-2 bg-primary hover:bg-white hover:text-black text-white text-sm  px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
             See Opportunity <ArrowIcon />
           </a>
         </div>

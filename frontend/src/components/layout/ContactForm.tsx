@@ -15,8 +15,8 @@ export default function ContactForm() {
       id="contact-form"
       className="bg-black text-white relative  flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
-      <div className="container w-full flex items-center justify-between px-2 lg:px-8 py-16 lg:py-24">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+      <div className="container w-full flex items-center px-2 lg:px-8 py-16 lg:py-24">
+        <div className="w-full flex lg:flex-row justify-between items-stretch">
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
             <motion.div
               initial={{ y: 60, opacity: 0 }}
@@ -64,45 +64,88 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const [errors, setErrors] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    service: "",
+    privacyAgreed: "",
+  });
+  const clearError = (field) => {
+    setErrors((prev) => ({
+      ...prev,
+      [field]: "",
+    }));
+  };
+
   const isValidEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
     setForm({
       ...form,
       [name]: type === "checkbox" ? checked : value,
     });
+
+    clearError(name);
   };
 
   const submitForm = async () => {
-    if (!form.fullName || !form.email) {
-      toast.error("Please fill all required fields.");
-      return;
+    const newErrors = {
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      privacyAgreed: "",
+    };
+
+    let hasError = false;
+
+    if (!form.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+      hasError = true;
     }
 
-    if (!isValidEmail(form.email)) {
-      toast.error("Invalid email format");
-      return;
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+      hasError = true;
+    } else if (!isValidEmail(form.email)) {
+      newErrors.email = "Invalid email format";
+      hasError = true;
     }
+
     if (!phone) {
-      toast.error("Please enter phone number.");
-      return;
-    }
-    if (!isValidPhoneNumber(phone)) {
-      toast.error("Invalid phone number for selected country");
-      return;
+      newErrors.phone = "Phone number is required";
+      hasError = true;
+    } else if (!isValidPhoneNumber(phone)) {
+      newErrors.phone = "Invalid phone number";
+      hasError = true;
     }
 
     if (!service) {
-      toast.error("Please select a service.");
-      return;
+      newErrors.service = "Please select a service";
+      hasError = true;
     }
 
     if (!form.privacyAgreed) {
-      toast.error("Please agree to the privacy policy.");
+      newErrors.privacyAgreed = "You must agree to privacy policy";
+      hasError = true;
+    }
+
+    if (hasError) {
+      setErrors(newErrors);
       return;
     }
+
+    setErrors({
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      privacyAgreed: "",
+    });
 
     setLoading(true);
 
@@ -160,7 +203,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         background: "linear-gradient(180deg, #629DFF 0%, #0B0B0B 100%)",
       }}
       className="w-full lg:max-w-[576px] px-[9px] py-[10px] contact_form relative">
-      <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6 md:py-8 space-y-3 sm:space-y-4 md:space-y-5 bg-black">
+      <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6  space-y-3 sm:space-y-4 bg-black">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           <Input
@@ -169,34 +212,67 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             value={form.fullName}
             onChange={handleChange}
             placeholder="Your Name*"
+            error={errors.fullName}
           />
+
           <Input
             label="Email"
             name="email"
             value={form.email}
             onChange={handleChange}
             placeholder="Email Address*"
+            error={errors.email}
           />
         </div>
 
         {/* Phone */}
         <div>
-          <label className="text-xs sm:text-sm opacity-80">Phone number</label>
-          <div className="mt-1 rounded-md bg-gradient-to-b from-[#407BFF] to-primary border border-primary px-2 py-1">
+          <label className="text-xs sm:text-sm text-white">Phone number</label>
+          <div
+            className={`mt-1 rounded-md bg-[#0E2142] border px-2 py-1 ${
+              errors.phone ? "border-red-500" : "border-primary"
+            }`}>
             <PhoneInput
               international
               defaultCountry="US"
               value={phone}
-              onChange={setPhone}
+              onChange={(value) => {
+                setPhone(value);
+                clearError("phone");
+              }}
               className="phone-input-custom"
               countrySelectComponent={CountrySelect}
             />
           </div>
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.phone ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.phone || "placeholder"}
+            </p>
+          </div>
         </div>
 
         {/* Service Dropdown */}
-        <ServiceDropdown value={service} onChange={setService} />
-
+        <div>
+          <ServiceDropdown
+            value={service}
+            onChange={(value) => {
+              setService(value);
+              clearError("service");
+            }}
+            error={errors.service}
+          />
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.service ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.service || "placeholder"}
+            </p>
+          </div>
+        </div>
         {/* Message */}
         <div>
           <label className="text-xs sm:text-sm opacity-80">
@@ -214,17 +290,26 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         </div>
 
         {/* Privacy Checkbox */}
-        <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
-          <input
-            type="checkbox"
-            name="privacyAgreed"
-            checked={form.privacyAgreed}
-            onChange={handleChange}
-            className="accent-primary mt-0.5"
-          />
-          <span>You agree to our friendly privacy policy.</span>
+        <div>
+          <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
+            <input
+              type="checkbox"
+              name="privacyAgreed"
+              checked={form.privacyAgreed}
+              onChange={handleChange}
+              className="accent-primary mt-0.5"
+            />
+            <span>You agree to our friendly privacy policy.</span>
+          </div>
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.privacyAgreed ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.privacyAgreed || "placeholder"}
+            </p>
+          </div>
         </div>
-
         {/* Submit Button */}
         <button
           type="button"
@@ -261,7 +346,7 @@ function SuccessModal({ onClose }) {
 }
 
 /* ================= INPUT ================= */
-function Input({ label, name, value, onChange, placeholder }) {
+function Input({ label, name, value, onChange, placeholder, error }) {
   return (
     <div>
       <label className="text-xs sm:text-sm">{label}</label>
@@ -271,8 +356,18 @@ function Input({ label, name, value, onChange, placeholder }) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="mt-1 w-full text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px] bg-gradient-to-b from-[#407BFF] to-primary border border-primary shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm outline-none"
+        className={`mt-1 w-full bg-[#0E2142] text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px] border px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm outline-none transition ${
+          error ? "border-red-500" : "border-primary"
+        }`}
       />
+      <div className="min-h-[10px] mt-1">
+        <p
+          className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+            error ? "opacity-100" : "opacity-0"
+          }`}>
+          {error || "placeholder"}
+        </p>
+      </div>
     </div>
   );
 }
@@ -294,7 +389,7 @@ function CountrySelect({ value, onChange, options }) {
 }
 
 /* ================= SERVICE DROPDOWN ================= */
-function ServiceDropdown({ value, onChange }) {
+function ServiceDropdown({ value, onChange, error }) {
   const [open, setOpen] = useState(false);
 
   const services = [
@@ -313,10 +408,10 @@ function ServiceDropdown({ value, onChange }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="mt-1 w-full flex items-center justify-between text-left rounded-[8px]
-        bg-gradient-to-b from-[#407BFF] to-primary border border-primary
-        px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm text-[#F8F8F8] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
-        focus:outline-none">
+        className={`mt-1 w-full flex items-center justify-between text-left rounded-[8px]
+bg-[#0E2142] border
+px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm text-[#F8F8F8]
+focus:outline-none ${error ? "border-red-500" : "border-primary"}`}>
         <span className={value ? "text-white" : "text-[#F8F8F8]"}>
           {value || "Choose a service"}
         </span>

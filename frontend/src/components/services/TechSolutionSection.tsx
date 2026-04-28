@@ -15,6 +15,7 @@ import DevOpsBg from "@/assets/AllServices_assets/devOps_card_bg.png";
 import OnDemandBg from "@/assets/AllServices_assets/ondemand_card_bg.png";
 import EcommerceBg from "@/assets/AllServices_assets/ecomerce_card_bg.png";
 import DialerBg from "@/assets/AllServices_assets/dialer_card_bg.png";
+import { Link } from "react-router-dom";
 
 const TechSolutionsSection = () => {
   const [activeTab, setActiveTab] = useState("technology");
@@ -27,91 +28,91 @@ const TechSolutionsSection = () => {
       title: "AI & Machine Learning",
       category: "technology",
       backgroundImage: AiBg,
-      link: "#contact-form",
+      link: "/services/ai-services",
     },
     {
       id: 2,
       title: "Web Development",
       category: "technology",
       backgroundImage: WebBg,
-      link: "#contact-form",
+      link: "/services/web-development",
     },
     {
       id: 3,
       title: "API Development",
       category: "technology",
       backgroundImage: ApiBg,
-      link: "#contact-form",
+      link: "/services/api-integration",
     },
     {
       id: 4,
       title: "Mobile Apps & Games",
       category: "technology",
       backgroundImage: MobileBg,
-      link: "#contact-form",
+      link: "/services/mobile-app-development",
     },
     {
       id: 5,
       title: "API & CRM Integration",
       category: "technology",
       backgroundImage: CrmBg,
-      link: "#contact-form",
+      link: "/services/api-integration",
     },
     {
       id: 6,
       title: "UI/UX Design",
       category: "design",
       backgroundImage: UiBg,
-      link: "#contact-form",
+      link: "/services/ui-ux-design",
     },
     {
       id: 7,
       title: "Content Writing",
       category: "design",
       backgroundImage: ContentBg,
-      link: "#contact-form",
+      link: "/services/content-writing",
     },
     {
       id: 8,
       title: "Logo Design",
       category: "design",
       backgroundImage: LogoBg,
-      link: "#contact-form",
+      link: "/services/logo-design",
     },
     {
       id: 9,
       title: "AI Dialer Software",
       category: "business",
       backgroundImage: DialerBg,
-      link: "#contact-form",
+      link: "/services/dialer",
     },
     {
       id: 10,
       title: "Contact Center Solutions",
       category: "business",
       backgroundImage: ContactBg,
-      link: "#contact-form",
+      link: "/services/contact-center",
     },
     {
       id: 11,
       title: "E-commerce",
       category: "business",
       backgroundImage: EcommerceBg,
-      link: "#contact-form",
+      link: "/services/ecommerce",
     },
     {
       id: 12,
       title: "DevOPS",
       category: "technology",
       backgroundImage: DevOpsBg,
-      link: "#contact-form",
+      link: "/services/devops-services",
     },
     {
       id: 13,
       title: "On-Demand",
       category: "technology",
       backgroundImage: OnDemandBg,
-      link: "#contact-form",
+      link: "/services/on-demand",
     },
   ];
 
@@ -264,12 +265,12 @@ const TechSolutionsSection = () => {
                   {card.title}
                 </h3>
                 <div className="">
-                  <a
-                    href={card.link}
+                  <Link
+                    to={card.link}
                     className="inline-flex items-center justify-center  gap-[15px] bg-white hover:bg-black hover:text-textColor text-black px-[21px] py-2 font-outfit text-sm font-medium transition-colors">
                     Start A Project
                     <BtnIcon className="w-[9px] h-[9px]" />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Bottom Section - Button */}

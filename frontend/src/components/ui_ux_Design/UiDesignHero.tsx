@@ -1,8 +1,30 @@
 import { Link } from "react-router-dom";
 import bgImg from "../../assets/ui-ux-design_assets/hero_bg.png";
 import { motion } from "../ui/motion";
+import { useCallback } from "react";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const UiDesignHero = () => {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <section className="heros_height relative flex flex-col justify-center text-center sm:text-start w-full bg-black">
       {/* Background Image */}
@@ -42,11 +64,11 @@ const UiDesignHero = () => {
             className="font-outfit font-normal text-center text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
             Discover It
           </Link>
-          <a
-            href="#contact-form"
+          <button
+            onClick={scrollToContact}
             className="font-outfit font-normal text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded  hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
             Start A Project
-          </a>
+          </button>
         </div>
       </div>
     </section>

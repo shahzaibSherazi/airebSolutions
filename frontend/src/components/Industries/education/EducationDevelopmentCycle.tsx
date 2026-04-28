@@ -85,7 +85,7 @@ function StepCard({ step, index, sectionInView }) {
 
   return (
     <div
-      className="flex-1 min-w-0 cursor-pointer"
+      className="flex-1 min-w-0"
       style={{
         opacity: sectionInView ? 1 : 0,
         transform: sectionInView ? "translateY(0)" : "translateY(48px)",
@@ -196,7 +196,7 @@ export default function EducationDevelopmentCycle() {
         */}
         <div
           ref={sectionRef}
-          className="flex flex-col sm:flex-row gap-3 lg:gap-4 items-start">
+          className="flex flex-col md:flex-row gap-3 lg:gap-4 ">
           {steps.map((step, i) => (
             <StepCard
               key={step.id}

@@ -82,45 +82,89 @@ function FormComponent({ phone, setPhone, onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
   const fileInputRef = useRef(null);
+
+  const [errors, setErrors] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    service: "",
+    privacyAgreed: "",
+  });
+  const clearError = (field) => {
+    setErrors((prev) => ({
+      ...prev,
+      [field]: "",
+    }));
+  };
   const isValidEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
     setForm({
       ...form,
       [name]: type === "checkbox" ? checked : value,
     });
+
+    clearError(name);
   };
 
   const submitForm = async () => {
-    if (!form.fullName || !form.email) {
-      toast.error("Please fill all required fields.");
-      return;
+    const newErrors = {
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      privacyAgreed: "",
+    };
+
+    let hasError = false;
+
+    if (!form.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+      hasError = true;
     }
 
-    if (!isValidEmail(form.email)) {
-      toast.error("Invalid email format");
-      return;
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+      hasError = true;
+    } else if (!isValidEmail(form.email)) {
+      newErrors.email = "Invalid email format";
+      hasError = true;
     }
+
     if (!phone) {
-      toast.error("Please enter phone number.");
-      return;
+      newErrors.phone = "Phone number is required";
+      hasError = true;
+    } else if (!isValidPhoneNumber(phone)) {
+      newErrors.phone = "Invalid phone number";
+      hasError = true;
     }
-    if (!isValidPhoneNumber(phone)) {
-      toast.error("Invalid phone number for selected country");
-      return;
-    }
+
     if (!service) {
-      toast.error("Please select a service.");
-      return;
+      newErrors.service = "Please select a service";
+      hasError = true;
     }
 
     if (!form.privacyAgreed) {
-      toast.error("Please agree to the privacy policy.");
+      newErrors.privacyAgreed = "You must agree to privacy policy";
+      hasError = true;
+    }
+
+    if (hasError) {
+      setErrors(newErrors);
       return;
     }
+
+    setErrors({
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      privacyAgreed: "",
+    });
 
     setLoading(true);
 
@@ -134,7 +178,6 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       formData.append("message", form.message);
       formData.append("privacyAgreed", String(form.privacyAgreed));
 
-      // ✅ optional file
       if (file) {
         formData.append("file", file);
       }
@@ -182,34 +225,61 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             value={form.fullName}
             onChange={handleChange}
             placeholder="Your Name*"
+            error={errors.fullName}
           />
+
           <Input
             label="Email"
             name="email"
             value={form.email}
             onChange={handleChange}
             placeholder="Email Address*"
+            error={errors.email}
           />
         </div>
 
         {/* Phone */}
         <div>
           <label className="text-xs sm:text-sm text-white">Phone number</label>
-          <div className="mt-1 rounded-md bg-[#0E2142] border border-primary px-2 py-1">
+          <div
+            className={`mt-1 rounded-md bg-[#0E2142] border px-2 py-1 ${
+              errors.phone ? "border-red-500" : "border-primary"
+            }`}>
             <PhoneInput
               international
               defaultCountry="US"
               value={phone}
-              onChange={setPhone}
+              onChange={(value) => {
+                setPhone(value);
+                clearError("phone");
+              }}
               className="phone-input-custom"
               countrySelectComponent={CountrySelect}
             />
           </div>
+          {errors.phone && (
+            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
+              {errors.phone}
+            </p>
+          )}
         </div>
 
         {/* Service Dropdown */}
-        <ServiceDropdown value={service} onChange={setService} />
-
+        <div>
+          <ServiceDropdown
+            value={service}
+            onChange={(value) => {
+              setService(value);
+              clearError("service");
+            }}
+            error={errors.service}
+          />
+          {errors.service && (
+            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
+              {errors.service}
+            </p>
+          )}
+        </div>
         {/* Message */}
         <div className="relative">
           <label className="text-xs sm:text-sm text-white">
@@ -238,17 +308,23 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         </div>
 
         {/* Privacy Checkbox */}
-        <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
-          <input
-            type="checkbox"
-            name="privacyAgreed"
-            checked={form.privacyAgreed}
-            onChange={handleChange}
-            className="accent-primary mt-0.5"
-          />
-          <span>You agree to our friendly privacy policy.</span>
+        <div>
+          <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
+            <input
+              type="checkbox"
+              name="privacyAgreed"
+              checked={form.privacyAgreed}
+              onChange={handleChange}
+              className="accent-primary mt-0.5"
+            />
+            <span>You agree to our friendly privacy policy.</span>
+          </div>
+          {errors.privacyAgreed && (
+            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
+              {errors.privacyAgreed}
+            </p>
+          )}
         </div>
-
         {/* Submit Button */}
         <button
           type="button"
@@ -283,7 +359,7 @@ function SuccessModal({ onClose }) {
   );
 }
 
-function Input({ label, name, value, onChange, placeholder }) {
+function Input({ label, name, value, onChange, placeholder, error }) {
   return (
     <div>
       <label className="text-xs sm:text-sm">{label}</label>
@@ -293,8 +369,13 @@ function Input({ label, name, value, onChange, placeholder }) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="mt-1 w-full bg-[#0E2142] text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px]  border border-primary px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm outline-none"
+        className={`mt-1 w-full bg-[#0E2142] text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px] border px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm outline-none transition ${
+          error ? "border-red-500" : "border-primary"
+        }`}
       />
+      {error && (
+        <p className="text-red-500 text-[11px] sm:text-xs mt-1">{error}</p>
+      )}
     </div>
   );
 }
@@ -316,7 +397,7 @@ function CountrySelect({ value, onChange, options }) {
 }
 
 /* ================= SERVICE DROPDOWN ================= */
-function ServiceDropdown({ value, onChange }) {
+function ServiceDropdown({ value, onChange, error }) {
   const [open, setOpen] = useState(false);
 
   const services = [
@@ -335,10 +416,10 @@ function ServiceDropdown({ value, onChange }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="mt-1 w-full flex items-center justify-between text-left rounded-[8px]
-        bg-[#0E2142] border border-primary
-        px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm text-[#F8F8F8] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
-        focus:outline-none">
+        className={`mt-1 w-full flex items-center justify-between text-left rounded-[8px]
+bg-[#0E2142] border
+px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm text-[#F8F8F8]
+focus:outline-none ${error ? "border-red-500" : "border-primary"}`}>
         <span className={value ? "text-white" : "text-[#F8F8F8]"}>
           {value || "Choose a service"}
         </span>

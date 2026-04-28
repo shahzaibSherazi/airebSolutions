@@ -3,11 +3,9 @@ import logo from "@/assets/aireb_logo.png";
 import UsaFlag from "@/assets/icons/footer/usa-flag.svg?react";
 import CanadaFlag from "@/assets/icons/footer/canada-flag.svg?react";
 import PakFlag from "@/assets/icons/footer/pak-flag.svg?react";
-import bgImg from "@/assets/icons/footer/circle.png";
 import AnimatedCircle from "../ui/AnimatedCircle";
-import AnimatedCircleRight from "../ui/AnimatedCircleRight";
 import PremiumCircle from "../ui/AnimatedCircleRight";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // ── Data ──────────────────────────────────────────────────────────────────────
 const ALL_SERVICES = [
   "Web Development",
@@ -58,7 +56,7 @@ const ROUTES: Record<string, string> = {
   Healthcare: "/industries/healthcare",
   Education: "/industries/education",
   "E-commerce": "/industries/ecommerce",
-  "Banking & FinTech": "/industries/finance-banking",
+  "Banking & FinTech": "/industries/banking-fintech",
   "Real Estate": "/industries/real-estate",
   Gaming: "/industries/gaming",
   Telecommunication: "/industries/telecommunication",

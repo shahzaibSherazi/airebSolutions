@@ -1,8 +1,29 @@
 import { Link } from "react-router-dom";
 import bgImg from "../../assets/web_hero_bg.png";
-import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import { motion } from "../ui/motion";
+import { useCallback } from "react";
+import { smoothScroll } from "@/lib/smooth-scroll";
 const WebHeroSection = () => {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <section className="heros_height relative w-full bg-black flex justify-center sm:text-start text-center flex-col overflow-hidden">
       {/* Background Image */}
@@ -47,11 +68,11 @@ const WebHeroSection = () => {
             className="font-outfit font-normal text-center text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
             Discover It
           </Link>
-          <a
-            href="#contact-form"
+          <button
+            onClick={scrollToContact}
             className="font-outfit font-normal text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded  hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
             Start A Project
-          </a>
+          </button>
         </div>
       </div>
     </section>

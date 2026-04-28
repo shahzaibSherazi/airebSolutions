@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import teckStackImg from "@/assets/Industies/ecommerce/teckStack_card.png";
+import { smoothScroll } from "@/lib/smooth-scroll";
 const techStack = [
   {
     name: "Node.Js",
@@ -111,6 +112,26 @@ const rectBorder = {
 };
 
 export default function TravelHospitalityTechStack() {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <>
       <section className=" bg-[#02070F] ">
@@ -133,8 +154,8 @@ export default function TravelHospitalityTechStack() {
 
             {/* Right: Contact Us button */}
             <div className="flex-shrink-0 sm:pt-2">
-              <a
-                href="#contact-form"
+              <button
+                onClick={scrollToContact}
                 className="group w-fit font-outfit flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
@@ -144,7 +165,7 @@ export default function TravelHospitalityTechStack() {
                 <span className="text-lg font-bold group-hover:text-white text-primary">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -167,7 +188,9 @@ export default function TravelHospitalityTechStack() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <button className="flex items-center font-outfit font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm  px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10">
+                <button
+                  onClick={scrollToContact}
+                  className="flex items-center font-outfit font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm  px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10">
                   Start A Project
                   <span>→</span>
                 </button>

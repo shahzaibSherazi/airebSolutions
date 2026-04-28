@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import teckStackImg from "@/assets/Industies/gaming/techStack-img.png";
+import { smoothScroll } from "@/lib/smooth-scroll";
 const techStack = [
   {
     name: "Node.Js",
@@ -111,6 +112,26 @@ const rectBorder = {
 };
 
 export default function GamingTechStack() {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <>
       <section className=" bg-[#02070F] ">
@@ -133,8 +154,8 @@ export default function GamingTechStack() {
 
             {/* Right: Contact Us button */}
             <div className="flex-shrink-0 sm:pt-2">
-              <a
-                href="#contact-form"
+              <button
+                onClick={scrollToContact}
                 className="group w-fit font-outfit flex items-center gap-3 border border-primary  hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
@@ -144,7 +165,7 @@ export default function GamingTechStack() {
                 <span className="text-lg font-bold group-hover:text-white text-primary">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -176,6 +197,7 @@ export default function GamingTechStack() {
 
               {/* Button */}
               <button
+                onClick={scrollToContact}
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #000000 100%)",

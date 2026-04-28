@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import teckStackImg from "@/assets/Industies/ecommerce/teckStack_card.png";
 import teckStackImg2 from "@/assets/Industies/ecommerce/teckStack_2.png";
 import teckStackImg3 from "@/assets/Industies/ecommerce/techStack_3.png";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const techStack = [
   {
@@ -173,7 +174,26 @@ export default function EcommerceTechStack() {
         : "translateY(0) scale(1)",
     transition: "opacity 0.3s ease, transform 0.3s ease",
   };
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
 
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <>
       <section className="bg-[#02070F] ">
@@ -193,18 +213,18 @@ export default function EcommerceTechStack() {
               </p>
             </div>
             <div className="flex-shrink-0 sm:pt-2">
-              <a
-                href="#contact-form"
-                className="group flex w-fit font-outfit items-center gap-3 border border-blue-500 text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
+              <button
+                onClick={scrollToContact}
+                className="group w-fit font-outfit flex items-center gap-3 border border-primary hover:bg-[#1d4ed8] text-white text-sm lg:text-lg font-bold px-6 py-3 rounded-[9px] transition-all duration-200 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                 style={{
                   background:
                     "linear-gradient(90deg, #4285F4 0%, #02070F 100%)",
                 }}>
                 Contact Us
-                <span className="text-lg font-bold group-hover:text-white text-blue-400">
+                <span className="text-lg font-bold group-hover:text-white text-primary">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -237,7 +257,9 @@ export default function EcommerceTechStack() {
                 </div>
 
                 {/* Bottom button */}
-                <button className="mt-4 flex items-center font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10 w-fit">
+                <button
+                  onClick={scrollToContact}
+                  className="mt-4 flex items-center font-bold gap-2 bg-black hover:bg-white hover:text-black text-white text-sm px-4 py-2.5 rounded-full transition-all duration-200 border border-white/10 w-fit">
                   Start A Project <span>→</span>
                 </button>
               </div>

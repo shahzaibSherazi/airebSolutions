@@ -1,6 +1,10 @@
 import React from "react";
 import { Hand } from "lucide-react";
-import { PiHandPalmLight } from "react-icons/pi";
+import piHand from "../../assets/AllServices_assets/choosUs/pi.png";
+import inovativeIcon from "../../assets/AllServices_assets/choosUs/inovativ.png";
+import expertiseIcon from "../../assets/AllServices_assets/choosUs/experties.png";
+import endtoendIcon from "../../assets/AllServices_assets/choosUs/end.png";
+import focusIcon from "../../assets/AllServices_assets/choosUs/focus.png";
 import { motion } from "framer-motion";
 const WhyChooseUs = () => {
   const features = [
@@ -11,6 +15,7 @@ const WhyChooseUs = () => {
         "We understand your business needs and create custom solutions that match your goals.",
       size: "large",
       color: "dark-blue",
+      icon: piHand,
     },
     {
       id: 2,
@@ -19,6 +24,7 @@ const WhyChooseUs = () => {
         "We work with multiple industries like e-commerce, fintech, real estate, education, and more, with proven experience.",
       size: "large",
       color: "bright-blue",
+      icon: expertiseIcon,
     },
     {
       id: 3,
@@ -27,6 +33,7 @@ const WhyChooseUs = () => {
         "From design and development to integration, marketing, and support — we handle everything.",
       size: "small",
       color: "dark-blue",
+      icon: endtoendIcon,
     },
     {
       id: 4,
@@ -35,6 +42,7 @@ const WhyChooseUs = () => {
         "We use modern technologies like AI, cloud, automation, and mobile solutions to keep your business ahead.",
       size: "small",
       color: "dark-blue",
+      icon: inovativeIcon,
     },
     {
       id: 5,
@@ -43,6 +51,7 @@ const WhyChooseUs = () => {
         "We focus on delivering real results, better user experience, and long-term business growth.",
       size: "small",
       color: "dark-blue",
+      icon: focusIcon,
     },
   ];
 
@@ -74,8 +83,12 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* First Row - 2 Large Cards */}
           <div className="rounded-[5px] p-1 pb-8 hover:bg-black border-025 border-[#141414] group transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01]">
-            <div className="inline-flex px-7 py-[19px] rounded mb-6 bg-black">
-              <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+            <div className="inline-flex px-2 py-2 rounded mb-6 bg-black">
+              <img
+                src={features[0].icon}
+                alt={features[0].title}
+                className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg] "
+              />
             </div>
 
             <div className="px-2 sm:px-5">
@@ -92,8 +105,12 @@ const WhyChooseUs = () => {
             className="rounded-[5px] p-1 hover:bg-black border-025 border-[#141414] pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
             <div className="mb-6">
-              <div className="inline-flex px-7 py-[19px] rounded bg-black">
-                <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+              <div className="inline-flex px-2 py-2 rounded bg-black">
+                <img
+                  src={features[1].icon}
+                  alt={features[1].title}
+                  className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg] brightness-100 invert"
+                />
               </div>
             </div>
             <div className="px-2 sm:px-5">
@@ -114,8 +131,12 @@ hover:-translate-y-2 hover:scale-[1.01]">
                 className="rounded-[5px] p-1 hover:bg-black border-025 border-[#141414] pb-8 group transition-all duration-300 ease-out
 hover:-translate-y-2 hover:scale-[1.01]">
                 <div className="mb-6">
-                  <div className="inline-flex px-7 py-[19px] rounded bg-black">
-                    <PiHandPalmLight className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg]" />
+                  <div className="inline-flex px-2 py-2 rounded bg-black">
+                    <img
+                      src={feature.icon}
+                      alt={feature.title}
+                      className="w-10 h-10 text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-[-20deg] brightness-100 invert"
+                    />
                   </div>
                 </div>
                 <div className="px-5">

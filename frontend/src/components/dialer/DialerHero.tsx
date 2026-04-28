@@ -1,9 +1,30 @@
-import React from "react";
-import HeroImg from "@/assets/Dialer_assets/hero_img.svg?react";
+import React, { useCallback } from "react";
+import HeroImg from "@/assets/Dialer_assets/hero_img.png";
 import { Link } from "react-router-dom";
 import { motion } from "../ui/motion";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const DialerHero = () => {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <section
       style={{
@@ -40,17 +61,17 @@ const DialerHero = () => {
               className="font-outfit font-normal text-center text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
               Discover It
             </Link>
-            <a
-              href="#contact-form"
+            <button
+              onClick={scrollToContact}
               className="font-outfit font-normal text-sm md:text-lg  px-6 sm:px-7 py-2 sm:py-[9px] bg-black text-textColor rounded  hover:bg-textColor hover:text-black transition-all duration-300 shadow-md hover:shadow-lg">
               Start A Project
-            </a>
+            </button>
           </div>
         </div>
 
         {/* Right Side */}
         <div className="flex items-center justify-center lg:justify-end w-full h-[100%]">
-          <HeroImg className="w-full h-[100%] object-contain" />
+          <img src={HeroImg} className="w-full h-[100%] object-contain" />
         </div>
       </div>
     </section>

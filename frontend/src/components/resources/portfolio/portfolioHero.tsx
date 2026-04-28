@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 import bgImage from "@/assets/resources/portfolio/hero-bg.png";
+import { smoothScroll } from "@/lib/smooth-scroll";
 
 const PortfolioHero = () => {
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <section className="heros_height relative bg-[#02070F] w-full flex items-center justify-center  overflow-hidden px-2 lg:px-8 py-8 lg:py-10">
       {/* Background glow circle image — full section */}
@@ -39,11 +60,11 @@ const PortfolioHero = () => {
               className="px-8 py-3 flex w-fit bg-primary text-sm sm:text-base font-outfit font-bold text-white tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-105">
               View Service
             </Link>
-            <a
-              href="#contact-form"
+            <button
+              onClick={scrollToContact}
               className="px-9 py-3 flex w-fit bg-primary text-sm sm:text-base font-outfit font-bold text-white tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-105">
               Get Started
-            </a>
+            </button>
           </div>
         </div>
       </div>

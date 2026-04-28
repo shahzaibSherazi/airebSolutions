@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import img from "@/assets/about-us/value-img.png";
 import UsaIcon from "@/assets/contact-us/usa-flag.svg?react";
 import CanadaIcon from "@/assets/contact-us/canada-flag.svg?react";
 import PakIcon from "@/assets/contact-us/pak-flag.svg?react";
+import { smoothScroll } from "@/lib/smooth-scroll";
 const locations = {
   USA: {
     label: "USA",
@@ -114,6 +115,26 @@ const OurValues = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
+  const scrollToContact = useCallback(() => {
+    const el = document.getElementById("contact-form");
+    if (!el) return;
+
+    const lenis = smoothScroll.getInstance();
+
+    if (lenis) {
+      lenis.scrollTo(el, {
+        offset: -100, // header height adjust
+        duration: 1.2,
+        immediate: false,
+      });
+    } else {
+      // fallback if reduced motion or Lenis disabled
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
   return (
     <div
       style={{
@@ -207,9 +228,11 @@ const OurValues = () => {
               cost-efficiency of top global talent giving you seamless
               communication, faster delivery, and exceptional results.
             </p>
-            <a href="#contact-form" className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
+            <button
+              onClick={scrollToContact}
+              className="inline-flex items-center gap-2 font-outfit font-bold bg-primary hover:bg-white hover:text-black text-white text-sm px-5 py-3 rounded-sm transition-all duration-200 hover:translate-x-0.5 cursor-pointer border-0">
               About Us <ArrowIcon />
-            </a>
+            </button>
           </div>
 
           {/* Right: tabs + card */}

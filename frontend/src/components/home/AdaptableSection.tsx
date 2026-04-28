@@ -1,30 +1,20 @@
 import VideoCard from "../ui/videoCard";
-import video from "../../assets/Ai_video.mp4";
-import fintechVideo from "../../assets/fintech_video.mp4";
-import ecommerceVideo from "../../assets/ecommerce_video.mp4";
-import educationVideo from "../../assets/edu_video.mp4";
-import healthCareVideo from "../../assets/health_care.mp4";
-import gamingVideo from "../../assets/gaming_video.mp4";
-import contactVideo from "../../assets/contact_video.mp4";
-import realEstateVideo from "../../assets/real_estate_video.mp4";
-import startUpVideo from "../../assets/startUp_video.mp4";
-import retailVideo from "../../assets/retail_video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay, FreeMode } from "swiper/modules";
 
 const serviceVideos = [
-  { id: 1, video: video },
-  { id: 2, video: fintechVideo },
-  { id: 3, video: ecommerceVideo },
-  { id: 4, video: educationVideo },
-  { id: 5, video: healthCareVideo },
-  { id: 6, video: gamingVideo },
-  { id: 7, video: contactVideo },
-  { id: 8, video: realEstateVideo },
-  { id: 9, video: startUpVideo },
-  { id: 10, video: retailVideo },
+  { id: 1, video: "/videos/Ai_video.mp4" },
+  { id: 2, video: "/videos/fintech_video.mp4" },
+  { id: 3, video: "/videos/ecommerce_video.mp4" },
+  { id: 4, video: "/videos/edu_video.mp4" },
+  { id: 5, video: "/videos/health_care.mp4" },
+  { id: 6, video: "/videos/gaming_video.mp4" },
+  { id: 7, video: "/videos/contact_video.mp4" },
+  { id: 8, video: "/videos/real_estate_video.mp4" },
+  { id: 9, video: "/videos/startUp_video.mp4" },
+  { id: 10, video: "/videos/retail_video.mp4" },
 ];
 
 export default function AdaptableSection() {

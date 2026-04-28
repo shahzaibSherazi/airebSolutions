@@ -785,32 +785,34 @@ const TermsConditions = () => {
   const numberedSections = sections.filter((s) => !s.isIntro);
 
   return (
-    <section className="relative w-full min-h-screen bg-[#02070F] text-white px-6 lg:px-8 py-16 lg:py-24">
-      {/* Page Title */}
-      <h1 className="font-stoke text-[clamp(36px,5vw,56px)] font-normal mb-10">
-        Terms &amp; Conditions
-      </h1>
+    <section className="relative w-full bg-[#02070F] text-white ">
+      <div className="container px-2 lg:px-8 py-24">
+        {/* Page Title */}
+        <h1 className="font-stoke text-[clamp(36px,5vw,56px)] font-normal mb-10">
+          Terms &amp; Conditions
+        </h1>
 
-      <div className="flex flex-col gap-10 ">
-        {/* Intro sections (no section numbers) */}
-        {introSections.map((section, i) => (
-          <Section
-            key={`intro-${i}`}
-            section={section}
-            sectionNumber={null}
-            isLast={i === numberedSections.length - 1}
-          />
-        ))}
+        <div className="flex flex-col gap-10 ">
+          {/* Intro sections (no section numbers) */}
+          {introSections.map((section, i) => (
+            <Section
+              key={`intro-${i}`}
+              section={section}
+              sectionNumber={null}
+              isLast={i === numberedSections.length - 1}
+            />
+          ))}
 
-        {/* Numbered sections — index+1 = section number, fully auto */}
-        {numberedSections.map((section, i) => (
-          <Section
-            key={`sec-${i}`}
-            section={section}
-            sectionNumber={i + 1}
-            isLast={i === numberedSections.length - 1}
-          />
-        ))}
+          {/* Numbered sections — index+1 = section number, fully auto */}
+          {numberedSections.map((section, i) => (
+            <Section
+              key={`sec-${i}`}
+              section={section}
+              sectionNumber={i + 1}
+              isLast={i === numberedSections.length - 1}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
