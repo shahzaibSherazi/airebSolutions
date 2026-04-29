@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bgImg from "../../assets/devops_hero_bg.png";
+import bgImg from "../../assets/devops_hero_bg.webp";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import { motion } from "framer-motion";
 import { useCallback } from "react";

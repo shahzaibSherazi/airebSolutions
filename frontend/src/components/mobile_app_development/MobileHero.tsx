@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bgImg from "../../assets/mobile_hero_bg.png";
+import bgImg from "../../assets/mobile_hero_bg.webp";
 import { motion } from "../ui/motion";
 import { smoothScroll } from "@/lib/smooth-scroll";
 import { useCallback } from "react";

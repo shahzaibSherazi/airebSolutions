@@ -216,7 +216,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
   return (
     <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative">
-      <div className="px-3 sm:px-4 md:px-[18px] py-[clamp(14px,2.8vh,32px)] space-y-[clamp(10px,1.8vh,24px)]">
+      <div className="px-1 sm:px-4 md:px-[18px] py-1 sm:py-2 space-y-2">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           <Input
@@ -257,11 +257,14 @@ function FormComponent({ phone, setPhone, onSuccess }) {
               countrySelectComponent={CountrySelect}
             />
           </div>
-          {errors.phone && (
-            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
-              {errors.phone}
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.phone ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.phone || "placeholder"}
             </p>
-          )}
+          </div>
         </div>
 
         {/* Service Dropdown */}
@@ -274,11 +277,14 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             }}
             error={errors.service}
           />
-          {errors.service && (
-            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
-              {errors.service}
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.service ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.service || "placeholder"}
             </p>
-          )}
+          </div>
         </div>
         {/* Message */}
         <div className="relative">
@@ -319,11 +325,14 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             />
             <span>You agree to our friendly privacy policy.</span>
           </div>
-          {errors.privacyAgreed && (
-            <p className="text-red-500 text-[11px] sm:text-xs mt-1">
-              {errors.privacyAgreed}
+          <div className="min-h-[10px] mt-1">
+            <p
+              className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+                errors.privacyAgreed ? "opacity-100" : "opacity-0"
+              }`}>
+              {errors.privacyAgreed || "placeholder"}
             </p>
-          )}
+          </div>
         </div>
         {/* Submit Button */}
         <button
@@ -373,9 +382,14 @@ function Input({ label, name, value, onChange, placeholder, error }) {
           error ? "border-red-500" : "border-primary"
         }`}
       />
-      {error && (
-        <p className="text-red-500 text-[11px] sm:text-xs mt-1">{error}</p>
-      )}
+      <div className="min-h-[10px] mt-1">
+        <p
+          className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
+            error ? "opacity-100" : "opacity-0"
+          }`}>
+          {error || "placeholder"}
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import bgImg from "@/assets/Industies/health-care/hero-bg.png";
+import bgImg from "@/assets/Industies/health-care/hero-bg.webp";
 import { motion } from "framer-motion";
 const HealthCareHero = () => {
   return (
