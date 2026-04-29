@@ -16,7 +16,8 @@ const blogSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ["Engineering", "AI & SaaS", "Microservices", "Design Systems"],
+      // enum: ["Engineering", "AI & SaaS", "Microservices", "Design Systems"],
+      trim: true,
       required: true,
     },
     author: {

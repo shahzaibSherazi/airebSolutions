@@ -37,7 +37,8 @@ const whitePaperSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ["Development", "Design", "Strategy", "Technology"],
+      // enum: ["Development", "Design", "Strategy", "Technology"],
+      trim: true,
       required: true,
     },
     status: {

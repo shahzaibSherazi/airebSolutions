@@ -1,3 +1,4 @@
+import Category from "../models/Category.js";
 import WhitePaper from "../models/WhitePaper.js";
 
 // Helper function to convert PDF URL to full URL if needed
@@ -253,21 +254,36 @@ export const deleteWhitePaper = async (req, res) => {
 // @desc Get all categories
 // @route GET /api/whitepapers/admin/categories
 // @access Public
+// export const  getCategories = async (req, res) => {
+//   try {
+//     const categories = await WhitePaper.distinct("category");
+//     res.status(200).json({
+//       success: true,
+//       categories,
+//     });
+//   } catch (error) {
+//     res.status(500).json({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
+
 export const getCategories = async (req, res) => {
   try {
-    const categories = await WhitePaper.distinct("category");
+    const categories = await Category.find({ type: "whitepaper" }).sort({
+      isDefault: -1,
+      name: 1,
+    }); // defaults first
+
     res.status(200).json({
       success: true,
-      categories,
+      categories: categories.map((c) => c.name),
     });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
-
 // @desc Track download
 // @route POST /api/whitepapers/:id/download
 // @access Public

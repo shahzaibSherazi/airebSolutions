@@ -1,4 +1,5 @@
 import Blog from "../models/Blog.js";
+import Category from "../models/Category.js";
 
 // @desc Get all blogs (with pagination, filtering, search)
 // @route GET /api/blogs
@@ -234,17 +235,33 @@ export const deleteBlog = async (req, res) => {
 // @desc Get all categories
 // @route GET /api/blogs/categories
 // @access Public
+// export const getCategories = async (req, res) => {
+//   try {
+//     const categories = await Blog.distinct("category");
+//     res.status(200).json({
+//       success: true,
+//       categories,
+//     });
+//   } catch (error) {
+//     res.status(500).json({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
+
 export const getCategories = async (req, res) => {
   try {
-    const categories = await Blog.distinct("category");
+    const categories = await Category.find({ type: "blog" }).sort({
+      isDefault: -1,
+      name: 1,
+    });
+
     res.status(200).json({
       success: true,
-      categories,
+      categories: categories.map((c) => c.name),
     });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };

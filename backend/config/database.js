@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { seedCategories } from "../utils/seedCategories.js";
 
 const connectDB = async () => {
   try {
@@ -14,6 +15,7 @@ const connectDB = async () => {
     });
 
     console.log(`✅ MongoDB connected: ${conn.connection.host}`);
+    await seedCategories();
     return conn;
   } catch (error) {
     console.error(`❌ MongoDB connection error: ${error.message}`);
