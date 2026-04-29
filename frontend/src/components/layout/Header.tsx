@@ -37,10 +37,11 @@ const itemRoutes: Record<string, string> = {
   "Travel & Hospitality": "/industries/travel-hospitality",
 
   // Resources
-  Blogs: "/resources/blogs",
-  "Case Studies": "/resources/case-studies",
-  Whitepapers: "/resources/white-papers",
-  Portfolio: "/resources/portfolio",
+  Resources: "/resources",
+  Blogs: "/resources",
+  "Case Studies": "/resources",
+  Whitepapers: "/resources",
+  Portfolio: "/resources",
 
   // About Us
   "Our Story": "/about-us",
@@ -86,7 +87,7 @@ const menuItems = [
   },
   {
     name: "Resources",
-    items: ["Blogs", "Case Studies", "Whitepapers", "Portfolio"],
+    items: [],
   },
   {
     name: "About Us",

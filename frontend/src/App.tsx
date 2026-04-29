@@ -53,6 +53,7 @@ const TravelHospitality = lazy(
 );
 
 // Resources
+const Resources = lazy(() => import("./pages/resources"));
 const Blogs = lazy(() => import("./pages/resources/blogs"));
 const DetailPage = lazy(() => import("./pages/resources/blogs/DetailPage"));
 const WhitePaper = lazy(() => import("./pages/resources/white-paper"));
@@ -189,6 +190,7 @@ const AnimatedRoutes = () => {
           />
 
           {/* ── Resources ── */}
+          <Route path="/resources" element={<Resources />} />
           <Route path="/resources/blogs" element={<Blogs />} />
           <Route path="/resources/blogs/:id" element={<DetailPage />} />
           <Route path="/resources/white-papers" element={<WhitePaper />} />

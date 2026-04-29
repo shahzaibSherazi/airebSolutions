@@ -105,6 +105,10 @@ export default {
           "0%": { opacity: "0", transform: "translateX(-100%)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +116,7 @@ export default {
         "slide-in-left": "slideInLeft 0.5s ease-in-out",
         "slide-in-right": "slideInRight 0.5s ease-in-out",
         "draw-loop": "drawLoop 3s ease-in-out infinite",
+        fadeIn: "fadeIn 0.3s ease-in-out",
       },
     },
   },
