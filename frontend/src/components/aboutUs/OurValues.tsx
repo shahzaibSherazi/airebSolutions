@@ -7,7 +7,7 @@ import { smoothScroll } from "@/lib/smooth-scroll";
 const locations = {
   USA: {
     label: "USA",
-    address: "1309 Coffeen Avenue STE 1200 Sheridan, Wyoming 82801",
+    address: "7901 4TH STREET NORTH STE 300 ST. PETERSBURG, FL 33702",
 
     flag: <UsaIcon />,
   },
@@ -141,7 +141,7 @@ const OurValues = () => {
         background:
           "linear-gradient(359.99deg, #02070F 39.11%, #102545 57.01%)",
       }}>
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         <section
           ref={sectionRef}
           className="relative w-full text-white"

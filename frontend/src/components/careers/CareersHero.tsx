@@ -2,7 +2,7 @@ import careerImg from "@/assets/careers/hero-img.png";
 import rightImg from "@/assets/careers/rightImg.png";
 export default function CareersHero() {
   return (
-    <section className="heros_height relative flex  justify-center flex-col overflow-hidden py-8 lg:py-10">
+    <section className="heros_height relative flex  justify-center flex-col overflow-hidden ">
       {/* ── Radial gradient background (from Figma) ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -10,15 +10,15 @@ export default function CareersHero() {
           background: "linear-gradient(180deg, #02070F 0%, #103775 100%)",
         }}
       />
+      <div className="container py-8 lg:py-10">
+        {/* ── Title ── */}
+        <h1 className="relative z-10 text-center text-h1 font-stoke font-normal text-white mb-10">
+          Careers
+        </h1>
 
-      {/* ── Title ── */}
-      <h1 className="relative z-10 text-center text-h1 font-stoke font-normal text-white mb-10">
-        Careers
-      </h1>
-
-      {/* ── Content row ── */}
-      <div className="relative z-10 flex items-center justify-center  px-2 lg:px-8">
-        <div className="relative flex flex-col lg:flex-row items-center text-center sm:text-start gap-16 max-w-7xl mx-auto  w-full">
+        {/* ── Content row ── */}
+        {/* <div className=" relative z-10 flex items-center justify-center  "> */}
+        <div className="relative flex flex-col lg:flex-row items-center text-center sm:text-start gap-16 w-full">
           {/* ── Left image with corner brackets ── */}
           <div className="relative flex items-center justify-center flex-shrink-0 w-1/2 ">
             {/* Image — replace src with your import */}
@@ -38,8 +38,9 @@ export default function CareersHero() {
             </div>
 
             {/* Title */}
-            <h2 className="text-white text-[clamp(16px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
-              Mid Frontend Developer (React.js & Next.js) <br /> - open source
+            <h2 className="text-white lg:text-start text-center text-[clamp(16px,2.2vw,28px)] font-outfit font-light mb-3 leading-snug">
+              Mid Frontend Developer (React.js & Next.js){" "}
+              <br className="hidden lg:block" /> - open source
             </h2>
 
             {/* Category tag */}
@@ -56,6 +57,7 @@ export default function CareersHero() {
             </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </section>
   );

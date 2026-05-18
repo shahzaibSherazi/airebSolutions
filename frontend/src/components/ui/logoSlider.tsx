@@ -21,9 +21,9 @@ const logos = [
 export default function LogoSlider() {
   return (
     <div className="flex justify-center">
-      <div className="relative w-full max-w-[520px] overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#02070F]/80 via-[#02070F]/30 to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#02070F]/80 via-[#02070F]/40 to-transparent pointer-events-none" />
+      <div className="relative w-full max-w-[720px] overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-primary/80 via-primary/30 to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-primary/80 via-primary/40 to-transparent pointer-events-none" />
 
         <Swiper
           modules={[Autoplay, FreeMode]}

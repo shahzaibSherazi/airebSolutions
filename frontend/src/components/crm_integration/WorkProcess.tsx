@@ -43,7 +43,7 @@ export default function APICRMIntegration() {
 
   return (
     <section className="bg-black text-white">
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* Header */}
         <span className="inline-block mb-12 md:mb-16 bg-primary text-textColor text-base font-outfit font-medium px-4 py-2">
           Our Work Process
@@ -58,7 +58,7 @@ export default function APICRMIntegration() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <h1 className="text-h2 font-normal font-stoke md:leading-[56px] mb-6">
+              <h1 className="text-h2 font-normal font-stoke leading-[1.3] mb-6">
                 Our API and CRM
                 <br className="hidden sm:block" />
                 Integration Development
@@ -71,7 +71,7 @@ export default function APICRMIntegration() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: false }}>
-              <p className="text-textColor font-normal font-outfit text-p leading-relaxed max-w-xl">
+              <p className="text-textColor font-normal font-outfit text-p leading-[1.3] max-w-xl">
                 Transform your business by connecting your CRM with powerful
                 tools and platforms through Airish Solutions API integration
                 services. Let us help you streamline your operations, enhance
@@ -81,7 +81,7 @@ export default function APICRMIntegration() {
           </div>
 
           {/* RIGHT — Cards Column */}
-          <div className="flex flex-col gap-6 sm:gap-8">
+          <div className="flex flex-col gap-4">
             {phases.map((phase, index) => (
               <div
                 key={index}
@@ -90,7 +90,7 @@ export default function APICRMIntegration() {
                transition-all duration-300 group
                 flex flex-col h-auto hover:bg-primary">
                 {/* Top Row: Number, Title, Arrow in one line */}
-                <div className="flex items-center justify-between mb-4 sm:mb-6 gap-3 sm:gap-4">
+                <div className="flex items-center justify-between mb-4 gap-3 sm:gap-4">
                   {/* Number - Fixed width */}
                   <span className="text-textColor font-bold text-lg sm:text-xl flex-shrink-0 w-10 sm:w-12">
                     {phase.number}
@@ -106,7 +106,7 @@ export default function APICRMIntegration() {
                 </div>
 
                 {/* Description - Starts below title, not number */}
-                <p className="text-textColor font-outfit pl-12 sm:pl-14 md:pl-16 mt-2 font-light text-p leading-relaxed">
+                <p className="text-textColor font-outfit pl-12 sm:pl-14 md:pl-16 font-light text-p leading-[1.3] line-clamp-4 overflow-hidden">
                   {phase.description}
                 </p>
               </div>

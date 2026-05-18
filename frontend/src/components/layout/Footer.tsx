@@ -71,8 +71,8 @@ export default function Footer() {
   const [showAllServices, setShowAllServices] = useState(false);
   const [showAllIndustries, setShowAllIndustries] = useState(false);
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-textColor text-base font-outfit font-thin leading-snug transition-colors duration-200
-   ${isActive ? "underline underline-offset-2 text-white" : "hover:text-black"}`;
+    `text-text-black text-base font-outfit font-thin leading-snug transition-colors duration-200
+   ${isActive ? "underline underline-offset-2 text-black" : "hover:text-black"}`;
   const visibleServices = showAllServices
     ? ALL_SERVICES
     : ALL_SERVICES.slice(0, INITIAL_COUNT);
@@ -86,7 +86,7 @@ export default function Footer() {
       style={{
         background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
       }}>
-      <div className="container pt-16 lg:pt-24 pb-10 lg:px-8 px-2">
+      <div className="container pt-16 lg:pt-24 pb-10 ">
         {/* ── Top: 4 columns ─────────────────────────────────────────────────── */}
         <div className="  ">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
@@ -150,7 +150,7 @@ export default function Footer() {
               {[
                 {
                   flag: <UsaFlag />,
-                  addr: "1309 Caffeen Avenue STE 1200\nSheridan, Wyoming 82801",
+                  addr: "7901 4TH STREET NORTH STE 300 ST. PETERSBURG, FL 33702",
                 },
                 {
                   flag: <CanadaFlag />,

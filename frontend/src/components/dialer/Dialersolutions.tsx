@@ -14,7 +14,7 @@ const DialerSolutions = () => {
       description:
         "We understand your business needs and customize the AI dialer for sales, support, or marketing.",
       rightContent: (
-        <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr,2fr] gap-2 ">
           {/* Left Column - Customer Details */}
           <div
             style={{
@@ -211,7 +211,7 @@ const DialerSolutions = () => {
         background: "linear-gradient(180deg, #0E1828 0%, #000000 22.96%)",
       }}
       className=" text-white ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8 ">
+      <div className="container py-16 lg:py-24">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -219,7 +219,7 @@ const DialerSolutions = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="text-h2 lg:leading-[56px] font-stoke font-normal mb-4">
+          <h2 className="text-h2 lg:leading-[1.3] font-stoke font-normal mb-4">
             How Our AI Custom Dialer
             <br />
             Solutions Work
@@ -260,7 +260,7 @@ const DialerSolutions = () => {
                         {step.title}
                       </h3>
                       {activeStep === step.id && (
-                        <p className="text-black text-base font-outfit leading-relaxed">
+                        <p className="text-black text-base font-outfit leading-[1.3]">
                           {step.description}
                         </p>
                       )}
@@ -395,7 +395,7 @@ const Step3Content = () => {
           style={{
             background: "linear-gradient(180deg, #629DFF 0%, #0E1828 100%)",
           }}
-          className="rounded-[22px] border border-primary px-2 flex flex-col pt-5 pb-10">
+          className="rounded-[22px] border border-primary px-2 flex flex-col pt-5 pb-5">
           <div className="flex items-center gap-3 mb-6 bg-white px-2 py-2 rounded-[22px]">
             <SearchIcon className="w-5 h-5 text-black" />
 
@@ -453,7 +453,7 @@ const Step3Content = () => {
         {/* Phone Icon */}
         <div className=" justify-center items-center flex">
           <div className="group cursor-pointer py-3 px-7 rounded-[6px] border-025 border-primary">
-            <CallIcon className="w-12 h-12 call-bounce transition-all" />
+            <CallIcon className="w-10 h-10 call-bounce transition-all" />
           </div>
         </div>
       </div>

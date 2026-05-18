@@ -138,7 +138,7 @@ export default function BankingCycle() {
 
   return (
     <section className="w-full bg-[#0E1828]">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-white font-normal leading-tight mb-4 font-stoke text-h2">

@@ -32,7 +32,7 @@ const ApiIntegrationHero = () => {
           "linear-gradient(66.03deg, #629DFF -38.71%, #629DFF -38.7%, #000000 114.21%)",
       }}
       className="heros_height  flex flex-col justify-center sm:text-start text-center overflow-hidden">
-      <div className="container py-8 lg:py-10 px-2 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
+      <div className="container py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
         {/* Left Side - Content */}
         <div className="flex flex-col justify-end sm:items-start items-center h-full ">
           {/* Title */}
@@ -46,7 +46,7 @@ const ApiIntegrationHero = () => {
               Services
             </h1>
             {/* Subtitle */}
-            <p className="text-textColor font-outfit text-p tracking-wide mb-10">
+            <p className="text-textColor leading-[1.3] font-outfit text-p tracking-wide mb-10">
               We build secure, scalable APIs that connect your systems and
               streamline operations. From custom APIs to third-party
               integrations, we ensure fast, reliable data flow to improve

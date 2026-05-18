@@ -5,6 +5,7 @@ import StartUpServices from "@/components/Industries/start-up/StartUpServices";
 import StartUpSolutions from "@/components/Industries/start-up/StartUpSolutions";
 import StartUpTechStack from "@/components/Industries/start-up/StartUpTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const StartUp = () => {
   return (
@@ -15,6 +16,7 @@ const StartUp = () => {
       <StartUpCycle />
       <StartUpTechStack />
       <StartUpExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

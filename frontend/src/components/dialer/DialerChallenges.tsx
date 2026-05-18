@@ -56,7 +56,7 @@ const DialerChallenges = () => {
       }}
       className="relative w-full text-white ">
       {/* ── Top row: heading left, button right ── */}
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         <div className="flex sm:flex-row flex-col items-start justify-center sm:justify-between gap-2 sm:gap-6 mb-3">
           <motion.div
             initial={{ y: 60, opacity: 0 }}
@@ -64,7 +64,7 @@ const DialerChallenges = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
             <h2
-              className="font-stoke text-h2 text-textColor leading-tight mb-3
+              className="font-stoke text-h2 text-textColor leading-[1.3] mb-3
           ">
               Dialer Challenges <br /> Holding You Back?
             </h2>
@@ -104,7 +104,7 @@ const DialerChallenges = () => {
                       <p className="font-outfit text-sm lg:text-base text-white leading-relaxed font-medium">
                         {item.title}
                       </p>
-                      <p className="font-outfit text-xs lg:text-sm text-white leading-relaxed">
+                      <p className="font-outfit text-xs lg:text-sm text-white leading-[1.3]">
                         {item.desc}
                       </p>
                     </div>
@@ -133,7 +133,7 @@ const DialerChallenges = () => {
                 {valuePropositions.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
-                    <span className="font-outfit text-p text-white leading-relaxed">
+                    <span className="font-outfit text-p text-white leading-[1.3]">
                       {item}
                     </span>
                   </li>

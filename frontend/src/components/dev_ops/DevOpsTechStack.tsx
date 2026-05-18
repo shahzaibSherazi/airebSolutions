@@ -106,7 +106,7 @@ const TechStack = () => {
 
   return (
     <section className="relative w-full bg-white  overflow-hidden ">
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* ── Background decorative rings ── */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-[#c7d2fe] pointer-events-none opacity-40" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-[#c7d2fe] pointer-events-none opacity-20" />

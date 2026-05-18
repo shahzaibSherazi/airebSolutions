@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bgImg from "../../assets/Ondemand_assets/hero_bg.png";
+import bgImg from "../../assets/Ondemand_assets/hero_bg.webp";
 import { motion } from "../ui/motion";
 import { useCallback } from "react";
 import { smoothScroll } from "@/lib/smooth-scroll";
@@ -37,7 +37,7 @@ const OnDemandHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="container relative z-10 px-2 lg:px-8 py-8 lg:py-10 flex flex-col justify-end sm:items-start items-center">
+      <div className="container relative z-10 py-8 lg:py-10 flex flex-col justify-end sm:items-start items-center">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -47,7 +47,7 @@ const OnDemandHero = () => {
             Smart On-Demand
             <br className="hidden lg:block" /> Solutions Provider
           </h1>
-          <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl mb-10">
+          <p className="font-outfit text-p leading-[1.3] text-textColor max-w-2xl mb-10">
             We develop strong digital platforms that let customers connect with
             services in real time. We make scalable, safe, and easy-to-use
             solutions for anything from mobile apps and marketplaces to

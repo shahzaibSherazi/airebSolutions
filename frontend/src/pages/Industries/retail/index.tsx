@@ -5,6 +5,7 @@ import RetailServices from "@/components/Industries/retail/RetailServices";
 import RetailSolutions from "@/components/Industries/retail/RetailSolutions";
 import RetailTechStack from "@/components/Industries/retail/RetailTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Retail = () => {
   return (
@@ -15,6 +16,7 @@ const Retail = () => {
       <RetailCycle />
       <RetailTechStack />
       <RetailExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

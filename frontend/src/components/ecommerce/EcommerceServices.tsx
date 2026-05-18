@@ -17,92 +17,92 @@ const EcommerceServices = () => {
     {
       id: 1,
       iconPath: <CustomIcon />,
-      title: "Custom Ecommerce Store Development",
+      title: "Custom E-commerce Store Development",
       description:
-        "We build scalable, flexible, and secure e-commerce stores customized to your business’s unique needs. From platform selection to system integration, we ensure that your online store is equipped with the latest features to enhance your operations. Our team works with platforms such as Shopify, WooCommerce, Magento, and custom-built solutions for fully personalized websites that meet your brand vision.",
+        "We build secure, scalable e-commerce stores using Shopify, WooCommerce, Magento, and custom solutions tailored to your brand.",
     },
     {
       id: 2,
       iconPath: <MultichennelIcon />,
       title: "Multi-Channel E-commerce Integration",
       description:
-        "Expand your reach by integrating your e-commerce store with top platforms like Amazon, eBay, and Etsy. We help you streamline your inventory management and order processing across multiple channels, ensuring that your business can scale without complication.",
+        "We connect your store with Amazon, eBay, and Etsy for centralized inventory and smooth order management across platforms.",
     },
     {
       id: 3,
       iconPath: <MobileEcommerceIcon />,
       title: "Mobile E-commerce Solutions",
       description:
-        "With mobile shopping on the rise, we ensure that your online store is fully optimized for mobile devices. Our mobile-first approach guarantees that your e-commerce store is responsive, providing customers with an excellent shopping experience on their smartphones and tablets.",
+        "We create mobile-optimized e-commerce stores, ensuring fast, responsive, and seamless shopping experiences on all devices.",
     },
     {
       id: 4,
       iconPath: <GetwayIcon />,
       title: "Payment Gateway Integration",
       description:
-        "We integrate secure and diverse payment gateways like PayPal, Stripe, Square, and Razorpay, providing customers with the flexibility to pay with their preferred method. We ensure that the payment process is smooth, secure, and reliable, giving your customers confidence to shop.",
+        "We integrate secure payment gateways like PayPal, Stripe, and Razorpay for safe and flexible checkout experiences.",
     },
     {
       id: 5,
       iconPath: <SeoIcon />,
-      title: "Advanced E-commerce SEO and Digital Marketing",
+      title: "Advanced E-commerce SEO & Digital Marketing",
       description:
-        "Our team helps you get your products seen by the right audience. Through comprehensive SEO strategies and digital marketing campaigns, we drive traffic to your online store, optimize your product pages for better visibility, and improve your conversion rates.",
+        "We optimize product pages and run marketing campaigns to increase traffic, visibility, and conversions effectively.",
     },
     {
       id: 6,
       iconPath: <CrmIcon />,
-      title: "CRM Integration for Better Customer Engagement",
+      title: "CRM Integration for Customer Engagement",
       description:
-        "Our AI-powered dialer solutions integrate with a variety of communication channels, including phone calls, emails, SMS, and social media. This omni-channel approach ensures that businesses can engage customers on their preferred platform, leading to improved satisfaction and faster issue resolution.We integrate CRM tools such as HubSpot, Salesforce, and Zoho into your e-commerce platform to help manage customer relationships effectively. With a robust CRM, you can automate customer interactions, personalize marketing efforts, and improve customer retention.",
+        "We integrate CRM tools like HubSpot, Salesforce, and Zoho to improve customer relationships and automate interactions.",
     },
     {
       id: 7,
       iconPath: <SecurityIcon />,
       title: "E-commerce Security & Compliance",
       description:
-        "Keeping your store and customers' data secure is our top priority. We integrate SSL certificates, enable two-factor authentication, and ensure compliance with regulations like PCI DSS. We also stay updated with the latest security trends to keep your site safe from threats.",
+        "We implement SSL, secure authentication, and PCI compliance to protect customer data and transactions.",
     },
     {
       id: 8,
       iconPath: <ProductIcon />,
       title: "Product & Order Management",
       description:
-        "Our product and order management systems streamline your operations, automate tasks, and improve efficiency. With real-time updates on inventory, order processing, and customer data, you can focus on growing your business rather than managing operations.",
+        "We streamline inventory, orders, and customer data with automated systems for efficient business operations",
     },
     {
       id: 9,
       iconPath: <AnalyticsIcon />,
       title: "Analytics & Reporting for Business Growth",
       description:
-        "We integrate CRM tools such as HubSpot, Salesforce, and Zoho into your e-commerce platform to help manage customer relationships effectively. With a robust CRM, you can automate customer interactions, personalize marketing efforts, and improve customer retention.",
+        "We provide advanced analytics and reporting tools to track performance and improve decision-making.",
     },
     {
       id: 10,
       iconPath: <HostingIcon />,
       title: "Cloud Hosting & Scalability",
       description:
-        "We ensure your e-commerce store is hosted on reliable cloud platforms like AWS, Google Cloud, or Microsoft Azure for robust performance and scalability. Our cloud hosting solutions provide high uptime, enhanced security, and the ability to scale as your business grows.",
+        "We host stores on AWS, Google Cloud, or Azure for high performance, security, and scalability.",
     },
     {
       id: 11,
       iconPath: <AiPoweredIcon />,
-      title: "AI-Powered Solutions for E-commerce",
+      title: "AI-Powered E-commerce Solutions",
       description:
-        "We implement AI-driven solutions such as personalized product recommendations, automated customer service chatbots, and predictive analytics to enhance the shopping experience. These innovations improve customer engagement and increase conversions.",
+        "We use AI for recommendations, chatbots, and predictive analytics to improve engagement and sales.",
     },
     {
       id: 12,
       iconPath: <SupportIcon />,
       title: "Omnichannel Support",
       description:
-        "Provide a consistent and integrated experience across all customer touchpoints. We enable seamless omnichannel strategies that unify your website, mobile app, social media, and physical stores to create a holistic shopping experience.",
+        "We unify web, mobile, and social channels to deliver a consistent and seamless customer experience.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8 ">
+      <div className="container py-16 lg:py-24 ">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -114,7 +114,7 @@ const EcommerceServices = () => {
             Discover Our Ecommerce
             <br className="hidden lg:block" /> Services In Detail
           </h2>
-          <p className="font-outfit font-normal text-p leading-[1.6] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
+          <p className="font-outfit font-normal text-p leading-[1.3] text-[#EBEBEB] max-w-[800px] mx-auto">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the little blind texts. The Big
             Oxmox advised her not to do so, because there were thousands of bad
@@ -128,7 +128,7 @@ const EcommerceServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[10px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -138,7 +138,7 @@ const EcommerceServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                   {service.iconPath}
                 </div>
 
@@ -153,10 +153,10 @@ const EcommerceServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

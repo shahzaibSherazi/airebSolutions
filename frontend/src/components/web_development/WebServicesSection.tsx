@@ -13,49 +13,48 @@ const WebServicesSection = () => {
       iconPath: <WebDevelopmentIcon />,
       title: "Custom Web Development",
       description:
-        "We build feature-rich, highly scalable web applications tailored to your specific business requirements. Whether you need a complex enterprise application or a sleek corporate website, our custom web development services ensure top-tier performance and usability.",
+        "We build scalable, high-performance web applications and corporate websites tailored to your business needs.",
     },
     {
       id: 2,
       iconPath: <EcommerceIcon />,
       title: "E-commerce Development",
       description:
-        "Aireb Solutions creates robust e-commerce platforms that provide seamless shopping experiences. From WooCommerce and Shopify to Magento and custom-built solutions, we develop online stores that drive sales and maximize user retention.",
-      featured: true,
+        "We create powerful e-commerce stores using Shopify, WooCommerce, Magento, and custom solutions to boost online sales.",
     },
     {
       id: 3,
       iconPath: <CmsIcon />,
       title: "Content Management Systems (CMS)",
       description:
-        "Take control of your content with our CMS development services. We work with leading platforms like WordPress, Joomla, and Drupal, offering intuitive and easy-to-manage content solutions that keep your website updated with minimal effort.",
+        "We develop user-friendly CMS websites using WordPress, Joomla, and Drupal for easy content management",
     },
     {
       id: 4,
       iconPath: <IntegrationIcon />,
       title: "API Development & Integration",
       description:
-        "Seamlessly integrate third-party services and applications with our API development expertise. We create secure and scalable APIs, enabling smooth communication between your website and external platforms like CRM, ERP, and payment gateways.",
+        "We build secure APIs and integrate CRM, ERP, payment gateways, and third-party applications seamlessly.",
     },
     {
       id: 5,
       iconPath: <WebSolutionIcon />,
       title: "AI-Powered Web Solutions",
       description:
-        "We leverage artificial intelligence to enhance web functionality, including chatbots, predictive analytics, and automated workflows, improving efficiency and user experience",
+        "We develop AI-powered websites with chatbots, automation, predictive analytics, and smart user experiences.",
     },
     {
       id: 6,
       iconPath: <PwaIcon />,
       title: "Progressive Web Apps (PWA)",
       description:
-        "Enhance your web presence with Progressive Web Apps that deliver a mobile app-like experience with fast loading times, offline accessibility, and responsive design across all devices.",
+        "We create fast, responsive PWAs with offline access and app-like experiences across all devices.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -66,7 +65,7 @@ const WebServicesSection = () => {
           <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
             Our Web Development Services
           </h2>
-          <p className="font-outfit font-normal text-p leading-[1.6] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
+          <p className="font-outfit font-normal text-p leading-[1.3] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
             We don't just create strategies, we drive the numbers. Growth means
             higher conversion, lower costs, and stronger brands. Discover how we
             help brands grow smarter
@@ -89,7 +88,7 @@ const WebServicesSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                   {service.iconPath}
                 </div>
 
@@ -104,10 +103,10 @@ const WebServicesSection = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white 
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

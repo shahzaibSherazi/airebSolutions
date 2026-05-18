@@ -786,7 +786,7 @@ const TermsConditions = () => {
 
   return (
     <section className="relative w-full bg-[#02070F] text-white ">
-      <div className="container px-2 lg:px-8 py-24">
+      <div className="container py-24">
         {/* Page Title */}
         <h1 className="font-stoke text-[clamp(36px,5vw,56px)] font-normal mb-10">
           Terms &amp; Conditions

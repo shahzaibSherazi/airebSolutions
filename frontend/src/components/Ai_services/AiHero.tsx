@@ -37,7 +37,7 @@ const AiHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0  bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.5)_50%,rgba(66,133,244,0.25)_100%)] sm:bg-[linear-gradient(66deg,#629DFF_-90%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="container relative z-10  px-6 py-8  lg:py-10 flex flex-col sm:items-start items-center justify-end">
+      <div className="container relative z-10  lg:py-10 flex flex-col sm:items-start items-center justify-end">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -46,7 +46,7 @@ const AiHero = () => {
           <h1 className="font-stoke text-h1 leading-[1.28] text-white mb-4 lg:mb-2">
             AI and Machine <br /> Learning Services
           </h1>
-          <p className="font-outfit text-p leading-[1.6] text-white max-w-2xl mb-10">
+          <p className="font-outfit text-p leading-[1.3] text-white max-w-2xl mb-10">
             We provide smart AI-powered solutions that make workflows run more
             smoothly, analyse data, and help people make better decisions. We
             build AI systems that are scalable, safe, and ready for the future.

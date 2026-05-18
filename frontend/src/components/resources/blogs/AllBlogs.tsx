@@ -46,9 +46,9 @@ function SmallCard({
   return (
     <div
       onClick={onReadMore}
-      className="flex flex-col h-full group cursor-pointer">
+      className="relative flex flex-col h-full group cursor-pointer">
       <div
-        className="relative overflow-hidden flex-shrink-0 blogsCards_TopEdge"
+        className=" overflow-hidden flex-shrink-0 blogsCards_TopEdge"
         style={imageBorderStyle}>
         <img
           src={getImageUrl(post.image) || "/placeholder.svg"}
@@ -162,7 +162,7 @@ export default function AllBlogs() {
 
   return (
     <section id="all-blogs-section" className="w-full bg-[#02070F] font-outfit">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Search Results Header */}
         {searchQuery && (
           <div className="mb-12">

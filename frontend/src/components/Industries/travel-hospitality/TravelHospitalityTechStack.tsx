@@ -135,17 +135,17 @@ export default function TravelHospitalityTechStack() {
   return (
     <>
       <section className=" bg-[#02070F] ">
-        <div className="container px-2 sm:px-8  py-16 md:py-24">
+        <div className="container  py-16 md:py-24">
           {/* ── Top Header Row ── */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
+          <div className="flex flex-col md:flex-row md:items-start items-center md:justify-between gap-6 mb-10 md:mb-14">
             {/* Left: Title + Description */}
             <div className="">
-              <h1 className="text-textColor font-stoke font-extralight leading-tight mb-4 text-h2">
+              <h1 className="text-textColor md:text-start text-center font-stoke font-extralight leading-tight mb-4 text-h2">
                 Tech Stack & Compliance
                 <br className="" />
                 Expertise
               </h1>
-              <p className="text-textColor font-outfit text-p max-w-2xl leading-[1.85] font-light">
+              <p className="text-textColor md:text-start text-center font-outfit text-p max-w-2xl leading-[1.85] font-light">
                 Our fintech application development services combine proven
                 regulatory expertise with a robust, modern tech stack to deliver
                 secure, scalable, and compliant fintech solutions.
@@ -178,7 +178,7 @@ export default function TravelHospitalityTechStack() {
                 background: "linear-gradient(180deg, #629DFF 0%, #48CDCD 100%)",
               }}>
               {/* Bottom text + button */}
-              <div className="flex flex-col justify-center items-start gap-4">
+              <div className="flex flex-col justify-center md:items-start items-center gap-4">
                 <p className="font-stoke text-black font-normal text-base md:text-lg lg:text-xl">
                   E-commerce Projects
                 </p>

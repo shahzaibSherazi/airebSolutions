@@ -37,7 +37,7 @@ const LogoDesignExpertise = () => {
       }}
       className="relative w-full overflow-hidden">
       {/* Container */}
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-black text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
           Our Expertise
@@ -50,7 +50,7 @@ const LogoDesignExpertise = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="text-white text-h2 font-stoke font-thin leading-10 lg:leading-[72px] ">
+          <h2 className="text-white text-h2 font-stoke font-thin leading-[1.3] ">
             Why did you choose Aireb Solutions for
             <br className="hidden sm:block" />
             Logo Design Services?
@@ -64,9 +64,9 @@ const LogoDesignExpertise = () => {
               key={feature.id}
               className="group relative bg-[#0E1828] border-2 border-[#7474741F] px-4  py-6 md:py-8 transition-all duration-300 hover:bg-primary overflow-hidden sm:min-h-[150px] h-full flex flex-col">
               {/* Card Content */}
-              <div className="relative z-10  flex justify-center items-center ">
+              <div className="relative z-10 h-full flex flex-col justify-center items-center ">
                 {/* Text with fixed height and overflow handling */}
-                <h1 className="text-primary group-hover:text-textColor font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 mb-3 ">
+                <h1 className="text-primary text-center group-hover:text-textColor font-outfit text-sm sm:text-base md:text-xl font-normal leading-[1.3] pr-8 mb-3 ">
                   {feature.heading}
                 </h1>
               </div>
@@ -88,7 +88,7 @@ const LogoDesignExpertise = () => {
             </div>
           ))}
         </div>
-        <p className="text-white text-center text-base sm:text-lg md:text-xl font-outfit font-light leading-relaxed mt-8">
+        <p className="text-white text-center text-base sm:text-lg md:text-xl font-outfit font-light leading-[1.3] mt-8">
           We don't just make logos; we make strong brand identities <br /> that
           help your business stand out and grow.
         </p>

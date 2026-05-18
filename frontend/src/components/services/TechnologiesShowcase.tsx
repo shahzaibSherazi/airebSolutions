@@ -112,7 +112,7 @@ const TechnologiesShowcase = () => {
 
   return (
     <div className=" bg-black text-textColor  ">
-      <div className="container px-2 lg:px-8 lg:pb-24 pb-16">
+      <div className="container lg:pb-24 pb-16">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

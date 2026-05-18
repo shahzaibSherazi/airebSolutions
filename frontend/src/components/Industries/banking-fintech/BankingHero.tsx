@@ -1,5 +1,5 @@
-import heroImg from "@/assets/Industies/banking-fintech/hero-img.png";
-import bgImg from "@/assets/Industies/banking-fintech/hero-bg.png";
+import heroImg from "@/assets/Industies/banking-fintech/hero-img.webp";
+import bgImg from "@/assets/Industies/banking-fintech/hero-bg.webp";
 
 export default function BankingHero() {
   return (
@@ -17,9 +17,9 @@ export default function BankingHero() {
         }}
         className="absolute inset-0"
       />
-      <div className="container w-full z-10 relative  px-2 lg:px-8 flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
+      <div className="container w-full z-10 relative flex flex-col lg:flex-row gap-4 py-8 lg:py-10">
         {/* LEFT CONTENT */}
-        <div className="flex flex-col justify-end items-start w-full space-y-6">
+        <div className="flex flex-col justify-center items-center lg:items-start w-full space-y-6">
           {/* Sector Button */}
 
           <p
@@ -30,7 +30,7 @@ export default function BankingHero() {
             Sector
           </p>
 
-          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
+          <h1 className="font-stoke text-center lg:text-start text-h1 leading-[1.28] text-white">
             Custom FinTech
             <br className="hidden lg:block" /> Software Solutions
           </h1>

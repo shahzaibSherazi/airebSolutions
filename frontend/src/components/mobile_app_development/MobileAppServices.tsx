@@ -16,62 +16,62 @@ const MobileAppServices = () => {
       iconPath: <CustomMobielIcon />,
       title: "Custom Mobile App Development",
       description:
-        "Our expert team leverages the latest technologies to build intuitive, high-performing apps for iOS and Android. From concept to deployment, we deliver innovative solutions that enhance user engagement and drive business growth.",
+        "We build high-performing iOS and Android apps that improve user engagement and support business growth effectively.",
     },
     {
       id: 2,
       iconPath: <NativeMobielIcon />,
       title: "Native Mobile App Development",
       description:
-        "We design and build high-performing, native apps for iOS and Android, delivering a unique experience optimized for each platform. From enterprise solutions to consumer-focused apps, our native apps are tailored for maximum performance, responsiveness, and seamless interaction with mobile device features.",
+        "We develop native iOS and Android apps optimized for performance, responsiveness, and seamless device integration.",
     },
     {
       id: 3,
       iconPath: <CrossPlatformIcon />,
       title: "Cross-Platform App Development",
       description:
-        "With cross-platform development tools like React Native and Flutter, we create apps that work seamlessly on both iOS and Android. This approach saves time and resources while ensuring high performance, and scalability, and delivering a consistent experience across devices.",
+        "We create cross-platform apps using Flutter and React Native for consistent performance across iOS and Android devices.",
     },
     {
       id: 4,
       iconPath: <EnterpriseIcon />,
       title: "Enterprise Mobility Solutions",
       description:
-        "Aireb Solutions specializes in developing custom enterprise mobility solutions that optimize internal workflows and boost productivity. We provide mobile apps tailored to the needs of your organization, enabling real-time data access, process automation, and improved communication across teams.",
+        "We build enterprise mobile apps that improve workflows, automate processes, and enhance team collaboration efficiently.",
     },
     {
       id: 5,
       iconPath: <OptimizationIcon />,
-      title: "Mobile App Modernization and Optimization",
+      title: "Mobile App Modernization & Optimization",
       description:
-        "If your current app is outdated or underperforming, we offer modernization services that breathe new life into your mobile experience. From redesigns and feature enhancements to code optimization and platform upgrades, we ensure your app remains competitive and user-friendly.",
+        "We modernize outdated apps with redesigns, feature upgrades, and performance optimization for better user experiences.",
     },
     {
       id: 6,
       iconPath: <ArIcon />,
-      title: "Augmented Reality (AR) & Virtual Reality (VR) App Development",
+      title: "AR & VR App Development",
       description:
-        "Comprehensive API documentation is crucial for developers. We provide detailed, easy-to-understand documentation to facilitate smooth implementation and integration, along with ongoing support to ensure optimal performance.",
+        "We develop immersive AR and VR mobile apps for gaming, training, retail, and interactive business experiences.",
     },
     {
       id: 7,
       iconPath: <TestingIcon />,
       title: "App Testing & Quality Assurance",
       description:
-        "Our comprehensive testing and QA process ensures that every app and game we develop is bug-free, secure, and fully optimized for the best performance on a variety of devices and operating systems. From functionality testing to stress and performance testing, we ensure quality every step of the way.",
+        "We perform detailed app testing to ensure security, performance, stability, and bug-free user experiences across devices.",
     },
     {
       id: 8,
       iconPath: <MaintenanceIcon />,
       title: "Mobile App Maintenance & Support",
       description:
-        "Our services don't end once your app is live. We provide ongoing maintenance and support to ensure your app stays up-to-date, secure, and fully optimized. From software updates to troubleshooting and new feature implementation, we handle everything to keep your app running smoothly.",
+        "We provide ongoing app maintenance, updates, troubleshooting, and optimization to keep applications secure and efficient.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -100,7 +100,7 @@ const MobileAppServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="mb-[clamp(16px,2.5vh,32px)]">
+                <div className="mb-[clamp(12px,2.5vh,28px)]">
                   <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                     {service.iconPath}
                   </div>
@@ -117,10 +117,10 @@ const MobileAppServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

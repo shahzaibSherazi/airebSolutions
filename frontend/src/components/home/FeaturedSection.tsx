@@ -1,7 +1,7 @@
 import FeaturedInsightCard from "../ui/FeaturedInsightCard";
-import caseImg from "../../assets/case_study.png";
-import blogImg from "../../assets/blog.png";
-import paperImg from "../../assets/white_paper.png";
+import caseImg from "../../assets/case_study.webp";
+import blogImg from "../../assets/blog.webp";
+import paperImg from "../../assets/white_paper.webp";
 import BtnIcon from "@/assets/icons/btn_icon.svg?react";
 import AnimatedParagraph from "../ui/AnimatedParagraph";
 import { useCallback } from "react";
@@ -33,17 +33,17 @@ const FeaturedSection = () => {
       style={{
         background: "linear-gradient(180deg, #4285F4 0%, #5193FF 100%)",
       }}>
-      <div className="container px-2 lg:px-8 pb-16 lg:pb-24 flex flex-col gap-8 sm:gap-10 md:gap-12">
-        <div className="w-full flex flex-col lg:flex-row items-start  gap-16">
+      <div className="container pb-16 lg:pb-24 flex flex-col gap-8 sm:gap-10 md:gap-12">
+        <div className="w-full flex flex-col lg:flex-row lg:items-start items-center  gap-16">
           {/* Text Content */}
-          <div className="flex-1 flex flex-col md:gap-[40px] gap-[48px]">
+          <div className="flex-1 flex flex-col items-center lg:items-start md:gap-[40px] gap-[48px]">
             <p className="text-2xl font-outfit font-normal text-textColor lg:text-black">
               Featured Insights
             </p>
 
             {/* <p className="lg:max-w-[60vw] text-base sm:text-lg md:text-xl font-normal font-outfit text-[#000000] leading-relaxed"> */}
             <AnimatedParagraph
-              className="lg:max-w-[80vw] text-[clamp(18px,3vw,36px)] font-outfit sm:leading-[48px] md:leading-relaxed"
+              className="lg:max-w-[80vw] text-center lg:text-start text-base sm:text-lg md:text-xl lg:text-2xl font-outfit sm:leading-[48px] md:leading-relaxed"
               text="We share insights on design, technology, and digital innovation from UI/UX design best practices, modern web development, DevOps automation and emerging tech. Explore our case studies, blogs and white papers for practical knowledge, real-world solutions and expert perspectives to help businesses make smarter decisions and build scalable digital solutions."
             />
             {/* </p> */}
@@ -59,7 +59,7 @@ const FeaturedSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 place-items-center ">
           <FeaturedInsightCard
             type="case-study"
             tag="Case Study"
@@ -67,8 +67,8 @@ const FeaturedSection = () => {
             // icon={BtnIcon}
             title="DevOps Transformation & Assessment for Improved Software Delivery"
             description="DevOps assessment revealed gaps in automation, deployment workflows, and monitoring.
-Manual processes and lack of CI/CD slowed releases and increased risk.
-Optimizations enabled faster deployments, better reliability, and stronger collaboration. 
+
+ 
 "
           />
 
@@ -78,7 +78,7 @@ Optimizations enabled faster deployments, better reliability, and stronger colla
             image={blogImg}
             // icon={BtnIcon}
             title="Boost Sales with Smart E-Commerce Development"
-            description="Build fast, secure, and user-friendly online stores that drive conversions, improve customer experience, and scale your business globally.
+            description="Build fast, secure, and user-friendly online stores that drive conversions, improve customer experience.
 "
             gradient="linear-gradient(180deg, #629DFF 0%, #000000 100%)"
           />
@@ -90,7 +90,7 @@ Optimizations enabled faster deployments, better reliability, and stronger colla
             // icon={BtnIcon}
             title="Transforming Businesses with Web Development Excellence"
             description="A strategic look at how modern web development drives growth, engagement, and digital success.
-Helping businesses overcome challenges with scalable, user-focused solutions."
+"
           />
         </div>
       </div>

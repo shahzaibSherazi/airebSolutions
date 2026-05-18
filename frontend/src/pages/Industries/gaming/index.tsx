@@ -5,6 +5,7 @@ import GamingServices from "@/components/Industries/gaming/GamingServices";
 import GamingSolutions from "@/components/Industries/gaming/GamingSolution";
 import GamingTechStack from "@/components/Industries/gaming/GamingtechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Gaming = () => {
   return (
@@ -15,6 +16,7 @@ const Gaming = () => {
       <GamingDevelopmentCycle />
       <GamingTechStack />
       <GamingExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
       }}
       className=" w-full ">
       {/* Container */}
-      <div className="container py-16  lg:py-24 px-2 lg:px-8 flex flex-col justify-center items-center ">
+      <div className="container py-16  lg:py-24 flex flex-col justify-center items-center ">
         {/* Badge */}
         <span className="inline-block mb-8 sm:mb-10 md:mb-12 bg-primary text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
           Why Choose Us
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                 className="group flex justify-center items-center text-center  bg-black border border-primary px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary overflow-hidden">
                 {/* Card Content */}
                 {/* Text */}
-                <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
+                <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-[1.3] ">
                   {feature.title}
                 </h3>
               </div>
@@ -62,14 +62,14 @@ const WhyChooseUs = () => {
                   className="group flex justify-center items-center text-center bg-black border border-primary px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary overflow-hidden">
                   {/* Card Content */}
                   {/* Text */}
-                  <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
+                  <h3 className="text-white group-hover:text-black font-outfit text-sm sm:text-base md:text-xl font-normal leading-[1.3] ">
                     {feature.title}
                   </h3>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-white text-center font-outfit text-sm sm:text-base  font-light leading-relaxed">
+          <p className="text-white text-center font-outfit text-sm sm:text-base  font-light leading-[1.3]">
             Affordable prices for high-quality API solutions
           </p>
         </div>

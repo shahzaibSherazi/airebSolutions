@@ -4,6 +4,7 @@ import DialerHero from "@/components/dialer/DialerHero";
 import DialerServices from "@/components/dialer/DialerServices";
 import DialerSolutions from "@/components/dialer/Dialersolutions";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Dialer = () => {
   return (
@@ -13,6 +14,7 @@ const Dialer = () => {
       <DialerChallenges />
       <DialerSolutions />
       <BenifitsDialer />
+      <ScrollTopButton />
     </Layout>
   );
 };

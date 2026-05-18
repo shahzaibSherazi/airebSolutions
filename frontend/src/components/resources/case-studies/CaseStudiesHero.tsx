@@ -20,7 +20,7 @@ export default function CaseStudiesHero() {
       </h1>
 
       {/* ── Content row ── */}
-      <div className="container relative z-10 flex items-center justify-center py-8 lg:py-10  px-2 lg:px-8 w-full">
+      <div className="container relative z-10 flex items-center justify-center py-8 lg:py-10 w-full">
         <div className="relative flex flex-col lg:flex-row items-center gap-6  w-full">
           {/* ── Left image with corner brackets ── */}
           <div className="relative flex items-center justify-center flex-shrink-0 w-1/2">

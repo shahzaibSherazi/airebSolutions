@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const locations = {
   USA: {
     label: "USA",
-    address: "1309 Coffeen Avenue STE 1200 Sheridan, Wyoming 82801",
+    address: "7901 4TH STREET NORTH STE 300 ST. PETERSBURG, FL 33702",
 
     flag: <UsaIcon />,
   },
@@ -70,7 +70,7 @@ export default function CompanyLocations() {
       }}
       className="min-h-screen text-white ">
       {/* ── HERO SECTION ── */}
-      <section className="container px-2 lg:px-8 py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
+      <section className="container py-16 flex lg:flex-row flex-col items-center justify-between gap-10">
         {/* Left */}
         <div className="">
           <h1 className="text-h2 font-stoke font-normal mb-8 text-white">

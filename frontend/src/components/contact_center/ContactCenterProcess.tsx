@@ -186,7 +186,7 @@ export default function ContactCenterProcess() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#0E1828] ">
-      <div className="container px-2 lg:px-8 py-16 sm:py-20">
+      <div className="container py-16 sm:py-20">
         {/* Header */}
         <motion.div
           className="mb-10 sm:mb-14"

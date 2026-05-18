@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/aireb_logo.png";
+import { prefetchRoute } from "@/lib/routePrefetch";
 
 // ─── Route Map ───────────────────────────────────────────────────────────────
 
@@ -251,7 +252,7 @@ const Header = () => {
         className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-black backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}>
-        <div className="container px-2 lg:px-8">
+        <div className="container">
           <div className="flex items-center justify-between header">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 z-50">
@@ -297,7 +298,7 @@ const Header = () => {
                   {/* Dropdown */}
                   {menu.items.length > 0 && activeDropdown === menu.name && (
                     <div
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
+                      className="absolute top-full -translate-x-1/2 mt-2 backdrop-blur-xl shadow-2xl rounded-xl p-4 animate-fadeIn"
                       style={{
                         minWidth: menu.items.length > 6 ? "600px" : "320px",
                         background:
@@ -335,6 +336,7 @@ const Header = () => {
             {/* Contact Button — Desktop */}
             <div className="hidden lg:block">
               <button
+                onPointerEnter={() => prefetchRoute("/contact-us")}
                 onClick={() => navigate("/contact-us")}
                 className="relative bg-primary hover:bg-primary/90 font-stoke text-white px-6 py-2 font-medium text-sm transition-all shadow-lg hover:shadow-xl">
                 CONTACT

@@ -90,7 +90,7 @@ export default function EcommerceExpertise() {
         style={{
           background: "linear-gradient(180deg, #4285F4 0%, #0E1828 38.46%)",
         }}>
-        <div className="container px-2 lg:px-8 py-16 md:py-24">
+        <div className="container py-16 md:py-24">
           {/* ── Badge ── */}
           <div
             ref={headerRef}

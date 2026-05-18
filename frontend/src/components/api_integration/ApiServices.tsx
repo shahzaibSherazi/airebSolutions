@@ -13,48 +13,48 @@ const ApiServices = () => {
       iconPath: <CustomIcon />,
       title: "Custom API Development",
       description:
-        "We build robust, feature-rich APIs tailored to your business needs. Whether you require RESTful, SOAP, or GraphQL APIs, our expert developers ensure seamless data exchange and high-performance connectivity.",
+        "We build scalable APIs, including REST, SOAP, and GraphQL, for seamless data exchange and high performance.",
     },
     {
       id: 2,
       iconPath: <IntegrationIcon />,
       title: "Third-Party API Integration",
       description:
-        "Enhance your existing systems by integrating third-party APIs, including payment gateways, CRM, ERP, social media platforms, and more. We ensure smooth integration that optimizes your workflows and user experience.",
+        "We integrate payment gateways, CRM, ERP, and social media APIs to improve workflows and system efficiency.",
     },
     {
       id: 3,
       iconPath: <AuthenticationIcon />,
       title: "API Security & Authentication",
       description:
-        "Security is our priority. We implement OAuth, JWT, API key authentication, and other advanced security protocols to protect data integrity and ensure secure transactions between applications.",
+        "We implement OAuth, JWT, and secure authentication methods to protect data and ensure safe API communication.",
     },
     {
       id: 4,
       iconPath: <MicroservicesIcon />,
       title: "Microservices API Development",
       description:
-        "Our microservices-based API solutions help businesses break down complex systems into smaller, independently deployable services, improving scalability, efficiency, and maintainability.",
+        "We develop microservices-based APIs that improve scalability, flexibility, and system maintainability for complex applications.",
     },
     {
       id: 5,
       iconPath: <CloudApiIcon />,
       title: "Cloud API Development",
       description:
-        "We design and develop cloud-based APIs that facilitate seamless communication between cloud applications, ensuring high availability and optimal performance on platforms like AWS, Azure, and Google Cloud.",
+        "We create cloud-based APIs for AWS, Azure, and Google Cloud, ensuring high availability and performance.",
     },
     {
       id: 6,
       iconPath: <DocumentationIcon />,
       title: "API Documentation & Support",
       description:
-        "Comprehensive API documentation is crucial for developers. We provide detailed, easy-to-understand documentation to facilitate smooth implementation and integration, along with ongoing support to ensure optimal performance.",
+        "We provide clear API documentation and ongoing support for easy integration and smooth system performance.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -65,7 +65,7 @@ const ApiServices = () => {
           <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
             Our API Development Services
           </h2>
-          <p className="font-outfit font-normal text-p leading-[1.6] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
+          <p className="font-outfit font-normal text-p leading-[1.3] text-[#EBEBEB] max-w-[800px] mx-auto px-4">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
@@ -78,7 +78,7 @@ const ApiServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[10px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -88,7 +88,7 @@ const ApiServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                   {service.iconPath}
                 </div>
 
@@ -103,10 +103,10 @@ const ApiServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

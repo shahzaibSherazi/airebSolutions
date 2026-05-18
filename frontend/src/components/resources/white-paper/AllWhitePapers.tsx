@@ -30,17 +30,18 @@ const readMoreBorderStyle: React.CSSProperties = {
 
 function SmallCard({ post }: { post: WhitePaper }) {
   const navigate = useNavigate();
-
+  console.log("post", post);
   const onReadMore = () => {
     if (!post.pdfUrl) {
       navigate(`/resources/white-paper/${post._id}`);
       return;
     }
 
-    // Only open HTTP URLs (file paths), not data URLs
+    // If the URL is a direct file path, open it in a new tab
     if (
       post.pdfUrl.startsWith("http://") ||
-      post.pdfUrl.startsWith("https://")
+      post.pdfUrl.startsWith("https://") ||
+      post.pdfUrl.startsWith("/")
     ) {
       window.open(post.pdfUrl, "_blank");
     } else if (post._id) {
@@ -49,10 +50,11 @@ function SmallCard({ post }: { post: WhitePaper }) {
     }
   };
   return (
-    <div className="flex flex-col h-full">
+    <div
+      onClick={onReadMore}
+      className="group relative cursor-pointer flex flex-col h-full">
       <div
-        onClick={onReadMore}
-        className="relative overflow-hidden flex-shrink-0 blogsCards_TopEdge"
+        className="overflow-hidden flex-shrink-0 blogsCards_TopEdge"
         style={imageBorderStyle}>
         <img
           src={getImageUrl(post.image) || "/placeholder.svg"}
@@ -61,7 +63,7 @@ function SmallCard({ post }: { post: WhitePaper }) {
             e.currentTarget.onerror = null;
             e.currentTarget.src = "/placeholder.svg";
           }}
-          className="w-full object-cover transition-transform duration-500 hover:scale-105 h-full"
+          className="w-full object-cover transition-transform duration-500 group-hover:scale-105 h-full"
         />
       </div>
       <div
@@ -81,7 +83,6 @@ function SmallCard({ post }: { post: WhitePaper }) {
         </div>
         <div className="flex items-center justify-end mt-auto pt-3">
           <button
-            onClick={onReadMore}
             style={readMoreBorderStyle}
             className="text-primary font-outfit text-[11px] font-medium hover:text-white transition-colors duration-200 flex items-center gap-0.5 py-2 px-[clamp(6px,2vw,24px)] group">
             Read More
@@ -121,9 +122,10 @@ export default function AllWhitePapers() {
     fetchWhitePapers();
   }, []);
   console.log("whitepaper", whitePapers);
+  console.log("imagurl", getImageUrl);
   return (
     <section className="w-full bg-[#02070F] ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24 ">
         <div className="flex justify-center items-center gap-3 mb-10">
           <h1 className="font-stoke font-normal text-h2 text-white text-center">
             All Whitepapers
@@ -146,7 +148,7 @@ export default function AllWhitePapers() {
 
         {!loading && !error && whitePapers.length === 0 && (
           <div className="text-center py-20 text-white/30 font-outfit">
-            No white papers found. Create one from admin dashboard.
+            No white papers found.
           </div>
         )}
 

@@ -47,7 +47,7 @@ const FAQAccordion = () => {
 
   return (
     <div className=" bg-black text-white ">
-      <div className="container pb-16 lg:pb-24 px-2 lg:px-8">
+      <div className="container pb-16 lg:pb-24 ">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex  gap-3 bg-primary text-textColor pl-6 pr-3 py-[5px]   text-lg font-outfit font-normal mb-6">

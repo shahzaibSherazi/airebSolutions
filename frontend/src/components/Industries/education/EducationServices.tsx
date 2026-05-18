@@ -145,7 +145,7 @@ const cardStyle = {
 function ServiceCard({ service, animationDelay = 0 }) {
   return (
     <div
-      className="border border-primary flex flex-col gap-8 p-4 sm:p-8 transition-all duration-300 hover:-translate-y-1 group"
+      className="border border-primary flex flex-col gap-4 p-4 transition-all duration-300 hover:-translate-y-1 group"
       style={{
         ...cardStyle,
         animation: `faddeUp 0.4s ease ${animationDelay}ms both`,
@@ -169,12 +169,12 @@ function ServiceCard({ service, animationDelay = 0 }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-textColor font-stoke font-normal text-title leading-snug">
+      <h3 className="text-textColor font-stoke font-normal text-title leading-[1.3] ">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-p text-textColor font-outfit font-light leading-relaxed flex-1">
+      <p className="text-p text-textColor font-outfit font-light leading-[1.3] line-clamp-3 overflow-hidden">
         {service.description}
       </p>
     </div>
@@ -190,13 +190,13 @@ export default function EducationServices() {
   return (
     <>
       <section className="  bg-[#02070F]">
-        <div className="container py-16 lg:py-24 px-2 lg:px-8">
+        <div className="container py-16 lg:py-24">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
+            <h1 className="font-stoke text-h2 font-normal leading-[1.3] text-white mb-5">
               Our Education Industry Solutions
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-relaxed">
+            <p className="font-outfit font-normal  mx-auto text-sm md:text-lg leading-[1.3]">
               At Aireb Solutions, we offer a wide range of services designed to
               support educational <br className="hidden lg:block" />{" "}
               institutions in improving teaching, learning, and administration

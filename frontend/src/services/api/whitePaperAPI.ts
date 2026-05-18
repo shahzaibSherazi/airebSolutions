@@ -114,4 +114,21 @@ export const whitePaperAPI = {
     });
     return response.data;
   },
+
+  // Upload white paper image
+  uploadImage: async (file: File): Promise<UploadResponse> => {
+    const formData = new FormData();
+    formData.append("whitePaperImage", file);
+
+    const response = await apiClient.post(
+      "/upload/whitepaper-image",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      },
+    );
+    return response.data;
+  },
 };

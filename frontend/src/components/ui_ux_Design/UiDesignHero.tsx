@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bgImg from "../../assets/ui-ux-design_assets/hero_bg.png";
+import bgImg from "../../assets/ui-ux-design_assets/hero_bg.webp";
 import { motion } from "../ui/motion";
 import { useCallback } from "react";
 import { smoothScroll } from "@/lib/smooth-scroll";
@@ -37,7 +37,7 @@ const UiDesignHero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.7)_100%)] sm:bg-[linear-gradient(66deg,#629DFF_-10%,rgba(0,0,0,0.2)_114%)]" />
       {/* Content */}
-      <div className="container relative z-10  px-2 py-8 lg:py-10 flex flex-col sm:items-start items-center justify-end ">
+      <div className="container relative z-10 py-8 lg:py-10 flex flex-col sm:items-start items-center justify-end ">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -47,7 +47,7 @@ const UiDesignHero = () => {
             User-Focused,Flexible
             <br className="hidden lg:block" /> Design Solutions.
           </h1>
-          <p className="font-outfit text-p leading-[1.6] text-white max-w-2xl mb-10">
+          <p className="font-outfit text-p leading-[1.3] text-white max-w-2xl mb-10">
             We offer full UI/UX design services, from in-depth user research and
             wireframing to modern UI design and smooth user experiences. To make
             sure everything works well on all devices, we use prototyping,

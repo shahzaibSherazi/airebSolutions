@@ -5,6 +5,7 @@ import MobileChallenges from "@/components/mobile_app_development/MobileChalleng
 import MobileHero from "@/components/mobile_app_development/MobileHero";
 import OurWork from "@/components/mobile_app_development/OurWork";
 import WorkProcess from "@/components/mobile_app_development/WorkProcess";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const MobileAppDevelopment = () => {
   return (
@@ -15,6 +16,7 @@ const MobileAppDevelopment = () => {
       <WorkProcess />
       {/* <OurWork /> */}
       <ChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

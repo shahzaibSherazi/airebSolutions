@@ -13,48 +13,48 @@ const LogoDesignServices = () => {
       iconPath: <TailoredIcon />,
       title: "Tailored Logo Creation",
       description:
-        "We work closely with you to create logos that reflect your brand's values and vision. Each design is unique, creative, and aligned with your business goals — whether minimalist, typographic, emblematic, or abstract. Our designers research your industry, analyze competitors, and craft distinctive logos that are both meaningful and impactful.",
+        "We design unique logos aligned with your brand vision, industry, and values for a strong visual identity.",
     },
     {
       id: 2,
       iconPath: <IdentityIcon />,
       title: "Brand Identity Development",
       description:
-        "A logo is just the beginning of your brand's identity. At Aireb Solutions, we create a cohesive brand presence that effectively communicates your message across all platforms. Our approach includes carefully selecting color palettes that evoke the right emotions and resonate with your audience, choosing typography that aligns with your brand personality for consistency ",
+        "We create complete brand identity systems, including colors, typography, and design consistency across all platforms.",
     },
     {
       id: 3,
       iconPath: <VerstailIcon />,
       title: "Versatile Logo Solutions",
       description:
-        "We design logos optimized for various applications, ensuring they look exceptional across digital platforms, print materials, merchandise, and signage. Our designs are adaptable to all branding needs, from business cards to billboards. Whether you need a logo for your website, social media, or physical store, we make sure it maintains clarity and impact in any format.",
+        "We design logos optimized for web, print, social media, merchandise, and all branding applications.",
     },
     {
       id: 4,
       iconPath: <HighResolutionIcon />,
       title: "Vector & High-Resolution Files",
       description:
-        "We provide your logo in multiple formats to ensure maximum usability and versatility.Each file format ensures that your logo maintains its sharpness and clarity across different mediums, whether it's displayed on a website, printed on a brochure, or embroidered on company apparel.",
+        "We deliver logos in multiple formats, ensuring scalability, clarity, and quality across all media platforms.",
     },
     {
       id: 5,
       iconPath: <VariationIcon />,
       title: "Logo Variations & File Packages",
       description:
-        "To maximize usability, we provide different versions of your logo to accommodate various branding needs,Primary Logo, Secondary Logo, Monochrome Logo, Favicon & Social Media Icons Responsive & Adaptive Logos",
+        "We provide multiple logo versions, including primary, secondary, monochrome, favicon, and social media icons.",
     },
     {
       id: 6,
       iconPath: <HomeIcon />,
       title: "Animated Logo Design",
       description:
-        "An animated logo adds movement and engagement to your brand identity. We create dynamic, engaging animated logos that bring life to your brand for digital content, video marketing, and website applications. Our motion graphics experts craft animations that enhance brand recall and captivate audiences.",
+        "We create dynamic animated logos that enhance engagement, improve brand recall, and strengthen digital presence.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -72,7 +72,7 @@ const LogoDesignServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[10px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -82,7 +82,7 @@ const LogoDesignServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                   {service.iconPath}
                 </div>
 
@@ -97,10 +97,10 @@ const LogoDesignServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

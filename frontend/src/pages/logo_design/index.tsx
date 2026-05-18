@@ -5,6 +5,7 @@ import LogoDesignExpertise from "@/components/logo_design/LogoDesignExpertise";
 import LogoDesignHero from "@/components/logo_design/LogoDesignHero";
 import LogoDesignServices from "@/components/logo_design/LogoDesignServices";
 import LogoDesignWork from "@/components/logo_design/LogoDesignWork";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const LogoDesign = () => {
   return (
@@ -15,6 +16,7 @@ const LogoDesign = () => {
       <LogoDesignDevelopment />
       {/* <LogoDesignWork /> */}
       <LogoDesignExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

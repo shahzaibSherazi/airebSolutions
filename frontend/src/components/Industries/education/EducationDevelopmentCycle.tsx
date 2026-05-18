@@ -111,9 +111,7 @@ function StepCard({ step, index, sectionInView }) {
             ${showContent ? "bg-primary" : "bg-[#1B2941]"}`}
           style={{
             // ✅ Smoothly transitions between collapsed and expanded height
-            minHeight: showContent
-              ? `clamp(260px, 30vh, 320px)`
-              : "clamp(130px, 16vh, 200px)",
+            minHeight: showContent ? `290px` : "190px",
             transition:
               "min-height 0.5s cubic-bezier(0.22,1,0.36,1), background-color 0.3s ease",
           }}>
@@ -133,7 +131,7 @@ function StepCard({ step, index, sectionInView }) {
           {/* Title */}
           <h3
             className={`whitespace-pre-line flex items-center justify-center
-              text-[clamp(10px,1.08vw,18px)] font-stoke font-normal leading-snug
+              text-[clamp(10px,1.06vw,16px)] font-stoke font-normal leading-snug
               transition-colors duration-300 w-full
               ${showContent ? "text-black" : "text-textColor"}`}>
             {step.title}
@@ -142,7 +140,7 @@ function StepCard({ step, index, sectionInView }) {
           {/* Description — slides down */}
           <div
             style={{
-              maxHeight: showContent ? `${descHeight + 8}px` : "0px",
+              maxHeight: showContent ? `${descHeight + 10}px` : "0px",
               overflow: "hidden",
               transition:
                 "max-height 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease",
@@ -151,7 +149,7 @@ function StepCard({ step, index, sectionInView }) {
             <p
               ref={descRef}
               className="font-outfit pb-1 font-light  overflow-hidden
-                text-textColor leading-relaxed text-[clamp(12px,0.9vw,14px)]">
+                text-textColor leading-[1.3] text-[clamp(12px,0.9vw,14px)]">
               {step.description}
             </p>
           </div>
@@ -168,7 +166,7 @@ export default function EducationDevelopmentCycle() {
 
   return (
     <section className="w-full bg-[#02070F]  overflow-hidden">
-      <div className="container py-16  lg:py-24 px-2 lg:px-8">
+      <div className="container py-16  lg:py-24">
         {/* Header */}
         <div
           ref={headerRef}
@@ -180,7 +178,7 @@ export default function EducationDevelopmentCycle() {
           <h2 className="font-stoke text-h2 font-normal text-white leading-tight mb-4">
             Our Education Development Cycle
           </h2>
-          <p className="font-outfit font-light text-p text-textColor  leading-relaxed">
+          <p className="font-outfit font-light text-p text-textColor  leading-[1.3]">
             At Aireb Solutions, we follow a structured development cycle to
             ensure that your educational <br className="hidden lg:block" />{" "}
             platform meets the highest standards of quality, security, and

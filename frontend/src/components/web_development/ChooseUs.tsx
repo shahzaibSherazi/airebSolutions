@@ -36,7 +36,7 @@ const ChooseUs = () => {
       }}
       className=" w-full">
       {/* Container */}
-      <div className="container flex flex-col justify-center items-center px-2 lg:px-8 py-16  lg:py-24">
+      <div className="container flex flex-col justify-center items-center py-16  lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 ">
           Why Choose Us
@@ -50,7 +50,7 @@ const ChooseUs = () => {
               className="group flex flex-col  items-center justify-center text-center  border-025 border-[#E4E4E4] px-4 sm:px-5 md:px-6 py-6 md:py-8 transition-all duration-300 hover:bg-primary overflow-hidden">
               {/* Card Content */}
               {/* Text */}
-              <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-relaxed ">
+              <h3 className="text-white font-outfit text-sm sm:text-base md:text-xl font-normal leading-[1.3] ">
                 {feature.title}
               </h3>
               {/* <p className="text-white font-outfit text-sm sm:text-base  font-light leading-relaxed">
@@ -59,7 +59,7 @@ const ChooseUs = () => {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-white font-outfit text-sm sm:text-base md:text-lg font-light leading-relaxed text-center">
+        <p className="mt-10 text-white font-outfit text-sm sm:text-base md:text-lg font-light leading-[1.3] text-center">
           We do not just build a website, we build a reliable digital platforms
           that deliver results.
         </p>

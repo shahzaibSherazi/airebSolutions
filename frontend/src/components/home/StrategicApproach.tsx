@@ -34,7 +34,7 @@ const ValueCard = ({
         {icon}
       </div>
     </div>
-    <p className="text-textColor text-p font-outfit leading-[22px] mt-3.5">
+    <p className="text-textColor text-p line-clamp-3 overflow-hidden font-outfit leading-[22px] mt-3.5">
       {description}
     </p>
   </div>
@@ -109,7 +109,7 @@ const StrategicApproach = () => {
       style={{
         background: "linear-gradient(180deg, #000000 0%, #0E1828 100%)",
       }}>
-      <div className="container font-outfit pb-16 lg:pb-24 lg:pt-0 pt-16 px-2 lg:px-8">
+      <div className="container font-outfit pb-16 lg:pb-24 lg:pt-0 pt-16 ">
         {/* Header */}
         <motion.div
           className="text-center mb-16 md:mb-20"

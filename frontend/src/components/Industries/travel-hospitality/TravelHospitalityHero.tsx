@@ -1,10 +1,10 @@
 import React from "react";
-import heroImg from "@/assets/Industies/travel-hospitality/hero-img.png";
-import bgImg from "@/assets/Industies/travel-hospitality/hero-bg.png";
+import heroImg from "@/assets/Industies/travel-hospitality/hero-img.webp";
+import bgImg from "@/assets/Industies/travel-hospitality/hero-bg.webp";
 
 const TravelHospitalityHero = () => {
   return (
-    <section className="heros_height flex justify-end flex-col  relative overflow-hidden ">
+    <section className="heros_height flex justify-center flex-col  relative overflow-hidden ">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -19,9 +19,9 @@ const TravelHospitalityHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="container px-2 lg:px-8 py-8 lg:py-10 grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
+      <div className="container py-8 lg:py-10 grid lg:grid-cols-2 gap-12 lg:gap-20 h-full">
         {/* Left Side - Content */}
-        <div className="relative flex flex-col justify-end mb-8">
+        <div className="relative flex flex-col justify-center items-center lg:items-start mb-8">
           <p
             style={{
               background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
@@ -30,7 +30,7 @@ const TravelHospitalityHero = () => {
             Sector
           </p>
 
-          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
+          <h1 className="font-stoke text-center lg:text-start text-h1 leading-[1.28] text-white">
             Travel & Hospitality
           </h1>
         </div>

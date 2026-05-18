@@ -5,6 +5,7 @@ import TravelHospitalityServices from "@/components/Industries/travel-hospitalit
 import TravelHospitalitySolutions from "@/components/Industries/travel-hospitality/TravelHospitalitySolutions";
 import TravelHospitalityTechStack from "@/components/Industries/travel-hospitality/TravelHospitalityTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const TravelHospitality = () => {
   return (
@@ -15,6 +16,7 @@ const TravelHospitality = () => {
       <TravelHospitalityCycle />
       <TravelHospitalityTechStack />
       <TravelHospitalityExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

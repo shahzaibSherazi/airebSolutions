@@ -46,10 +46,10 @@
     --fs-sm: 16px;
     --fs-base: clamp(14px, 1.4vw, 16px);
     --fs-md: clamp(18px, 1.8vw, 20px);
-    --fs-lg: clamp(18px, 2vw, 22px);
-    --fs-xl: clamp(20px, 3vw, 32px);
-    --fs-2xl: clamp(24px, 4vw, 42px);
-    --fs-3xl: clamp(30px, 5vw, 56px);
+    --fs-lg: clamp(16px, 1.8vw, 18px);
+    --fs-xl: clamp(18px, 2.5vw, 28px);
+    --fs-2xl: clamp(18px, 2.5vw, 32px);
+    --fs-3xl: clamp(28px, 5vw, 42px);
   }
 
   .text-p {
@@ -69,6 +69,9 @@
 
   .text-h2 {
     font-size: var(--fs-2xl);
+  }
+  .text-h3 {
+    font-size: var(--fs-xl);
   }
   .dark {
     --background: 222 47% 5%;
@@ -109,10 +112,52 @@
     --sidebar-ring: 217 91% 60%;
   }
 }
+/* .container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+} */
 .container {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 /* @media screen and (max-width: 767px) {
@@ -415,7 +460,7 @@ All colors MUST be HSL.
   background: transparent;
   outline: none;
   width: 100%;
-  padding: 8px;
+  padding: 4px;
   font-size: 14px;
   color: white;
 }
@@ -1210,8 +1255,8 @@ html.lenis {
 
 .blogsCards_TopEdge::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
   content: "";
   width: 13px;
   height: 13px;
@@ -1221,8 +1266,8 @@ html.lenis {
 
 .blogsCards_BottomEdge::after {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -2px;
+  right: -2px;
   content: "";
   width: 13px;
   height: 13px;

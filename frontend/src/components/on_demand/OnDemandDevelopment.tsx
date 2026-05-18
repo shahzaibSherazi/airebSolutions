@@ -36,7 +36,7 @@ const OnDemandDevelopment = () => {
 
   return (
     <section className="w-full bg-[#0E1828]">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16 md:mb-20"
@@ -69,7 +69,7 @@ const OnDemandDevelopment = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-[1.8fr,2fr] gap-6 lg:gap-10 py-4 sm:py-6 md:py-8">
                   {/* Left Column - Title */}
                   <div className="space-y-2">
-                    <h3 className="text-white text-[clamp(18px,3vw,24px)] font-stoke font-light leading-tight">
+                    <h3 className="text-white text-[clamp(18px,3vw,24px)] font-stoke font-light leading-[1.3]">
                       {process.title}
                     </h3>
                     {process.subtitle && (
@@ -80,7 +80,7 @@ const OnDemandDevelopment = () => {
                   </div>
 
                   {/* Right Column - Description */}
-                  <p className="text-textColor flex items-center font-outfit text-sm sm:text-base font-light leading-relaxed">
+                  <p className="text-textColor flex items-center font-outfit text-sm sm:text-base font-light leading-[1.3]">
                     {process.description}
                   </p>
                 </div>

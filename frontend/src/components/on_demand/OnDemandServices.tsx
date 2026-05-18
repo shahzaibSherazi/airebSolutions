@@ -13,49 +13,48 @@ const OnDemandServices = () => {
       iconPath: <AppDevelopmentIcon />,
       title: "On-Demand App Development",
       description:
-        "We design and develop feature-rich on-demand applications that cater to various industries. Our apps are equipped with advanced functionalities such as real-time tracking, secure payment gateways, AI-powered recommendations, and seamless UI/UX to enhance user engagement and retention.",
+        "We develop feature-rich on-demand apps with real-time tracking, secure payments, and seamless user experiences across industries.",
     },
     {
       id: 2,
       iconPath: <MarketPlaceIcon />,
       title: "On-Demand Marketplace Solutions",
       description:
-        "Launch your own on-demand service marketplace with our custom-built solutions. We integrate multi-vendor management, automated scheduling, smart analytics, and seamless order processing to create a scalable and high-performing platform. ",
-      featured: true,
+        "We build scalable on-demand marketplaces with vendor management, automated scheduling, analytics, and smooth order processing systems. ",
     },
     {
       id: 3,
       iconPath: <DeliveryIcon />,
       title: "On-Demand Delivery Solutions",
       description:
-        "Speed, efficiency, and accuracy define our on-demand delivery systems. Whether it’s food, groceries, medical supplies, or logistics, our real-time tracking, smart route optimization, and contactless payment features make delivery operations smoother than ever.",
+        "We create delivery apps with real-time tracking, route optimization, and secure payment systems for faster operations.",
     },
     {
       id: 4,
       iconPath: <HealthcareIcon />,
       title: "On-Demand Healthcare Services",
       description:
-        "Empower your healthcare business with on-demand telemedicine, appointment scheduling, and virtual consultations. Our HIPAA-compliant solutions provide patients with instant access to healthcare providers while ensuring secure data management and seamless patient-doctor interactions.",
+        "We develop telemedicine apps with appointment scheduling, virtual consultations, and secure patient data management solutions.",
     },
     {
       id: 5,
       iconPath: <TransportationIcon />,
       title: "On-Demand Transportation & Ride-Sharing",
       description:
-        "We develop high-performance ride-hailing and logistics solutions with real-time GPS tracking, automated dispatch, secure payment integration, and AI-powered route optimization to enhance fleet management and improve user experience.",
+        "We build ride-sharing apps with GPS tracking, automated dispatch, secure payments, and route optimization features.",
     },
     {
       id: 6,
       iconPath: <HomeIcon />,
       title: "On-Demand Home Services",
       description:
-        "From house cleaning and repair services to beauty and wellness, our customized on-demand home service applications allow businesses to connect service providers with customers in real-time, ensuring efficiency and convenience.",
+        "We create home service apps connecting customers and service providers with real-time booking and efficient management systems.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -74,7 +73,7 @@ const OnDemandServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[10px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -84,7 +83,7 @@ const OnDemandServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(16px,2.5vh,32px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
                   {service.iconPath}
                 </div>
 
@@ -99,10 +98,10 @@ const OnDemandServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

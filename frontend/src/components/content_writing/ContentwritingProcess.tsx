@@ -170,7 +170,7 @@ export default function ContentWritingProcess() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#0E1828]">
-      <div className="container px-6 md:px-8  py-16 lg:py-24">
+      <div className="container  py-16 lg:py-24">
         {/* Header */}
         <motion.div
           className="mb-10 sm:mb-14"
@@ -178,10 +178,10 @@ export default function ContentWritingProcess() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-6 leading-tight">
+          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-6 leading-[1.3]">
             Our UI/UX Design Process
           </h1>
-          <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-relaxed">
+          <p className="text-textColor font-outfit font-light text-sm sm:text-base leading-[1.3]">
             At Aireb Solutions, we follow a streamlined on-demand app
             development <br className="hidden lg:block" /> cycle that ensures
             efficiency and innovation

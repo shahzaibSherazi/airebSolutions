@@ -7,6 +7,7 @@ import TestingIcon from "@/assets/icons/web_development_icons/testing.svg?react"
 import OptimizationIcon from "@/assets/icons/web_development_icons/optimization.svg?react";
 import MaintienanceIcon from "@/assets/icons/web_development_icons/maintenance.svg?react";
 import { motion, useScroll } from "framer-motion";
+import { ArrowUp } from "lucide-react";
 
 /* ---------------- TYPES ---------------- */
 type Step = {
@@ -148,12 +149,12 @@ const WorkProcessTimeline: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-black pb-12 md:pb-16 lg:pb-[15vh] pt-16 lg:pt-24">
-      <div className="container px-2 md:px-8">
+      className="relative w-full bg-black pb-12 md:pb-16 pt-16 lg:pt-24">
+      <div className="container">
         {/* ── Sticky block ── */}
         <div className="sticky -top-12 z-10">
           {/* Header */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 ">
             <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
               Our Work Process
             </span>
@@ -165,7 +166,7 @@ const WorkProcessTimeline: React.FC = () => {
               <h2 className="text-white font-stoke font-normal text-h2 mt-6 sm:mt-[34px]">
                 How we get it done
               </h2>
-              <p className="font-outfit font-normal text-p mt-[27px]">
+              <p className="font-outfit font-normal text-p mt-2">
                 Cleaning, organizing, and optimizing datasets for accurate model
                 training.
               </p>
@@ -182,7 +183,7 @@ const WorkProcessTimeline: React.FC = () => {
             </div>
 
             {/* ── DESKTOP: first 2 fixed + 1 dynamic — hidden below lg ── */}
-            <div className="hidden lg:block space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
+            <div className="hidden lg:block space-y-6 sm:space-y-8 ">
               {steps.slice(0, 2).map((step) => (
                 <StepCard key={step.id} step={step} />
               ))}

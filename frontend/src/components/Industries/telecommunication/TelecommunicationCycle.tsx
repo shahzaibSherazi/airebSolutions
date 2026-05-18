@@ -366,7 +366,7 @@ const TelecommunicationCycle = () => {
 
   return (
     <section className=" bg-[#02070F]" aria-labelledby="devops-title">
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* Section Title */}
         <header className="text-center mb-[77px]">
           <h2

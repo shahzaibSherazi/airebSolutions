@@ -6,6 +6,7 @@ import ContactCenterProcess from "@/components/contact_center/ContactCenterProce
 import ContactCenterServices from "@/components/contact_center/ContactCenterServices";
 import ContactCenterWork from "@/components/contact_center/ContactCenterWork";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const ContactCenter = () => {
   return (
@@ -17,6 +18,7 @@ const ContactCenter = () => {
       <ContactCenterChallenges />
       {/* <ContactCenterWork /> */}
       <ContactCenterExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

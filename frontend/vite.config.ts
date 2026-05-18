@@ -27,8 +27,10 @@ export default defineConfig(({ mode }) => ({
           "react-core": ["react", "react-dom"],
           // Routing
           "react-router": ["react-router-dom"],
-          // Animations — largest lib, isolate it
+          // Animations — isolate the largest runtime libs
           "framer-motion": ["framer-motion"],
+          gsap: ["gsap", "gsap/ScrollTrigger"],
+          lenis: ["@studio-freight/lenis"],
           // Data fetching
           "react-query": ["@tanstack/react-query"],
           // UI components
@@ -41,7 +43,7 @@ export default defineConfig(({ mode }) => ({
             "@radix-ui/react-accordion",
           ],
           // Icons
-          icons: ["lucide-react"],
+          "lucide-icons": ["lucide-react"],
         },
       },
     },

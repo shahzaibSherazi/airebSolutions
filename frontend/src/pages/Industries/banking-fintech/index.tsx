@@ -5,6 +5,7 @@ import BankingServices from "@/components/Industries/banking-fintech/BankingServ
 import BankingSolutions from "@/components/Industries/banking-fintech/BankingSolutions";
 import BankingTechStack from "@/components/Industries/banking-fintech/BankingTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Banking = () => {
   return (
@@ -15,6 +16,7 @@ const Banking = () => {
       <BankingCycle />
       <BankingTechStack />
       <BankingExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

@@ -43,7 +43,7 @@ const WebHeroSection = () => {
 
       {/* Content */}
       <div
-        className="container relative z-10  px-2 py-8 lg:py-10 flex flex-col sm:items-start items-center
+        className="container relative z-10 py-8 lg:py-10 flex flex-col sm:items-start items-center
        ">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
@@ -54,7 +54,7 @@ const WebHeroSection = () => {
             Web Development <br className="hidden lg:block" />
             Service
           </h1>
-          <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl mb-10">
+          <p className="font-outfit text-p leading-[1.3] text-textColor max-w-2xl mb-10">
             We build scalable custom websites and web apps with powerful
             features tailored to your business needs. Our services include CMS
             development, API integrations, AI solutions, and high-performance

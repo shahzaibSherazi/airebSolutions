@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 import ScrollTimeline from "@/components/web_development/ChooseUs";
-import OurWork from "@/components/web_development/OurWork";
 import WebChallenges from "@/components/web_development/WebChallenges";
 import WebHeroSection from "@/components/web_development/WebHeroSection";
 import WebServicesSection from "@/components/web_development/WebServicesSection";
@@ -13,8 +13,8 @@ const WebDevelopment = () => {
       <WebServicesSection />
       <WebChallenges />
       <WorkProcessSection />
-      {/* <OurWork /> */}
       <ScrollTimeline />
+      <ScrollTopButton />
     </Layout>
   );
 };

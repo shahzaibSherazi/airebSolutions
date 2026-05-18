@@ -13,48 +13,48 @@ const AiServicesSection = () => {
       iconPath: <IntegraionIcon />,
       title: "AI Integration & Automation",
       description:
-        "We integrate AI technologies into your business workflows to streamline operations, enhance productivity, and reduce manual efforts. By automating routine processes, minimizing human errors, and enabling data-driven decision-making",
+        "We integrate AI solutions to automate workflows, improve productivity, and reduce manual business operations.",
     },
     {
       id: 2,
       iconPath: <DataInsightsIcon />,
       title: "Predictive Analytics & Data Insights",
       description:
-        "Leverage the power of AI-driven analytics to make data-backed decisions. Our ML models analyze vast datasets to identify trends, forecast future outcomes, and optimize business strategies for maximum efficiency.",
+        "We use AI analytics to forecast trends, optimize strategies, and support smarter business decisions.",
     },
     {
       id: 3,
       iconPath: <NlpIcon />,
       title: "Natural Language Processing (NLP)",
       description:
-        "Enhance customer interactions with AI-driven NLP solutions. We develop intelligent voice assistants, sentiment analysis tools, and automated content generation systems that improve engagement and communication.",
+        "We develop AI chatbots, voice assistants, and NLP solutions to improve communication and customer engagement.",
     },
     {
       id: 4,
       iconPath: <VisionIcon />,
       title: "Computer Vision & Image Recognition",
       description:
-        "Our AI-driven computer vision solutions analyze images and videos for object detection, facial recognition, and automated surveillance, providing businesses with advanced security and monitoring capabilities.",
+        "We create AI vision systems for object detection, facial recognition, and intelligent image analysis.",
     },
     {
       id: 5,
       iconPath: <DeepLearningIcon />,
       title: "Generative AI & Deep Learning",
       description:
-        "We specialize in training and fine-tuning large neural networks for human-like text, realistic media generation, and complex problem-solving. By leveraging deep learning, we help businesses automate creativity, enhance data analysis, and drive AI innovation.",
+        "We build advanced AI models for content generation, automation, and complex data-driven problem solving.",
     },
     {
       id: 6,
       iconPath: <AiPoweredIcon />,
       title: "AI-Powered Recommendation Systems",
       description:
-        "Boost user engagement and conversions with AI-driven recommendation engines. Our solutions analyze user behavior to deliver personalized content, product recommendations, and targeted marketing strategies.",
+        "We develop AI recommendation engines that personalize content, products, and customer experiences.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -65,7 +65,7 @@ const AiServicesSection = () => {
           <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
             Our AI & Machine Learning Services
           </h2>
-          <p className="font-outfit font-normal text-p leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
+          <p className="font-outfit font-normal text-p leading-[1.3] text-textColor max-w-[890px] mx-auto px-4">
             We don't just create strategies we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter
@@ -78,7 +78,7 @@ const AiServicesSection = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border-[3px] border-primary sm:p-[10px] p-[8px]
+  border-[3px] border-primary sm:p-5 p-2
   transition-all duration-500 ease-in-out 
   overflow-hidden
   ">
@@ -88,7 +88,7 @@ const AiServicesSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="mb-[clamp(16px,2.5vh,32px)] flex w-full  justify-between gap-2 group">
+                <div className=" flex w-full  justify-between gap-2 group">
                   {/* Title */}
                   <h3
                     className="font-outfit font-semibold text-white
@@ -104,10 +104,10 @@ const AiServicesSection = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

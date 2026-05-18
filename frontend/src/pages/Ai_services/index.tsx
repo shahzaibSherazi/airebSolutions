@@ -5,6 +5,7 @@ import AiHero from "@/components/Ai_services/AiHero";
 import AiServicesSection from "@/components/Ai_services/AiServices";
 import WhyChooseUs from "@/components/Ai_services/WhyChooseUs";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const AiServices = () => {
   return (
@@ -15,6 +16,7 @@ const AiServices = () => {
       <AIExpertiseSection />
       <AIDevelopmentProcess />
       <WhyChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

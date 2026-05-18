@@ -22,7 +22,7 @@ export default function ContactUsHero() {
         className="absolute inset-0 "
       />
 
-      <div className="container relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 px-2 lg:px-8 py-6">
+      <div className="container relative z-10  w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0 py-6">
         {/* ───────── LEFT CONTENT ───────── */}
         <div className="">
           {/* Badge */}
@@ -90,6 +90,13 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     service: "",
     privacyAgreed: "",
   });
+
+  const fullNameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLButtonElement>(null);
+  const privacyRef = useRef<HTMLInputElement>(null);
+
   const clearError = (field) => {
     setErrors((prev) => ({
       ...prev,
@@ -111,6 +118,31 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     clearError(name);
   };
 
+  // ================= SCROLL + FOCUS FUNCTION =================
+
+  const scrollToError = (field) => {
+    const refMap = {
+      fullName: fullNameRef,
+      email: emailRef,
+      phone: phoneRef,
+      service: serviceRef,
+      privacyAgreed: privacyRef,
+    };
+
+    const targetRef = refMap[field];
+
+    if (targetRef?.current) {
+      targetRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+
+      setTimeout(() => {
+        targetRef.current?.focus?.();
+      }, 400);
+    }
+  };
+
   const submitForm = async () => {
     const newErrors = {
       fullName: "",
@@ -119,42 +151,51 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       service: "",
       privacyAgreed: "",
     };
-
+    let firstErrorField = "";
     let hasError = false;
 
     if (!form.fullName.trim()) {
       newErrors.fullName = "Full name is required";
+      firstErrorField ||= "fullName";
       hasError = true;
     }
 
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
+      firstErrorField ||= "email";
       hasError = true;
     } else if (!isValidEmail(form.email)) {
       newErrors.email = "Invalid email format";
+      firstErrorField ||= "email";
       hasError = true;
     }
 
     if (!phone) {
       newErrors.phone = "Phone number is required";
+      firstErrorField ||= "phone";
       hasError = true;
     } else if (!isValidPhoneNumber(phone)) {
       newErrors.phone = "Invalid phone number";
+      firstErrorField ||= "phone";
       hasError = true;
     }
 
     if (!service) {
       newErrors.service = "Please select a service";
+      firstErrorField ||= "service";
       hasError = true;
     }
 
     if (!form.privacyAgreed) {
       newErrors.privacyAgreed = "You must agree to privacy policy";
+      firstErrorField ||= "privacyAgreed";
       hasError = true;
     }
 
     if (hasError) {
       setErrors(newErrors);
+      // ================= AUTO SCROLL TO FIRST ERROR =================
+      scrollToError(firstErrorField);
       return;
     }
 
@@ -216,10 +257,11 @@ function FormComponent({ phone, setPhone, onSuccess }) {
 
   return (
     <div className="w-full bg-[#0E2142] shrink-0 lg:max-w-[537px] px-[9px] py-[10px] contact_form relative">
-      <div className="px-1 sm:px-4 md:px-[18px] py-1 sm:py-2 space-y-2">
+      <div className="px-1 sm:px-4 md:px-[18px] py-1 space-y-1">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           <Input
+            inputRef={fullNameRef}
             label="Your Name"
             name="fullName"
             value={form.fullName}
@@ -229,6 +271,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
           />
 
           <Input
+            inputRef={emailRef}
             label="Email"
             name="email"
             value={form.email}
@@ -242,6 +285,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <div>
           <label className="text-xs sm:text-sm text-white">Phone number</label>
           <div
+            ref={phoneRef}
             className={`mt-1 rounded-md bg-[#0E2142] border px-2 py-1 ${
               errors.phone ? "border-red-500" : "border-primary"
             }`}>
@@ -270,6 +314,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         {/* Service Dropdown */}
         <div>
           <ServiceDropdown
+            buttonRef={serviceRef}
             value={service}
             onChange={(value) => {
               setService(value);
@@ -317,6 +362,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <div>
           <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
             <input
+              ref={privacyRef}
               type="checkbox"
               name="privacyAgreed"
               checked={form.privacyAgreed}
@@ -339,7 +385,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
           type="button"
           onClick={submitForm}
           disabled={loading}
-          className="w-full rounded-xl bg-primary hover:bg-white hover:text-black text-white py-2.5 sm:py-3 text-xs sm:text-sm font-semibold font-outfit transition disabled:opacity-50">
+          className="w-full rounded-xl bg-primary hover:bg-white hover:text-black text-white py-2 text-xs sm:text-sm font-semibold font-outfit transition disabled:opacity-50">
           {loading ? "Sending..." : "Send Message"}
         </button>
       </div>
@@ -368,17 +414,18 @@ function SuccessModal({ onClose }) {
   );
 }
 
-function Input({ label, name, value, onChange, placeholder, error }) {
+function Input({ label, name, value, onChange, placeholder, error, inputRef }) {
   return (
     <div>
       <label className="text-xs sm:text-sm">{label}</label>
       <input
+        ref={inputRef}
         type="text"
         name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`mt-1 w-full bg-[#0E2142] text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px] border px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm outline-none transition ${
+        className={`mt-1 w-full bg-[#0E2142] text-[#F8F8F8] placeholder:text-[#F8F8F8] rounded-[8px] border px-3 sm:px-[14px] py-2 text-xs sm:text-sm outline-none transition ${
           error ? "border-red-500" : "border-primary"
         }`}
       />
@@ -411,7 +458,7 @@ function CountrySelect({ value, onChange, options }) {
 }
 
 /* ================= SERVICE DROPDOWN ================= */
-function ServiceDropdown({ value, onChange, error }) {
+function ServiceDropdown({ value, onChange, error, buttonRef }) {
   const [open, setOpen] = useState(false);
 
   const services = [
@@ -428,11 +475,12 @@ function ServiceDropdown({ value, onChange, error }) {
 
       {/* Trigger */}
       <button
+        ref={buttonRef}
         type="button"
         onClick={() => setOpen(!open)}
         className={`mt-1 w-full flex items-center justify-between text-left rounded-[8px]
 bg-[#0E2142] border
-px-3 sm:px-[14px] py-2 sm:py-[10px] text-xs sm:text-sm text-[#F8F8F8]
+px-3 sm:px-[14px] py-2 text-xs sm:text-sm text-[#F8F8F8]
 focus:outline-none ${error ? "border-red-500" : "border-primary"}`}>
         <span className={value ? "text-white" : "text-[#F8F8F8]"}>
           {value || "Choose a service"}

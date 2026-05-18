@@ -5,6 +5,7 @@ import HealthCareServices from "@/components/Industries/health_care/HealthCareSe
 import HealthCareSolutions from "@/components/Industries/health_care/HealthCareSolutions";
 import HealthCareTechStack from "@/components/Industries/health_care/HealthCareTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const HealthCare = () => {
   return (
@@ -15,6 +16,7 @@ const HealthCare = () => {
       <HealthCareCycle />
       <HealthCareTechStack />
       <HealthCareExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

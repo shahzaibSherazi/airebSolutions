@@ -36,7 +36,7 @@ const Expertise = () => {
       }}
       className="relative w-full  overflow-hidden">
       {/* Container */}
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
           Why Choose Us
@@ -49,7 +49,7 @@ const Expertise = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="text-white text-h2 font-stoke font-thin leading-10 lg:leading-[72px] ">
+          <h2 className="text-white text-h2 font-stoke font-thin leading-[1.3] ">
             Why you should pick Aireb Solutions for your
             <br className="hidden sm:block" />
             On-Demand Services?
@@ -65,7 +65,7 @@ const Expertise = () => {
               {/* Card Content */}
               <div className="relative z-10 flex-1 flex items-center justify-center">
                 {/* Text with fixed height and overflow handling */}
-                <h1 className="text-primary group-hover:text-textColor text-center font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-relaxed pr-8 line-clamp-2  ">
+                <h1 className="text-primary group-hover:text-textColor text-center font-outfit text-lg sm:text-xl md:text-2xl font-normal leading-[1.3] pr-8 line-clamp-2  ">
                   {feature.heading}
                 </h1>
               </div>
@@ -87,7 +87,7 @@ const Expertise = () => {
             </div>
           ))}
         </div>
-        <p className="text-white text-center font-outfit text-base sm:text-lg md:text-xl font-light leading-relaxed mt-8">
+        <p className="text-white text-center font-outfit text-base sm:text-lg md:text-xl font-light leading-[1.3] mt-8">
           We deliver reliable on-demand solutions at a budget-friendly cost.
         </p>
       </div>

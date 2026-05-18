@@ -1,19 +1,19 @@
-import LogoSlider from "@/components/ui/logoSlider";
+import LogosSlider from "@/components/ui/logosSlider";
 
 const RetailSolutions = () => {
   return (
     <section className=" bg-[#02070F]">
-      <div className=" container grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-2 lg:px-8">
+      <div className=" container grid grid-cols-1 lg:grid-cols-2 gap-6 py-16 lg:py-24">
         <div>
-          <h1 className="font-stoke text-h2 font-normal mb-12">
+          <h1 className="font-stoke text-h3 font-normal mb-12">
             Revolutionizing Retail & Consumer Goods with Digital Innovation
           </h1>
-          <div className="md:flex justify-start">
-            <LogoSlider />
-          </div>
+          {/* <div className="md:flex justify-start"> */}
+          <LogosSlider />
+          {/* </div> */}
         </div>
         <div>
-          <p className="font-outfit text-p font-normal">
+          <p className="font-outfit text-p leading-[1.3] font-normal">
             In today's fast-paced retail and consumer goods industry, businesses
             must stay ahead of the curve to meet consumer expectations,
             streamline operations, and enhance customer experiences. Aireb

@@ -5,6 +5,7 @@ import TelecommunicationServices from "@/components/Industries/telecommunication
 import TelecommunicationSolutions from "@/components/Industries/telecommunication/TelecommunicationSolutions";
 import TelecommunicationTechStack from "@/components/Industries/telecommunication/TelecommunicationTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Telecommunication = () => {
   return (
@@ -15,6 +16,7 @@ const Telecommunication = () => {
       <TelecommunicationCycle />
       <TelecommunicationTechStack />
       <TelecommunicationExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

@@ -4,6 +4,7 @@ import CreativeMinds from "@/components/aboutUs/CreativeMinds";
 import DynamicLeadership from "@/components/aboutUs/DynamicLeadership";
 import OurValues from "@/components/aboutUs/OurValues";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const AboutUs = () => {
   return (
@@ -13,6 +14,7 @@ const AboutUs = () => {
       <DynamicLeadership />
       <CreativeMinds />
       <OurValues />
+      <ScrollTopButton />
     </Layout>
   );
 };

@@ -19,7 +19,7 @@ export default function BlogsHero({ onSearchChange }: BlogsHeroProps) {
       <img src={rightCircleImg} className="absolute -bottom-20 right-0" />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 lg:px-8 py-8 lg:py-10">
+      <div className="container relative z-10 flex flex-col items-center justify-center text-center lg:px-8 py-8 lg:py-10">
         {/* Title */}
         <h1 className="text-white text-h1 font-normal font-stoke mb-4 leading-tight">
           Blogs

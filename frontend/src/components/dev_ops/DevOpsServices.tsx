@@ -1,16 +1,14 @@
 import React from "react";
 import { Boxes } from "lucide-react";
 import { motion } from "framer-motion";
-import cicdImg from "@/assets/devops-assets/services/card-1.png";
-import containerImg from "@/assets/devops-assets/services/card-3.png";
-import iacImg from "@/assets/devops-assets/services/card-3.png";
-import securityImg from "@/assets/devops-assets/services/card-4.png";
-import monitoringImg from "@/assets/devops-assets/services/card-4.png";
-import cloudImg from "@/assets/devops-assets/services/card-6.png";
-import cloudsImg from "@/assets/devops-assets/services/card-7.png";
-import configrationImg from "@/assets/devops-assets/services/card-8.png";
-import multiCloudImg from "@/assets/devops-assets/services/card-9.png";
-import microserviceImg from "@/assets/devops-assets/services/card-10.png";
+import cicdImg from "@/assets/devops-assets/services/card-1.webp";
+import iacImg from "@/assets/devops-assets/services/card-3.webp";
+import securityImg from "@/assets/devops-assets/services/card-4.webp";
+import cloudImg from "@/assets/devops-assets/services/card-6.webp";
+import cloudsImg from "@/assets/devops-assets/services/card-7.webp";
+import configrationImg from "@/assets/devops-assets/services/card-8.webp";
+import multiCloudImg from "@/assets/devops-assets/services/card-9.webp";
+import microserviceImg from "@/assets/devops-assets/services/card-10.webp";
 
 const services = [
   {
@@ -260,7 +258,7 @@ const DevOpsServices = () => {
   return (
     <section className="w-full bg-[#02070F] text-white ">
       {/* Heading */}
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         <motion.div
           className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto gap-3 "
           initial={{ y: 60, opacity: 0 }}
@@ -268,7 +266,7 @@ const DevOpsServices = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
           <h2 className="font-stoke text-h2 text-white">Our DevOps Services</h2>
-          <p className="font-outfit text-p text-textColor leading-relaxed">
+          <p className="font-outfit text-p text-textColor leading-[1.3]">
             We don't just create strategies; we show the numbers. Growth means
             higher conversions, lower costs, and stronger brands. Discover how
             we help brands grow smarter

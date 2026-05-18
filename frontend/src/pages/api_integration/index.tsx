@@ -5,6 +5,7 @@ import OurWork from "@/components/api_integration/OurWork";
 import OurWorkProcess from "@/components/api_integration/OurWorkProcess";
 import WhyChooseUs from "@/components/api_integration/WhyChooseUs";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const ApiIntegration = () => {
   return (
@@ -15,6 +16,7 @@ const ApiIntegration = () => {
       <OurWorkProcess />
       {/* <OurWork /> */}
       <WhyChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

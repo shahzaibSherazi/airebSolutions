@@ -1,19 +1,19 @@
-import LogoSlider from "@/components/ui/logoSlider";
+import LogosSlider from "@/components/ui/logosSlider";
 
 const GamingSolutions = () => {
   return (
     <section className=" bg-[#02070F]">
-      <div className="container grid grid-cols-1 lg:grid-cols-[2fr,1.5fr] gap-14 py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6 py-16 lg:py-24">
         <div>
-          <h1 className="font-stoke text-h2 font-normal mb-12">
+          <h1 className="font-stoke text-h3 font-normal mb-12">
             Elevating the Gaming Industry with Smart Digital Solutions
           </h1>
-          <div className="md:flex justify-start">
-            <LogoSlider />
-          </div>
+          {/* <div className="md:flex justify-start"> */}
+          <LogosSlider />
+          {/* </div> */}
         </div>
         <div>
-          <p className="font-outfit text-p font-normal">
+          <p className="font-outfit leading-[1.3] text-p font-normal">
             Aireb Solutions helps gaming businesses grow with innovative digital
             solutions. We improve game development, player engagement, and
             performance using modern technologies. From mobile games to online

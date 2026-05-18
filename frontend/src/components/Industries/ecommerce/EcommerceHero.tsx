@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import avatarIcon from "@/assets/Industies/ecommerce/avatar.png";
 import botIcon from "@/assets/Industies/ecommerce/bot.png";
 import productIcon from "@/assets/Industies/ecommerce/product.png";
-import bgImg from "@/assets/Industies/ecommerce/hero-bg.png";
+import bgImg from "@/assets/Industies/ecommerce/hero-bg.webp";
 
 // ── Gradient border helpers (CSS background-clip trick) ───────────────────────
 const rightPanelBorder = {
@@ -67,9 +67,9 @@ export default function EcommerceHero() {
           }}
           className="absolute inset-0"
         />
-        <div className="container relative  z-10 w-full  px-2 lg:px-8 py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+        <div className="container relative  z-10 w-full py-8 lg:py-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           {/* ── LEFT: Text Content ── */}
-          <div className="flex flex-col items-start self-end gap-5 w-full">
+          <div className="flex flex-col items-start self-center gap-5 w-full">
             {/* Sector badge */}
 
             <p

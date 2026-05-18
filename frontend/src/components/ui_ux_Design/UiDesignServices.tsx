@@ -16,69 +16,69 @@ const UiDesignServices = () => {
       iconPath: <ResearchIcon />,
       title: "User Research & Analysis",
       description:
-        "Before diving into design, we gain a deep understanding of your target audience, market trends, and business objectives. Through user research and data analysis, we gather actionable insights to inform design decisions. This helps us create user experiences that are aligned with your customer needs and expectations.",
+        "We analyze users, market trends, and business goals to create data-driven and user-focused design experiences.",
     },
     {
       id: 2,
       iconPath: <WireFrameIcon />,
       title: "Wireframing & Prototyping",
       description:
-        "Wireframing is the blueprint for your digital product. Our team creates low and high-fidelity wireframes to establish structure, layout, and user flow.Prototyping further enhances this by simulating real interactions, enabling feedback from real users before finalizing the design.",
+        "We create wireframes and interactive prototypes to improve structure, usability, and user experience before development.",
     },
     {
       id: 3,
       iconPath: <UserInterfaceIcon />,
       title: "UI Design (User Interface)",
       description:
-        "User Interface Design (UI) focuses on the look and feel of the product. We create aesthetically pleasing and functional designs that resonate with your brand identity. Our UI designs ensure an engaging experience for users while keeping the design simple, intuitive, and accessible.",
+        "We design visually appealing, user-friendly interfaces that match your brand and enhance user engagement.",
     },
     {
       id: 4,
       iconPath: <UserExperienceIcon />,
       title: "UX Design (User Experience)",
       description:
-        "User Experience Design (UX) is about creating intuitive, human-centered designs that allow users to easily navigate and interact with your product. We focus on enhancing the ease of use and accessibility of your platform, ensuring that users have a smooth and enjoyable experience.",
+        "We create intuitive user experiences that improve navigation, accessibility, and overall customer satisfaction.",
     },
     {
       id: 5,
       iconPath: <UseabilityIcon />,
       title: "Usability Testing",
       description:
-        "Once the prototype is ready, we conduct thorough usability testing with real users to validate the design and identify areas for improvement. This iterative process ensures that the final product is functional, intuitive, and user-friendly.",
+        "We test designs with real users to improve functionality, usability, and overall product performance.",
     },
     {
       id: 6,
       iconPath: <MoibleDesignIcon />,
       title: "Mobile UI/UX Design",
       description:
-        "With mobile-first becoming a standard in design, we ensure that your app or website is optimized for mobile screens, creating responsive and intuitive mobile designs that adapt to different screen sizes. We focus on making mobile interactions simple and efficient.",
+        "We design responsive mobile interfaces optimized for seamless experiences across all screen sizes.",
     },
     {
       id: 7,
       iconPath: <EcommerceIcon />,
       title: "E-commerce UI/UX Design",
       description:
-        "We design user-friendly e-commerce websites and apps that enhance the shopping experience and drive conversions. With intuitive navigation, effective product displays, and streamlined checkout, we help customers find what they need quickly while boosting sales and satisfaction.",
+        "We create user-friendly e-commerce designs that simplify shopping and improve conversions and customer satisfaction.",
     },
     {
       id: 8,
       iconPath: <DesignSystemIcon />,
       title: "Design System & Style Guides",
       description:
-        "Consistency across design elements is crucial for maintaining a strong brand identity. Our Design Systems and Style Guides offer a blueprint for all visual elements, ensuring that every aspect of your platform is aligned with your brand, from colors and fonts to button styles and spacing.",
+        "We develop consistent design systems and style guides to strengthen branding and user experience.",
     },
     {
       id: 9,
       iconPath: <AccessibilityIcon />,
       title: "Accessibility Design",
       description:
-        "Ensuring that your platform is accessible to all users, including those with disabilities, is essential. We follow WCAG (Web Content Accessibility Guidelines) to incorporate accessibility features into the design, making sure that everyone, regardless of ability, can navigate and interact with your product.",
+        "We create accessible designs following WCAG standards to ensure usability for all users.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -96,7 +96,7 @@ const UiDesignServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[20px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -106,10 +106,8 @@ const UiDesignServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="mb-[clamp(16px,2.5vh,32px)]">
-                  <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                    {service.iconPath}
-                  </div>
+                <div className="w-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                  {service.iconPath}
                 </div>
 
                 {/* Title */}
@@ -123,10 +121,10 @@ const UiDesignServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

@@ -285,7 +285,7 @@ const StepItem = ({ step, index, isActive, onClick, isLastItem }) => (
             {step.title}
           </h3>
           {step.description && isActive && (
-            <p className="text-sm lg:text-base text-white/90 font-outfit font-light leading-relaxed mt-3">
+            <p className="text-sm lg:text-base text-white font-outfit font-light leading-[1.3] mt-3">
               {step.description}
             </p>
           )}
@@ -382,7 +382,7 @@ const DevOpsCycle = () => {
       ref={sectionRef}
       className=" bg-primary"
       aria-labelledby="devops-title">
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         {/* Section Title */}
         <motion.div
           className="text-center mb-[77px]"

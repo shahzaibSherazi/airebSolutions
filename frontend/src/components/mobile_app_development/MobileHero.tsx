@@ -49,7 +49,7 @@ const MobileHero = () => {
   "
       />
       {/* Content */}
-      <div className="container relative z-10 px-2 py-8 lg:py-10 flex flex-col items-center sm:items-start justify-end">
+      <div className="container relative z-10  py-8 lg:py-10 flex flex-col items-center sm:items-start justify-end">
         <motion.div
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -59,7 +59,7 @@ const MobileHero = () => {
             Mobile Apps & Gaming <br className="hidden lg:block" />
             Service
           </h1>
-          <p className="font-outfit text-p leading-[1.6] text-textColor max-w-2xl mb-10">
+          <p className="font-outfit text-p leading-[1.3] text-textColor max-w-2xl mb-10">
             We build mobile apps and games for iOS and Android that are simple
             to use and work effectively. Our solutions are designed to help
             organisations grow from the idea stage to deployment by making

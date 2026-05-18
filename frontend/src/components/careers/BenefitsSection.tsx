@@ -61,7 +61,7 @@ const BenefitsSection = () => {
   return (
     <section className="relative w-full bg-[#02070F] text-white">
       {/* ── Header ── */}
-      <div className="container  px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container  py-16 lg:py-24">
         <div className="mb-10">
           <div className="bg-primary w-fit text-white font-outfit text-[clamp(12px,1.8vw,18px)] font-medium px-4 py-1.5 mb-6">
             Benefits

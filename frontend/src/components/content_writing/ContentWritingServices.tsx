@@ -15,55 +15,55 @@ const ContentWritingServices = () => {
       iconPath: <BlogIcon />,
       title: "Blog Posts & Articles",
       description:
-        "Regularly publishing informative and well-researched blog posts is one of the most effective ways to engage your audience, improve SEO rankings, and establish authority in your industry. Our blog posts are designed to educate, entertain, and inform, with a strong focus on SEO to drive organic traffic.",
+        "We write SEO-friendly blogs and articles that educate audiences, increase engagement, and improve search engine rankings.",
     },
     {
       id: 2,
       iconPath: <CopyWritingIcon />,
       title: "Website Copywriting",
       description:
-        "Your website is often the first point of contact between your brand and potential customers. That's why having clear, compelling, and persuasive website copy is crucial. Whether it's for landing pages, product descriptions, or about pages, we create copy that drives conversions and enhances user experience.",
+        "We create compelling website copy that improves user experience, builds trust, and increases customer conversions effectively.",
     },
     {
       id: 3,
       iconPath: <ProductIcon />,
       title: "Product Descriptions",
       description:
-        "Product descriptions are essential for converting visitors into buyers. We write compelling, detailed descriptions that highlight the key features and benefits of your products, while also focusing on the emotions and desires that drive consumer decisions.",
+        "We write persuasive product descriptions highlighting features, benefits, and emotions to increase customer purchase decisions.",
     },
     {
       id: 4,
       iconPath: <SocialMediaIcon />,
       title: "Social Media Content",
       description:
-        "Building a strong social media presence is key to brand success, and we're here to help you connect with your audience. Our social media content is crafted to engage, entertain, and inform while keeping your brand's voice consistent across all platforms.",
+        "We create engaging social media content that strengthens brand identity and connects effectively with target audiences.",
     },
     {
       id: 5,
       iconPath: <SeoIcon />,
       title: "SEO Content Writing",
       description:
-        "SEO (Search Engine Optimization) is the backbone of content strategy. Our SEO writing service ensures that your content is not only useful and informative but also optimized for the best possible rankings on search engines like Google.",
+        "We develop SEO-optimized content that improves search rankings, drives traffic, and increases online visibility organically.",
     },
     {
       id: 6,
       iconPath: <PressIcon />,
       title: "Press Releases",
       description:
-        "Press releases are an excellent way to share important company news, events, product launches, or collaborations with the media and your audience. Our expert writers craft press releases that grab attention, convey key messages clearly, and ensure your brand gets the recognition it deserves.",
+        "We craft professional press releases that promote company news, product launches, and important business announcements effectively.",
     },
     {
       id: 7,
       iconPath: <EmailIcon />,
       title: "Email Marketing Campaigns",
       description:
-        "Email marketing is one of the most direct ways to engage with your audience. We create personalized, engaging, and value-driven email copy that encourages recipients to open, read, and take action.",
+        "We create personalized email campaigns that engage audiences, increase open rates, and drive customer actions successfully.",
     },
   ];
 
   return (
     <section className="relative w-full bg-black ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-[6vh] sm:mb-[8vh] lg:mb-[10vh]"
@@ -74,7 +74,7 @@ const ContentWritingServices = () => {
           <h2 className="font-stoke font-normal text-h2 leading-[1.3] text-white mb-[2vh] sm:mb-[3vh]">
             Our Content Writing Services
           </h2>
-          <p className="font-outfit font-normal text-p leading-[1.6] text-textColor max-w-[890px] mx-auto px-4">
+          <p className="font-outfit font-normal text-p leading-[1.3] text-textColor max-w-[890px] mx-auto px-4">
             At Aireb Solutions, we offer a comprehensive range of content
             writing services designed to meet the diverse needs of your
             business. From SEO-optimized website copy to in-depth articles and
@@ -88,7 +88,7 @@ const ContentWritingServices = () => {
             <div
               key={service.id}
               className="service-card group relative bg-black hover:bg-primary
-  border border-gray-800 sm:p-[10px] p-[8px]
+  border border-gray-800 sm:p-5 p-2
   transition-all duration-500 ease-in-out hover:border-primary
   overflow-hidden
   ">
@@ -98,10 +98,8 @@ const ContentWritingServices = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Icon Container */}
-                <div className="mb-[clamp(16px,2.5vh,32px)]">
-                  <div className="w-[clamp(44px,5vh,56px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
-                    {service.iconPath}
-                  </div>
+                <div className="w-[clamp(44px,5vh,56px)] mb-[clamp(12px,2.5vh,28px)] h-[clamp(44px,5vh,56px)] bg-white text-black  flex items-center justify-center transition-all duration-500">
+                  {service.iconPath}
                 </div>
 
                 {/* Title */}
@@ -115,10 +113,10 @@ const ContentWritingServices = () => {
 
                 {/* Description */}
                 <p
-                  className="font-outfit font-normal text-gray-400 group-hover:text-white
-  text-p leading-[1.7]
+                  className="font-outfit font-normal text-white
+  text-p leading-[1.3]
   transition-colors duration-500
-  line-clamp-5">
+  line-clamp-3 overflow-hidden">
                   {service.description}
                 </p>
               </motion.div>

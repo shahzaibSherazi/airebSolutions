@@ -1,10 +1,6 @@
 import { useState } from "react";
 import cardImg1 from "@/assets/resources/white-papers/card-1.png";
 import cardImg2 from "@/assets/resources/white-papers/card-2.png";
-import cardImg3 from "@/assets/resources/white-papers/card-3.png";
-import cardImg4 from "@/assets/resources/white-papers/card-4.png";
-import cardImg5 from "@/assets/resources/white-papers/card-5.png";
-import cardImg6 from "@/assets/resources/white-papers/card-6.png";
 
 interface WhiePaperPost {
   id: number;
@@ -67,16 +63,17 @@ const readMoreBorderStyle = {
 function SmallCard({ post, variant }) {
   const onClick = () => window.open(post.pdfUrl, "_blank");
   return (
-    <div className="flex flex-col h-full">
+    <div
+      onClick={onClick}
+      className="relative flex flex-col h-full group cursor-pointer">
       {/* Image */}
       <div
-        onClick={onClick}
-        className="relative overflow-hidden flex-shrink-0 blogsCards_TopEdge"
+        className=" overflow-hidden flex-shrink-0 blogsCards_TopEdge"
         style={imageBorderStyle}>
         <img
           src={post.image}
           alt={post.title}
-          className="w-full object-contain transition-transform duration-500 hover:scale-105 h-full"
+          className="w-full object-contain transition-transform duration-500 group-hover:scale-105 h-full"
           //   style={{ height: 160 }}
         />
       </div>
@@ -102,7 +99,6 @@ function SmallCard({ post, variant }) {
         {/* Meta row */}
         <div className="flex items-center justify-end pt-3">
           <button
-            onClick={onClick}
             style={readMoreBorderStyle}
             className="text-primary font-outfit text-[11px] font-medium hover:text-white transition-colors duration-200 flex items-center gap-0.5 py-2 px-[clamp(6px,2vw,24px)] group">
             Read More
@@ -120,7 +116,7 @@ function SmallCard({ post, variant }) {
 export default function AllCaseStudies() {
   return (
     <section className="w-full bg-[#02070F] ">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24 ">
         <div className="flex justify-center">
           <h1 className="font-stoke font-normal text-h2 text-white text-center mb-20 mr-1">
             All Case Studies

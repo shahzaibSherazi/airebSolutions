@@ -19,7 +19,7 @@ const HealthCareHero = () => {
         className="absolute inset-0"
       />
       {/* Content */}
-      <div className="container relative z-10 px-2 lg:px-8 py-8 lg:py-10 flex flex-col justify-end ">
+      <div className="container relative z-10 py-8 lg:py-10 flex flex-col justify-end ">
         <p
           style={{
             background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",

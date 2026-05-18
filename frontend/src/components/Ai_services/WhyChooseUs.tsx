@@ -58,35 +58,35 @@ const WhyChooseUs = () => {
   return (
     <div className=" text-white  bg-primary">
       {/* Header */}
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         <motion.div
           className="text-center mb-16 md:mb-[85px]"
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-h2 font-normal font-stoke leading-[56px] mb-[15px]">
+          <h1 className="text-h2 font-normal font-stoke mb-[15px]">
             Why Choose Us
           </h1>
-          <p className="text-white font-outfit font-normal text-p leading-[40px]">
+          <p className="text-white font-outfit font-normal text-p leading-[1.3]">
             We Design for the Future to Drive Today's Success
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4 ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-4 ">
           {features.map((feature) => (
             <div
               key={feature.id}
               className="rounded-[5px] px-4 py-6 border-025 group transition-all duration-300 ease-out
-hover:-translate-y-2 hover:scale-[1.01]">
-              <h3 className="text-lg text-textColor  font-outfit ">
+hover:-translate-y-2 hover:scale-[1.01] flex items-center">
+              <h3 className="text-lg text-textColor leading-[1.3] text-center font-outfit ">
                 {feature.title}
               </h3>
             </div>
           ))}
         </div>
-        <p className="text-center text-textColor font-outfit font-normal text-p leading-[40px] mt-10">
+        <p className="text-center text-textColor font-outfit font-normal text-p leading-[1.3] mt-10">
           AI solutions that are cheap and give you a high return on investment
         </p>
       </div>

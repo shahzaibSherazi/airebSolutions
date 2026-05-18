@@ -4,6 +4,7 @@ import TechnologiesShowcase from "@/components/services/TechnologiesShowcase";
 import TechSolutionsSection from "@/components/services/TechSolutionSection";
 import WhyChooseUs from "@/components/services/WhyChooseUs";
 import AllServicesHero from "@/components/services/AllServicesHero";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 const AllServices = () => {
   return (
     <Layout enableSmoothScroll>
@@ -12,6 +13,7 @@ const AllServices = () => {
       <TechnologiesShowcase />
       <FAQAccordion />
       <WhyChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

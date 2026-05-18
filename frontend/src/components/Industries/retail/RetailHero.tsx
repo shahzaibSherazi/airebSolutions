@@ -1,10 +1,10 @@
 import React from "react";
-import heroImg from "@/assets/Industies/retail/hero-img.png";
-import bgImg from "@/assets/Industies/retail/bg-img.png";
+import heroImg from "@/assets/Industies/retail/hero-img.webp";
+import bgImg from "@/assets/Industies/retail/bg-img.webp";
 
 const RetailHero = () => {
   return (
-    <section className="heros_height relative overflow-hidden flex flex-col justify-end ">
+    <section className="heros_height relative overflow-hidden flex flex-col justify-center ">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -19,9 +19,9 @@ const RetailHero = () => {
         }}
         className="absolute inset-0"
       />
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full px-2 lg:px-8 py-8 lg:py-10">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 h-full py-8 lg:py-10">
         {/* Left Side - Content */}
-        <div className="relative flex flex-col justify-end mb-8">
+        <div className="relative flex flex-col items-center lg:items-start justify-center mb-8">
           <div
             style={{
               background: "linear-gradient(180deg, #4285F4 0%, #02070F 100%)",
@@ -32,7 +32,7 @@ const RetailHero = () => {
             </p>
           </div>
 
-          <h1 className="font-stoke text-h1 leading-[1.28] text-white">
+          <h1 className="font-stoke text-center lg:text-start text-h1 leading-[1.28] text-white">
             Retail & Consumer Goods
           </h1>
         </div>

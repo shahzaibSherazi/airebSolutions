@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { ChevronDown, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 // ── Replace these imports with your actual project images ──
-import proj1 from "@/assets/resources/portfolio/card-1.png";
-import proj2 from "@/assets/resources/portfolio/card-2.png";
-import proj3 from "@/assets/resources/portfolio/card-3.png";
-import proj4 from "@/assets/resources/portfolio/card-4.png";
-import proj5 from "@/assets/resources/portfolio/card-5.png";
-import proj6 from "@/assets/resources/portfolio/card-6.png";
-import proj7 from "@/assets/resources/portfolio/card-7.png";
-import proj8 from "@/assets/resources/portfolio/eyeora.png";
-import proj9 from "@/assets/resources/portfolio/fiscfiler.png";
-import proj10 from "@/assets/resources/portfolio/infusion.png";
-import proj11 from "@/assets/resources/portfolio/joinmasstorts.png";
-import proj12 from "@/assets/resources/portfolio/nur.png";
+import proj1 from "@/assets/resources/portfolio/card-1.webp";
+import proj2 from "@/assets/resources/portfolio/card-2.webp";
+import proj3 from "@/assets/resources/portfolio/card-3.webp";
+import proj4 from "@/assets/resources/portfolio/card-4.webp";
+import proj5 from "@/assets/resources/portfolio/card-5.webp";
+import proj6 from "@/assets/resources/portfolio/card-6.webp";
+import proj7 from "@/assets/resources/portfolio/card-7.webp";
+import proj8 from "@/assets/resources/portfolio/eyeora.webp";
+import proj9 from "@/assets/resources/portfolio/fiscfiler.webp";
+import proj10 from "@/assets/resources/portfolio/infusion.webp";
+import proj11 from "@/assets/resources/portfolio/joinmasstorts.webp";
+import proj12 from "@/assets/resources/portfolio/nur.webp";
 
 // ── Project Data ──
 const projects = [
@@ -240,7 +240,7 @@ const AllProjects = () => {
   return (
     <section className="relative w-full bg-[#02070F] text-white ">
       {/* Heading */}
-      <div className="container px-2 lg:px-8 py-16 lg:py-24">
+      <div className="container py-16 lg:py-24">
         <div className="flex flex-col items-center text-center mb-10 gap-1">
           <h2 className="font-stoke text-[clamp(24px,4vw,42px)] font-normal text-white">
             Proven Success In

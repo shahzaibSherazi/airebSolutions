@@ -5,6 +5,7 @@ import EcommerceServices from "@/components/Industries/ecommerce/EcommerceServic
 import EcommerceSolutions from "@/components/Industries/ecommerce/EcommerceSolutions";
 import EcommerceTechStack from "@/components/Industries/ecommerce/EcommerceTechStak";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const IndustriesEcommerce = () => {
   return (
@@ -15,6 +16,7 @@ const IndustriesEcommerce = () => {
       <EcommerceCycle />
       <EcommerceTechStack />
       <EcommerceExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

@@ -5,6 +5,7 @@ import EducationServices from "@/components/Industries/education/EducationServic
 import EducationSolutions from "@/components/Industries/education/EducationSolutions";
 import EducationTechStack from "@/components/Industries/education/EducationTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Education = () => {
   return (
@@ -15,6 +16,7 @@ const Education = () => {
       <EducationDevelopmentCycle />
       <EducationTechStack />
       <EducationExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

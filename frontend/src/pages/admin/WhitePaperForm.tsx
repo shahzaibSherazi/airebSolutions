@@ -14,11 +14,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { AlertCircle, Loader2, Upload, X, Plus, Trash2 } from "lucide-react";
-import {
-  fileToBase64,
-  validateImageFile,
-  validatePDFFile,
-} from "@/utils/helpers";
+import { validateImageFile, validatePDFFile } from "@/utils/helpers";
+import { getImageUrl } from "@/utils/imageUtils";
 
 const DEFAULT_CATEGORIES = ["Development", "Design", "Strategy", "Technology"];
 
@@ -51,7 +48,7 @@ export default function WhitePaperForm() {
       const paper = whitePapers.find((p) => p._id === id);
       if (paper) {
         setFormData(paper);
-        if (paper.image) setImagePreview(paper.image);
+        if (paper.image) setImagePreview(getImageUrl(paper.image));
         setLoading(false);
       } else {
         fetchWhitePaper();
@@ -67,7 +64,8 @@ export default function WhitePaperForm() {
       const res = await whitePaperAPI.getWhitePaper(id!);
       if (res.success) {
         setFormData(res.whitePaper);
-        if (res.whitePaper.image) setImagePreview(res.whitePaper.image);
+        if (res.whitePaper.image)
+          setImagePreview(getImageUrl(res.whitePaper.image));
       }
     } catch (error: any) {
       setError(error.response?.data?.message || "Failed to load white paper");
@@ -98,12 +96,18 @@ export default function WhitePaperForm() {
     }
 
     try {
-      const base64 = await fileToBase64(file);
-      setFormData({ ...formData, image: base64 });
-      setImagePreview(base64);
-      setError("");
-    } catch (err) {
-      setError("Failed to process image");
+      const res = await whitePaperAPI.uploadImage(file);
+      if (res.success) {
+        setFormData({
+          ...formData,
+          image: res.file.path,
+          imageFileName: res.file.filename,
+        });
+        setImagePreview(res.file.url);
+        setError("");
+      }
+    } catch (err: any) {
+      setError(err.response?.data?.message || "Failed to upload image");
     }
   };
 
@@ -285,6 +289,11 @@ export default function WhitePaperForm() {
           <div>
             <label className="block text-white font-medium mb-2">
               Featured Image *
+              {formData.imageFileName && (
+                <span className="text-primary text-sm ml-2">
+                  ({formData.imageFileName})
+                </span>
+              )}
             </label>
             <div className="space-y-3">
               {imagePreview && (
@@ -297,7 +306,11 @@ export default function WhitePaperForm() {
                   <button
                     type="button"
                     onClick={() => {
-                      setFormData({ ...formData, image: "" });
+                      setFormData({
+                        ...formData,
+                        image: "",
+                        imageFileName: "",
+                      });
                       setImagePreview("");
                     }}
                     className="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-lg">

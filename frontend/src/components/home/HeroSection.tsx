@@ -1,9 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
-// import bgVideo from "@/assets/home/hero/hero-video.mp4";
-import heroPoster from "@/assets/home/hero/poster.jpeg";
+import heroPoster from "@/assets/home/hero/poster.webp";
 import AnimatedText from "../ui/LetterStagger";
-import { Link } from "react-router-dom";
 import { smoothScroll } from "@/lib/smooth-scroll";
 
 const HeroSection = () => {
@@ -60,28 +58,37 @@ const HeroSection = () => {
   }, []);
   return (
     <section className="heros_height relative  flex justify-center items-center w-full overflow-hidden text-white">
-      {/* Background Poster Image */}
-      <img
-        src={heroPoster}
-        alt="Hero background"
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-          videoReady ? "opacity-0" : "opacity-100"
-        }`}
-      />
+      {!videoReady && (
+        <img
+          src={heroPoster}
+          alt="Hero Poster"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+      )}
 
-      {/* Background Video */}
+      {/* <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster={heroPoster}
+        onCanPlayThrough={() => setVideoReady(true)}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
+          videoReady ? "opacity-100" : "opacity-0"
+        }`}> */}
       <video
         ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
-        onCanPlayThrough={() => setVideoReady(true)}
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-          videoReady ? "opacity-100" : "opacity-0"
-        }`}>
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        preload="metadata"
+        poster={heroPoster}
+        onLoadedData={() => setVideoReady(true)}
+        className="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="/videos/hero-video.webm" type="video/webm" />
       </video>
 
       {/* HERO CONTENT */}

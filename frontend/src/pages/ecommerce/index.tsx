@@ -4,6 +4,7 @@ import EcommerceChallenges from "@/components/ecommerce/EcommerceChallenges";
 import EcommerceHero from "@/components/ecommerce/EcommerceHero";
 import EcommerceServices from "@/components/ecommerce/EcommerceServices";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const Ecommerce = () => {
   return (
@@ -13,6 +14,7 @@ const Ecommerce = () => {
       <EcommerceChallenges />
       <DevelopmentProcess />
       <ChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

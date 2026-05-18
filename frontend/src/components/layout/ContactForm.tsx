@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
-import contactImage from "@/assets/contact-image.png";
+import contactImage from "@/assets/contact-image.webp";
 import PhoneInput from "react-phone-number-input";
 import { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -15,33 +15,31 @@ export default function ContactForm() {
       id="contact-form"
       className="bg-black text-white relative  flex items-center">
       {/* ================= DESKTOP VIEW ================= */}
-      <div className="container w-full flex items-center px-2 lg:px-8 py-16 lg:py-24">
-        <div className="w-full flex lg:flex-row justify-between items-stretch">
-          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12">
-            <motion.div
-              initial={{ y: 60, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: false }}>
-              <h1 className="font-stoke font-normal text-[clamp(18px,4vw,48px)] lg:text-start text-center leading-tight sm:leading-snug lg:leading-[64px]">
-                Tell us about your project
-              </h1>
-            </motion.div>
-            <FormComponent
-              phone={phone}
-              setPhone={setPhone}
-              onSuccess={() => setShowSuccess(true)}
-            />
-          </div>
+      <div className="container w-full flex lg:flex-row justify-center lg:justify-between gap-8 py-16 lg:py-24">
+        <div className="flex flex-col w-full md:max-w-[576px] gap-6 sm:gap-8 lg:gap-12">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}>
+            <h1 className="font-stoke font-normal text-h2 lg:text-start text-center leading-[1.3]">
+              Tell us about your project
+            </h1>
+          </motion.div>
+          <FormComponent
+            phone={phone}
+            setPhone={setPhone}
+            onSuccess={() => setShowSuccess(true)}
+          />
+        </div>
 
-          <div className="hidden lg:flex justify-end items-center">
-            <div className=" overflow-hidden">
-              <img
-                src={contactImage}
-                alt="Contact"
-                className="w-full h-full object-contain"
-              />
-            </div>
+        <div className="hidden lg:flex justify-end items-center">
+          <div className=" overflow-hidden">
+            <img
+              src={contactImage}
+              alt="Contact"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>
@@ -71,6 +69,12 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     service: "",
     privacyAgreed: "",
   });
+
+  const fullNameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLButtonElement>(null);
+  const privacyRef = useRef<HTMLInputElement>(null);
   const clearError = (field) => {
     setErrors((prev) => ({
       ...prev,
@@ -92,6 +96,31 @@ function FormComponent({ phone, setPhone, onSuccess }) {
     clearError(name);
   };
 
+  // ================= SCROLL + FOCUS FUNCTION =================
+
+  const scrollToError = (field) => {
+    const refMap = {
+      fullName: fullNameRef,
+      email: emailRef,
+      phone: phoneRef,
+      service: serviceRef,
+      privacyAgreed: privacyRef,
+    };
+
+    const targetRef = refMap[field];
+
+    if (targetRef?.current) {
+      targetRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+
+      setTimeout(() => {
+        targetRef.current?.focus?.();
+      }, 400);
+    }
+  };
+
   const submitForm = async () => {
     const newErrors = {
       fullName: "",
@@ -100,42 +129,51 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       service: "",
       privacyAgreed: "",
     };
-
+    let firstErrorField = "";
     let hasError = false;
 
     if (!form.fullName.trim()) {
       newErrors.fullName = "Full name is required";
+      firstErrorField ||= "fullName";
       hasError = true;
     }
 
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
+      firstErrorField ||= "email";
       hasError = true;
     } else if (!isValidEmail(form.email)) {
       newErrors.email = "Invalid email format";
+      firstErrorField ||= "email";
       hasError = true;
     }
 
     if (!phone) {
       newErrors.phone = "Phone number is required";
+      firstErrorField ||= "phone";
       hasError = true;
     } else if (!isValidPhoneNumber(phone)) {
       newErrors.phone = "Invalid phone number";
+      firstErrorField ||= "phone";
       hasError = true;
     }
 
     if (!service) {
       newErrors.service = "Please select a service";
+      firstErrorField ||= "service";
       hasError = true;
     }
 
     if (!form.privacyAgreed) {
       newErrors.privacyAgreed = "You must agree to privacy policy";
+      firstErrorField ||= "privacyAgreed";
       hasError = true;
     }
 
     if (hasError) {
       setErrors(newErrors);
+      // ================= AUTO SCROLL TO FIRST ERROR =================
+      scrollToError(firstErrorField);
       return;
     }
 
@@ -202,11 +240,12 @@ function FormComponent({ phone, setPhone, onSuccess }) {
       style={{
         background: "linear-gradient(180deg, #629DFF 0%, #0B0B0B 100%)",
       }}
-      className="w-full lg:max-w-[576px] px-[9px] py-[10px] contact_form relative">
-      <div className="px-3 sm:px-4 md:px-[18px] py-4 sm:py-6  space-y-3 sm:space-y-4 bg-black">
+      className="w-full md:max-w-[576px] px-[9px] py-[10px] contact_form relative">
+      <div className="px-3 sm:px-4 md:px-[18px] py-4   bg-black">
         {/* Name & Email Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
           <Input
+            inputRef={fullNameRef}
             label="Your Name"
             name="fullName"
             value={form.fullName}
@@ -216,6 +255,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
           />
 
           <Input
+            inputRef={emailRef}
             label="Email"
             name="email"
             value={form.email}
@@ -229,6 +269,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <div>
           <label className="text-xs sm:text-sm text-white">Phone number</label>
           <div
+            ref={phoneRef}
             className={`mt-1 rounded-md bg-[#0E2142] border px-2 py-1 ${
               errors.phone ? "border-red-500" : "border-primary"
             }`}>
@@ -257,6 +298,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         {/* Service Dropdown */}
         <div>
           <ServiceDropdown
+            buttonRef={serviceRef}
             value={service}
             onChange={(value) => {
               setService(value);
@@ -293,6 +335,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
         <div>
           <div className="flex items-start gap-2 text-[10px] sm:text-xs opacity-80">
             <input
+              ref={privacyRef}
               type="checkbox"
               name="privacyAgreed"
               checked={form.privacyAgreed}
@@ -301,7 +344,7 @@ function FormComponent({ phone, setPhone, onSuccess }) {
             />
             <span>You agree to our friendly privacy policy.</span>
           </div>
-          <div className="min-h-[10px] mt-1">
+          <div className="min-h-[10px] mb-1">
             <p
               className={`text-red-500 text-[11px] sm:text-xs transition-opacity duration-200 ${
                 errors.privacyAgreed ? "opacity-100" : "opacity-0"
@@ -346,11 +389,12 @@ function SuccessModal({ onClose }) {
 }
 
 /* ================= INPUT ================= */
-function Input({ label, name, value, onChange, placeholder, error }) {
+function Input({ label, name, value, onChange, placeholder, error, inputRef }) {
   return (
     <div>
       <label className="text-xs sm:text-sm">{label}</label>
       <input
+        ref={inputRef}
         type="text"
         name={name}
         value={value}
@@ -389,7 +433,7 @@ function CountrySelect({ value, onChange, options }) {
 }
 
 /* ================= SERVICE DROPDOWN ================= */
-function ServiceDropdown({ value, onChange, error }) {
+function ServiceDropdown({ value, onChange, error, buttonRef }) {
   const [open, setOpen] = useState(false);
 
   const services = [
@@ -406,6 +450,7 @@ function ServiceDropdown({ value, onChange, error }) {
 
       {/* Trigger */}
       <button
+        ref={buttonRef}
         type="button"
         onClick={() => setOpen(!open)}
         className={`mt-1 w-full flex items-center justify-between text-left rounded-[8px]

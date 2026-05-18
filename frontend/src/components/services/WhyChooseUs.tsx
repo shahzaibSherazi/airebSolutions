@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
       style={{
         background: "linear-gradient(135.23deg, #4285F4 2.74%, #629DFF 97.26%)",
       }}>
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24 ">
         {/* Header */}
         <div className="text-center mb-16 md:mb-[85px]">
           <h1 className="text-h2 text-black font-normal font-stoke leading-[56px] mb-[20px]">

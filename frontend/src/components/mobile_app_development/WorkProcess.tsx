@@ -51,8 +51,8 @@ const HowWeGetItDone = () => {
   return (
     <section className="relative w-full bg-black   overflow-hidden">
       {/* Container */}
-      <div className="container px-2 lg:px-8 py-16  lg:py-24">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-[89px]">
+      <div className="container py-16  lg:py-24">
+        <div className="text-center mb-8  ">
           <span className="bg-primary font-outfit text-white px-4 py-1.5 sm:px-[29px] sm:py-[9px] uppercase text-xs sm:text-base font-medium">
             Our Work Process
           </span>
@@ -64,7 +64,7 @@ const HowWeGetItDone = () => {
             <h2 className="text-white font-stoke font-normal text-h2 mt-6 sm:mt-[34px]">
               How we get it done
             </h2>
-            <p className="font-outfit font-normal text-p mt-[27px]">
+            <p className="font-outfit font-normal leading-[1.3] text-p mt-3">
               Our structured development approach ensures successful{" "}
               <br className="hidden sm:block" /> project execution and delivery
             </p>
@@ -78,7 +78,7 @@ const HowWeGetItDone = () => {
               {/* Card Row */}
               <div className="grid grid-cols-1 md:grid-cols-[230px_1fr] lg:grid-cols-[280px_1fr] gap-0 group">
                 {/* Left: Blue Box with Title */}
-                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-bold text-center leading-tight bg-primary sm:h-32  flex items-center justify-center py-4 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
+                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-outfit font-normal text-center leading-[1.3] bg-primary sm:h-[100px]  flex items-center justify-center py-4 px-10  sm:py-6  border-025 md:rounded-tl-[7px] md:rounded-bl-[7px]   transition-all duration-300 group-hover:bg-textColor group-hover:text-primary">
                   {step.title}
                 </h3>
 
@@ -87,12 +87,12 @@ const HowWeGetItDone = () => {
                   {/* Top border accent */}
 
                   {/* Heading */}
-                  <h4 className="text-primary text-base font-outfit font-medium mb-3 sm:mb-4">
+                  <h4 className="text-primary text-base font-outfit font-medium">
                     {step.heading}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-[#D9D9D9] font-outfit font-light text-sm sm:text-base leading-relaxed">
+                  <p className="text-white font-outfit font-light text-sm sm:text-base !leading-[1.3] line-clamp-2 overflow-hidden">
                     {step.description}
                   </p>
                 </div>

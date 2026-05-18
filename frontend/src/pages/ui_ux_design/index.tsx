@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 import UiDesignExpertise from "@/components/ui_ux_Design/UiDesignExpertise";
 import UiDesignHero from "@/components/ui_ux_Design/UiDesignHero";
 import UiDesignProcess from "@/components/ui_ux_Design/UiDesignProcess";
@@ -15,6 +16,7 @@ const UiDesign = () => {
       <UiDesignProcess />
       {/* <UiDesignWork /> */}
       <UiDesignExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

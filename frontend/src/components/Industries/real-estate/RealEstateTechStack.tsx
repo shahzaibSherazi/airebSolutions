@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import teckStackImg from "@/assets/Industies/real-estate/techStack-img.png";
+import teckStackImg from "@/assets/Industies/real-estate/techStack-img.webp";
 import { smoothScroll } from "@/lib/smooth-scroll";
 const techStack = [
   {
@@ -135,7 +135,7 @@ export default function RealEstateTechStack() {
   return (
     <>
       <section className=" bg-[#02070F] ">
-        <div className="container px-2 sm:px-8  py-16 md:py-24">
+        <div className="container py-16 md:py-24">
           {/* ── Top Header Row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 md:mb-14">
             {/* Left: Title + Description */}

@@ -2,9 +2,9 @@ import React from "react";
 import workImg from "../../assets/mobile_work_img.png";
 const OurWork = () => {
   return (
-    <section className=" w-full px-6 lg:px-8 py-16 lg:py-24 bg-primary">
+    <section className=" w-full  py-16 lg:py-24 bg-primary">
       {/* Container */}
-      <div className=" ">
+      <div className="container">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
           {/* Left Content */}
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">

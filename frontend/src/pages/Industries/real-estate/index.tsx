@@ -5,6 +5,7 @@ import RealEstateServices from "@/components/Industries/real-estate/RealEstateSe
 import RealEstateSolutions from "@/components/Industries/real-estate/RealEstateSolutions";
 import RealEstateTechStack from "@/components/Industries/real-estate/RealEstateTechStack";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const RealEstate = () => {
   return (
@@ -15,6 +16,7 @@ const RealEstate = () => {
       <RealEstateCycle />
       <RealEstateTechStack />
       <RealEstateExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

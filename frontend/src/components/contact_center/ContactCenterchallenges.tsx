@@ -7,16 +7,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
-    title: "Bussiness-Driven Design",
-    desc: "We don't just create beautiful interfaces; we build strategic tools that boost your business metrics. Every design element serves a clear purpose to increase conversion and retention.",
+    title: "High Call Volumes",
+    desc: "Handling too many customer calls at once can overwhelm agents, increase wait times, reduce response quality, and negatively impact the overall customer experience.",
   },
   {
-    title: "Bussiness-Driven Design",
-    desc: "We don't just create beautiful interfaces; we build strategic tools that boost your business metrics. Every design element serves a clear purpose to increase conversion and retention.",
+    title: "Long Customer Wait Times",
+    desc: "Customers expect fast support responses. Long waiting times often cause frustration, reduce customer satisfaction, and increase the chances of losing potential clients.",
   },
   {
-    title: "Bussiness-Driven Design",
-    desc: "We don't just create beautiful interfaces; we build strategic tools that boost your business metrics. Every design element serves a clear purpose to increase conversion and retention.",
+    title: "Inconsistent Customer Experience",
+    desc: "Different communication styles and service quality across agents create inconsistent customer experiences, which can damage brand reputation and reduce customer loyalty over time.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function ContactCenterSection() {
 
   return (
     <div className=" w-full flex items-center justify-center bg-black">
-      <div className="container px-2 lg:px-8 py-16 md:py-24">
+      <div className="container py-16 md:py-24">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-6 mb-5 md:mb-4">
           <motion.div
@@ -71,7 +71,7 @@ export default function ContactCenterSection() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false }}>
-            <h1 className="text-white font-stoke text-h2 font-extralight leading-tight">
+            <h1 className="text-white font-stoke text-h2 font-extralight leading-[1.3] ">
               Our Contact Center Comman <br className="hidden lg:block" />{" "}
               Challenges
             </h1>
@@ -93,7 +93,7 @@ export default function ContactCenterSection() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-textColor text-p mb-8 md:mb-14 font-outfit font-light leading-relaxed">
+        <p className="text-textColor text-p mb-8 md:mb-14 font-outfit font-light leading-[1.3]">
           At Aireb Solutions, we follow a streamlined on-demand app development{" "}
           <br className="hidden lg:block" />
           cycle that ensures efficiency and innovation
@@ -113,7 +113,7 @@ export default function ContactCenterSection() {
                 <h3 className="text-textColor font-semibold text-title lg:text-xl mb-2 md:mb-3">
                   {card.title}
                 </h3>
-                <p className="text-textColor font-outfit font-normal text-p leading-relaxed">
+                <p className="text-textColor font-outfit font-normal text-p leading-[1.3]">
                   {card.desc}
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function ContactCenterSection() {
                 overflow: "hidden",
               }}
               className="flex-1 rounded-xl border border-blue-500 p-5 flex flex-col justify-between">
-              <p className="text-textColor font-outfit font-normal text-sm leading-snug ">
+              <p className="text-textColor font-outfit font-normal text-sm leading-[1.3] ">
                 {stat.label}
               </p>
               <p className="text-white text-h2 font-bold">{stat.value}</p>
@@ -148,12 +148,12 @@ export default function ContactCenterSection() {
             className="flex-[2] h-64 rounded-xl p-px">
             <div className="rounded-xl p-6 h-full bg-black">
               <h3 className="text-textColor font-semibold text-title mb-3">
-                Bussiness-Driven Design
+                Lack of Real-Time Analytics
               </h3>
-              <p className="text-textColor font-outfit font-normal text-p line-clamp-5 overflow-hidden leading-relaxed">
-                We don't just create beautiful interfaces; we build strategic
-                tools that boost your business metrics. Every design element
-                serves a clear purpose to increase conversion and retention.
+              <p className="text-textColor font-outfit font-normal text-p line-clamp-5 overflow-hidden leading-[1.3]">
+                Without live monitoring and performance reports, businesses
+                struggle to track agent productivity, customer behavior, and
+                service quality for better decision-making and improvements.
               </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function ContactCenterSection() {
                 background: "linear-gradient(180deg, #4285F4 0%, #000000 100%)",
               }}
               className="rounded-xl border border-primary px-5 py-4 flex items-center justify-between gap-4">
-              <p className="text-textColor font-outfit font-normal text-xs sm:text-sm leading-snug opacity-90 flex-1">
+              <p className="text-textColor font-outfit font-normal text-xs sm:text-sm leading-[1.3] opacity-90 flex-1">
                 {stat.label}
               </p>
               <p className="text-textColor text-3xl sm:text-4xl font-bold flex-shrink-0">
@@ -187,7 +187,7 @@ export default function ContactCenterSection() {
               <h3 className="text-textColor font-semibold text-base mb-2">
                 Bussiness-Driven Design
               </h3>
-              <p className="text-textColor font-outfit font-normal text-sm leading-relaxed">
+              <p className="text-textColor font-outfit font-normal text-sm leading-[1.3]">
                 We don't just create beautiful interfaces; we build strategic
                 tools that boost your business metrics. Every design element
                 serves a clear purpose to increase conversion and retention.

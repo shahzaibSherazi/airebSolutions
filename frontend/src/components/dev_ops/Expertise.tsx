@@ -43,7 +43,7 @@ const OurExpertise = () => {
       }}
       className="relative w-full   overflow-hidden">
       {/* Container */}
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Badge */}
         <span className="inline-block bg-primary mb-8 sm:mb-10 md:mb-12 text-white text-xs sm:text-base font-outfit font-medium px-4 sm:px-7 py-1.5 sm:py-2 border ">
           Our Expertise
@@ -56,7 +56,7 @@ const OurExpertise = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h2 className="text-white text-h2 font-stoke font-thin leading-10 lg:leading-[72px] ">
+          <h2 className="text-white text-h2 font-stoke font-thin leading-[1.3] ">
             An established partner that can speed
             <br className="hidden sm:block" />
             up innovation, with a focus on real-
@@ -74,10 +74,10 @@ const OurExpertise = () => {
               {/* Card Content */}
               <div className="relative z-10 flex-1 flex flex-col">
                 {/* Text with fixed height and overflow handling */}
-                <h3 className="text-white font-outfit text-title font-normal leading-relaxed mb-2 pr-8 line-clamp-2">
+                <h3 className="text-white font-outfit text-title font-normal leading-[1.3] mb-2 pr-8 line-clamp-2">
                   {feature.title}
                 </h3>
-                <p className="text-white font-outfit text-p line-clamp-2 overflow-hidden pr-8">
+                <p className="text-white font-outfit text-p line-clamp-2 leading-[1.3] overflow-hidden pr-8">
                   {feature.desc}
                 </p>
               </div>

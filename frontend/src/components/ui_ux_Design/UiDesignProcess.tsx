@@ -72,7 +72,7 @@ export default function UiDesignProcess() {
 
   return (
     <section className="w-full bg-[#0E1828] ">
-      <div className="container px-2 md:px-8 py-16 lg:py-24">
+      <div className="container  py-16 lg:py-24">
         {/* ── Header ── */}
         <motion.div
           className="mb-16"
@@ -80,17 +80,17 @@ export default function UiDesignProcess() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false }}>
-          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-4 leading-tight">
+          <h1 className="text-textColor font-extralight font-stoke text-h2 mb-4 leading-[1.3]">
             Our UI/UX Design Process
           </h1>
-          <p className="text-textColor font-outfit font-light text-p max-w-xl leading-relaxed">
+          <p className="text-textColor font-outfit font-light text-p max-w-xl leading-[1.3]">
             At Aireb Solutions, we follow a streamlined on-demand app
             development cycle that ensures efficiency and innovation
           </p>
         </motion.div>
 
         {/* ── Steps ── */}
-        <div className="space-y-8 sm:space-y-16">
+        <div className="space-y-8">
           {steps.map((step, index) => {
             const isTop = index === activeIndex;
 
@@ -103,13 +103,13 @@ export default function UiDesignProcess() {
                 <div
                   className={[
                     "rounded-md  transition-all duration-500",
-                    "min-h-[180px] ",
+                    "min-h-[100px] ",
                     "flex items-center",
                     isTop
                       ? "bg-primary"
                       : "bg-[#0a1220] border border-blue-400/10",
                   ].join(" ")}>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-center w-full h-full px-5  py-5 ">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center w-full h-full px-5  py-1 ">
                     {/* Left — Title */}
                     <h3
                       className={[
@@ -141,7 +141,7 @@ export default function UiDesignProcess() {
                     {/* Right — Description */}
                     <p
                       className={[
-                        "font-outfit font-light text-sm sm:text-base leading-relaxed transition-colors duration-500",
+                        "font-outfit font-light text-sm sm:text-base leading-[1.3] transition-colors duration-500",
                         "line-clamp-3 sm:line-clamp-3", // ✅ keep consistent height
                         isTop ? "text-white" : "text-white/40",
                       ].join(" ")}>

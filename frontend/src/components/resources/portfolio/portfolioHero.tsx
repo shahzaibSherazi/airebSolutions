@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
-import bgImage from "@/assets/resources/portfolio/hero-bg.png";
+import bgImage from "@/assets/resources/portfolio/hero-bg.webp";
 import { smoothScroll } from "@/lib/smooth-scroll";
 
 const PortfolioHero = () => {
@@ -25,7 +25,7 @@ const PortfolioHero = () => {
     }
   }, []);
   return (
-    <section className="heros_height relative bg-[#02070F] w-full flex items-center justify-center  overflow-hidden px-2 lg:px-8 py-8 lg:py-10">
+    <section className="heros_height relative bg-[#02070F] w-full flex items-center justify-center  overflow-hidden px-1 ">
       {/* Background glow circle image — full section */}
       <img
         src={bgImage}
@@ -35,7 +35,7 @@ const PortfolioHero = () => {
       />
       {/* ── Card sits on top of bg image ── */}
       <div
-        className=" relative z-10 careerHeroImg_Edge "
+        className=" relative z-10 careerHeroImg_Edge"
         style={{
           // left and right 1px gradient strips
           border: "1px solid transparent",
@@ -45,7 +45,7 @@ const PortfolioHero = () => {
           backgroundClip: "padding-box, border-box",
         }}>
         {/* Content */}
-        <div className="flex flex-col items-center justify-center text-center px-[clamp(8px,2.8vw,32px)]  py-[clamp(32px,6vw,64px)]  gap-10">
+        <div className="flex flex-col items-center justify-center text-center px-[clamp(8px,2.8vw,32px)]  py-[clamp(32px,5vh,54px)]  gap-10">
           <h2 className="font-stoke text-white text-h2 font-normal leading-tight tracking-wide uppercase">
             We Create Digital
             <br />

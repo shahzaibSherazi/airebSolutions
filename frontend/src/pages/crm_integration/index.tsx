@@ -6,6 +6,7 @@ import OurWork from "@/components/crm_integration/OurWork";
 import SalesforceIntegration from "@/components/crm_integration/SaleForce";
 import WorkProcess from "@/components/crm_integration/WorkProcess";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const CrmIntegration = () => {
   return (
@@ -17,6 +18,7 @@ const CrmIntegration = () => {
       <OurWork />
       {/* <SalesforceIntegration /> */}
       <ChooseUs />
+      <ScrollTopButton />
     </Layout>
   );
 };

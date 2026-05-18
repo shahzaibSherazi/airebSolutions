@@ -2,19 +2,19 @@ import React, { useState, useEffect, useRef } from "react";
 import { Bookmark, ChevronRight, Frame, Maximize2 } from "lucide-react";
 import { motion } from "framer-motion";
 import BtnIcon from "../../assets/icons/btn_icon.svg?react";
-import AiBg from "@/assets/AllServices_assets/Ai_card_bg.png";
-import WebBg from "@/assets/AllServices_assets/web_card_bg.png";
-import ApiBg from "@/assets/AllServices_assets/api_card_bg.png";
-import MobileBg from "@/assets/AllServices_assets/mobile_card_bg.png";
-import CrmBg from "@/assets/AllServices_assets/crm_card_bg.png";
-import UiBg from "@/assets/AllServices_assets/ui_card_bg.png";
-import LogoBg from "@/assets/AllServices_assets/logo_card_bg.png";
-import ContentBg from "@/assets/AllServices_assets/content_card_bg.png";
-import ContactBg from "@/assets/AllServices_assets/contact_card_bg.png";
-import DevOpsBg from "@/assets/AllServices_assets/devOps_card_bg.png";
-import OnDemandBg from "@/assets/AllServices_assets/ondemand_card_bg.png";
-import EcommerceBg from "@/assets/AllServices_assets/ecomerce_card_bg.png";
-import DialerBg from "@/assets/AllServices_assets/dialer_card_bg.png";
+import AiBg from "@/assets/AllServices_assets/Ai_card_bg.webp";
+import WebBg from "@/assets/AllServices_assets/web_card_bg.webp";
+import ApiBg from "@/assets/AllServices_assets/api_card_bg.webp";
+import MobileBg from "@/assets/AllServices_assets/mobile_card_bg.webp";
+import CrmBg from "@/assets/AllServices_assets/crm_card_bg.webp";
+import UiBg from "@/assets/AllServices_assets/ui_card_bg.webp";
+import LogoBg from "@/assets/AllServices_assets/logo_card_bg.webp";
+import ContentBg from "@/assets/AllServices_assets/content_card_bg.webp";
+import ContactBg from "@/assets/AllServices_assets/contact_card_bg.webp";
+import DevOpsBg from "@/assets/AllServices_assets/devOps_card_bg.webp";
+import OnDemandBg from "@/assets/AllServices_assets/ondemand_card_bg.webp";
+import EcommerceBg from "@/assets/AllServices_assets/ecomerce_card_bg.webp";
+import DialerBg from "@/assets/AllServices_assets/dialer_card_bg.webp";
 import { Link } from "react-router-dom";
 
 const TechSolutionsSection = () => {
@@ -168,7 +168,7 @@ const TechSolutionsSection = () => {
 
   return (
     <div className="min-h-screen bg-black text-white ">
-      <div className="container lg:py-24 py-16 px-2 lg:px-8 flex flex-col justify-center items-center">
+      <div className="container lg:py-24 py-16 flex flex-col justify-center items-center">
         {/* Header Section */}
         <motion.div
           className="text-center mb-16 lg:mb-[91px]"

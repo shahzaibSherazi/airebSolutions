@@ -147,7 +147,7 @@ function Card({
   ${active ? "bg-primary" : "bg-[#0E1828]"} 
   group-hover:bg-primary`}>
         {icon}
-        <p className="text-textColor font-stoke text-[13px] font-normal leading-snug m-0 whitespace-pre-line">
+        <p className="text-textColor font-stoke text-[13px] font-normal leading-relaxed m-0 whitespace-pre-line">
           {title}
         </p>
       </div>
@@ -157,7 +157,7 @@ function Card({
 
 export default function RealEstateCycle() {
   // ── Design constants — never change ──────────────────────────────────────
-  const C = 250;
+  const C = 180;
   const STUB = 92;
   const GAP = 98;
   const innerW = C * 3 + GAP * 2;
@@ -203,7 +203,7 @@ export default function RealEstateCycle() {
     <section
       ref={sectionRef}
       className="w-full bg-[#02070F]  box-border font-outfit">
-      <div className="container py-16 lg:py-24 px-2 lg:px-8">
+      <div className="container py-16 lg:py-24">
         {/* Header — unchanged */}
         <div className="text-center mb-[52px] flex flex-col items-center">
           <h1 className="text-white font-normal leading-tight mb-4 mt-0 font-stoke text-h2">

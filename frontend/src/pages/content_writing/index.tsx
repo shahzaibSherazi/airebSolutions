@@ -5,6 +5,7 @@ import ContentWritingProcess from "@/components/content_writing/ContentwritingPr
 import ContentWritingServices from "@/components/content_writing/ContentWritingServices";
 import ContentWritingWork from "@/components/content_writing/ContentWritingWork";
 import Layout from "@/components/layout/Layout";
+import ScrollTopButton from "@/components/ui/ScrollTopButton";
 
 const ContentWriting = () => {
   return (
@@ -15,6 +16,7 @@ const ContentWriting = () => {
       <ContentWritingProcess />
       {/* <ContentWritingWork /> */}
       <ContentWritingExpertise />
+      <ScrollTopButton />
     </Layout>
   );
 };

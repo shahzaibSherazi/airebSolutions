@@ -149,12 +149,12 @@ function ServiceCard({ service, animationDelay = 0 }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-textColor font-stoke font-normal text-title leading-snug">
+      <h3 className="text-textColor font-stoke font-normal text-title leading-[1.3]">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-p text-textColor font-outfit font-light line-clamp-4 overflow-hidden leading-relaxed">
+      <p className="text-p text-textColor font-outfit font-light line-clamp-4 overflow-hidden leading-[1.3] ">
         {service.description}
       </p>
     </div>
@@ -170,13 +170,13 @@ export default function RetailServices() {
   return (
     <>
       <section className="  bg-[#02070F]">
-        <div className="container py-16 lg:py-24 px-2 lg:px-8">
+        <div className="container py-16 lg:py-24">
           {/* Header */}
           <div className="text-center mb-14">
-            <h1 className="font-stoke text-h2 font-normal leading-[1.28] text-white mb-5">
+            <h1 className="font-stoke text-h2 font-normal leading-[1.3] text-white mb-5">
               Our Retail & CGP Solutions
             </h1>
-            <p className="font-outfit font-normal  mx-auto text-p leading-relaxed">
+            <p className="font-outfit font-normal  mx-auto text-p leading-[1.3]">
               At Aireb Solutions, we provide innovative services that empower
               retail and consumer goods <br /> businesses to drive growth,
               improve customer engagement, and optimize operations. Our digital{" "}
