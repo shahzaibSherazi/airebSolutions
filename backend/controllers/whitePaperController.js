@@ -1,21 +1,30 @@
 import Category from "../models/Category.js";
 import WhitePaper from "../models/WhitePaper.js";
+import {
+  sanitizeDatabaseUrl,
+  constructFullUrl,
+} from "../utils/filePathSanitizer.js";
 
-// Helper function to convert PDF URL to full URL if needed
+/**
+ * Normalize PDF URL for API responses
+ * Converts stored relative paths to full URLs based on current request context
+ * Works transparently across localhost, staging, and production environments
+ */
 const normalizePdfUrl = (pdfUrl, req) => {
   if (!pdfUrl) return pdfUrl;
 
-  // Skip data URLs and full URLs
-  if (
-    pdfUrl.startsWith("data:") ||
-    pdfUrl.startsWith("http://") ||
-    pdfUrl.startsWith("https://")
-  ) {
+  // Data URLs: return as-is
+  if (pdfUrl.startsWith("data:")) {
     return pdfUrl;
   }
 
-  // Convert relative paths to full URLs
-  return `${req.protocol}://${req.get("host")}${pdfUrl}`;
+  // Already a full URL from legacy data: return as-is (will be migrated)
+  if (pdfUrl.startsWith("http://") || pdfUrl.startsWith("https://")) {
+    return pdfUrl;
+  }
+
+  // Relative path: convert to full URL using current request context
+  return constructFullUrl(pdfUrl, req);
 };
 
 // @desc Get all white papers
@@ -145,21 +154,36 @@ export const createWhitePaper = async (req, res) => {
       });
     }
 
+    // Sanitize PDF URL: extract relative path and reject invalid URLs
+    // This ensures only relative paths are stored in database
+    const sanitizedPdfUrl = sanitizeDatabaseUrl(pdfUrl);
+    if (!sanitizedPdfUrl) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid PDF URL format. PDF must be from /pdfs/ directory.",
+        receivedUrl: pdfUrl,
+      });
+    }
+    console.log("RAW PDF URL FROM FRONTEND:", pdfUrl);
+    console.log("SANITIZED PDF URL FOR DB:", sanitizedPdfUrl);
     const whitePaper = await WhitePaper.create({
       title,
       description,
       image,
-      pdfUrl,
+      pdfUrl: sanitizedPdfUrl, // Store ONLY relative path
       category,
       author,
       keyPoints,
       status,
     });
 
+    // Normalize PDF URL in response
+    const paperObj = whitePaper.toObject();
+    paperObj.pdfUrl = normalizePdfUrl(paperObj.pdfUrl, req);
     res.status(201).json({
       success: true,
       message: "White paper created successfully",
-      whitePaper,
+      whitePaper: paperObj,
     });
   } catch (error) {
     res.status(500).json({
@@ -199,7 +223,20 @@ export const updateWhitePaper = async (req, res) => {
     if (title) whitePaper.title = title;
     if (description) whitePaper.description = description;
     if (image) whitePaper.image = image;
-    if (pdfUrl) whitePaper.pdfUrl = pdfUrl;
+
+    // Sanitize PDF URL if provided
+    if (pdfUrl) {
+      const sanitizedPdfUrl = sanitizeDatabaseUrl(pdfUrl);
+      if (!sanitizedPdfUrl) {
+        return res.status(400).json({
+          success: false,
+          message: "Invalid PDF URL format. PDF must be from /pdfs/ directory.",
+          receivedUrl: pdfUrl,
+        });
+      }
+      whitePaper.pdfUrl = sanitizedPdfUrl; // Store ONLY relative path
+    }
+
     if (category) whitePaper.category = category;
     if (author) whitePaper.author = author;
     if (keyPoints) whitePaper.keyPoints = keyPoints;
@@ -207,10 +244,14 @@ export const updateWhitePaper = async (req, res) => {
 
     whitePaper = await whitePaper.save();
 
+    // Normalize PDF URL in response
+    const paperObj = whitePaper.toObject();
+    paperObj.pdfUrl = normalizePdfUrl(paperObj.pdfUrl, req);
+
     res.status(200).json({
       success: true,
       message: "White paper updated successfully",
-      whitePaper,
+      whitePaper: paperObj,
     });
   } catch (error) {
     res.status(500).json({

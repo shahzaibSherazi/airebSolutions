@@ -1,9 +1,16 @@
 import express from "express";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
   uploadBlogImage,
   uploadWhitePaperImage,
   uploadWhitePaperPdf,
 } from "../middleware/upload.js";
+import { constructFullUrl } from "../utils/filePathSanitizer.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const router = express.Router();
 
@@ -19,16 +26,25 @@ router.post("/blog-image", uploadBlogImage, (req, res) => {
       });
     }
 
+    // Verify file was actually saved
+    const filePath = path.join(__dirname, "..", req.file.path);
+    if (!fs.existsSync(filePath)) {
+      return res.status(500).json({
+        success: false,
+        message: "File upload failed - file not saved",
+      });
+    }
+
     // Return the file path that can be used in the database
-    const filePath = `/uploads/blog/${req.file.filename}`;
+    const dbPath = `/uploads/blog/${req.file.filename}`;
 
     res.status(200).json({
       success: true,
       message: "Blog image uploaded successfully",
       file: {
         filename: req.file.filename,
-        path: filePath,
-        url: `${req.protocol}://${req.get("host")}${filePath}`,
+        path: dbPath,
+        url: constructFullUrl(dbPath, req),
         size: req.file.size,
         mimetype: req.file.mimetype,
       },
@@ -53,16 +69,25 @@ router.post("/whitepaper-image", uploadWhitePaperImage, (req, res) => {
       });
     }
 
+    // Verify file was actually saved
+    const filePath = path.join(__dirname, "..", req.file.path);
+    if (!fs.existsSync(filePath)) {
+      return res.status(500).json({
+        success: false,
+        message: "File upload failed - file not saved",
+      });
+    }
+
     // Return the file path that can be used in the database
-    const filePath = `/uploads/whitepapers/${req.file.filename}`;
+    const dbPath = `/uploads/whitepapers/${req.file.filename}`;
 
     res.status(200).json({
       success: true,
       message: "White paper image uploaded successfully",
       file: {
         filename: req.file.filename,
-        path: filePath,
-        url: `${req.protocol}://${req.get("host")}${filePath}`,
+        path: dbPath,
+        url: constructFullUrl(dbPath, req),
         size: req.file.size,
         mimetype: req.file.mimetype,
       },
@@ -87,16 +112,25 @@ router.post("/whitepaper-pdf", uploadWhitePaperPdf, (req, res) => {
       });
     }
 
+    // Verify file was actually saved
+    const filePath = path.join(__dirname, "..", req.file.path);
+    if (!fs.existsSync(filePath)) {
+      return res.status(500).json({
+        success: false,
+        message: "File upload failed - file not saved",
+      });
+    }
+
     // Return the file path that can be used in the database
-    const filePath = `/pdfs/${req.file.filename}`;
+    const dbPath = `/pdfs/${req.file.filename}`;
 
     res.status(200).json({
       success: true,
       message: "White paper PDF uploaded successfully",
       file: {
         filename: req.file.filename,
-        path: filePath,
-        url: `${req.protocol}://${req.get("host")}${filePath}`,
+        path: dbPath,
+        url: constructFullUrl(dbPath, req),
         size: req.file.size,
         mimetype: req.file.mimetype,
       },

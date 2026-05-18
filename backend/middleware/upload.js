@@ -1,9 +1,17 @@
 import multer from "multer";
 import path from "path";
+import fs from "fs";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Ensure upload directories exist
+const ensureDirExists = (dirPath) => {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+};
 
 // Storage configuration for images
 const imageStorage = multer.diskStorage({
@@ -19,6 +27,7 @@ const imageStorage = multer.diskStorage({
       uploadPath += "general/";
     }
 
+    ensureDirExists(uploadPath);
     cb(null, uploadPath);
   },
   filename: (req, file, cb) => {
@@ -36,7 +45,9 @@ const imageStorage = multer.diskStorage({
 // Storage configuration for PDFs
 const pdfStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "public/pdfs/");
+    const uploadPath = "public/pdfs/";
+    ensureDirExists(uploadPath);
+    cb(null, uploadPath);
   },
   filename: (req, file, cb) => {
     // Generate unique filename with timestamp

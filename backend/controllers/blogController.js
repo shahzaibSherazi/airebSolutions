@@ -1,5 +1,27 @@
 import Blog from "../models/Blog.js";
 import Category from "../models/Category.js";
+import {
+  sanitizeDatabaseUrl,
+  constructFullUrl,
+} from "../utils/filePathSanitizer.js";
+
+/**
+ * Normalize image URL for API responses
+ * Converts stored relative paths to full URLs based on current request context
+ */
+const normalizeImageUrl = (imageUrl, req) => {
+  if (!imageUrl) return imageUrl;
+
+  if (imageUrl.startsWith("data:")) {
+    return imageUrl;
+  }
+
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+    return imageUrl;
+  }
+
+  return constructFullUrl(imageUrl, req);
+};
 
 // @desc Get all blogs (with pagination, filtering, search)
 // @route GET /api/blogs
@@ -40,13 +62,20 @@ export const getBlogs = async (req, res) => {
 
     const total = await Blog.countDocuments(filter);
 
+    // Normalize image URLs in response
+    const blogsWithUrls = blogs.map((blog) => {
+      const blogObj = blog.toObject();
+      blogObj.image = normalizeImageUrl(blogObj.image, req);
+      return blogObj;
+    });
+
     res.status(200).json({
       success: true,
-      count: blogs.length,
+      count: blogsWithUrls.length,
       total,
       pages: Math.ceil(total / limit),
       currentPage: page,
-      blogs,
+      blogs: blogsWithUrls,
     });
   } catch (error) {
     res.status(500).json({
@@ -82,9 +111,13 @@ export const getBlog = async (req, res) => {
     blog.views += 1;
     await blog.save();
 
+    // Normalize image URL in response
+    const blogObj = blog.toObject();
+    blogObj.image = normalizeImageUrl(blogObj.image, req);
+
     res.status(200).json({
       success: true,
-      blog,
+      blog: blogObj,
     });
   } catch (error) {
     res.status(500).json({
@@ -120,6 +153,17 @@ export const createBlog = async (req, res) => {
       });
     }
 
+    // Sanitize image URL: extract relative path
+    const sanitizedImage = sanitizeDatabaseUrl(image);
+    if (!sanitizedImage) {
+      return res.status(400).json({
+        success: false,
+        message:
+          "Invalid image URL format. Image must be from /uploads/blog/ or /uploads/whitepapers/ directory.",
+        receivedUrl: image,
+      });
+    }
+
     const blog = await Blog.create({
       title,
       category,
@@ -127,16 +171,20 @@ export const createBlog = async (req, res) => {
       readTime,
       intro,
       contentHtml,
-      image,
+      image: sanitizedImage, // Store ONLY relative path
       sections,
       relatedIds,
       status,
     });
 
+    // Normalize image URL in response
+    const blogObj = blog.toObject();
+    blogObj.image = normalizeImageUrl(blogObj.image, req);
+
     res.status(201).json({
       success: true,
       message: "Blog created successfully",
-      blog,
+      blog: blogObj,
     });
   } catch (error) {
     res.status(500).json({
@@ -180,18 +228,36 @@ export const updateBlog = async (req, res) => {
     if (author) blog.author = author;
     if (readTime) blog.readTime = readTime;
     if (intro) blog.intro = intro;
-    if (image) blog.image = image;
     if (contentHtml !== undefined) blog.contentHtml = contentHtml;
+
+    // Sanitize image URL if provided
+    if (image) {
+      const sanitizedImage = sanitizeDatabaseUrl(image);
+      if (!sanitizedImage) {
+        return res.status(400).json({
+          success: false,
+          message:
+            "Invalid image URL format. Image must be from /uploads/blog/ or /uploads/whitepapers/ directory.",
+          receivedUrl: image,
+        });
+      }
+      blog.image = sanitizedImage; // Store ONLY relative path
+    }
+
     if (sections) blog.sections = sections;
     if (relatedIds !== undefined) blog.relatedIds = relatedIds;
     if (status) blog.status = status;
 
     blog = await blog.save();
 
+    // Normalize image URL in response
+    const blogObj = blog.toObject();
+    blogObj.image = normalizeImageUrl(blogObj.image, req);
+
     res.status(200).json({
       success: true,
       message: "Blog updated successfully",
-      blog,
+      blog: blogObj,
     });
   } catch (error) {
     res.status(500).json({
